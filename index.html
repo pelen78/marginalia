@@ -651,20 +651,45 @@ renderMinis(); renderFeatured(); renderFilters(); renderGrid(); renderQuestion()
   const keyLetters=[..."ENTRAR"].map(ch=>{const s=document.createElement('span');s.textContent=ch;keyEl.appendChild(s);return s});
   const LIT=['s2','s4','s6','s1','s3','s0'];
 
-  // Sonido opcional (lápiz sobre papel)
-  let actx, gain, soundOn=false;
-  function initAudio(){
-    actx=new (window.AudioContext||window.webkitAudioContext)();
-    const len=actx.sampleRate*2, buf=actx.createBuffer(1,len,actx.sampleRate), d=buf.getChannelData(0);
-    for(let i=0;i<len;i++) d[i]=(Math.random()*2-1)*(0.6+0.4*Math.sin(i/900));
-    const src=actx.createBufferSource(); src.buffer=buf; src.loop=true;
-    const bp=actx.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=2600; bp.Q.value=1.4;
-    gain=actx.createGain(); gain.gain.value=0;
-    src.connect(bp).connect(gain).connect(actx.destination); src.start();
+  // Música de la entrada (entrada.mp3: 12 s en loop sin cortes)
+  // Los navegadores solo dejan sonar audio después de que la persona toca algo,
+  // así que arranca con el primer "presionar" o al activar el sonido.
+  const VOL={idle:.35,hold:.8};
+  let actx=null, gain=null, src=null, musicBuf=null, soundOn=true, playing=false;
+  const sndBtn=$('#snd');
+  sndBtn.textContent='Sonido: sí';
+  function ensureCtx(){
+    if(actx) return;
+    const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return;
+    actx=new AC(); gain=actx.createGain(); gain.gain.value=0; gain.connect(actx.destination);
+    fetch('entrada.mp3').then(r=>r.arrayBuffer()).then(b=>new Promise((ok,no)=>actx.decodeAudioData(b,ok,no)))
+      .then(buf=>{musicBuf=buf; if(wantMusic) playMusic()}).catch(()=>{});
   }
-  $('#snd').addEventListener('click',e=>{
-    e.stopPropagation(); soundOn=!soundOn; if(soundOn&&!actx) initAudio();
-    e.currentTarget.textContent='Sonido: '+(soundOn?'sí':'no');
+  let wantMusic=false;
+  function playMusic(){
+    wantMusic=true; ensureCtx(); if(!actx) return;
+    actx.resume && actx.resume();
+    if(!musicBuf||playing) return;
+    src=actx.createBufferSource(); src.buffer=musicBuf; src.loop=true;
+    src.loopStart=.5; src.loopEnd=12.5;          // el archivo repite 1 s extra para que el loop no truene
+    src.connect(gain); src.start(); playing=true;
+    setVol(holding?VOL.hold:VOL.idle,.8);
+  }
+  function setVol(v,t=.6){
+    if(!gain) return;
+    const now=actx.currentTime; gain.gain.cancelScheduledValues(now);
+    gain.gain.setValueAtTime(gain.gain.value,now);
+    gain.gain.linearRampToValueAtTime(soundOn?v:0,now+t);
+  }
+  function stopMusic(fade=3){
+    wantMusic=false; if(!playing) return;
+    setVol(0,fade); const s=src; playing=false;
+    setTimeout(()=>{try{s.stop()}catch(e){}},fade*1000+100);
+  }
+  sndBtn.addEventListener('click',e=>{
+    e.stopPropagation(); soundOn=!soundOn;
+    sndBtn.textContent='Sonido: '+(soundOn?'sí':'no');
+    if(soundOn) playMusic(); else setVol(0,.3);
   });
 
   const DUR=6;              // segundos de presión para entrar
@@ -710,13 +735,12 @@ renderMinis(); renderFeatured(); renderFilters(); renderGrid(); renderQuestion()
       n.querySelectorAll('.mark path').forEach((path,i)=>path.style.strokeDashoffset=1-clamp((p-t0-0.06-i*0.05)/0.18));
       n.querySelector('.hand').style.opacity=clamp((p-t0-0.2)/0.08);
     });
-    if(soundOn&&gain) gain.gain.setTargetAtTime(holding&&!done?0.05:0,actx.currentTime,0.05);
   }
 
   function finish(fast){
     done=true; holding=false; intro.classList.remove('holding');
     word.classList.add('settled'); label.textContent='';
-    if(soundOn&&gain) gain.gain.setTargetAtTime(0,actx.currentTime,0.05);
+    if(playing) setVol(1,.4);           // sube al entrar
     const inkDelay=fast?0:1600;
     later(()=>{ if(reduce){blot.style.transform='scale(4)'} else blot.classList.add('go') },inkDelay);
     later(()=>{
@@ -724,6 +748,7 @@ renderMinis(); renderFeatured(); renderFilters(); renderGrid(); renderQuestion()
       window.scrollTo(0,0);
       blot.classList.add('fade');
       startReveals();
+      if(playing) setTimeout(()=>stopMusic(4),1500);
     },inkDelay+(reduce?100:1150));
   }
 
@@ -741,8 +766,8 @@ renderMinis(); renderFeatured(); renderFilters(); renderGrid(); renderQuestion()
     requestAnimationFrame(loop);
   }
 
-  const down=()=>{ if(ready&&!done){holding=true;intro.classList.add('holding');if(actx)actx.resume()} };
-  const up=()=>{ holding=false; intro.classList.remove('holding') };
+  const down=()=>{ if(ready&&!done){holding=true;intro.classList.add('holding');if(soundOn){playMusic();setVol(VOL.hold)}} };
+  const up=()=>{ if(holding&&!done&&playing) setVol(VOL.idle,1.2); holding=false; intro.classList.remove('holding') };
   addEventListener('keydown',e=>{
     if(done) return;
     if(e.code==='Space'){e.preventDefault();down()}
@@ -752,7 +777,7 @@ renderMinis(); renderFeatured(); renderFilters(); renderGrid(); renderQuestion()
   intro.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;down()});
   addEventListener('pointerup',up); addEventListener('pointercancel',up); addEventListener('blur',up);
   intro.addEventListener('contextmenu',e=>e.preventDefault());
-  $('#skip').addEventListener('click',e=>{e.stopPropagation();if(!done){ready=true;finish(true)}});
+  $('#skip').addEventListener('click',e=>{e.stopPropagation();if(!done){ready=true;finish(true);stopMusic(1.5)}});
   $('#replay').addEventListener('click',start);
 
   start();
