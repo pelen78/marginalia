@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marginalia · Libros</title>
+<meta name="description" content="Guías visuales de lectura: libros, ideas y notas que vale la pena conservar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Homemade+Apple&display=swap">
+<style>
+:root{
+  --bg:#f7f3ec; --paper:#fbf8f3; --panel:#efe8dd; --panel-2:#f3ede4;
+  --ink:#2a2420; --muted:#6f655b; --line:#e0d6c8;
+  --accent:#a8533a; --accent-ink:#fff8f2; --accent-soft:#f0ddd2;
+  --sage:#8d9a82; --shadow:0 1px 0 rgba(60,40,20,.04),0 14px 30px -18px rgba(60,40,20,.28);
+  --f-display:"Cormorant Garamond",Georgia,serif;
+  --f-body:"EB Garamond",Georgia,serif;
+  --f-hand:"Homemade Apple",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1a1714; --paper:#211d19; --panel:#27221d; --panel-2:#2b2520;
+  --ink:#efe7dc; --muted:#b3a697; --line:#3a332c;
+  --accent:#d27a5c; --accent-ink:#1a1714; --accent-soft:#3a2a22;
+  --sage:#9fae94; --shadow:0 14px 30px -18px rgba(0,0,0,.7); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1a1714; --paper:#211d19; --panel:#27221d; --panel-2:#2b2520;
+  --ink:#efe7dc; --muted:#b3a697; --line:#3a332c;
+  --accent:#d27a5c; --accent-ink:#1a1714; --accent-soft:#3a2a22;
+  --sage:#9fae94; --shadow:0 14px 30px -18px rgba(0,0,0,.7); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;margin:0;line-height:1.05;text-wrap:balance}
+.wrap{max-width:1400px;margin:0 auto;padding:0 28px}
+
+/* Header */
+header.top{border-bottom:1px solid var(--line);background:var(--paper)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:88px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand svg{width:42px;height:52px;color:var(--sage);flex:none}
+.brand b{display:block;font-family:var(--f-display);font-weight:500;font-size:2.4rem;line-height:1}
+.brand small{display:block;color:var(--muted);font-size:.95rem;margin-top:4px}
+nav.main{display:flex;gap:30px;margin-left:auto}
+nav.main a{text-decoration:none;padding:6px 2px;border-bottom:2px solid transparent;font-size:1.05rem}
+nav.main a.on{color:var(--accent);border-color:var(--accent)}
+nav.main a:hover{color:var(--accent)}
+.tools{display:flex;align-items:center;gap:10px}
+.icon-btn{width:40px;height:40px;border-radius:50%;display:grid;place-items:center}
+.icon-btn:hover{background:var(--panel)}
+.icon-btn svg{width:20px;height:20px}
+.search{display:none;border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:8px 16px;font:inherit;color:var(--ink);width:220px}
+.search.open{display:block}
+
+/* Layout */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;padding-top:0;padding-bottom:48px}
+.side{display:flex;flex-direction:column;gap:20px;padding-top:14px}
+.panel{background:var(--panel);border-radius:14px;padding:22px 22px}
+.panel h2{font-size:1.55rem;display:flex;justify-content:space-between;align-items:baseline}
+
+/* Hero */
+.hero{position:relative;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;min-height:330px;border-radius:0 0 14px 14px;overflow:hidden;background:linear-gradient(90deg,var(--bg) 30%,var(--panel-2))}
+.hero .copy{padding:34px 12px 30px 38px;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.4rem,4.2vw,3.6rem)}
+.hero p{color:var(--muted);font-size:1.18rem;max-width:30ch;margin:14px 0 0}
+.hero hr{width:40px;border:0;border-top:1px solid var(--muted);margin:22px 0 16px}
+.hero .hand{font-family:var(--f-hand);font-size:.98rem;transform:rotate(-5deg);transform-origin:left;line-height:2.1;color:var(--ink)}
+.hero .art{align-self:stretch;position:relative}
+.hero .art svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .art{background:#e9dfd1;mask-image:linear-gradient(90deg,transparent,#000 18%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%)}
+
+/* Featured */
+.featured{margin-top:14px;background:var(--panel);border-radius:14px;padding:18px 20px 0}
+.featured .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.featured .head h2{font-size:2rem}
+.eyebrow{font-family:system-ui,sans-serif;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.feat-body{display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:center;margin-top:10px;background:var(--panel-2);border-radius:12px 12px 0 0;padding:18px 26px 0 40px}
+.feat-body .cover{width:190px;margin-bottom:-2px;align-self:end}
+.feat-info h3{font-size:2.1rem}
+.feat-info .by{font-family:var(--f-display);font-size:1.3rem;color:var(--muted);letter-spacing:.06em;margin-top:4px}
+.feat-info p{margin:14px 0 0}
+.feat-info .it{font-style:italic;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);text-decoration:none;border-radius:6px;padding:8px 18px;font-size:1.02rem;margin:20px 0 26px;transition:transform .15s ease,filter .15s ease}
+.btn:hover{filter:brightness(1.08)}
+.btn:active{transform:scale(.97)}
+.steps{list-style:none;margin:0 0 20px;padding:0 0 0 30px;border-left:1px solid var(--line);display:grid;gap:18px}
+.steps li{display:flex;gap:16px;align-items:center}
+.steps .ic{width:46px;height:46px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;flex:none;color:var(--accent)}
+.steps .ic svg{width:22px;height:22px}
+.steps b{font-weight:500;display:block}
+.steps span{color:var(--muted);font-size:.92rem}
+
+/* Library */
+.lib-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-top:30px}
+.lib-head h2{font-size:2.2rem}
+.lib-head p{margin:0;color:var(--muted);font-size:1.1rem}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
+.filters button{background:var(--panel);padding:4px 18px;border-radius:999px;font-size:.98rem;transition:background .15s}
+.filters button:hover{background:var(--line)}
+.filters button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.book{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 16px 14px;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.book:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.book .cover{width:86%;margin:0 auto 12px}
+.book h3{font-size:1.18rem;font-weight:600}
+.book .au{color:var(--muted);font-size:.92rem}
+.book .row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px}
+.book .btn{margin:0;padding:4px 16px;font-size:.95rem;white-space:nowrap}
+.book .more{font-family:system-ui;letter-spacing:.1em;color:var(--muted);padding:4px 8px;border-radius:6px}
+.book .more:hover{background:var(--panel);color:var(--ink)}
+.empty{color:var(--muted);font-style:italic;padding:20px 0}
+
+/* Cover */
+.cover{aspect-ratio:2/3;position:relative;border-radius:2px 4px 4px 2px;box-shadow:-3px 0 0 rgba(0,0,0,.08) inset,4px 8px 16px -6px rgba(40,25,10,.4);overflow:hidden}
+.cover svg{display:block;width:100%;height:100%}
+.cover::before{content:"";position:absolute;inset:0 auto 0 0;width:7%;background:linear-gradient(90deg,rgba(0,0,0,.14),rgba(255,255,255,.12) 60%,transparent);z-index:1}
+
+/* Side */
+.q-mark{font-family:var(--f-display);font-size:4rem;line-height:.6;color:var(--accent);float:left;margin:12px 12px 0 0}
+.q-text{font-family:var(--f-display);font-size:1.3rem;line-height:1.35;margin:18px 0 8px}
+.q-src{color:var(--muted);font-size:.95rem}
+.q-src a{color:var(--accent)}
+.link{color:var(--accent);font-size:.9rem;text-decoration:none}
+.link:hover{text-decoration:underline}
+.quote-card{text-align:center;padding:34px 30px 26px;display:flex;flex-direction:column;justify-content:center}
+.quote-card svg{width:40px;height:44px;color:var(--sage);margin:0 auto}
+.quote-card blockquote{font-family:var(--f-display);font-style:italic;font-size:1.55rem;line-height:1.3;margin:18px 0 10px}
+.quote-card hr{border:0;border-top:1px solid var(--line);margin:22px 0 16px}
+
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;padding:22px 0 34px;text-align:center}
+
+@media (max-width:1100px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .side{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .feat-body{grid-template-columns:180px 1fr}
+  .feat-body .cover{width:160px}
+  .steps{grid-column:1/-1;border-left:0;padding:0 0 20px;border-top:1px solid var(--line);padding-top:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .top .wrap{flex-wrap:wrap;gap:10px;padding-block:14px}
+  .brand b{font-size:1.9rem}
+  nav.main{order:3;width:100%;margin:0;gap:20px;overflow-x:auto}
+  .tools{margin-left:auto}
+  .search.open{width:150px}
+  .hero{grid-template-columns:1fr}
+  .hero .copy{padding:26px 6px 10px}
+  .hero .art{height:220px}
+  .feat-body{grid-template-columns:1fr;padding:18px 18px 0;gap:14px}
+  .feat-body .cover{margin:0 auto -2px;order:2}
+  .feat-info{order:1}
+  .steps{order:3;grid-template-columns:1fr}
+  .hero h1{font-size:2.2rem}
+  .feat-info .btn{margin-bottom:6px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .book{padding:10px 10px 12px}
+  .book .btn{padding:4px 14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Marginalia, inicio">
+      <svg viewBox="0 0 42 52" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M8 50C14 36 22 22 34 4"/>
+        <path d="M20 30c-8-1-12-6-12-12 7 1 11 5 12 12z" fill="currentColor" fill-opacity=".25"/>
+        <path d="M24 24c1-8 6-12 12-12-1 7-5 11-12 12z" fill="currentColor" fill-opacity=".25"/>
+        <path d="M15 40c-7 0-11-4-12-9 6 0 10 3 12 9z" fill="currentColor" fill-opacity=".25"/>
+        <path d="M28 16c-3-5-2-10 2-13 2 5 1 9-2 13z" fill="currentColor" fill-opacity=".25"/>
+      </svg>
+      <span><b>Marginalia</b><small>Libros, ideas y notas que vale la pena conservar.</small></span>
+    </a>
+    <nav class="main" aria-label="Principal">
+      <a href="#inicio" class="on">Inicio</a>
+      <a href="#destacada">Destacada</a>
+      <a href="#libros">Libros</a>
+      <a href="#pregunta">Pregunta del día</a>
+    </nav>
+    <div class="tools">
+      <input class="search" id="search" type="search" placeholder="Buscar libro o autor" aria-label="Buscar libro o autor">
+      <button class="icon-btn" id="searchBtn" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap layout" id="inicio">
+  <div>
+    <section class="hero" aria-label="Bienvenida">
+      <div class="copy">
+        <h1>Buenas lecturas,<br>una vida más consciente.</h1>
+        <p>Aquí guardo los libros que me inspiran, las ideas que me transforman y las notas que quiero recordar.</p>
+        <hr>
+        <div class="hand">Leer también es<br>una forma de habitar el mundo.</div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="130 0 370 330" preserveAspectRatio="xMidYMax meet" style="overflow:visible">
+          <defs>
+            <linearGradient id="wall" x1="0" x2="1"><stop offset="0" stop-color="#f3ece2" stop-opacity="0"/><stop offset=".35" stop-color="#ece2d4"/><stop offset="1" stop-color="#e2d5c3"/></linearGradient>
+            <linearGradient id="table" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b98a62"/><stop offset="1" stop-color="#8e6443"/></linearGradient>
+            <linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <rect x="-800" y="-800" width="2200" height="1130" fill="#e9dfd1"/>
+          <path d="M150 -400h150L170 262H40z" fill="url(#light)" opacity=".6"/>
+          <!-- frame -->
+          <rect x="360" y="16" width="130" height="200" fill="#6b4a33"/>
+          <rect x="368" y="24" width="114" height="184" fill="#f4eee4"/>
+          <g font-family="Cormorant Garamond,Georgia,serif" font-size="12" fill="#7a6c5e" text-anchor="middle" letter-spacing="2">
+            <text x="425" y="56">IDEAS</text><text x="425" y="78">PERSONAS</text><text x="425" y="100">HISTORIAS</text>
+            <text x="425" y="130">UN MUNDO</text><text x="425" y="146">MÁS LÚCIDO</text>
+          </g>
+          <path d="M418 170h14" stroke="#7a6c5e"/>
+          <!-- table -->
+          <rect x="-800" y="262" width="2200" height="600" fill="url(#table)"/>
+          <rect x="-800" y="262" width="2200" height="4" fill="#caa07a"/>
+          <!-- plant -->
+          <g transform="translate(30 -78)">
+            <path d="M178 182h56l-6 80h-44z" fill="#d8d0c4"/><path d="M178 182h56l-1 10h-54z" fill="#c9c0b3"/>
+            <g fill="#5d7250">
+              <path d="M205 184c-4-40-30-62-58-66 10 28 30 52 58 66z"/><path d="M207 184c6-44 34-70 64-74-8 32-30 58-64 74z"/>
+              <path d="M206 180c-2-50 10-86 30-110 6 38-6 78-30 110z" fill="#6f8660"/><path d="M204 182c-20-30-54-40-80-34 18 22 46 34 80 34z" fill="#4f6444"/>
+              <path d="M208 182c22-28 56-36 82-28-20 20-48 30-82 28z" fill="#6f8660"/><path d="M205 178c-10-44-2-80 12-104-18 26-24 66-12 104z" fill="#4f6444"/>
+            </g>
+          </g>
+          <!-- books -->
+          <rect x="140" y="232" width="190" height="30" rx="2" fill="#c9bba6"/><rect x="140" y="232" width="190" height="5" fill="#e8dfd1"/>
+          <rect x="152" y="206" width="170" height="26" rx="2" fill="#b7a78f"/><rect x="152" y="206" width="170" height="5" fill="#ddd2c1"/>
+          <rect x="146" y="184" width="176" height="22" rx="2" fill="#d4c7b3"/><rect x="146" y="184" width="176" height="4" fill="#ece4d8"/>
+          <g stroke="#8f7f69" stroke-width="1" opacity=".6"><path d="M170 247h40M170 220h36M170 196h44"/></g>
+          <!-- mug -->
+          <path d="M386 196h82v58c0 9-7 12-14 12h-54c-7 0-14-3-14-12z" fill="#efe8dd"/>
+          <path d="M468 212c22 0 22 34 0 34" fill="none" stroke="#e3dace" stroke-width="9"/>
+          <ellipse cx="427" cy="196" rx="41" ry="7" fill="#d9cfc1"/>
+          <g font-family="Cormorant Garamond,Georgia,serif" font-size="11.5" fill="#6d5f51" text-anchor="middle">
+            <text x="427" y="220">Más</text><text x="427" y="233">libros</text><text x="427" y="246">Mejores</text><text x="427" y="259">personas</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="featured" id="destacada" aria-labelledby="feat-h">
+      <div class="head">
+        <h2 id="feat-h">Lectura destacada</h2>
+        <span class="eyebrow">Un libro. Muchas formas de ver la vida.</span>
+      </div>
+      <div class="feat-body" id="featBody"></div>
+    </section>
+
+    <section id="libros" aria-labelledby="lib-h">
+      <div class="lib-head">
+        <h2 id="lib-h">Mis lecturas</h2>
+        <p>Organiza, explora y vuelve a tus ideas favoritas.</p>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filtrar por tema"></div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </div>
+
+  <aside class="side">
+    <section class="panel" id="pregunta" aria-labelledby="q-h">
+      <h2 id="q-h">Pregunta del día <button class="link" id="nextQ">Otra &rarr;</button></h2>
+      <div class="q-text"><span class="q-mark">&ldquo;</span><span id="qText"></span></div>
+      <div class="q-src" id="qSrc"></div>
+    </section>
+
+    <section class="panel quote-card" aria-label="Cita">
+      <svg viewBox="0 0 42 52" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+        <path d="M8 50C14 36 22 22 34 4"/><path d="M20 30c-8-1-12-6-12-12 7 1 11 5 12 12z"/><path d="M24 24c1-8 6-12 12-12-1 7-5 11-12 12z"/><path d="M15 40c-7 0-11-4-12-9 6 0 10 3 12 9z"/>
+      </svg>
+      <blockquote>&ldquo;Los libros nos dan un lugar donde ir, incluso cuando tenemos que quedarnos.&rdquo;</blockquote>
+      <div class="q-src">Mason Cooley</div>
+      <hr>
+      <span class="eyebrow">Pequeñas notas. Grandes cambios.</span>
+    </section>
+  </aside>
+</main>
+
+<footer>
+  <div class="wrap">Guías visuales independientes de estudio. Vuelve siempre al texto original.</div>
+</footer>
+
+<script>
+const BOOKS = [
+  { id:"ahora", file:"el-poder-del-ahora-guia-visual_1.html", title:"El poder del ahora", full:"El Poder del Ahora", author:"Eckhart Tolle", cat:"Espiritualidad",
+    blurb:"Una invitación a vivir el presente como el único lugar donde la vida realmente sucede.", motto:"Fíjate, pregunta, compara",
+    q:"¿Qué cambia cuando pones atención a lo que pasa ahorita?",
+    cover:{bg:"#e9e1d3", ink:"#4a4038", art:"mountains"} },
+  { id:"habitos", file:"habitos-atomicos-guia-visual.html", title:"Hábitos atómicos", full:"Hábitos atómicos", author:"James Clear", cat:"Hábitos",
+    blurb:"Pequeños cambios, resultados extraordinarios: cómo construir buenos hábitos y romper los malos.", motto:"Pequeño, fácil, diario",
+    q:"¿Qué hábito pequeño podrías empezar hoy?",
+    cover:{bg:"#e6ddcd", ink:"#4a4038", art:"leaf"} },
+  { id:"amigos", file:"como-ganar-amigos-guia-visual.html", title:"Cómo ganar amigos", full:"Cómo ganar amigos e influir sobre las personas", author:"Dale Carnegie", cat:"Relaciones",
+    blurb:"El clásico sobre escuchar de verdad, reconocer a los demás y tratar a la gente con respeto.", motto:"Escucha, sonríe, reconoce",
+    q:"¿A quién podrías escuchar mejor hoy?",
+    cover:{bg:"#2f3b4a", ink:"#efe6d6", art:"circles"} },
+  { id:"cosas", file:"cosas-buenas-guia-visual.html", title:"Cómo hacer que te pasen cosas buenas", full:"Cómo hacer que te pasen cosas buenas", author:"Marian Rojas Estapé", cat:"Bienestar",
+    blurb:"Entender la mente y el cuerpo para vivir con más calma, optimismo y cuidado propio.", motto:"Mira, agradece, cuídate",
+    q:"¿Qué cosa buena pasó hoy que casi no notaste?",
+    cover:{bg:"#f1e3cf", ink:"#5a4633", art:"sun"} },
+  { id:"corazon", file:"despertar-el-corazon-guia-visual.html", title:"Despertar el corazón", full:"Despertar el corazón", author:"Sandra García Sánchez-Beato", cat:"Espiritualidad",
+    blurb:"Una práctica de amabilidad y compasión hacia uno mismo y hacia los demás.", motto:"Nota, abraza, cuida",
+    q:"¿Cómo te hablarías hoy si fueras tu mejor amigo?",
+    cover:{bg:"#eadcd6", ink:"#5a3d38", art:"lotus"} },
+  { id:"zonas", file:"tus-zonas-erroneas-guia-visual.html", title:"Tus zonas erróneas", full:"Tus zonas erróneas", author:"Wayne W. Dyer", cat:"Psicología",
+    blurb:"Reconocer las trampas mentales que nos frenan y tomar las riendas de nuestras decisiones.", motto:"Nota, pregunta, elige",
+    q:"¿Qué decisión estás dejando en manos de otra persona?",
+    cover:{bg:"#ddd3c5", ink:"#4a3f35", art:"arch"} },
+];
+
+const ICONS = {
+  map:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="6" r="2"/><circle cx="19.5" cy="6" r="2"/><circle cx="4.5" cy="18" r="2"/><circle cx="19.5" cy="18" r="2"/><path d="M6.3 7l3.2 3M17.7 7l-3.2 3M6.3 17l3.2-3M17.7 17l-3.2-3"/></svg>',
+  doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15h6M9 18h4"/></svg>',
+  pen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg>',
+  arrow:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg>',
+};
+
+function wrapTitle(t, max){
+  const words=t.toUpperCase().split(" "), lines=[]; let cur="";
+  for(const w of words){ if((cur+" "+w).trim().length>max && cur){lines.push(cur);cur=w}else cur=(cur+" "+w).trim() }
+  if(cur) lines.push(cur); return lines;
+}
+
+function coverSVG(b){
+  const {bg,ink,art}=b.cover, dark=bg==="#2f3b4a";
+  const arts={
+    mountains:`<circle cx="100" cy="92" r="26" fill="#c77e62"/>
+      <path d="M0 170c30-30 50-40 80-26s50 4 70-14 40-10 50-4v74H0z" fill="#9aa88f"/>
+      <path d="M0 190c40-26 70-10 100-18s60-26 100-8v56H0z" fill="#d1a18a"/>
+      <path d="M0 205c30-10 60-4 90-12s70-16 110-2v49H0z" fill="#6e8166"/>`,
+    leaf:`<path d="M100 250V96" stroke="#5f7353" stroke-width="2.5"/>
+      ${[0,1,2,3].map(i=>{const y=210-i*32,s=1-i*.12;return `<path d="M100 ${y}c-${42*s} -4 -${58*s} -${26*s} -${60*s} -${46*s} ${30*s} -2 ${52*s} ${14*s} ${60*s} ${46*s}z" fill="#6f8660"/><path d="M100 ${y-12}c${42*s} -4 ${58*s} -${26*s} ${60*s} -${46*s} -${30*s} -2 -${52*s} ${14*s} -${60*s} ${46*s}z" fill="#5d7250"/>`}).join("")}
+      <path d="M100 100c-8-14-4-30 0-38 4 8 8 24 0 38z" fill="#7c9270"/>`,
+    circles:`${Array.from({length:40},(_,i)=>`<circle cx="${(i*47)%200}" cy="${(i*83)%150+6}" r="${i%3?0.8:1.3}" fill="#efe6d6" opacity=".7"/>`).join("")}
+      <circle cx="80" cy="130" r="30" fill="none" stroke="#e8b89c" stroke-width="2.5"/><circle cx="120" cy="130" r="30" fill="none" stroke="#efe6d6" stroke-width="2.5"/>
+      <path d="M0 230c40-30 70-28 100-12s60 8 100-18v100H0z" fill="#46566a"/><path d="M0 250c50-14 90 2 130-6s50-10 70-6v62H0z" fill="#d1a18a" opacity=".85"/>`,
+    sun:`<circle cx="100" cy="150" r="30" fill="#e7b36a"/>
+      <g stroke="#d99a5a" stroke-width="2" stroke-linecap="round">${Array.from({length:12},(_,i)=>{const a=i*Math.PI/6,r1=42,r2=58;return `<path d="M${100+r1*Math.cos(a)} ${150+r1*Math.sin(a)}L${100+r2*Math.cos(a)} ${150+r2*Math.sin(a)}"/>`}).join("")}</g>
+      <path d="M0 240c40-20 80-24 120-10s60 4 80-4v74H0z" fill="#c9a27b"/>`,
+    lotus:`<g transform="translate(100 176)">
+        <path d="M0 0c-10-26-10-50 0-70 10 20 10 44 0 70z" fill="#c9776b"/>
+        <path d="M0 0c-26-12-40-34-40-58 20 8 34 30 40 58z" fill="#d99888"/><path d="M0 0c26-12 40-34 40-58-20 8-34 30-40 58z" fill="#d99888"/>
+        <path d="M0 0c-34-2-56-16-64-36 22 0 46 12 64 36z" fill="#e6b4a5"/><path d="M0 0c34-2 56-16 64-36-22 0-46 12-64 36z" fill="#e6b4a5"/>
+      </g>
+      <path d="M20 196h160M40 206h120" stroke="#a8837a" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>`,
+    arch:`<path d="M52 250V140a48 48 0 0 1 96 0v110z" fill="#c9b49a"/>
+      <path d="M68 250V144a32 32 0 0 1 64 0v106z" fill="#f2e9dc"/>
+      ${[0,1,2,3,4].map(i=>`<rect x="${70+i*6}" y="${214+i*8}" width="${60-i*12}" height="8" fill="#d8c6ae"/>`).join("")}
+      <path d="M140 120l40-30v160h-32z" fill="#b89f82" opacity=".6"/>`,
+  };
+  const lines=wrapTitle(b.full, b.full.length>26?13:14);
+  const titleY=art==="circles"?40:(art==="mountains"?0:34);
+  const ty = art==="mountains" ? 238-lines.length*15 : 30;
+  const titleSVG = art==="mountains"
+    ? lines.map((l,i)=>`<text x="100" y="${252+i*16-lines.length*16+10}" font-size="13">${l}</text>`).join("")
+    : lines.map((l,i)=>`<text x="100" y="${ty+i*16}" font-size="${lines.length>2?11.5:13}">${l}</text>`).join("");
+  const top = art==="mountains"
+    ? `<rect x="0" y="222" width="200" height="78" fill="${bg}"/>`
+    : `<rect x="0" y="270" width="200" height="30" fill="${bg}"/>`;
+  const authorY = art==="mountains" ? 286 : 288;
+  return `<svg viewBox="0 0 200 300" role="img" aria-label="Portada: ${b.full}, ${b.author}">
+    <rect width="200" height="300" fill="${bg}"/>
+    <g transform="${art==="mountains"?"translate(0,-24)":"translate(0,24)"}">${arts[art]}</g>
+    ${top}
+    <g font-family="Cormorant Garamond,Georgia,serif" fill="${ink}" text-anchor="middle" letter-spacing="2.4">${titleSVG}</g>
+    <text x="100" y="${authorY}" font-family="Cormorant Garamond,Georgia,serif" font-size="11" fill="${ink}" text-anchor="middle" letter-spacing="1" opacity=".85">${b.author}</text>
+  </svg>`;
+}
+
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// Día según la hora local: cambia a medianoche donde estés
+const now=new Date();
+const dayIndex=Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())/864e5);
+const todayKey=`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
+let featured=BOOKS[dayIndex%BOOKS.length];
+// Si elegiste un libro con "···" hoy, se mantiene hasta que termine el día
+try{
+  const pick=JSON.parse(localStorage.getItem("marginalia-featured")||"null");
+  const found=pick&&pick.day===todayKey&&BOOKS.find(b=>b.id===pick.id);
+  if(found) featured=found;
+}catch(e){}
+
+function renderFeatured(){
+  const b=featured;
+  document.getElementById("featBody").innerHTML=`
+    <div class="cover">${coverSVG(b)}</div>
+    <div class="feat-info">
+      <h3>${esc(b.title)}</h3>
+      <div class="by">${esc(b.author)}</div>
+      <p>${esc(b.blurb)}</p>
+      <p class="it">${esc(b.motto)}.</p>
+      <a class="btn" href="${b.file}">Ver contenido ${ICONS.arrow}</a>
+    </div>
+    <ul class="steps">
+      <li><span class="ic">${ICONS.map}</span><div><b>Mapa mental</b><span>Visualiza las ideas principales.</span></div></li>
+      <li><span class="ic">${ICONS.doc}</span><div><b>Ideas clave</b><span>Conceptos esenciales.</span></div></li>
+      <li><span class="ic">${ICONS.pen}</span><div><b>Reflexión personal</b><span>Preguntas para aplicar lo leído.</span></div></li>
+    </ul>`;
+}
+
+const cats=["Todos",...new Set(BOOKS.map(b=>b.cat))];
+let activeCat="Todos", query="";
+
+function renderFilters(){
+  document.getElementById("filters").innerHTML=cats.map(c=>`<button aria-pressed="${c===activeCat}" data-cat="${c}">${c}</button>`).join("");
+}
+function renderGrid(){
+  const q=query.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  const list=BOOKS.filter(b=>(activeCat==="Todos"||b.cat===activeCat)&&(!q||norm(b.full+" "+b.author).includes(q)));
+  document.getElementById("grid").innerHTML=list.length?list.map(b=>`
+    <article class="book">
+      <a class="cover" href="${b.file}" tabindex="-1" aria-hidden="true">${coverSVG(b)}</a>
+      <h3>${esc(b.title)}</h3>
+      <div class="au">${esc(b.author)}</div>
+      <div class="row">
+        <a class="btn" href="${b.file}">Ver guía</a>
+        <button class="more" data-feat="${b.id}" aria-label="Destacar ${esc(b.title)}" title="Destacar">&middot;&middot;&middot;</button>
+      </div>
+    </article>`).join(""):`<p class="empty">No encontré libros con esa búsqueda.</p>`;
+}
+
+let qi=dayIndex%BOOKS.length;
+function renderQuestion(){
+  const b=BOOKS[qi];
+  document.getElementById("qText").textContent=b.q;
+  document.getElementById("qSrc").innerHTML=`Guía de <a href="${b.file}">${esc(b.title)}</a>`;
+}
+
+document.getElementById("filters").addEventListener("click",e=>{
+  const c=e.target.closest("button")?.dataset.cat; if(!c) return;
+  activeCat=c; renderFilters(); renderGrid();
+});
+document.getElementById("grid").addEventListener("click",e=>{
+  const id=e.target.closest("[data-feat]")?.dataset.feat; if(!id) return;
+  featured=BOOKS.find(b=>b.id===id); renderFeatured();
+  try{localStorage.setItem("marginalia-featured",JSON.stringify({id,day:todayKey}))}catch(e){}
+  document.getElementById("destacada").scrollIntoView({behavior:"smooth",block:"start"});
+});
+document.getElementById("nextQ").addEventListener("click",()=>{qi=(qi+1)%BOOKS.length;renderQuestion()});
+
+const search=document.getElementById("search");
+document.getElementById("searchBtn").addEventListener("click",()=>{
+  search.classList.toggle("open"); if(search.classList.contains("open")) search.focus();
+});
+search.addEventListener("input",()=>{query=search.value;renderGrid()});
+search.addEventListener("keydown",e=>{if(e.key==="Enter")document.getElementById("libros").scrollIntoView({behavior:"smooth"})});
+
+const root=document.documentElement;
+try{const t=localStorage.getItem("marginalia-theme"); if(t) root.dataset.theme=t}catch(e){}
+document.getElementById("themeBtn").addEventListener("click",()=>{
+  const isDark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme=isDark?"light":"dark";
+  try{localStorage.setItem("marginalia-theme",root.dataset.theme)}catch(e){}
+});
+
+const navLinks=[...document.querySelectorAll("nav.main a")];
+navLinks.forEach(a=>a.addEventListener("click",()=>{navLinks.forEach(x=>x.classList.toggle("on",x===a))}));
+
+renderFeatured(); renderFilters(); renderGrid(); renderQuestion();
+</script>
+</body>
+</html>
