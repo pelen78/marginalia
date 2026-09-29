@@ -398,36 +398,36 @@ dialog{border-radius:16px}
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Aquí encuentras ideas, preguntas y actividades hechas para esta guía. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
+    <p>Recorre el libro por sus grandes partes con explicaciones fáciles, ejemplos y preguntas para pensar. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 13 ideas exploradas</span>
+    <span id="progress-text">0 de 13 secciones exploradas</span>
     <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Empieza aquí</h2>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
-          <h2>Poco a <span>poco</span></h2>
-          <p>Descubre cómo cambios pequeños, repetidos cada día, se vuelven grandes resultados.</p>
-          <div class="hand" style="font-size:1.35rem">Pequeño, fácil, diario</div>
+          <h2>Pequeños cambios, <span>grandes resultados</span></h2>
+          <p>Una guía sencilla para entender cómo el libro propone crear buenos hábitos y hacer más difíciles los malos.</p>
+          <div class="hand" style="font-size:1.35rem">Entiende · prueba · ajusta</div>
         </div>
       </div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Conceptos clave</h2>
+      <h2 class="g-title"><span class="g-n">2</span>Las bases</h2>
       <div class="g-grid" id="g-2"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Observa y practica</h2>
+      <h2 class="g-title"><span class="g-n">3</span>Las cuatro reglas</h2>
       <div class="g-grid" id="g-3"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Reflexiona</h2>
+      <h2 class="g-title"><span class="g-n">4</span>Cómo llevarlo a tu vida</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
           <div class="hand" id="quote-text">¿Qué hábito pequeño podrías empezar hoy?</div>
@@ -446,7 +446,7 @@ dialog{border-radius:16px}
     <div class="scan">
       <div class="sliders">
         <div class="hb-field"><label for="h-new">¿Qué hábito quieres empezar?</label><input id="h-new" type="text" placeholder="Ejemplo: leer"></div>
-        <div class="hb-field"><label for="h-mini">Hazlo tan fácil que dure 2 minutos</label><input id="h-mini" type="text" placeholder="Ejemplo: leer una página"></div>
+        <div class="hb-field"><label for="h-mini">¿Cuál es la versión más fácil para empezar?</label><input id="h-mini" type="text" placeholder="Ejemplo: leer un párrafo"></div>
         <div class="hb-field"><label for="h-after">¿Después de qué lo vas a hacer?</label><input id="h-after" type="text" placeholder="Ejemplo: lavarme los dientes en la noche"></div>
         <div class="hb-field"><label for="h-where">¿Dónde?</label><input id="h-where" type="text" placeholder="Ejemplo: en mi cama"></div>
       </div>
@@ -503,7 +503,7 @@ dialog{border-radius:16px}
     <div class="source-note">
       <strong>Obra de referencia:</strong> Clear, J. <cite>Hábitos atómicos</cite>. Paidós, 2019.<br>
       <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
-      Las explicaciones, ejemplos, preguntas y actividades fueron escritos especialmente para esta guía independiente. No es una edición ni un resumen oficial, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
+      Las explicaciones, ejemplos, preguntas y actividades fueron redactados especialmente para esta guía independiente. No es una edición ni un resumen oficial, no reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
@@ -551,55 +551,74 @@ const I = {
 };
 
 const DATA = [
-  {id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Para empezar',title:'Cómo usar esta guía',
-   pts:['Esta guía te acompaña mientras lees. No reemplaza al libro.','Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.','Compara lo que lees aquí con el libro y con tu vida.'],
-   q:'¿Qué hábito te gustaría cambiar con este libro?'},
-  {id:'mensaje',g:1,c:'blue',ico:'steps',eyebrow:'La gran idea',title:'Cambios pequeños, resultados grandes',
-   text:'La idea principal del libro es que un cambio chiquito, repetido todos los días, al final hace una gran diferencia.',
-   pts:['Mejorar un poquito cada día no se nota al principio, pero se va sumando.','Lo que haces diario importa más que lo que haces una sola vez.'],
-   q:'¿Qué cosa pequeña haces todos los días que, con los años, cambia mucho tu vida?'},
-  {id:'c1',g:2,c:'green',ico:'gear',eyebrow:'Idea clave',title:'Metas y sistemas',
-   pts:['Una meta es a dónde quieres llegar. Un sistema es lo que haces cada día para llegar.','Muchas personas tienen la misma meta. Lo que cambia el resultado es el sistema.','Si mejoras tu sistema, los resultados llegan solos.'],
-   q:'Piensa en una meta tuya. ¿Qué harías cada día para acercarte a ella?'},
-  {id:'c2',g:2,c:'green',ico:'user',eyebrow:'Idea clave',title:'Quién quieres ser',
-   pts:['En vez de "quiero leer un libro", piensa "soy alguien que lee".','Cada vez que cumples un hábito, es como un voto por esa persona que quieres ser.','No necesitas ser perfecto, solo sumar más votos que antes.'],
-   q:'Completa: "Soy alguien que ___". ¿Qué haría esa persona hoy?'},
-  {id:'c3',g:2,c:'green',ico:'loop',eyebrow:'Idea clave',title:'Cómo funciona un hábito',
-   pts:['Todo hábito tiene 4 pasos: algo te lo recuerda, te dan ganas, lo haces y te sientes bien.','Ejemplo: ves el celular, te dan ganas de ver mensajes, lo abres y te entretienes.','Si entiendes los 4 pasos, puedes cambiar cualquiera.'],
-   q:'Elige un hábito tuyo. ¿Qué te lo recuerda y qué ganas cuando lo haces?'},
-  {id:'c4',g:2,c:'green',ico:'broken',eyebrow:'Idea clave',title:'Para romper un mal hábito',
-   pts:['Haz lo contrario: que no lo veas, que no se te antoje, que sea difícil y que no se sienta bien.','Ejemplo: deja el celular en otro cuarto mientras estudias.','Es más fácil cambiar lo que te rodea que confiar solo en tu fuerza de voluntad.'],
-   q:'¿Qué mal hábito podrías hacer un poco más difícil hoy?'},
-  {id:'ley1',g:3,c:'peach',ico:'eye',eyebrow:'Paso 1',title:'Que se vea',
-   pts:['Deja a la vista lo que te recuerda tu hábito: el libro en la almohada, la botella de agua en el escritorio.','Une tu hábito nuevo a uno que ya tienes: "Después de ___, voy a ___".','Di cuándo y dónde lo vas a hacer.'],
-   q:'¿Qué puedes dejar a la vista hoy para acordarte de tu hábito?'},
-  {id:'ley2',g:3,c:'peach',ico:'heart',eyebrow:'Paso 2',title:'Que se te antoje',
-   pts:['Junta algo que tienes que hacer con algo que te gusta: solo escuchas tu podcast favorito mientras haces ejercicio.','Rodéate de personas que ya tienen el hábito que quieres.','Busca lo que te gusta de hacerlo, no solo lo que te cuesta.'],
-   q:'¿Con qué cosa que te gusta podrías juntar tu hábito?'},
-  {id:'ley3',g:3,c:'peach',ico:'clock',eyebrow:'Paso 3',title:'Que sea fácil',
-   pts:['Empieza con una versión de 2 minutos: "leer" se vuelve "leer una página".','Quita pasos: deja la ropa de ejercicio lista desde la noche.','Primero aprende a presentarte. Luego lo haces más grande.'],
-   q:'¿Cómo sería la versión de 2 minutos de tu hábito?'},
-  {id:'ley4',g:3,c:'peach',ico:'check',eyebrow:'Paso 4',title:'Que se sienta bien',
-   pts:['Date una pequeña recompensa justo después.','Marca en un calendario cada día que lo cumples. Ver tu avance motiva.','Si fallas un día, no pasa nada. Solo trata de no fallar dos días seguidos.'],
-   q:'¿Dónde puedes llevar la cuenta de los días que cumples tu hábito?'},
-  {id:'practicas',g:4,c:'lav',ico:'key',eyebrow:'Reto de la semana',title:'Prueba y fíjate',
-   pts:['Elige un solo hábito. Solo uno.','Hazlo en su versión de 2 minutos durante 7 días.','Márcalo cada día en "Mi hábito", más abajo.','Al final de la semana, escribe qué fue fácil y qué no.'],
-   q:'¿Qué hábito vas a probar esta semana?'},
-  {id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para platicar',title:'Preguntas para discutir',
-   pts:['¿Siempre funcionan los cambios pequeños, o a veces se necesita un cambio grande?','¿Qué pesa más: lo que te rodea o tu fuerza de voluntad?','¿Está bien tener metas si lo importante es el sistema?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
-   q:'Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?'},
-  {id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu opinión',title:'¿Qué te llevas?',
-   pts:['Explica una idea con tus propias palabras.','Busca un ejemplo de tu vida que la apoye o que no.','Separa lo que dice el libro de lo que tú piensas.','Regresa al libro si quieres saber más.'],
-   q:'¿Qué idea te gustaría revisar directamente en el libro?'}
+{id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Antes de empezar',title:'El libro de un vistazo',
+ text:'La idea principal es sencilla: lo que hacemos una y otra vez puede cambiar mucho nuestra vida, aunque cada acción parezca pequeña.',
+ pts:['Un hábito no cambia todo de un día para otro. Su efecto se nota con el tiempo.','El libro se enfoca menos en tener mucha fuerza de voluntad y más en preparar las condiciones para que hacer lo correcto sea más fácil.','La meta no es cambiar todo de golpe, sino construir una forma de actuar que puedas repetir.'],
+ q:'¿Qué hábito pequeño, si lo mantuvieras durante un año, podría hacer una diferencia en tu vida?'},
+{id:'mensaje',g:1,c:'blue',ico:'steps',eyebrow:'La idea que conecta todo',title:'Lo pequeño se va acumulando',
+ pts:['Una acción pequeña puede parecer que no sirve de mucho, pero repetirla cambia el resultado con el tiempo.','Lo mismo pasa con los malos hábitos: sus efectos también se van acumulando.','Por eso el libro pone tanta atención en lo que hacemos normalmente, no solo en los grandes esfuerzos de vez en cuando.'],
+ q:'¿Qué haces casi todos los días que podría estar sumando más de lo que parece?'},
+
+{id:'c1',g:2,c:'green',ico:'gear',eyebrow:'Primera parte',title:'No te quedes solo con la meta',
+ text:'Querer algo ayuda a saber hacia dónde vas, pero el libro pone más atención en lo que haces de manera repetida para llegar ahí.',
+ pts:['La meta es el resultado que quieres; el sistema es la manera en que trabajas para conseguirlo.','Dos personas pueden querer lo mismo y obtener resultados distintos porque sus rutinas son diferentes.','En vez de pensar solamente “quiero lograr esto”, conviene preguntarte “¿qué tendría que hacer con frecuencia?”.'],
+ q:'Ejemplo: si quieres leer más, ¿qué rutina concreta podría hacer que leer forme parte de tu día?'},
+
+{id:'c2',g:2,c:'green',ico:'user',eyebrow:'Primera parte',title:'Tus hábitos también hablan de quién eres',
+ text:'El libro propone que un hábito se vuelve más fuerte cuando lo relacionas con la clase de persona que quieres ser.',
+ pts:['En vez de pensar solo “quiero correr”, puedes pensar “quiero ser una persona que se mueve y cuida su cuerpo”.','Cada vez que repites una acción, refuerzas un poco esa imagen de ti mismo.','No necesitas hacerlo perfecto. Lo importante es repetir suficientes acciones que vayan en esa dirección.'],
+ q:'Completa la frase: “Quiero ser una persona que ___”. ¿Qué acción pequeña haría hoy esa persona?'},
+
+{id:'c3',g:2,c:'green',ico:'loop',eyebrow:'Cómo nace un hábito',title:'Del recordatorio a la recompensa',
+ text:'Para explicar por qué repetimos ciertas conductas, el libro divide un hábito en cuatro momentos sencillos.',
+ pts:['Primero aparece algo que llama tu atención o te recuerda la conducta.','Después aparece el deseo de obtener algo: placer, alivio, diversión, comodidad o algún beneficio.','Entonces haces la acción.','Al final recibes algún tipo de recompensa, y eso ayuda a que tu cerebro quiera repetirla.'],
+ q:'Piensa en revisar el celular. ¿Qué suele hacer que lo agarres y qué obtienes cuando lo haces?'},
+
+{id:'c4',g:2,c:'green',ico:'broken',eyebrow:'Para los malos hábitos',title:'Hazles el camino más difícil',
+ text:'Para reducir un hábito que no quieres, puedes cambiar las condiciones que hacen que sea tan fácil repetirlo.',
+ pts:['Quita de la vista las cosas que lo disparan cuando sea posible.','Haz que la conducta requiera más pasos o más esfuerzo.','Busca alternativas que te den algo parecido sin repetir el hábito que quieres dejar.','Cambiar el ambiente suele ser más práctico que depender siempre de resistir la tentación.'],
+ q:'Ejemplo: si el celular te distrae mientras trabajas, ¿qué podrías cambiar físicamente para que agarrarlo sea menos automático?'},
+
+{id:'ley1',g:3,c:'peach',ico:'eye',eyebrow:'Regla 1',title:'Haz que el hábito te recuerde que existe',
+ text:'Si quieres hacer algo con frecuencia, ayuda mucho tener una señal clara que te lo recuerde.',
+ pts:['Pon a la vista algo relacionado con el hábito: por ejemplo, deja el libro donde normalmente te sientas.','Puedes unir una acción nueva a otra que ya haces todos los días.','También ayuda decidir de antemano cuándo y dónde lo harás.'],
+ q:'¿Qué podrías dejar preparado hoy para que mañana sea difícil olvidar tu hábito?'},
+
+{id:'ley2',g:3,c:'peach',ico:'heart',eyebrow:'Regla 2',title:'Hazlo más atractivo',
+ text:'Es más fácil repetir algo cuando lo relacionamos con una experiencia que nos gusta o esperamos con ganas.',
+ pts:['Puedes juntar una actividad que necesitas hacer con otra que disfrutas.','Las personas que te rodean también influyen: tendemos a ver como normal lo que nuestro grupo hace con frecuencia.','Encontrar una parte agradable del proceso ayuda a que no todo dependa del resultado final.'],
+ q:'¿Qué cosa que disfrutas podrías relacionar con el hábito que quieres crear?'},
+
+{id:'ley3',g:3,c:'peach',ico:'clock',eyebrow:'Regla 3',title:'Haz que empezar sea fácil',
+ text:'Cuando una acción necesita demasiado esfuerzo para comenzar, es más fácil posponerla. Por eso el libro propone reducir la dificultad del primer paso.',
+ pts:['Prepara con anticipación lo que vas a necesitar.','Empieza con una versión muy pequeña del hábito que puedas hacer rápidamente.','Por ejemplo, “hacer ejercicio” puede empezar simplemente con ponerte la ropa y moverte unos minutos.','Primero haz que comenzar sea normal; después puedes aumentar el esfuerzo.'],
+ q:'¿Cuál sería la versión más pequeña y fácil de tu hábito?'},
+
+{id:'ley4',g:3,c:'peach',ico:'check',eyebrow:'Regla 4',title:'Haz que terminar se sienta bien',
+ text:'Los resultados de muchos buenos hábitos tardan en aparecer, así que ayuda tener alguna señal inmediata de que vas avanzando.',
+ pts:['Registrar que cumpliste puede darte una sensación clara de progreso.','Una pequeña recompensa que no contradiga tu objetivo puede ayudar a mantener la conducta.','Un día malo no destruye un hábito; lo importante es regresar en cuanto puedas.'],
+ q:'¿Cómo podrías notar o registrar cada vez que cumplas tu hábito?'},
+
+{id:'practicas',g:4,c:'lav',ico:'key',eyebrow:'Pruébalo tú',title:'Construye un hábito pequeño',
+ pts:['Elige una sola conducta que quieras repetir.','Haz que el primer paso sea muy fácil.','Decide qué señal te lo recordará y en qué momento lo harás.','Pruébalo durante varios días y cambia lo que no esté funcionando.'],
+ q:'¿Qué hábito quieres probar primero?'},
+
+{id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para recordar',title:'Las ideas principales',
+ pts:['Los hábitos pequeños pueden producir cambios grandes cuando se mantienen.','Tu ambiente puede ayudarte o estorbarte más de lo que parece.','Un buen sistema facilita repetir la conducta correcta.','Pensar en quién quieres ser puede darle sentido a lo que haces todos los días.'],
+ q:'Si tuvieras que explicarle el libro a alguien usando solo tres ideas, ¿cuáles serían?'},
+
+{id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu lectura',title:'¿Qué te llevas del libro?',
+ pts:['No necesitas cambiar diez cosas al mismo tiempo.','Puedes probar una idea, observar qué pasa y ajustar tu sistema.','Esta guía te ayuda a recordar las ideas; tus resultados dependen de cómo las adaptes a tu propia vida.'],
+ q:'¿Qué idea de esta guía quieres probar esta semana?'}
 ];
 
 const QUOTES = [
-  '¿Qué hábito pequeño podrías empezar hoy?',
-  '¿Qué tipo de persona quieres ser?',
-  'Reto: haz tu hábito en su versión de 2 minutos.',
-  '¿Qué tienes a la vista que te distrae?',
-  'Si fallas un día, no falles dos.',
-  '¿Qué idea del libro te convence y cuál no?'
+'¿Qué hábito pequeño podrías empezar hoy?',
+'¿Qué parte de tu ambiente te ayuda y cuál te estorba?',
+'¿Qué acción sería tan fácil que casi no tendrías excusa para no empezar?',
+'¿Qué tipo de persona quieres llegar a ser con tus hábitos?',
+'¿Qué hábito haces casi sin pensarlo y qué lo activa?',
+'¿Qué idea del libro quieres probar antes de decidir si te funciona?'
 ];
 
 const store = {
@@ -627,7 +646,7 @@ DATA.forEach((d,i)=>{
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
   const n=done.size;
-  document.getElementById('progress-text').textContent=n===DATA.length?'¡Exploraste todo el mapa!':`${n} de ${DATA.length} ideas exploradas`;
+  document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
 }
@@ -674,7 +693,7 @@ function drawDays(){
   daysEl.innerHTML=DN.map((d,i)=>`<button type="button" aria-pressed="${!!week[i]}" aria-label="${DL[i]}" data-i="${i}">${d}</button>`).join('');
   const n=week.filter(Boolean).length;
   let two=false;for(let i=1;i<7;i++){if(!week[i]&&!week[i-1]&&week.slice(0,i-1).some(Boolean))two=true}
-  document.getElementById('streak').textContent=n===0?'Marca el día cuando lo hagas.':n===7?'¡7 de 7! Ya eres alguien que cumple este hábito.':two?`Llevas ${n} de 7. Fallaste dos seguidos: no pasa nada, retómalo hoy.`:`Llevas ${n} de 7. Si fallas un día, que no sean dos seguidos.`;
+  document.getElementById('streak').textContent=n===0?'Marca el día cuando lo hagas.':n===7?'¡7 de 7! Ya eres alguien que cumple este hábito.':two?`Llevas ${n} de 7. Fallaste dos seguidos: no pasa nada, retómalo hoy.`:`Llevas ${n} de 7. Si un día no sale, retómalo en cuanto puedas.`;
 }
 daysEl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i;week[i]=week[i]?0:1;store.set('ha-week',week);drawDays()});
 document.getElementById('week-reset').onclick=()=>{week=[0,0,0,0,0,0,0];store.set('ha-week',week);drawDays()};
@@ -687,7 +706,7 @@ const QS=[
   ['“Desde hoy voy a leer una hora diaria, aunque nunca leo.”','mente','Es demasiado para empezar. Mejor una página y luego vas subiendo.'],
   ['“Después de lavarme los dientes en la noche, leo una página.”','presencia','Une el hábito nuevo a uno que ya tienes. Así no se te olvida.'],
   ['“Guardo los dulces en una caja arriba del refri.”','presencia','Si no los ves y cuesta alcanzarlos, se te antojan menos.'],
-  ['“Ayer no hice ejercicio, entonces ya para qué sigo.”','mente','Fallar un día es normal. Lo importante es no fallar dos seguidos.'],
+  ['“Ayer no hice ejercicio, entonces ya para qué sigo.”','mente','Un día sin hacerlo no borra tu avance. Retómalo en cuanto puedas.'],
   ['“Marco con una X en el calendario cada día que practico.”','presencia','Ver tu avance se siente bien y te dan ganas de seguir.'],
   ['“Soy alguien que se mueve, así que hoy camino aunque sea 5 minutos.”','presencia','Piensa en quién quiere ser y lo cumple, aunque sea poquito.']
 ];
