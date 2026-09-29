@@ -380,39 +380,33 @@ dialog{border-radius:16px}
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Aquí encuentras ideas, preguntas y actividades hechas para esta guía. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
+    <p>Recorre el libro capítulo por capítulo con explicaciones fáciles, ejemplos y preguntas para pensar. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 11 ideas exploradas</span>
+    <span id="progress-text">0 de 11 secciones exploradas</span>
     <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="11" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Empieza aquí</h2>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
-          <h2>Atención al <span>presente</span></h2>
-          <p>Descubre qué pasa cuando pones atención a lo que está pasando ahorita.</p>
-          <div class="hand" style="font-size:1.35rem">Fíjate, pregunta, compara</div>
+          <h2>La idea del <span>Ahora</span></h2>
+          <p>Una guía para recordar de qué trata cada capítulo y cómo se conectan sus ideas.</p>
+          <div class="hand" style="font-size:1.35rem">Entiende · conecta · piensa</div>
         </div>
       </div>
     </div>
+    <div class="group"><h2 class="g-title"><span class="g-n">2</span>Capítulos 1–3</h2><div class="g-grid" id="g-2"></div></div>
+    <div class="group"><h2 class="g-title"><span class="g-n">3</span>Capítulos 4–6</h2><div class="g-grid" id="g-3"></div></div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Conceptos clave</h2>
-      <div class="g-grid" id="g-2"></div>
-    </div>
-    <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Observa y practica</h2>
-      <div class="g-grid" id="g-3"></div>
-    </div>
-    <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Reflexiona</h2>
+      <h2 class="g-title"><span class="g-n">4</span>Las ideas que se repiten</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
-          <div class="hand" id="quote-text">¿Qué cambia cuando pones atención a lo que pasa ahorita?</div>
+          <div class="hand" id="quote-text">¿Qué idea del libro cambió más tu forma de mirar el presente?</div>
           <div class="by">Pregunta de esta guía</div>
           <button class="chip" id="next-quote" type="button">Otra pregunta</button>
         </div>
@@ -491,7 +485,7 @@ dialog{border-radius:16px}
     <div class="source-note">
       <strong>Obra de referencia:</strong> Tolle, E. <cite>El Poder del Ahora</cite>. [Editorial], [año de la edición].<br>
       <strong>Guía elaborada por:</strong> Pelen Montes · <a href="https://pelen13.com/" style="color:inherit">pelen13.com</a><br>
-      Los textos, preguntas y actividades de esta guía son originales. No es un resumen oficial y no tiene relación con el autor ni con la editorial.
+      Las explicaciones, ejemplos, preguntas y actividades fueron escritos especialmente para esta guía independiente. No es una edición ni un resumen oficial, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
@@ -529,49 +523,64 @@ const I = {
 };
 
 const DATA = [
-  {id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Para empezar',title:'Cómo usar esta guía',
-   pts:['Esta guía te acompaña mientras lees. No reemplaza al libro.','Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.','Compara lo que lees aquí con el libro y con tu vida.'],
-   q:'¿Por qué te dio curiosidad este libro?'},
-  {id:'mensaje',g:1,c:'blue',ico:'heart',eyebrow:'La gran pregunta',title:'¿Qué pasa si pones atención al ahora?',
-   text:'La pregunta principal del libro es qué cambia cuando pones tu atención en lo que está pasando en este momento.',
-   pts:['Separa lo que está pasando de lo que piensas sobre eso.','Fíjate cuándo estás en el momento y cuándo estás perdido en tu cabeza.'],
-   q:'Piensa en algo que te preocupa. ¿Qué parte está pasando ahorita y qué parte solo te imaginas?'},
-  {id:'c1',g:2,c:'green',ico:'brain',eyebrow:'Idea clave',title:'Tú no eres tus pensamientos',
-   pts:['Puedes ver tus pensamientos como si fueran nubes que pasan.','No todo lo que piensas es verdad ni dice quién eres.','Si te das cuenta de un pensamiento, puedes decidir antes de reaccionar.'],
-   q:'Durante un minuto, solo nota qué pensamientos llegan. No los detengas. ¿Qué notaste?'},
-  {id:'c2',g:2,c:'green',ico:'broken',eyebrow:'Idea clave',title:'Las emociones se sienten en el cuerpo',
-   pts:['Una emoción también se siente en el cuerpo: en el pecho, el estómago, los hombros.','Si le das vueltas y vueltas, la emoción dura más.','Aceptar lo que sientes no quiere decir que todo esté bien.'],
-   q:'La próxima vez que sientas algo fuerte, ¿en qué parte del cuerpo lo notas primero?'},
-  {id:'c3',g:2,c:'green',ico:'mountain',eyebrow:'Idea clave',title:'Ayer, mañana y ahora',
-   pts:['Recordar y planear está bien. El problema es cuando no puedes dejar de darle vueltas.','Solo puedes hacer algo en este momento.','Cambia "tengo un problema" por "¿qué puedo hacer ahorita?".'],
-   q:'¿Qué problema puedes convertir hoy en un paso pequeño?'},
-  {id:'c4',g:3,c:'peach',ico:'cloud',eyebrow:'Fíjate',title:'¿Qué te distrae?',
-   pts:['Preocuparte, repetir pláticas en tu cabeza o imaginar lo que va a pasar te saca del momento.','Darte cuenta de que te distrajiste ya es un buen paso.','Para regresar, fíjate en algo concreto: un sonido, tu respiración o lo que estás haciendo.'],
-   q:'¿Qué te distrae más: recuerdos, planes, preocupaciones o el celular?'},
-  {id:'c5',g:3,c:'peach',ico:'lotus',eyebrow:'Practica',title:'Entrena tu atención',
-   pts:['Escoge algo que haces todos los días y ponle toda tu atención.','Fíjate en lo que oyes, sientes y ves antes de pensar si te gusta o no.','Si te distraes, regresa. No es fallar, es parte de practicar.'],
-   q:'¿Qué actividad de hoy puedes hacer con toda tu atención por un minuto?'},
-  {id:'c6',g:3,c:'peach',ico:'globe',eyebrow:'En tu vida',title:'Estar presente con otros',
-   pts:['Escucha sin estar pensando qué vas a contestar.','Fíjate cómo reaccionas antes de responder.','También puedes practicar en la escuela, el trabajo y con tu familia.'],
-   q:'En tu próxima plática, ¿puedes escuchar hasta que la otra persona termine?'},
-  {id:'practicas',g:3,c:'peach',ico:'leaf',eyebrow:'Reto de la semana',title:'Prueba y fíjate',
-   pts:['Haz una pausa y nombra cinco cosas que ves, oyes o sientes.','Pon atención a tu respiración durante un minuto.','Escribe un pensamiento que se repite y pregúntate: ¿es un hecho o una idea mía?','Haz una sola cosa a la vez, sin cambiar a otra.'],
-   q:'Haz uno de estos retos hoy y anota qué notaste.'},
-  {id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para platicar',title:'Preguntas para discutir',
-   pts:['¿Somos lo mismo que nuestros pensamientos?','¿Cuál es la diferencia entre aceptar algo y rendirse?','¿Cómo vivimos el ahora sin olvidar lo que aprendimos y lo que queremos lograr?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
-   q:'Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?'},
-  {id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu opinión',title:'¿Qué te llevas?',
-   pts:['Explica una idea con tus propias palabras.','Busca un ejemplo de tu vida que la apoye o que no.','Separa lo que dice el libro de lo que tú piensas.','Regresa al libro si quieres saber más.'],
-   q:'¿Qué idea te gustaría revisar directamente en el libro?'}
+{id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Antes de empezar',title:'El libro de un vistazo',
+ text:'El libro parte de una idea sencilla: muchas veces sufrimos más porque nos quedamos atrapados en nuestros pensamientos, en lo que pasó o en lo que podría pasar.',
+ pts:['Tolle propone volver la atención a lo que está pasando en este momento.','A lo largo del libro habla de los pensamientos, las emociones, el pasado, el futuro y de cómo estar más presentes en la vida diaria.'],
+ q:'Antes de empezar, ¿qué significa para ti estar presente?'},
+{id:'mensaje',g:1,c:'blue',ico:'heart',eyebrow:'La idea que conecta todo',title:'De pensar tanto a estar presente',
+ pts:['El libro no dice que debamos dejar de pensar. La idea es no creer automáticamente todo lo que pensamos.','Podemos aprender a notar nuestros pensamientos sin dejarnos llevar siempre por ellos.','El “Ahora” es este momento: lo que está pasando y lo que podemos hacer en este instante.'],
+ q:'¿Cuándo notas que tu mente se va más al pasado o al futuro?'},
+
+{id:'c1',g:2,c:'green',ico:'brain',eyebrow:'Capítulo 1',title:'Usted no es su mente',
+ text:'Este capítulo explica que tener pensamientos es normal, pero que no somos solamente lo que pasa por nuestra cabeza.',
+ pts:['Tolle propone escuchar esa voz que habla dentro de nuestra cabeza sin seguirla automáticamente.','Cuando notas que estás pensando, ya puedes mirar ese pensamiento desde cierta distancia.','También explica que lo que pensamos puede afectar cómo se siente nuestro cuerpo.','La práctica es sencilla: notar los pensamientos sin pelear con ellos y sin juzgarte por tenerlos.'],
+ q:'Ejemplo: si piensas “todo me sale mal”, ¿qué cambia si dices “estoy teniendo ese pensamiento” en vez de tomarlo como un hecho?'},
+
+{id:'c2',g:2,c:'rose',ico:'broken',eyebrow:'Capítulo 2',title:'La conciencia: el escape del dolor',
+ text:'Aquí Tolle habla de cómo un dolor del pasado puede seguir afectándonos hoy cuando lo recordamos, lo repetimos o reaccionamos desde él.',
+ pts:['El autor llama “cuerpo del dolor” a emociones y heridas del pasado que pueden volver a sentirse con fuerza.','La idea es darte cuenta de lo que sientes sin seguir alimentándolo con más y más pensamientos.','Muchas veces el miedo aparece porque imaginamos algo malo que podría pasar después.','Observar lo que sentimos antes de reaccionar puede ayudarnos a no repetir el mismo ciclo.'],
+ q:'Ejemplo: recuerdas una discusión y vuelves a enojarte. ¿Qué está pasando realmente ahora y qué estás reviviendo en tu cabeza?'},
+
+{id:'c3',g:2,c:'lav',ico:'mountain',eyebrow:'Capítulo 3',title:'Avanzar profundamente hacia el Ahora',
+ text:'Este capítulo habla de cuánto tiempo pasamos pensando en lo que ya pasó o preocupándonos por lo que todavía no ocurre.',
+ pts:['Recordar y hacer planes es útil. El problema es quedarnos atrapados ahí todo el tiempo.','Aunque pensemos en ayer o mañana, nuestra vida está ocurriendo en este momento.','A veces un problema se siente enorme porque además de resolverlo imaginamos muchas cosas que podrían salir mal.','Volver al presente ayuda a preguntarnos algo más concreto: ¿qué puedo hacer ahora?'],
+ q:'Ejemplo: tienes algo pendiente. ¿Puedes separar lo que necesitas hacer de todo lo que imaginas que podría salir mal?'},
+
+{id:'c4',g:3,c:'peach',ico:'cloud',eyebrow:'Capítulo 4',title:'Estrategias de la mente para evitar el Ahora',
+ text:'Aquí el libro muestra algunas formas en que nos alejamos del presente sin darnos cuenta.',
+ pts:['Quejarnos, darle vueltas a algo o pensar constantemente que las cosas deberían ser diferentes puede aumentar nuestro malestar.','El primer paso es simplemente darte cuenta de que lo estás haciendo.','Aceptar que algo ya está pasando no significa que te guste ni que tengas que quedarte sin hacer nada.','Después de reconocer la situación puedes decidir con más calma qué hacer para cambiarla.'],
+ q:'Ejemplo: cambian tus planes. ¿Qué te molesta más: el cambio o seguir pensando “esto no debería estar pasando”?'},
+
+{id:'c5',g:3,c:'mint',ico:'lotus',eyebrow:'Capítulo 5',title:'El estado de presencia',
+ text:'Este capítulo explica qué quiere decir Tolle cuando habla de estar presente: poner atención de verdad a lo que está pasando aquí y ahora.',
+ pts:['Estar presente es notar lo que ocurre sin estar todo el tiempo perdido en pensamientos.','La respiración y las sensaciones del cuerpo pueden ayudarte a regresar al momento.','No necesitas hacer algo especial: puedes practicar mientras caminas, comes, trabajas o haces cualquier tarea.','Cuando te distraes, simplemente puedes darte cuenta y volver a lo que estás haciendo.'],
+ q:'Ejemplo: ¿cómo sería caminar, comer o escuchar a alguien poniendo toda tu atención en eso durante un minuto?'},
+
+{id:'c6',g:3,c:'blue',ico:'globe',eyebrow:'Capítulo 6',title:'Vivir en un mundo iluminado',
+ text:'En este capítulo la idea de estar presente se lleva a la vida diaria y a la manera en que tratamos a otras personas.',
+ pts:['No necesitas alejarte del mundo para practicar lo que propone el libro.','Escuchar con atención puede cambiar la forma en que hablamos y reaccionamos con los demás.','Si notas una reacción antes de responder, tienes más oportunidad de elegir qué hacer.','La idea es llevar esa atención al trabajo, la familia, las relaciones y las cosas normales de cada día.'],
+ q:'Ejemplo: en una conversación difícil, ¿qué cambiaría si escucharas hasta el final antes de pensar qué vas a responder?'},
+
+{id:'practicas',g:4,c:'peach',ico:'leaf',eyebrow:'Ideas que aparecen una y otra vez',title:'Cómo volver al presente',
+ pts:['Nota lo que estás pensando sin seguir cada pensamiento.','Pon atención a tu respiración o a lo que siente tu cuerpo.','Date cuenta cuando estás peleando mentalmente con algo que ya pasó.','Pregúntate qué está pasando de verdad ahora y qué parte estás imaginando.'],
+ q:'¿Cuál de estas ideas podrías probar hoy?'},
+
+{id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para recordar',title:'Las ideas principales',
+ pts:['No eres solamente tus pensamientos: puedes observarlos.','Notar lo que sientes puede ayudarte a no reaccionar automáticamente.','El pasado ya pasó y el futuro todavía no llega; tu vida ocurre ahora.','Estar presente se practica en las cosas normales de todos los días.'],
+ q:'Si tuvieras que contarle a alguien de qué trata el libro usando solo tres ideas, ¿cuáles serían?'},
+
+{id:'resultado',g:4,c:'yellow',ico:'sun',eyebrow:'Tu lectura',title:'¿Qué te llevas del libro?',
+ pts:['Esta guía sirve para ayudarte a recordar lo que leíste, no para reemplazar el libro.','No tienes que estar de acuerdo con todo: también puedes cuestionar las ideas.','Tus ejemplos y notas pueden convertir esta guía en tu propia marginalia.'],
+ q:'¿Qué idea quieres volver a buscar directamente en el libro?'}
 ];
 
 const QUOTES = [
-  '¿Qué cambia cuando pones atención a lo que pasa ahorita?',
-  '¿Eso está pasando o solo lo estás pensando?',
-  'Reto: haz una sola cosa durante un minuto.',
-  '¿Planear el futuro siempre te aleja del presente?',
-  '¿Qué idea del libro te convence y cuál no?',
-  'Regresa al libro y compara lo que entendiste.'
+'¿Qué idea del libro cambió más tu forma de mirar el presente?',
+'¿Qué capítulo te gustaría volver a leer con más calma?',
+'¿Qué concepto entendiste diferente después de llevarlo a un ejemplo cotidiano?',
+'¿Qué idea te resulta útil aunque no estés totalmente de acuerdo con ella?',
+'¿Dónde notas con más facilidad la diferencia entre pensar y observar?',
+'¿Qué te gustaría recordar de este libro dentro de un año?'
 ];
 
 const store = {
@@ -599,7 +608,7 @@ DATA.forEach((d,i)=>{
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
   const n=done.size;
-  document.getElementById('progress-text').textContent=n===DATA.length?'¡Exploraste todo el mapa!':`${n} de ${DATA.length} ideas exploradas`;
+  document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
 }
