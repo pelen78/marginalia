@@ -15,7 +15,7 @@
 
 </style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<title>Guía visual · Hábitos atómicos</title>
+<title>Guía visual de lectura · El Poder del Ahora</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
@@ -53,7 +53,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* Hero */
 .hero{position:relative;text-align:center;padding-block:40px 20px}
-.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.01em;display:inline-block;padding:4px 28px 0;background:linear-gradient(100deg,transparent 2%,var(--c-mint) 8%,var(--c-yellow) 60%,transparent 98%);border-radius:40px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.01em;display:inline-block;padding:4px 28px 0;background:linear-gradient(100deg,transparent 2%,var(--c-mint) 8%,var(--c-blue) 60%,transparent 98%);border-radius:40px}
 .hero .sub{font-family:var(--f-display);font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(.8rem,1.8vw,1.05rem);margin-top:10px;color:var(--muted)}
 .author{display:inline-block;margin-top:12px;padding:4px 18px;border-radius:999px;background:var(--c-pink);font-family:var(--f-display);font-weight:700;letter-spacing:.08em}
 .hand{font-family:var(--f-hand);font-size:1.6rem;line-height:1.1;color:var(--ink)}
@@ -123,24 +123,6 @@ section.block{margin-top:64px}
 .seg button{border:0;background:transparent;padding:8px 14px;font-weight:700;font-size:.9rem}
 .seg button[aria-pressed="true"]{background:var(--c-mint);color:var(--ink)}
 .stats{font-variant-numeric:tabular-nums;color:var(--muted);margin-top:10px;font-weight:600}
-
-/* Self-check */
-.scan{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;background:var(--paper);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
-@media (max-width:760px){.scan{grid-template-columns:1fr}}
-.sliders{display:grid;gap:14px}
-.srow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center}
-.srow label{font-weight:700}
-.srow output{font-variant-numeric:tabular-nums;font-weight:800;color:var(--edge);min-width:3ch;text-align:right}
-.srow input{grid-column:1/-1;width:100%;accent-color:var(--edge)}
-.srow small{grid-column:1/-1;color:var(--muted);margin-top:-4px}
-.scan-out{align-self:center;padding:20px;border-radius:22px;background:var(--tint,var(--c-yellow));display:flex;flex-direction:column;gap:6px}
-.scan-out h3{font-size:1.4rem;line-height:1.25}
-.hb-field{display:flex;flex-direction:column;gap:6px}
-.hb-field label{font-weight:700}
-.hb-field input{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;width:100%}
-.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
-.days button{aspect-ratio:1;border-radius:50%;border:2px solid var(--e-green);background:var(--paper);font-weight:800;max-width:100%}
-.days button[aria-pressed="true"]{background:var(--e-green);color:var(--paper)}
 
 /* Quiz */
 .quiz{background:var(--paper);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
@@ -383,7 +365,7 @@ dialog{border-radius:16px}
     <a class="mg-back" href="index.html">&larr; <span>Volver a la biblioteca</span></a>
     <details class="mg-menu">
       <summary>Libros <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-      <ul><li><a href="el-poder-del-ahora-guia-visual_1.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos-guia-visual.html" aria-current="page">Hábitos atómicos<small>James Clear</small></a></li><li><a href="como-ganar-amigos-guia-visual.html">Cómo ganar amigos<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas-guia-visual.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="despertar-el-corazon-guia-visual.html">Despertar el corazón<small>Sandra García Sánchez-Beato</small></a></li><li><a href="tus-zonas-erroneas-guia-visual.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li class="sep" aria-hidden="true"></li><li><a href="index.html">Ver todos los libros</a></li></ul>
+      <ul><li><a href="el-poder-del-ahora.html" aria-current="page">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="despertar-el-corazon.html">Despertar el corazón<small>Sandra García Sánchez-Beato</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li class="sep" aria-hidden="true"></li><li><a href="index.html">Ver todos los libros</a></li></ul>
     </details>
   </div>
 </nav>
@@ -391,46 +373,40 @@ dialog{border-radius:16px}
 <div class="wrap">
   <header class="hero">
     <h1>Guía de <span class="mark ul">lectura</span></h1>
-    <div class="sub">Sobre <cite>Hábitos atómicos</cite>, de James Clear</div>
+    <div class="sub">Sobre <cite>El Poder del Ahora</cite>, de Eckhart Tolle</div>
     <div class="author">GUÍA INDEPENDIENTE</div>
   </header>
 
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Aquí encuentras ideas, preguntas y actividades hechas para esta guía. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
+    <p>Recorre el libro capítulo por capítulo con explicaciones fáciles, ejemplos y preguntas para pensar. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 13 ideas exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 11 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="11" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Empieza aquí</h2>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
-          <h2>Poco a <span>poco</span></h2>
-          <p>Descubre cómo cambios pequeños, repetidos cada día, se vuelven grandes resultados.</p>
-          <div class="hand" style="font-size:1.35rem">Pequeño, fácil, diario</div>
+          <h2>La idea del <span>Ahora</span></h2>
+          <p>Una guía para recordar de qué trata cada capítulo y cómo se conectan sus ideas.</p>
+          <div class="hand" style="font-size:1.35rem">Entiende · conecta · piensa</div>
         </div>
       </div>
     </div>
+    <div class="group"><h2 class="g-title"><span class="g-n">2</span>Capítulos 1–3</h2><div class="g-grid" id="g-2"></div></div>
+    <div class="group"><h2 class="g-title"><span class="g-n">3</span>Capítulos 4–6</h2><div class="g-grid" id="g-3"></div></div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Conceptos clave</h2>
-      <div class="g-grid" id="g-2"></div>
-    </div>
-    <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Observa y practica</h2>
-      <div class="g-grid" id="g-3"></div>
-    </div>
-    <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Reflexiona</h2>
+      <h2 class="g-title"><span class="g-n">4</span>Las ideas que se repiten</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
-          <div class="hand" id="quote-text">¿Qué hábito pequeño podrías empezar hoy?</div>
+          <div class="hand" id="quote-text">¿Qué idea del libro cambió más tu forma de mirar el presente?</div>
           <div class="by">Pregunta de esta guía</div>
           <button class="chip" id="next-quote" type="button">Otra pregunta</button>
         </div>
@@ -438,33 +414,39 @@ dialog{border-radius:16px}
     </div>
   </div>
 
-  <section class="block" id="mi-habito">
+  <section class="block" id="respira">
     <div class="block-head">
-      <h2>Mi hábito</h2>
-      <p>Arma tu hábito en una sola frase y marca cada día que lo cumplas.</p>
+      <h2>Un minuto de presencia</h2>
+      <p>Pon toda tu atención en tu respiración durante un minuto.</p>
     </div>
-    <div class="scan">
-      <div class="sliders">
-        <div class="hb-field"><label for="h-new">¿Qué hábito quieres empezar?</label><input id="h-new" type="text" placeholder="Ejemplo: leer"></div>
-        <div class="hb-field"><label for="h-mini">Hazlo tan fácil que dure 2 minutos</label><input id="h-mini" type="text" placeholder="Ejemplo: leer una página"></div>
-        <div class="hb-field"><label for="h-after">¿Después de qué lo vas a hacer?</label><input id="h-after" type="text" placeholder="Ejemplo: lavarme los dientes en la noche"></div>
-        <div class="hb-field"><label for="h-where">¿Dónde?</label><input id="h-where" type="text" placeholder="Ejemplo: en mi cama"></div>
+    <div class="breath">
+      <div class="orb-wrap">
+        <div>
+          <div class="orb" id="orb"><span id="orb-n">·</span></div>
+          <div class="phase" id="phase">Listo cuando tú lo estés</div>
+        </div>
       </div>
-      <div class="scan-out">
-        <div class="hand" style="font-size:1.6rem">Mi plan</div>
-        <h3 id="plan">Después de ___, voy a ___, en ___.</h3>
-        <div class="hand" style="font-size:1.4rem;margin-top:10px">Esta semana</div>
-        <div class="days" id="days" role="group" aria-label="Días de la semana"></div>
-        <p id="streak" style="color:var(--muted);margin:4px 0 0">Marca el día cuando lo hagas.</p>
-        <div class="controls"><button class="btn ghost" id="week-reset" type="button">Nueva semana</button></div>
+      <div>
+        <h3 style="font-size:1.4rem">Respiración 4 · 4 · 6</h3>
+        <p style="color:var(--muted)">Toma aire 4 segundos, aguántalo 4 y suéltalo en 6. Si te distraes con un pensamiento, no pasa nada: date cuenta y regresa a tu respiración.</p>
+        <div class="seg" role="group" aria-label="Duración">
+          <button type="button" data-min="1" aria-pressed="true">1 min</button>
+          <button type="button" data-min="3" aria-pressed="false">3 min</button>
+          <button type="button" data-min="5" aria-pressed="false">5 min</button>
+        </div>
+        <div class="controls">
+          <button class="btn" id="b-start" type="button">Comenzar</button>
+          <button class="btn ghost" id="b-stop" type="button">Detener</button>
+        </div>
+        <div class="stats" id="b-stats">Tiempo restante 1:00</div>
       </div>
     </div>
   </section>
 
   <section class="block" id="quiz">
     <div class="block-head">
-      <h2>¿Te ayuda o te estorba?</h2>
-      <p>Lee cada frase. ¿Eso hace más fácil cumplir un buen hábito, o lo hace más difícil?</p>
+      <h2>¿Dónde está tu atención?</h2>
+      <p>Lee cada frase. ¿La persona está atrapada en lo que piensa, o está poniendo atención a lo que pasa ahorita?</p>
     </div>
     <div class="quiz">
       <div class="q-count" id="q-count">1 / 8</div>
@@ -472,11 +454,11 @@ dialog{border-radius:16px}
       <div class="q-opts">
         <button class="opt" type="button" data-a="mente" id="o-mente">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30a9 9 0 0 1 2-17 10 10 0 0 1 18 1 8 8 0 0 1 0 16H14z"/><circle cx="14" cy="38" r="3"/><circle cx="8" cy="44" r="1.6"/></svg>
-          <span>Me estorba<small>lo hace más difícil</small></span>
+          <span>En la cabeza<small>recuerdos, preocupaciones, suposiciones</small></span>
         </button>
         <button class="opt" type="button" data-a="presencia" id="o-pres">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5M11 11l3.5 3.5M33.5 33.5 37 37M11 37l3.5-3.5M33.5 14.5 37 11"/></svg>
-          <span>Me ayuda<small>lo hace más fácil</small></span>
+          <span>En el ahora<small>lo que veo, siento y hago</small></span>
         </button>
       </div>
       <div class="feedback" id="feedback" aria-live="polite"></div>
@@ -487,29 +469,29 @@ dialog{border-radius:16px}
   <section class="block" id="diario">
     <div class="block-head">
       <h2>Mi práctica de hoy</h2>
-      <p>Tres preguntas para pensar en tus hábitos. Lo que escribas se queda solo en este navegador.</p>
+      <p>Tres preguntas para pensar en tu día. Lo que escribas se queda solo en este navegador.</p>
     </div>
     <div class="journal">
-      <div class="jcard"><label for="j1">¿Qué tipo de persona quiero ser?</label><textarea id="j1" placeholder="Ejemplo: alguien que lee, que se mueve, que termina lo que empieza..."></textarea></div>
-      <div class="jcard"><label for="j2">¿Qué cosa a mi alrededor me distrae más?</label><textarea id="j2" placeholder="¿Cómo podría ponerla más lejos?"></textarea></div>
-      <div class="jcard"><label for="j3">¿Qué mal hábito quiero hacer más difícil?</label><textarea id="j3" placeholder="¿Qué paso le puedo agregar para que me dé flojera?"></textarea></div>
+      <div class="jcard"><label for="j1">¿Qué pensamiento se repitió hoy?</label><textarea id="j1" placeholder="Solo anótalo, sin juzgarte..."></textarea></div>
+      <div class="jcard"><label for="j2">¿Qué situación puedo aceptar tal como es?</label><textarea id="j2" placeholder="Sin pelearte con ella..."></textarea></div>
+      <div class="jcard"><label for="j3">¿En qué actividad cotidiana estuve presente?</label><textarea id="j3" placeholder="Lavar los platos, caminar, escuchar..."></textarea></div>
     </div>
     <p class="hint" id="saved-hint" style="margin-top:8px"></p>
   </section>
 
   <footer>
-    <div class="sign" aria-label="Empieza pequeño"><span>EMPIEZA</span><span>PEQUEÑO</span></div>
-    <div class="foot-msg">Un poco cada día<br>suma mucho<div class="hand" style="text-transform:none;letter-spacing:0;margin-top:6px">Vuelve siempre al texto original</div></div>
+    <div class="sign" aria-label="Observa y pregunta"><span>OBSERVA</span><span>PREGUNTA</span></div>
+    <div class="foot-msg">Lee, practica<br>y saca tus conclusiones<div class="hand" style="text-transform:none;letter-spacing:0;margin-top:6px">Vuelve siempre al texto original</div></div>
     <div class="source-note">
-      <strong>Obra de referencia:</strong> Clear, J. <cite>Hábitos atómicos</cite>. [Editorial], [año de la edición].<br>
-      <strong>Guía elaborada por:</strong> Pelen Montes · <a href="https://pelen13.com/" style="color:inherit">pelen13.com</a><br>
-      Los textos, preguntas y actividades de esta guía son originales. No es un resumen oficial y no tiene relación con el autor ni con la editorial.
+      <strong>Obra de referencia:</strong> Tolle, E. <cite>El Poder del Ahora</cite>. Grijalbo, 2012.<br>
+      <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
+      Las explicaciones, ejemplos, preguntas y actividades fueron escritos especialmente para esta guía independiente. No es una edición ni un resumen oficial, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
-  <a class="pv" href="el-poder-del-ahora-guia-visual_1.html"><small>&larr; Anterior</small><b>El poder del ahora</b></a>
+  <a class="pv" href="tus-zonas-erroneas.html"><small>&larr; Anterior</small><b>Tus zonas erróneas</b></a>
   <a class="home" href="index.html">Biblioteca</a>
-  <a class="nx" href="como-ganar-amigos-guia-visual.html"><small>Siguiente &rarr;</small><b>Cómo ganar amigos</b></a>
+  <a class="nx" href="habitos-atomicos.html"><small>Siguiente &rarr;</small><b>Hábitos atómicos</b></a>
 </nav>
 </div>
 
@@ -537,69 +519,68 @@ const I = {
   lotus:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle cx="24" cy="9" r="4"/><path d="M24 14v12M16 20l8 6 8-6M12 38c4-6 8-8 12-8s8 2 12 8M8 40h32"/></svg>',
   globe:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c6 6 6 28 0 34M24 7c-6 6-6 28 0 34"/></svg>',
   leaf:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40C8 20 22 8 40 8c0 18-12 32-30 32z"/><path d="M10 40 30 18"/></svg>',
-  people:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="17" cy="16" r="6"/><circle cx="33" cy="18" r="5"/><path d="M6 40c0-7 5-12 11-12s11 5 11 12M28 40c0-5 2-10 7-10s8 4 8 10"/></svg>',
-  clock:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="26" r="16"/><path d="M24 16v10l7 5M18 6h12"/></svg>',
-  key:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="24" r="8"/><path d="M23 24h20M37 24v7M31 24v5"/></svg>',
-  scale:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6v36M14 42h20M8 12h32M8 12l-5 12h10zM40 12l-5 12h10z"/></svg>',
-  steps:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M6 40h10v-8h10v-8h10v-8h8"/><path d="M34 8l6 0 0 6M40 8 30 18"/></svg>',
-  gear:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="24" r="6"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M11 37l4-4M33 15l4-4"/></svg>',
-  user:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="16" r="8"/><path d="M8 42c0-9 7-15 16-15s16 6 16 15"/></svg>',
-  loop:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 20A17 17 0 0 0 9 16M8 28a17 17 0 0 0 31 4"/><path d="M9 8v8h8M39 40v-8h-8"/></svg>',
-  eye:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M4 24s8-13 20-13 20 13 20 13-8 13-20 13S4 24 4 24z"/><circle cx="24" cy="24" r="6"/></svg>',
-  check:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="36" height="36" rx="8"/><path d="M15 25l6 6 12-14"/></svg>',
   sun:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 34a14 14 0 0 1 28 0z" fill="currentColor" fill-opacity=".25"/><path d="M24 8v6M10 14l4 4M38 14l-4 4M4 28h5M39 28h5M4 40h40"/></svg>'
 };
 
 const DATA = [
-  {id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Para empezar',title:'Cómo usar esta guía',
-   pts:['Esta guía te acompaña mientras lees. No reemplaza al libro.','Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.','Compara lo que lees aquí con el libro y con tu vida.'],
-   q:'¿Qué hábito te gustaría cambiar con este libro?'},
-  {id:'mensaje',g:1,c:'blue',ico:'steps',eyebrow:'La gran idea',title:'Cambios pequeños, resultados grandes',
-   text:'La idea principal del libro es que un cambio chiquito, repetido todos los días, al final hace una gran diferencia.',
-   pts:['Mejorar un poquito cada día no se nota al principio, pero se va sumando.','Lo que haces diario importa más que lo que haces una sola vez.'],
-   q:'¿Qué cosa pequeña haces todos los días que, con los años, cambia mucho tu vida?'},
-  {id:'c1',g:2,c:'green',ico:'gear',eyebrow:'Idea clave',title:'Metas y sistemas',
-   pts:['Una meta es a dónde quieres llegar. Un sistema es lo que haces cada día para llegar.','Muchas personas tienen la misma meta. Lo que cambia el resultado es el sistema.','Si mejoras tu sistema, los resultados llegan solos.'],
-   q:'Piensa en una meta tuya. ¿Qué harías cada día para acercarte a ella?'},
-  {id:'c2',g:2,c:'green',ico:'user',eyebrow:'Idea clave',title:'Quién quieres ser',
-   pts:['En vez de "quiero leer un libro", piensa "soy alguien que lee".','Cada vez que cumples un hábito, es como un voto por esa persona que quieres ser.','No necesitas ser perfecto, solo sumar más votos que antes.'],
-   q:'Completa: "Soy alguien que ___". ¿Qué haría esa persona hoy?'},
-  {id:'c3',g:2,c:'green',ico:'loop',eyebrow:'Idea clave',title:'Cómo funciona un hábito',
-   pts:['Todo hábito tiene 4 pasos: algo te lo recuerda, te dan ganas, lo haces y te sientes bien.','Ejemplo: ves el celular, te dan ganas de ver mensajes, lo abres y te entretienes.','Si entiendes los 4 pasos, puedes cambiar cualquiera.'],
-   q:'Elige un hábito tuyo. ¿Qué te lo recuerda y qué ganas cuando lo haces?'},
-  {id:'c4',g:2,c:'green',ico:'broken',eyebrow:'Idea clave',title:'Para romper un mal hábito',
-   pts:['Haz lo contrario: que no lo veas, que no se te antoje, que sea difícil y que no se sienta bien.','Ejemplo: deja el celular en otro cuarto mientras estudias.','Es más fácil cambiar lo que te rodea que confiar solo en tu fuerza de voluntad.'],
-   q:'¿Qué mal hábito podrías hacer un poco más difícil hoy?'},
-  {id:'ley1',g:3,c:'peach',ico:'eye',eyebrow:'Paso 1',title:'Que se vea',
-   pts:['Deja a la vista lo que te recuerda tu hábito: el libro en la almohada, la botella de agua en el escritorio.','Une tu hábito nuevo a uno que ya tienes: "Después de ___, voy a ___".','Di cuándo y dónde lo vas a hacer.'],
-   q:'¿Qué puedes dejar a la vista hoy para acordarte de tu hábito?'},
-  {id:'ley2',g:3,c:'peach',ico:'heart',eyebrow:'Paso 2',title:'Que se te antoje',
-   pts:['Junta algo que tienes que hacer con algo que te gusta: solo escuchas tu podcast favorito mientras haces ejercicio.','Rodéate de personas que ya tienen el hábito que quieres.','Busca lo que te gusta de hacerlo, no solo lo que te cuesta.'],
-   q:'¿Con qué cosa que te gusta podrías juntar tu hábito?'},
-  {id:'ley3',g:3,c:'peach',ico:'clock',eyebrow:'Paso 3',title:'Que sea fácil',
-   pts:['Empieza con una versión de 2 minutos: "leer" se vuelve "leer una página".','Quita pasos: deja la ropa de ejercicio lista desde la noche.','Primero aprende a presentarte. Luego lo haces más grande.'],
-   q:'¿Cómo sería la versión de 2 minutos de tu hábito?'},
-  {id:'ley4',g:3,c:'peach',ico:'check',eyebrow:'Paso 4',title:'Que se sienta bien',
-   pts:['Date una pequeña recompensa justo después.','Marca en un calendario cada día que lo cumples. Ver tu avance motiva.','Si fallas un día, no pasa nada. Solo trata de no fallar dos días seguidos.'],
-   q:'¿Dónde puedes llevar la cuenta de los días que cumples tu hábito?'},
-  {id:'practicas',g:4,c:'lav',ico:'key',eyebrow:'Reto de la semana',title:'Prueba y fíjate',
-   pts:['Elige un solo hábito. Solo uno.','Hazlo en su versión de 2 minutos durante 7 días.','Márcalo cada día en "Mi hábito", más abajo.','Al final de la semana, escribe qué fue fácil y qué no.'],
-   q:'¿Qué hábito vas a probar esta semana?'},
-  {id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para platicar',title:'Preguntas para discutir',
-   pts:['¿Siempre funcionan los cambios pequeños, o a veces se necesita un cambio grande?','¿Qué pesa más: lo que te rodea o tu fuerza de voluntad?','¿Está bien tener metas si lo importante es el sistema?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
-   q:'Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?'},
-  {id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu opinión',title:'¿Qué te llevas?',
-   pts:['Explica una idea con tus propias palabras.','Busca un ejemplo de tu vida que la apoye o que no.','Separa lo que dice el libro de lo que tú piensas.','Regresa al libro si quieres saber más.'],
-   q:'¿Qué idea te gustaría revisar directamente en el libro?'}
+{id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Antes de empezar',title:'El libro de un vistazo',
+ text:'El libro parte de una idea sencilla: muchas veces sufrimos más porque nos quedamos atrapados en nuestros pensamientos, en lo que pasó o en lo que podría pasar.',
+ pts:['Tolle propone volver la atención a lo que está pasando en este momento.','A lo largo del libro habla de los pensamientos, las emociones, el pasado, el futuro y de cómo estar más presentes en la vida diaria.'],
+ q:'Antes de empezar, ¿qué significa para ti estar presente?'},
+{id:'mensaje',g:1,c:'blue',ico:'heart',eyebrow:'La idea que conecta todo',title:'De pensar tanto a estar presente',
+ pts:['El libro no dice que debamos dejar de pensar. La idea es no creer automáticamente todo lo que pensamos.','Podemos aprender a notar nuestros pensamientos sin dejarnos llevar siempre por ellos.','El “Ahora” es este momento: lo que está pasando y lo que podemos hacer en este instante.'],
+ q:'¿Cuándo notas que tu mente se va más al pasado o al futuro?'},
+
+{id:'c1',g:2,c:'green',ico:'brain',eyebrow:'Capítulo 1',title:'Usted no es su mente',
+ text:'Este capítulo explica que tener pensamientos es normal, pero que no somos solamente lo que pasa por nuestra cabeza.',
+ pts:['Tolle propone escuchar esa voz que habla dentro de nuestra cabeza sin seguirla automáticamente.','Cuando notas que estás pensando, ya puedes mirar ese pensamiento desde cierta distancia.','También explica que lo que pensamos puede afectar cómo se siente nuestro cuerpo.','La práctica es sencilla: notar los pensamientos sin pelear con ellos y sin juzgarte por tenerlos.'],
+ q:'Ejemplo: si piensas “todo me sale mal”, ¿qué cambia si dices “estoy teniendo ese pensamiento” en vez de tomarlo como un hecho?'},
+
+{id:'c2',g:2,c:'rose',ico:'broken',eyebrow:'Capítulo 2',title:'La conciencia: el escape del dolor',
+ text:'Aquí Tolle habla de cómo un dolor del pasado puede seguir afectándonos hoy cuando lo recordamos, lo repetimos o reaccionamos desde él.',
+ pts:['El autor llama “cuerpo del dolor” a emociones y heridas del pasado que pueden volver a sentirse con fuerza.','La idea es darte cuenta de lo que sientes sin seguir alimentándolo con más y más pensamientos.','Muchas veces el miedo aparece porque imaginamos algo malo que podría pasar después.','Observar lo que sentimos antes de reaccionar puede ayudarnos a no repetir el mismo ciclo.'],
+ q:'Ejemplo: recuerdas una discusión y vuelves a enojarte. ¿Qué está pasando realmente ahora y qué estás reviviendo en tu cabeza?'},
+
+{id:'c3',g:2,c:'lav',ico:'mountain',eyebrow:'Capítulo 3',title:'Avanzar profundamente hacia el Ahora',
+ text:'Este capítulo habla de cuánto tiempo pasamos pensando en lo que ya pasó o preocupándonos por lo que todavía no ocurre.',
+ pts:['Recordar y hacer planes es útil. El problema es quedarnos atrapados ahí todo el tiempo.','Aunque pensemos en ayer o mañana, nuestra vida está ocurriendo en este momento.','A veces un problema se siente enorme porque además de resolverlo imaginamos muchas cosas que podrían salir mal.','Volver al presente ayuda a preguntarnos algo más concreto: ¿qué puedo hacer ahora?'],
+ q:'Ejemplo: tienes algo pendiente. ¿Puedes separar lo que necesitas hacer de todo lo que imaginas que podría salir mal?'},
+
+{id:'c4',g:3,c:'peach',ico:'cloud',eyebrow:'Capítulo 4',title:'Estrategias de la mente para evitar el Ahora',
+ text:'Aquí el libro muestra algunas formas en que nos alejamos del presente sin darnos cuenta.',
+ pts:['Quejarnos, darle vueltas a algo o pensar constantemente que las cosas deberían ser diferentes puede aumentar nuestro malestar.','El primer paso es simplemente darte cuenta de que lo estás haciendo.','Aceptar que algo ya está pasando no significa que te guste ni que tengas que quedarte sin hacer nada.','Después de reconocer la situación puedes decidir con más calma qué hacer para cambiarla.'],
+ q:'Ejemplo: cambian tus planes. ¿Qué te molesta más: el cambio o seguir pensando “esto no debería estar pasando”?'},
+
+{id:'c5',g:3,c:'mint',ico:'lotus',eyebrow:'Capítulo 5',title:'El estado de presencia',
+ text:'Este capítulo explica qué quiere decir Tolle cuando habla de estar presente: poner atención de verdad a lo que está pasando aquí y ahora.',
+ pts:['Estar presente es notar lo que ocurre sin estar todo el tiempo perdido en pensamientos.','La respiración y las sensaciones del cuerpo pueden ayudarte a regresar al momento.','No necesitas hacer algo especial: puedes practicar mientras caminas, comes, trabajas o haces cualquier tarea.','Cuando te distraes, simplemente puedes darte cuenta y volver a lo que estás haciendo.'],
+ q:'Ejemplo: ¿cómo sería caminar, comer o escuchar a alguien poniendo toda tu atención en eso durante un minuto?'},
+
+{id:'c6',g:3,c:'blue',ico:'globe',eyebrow:'Capítulo 6',title:'Vivir en un mundo iluminado',
+ text:'En este capítulo la idea de estar presente se lleva a la vida diaria y a la manera en que tratamos a otras personas.',
+ pts:['No necesitas alejarte del mundo para practicar lo que propone el libro.','Escuchar con atención puede cambiar la forma en que hablamos y reaccionamos con los demás.','Si notas una reacción antes de responder, tienes más oportunidad de elegir qué hacer.','La idea es llevar esa atención al trabajo, la familia, las relaciones y las cosas normales de cada día.'],
+ q:'Ejemplo: en una conversación difícil, ¿qué cambiaría si escucharas hasta el final antes de pensar qué vas a responder?'},
+
+{id:'practicas',g:4,c:'peach',ico:'leaf',eyebrow:'Ideas que aparecen una y otra vez',title:'Cómo volver al presente',
+ pts:['Nota lo que estás pensando sin seguir cada pensamiento.','Pon atención a tu respiración o a lo que siente tu cuerpo.','Date cuenta cuando estás peleando mentalmente con algo que ya pasó.','Pregúntate qué está pasando de verdad ahora y qué parte estás imaginando.'],
+ q:'¿Cuál de estas ideas podrías probar hoy?'},
+
+{id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para recordar',title:'Las ideas principales',
+ pts:['No eres solamente tus pensamientos: puedes observarlos.','Notar lo que sientes puede ayudarte a no reaccionar automáticamente.','El pasado ya pasó y el futuro todavía no llega; tu vida ocurre ahora.','Estar presente se practica en las cosas normales de todos los días.'],
+ q:'Si tuvieras que contarle a alguien de qué trata el libro usando solo tres ideas, ¿cuáles serían?'},
+
+{id:'resultado',g:4,c:'yellow',ico:'sun',eyebrow:'Tu lectura',title:'¿Qué te llevas del libro?',
+ pts:['Esta guía sirve para ayudarte a recordar lo que leíste, no para reemplazar el libro.','No tienes que estar de acuerdo con todo: también puedes cuestionar las ideas.','Tus ejemplos y notas pueden convertir esta guía en tu propia marginalia.'],
+ q:'¿Qué idea quieres volver a buscar directamente en el libro?'}
 ];
 
 const QUOTES = [
-  '¿Qué hábito pequeño podrías empezar hoy?',
-  '¿Qué tipo de persona quieres ser?',
-  'Reto: haz tu hábito en su versión de 2 minutos.',
-  '¿Qué tienes a la vista que te distrae?',
-  'Si fallas un día, no falles dos.',
-  '¿Qué idea del libro te convence y cuál no?'
+'¿Qué idea del libro cambió más tu forma de mirar el presente?',
+'¿Qué capítulo te gustaría volver a leer con más calma?',
+'¿Qué concepto entendiste diferente después de llevarlo a un ejemplo cotidiano?',
+'¿Qué idea te resulta útil aunque no estés totalmente de acuerdo con ella?',
+'¿Dónde notas con más facilidad la diferencia entre pensar y observar?',
+'¿Qué te gustaría recordar de este libro dentro de un año?'
 ];
 
 const store = {
@@ -609,7 +590,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('ha-done',[]));
+let done = new Set(store.get('pda-done',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -627,12 +608,12 @@ DATA.forEach((d,i)=>{
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
   const n=done.size;
-  document.getElementById('progress-text').textContent=n===DATA.length?'¡Exploraste todo el mapa!':`${n} de ${DATA.length} ideas exploradas`;
+  document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('ha-done',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('pda-done',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -646,7 +627,7 @@ function openCard(i){
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
-  done.add(d.id);store.set('ha-done',[...done]);refreshProgress();
+  done.add(d.id);store.set('pda-done',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -658,38 +639,38 @@ dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')openCard(cur+1);if(e.
 let qi=0;
 document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
 
-/* Habit builder */
-const F=['h-new','h-mini','h-after','h-where'];
-function plan(){
-  const v=id=>document.getElementById(id).value.trim();
-  const act=v('h-mini')||v('h-new')||'___';
-  document.getElementById('plan').textContent=`Después de ${v('h-after')||'___'}, voy a ${act}, ${v('h-where')||'en ___'}.`;
-}
-F.forEach(id=>{const el=document.getElementById(id);el.value=store.get('ha-'+id,'');el.addEventListener('input',()=>{store.set('ha-'+id,el.value);plan()})});
-plan();
-const DN=['L','M','M','J','V','S','D'],DL=['lunes','martes','miércoles','jueves','viernes','sábado','domingo'];
-let week=store.get('ha-week',[0,0,0,0,0,0,0]);
-const daysEl=document.getElementById('days');
-function drawDays(){
-  daysEl.innerHTML=DN.map((d,i)=>`<button type="button" aria-pressed="${!!week[i]}" aria-label="${DL[i]}" data-i="${i}">${d}</button>`).join('');
-  const n=week.filter(Boolean).length;
-  let two=false;for(let i=1;i<7;i++){if(!week[i]&&!week[i-1]&&week.slice(0,i-1).some(Boolean))two=true}
-  document.getElementById('streak').textContent=n===0?'Marca el día cuando lo hagas.':n===7?'¡7 de 7! Ya eres alguien que cumple este hábito.':two?`Llevas ${n} de 7. Fallaste dos seguidos: no pasa nada, retómalo hoy.`:`Llevas ${n} de 7. Si fallas un día, que no sean dos seguidos.`;
-}
-daysEl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i;week[i]=week[i]?0:1;store.set('ha-week',week);drawDays()});
-document.getElementById('week-reset').onclick=()=>{week=[0,0,0,0,0,0,0];store.set('ha-week',week);drawDays()};
-drawDays();
+/* Breathing */
+const PH=[['Inhala',4,1.9],['Sostén',4,1.9],['Exhala',6,1]];
+let mins=1,left=60,timer=null,phase=0,pleft=0;
+const orb=document.getElementById('orb'),orbN=document.getElementById('orb-n'),phaseEl=document.getElementById('phase'),stats=document.getElementById('b-stats');
+const fmt=s=>`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{
+  if(timer)return;
+  document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  mins=+b.dataset.min;left=mins*60;stats.textContent='Tiempo restante '+fmt(left);
+});
+function setPhase(p){phase=p;pleft=PH[p][1];phaseEl.textContent=PH[p][0];orb.style.transitionDuration=PH[p][1]+'s';orb.style.transform=`scale(${PH[p][2]})`;orbN.textContent=pleft}
+function stopBreath(msg){clearInterval(timer);timer=null;orb.style.transitionDuration='1s';orb.style.transform='scale(1)';orbN.textContent='·';phaseEl.textContent=msg;left=mins*60;stats.textContent='Tiempo restante '+fmt(left)}
+document.getElementById('b-start').onclick=()=>{
+  if(timer)return; left=mins*60; setPhase(0); stats.textContent='Tiempo restante '+fmt(left);
+  timer=setInterval(()=>{
+    left--;pleft--;stats.textContent='Tiempo restante '+fmt(left);
+    if(left<=0){const n=store.get('pda-sessions',0)+1;store.set('pda-sessions',n);stopBreath('Bien hecho. Estás aquí.');stats.textContent=`Sesiones completadas: ${n}`;return}
+    if(pleft<=0)setPhase((phase+1)%3);else orbN.textContent=pleft;
+  },1000);
+};
+document.getElementById('b-stop').onclick=()=>{if(timer)stopBreath('Listo cuando tú lo estés')};
 
 /* Quiz */
 const QS=[
-  ['“Dejo la guitarra fuera del estuche, junto a mi cama.”','presencia','Si la ves, te acuerdas. Y si ya está afuera, es más fácil tocarla.'],
-  ['“Tengo el celular junto a mí mientras estudio.”','mente','Lo ves todo el tiempo y es muy fácil agarrarlo. Mejor déjalo en otro lado.'],
-  ['“Desde hoy voy a leer una hora diaria, aunque nunca leo.”','mente','Es demasiado para empezar. Mejor una página y luego vas subiendo.'],
-  ['“Después de lavarme los dientes en la noche, leo una página.”','presencia','Une el hábito nuevo a uno que ya tienes. Así no se te olvida.'],
-  ['“Guardo los dulces en una caja arriba del refri.”','presencia','Si no los ves y cuesta alcanzarlos, se te antojan menos.'],
-  ['“Ayer no hice ejercicio, entonces ya para qué sigo.”','mente','Fallar un día es normal. Lo importante es no fallar dos seguidos.'],
-  ['“Marco con una X en el calendario cada día que practico.”','presencia','Ver tu avance se siente bien y te dan ganas de seguir.'],
-  ['“Soy alguien que se mueve, así que hoy camino aunque sea 5 minutos.”','presencia','Piensa en quién quiere ser y lo cumple, aunque sea poquito.']
+  ['“Cuando termine todos mis pendientes, ahora sí voy a disfrutar el día.”','mente','Deja lo bueno para después. Su atención está en el futuro.'],
+  ['“Siento el aire cuando respiro y oigo los ruidos a mi alrededor.”','presencia','Está poniendo atención a lo que siente y oye en este momento.'],
+  ['“Esa plática salió mal y llevo horas repitiéndola en mi cabeza.”','mente','La plática ya terminó, pero sigue dándole vueltas.'],
+  ['“Cambió mi plan. Voy a ver qué puedo hacer ahorita.”','presencia','Acepta lo que pasó y busca qué hacer en este momento.'],
+  ['“Estoy enojado y siento los hombros tensos. Voy a esperar antes de contestar.”','presencia','Primero se fija en lo que siente y luego decide qué hacer.'],
+  ['“Seguro mañana todo me va a salir mal.”','mente','Está adivinando el futuro como si ya hubiera pasado.'],
+  ['“Mientras camino, siento mis pasos y oigo la calle.”','presencia','Pone atención a algo que hace todos los días.'],
+  ['“Si alguien no aprueba lo que hice, entonces todo salió mal.”','mente','Deja que la opinión de otro decida cómo se siente.']
 ];
 let qn=0,score=0;
 const qText=document.getElementById('q-text'),fb=document.getElementById('feedback'),qNext=document.getElementById('q-next'),opts=[...document.querySelectorAll('.opt')];
@@ -697,7 +678,7 @@ function showQ(){
   opts.forEach(o=>{o.disabled=false;o.classList.remove('right','wrong')});fb.innerHTML='';qNext.hidden=true;
   if(qn>=QS.length){
     document.getElementById('q-count').textContent='Resultado';
-    qText.textContent=`${score} de ${QS.length} aciertos. ${score>=7?'¡Muy bien! Sabes qué te ayuda y qué te estorba.':score>=5?'Vas bien. Fíjate qué hay a tu alrededor.':'Sigue practicando. ¡Inténtalo otra vez!'}`;
+    qText.textContent=`${score} de ${QS.length} aciertos. ${score>=7?'¡Muy bien! Notas fácil cuándo alguien está en su cabeza.':score>=5?'Vas bien. Fíjate también en dónde está tu atención.':'Sigue practicando. ¡Inténtalo otra vez!'}`;
     opts.forEach(o=>o.disabled=true);qNext.textContent='Volver a jugar';qNext.hidden=false;return;
   }
   document.getElementById('q-count').textContent=`${qn+1} / ${QS.length} · ${score} aciertos`;
@@ -714,8 +695,8 @@ showQ();
 /* Journal */
 const hint=document.getElementById('saved-hint');
 ['j1','j2','j3'].forEach(id=>{
-  const t=document.getElementById(id);t.value=store.get('ha-'+id,'');
-  t.addEventListener('input',()=>{hint.textContent=store.set('ha-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
+  const t=document.getElementById(id);t.value=store.get('pda-'+id,'');
+  t.addEventListener('input',()=>{hint.textContent=store.set('pda-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
 });
 </script>
 

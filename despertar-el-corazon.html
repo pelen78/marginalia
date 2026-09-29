@@ -15,7 +15,7 @@
 
 </style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<title>Guía visual · Cosas buenas</title>
+<title>Guía visual · Despertar el corazón</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
@@ -53,7 +53,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* Hero */
 .hero{position:relative;text-align:center;padding-block:40px 20px}
-.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.01em;display:inline-block;padding:4px 28px 0;background:linear-gradient(100deg,transparent 2%,var(--c-yellow) 8%,var(--c-peach) 60%,transparent 98%);border-radius:40px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.01em;display:inline-block;padding:4px 28px 0;background:linear-gradient(100deg,transparent 2%,var(--c-pink) 8%,var(--c-lav) 60%,transparent 98%);border-radius:40px}
 .hero .sub{font-family:var(--f-display);font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(.8rem,1.8vw,1.05rem);margin-top:10px;color:var(--muted)}
 .author{display:inline-block;margin-top:12px;padding:4px 18px;border-radius:999px;background:var(--c-pink);font-family:var(--f-display);font-weight:700;letter-spacing:.08em}
 .hand{font-family:var(--f-hand);font-size:1.6rem;line-height:1.1;color:var(--ink)}
@@ -144,6 +144,9 @@ section.block{margin-top:64px}
 .checks button[aria-pressed="true"]{border-color:var(--e-pink);background:var(--c-pink)}
 .checks button[aria-pressed="true"]::before{background:var(--e-pink);box-shadow:inset 0 0 0 3px var(--paper)}
 .checks small{display:block;font-weight:600;color:var(--muted)}
+.klist{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.klist li{background:var(--c-pink);border-radius:14px;padding:10px 12px;font-weight:600}
+.klist s{color:var(--muted);font-weight:400;display:block;font-size:.88rem}
 .days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
 .days button{aspect-ratio:1;border-radius:50%;border:2px solid var(--e-green);background:var(--paper);font-weight:800;max-width:100%}
 .days button[aria-pressed="true"]{background:var(--e-green);color:var(--paper)}
@@ -389,7 +392,7 @@ dialog{border-radius:16px}
     <a class="mg-back" href="index.html">&larr; <span>Volver a la biblioteca</span></a>
     <details class="mg-menu">
       <summary>Libros <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-      <ul><li><a href="el-poder-del-ahora-guia-visual_1.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos-guia-visual.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="como-ganar-amigos-guia-visual.html">Cómo ganar amigos<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas-guia-visual.html" aria-current="page">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="despertar-el-corazon-guia-visual.html">Despertar el corazón<small>Sandra García Sánchez-Beato</small></a></li><li><a href="tus-zonas-erroneas-guia-visual.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li class="sep" aria-hidden="true"></li><li><a href="index.html">Ver todos los libros</a></li></ul>
+      <ul><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="despertar-el-corazon.html" aria-current="page">Despertar el corazón<small>Sandra García Sánchez-Beato</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li class="sep" aria-hidden="true"></li><li><a href="index.html">Ver todos los libros</a></li></ul>
     </details>
   </div>
 </nav>
@@ -397,7 +400,7 @@ dialog{border-radius:16px}
 <div class="wrap">
   <header class="hero">
     <h1>Guía de <span class="mark ul">lectura</span></h1>
-    <div class="sub">Sobre <cite>Cómo hacer que te pasen cosas buenas</cite>, de Marian Rojas Estapé</div>
+    <div class="sub">Sobre <cite>Despertar el corazón</cite>, de Sandra García Sánchez-Beato</div>
     <div class="author">GUÍA INDEPENDIENTE</div>
   </header>
 
@@ -418,9 +421,9 @@ dialog{border-radius:16px}
       <h2 class="g-title"><span class="g-n">1</span>Empieza aquí</h2>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
-          <h2>Busca lo <span>bueno</span></h2>
-          <p>Descubre cómo lo que piensas y lo que buscas cambia cómo te sientes.</p>
-          <div class="hand" style="font-size:1.35rem">Mira, agradece, cuídate</div>
+          <h2>Quiérete <span>bien</span></h2>
+          <p>Descubre cómo tratarte con más cariño y, desde ahí, querer mejor a los demás.</p>
+          <div class="hand" style="font-size:1.35rem">Nota, abraza, cuida</div>
         </div>
       </div>
     </div>
@@ -436,7 +439,7 @@ dialog{border-radius:16px}
       <h2 class="g-title"><span class="g-n">4</span>Reflexiona</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
-          <div class="hand" id="quote-text">¿Qué cosa buena pasó hoy que casi no notaste?</div>
+          <div class="hand" id="quote-text">¿Cómo te hablarías hoy si fueras tu mejor amigo?</div>
           <div class="by">Pregunta de esta guía</div>
           <button class="chip" id="next-quote" type="button">Otra pregunta</button>
         </div>
@@ -444,37 +447,37 @@ dialog{border-radius:16px}
     </div>
   </div>
 
-  <section class="block" id="mi-dia">
+  <section class="block" id="mi-corazon">
     <div class="block-head">
-      <h2>Mi día</h2>
-      <p>Entrena tu mente para ver lo bueno y revisa tus preocupaciones antes de que crezcan.</p>
+      <h2>Mi corazón hoy</h2>
+      <p>Dos prácticas cortas para tratarte con más cariño. Úsalas cuando te sientas mal contigo.</p>
     </div>
     <div class="scan">
       <div class="sliders">
-        <div class="hand" style="font-size:1.6rem">Tres cosas buenas de hoy</div>
-        <div class="hb-field"><label for="g1">1.</label><input id="g1" type="text" placeholder="Ejemplo: me reí con mi hermana"></div>
-        <div class="hb-field"><label for="g2">2.</label><input id="g2" type="text" placeholder="Ejemplo: el café estaba rico"></div>
-        <div class="hb-field"><label for="g3">3.</label><input id="g3" type="text" placeholder="Ejemplo: terminé mi tarea"></div>
-        <div class="controls" style="margin-top:0"><button class="btn" id="g-save" type="button">Guardar mi día</button></div>
-        <p id="g-msg" class="hint" aria-live="polite" style="margin:0">Días guardados: 0</p>
+        <div class="hand" style="font-size:1.6rem">Háblate bonito</div>
+        <div class="hb-field"><label for="k-crit">¿Qué te dijiste hoy que te dolió?</label><input id="k-crit" type="text" placeholder="Ejemplo: soy un desastre"></div>
+        <div class="hb-field"><label for="k-kind">¿Cómo se lo dirías a un amigo que quieres?</label><input id="k-kind" type="text" placeholder="Ejemplo: tuviste un día difícil, mañana lo intentas otra vez"></div>
+        <div class="controls" style="margin-top:0"><button class="btn" id="k-save" type="button">Me lo quedo</button></div>
+        <p id="k-msg" class="hint" aria-live="polite" style="margin:0">Frases guardadas: 0</p>
+        <ul id="k-list" class="klist"></ul>
       </div>
       <div class="scan-out">
-        <div class="hand" style="font-size:1.6rem">Revisa tu preocupación</div>
-        <div class="hb-field"><label for="w-text">¿Qué te preocupa?</label><input id="w-text" type="text" placeholder="Ejemplo: el examen del viernes"></div>
-        <p style="margin:6px 0 0;font-weight:700">¿Depende de ti?</p>
-        <div class="controls" style="margin-top:0">
-          <button class="btn" id="w-yes" type="button">Sí, algo puedo hacer</button>
-          <button class="btn ghost" id="w-no" type="button">No depende de mí</button>
+        <div class="hand" style="font-size:1.6rem">Pausa de 3 pasos</div>
+        <div class="q-count" id="st-n">Paso 1 de 3</div>
+        <h3 id="st-t">Nota lo que sientes</h3>
+        <p id="st-d" style="margin:0">Di en voz baja: "Esto me duele" o "Esto es difícil". No lo escondas ni lo hagas más grande.</p>
+        <div class="controls">
+          <button class="btn ghost" id="st-prev" type="button">← Atrás</button>
+          <button class="btn" id="st-next" type="button">Siguiente →</button>
         </div>
-        <p id="w-out" aria-live="polite" style="margin:4px 0 0"></p>
       </div>
     </div>
   </section>
 
   <section class="block" id="quiz">
     <div class="block-head">
-      <h2>¿Te suma o te resta?</h2>
-      <p>Lee cada frase. ¿Eso te ayuda a sentirte mejor, o te va desgastando?</p>
+      <h2>¿Crítica o cariño?</h2>
+      <p>Lee cada frase que alguien se dice a sí mismo. ¿Se está criticando o se está cuidando?</p>
     </div>
     <div class="quiz">
       <div class="q-count" id="q-count">1 / 8</div>
@@ -482,11 +485,11 @@ dialog{border-radius:16px}
       <div class="q-opts">
         <button class="opt" type="button" data-a="mente" id="o-mente">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30a9 9 0 0 1 2-17 10 10 0 0 1 18 1 8 8 0 0 1 0 16H14z"/><circle cx="14" cy="38" r="3"/><circle cx="8" cy="44" r="1.6"/></svg>
-          <span>Me resta<small>me desgasta</small></span>
+          <span>Crítica<small>se trata con dureza</small></span>
         </button>
         <button class="opt" type="button" data-a="presencia" id="o-pres">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5M11 11l3.5 3.5M33.5 33.5 37 37M11 37l3.5-3.5M33.5 14.5 37 11"/></svg>
-          <span>Me suma<small>me hace bien</small></span>
+          <span>Cariño<small>se trata con cuidado</small></span>
         </button>
       </div>
       <div class="feedback" id="feedback" aria-live="polite"></div>
@@ -497,29 +500,29 @@ dialog{border-radius:16px}
   <section class="block" id="diario">
     <div class="block-head">
       <h2>Mi práctica de hoy</h2>
-      <p>Tres preguntas para pensar en cómo te sientes. Lo que escribas se queda solo en este navegador.</p>
+      <p>Tres preguntas para conocerte mejor. Lo que escribas se queda solo en este navegador.</p>
     </div>
     <div class="journal">
-      <div class="jcard"><label for="j1">¿Qué me preocupa que todavía no ha pasado?</label><textarea id="j1" placeholder="¿Qué tan probable es que pase de verdad?"></textarea></div>
-      <div class="jcard"><label for="j2">¿Quién es una persona vitamina en mi vida?</label><textarea id="j2" placeholder="¿Qué hace que me sienta bien con ella?"></textarea></div>
-      <div class="jcard"><label for="j3">¿Qué le da sentido a mi día?</label><textarea id="j3" placeholder="Algo o alguien por lo que vale la pena levantarme..."></textarea></div>
+      <div class="jcard"><label for="j1">¿Qué creo de mí que tal vez no es cierto?</label><textarea id="j1" placeholder="Ejemplo: no soy bueno para..."></textarea></div>
+      <div class="jcard"><label for="j2">¿A qué me cuesta decirle que no?</label><textarea id="j2" placeholder="¿Cómo podría decirlo con respeto?"></textarea></div>
+      <div class="jcard"><label for="j3">¿Qué hice hoy para cuidarme?</label><textarea id="j3" placeholder="Algo pequeño cuenta: descansar, comer bien, respirar..."></textarea></div>
     </div>
     <p class="hint" id="saved-hint" style="margin-top:8px"></p>
   </section>
 
   <footer>
-    <div class="sign" aria-label="Busca lo bueno"><span>BUSCA</span><span>LO BUENO</span></div>
-    <div class="foot-msg">Lo que buscas,<br>lo encuentras<div class="hand" style="text-transform:none;letter-spacing:0;margin-top:6px">Vuelve siempre al texto original</div></div>
+    <div class="sign" aria-label="Quiérete bien"><span>QUIÉRETE</span><span>BIEN</span></div>
+    <div class="foot-msg">Háblate como le hablas<br>a quien quieres<div class="hand" style="text-transform:none;letter-spacing:0;margin-top:6px">Vuelve siempre al texto original</div></div>
     <div class="source-note">
-      <strong>Obra de referencia:</strong> Rojas Estapé, M. <cite>Cómo hacer que te pasen cosas buenas</cite>. [Editorial], [año de la edición].<br>
-      <strong>Guía elaborada por:</strong> Pelen Montes · <a href="https://pelen13.com/" style="color:inherit">pelen13.com</a><br>
-      Los textos, preguntas y actividades de esta guía son originales. No es un resumen oficial y no tiene relación con el autor ni con la editorial.
+      <strong>Obra de referencia:</strong> García Sánchez-Beato, S. <cite>Despertar el corazón: el arte de quererse bien</cite>. Chinmayam Ediciones, 2021.<br>
+      <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
+      Las explicaciones, ejemplos, preguntas y actividades fueron escritos especialmente para esta guía independiente. No es una edición ni un resumen oficial, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
-  <a class="pv" href="como-ganar-amigos-guia-visual.html"><small>&larr; Anterior</small><b>Cómo ganar amigos</b></a>
+  <a class="pv" href="cosas-buenas.html"><small>&larr; Anterior</small><b>Cómo hacer que te pasen cosas buenas</b></a>
   <a class="home" href="index.html">Biblioteca</a>
-  <a class="nx" href="despertar-el-corazon-guia-visual.html"><small>Siguiente &rarr;</small><b>Despertar el corazón</b></a>
+  <a class="nx" href="tus-zonas-erroneas.html"><small>Siguiente &rarr;</small><b>Tus zonas erróneas</b></a>
 </nav>
 </div>
 
@@ -565,46 +568,47 @@ const I = {
   bell:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 34V22a12 12 0 0 1 24 0v12l4 4H8z"/><path d="M20 42a4 4 0 0 0 8 0M6 14l4-4M42 14l-4-4"/></svg>',
   funnel:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M6 8h36L28 26v14l-8-4V26z"/></svg>',
   phone:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="4" width="20" height="40" rx="4"/><path d="M21 38h6"/></svg>',
+  shield:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 4 8 10v12c0 10 7 18 16 22 9-4 16-12 16-22V10z"/><path d="M24 20c-2-4-8-3-8 1 0 4 8 9 8 9s8-5 8-9c0-4-6-5-8-1z" fill="currentColor" fill-opacity=".25"/></svg>',
   sun:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 34a14 14 0 0 1 28 0z" fill="currentColor" fill-opacity=".25"/><path d="M24 8v6M10 14l4 4M38 14l-4 4M4 28h5M39 28h5M4 40h40"/></svg>'
 };
 
 const DATA = [
   {id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Para empezar',title:'Cómo usar esta guía',
    pts:['Esta guía te acompaña mientras lees. No reemplaza al libro.','Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.','Compara lo que lees aquí con el libro y con tu vida.'],
-   q:'¿Qué te gustaría que cambiara en cómo te sientes?'},
-  {id:'mensaje',g:1,c:'blue',ico:'eye',eyebrow:'La gran idea',title:'Lo que piensas cambia lo que vives',
-   text:'La idea principal del libro es que la forma en que ves lo que te pasa afecta tu mente y también tu cuerpo.',
-   pts:['No siempre puedes cambiar lo que pasa, pero sí cómo lo miras.','Tu mente y tu cuerpo están conectados: lo que piensas se siente.'],
-   q:'Piensa en algo que te pasó esta semana. ¿Hay otra forma de verlo?'},
-  {id:'c1',g:2,c:'green',ico:'bell',eyebrow:'Idea clave',title:'La alarma del cuerpo',
-   pts:['Cuando te estresas, tu cuerpo suelta cortisol, una sustancia que te pone en alerta.','Eso ayuda en un peligro real, pero si la alarma está prendida todo el tiempo, te cansa y te enferma.','Si el estrés o la tristeza no se van, habla con alguien de confianza o con un profesional.'],
-   q:'¿Qué cosas prenden tu alarma? ¿Son peligros reales?'},
-  {id:'c2',g:2,c:'green',ico:'cloud',eyebrow:'Idea clave',title:'Preocuparte por lo que no ha pasado',
-   pts:['Muchas cosas que nos preocupan nunca pasan.','Pero tu cuerpo reacciona como si ya estuvieran pasando.','Pregúntate: ¿esto está pasando o solo me lo imagino?'],
-   q:'¿Qué te preocupaba hace un mes? ¿Pasó de verdad?'},
-  {id:'c3',g:2,c:'green',ico:'funnel',eyebrow:'Idea clave',title:'Ves lo que buscas',
-   pts:['Tu cerebro tiene un filtro que decide en qué te fijas.','Si buscas problemas, verás problemas. Si buscas cosas buenas, las vas a notar más.','Ese filtro se puede entrenar, un poco cada día.'],
-   q:'¿En qué te fijas más durante el día: en lo que sale mal o en lo que sale bien?'},
-  {id:'c4',g:2,c:'green',ico:'broken',eyebrow:'Idea clave',title:'Las heridas del pasado',
-   pts:['Lo que te dolió antes puede seguir afectando cómo reaccionas hoy.','Entender lo que pasó ayuda a que pese menos.','Perdonar no es decir que estuvo bien, es dejar de cargarlo.'],
-   q:'¿Hay algo del pasado que todavía cargas? ¿Qué te ayudaría a soltarlo un poco?'},
-  {id:'p1',g:3,c:'peach',ico:'people',eyebrow:'Practica',title:'Personas vitamina',
-   pts:['Hay personas que te llenan de energía y otras que te la quitan.','Busca pasar más tiempo con quienes te hacen bien.','Y tú también puedes ser una persona vitamina para otros.'],
-   q:'¿Quién te hace sentir bien después de verlo? ¿Para quién podrías ser tú esa persona?'},
-  {id:'p2',g:3,c:'peach',ico:'phone',eyebrow:'Practica',title:'Pantallas y recompensas rápidas',
-   pts:['Las redes y los videos dan pequeñas dosis de placer muy rápido.','Con el tiempo, lo lento (leer, platicar, estudiar) se siente aburrido.','Aburrirte un rato sin celular también es bueno para tu mente.'],
-   q:'¿Cuánto tiempo pasas en el celular antes de dormir? ¿Cómo te sientes después?'},
-  {id:'p3',g:3,c:'peach',ico:'lotus',eyebrow:'Practica',title:'Cuida tu cuerpo',
-   pts:['Dormir bien, moverte y comer bien ayudan a tu mente.','Respirar despacio calma la alarma del cuerpo.','Un abrazo o una plática con alguien querido también te hace bien.'],
-   q:'¿Cuál de estas cosas descuidas más: dormir, moverte o comer bien?'},
-  {id:'p4',g:3,c:'peach',ico:'star',eyebrow:'Practica',title:'Agradece y busca sentido',
-   pts:['Agradecer entrena tu filtro para ver lo bueno.','Tener algo por qué luchar hace que los días difíciles se aguanten mejor.','El sentido puede estar en algo pequeño: una persona, un proyecto, un sueño.'],
-   q:'¿Por qué te levantas en las mañanas?'},
+   q:'¿Qué te gustaría cambiar en cómo te tratas a ti mismo?'},
+  {id:'mensaje',g:1,c:'blue',ico:'heart',eyebrow:'La gran idea',title:'Quererte bien es el comienzo',
+   text:'La idea principal del libro es aprender a tratarte con cariño, porque desde ahí también quieres mejor a los demás.',
+   pts:['Quererte no es creerte mejor que nadie. Es tratarte con respeto y paciencia.','Si te tratas bien, es más fácil tratar bien a otros.'],
+   q:'Del 1 al 10, ¿qué tan bien te tratas? ¿Qué te haría subir un punto?'},
+  {id:'c1',g:2,c:'green',ico:'chat',eyebrow:'Idea clave',title:'Tu voz interior',
+   pts:['Todos tenemos una voz dentro que opina de lo que hacemos.','A veces esa voz es muy dura: te dice cosas que nunca le dirías a nadie.','El primer paso es darte cuenta de cómo te hablas.'],
+   q:'¿Qué te dices cuando cometes un error?'},
+  {id:'c2',g:2,c:'green',ico:'brain',eyebrow:'Idea clave',title:'Lo que crees de ti',
+   pts:['Muchas ideas sobre ti las aprendiste de chico y las sigues creyendo sin revisarlas.','"No soy bueno para eso" puede ser una idea vieja, no la verdad.','Puedes revisar esas ideas y cambiar las que ya no te sirven.'],
+   q:'¿Qué idea tienes de ti que tal vez ya no es cierta?'},
+  {id:'c3',g:2,c:'green',ico:'mountain',eyebrow:'Idea clave',title:'Lo que traes del pasado',
+   pts:['Lo que viviste antes influye en cómo te ves hoy.','No se trata de culpar a nadie, sino de entender de dónde vienes.','Entender tu historia te ayuda a no repetirla sin darte cuenta.'],
+   q:'¿Qué aprendiste en tu casa sobre cómo tratarte a ti mismo?'},
+  {id:'c4',g:2,c:'green',ico:'cloud',eyebrow:'Idea clave',title:'Tus emociones son mensajes',
+   pts:['Ninguna emoción está mal. Todas te dicen algo.','La tristeza, el enojo o el miedo te avisan de algo que necesitas.','Si una emoción te pesa mucho o por mucho tiempo, habla con alguien de confianza o con un profesional.'],
+   q:'¿Qué emoción sentiste más esta semana? ¿Qué crees que te quería decir?'},
+  {id:'p1',g:3,c:'peach',ico:'smile',eyebrow:'Practica',title:'Háblate como a un amigo',
+   pts:['Cuando te equivocas, háblate como le hablarías a alguien que quieres.','Tratarte con cariño no es rendirte: te da fuerza para volver a intentar.','Recuerda que todos fallamos. No eres el único.'],
+   q:'Piensa en tu último error. ¿Qué te diría tu mejor amigo?'},
+  {id:'p2',g:3,c:'peach',ico:'shield',eyebrow:'Practica',title:'Pon límites con cariño',
+   pts:['Decir que no a veces también es quererte.','Un límite se puede poner con respeto: "Hoy no puedo, gracias por pensar en mí".','Las personas que te quieren van a entender tus límites.'],
+   q:'¿A qué dijiste que sí esta semana cuando querías decir que no?'},
+  {id:'p3',g:3,c:'peach',ico:'user',eyebrow:'Practica',title:'Cuerpo, mente y espíritu',
+   pts:['Quererte también es cuidar tu cuerpo: dormir, comer, moverte.','Y cuidar tu mente: descansar de pantallas, hacer cosas que te gustan.','Y cuidar tu espíritu: momentos de calma, silencio o gratitud.'],
+   q:'¿Cuál de las tres partes has descuidado más últimamente?'},
+  {id:'p4',g:3,c:'peach',ico:'lotus',eyebrow:'Practica',title:'Medita un momento',
+   pts:['Meditar es darte unos minutos para estar contigo, sin prisa.','No tienes que dejar la mente en blanco. Solo nota lo que pasa y respira.','El libro trae meditaciones guiadas: úsalas mientras lees.'],
+   q:'¿En qué momento del día podrías darte cinco minutos de calma?'},
   {id:'practicas',g:4,c:'lav',ico:'key',eyebrow:'Reto de la semana',title:'Prueba y fíjate',
-   pts:['Anota tres cosas buenas cada noche, en "Mi día".','Deja el celular fuera de tu cuarto una noche.','Cuando te preocupes, pregúntate si depende de ti.','Pasa un rato con una persona vitamina.'],
+   pts:['Cada vez que te critiques, cambia la frase por una más amable.','Pon un límite pequeño con respeto.','Haz una meditación del libro o la "Pausa de 3 pasos".','Haz algo solo porque te gusta.'],
    q:'¿Cuál de estos retos te cuesta más? Empieza por ese.'},
   {id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para platicar',title:'Preguntas para discutir',
-   pts:['¿Pensar positivo siempre ayuda, o a veces hay que aceptar que algo está mal?','¿Cuándo una preocupación sí es útil?','¿Qué pasa si no puedes alejarte de alguien que te resta?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
+   pts:['¿Quererse a uno mismo es ser egoísta?','¿Tratarte con cariño significa no exigirte nada?','¿Se puede querer bien a otros sin quererte a ti?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
    q:'Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?'},
   {id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu opinión',title:'¿Qué te llevas?',
    pts:['Explica una idea con tus propias palabras.','Busca un ejemplo de tu vida que la apoye o que no.','Separa lo que dice el libro de lo que tú piensas.','Regresa al libro si quieres saber más.'],
@@ -612,11 +616,11 @@ const DATA = [
 ];
 
 const QUOTES = [
-  '¿Qué cosa buena pasó hoy que casi no notaste?',
-  '¿Eso está pasando o solo lo estás imaginando?',
-  'Reto: una noche sin celular en tu cuarto.',
-  '¿Quién es una persona vitamina para ti?',
-  '¿Por qué te levantas en las mañanas?',
+  '¿Cómo te hablarías hoy si fueras tu mejor amigo?',
+  '¿Qué necesitas hoy?',
+  'Reto: di que no a algo, con respeto.',
+  '¿Esa idea sobre ti es verdad o es costumbre?',
+  '¿Qué emoción está tocando la puerta?',
   '¿Qué idea del libro te convence y cuál no?'
 ];
 
@@ -627,7 +631,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('cb-done',[]));
+let done = new Set(store.get('dc-done',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -650,7 +654,7 @@ function refreshProgress(){
   document.getElementById('track').setAttribute('aria-valuenow',n);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('cb-done',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('dc-done',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -664,7 +668,7 @@ function openCard(i){
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
-  done.add(d.id);store.set('cb-done',[...done]);refreshProgress();
+  done.add(d.id);store.set('dc-done',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -676,36 +680,41 @@ dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')openCard(cur+1);if(e.
 let qi=0;
 document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
 
-/* Mi día */
-['g1','g2','g3','w-text'].forEach(id=>{const el=document.getElementById(id);el.value=store.get('cb-'+id,'');el.addEventListener('input',()=>store.set('cb-'+id,el.value))});
-let days=store.get('cb-days',0);
-const gMsg=document.getElementById('g-msg');gMsg.textContent='Días guardados: '+days;
-document.getElementById('g-save').onclick=()=>{
-  const vals=['g1','g2','g3'].map(id=>document.getElementById(id).value.trim()).filter(Boolean);
-  if(!vals.length){gMsg.textContent='Escribe al menos una cosa buena.';return}
-  days++;store.set('cb-days',days);
-  ['g1','g2','g3'].forEach(id=>{document.getElementById(id).value='';store.set('cb-'+id,'')});
-  gMsg.textContent=`¡Guardado! Días guardados: ${days}. ${days>=7?'Tu filtro ya se está entrenando.':'Sigue mañana.'}`;
+/* Mi corazón hoy */
+const esc=t=>t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+let kind=store.get('dc-kind',[]);
+const kList=document.getElementById('k-list'),kMsg=document.getElementById('k-msg');
+['k-crit','k-kind'].forEach(id=>{const el=document.getElementById(id);el.value=store.get('dc-'+id,'');el.addEventListener('input',()=>store.set('dc-'+id,el.value))});
+function drawKind(){kMsg.textContent='Frases guardadas: '+kind.length;kList.innerHTML=kind.slice(-3).reverse().map(k=>`<li>${k.crit?`<s>${esc(k.crit)}</s>`:''}${esc(k.kind)}</li>`).join('')}
+document.getElementById('k-save').onclick=()=>{
+  const c=document.getElementById('k-crit').value.trim(),k=document.getElementById('k-kind').value.trim();
+  if(!k){kMsg.textContent='Escribe cómo se lo dirías a un amigo.';return}
+  kind.push({crit:c,kind:k});store.set('dc-kind',kind);
+  ['k-crit','k-kind'].forEach(id=>{document.getElementById(id).value='';store.set('dc-'+id,'')});drawKind();
 };
-const wOut=document.getElementById('w-out');
-function worry(yes){
-  const w=(document.getElementById('w-text').value.trim()||'eso').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
-  wOut.innerHTML=yes?`<b>Entonces haz un paso.</b> ¿Qué es lo más pequeño que puedes hacer hoy sobre ${w}? Hazlo y deja de darle vueltas.`
-                   :`<b>Entonces suéltalo por hoy.</b> Preocuparte por ${w} no lo va a cambiar. Respira, y regresa tu atención a lo que sí puedes hacer.`;
-}
-document.getElementById('w-yes').onclick=()=>worry(true);
-document.getElementById('w-no').onclick=()=>worry(false);
+drawKind();
+const STEPS=[
+  ['Nota lo que sientes','Di en voz baja: "Esto me duele" o "Esto es difícil". No lo escondas ni lo hagas más grande.'],
+  ['Recuerda que no estás solo','Todas las personas se sienten así a veces. Equivocarse y sufrir es parte de ser humano.'],
+  ['Date un poco de cariño','Pon una mano en tu pecho y respira despacio. Dite algo amable, como: "Estoy haciendo lo que puedo".']
+];
+let st=0;
+function drawStep(){document.getElementById('st-n').textContent=`Paso ${st+1} de 3`;document.getElementById('st-t').textContent=STEPS[st][0];document.getElementById('st-d').textContent=STEPS[st][1];
+  document.getElementById('st-prev').disabled=st===0;document.getElementById('st-next').textContent=st===2?'Empezar otra vez':'Siguiente →'}
+document.getElementById('st-next').onclick=()=>{st=st===2?0:st+1;drawStep()};
+document.getElementById('st-prev').onclick=()=>{if(st>0){st--;drawStep()}};
+drawStep();
 
 /* Quiz */
 const QS=[
-  ['“Me duermo viendo videos hasta las 2 de la mañana.”','mente','Dormir poco y la pantalla antes de dormir te dejan más cansado y de peor humor.'],
-  ['“Antes de dormir, anoto tres cosas buenas del día.”','presencia','Entrenas tu mente para fijarte en lo bueno.'],
-  ['“Seguro el examen me sale fatal. No puedo dejar de pensarlo.”','mente','Te preocupas por algo que no ha pasado y tu cuerpo lo vive como si ya pasara.'],
-  ['“Cuando me siento tenso, salgo a caminar 20 minutos.”','presencia','Moverte ayuda a apagar la alarma del cuerpo.'],
-  ['“Paso mucho tiempo con alguien que critica todo.”','mente','Estar cerca de alguien así te va quitando energía.'],
-  ['“Cuando llego a casa, abrazo a mi mamá.”','presencia','El contacto con quien quieres te hace sentir tranquilo y acompañado.'],
-  ['“Me aburrí un rato sin celular y se me ocurrió una idea.”','presencia','Aburrirte un poco le da espacio a tu mente para crear.'],
-  ['“No perdono lo que me hizo y lo repaso cada noche.”','mente','Repasarlo mantiene la herida abierta. Perdonar es dejar de cargarlo.']
+  ['“Soy un tonto, todo me sale mal.”','mente','Se habla con mucha dureza. A un amigo nunca le diría eso.'],
+  ['“Me equivoqué, como todos. ¿Qué puedo aprender?”','presencia','Acepta el error sin atacarse y busca aprender.'],
+  ['“Hoy estoy cansada. Voy a descansar sin sentirme culpable.”','presencia','Escucha lo que necesita su cuerpo.'],
+  ['“Tengo que decir que sí a todo o dejarán de quererme.”','mente','Cree que para que la quieran no puede poner límites.'],
+  ['“Le dije que no a algo que no quería hacer, con respeto.”','presencia','Pone un límite sin dejar de ser amable.'],
+  ['“Nunca voy a ser tan bueno como mi hermano.”','mente','Se compara y se pone por debajo.'],
+  ['“Me doy cinco minutos para respirar antes de seguir.”','presencia','Se da un momento de calma cuando lo necesita.'],
+  ['“No debería sentirme triste por esto.”','mente','Se regaña por sentir. Todas las emociones son válidas.']
 ];
 let qn=0,score=0;
 const qText=document.getElementById('q-text'),fb=document.getElementById('feedback'),qNext=document.getElementById('q-next'),opts=[...document.querySelectorAll('.opt')];
@@ -713,7 +722,7 @@ function showQ(){
   opts.forEach(o=>{o.disabled=false;o.classList.remove('right','wrong')});fb.innerHTML='';qNext.hidden=true;
   if(qn>=QS.length){
     document.getElementById('q-count').textContent='Resultado';
-    qText.textContent=`${score} de ${QS.length} aciertos. ${score>=7?'¡Muy bien! Sabes qué te hace bien.':score>=5?'Vas bien. Fíjate en cómo te sientes después de cada cosa.':'Sigue practicando. ¡Inténtalo otra vez!'}`;
+    qText.textContent=`${score} de ${QS.length} aciertos. ${score>=7?'¡Muy bien! Reconoces cuándo alguien se trata con dureza.':score>=5?'Vas bien. Fíjate en cómo te hablas tú.':'Sigue practicando. ¡Inténtalo otra vez!'}`;
     opts.forEach(o=>o.disabled=true);qNext.textContent='Volver a jugar';qNext.hidden=false;return;
   }
   document.getElementById('q-count').textContent=`${qn+1} / ${QS.length} · ${score} aciertos`;
@@ -730,8 +739,8 @@ showQ();
 /* Journal */
 const hint=document.getElementById('saved-hint');
 ['j1','j2','j3'].forEach(id=>{
-  const t=document.getElementById(id);t.value=store.get('cb-'+id,'');
-  t.addEventListener('input',()=>{hint.textContent=store.set('cb-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
+  const t=document.getElementById(id);t.value=store.get('dc-'+id,'');
+  t.addEventListener('input',()=>{hint.textContent=store.set('dc-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
 });
 </script>
 
