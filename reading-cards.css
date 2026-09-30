@@ -1,0 +1,41 @@
+/* Keep the reading controls visible while only the explanation scrolls. */
+#dlg[open] {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  overflow: hidden;
+}
+#dlg .dlg-head,
+#dlg .dlg-foot {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+}
+#dlg .dlg-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+}
+#dlg .dlg-foot {
+  flex-wrap: nowrap;
+  gap: 12px;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  padding: 14px 26px max(14px, env(safe-area-inset-bottom));
+}
+#dlg .dlg-foot .btn { min-height: 44px; }
+#dlg .x { min-width: 44px; min-height: 44px; }
+#dlg .reading-point { min-width: 0; }
+#dlg .reading-point > b { display: block; margin-bottom: 5px; }
+.reading-card-hint { color: var(--muted); line-height: 1.6; margin: -4px 0 22px; }
+@media (max-width: 600px) {
+  #dlg .dlg-head { padding: 18px 16px 14px; gap: 12px; }
+  #dlg .dlg-head .ico { width: 40px; height: 40px; }
+  #dlg .dlg-head h3 { font-size: 1.45rem; line-height: 1.2; }
+  #dlg .dlg-body { padding: 16px; }
+  #dlg .dlg-foot { padding-inline: 16px; gap: 10px; }
+  #dlg .dlg-foot .btn { padding: 11px 12px; font-size: .8rem; white-space: nowrap; }
+}

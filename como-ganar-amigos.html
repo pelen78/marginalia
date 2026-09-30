@@ -387,6 +387,7 @@ dialog{border-radius:16px}
 </style>
 <link rel="stylesheet" href="feedback.css">
 <script src="feedback.js" defer></script>
+<link rel="stylesheet" href="reading-cards.css">
 </head>
 <body>
 <nav class="mg-nav" aria-label="Biblioteca">
@@ -425,6 +426,7 @@ dialog{border-radius:16px}
   <div class="map" id="map">
     <div class="group">
       <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
+      <p class="reading-card-hint">Abre una tarjeta para leer la explicación completa.</p>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
           <h2>Conecta con <span>las personas</span></h2>
@@ -545,7 +547,7 @@ dialog{border-radius:16px}
     <div style="min-width:0"><div id="dlg-eyebrow" style="font-family:var(--f-display);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--edge)"></div><h3 id="dlg-title"></h3></div>
     <button class="x" id="dlg-x" type="button" aria-label="Cerrar">×</button>
   </div>
-  <div class="dlg-body"><ol id="dlg-list"></ol><div class="reflect" id="dlg-reflect"></div><p class="dlg-signature">Marginalia · mymarginalia.net</p></div>
+  <div class="dlg-body" tabindex="0" role="region" aria-label="Explicación de la tarjeta"><ol id="dlg-list"></ol><div class="reflect" id="dlg-reflect"></div><p class="dlg-signature">Marginalia · mymarginalia.net</p></div>
   <div class="dlg-foot">
     <button class="btn ghost" id="dlg-prev" type="button">← Anterior</button>
     <button class="btn" id="dlg-next" type="button">Siguiente →</button>
@@ -1160,9 +1162,10 @@ function openCard(i){
   document.getElementById('dlg-eyebrow').textContent=d.eyebrow;
   document.getElementById('dlg-title').textContent=d.title;
   const all=d.text?[d.text,...d.pts]:d.pts;
-  document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
+  document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="reading-point">${p}</div></li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
+  dlg.querySelector('.dlg-body').scrollTop=0;
   done.add(d.id);store.set('cg-done-editorial-v2',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
