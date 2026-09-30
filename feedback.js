@@ -2,25 +2,27 @@
   'use strict';
   const trigger = document.getElementById('mg-feedback-open');
   if (!trigger) return;
-  const book = document.querySelector('.hero cite').textContent.trim();
+  const isSuggestion = trigger.dataset.feedbackKind === 'suggestion';
+  const book = isSuggestion ? '' : document.querySelector('.hero cite').textContent.trim();
+  const sendLabel = isSuggestion ? 'Enviar sugerencia' : 'Enviar comentario';
   const dialog = document.createElement('dialog');
   dialog.id = 'mg-feedback-dialog';
   dialog.setAttribute('aria-labelledby', 'mg-feedback-title');
   dialog.setAttribute('aria-describedby', 'mg-feedback-book');
   dialog.innerHTML = `
     <div class="mg-feedback-heading">
-      <h2 id="mg-feedback-title">Tu comentario sobre esta guía</h2>
-      <button id="mg-feedback-close" type="button" aria-label="Cerrar comentario">×</button>
+      <h2 id="mg-feedback-title">${isSuggestion ? '¿Qué libro te gustaría ver aquí?' : 'Tu comentario sobre esta guía'}</h2>
+      <button id="mg-feedback-close" type="button" aria-label="Cerrar formulario">×</button>
     </div>
     <p id="mg-feedback-book"></p>
     <form id="mg-feedback-form">
-      <label for="mg-feedback-message">¿Qué te gustó o qué podríamos mejorar?</label>
-      <textarea id="mg-feedback-message" name="message" maxlength="1000" required placeholder="Cuéntame qué piensas…" aria-describedby="mg-feedback-note"></textarea>
+      <label for="mg-feedback-message">${isSuggestion ? 'Tu sugerencia' : '¿Qué te gustó o qué podríamos mejorar?'}</label>
+      <textarea id="mg-feedback-message" name="message" maxlength="1000" required placeholder="${isSuggestion ? 'Escribe el título y, si lo sabes, el autor.' : 'Cuéntame qué piensas…'}" aria-describedby="mg-feedback-note"></textarea>
       <div class="mg-feedback-meta">
-        <span id="mg-feedback-note">Tu comentario llegará a la creadora de Marginalia.</span>
+        <span id="mg-feedback-note">${isSuggestion ? 'Tu sugerencia' : 'Tu comentario'} llegará a la creadora de Marginalia.</span>
         <span id="mg-feedback-count">0/1000</span>
       </div>
-      <button class="btn" id="mg-feedback-submit" type="submit">Enviar comentario</button>
+      <button class="btn" id="mg-feedback-submit" type="submit">${sendLabel}</button>
     </form>
     <p id="mg-feedback-status" role="status" aria-live="polite" aria-atomic="true"></p>`;
   document.body.append(dialog);
@@ -30,7 +32,7 @@
   const submit = find('mg-feedback-submit');
   const status = find('mg-feedback-status');
   const count = find('mg-feedback-count');
-  find('mg-feedback-book').textContent = book;
+  find('mg-feedback-book').textContent = isSuggestion ? 'Ayúdame a elegir las próximas guías de Marginalia.' : book;
   let sending = false;
   let sent = false;
 
@@ -54,7 +56,7 @@
     event.preventDefault();
     if (sending) return;
     const text = message.value.trim();
-    message.setCustomValidity(text ? '' : 'Escribe un comentario antes de enviarlo.');
+    message.setCustomValidity(text ? '' : (isSuggestion ? 'Escribe el libro que quieres sugerir.' : 'Escribe un comentario antes de enviarlo.'));
     if (!form.reportValidity()) return;
     sending = true;
     submit.disabled = true;
@@ -67,9 +69,10 @@
     try {
       const data = new FormData();
       data.append('message', text);
-      data.append('_subject', `Marginalia · ${book}`);
+      data.append('_subject', isSuggestion ? 'Marginalia · Sugerencia de libro' : `Marginalia · ${book}`);
       data.append('app', 'Marginalia');
-      data.append('libro', book);
+      data.append('tipo', isSuggestion ? 'Sugerencia de libro' : 'Comentario sobre una guía');
+      if (!isSuggestion) data.append('libro', book);
       data.append('pagina', location.origin + location.pathname);
       const response = await fetch('https://formspree.io/f/mrelklpw', {
         method: 'POST', body: data,
@@ -80,17 +83,17 @@
       form.reset();
       form.hidden = true;
       count.textContent = '0/1000';
-      status.textContent = '¡Gracias! Tu comentario fue enviado.';
+      status.textContent = isSuggestion ? '¡Gracias! Tu sugerencia fue enviada.' : '¡Gracias! Tu comentario fue enviado.';
       if (dialog.open) find('mg-feedback-close').focus();
     } catch (_) {
-      status.textContent = 'No pudimos confirmar el envío. Tu comentario sigue aquí; puedes volver a intentarlo.';
+      status.textContent = 'No pudimos confirmar el envío. Tu texto sigue aquí; puedes volver a intentarlo.';
     } finally {
       clearTimeout(timeout);
       sending = false;
       submit.disabled = false;
       message.readOnly = false;
       form.removeAttribute('aria-busy');
-      submit.textContent = 'Enviar comentario';
+      submit.textContent = sendLabel;
     }
   });
 })();

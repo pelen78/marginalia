@@ -9,7 +9,7 @@
   border-radius:20px;background:var(--paper);box-shadow:var(--shadow);text-align:center}
 .guide-note strong{font-family:var(--f-display)}
 .guide-note p{margin:4px 0;color:var(--muted);font-size:.94rem}
-.source-note{width:100%;margin-top:24px;padding:18px 20px;border-top:1.5px solid var(--line);
+.source-note{width:100%;margin:0;padding:0;
   color:var(--muted);font-size:.88rem;line-height:1.55}
 .source-note strong{color:var(--ink)}
 
@@ -172,11 +172,7 @@ section.block{margin-top:64px}
 .hint{font-size:.85rem;color:var(--muted)}
 
 /* Footer */
-footer{margin-top:70px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
-.sign{display:flex;flex-direction:column;gap:8px}
-.sign span{font-family:var(--f-display);font-weight:800;font-size:1.4rem;letter-spacing:.04em;background:#a87846;color:#fff7ea;padding:6px 26px 4px 18px;border-radius:6px;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);box-shadow:var(--shadow)}
-.sign span:nth-child(2){transform:rotate(-4deg);margin-left:10px}
-.foot-msg{text-align:right;font-family:var(--f-display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+footer{margin-top:30px;display:block}
 @media (max-width:560px){.foot-msg{text-align:left}}
 
 /* Dialog */
@@ -320,12 +316,7 @@ h1,h2,h3{font-weight:400}
 .hint{font-style:italic}
 
 /* Pie */
-footer{border-top:1px solid var(--line);padding-top:30px}
-.sign span{font-family:var(--f-mono);font-weight:700;font-size:1.05rem;background:var(--ink);color:var(--bg);letter-spacing:.14em;border-radius:3px}
-.sign span:nth-child(2){background:var(--accent);color:var(--paper)}
-.foot-msg{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.2em;font-weight:400}
-.foot-msg .hand{font-family:var(--f-hand);font-size:1.4rem}
-.source-note{border-top:1px dashed var(--line)}
+footer{border-top:1px solid var(--line);padding-top:20px}
 
 /* Ventana */
 dialog{border-radius:16px}
@@ -533,13 +524,7 @@ dialog{border-radius:16px}
 </nav>
 
   <footer>
-    <div class="sign" aria-label="Busca lo bueno"><span>BUSCA</span><span>LO BUENO</span></div>
-    <div class="foot-msg">Lo que buscas,<br>lo encuentras<div class="hand" style="text-transform:none;letter-spacing:0;margin-top:6px">Vuelve siempre al texto original</div></div>
-    <div class="source-note">
-      <strong>Obra de referencia:</strong> Rojas Estapé, M. <cite>Cómo hacer que te pasen cosas buenas</cite>. Espasa, 2018.<br>
-      <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
-      Esta es una guía independiente escrita con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
-    </div>
+    <div class="source-note"><strong>Obra de referencia:</strong> Rojas Estapé, M. <cite>Cómo hacer que te pasen cosas buenas</cite>. Espasa, 2018.</div>
   </footer>
 </div>
 

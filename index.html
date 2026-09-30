@@ -332,7 +332,16 @@ footer{font-size:.8rem;padding:20px 0 25px}
 
 #inicio,#libros,#pregunta{scroll-margin-top:calc(var(--header-height,78px) + 22px)}
 @media(max-width:760px){.top .logo{font-size:1.25rem}.top .tools{gap:2px}.top .icon-btn{width:36px}.top .search.open{position:absolute;left:16px;right:16px;top:100%;width:calc(100% - 32px);box-shadow:var(--shadow)}nav.main{gap:18px}nav.main a{font-size:.94rem}}
+
+.site-credits{padding:30px 0 28px;font-size:.86rem;line-height:1.65}
+.site-credits .credits-author{margin:0 0 10px;color:var(--ink)}
+.site-credits .credits-author strong{font-weight:600}
+.site-credits .credits-note{max-width:85ch;margin:0 auto;color:var(--muted)}
+.site-credits .credits-copyright{margin:20px 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.02em;color:var(--muted)}
+@media(max-width:600px){.site-credits{text-align:left;font-size:.82rem}.site-credits .credits-copyright{font-size:.61rem}}
 </style>
+<link rel="stylesheet" href="feedback.css">
+<script src="feedback.js" defer></script>
 </head>
 <body>
 
@@ -429,10 +438,14 @@ footer{font-size:.8rem;padding:20px 0 25px}
     <section id="libros" aria-labelledby="lib-h">
       <div class="section-head" data-reveal>
         <h2 id="lib-h">Elige tu próxima <span class="mark ul">lectura</span></h2>
-        <p>Seis libros. Un espacio para tus propias ideas.</p>
+        <p>Un espacio para descubrir libros y guardar tus propias ideas.</p>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filtrar por tema"></div>
       <div class="grid" id="grid"></div>
+      <div class="mg-feedback-invite">
+        <p>¿Hay un libro que te gustaría encontrar aquí?</p>
+        <button class="btn" id="mg-feedback-open" data-feedback-kind="suggestion" type="button" aria-haspopup="dialog">Sugerir un libro</button>
+      </div>
     </section>
   </div>
 
@@ -453,10 +466,11 @@ footer{font-size:.8rem;padding:20px 0 25px}
   </aside>
 </main>
 
-<footer>
+<footer class="site-credits" id="creditos">
   <div class="wrap">
-    Guías visuales independientes de estudio. Vuelve siempre al texto original.<br>
-    <span class="again">Marginalia · Libros, ideas y notas</span>
+    <p class="credits-author"><strong>Guías elaboradas por:</strong> María Elena Montes Chávez</p>
+    <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
+    <p class="credits-copyright">© 2026 Marginalia. Todos los derechos reservados.</p>
   </div>
 </footer>
 
