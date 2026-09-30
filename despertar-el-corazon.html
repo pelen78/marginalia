@@ -574,46 +574,191 @@ const I = {
 };
 
 const DATA = [
-  {id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Para empezar',title:'Cómo usar esta guía',
-   pts:['Esta guía te acompaña mientras lees. No reemplaza al libro.','Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.','Compara lo que lees aquí con el libro y con tu vida.'],
-   q:'¿Qué te gustaría cambiar en cómo te tratas a ti mismo?'},
-  {id:'mensaje',g:1,c:'blue',ico:'heart',eyebrow:'La gran idea',title:'Quererte bien es el comienzo',
-   text:'La idea principal del libro es aprender a tratarte con cariño, porque desde ahí también quieres mejor a los demás.',
-   pts:['Quererte no es creerte mejor que nadie. Es tratarte con respeto y paciencia.','Si te tratas bien, es más fácil tratar bien a otros.'],
-   q:'Del 1 al 10, ¿qué tan bien te tratas? ¿Qué te haría subir un punto?'},
-  {id:'c1',g:2,c:'green',ico:'chat',eyebrow:'Idea clave',title:'Tu voz interior',
-   pts:['Todos tenemos una voz dentro que opina de lo que hacemos.','A veces esa voz es muy dura: te dice cosas que nunca le dirías a nadie.','El primer paso es darte cuenta de cómo te hablas.'],
-   q:'¿Qué te dices cuando cometes un error?'},
-  {id:'c2',g:2,c:'green',ico:'brain',eyebrow:'Idea clave',title:'Lo que crees de ti',
-   pts:['Muchas ideas sobre ti las aprendiste de chico y las sigues creyendo sin revisarlas.','"No soy bueno para eso" puede ser una idea vieja, no la verdad.','Puedes revisar esas ideas y cambiar las que ya no te sirven.'],
-   q:'¿Qué idea tienes de ti que tal vez ya no es cierta?'},
-  {id:'c3',g:2,c:'green',ico:'mountain',eyebrow:'Idea clave',title:'Lo que traes del pasado',
-   pts:['Lo que viviste antes influye en cómo te ves hoy.','No se trata de culpar a nadie, sino de entender de dónde vienes.','Entender tu historia te ayuda a no repetirla sin darte cuenta.'],
-   q:'¿Qué aprendiste en tu casa sobre cómo tratarte a ti mismo?'},
-  {id:'c4',g:2,c:'green',ico:'cloud',eyebrow:'Idea clave',title:'Tus emociones son mensajes',
-   pts:['Ninguna emoción está mal. Todas te dicen algo.','La tristeza, el enojo o el miedo te avisan de algo que necesitas.','Si una emoción te pesa mucho o por mucho tiempo, habla con alguien de confianza o con un profesional.'],
-   q:'¿Qué emoción sentiste más esta semana? ¿Qué crees que te quería decir?'},
-  {id:'p1',g:3,c:'peach',ico:'smile',eyebrow:'Practica',title:'Háblate como a un amigo',
-   pts:['Cuando te equivocas, háblate como le hablarías a alguien que quieres.','Tratarte con cariño no es rendirte: te da fuerza para volver a intentar.','Recuerda que todos fallamos. No eres el único.'],
-   q:'Piensa en tu último error. ¿Qué te diría tu mejor amigo?'},
-  {id:'p2',g:3,c:'peach',ico:'shield',eyebrow:'Practica',title:'Pon límites con cariño',
-   pts:['Decir que no a veces también es quererte.','Un límite se puede poner con respeto: "Hoy no puedo, gracias por pensar en mí".','Las personas que te quieren van a entender tus límites.'],
-   q:'¿A qué dijiste que sí esta semana cuando querías decir que no?'},
-  {id:'p3',g:3,c:'peach',ico:'user',eyebrow:'Practica',title:'Cuerpo, mente y espíritu',
-   pts:['Quererte también es cuidar tu cuerpo: dormir, comer, moverte.','Y cuidar tu mente: descansar de pantallas, hacer cosas que te gustan.','Y cuidar tu espíritu: momentos de calma, silencio o gratitud.'],
-   q:'¿Cuál de las tres partes has descuidado más últimamente?'},
-  {id:'p4',g:3,c:'peach',ico:'lotus',eyebrow:'Practica',title:'Medita un momento',
-   pts:['Meditar es darte unos minutos para estar contigo, sin prisa.','No tienes que dejar la mente en blanco. Solo nota lo que pasa y respira.','El libro trae meditaciones guiadas: úsalas mientras lees.'],
-   q:'¿En qué momento del día podrías darte cinco minutos de calma?'},
-  {id:'practicas',g:4,c:'lav',ico:'key',eyebrow:'Reto de la semana',title:'Prueba y fíjate',
-   pts:['Cada vez que te critiques, cambia la frase por una más amable.','Pon un límite pequeño con respeto.','Haz una meditación del libro o la "Pausa de 3 pasos".','Haz algo solo porque te gusta.'],
-   q:'¿Cuál de estos retos te cuesta más? Empieza por ese.'},
-  {id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para platicar',title:'Preguntas para discutir',
-   pts:['¿Quererse a uno mismo es ser egoísta?','¿Tratarte con cariño significa no exigirte nada?','¿Se puede querer bien a otros sin quererte a ti?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
-   q:'Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?'},
-  {id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu opinión',title:'¿Qué te llevas?',
-   pts:['Explica una idea con tus propias palabras.','Busca un ejemplo de tu vida que la apoye o que no.','Separa lo que dice el libro de lo que tú piensas.','Regresa al libro si quieres saber más.'],
-   q:'¿Qué idea te gustaría revisar directamente en el libro?'}
+  {
+    "id": "libro",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Para empezar",
+    "title": "Cómo usar esta guía",
+    "pts": [
+      "Esta guía te acompaña mientras lees. No reemplaza al libro.",
+      "Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.",
+      "Compara lo que lees aquí con el libro y con tu vida."
+    ],
+    "q": "¿Qué te gustaría cambiar en cómo te tratas a ti mismo?"
+  },
+  {
+    "id": "mensaje",
+    "g": 1,
+    "c": "blue",
+    "ico": "heart",
+    "eyebrow": "La gran idea",
+    "title": "Quererte bien es el comienzo",
+    "text": "La idea principal del libro es aprender a tratarte con cariño, porque desde ahí también quieres mejor a los demás.",
+    "pts": [
+      "Quererte no es creerte mejor que nadie. Es tratarte con respeto y paciencia.",
+      "Si te tratas bien, es más fácil tratar bien a otros."
+    ],
+    "q": "Del 1 al 10, ¿qué tan bien te tratas? ¿Qué te haría subir un punto?"
+  },
+  {
+    "id": "c1",
+    "g": 2,
+    "c": "green",
+    "ico": "chat",
+    "eyebrow": "Idea clave",
+    "title": "Tu voz interior",
+    "pts": [
+      "A veces pensamos frases sobre lo que hacemos, como si habláramos con nosotros mismos.",
+      "Esas frases pueden ser muy duras, incluso más de lo que le diríamos a otra persona.",
+      "Esta guía te invita a notar qué te dices cuando algo sale mal."
+    ],
+    "q": "¿Qué te dices cuando cometes un error?"
+  },
+  {
+    "id": "c2",
+    "g": 2,
+    "c": "green",
+    "ico": "brain",
+    "eyebrow": "Idea clave",
+    "title": "Lo que crees de ti",
+    "pts": [
+      "Algunas ideas sobre ti pueden venir de lo que te dijeron o viviste cuando eras pequeño.",
+      "Pensar que no eres bueno para algo no demuestra que no puedas aprenderlo.",
+      "Puedes preguntarte si esa idea sigue siendo cierta y buscar ejemplos de lo que sí has aprendido."
+    ],
+    "q": "¿Qué idea tienes de ti que tal vez ya no es cierta?"
+  },
+  {
+    "id": "c3",
+    "g": 2,
+    "c": "green",
+    "ico": "mountain",
+    "eyebrow": "Idea clave",
+    "title": "Lo que traes del pasado",
+    "pts": [
+      "Lo que viviste antes puede influir en cómo te ves ahora.",
+      "Puedes intentar entender qué aprendiste de esas experiencias.",
+      "Notarlo puede ayudarte a decidir si quieres seguir haciendo las cosas de la misma manera."
+    ],
+    "q": "¿Qué aprendiste en tu casa sobre cómo tratarte a ti mismo?"
+  },
+  {
+    "id": "c4",
+    "g": 2,
+    "c": "green",
+    "ico": "cloud",
+    "eyebrow": "Idea clave",
+    "title": "Tus emociones son mensajes",
+    "pts": [
+      "Sentir tristeza, enojo o miedo no te convierte en una mala persona.",
+      "Notar lo que sientes puede ayudarte a preguntarte qué te está pasando y qué necesitas.",
+      "Si lo que sientes te pesa mucho o durante mucho tiempo, puedes buscar apoyo de alguien de confianza o de un profesional."
+    ],
+    "q": "¿Qué emoción sentiste más esta semana? ¿Qué crees que te quería decir?"
+  },
+  {
+    "id": "p1",
+    "g": 3,
+    "c": "peach",
+    "ico": "smile",
+    "eyebrow": "Practica",
+    "title": "Háblate como a un amigo",
+    "pts": [
+      "Cuando te equivoques, prueba hablarte con el cuidado que tendrías con un amigo.",
+      "Puedes reconocer el error y pensar cómo corregirlo sin insultarte.",
+      "Equivocarse le pasa a todo el mundo; no eres el único que tiene que volver a intentar."
+    ],
+    "q": "Piensa en tu último error. ¿Qué te diría tu mejor amigo?"
+  },
+  {
+    "id": "p2",
+    "g": 3,
+    "c": "peach",
+    "ico": "shield",
+    "eyebrow": "Practica",
+    "title": "Pon límites con cariño",
+    "pts": [
+      "A veces decir que no es una forma de cuidar tu tiempo o tu descanso.",
+      "Puedes explicar lo que no puedes hacer sin insultar ni despreciar a la otra persona.",
+      "Puede que alguien se moleste al oír un no. Eso no significa por sí solo que tu decisión esté mal."
+    ],
+    "q": "¿A qué dijiste que sí esta semana cuando querías decir que no?"
+  },
+  {
+    "id": "p3",
+    "g": 3,
+    "c": "peach",
+    "ico": "user",
+    "eyebrow": "Practica",
+    "title": "Cuerpo, mente y espíritu",
+    "pts": [
+      "Cuidarte incluye atender cosas del cuerpo, como dormir, comer y moverte.",
+      "También puedes buscar tiempo para descansar y hacer algo que disfrutes.",
+      "Si para ti es importante la vida espiritual, puedes dedicarle un momento de silencio, calma o agradecimiento."
+    ],
+    "q": "¿Cuál de las tres partes has descuidado más últimamente?"
+  },
+  {
+    "id": "p4",
+    "g": 3,
+    "c": "peach",
+    "ico": "lotus",
+    "eyebrow": "Practica",
+    "title": "Medita un momento",
+    "pts": [
+      "Una forma de empezar a meditar es reservar unos minutos para notar cómo te sientes y cómo respiras.",
+      "Si aparecen pensamientos, puedes darte cuenta y volver a prestar atención a la respiración.",
+      "El libro incluye meditaciones guiadas para acompañar la lectura."
+    ],
+    "q": "¿En qué momento del día podrías darte cinco minutos de calma?"
+  },
+  {
+    "id": "practicas",
+    "g": 4,
+    "c": "lav",
+    "ico": "key",
+    "eyebrow": "Reto de la semana",
+    "title": "Prueba y fíjate",
+    "pts": [
+      "Cada vez que te critiques, cambia la frase por una más amable.",
+      "Pon un límite pequeño con respeto.",
+      "Haz una meditación del libro o la \"Pausa de 3 pasos\".",
+      "Haz algo solo porque te gusta."
+    ],
+    "q": "¿Cuál de estos retos te cuesta más? Empieza por ese."
+  },
+  {
+    "id": "esencial",
+    "g": 4,
+    "c": "lav",
+    "ico": "leaf",
+    "eyebrow": "Para platicar",
+    "title": "Preguntas para discutir",
+    "pts": [
+      "¿Quererse a uno mismo es ser egoísta?",
+      "¿Tratarte con cariño significa no exigirte nada?",
+      "¿Se puede querer bien a otros sin quererte a ti?",
+      "¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?"
+    ],
+    "q": "Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?"
+  },
+  {
+    "id": "resultado",
+    "g": 4,
+    "c": "lav",
+    "ico": "sun",
+    "eyebrow": "Tu opinión",
+    "title": "¿Qué te llevas?",
+    "pts": [
+      "Explica una idea con tus propias palabras.",
+      "Busca un ejemplo de tu vida que la apoye o que no.",
+      "Separa lo que dice el libro de lo que tú piensas.",
+      "Regresa al libro si quieres saber más."
+    ],
+    "q": "¿Qué idea te gustaría revisar directamente en el libro?"
+  }
 ];
 
 const QUOTES = [
