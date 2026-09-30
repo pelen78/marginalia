@@ -27,6 +27,16 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
 .guide-sources a{color:inherit}
 </style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta name="robots" content="noindex">
+<style>/* En construcción: ocultar la guía hasta que esté lista (borrar este bloque y #uc para publicarla) */
+body>*:not(#uc){display:none!important}
+#uc{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:24px 16px;box-sizing:border-box;background:var(--bg);color:var(--ink);text-align:center}
+#uc .box{max-width:460px;padding:32px 26px;border:1.5px solid var(--line);border-radius:20px;background:var(--paper);box-shadow:var(--shadow)}
+#uc small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+#uc h1{font-family:var(--f-display);font-size:clamp(1.7rem,6vw,2.3rem);margin:10px 0 8px;line-height:1.1}
+#uc p{color:var(--muted);margin:0 0 22px;line-height:1.55}
+#uc a{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;border-radius:999px;padding:9px 20px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+</style>
 <title>Guía visual · Te desafío a prosperar</title>
 <meta name="description" content="Recorre los 16 desafíos de Te desafío a prosperar con reflexiones propias de Marginalia, ejemplos sencillos y preguntas para acompañar tu lectura.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -398,6 +408,7 @@ dialog{border-radius:16px}
 <link rel="stylesheet" href="reading-cards.css">
 </head>
 <body>
+<main id="uc"><div class="box"><small>En construcción</small><h1>Te desafío a prosperar</h1><p>Esta guía todavía se está preparando. Muy pronto podrás leerla aquí.</p><a href="index.html#libros">&larr; Volver a la biblioteca</a></div></main>
 <nav class="mg-nav" aria-label="Biblioteca">
   <div class="in">
     <a class="mg-brand" href="index.html#inicio" aria-label="Marginalia, inicio"><span class="s3" style="transform:rotate(-3deg)" aria-hidden="true">M</span><span class="s0" style="transform:rotate(2deg)" aria-hidden="true">A</span><span class="s6" style="transform:rotate(-2deg)" aria-hidden="true">R</span><span class="s0" style="transform:rotate(1deg)" aria-hidden="true">G</span><span class="s4" style="transform:rotate(3deg)" aria-hidden="true">I</span><span class="s0" style="transform:rotate(-1deg)" aria-hidden="true">N</span><span class="s3" style="transform:rotate(2deg)" aria-hidden="true">A</span><span class="s2" style="transform:rotate(-3deg)" aria-hidden="true">L</span><span class="s0" style="transform:rotate(1deg)" aria-hidden="true">I</span><span class="s1" style="transform:rotate(-2deg)" aria-hidden="true">A</span></a>

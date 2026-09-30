@@ -176,6 +176,8 @@ nav.main a.on{color:var(--terra)}
 .book h3{font-size:1.14rem;font-weight:600;line-height:1.15}
 .book .au{color:var(--muted);font-size:.88rem;margin-top:4px}
 .book .row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:14px}
+.book.soon .cover{opacity:.55;filter:grayscale(.4)}
+.book.soon .btn{background:transparent;color:var(--muted);border:1px dashed var(--line);cursor:default;box-shadow:none;transform:none}
 .book .btn{margin:0;padding:6px 14px;font-size:.68rem;white-space:nowrap}
 .book .more{font-family:var(--f-mono);letter-spacing:.1em;color:var(--muted);padding:4px 8px;border-radius:6px}
 .book .more:hover{background:var(--panel);color:var(--ink)}
@@ -562,11 +564,13 @@ const BOOKS = [
     blurb:"Reconocer las trampas mentales que nos frenan y tomar las riendas de nuestras decisiones.", motto:"Nota, pregunta, elige",
     q:"¿Qué decisión estás dejando en manos de otra persona?",
     cover:{bg:"#ddd3c5", ink:"#4a3f35", art:"arch"} },
-  { id:"prosperar", file:"te-desafio-a-prosperar.html", title:"Te desafío a prosperar", full:"Te desafío a prosperar", author:"Carlos Cuauhtémoc Sánchez", cat:"Bienestar",
+  { id:"prosperar", file:"te-desafio-a-prosperar.html", title:"Te desafío a prosperar", full:"Te desafío a prosperar", author:"Carlos Cuauhtémoc Sánchez", cat:"Bienestar", soon:true,
     blurb:"Recorre los dieciséis desafíos con reflexiones propias, ejemplos y preguntas para pensar en tu trabajo, tu dinero y tu bienestar.", motto:"Lee, reflexiona, da un paso",
     q:"¿Qué paso pequeño podrías dar esta semana para cuidar tu bienestar?",
     cover:{bg:"#e2ddc6", ink:"#56553d", art:"prosperity"} },
 ];
+// Guías en construcción: se muestran en la biblioteca pero no se puede entrar
+const LIVE=BOOKS.filter(b=>!b.soon);
 
 const ICONS = {
   map:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="6" r="2"/><circle cx="19.5" cy="6" r="2"/><circle cx="4.5" cy="18" r="2"/><circle cx="19.5" cy="18" r="2"/><path d="M6.3 7l3.2 3M17.7 7l-3.2 3M6.3 17l3.2-3M17.7 17l-3.2-3"/></svg>',
@@ -653,7 +657,7 @@ const now=new Date();
 const dayIndex=Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())/864e5);
 const todayKey=`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
 function renderMinis(){
-  const picks=[0,1,2].map(i=>BOOKS[(dayIndex+i)%BOOKS.length]);
+  const picks=[0,1,2].map(i=>LIVE[(dayIndex+i)%LIVE.length]);
   document.getElementById("minis").innerHTML=picks.map((b,i)=>
     `<a class="mini m${i+1}" href="${b.file}" tabindex="-1"><span class="cover">${coverSVG(b)}</span></a>`).join("");
 }
@@ -669,21 +673,21 @@ function renderGrid(){
   const q=norm(query.trim());
   const list=BOOKS.filter(b=>(activeCat==="Todos"||b.cat===activeCat)&&(!q||norm(b.full+" "+b.author).includes(q)));
   document.getElementById("grid").innerHTML=list.length?list.map((b,i)=>`
-    <article class="book" style="--i:${i}">
-      <a class="cover" href="${b.file}" tabindex="-1" aria-hidden="true">${coverSVG(b)}</a>
+    <article class="book${b.soon?' soon':''}" style="--i:${i}">
+      ${b.soon?`<span class="cover" aria-hidden="true">${coverSVG(b)}</span>`:`<a class="cover" href="${b.file}" tabindex="-1" aria-hidden="true">${coverSVG(b)}</a>`}
       <div class="book-info">
-        <div class="book-category">${b.id===BOOKS[dayIndex%BOOKS.length].id?'★ Lectura destacada':esc(b.cat)}</div>
+        <div class="book-category">${b.soon?'En construcción':b.id===LIVE[dayIndex%LIVE.length].id?'★ Lectura destacada':esc(b.cat)}</div>
         <h3>${esc(b.title)}</h3>
         <div class="au">${esc(b.author)}</div>
         <p class="blurb">${esc(b.blurb)}</p>
-        <div class="row"><a class="btn" href="${b.file}">Ver guía ${ICONS.arrow}</a></div>
+        <div class="row">${b.soon?`<span class="btn" aria-disabled="true">Próximamente</span>`:`<a class="btn" href="${b.file}">Ver guía ${ICONS.arrow}</a>`}</div>
       </div>
     </article>`).join(""):`<p class="empty">No encontré libros con esa búsqueda.</p>`;
 }
 
-let qi=dayIndex%BOOKS.length;
+let qi=dayIndex%LIVE.length;
 function renderQuestion(){
-  const b=BOOKS[qi];
+  const b=LIVE[qi];
   document.getElementById("qText").textContent=b.q;
   document.getElementById("qSrc").innerHTML=`Guía de <a href="${b.file}">${esc(b.title)}</a>`;
 }
@@ -694,7 +698,7 @@ document.getElementById("filters").addEventListener("click",e=>{
 });
 document.getElementById("nextQ").addEventListener("click",()=>{
   const w=document.getElementById("qWrap"); w.style.opacity=0;
-  setTimeout(()=>{qi=(qi+1)%BOOKS.length;renderQuestion();w.style.opacity=1},300);
+  setTimeout(()=>{qi=(qi+1)%LIVE.length;renderQuestion();w.style.opacity=1},300);
 });
 
 const search=document.getElementById("search");
