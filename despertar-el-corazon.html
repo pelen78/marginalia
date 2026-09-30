@@ -389,6 +389,8 @@ dialog{border-radius:16px}
 }
 @media (prefers-reduced-motion:reduce){.mg-menu ul{animation:none}.mg-pager a{transition:none}}
 </style>
+<link rel="stylesheet" href="feedback.css">
+<script src="feedback.js" defer></script>
 </head>
 <body>
 <nav class="mg-nav" aria-label="Biblioteca">
@@ -517,6 +519,11 @@ dialog{border-radius:16px}
     </div>
     <p class="hint" id="saved-hint" style="margin-top:8px"></p>
   </section>
+
+<section class="mg-feedback-invite" aria-label="Comentarios sobre esta guía">
+  <p>¿Te sirvió esta guía? Me gustaría saber qué piensas.</p>
+  <button class="btn ghost" id="mg-feedback-open" type="button" aria-haspopup="dialog">Dejar comentario</button>
+</section>
 
 <nav class="mg-pager" aria-label="Otros libros">
   <a class="pv" href="cosas-buenas.html"><small>&larr; Anterior</small><b>Cómo hacer que te pasen cosas buenas</b></a>

@@ -1,0 +1,20 @@
+.mg-feedback-invite{max-width:1180px;margin:42px auto 0;padding:22px 0;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mg-feedback-invite p{margin:0;color:var(--muted);font-size:1rem}
+.mg-feedback-invite .btn{flex:none}
+#mg-feedback-dialog{width:min(560px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--paper);color:var(--ink);overflow:auto;box-shadow:0 24px 80px -20px rgba(0,0,0,.4)}
+#mg-feedback-dialog::backdrop{background:rgba(25,22,19,.5);backdrop-filter:blur(3px)}
+.mg-feedback-heading{display:flex;align-items:flex-start;gap:18px}
+#mg-feedback-title{font-size:1.65rem;line-height:1.2;font-weight:400}
+#mg-feedback-close{margin-left:auto;flex:none;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font-size:1.5rem;line-height:1}
+#mg-feedback-close:hover{background:var(--bg)}
+#mg-feedback-book{margin:10px 0 22px;color:var(--muted);font-style:italic;font-size:.95rem}
+#mg-feedback-form label{display:block;margin-bottom:9px;font-size:1rem}
+#mg-feedback-message{display:block;width:100%;min-height:150px;resize:vertical;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;line-height:1.5}
+#mg-feedback-message::placeholder{color:var(--muted);opacity:1}
+#mg-feedback-dialog .mg-feedback-meta{display:flex;justify-content:space-between;gap:16px;margin:8px 0 20px;color:var(--muted);font-size:.78rem;line-height:1.4}
+#mg-feedback-count{white-space:nowrap}
+#mg-feedback-submit:disabled{opacity:.65;cursor:wait;transform:none}
+#mg-feedback-status{font-size:.95rem;line-height:1.5;margin:16px 0 0}
+#mg-feedback-status:empty{display:none}
+#mg-feedback-dialog [hidden]{display:none!important}
+@media(max-width:520px){.mg-feedback-invite{align-items:flex-start;flex-direction:column}#mg-feedback-dialog{padding:22px}#mg-feedback-title{font-size:1.45rem}}
