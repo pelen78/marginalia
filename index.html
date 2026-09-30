@@ -5,11 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script id="intro-visit-check">
 (() => {
+  const visitURL = new URL(location.href);
+  const replayIntro = visitURL.searchParams.get('intro') === '1';
+  if (replayIntro) {
+    visitURL.searchParams.delete('intro');
+    history.replaceState(history.state, '', visitURL.href);
+  }
   let seen = false;
   try { seen = localStorage.getItem('marginalia-intro-seen') === '1'; } catch (_) {}
   try { seen = seen || sessionStorage.getItem('marginalia-intro-seen') === '1'; } catch (_) {}
   const sectionLink = ['#inicio', '#libros', '#pregunta'].includes(location.hash);
-  if (seen || sectionLink) {
+  if (!replayIntro && (seen || sectionLink)) {
     document.documentElement.dataset.skipIntro = 'true';
     document.documentElement.classList.remove('intro-on');
   }
@@ -513,11 +519,19 @@ footer{font-size:.8rem;padding:20px 0 25px}
     <p class="credits-author"><strong>Guías elaboradas por:</strong> María Elena Montes Chávez</p>
     <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
     <p class="credits-copyright">© 2026 Marginalia. Todos los derechos reservados.</p>
+    <button class="again" id="replay-intro" type="button">↺ Volver a ver la intro</button>
   </div>
 </footer>
 
 <script src="intro-audio.js"></script>
 <script>
+document.getElementById('replay-intro').addEventListener('click', () => {
+  const url = new URL(location.href);
+  url.hash = '';
+  url.searchParams.set('intro', '1');
+  location.assign(url.href);
+});
+
 /* ================= DATOS Y SITIO ================= */
 const BOOKS = [
   { id:"ahora", file:"el-poder-del-ahora.html", title:"El poder del ahora", full:"El Poder del Ahora", author:"Eckhart Tolle", cat:"Espiritualidad",
