@@ -398,12 +398,12 @@ dialog{border-radius:16px}
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Recorre el libro por sus grandes partes con explicaciones fáciles, ejemplos y preguntas para pensar. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
+    <p>Recorre el libro capítulo por capítulo con explicaciones fáciles, ejemplos y preguntas para pensar. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
     <span id="progress-text">0 de 13 secciones exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="25" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
@@ -419,15 +419,31 @@ dialog{border-radius:16px}
       </div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Las bases</h2>
+      <h2 class="g-title"><span class="g-n">2</span>Principios fundamentales · Capítulos 1–3</h2>
       <div class="g-grid" id="g-2"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Las cuatro reglas</h2>
+      <h2 class="g-title"><span class="g-n">3</span>Primera ley: hacerlo obvio · Capítulos 4–7</h2>
       <div class="g-grid" id="g-3"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Cómo llevarlo a tu vida</h2>
+      <h2 class="g-title"><span class="g-n">4</span>Segunda ley: hacerlo atractivo · Capítulos 8–10</h2>
+      <div class="g-grid" id="g-5"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">5</span>Tercera ley: hacerlo sencillo · Capítulos 11–14</h2>
+      <div class="g-grid" id="g-6"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">6</span>Cuarta ley: hacerlo satisfactorio · Capítulos 15–17</h2>
+      <div class="g-grid" id="g-7"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">7</span>Tácticas avanzadas · Capítulos 18–20</h2>
+      <div class="g-grid" id="g-8"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">8</span>Las ideas que se repiten</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
           <div class="hand" id="quote-text">¿Qué hábito pequeño podrías empezar hoy?</div>
@@ -503,7 +519,7 @@ dialog{border-radius:16px}
     <div class="source-note">
       <strong>Obra de referencia:</strong> Clear, J. <cite>Hábitos atómicos</cite>. Paidós, 2019.<br>
       <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
-      Las explicaciones, ejemplos, preguntas y actividades fueron redactados especialmente para esta guía independiente. No es una edición ni un resumen oficial, no reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
+      Esta es una guía independiente escrita con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
@@ -551,65 +567,381 @@ const I = {
 };
 
 const DATA = [
-{id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Antes de empezar',title:'El libro de un vistazo',
- text:'La idea principal es sencilla: lo que hacemos una y otra vez puede cambiar mucho nuestra vida, aunque cada acción parezca pequeña.',
- pts:['Un hábito no cambia todo de un día para otro. Su efecto se nota con el tiempo.','El libro se enfoca menos en tener mucha fuerza de voluntad y más en preparar las condiciones para que hacer lo correcto sea más fácil.','La meta no es cambiar todo de golpe, sino construir una forma de actuar que puedas repetir.'],
- q:'¿Qué hábito pequeño, si lo mantuvieras durante un año, podría hacer una diferencia en tu vida?'},
-{id:'mensaje',g:1,c:'blue',ico:'steps',eyebrow:'La idea que conecta todo',title:'Lo pequeño se va acumulando',
- pts:['Una acción pequeña puede parecer que no sirve de mucho, pero repetirla cambia el resultado con el tiempo.','Lo mismo pasa con los malos hábitos: sus efectos también se van acumulando.','Por eso el libro pone tanta atención en lo que hacemos normalmente, no solo en los grandes esfuerzos de vez en cuando.'],
- q:'¿Qué haces casi todos los días que podría estar sumando más de lo que parece?'},
-
-{id:'c1',g:2,c:'green',ico:'gear',eyebrow:'Primera parte',title:'No te quedes solo con la meta',
- text:'Querer algo ayuda a saber hacia dónde vas, pero el libro pone más atención en lo que haces de manera repetida para llegar ahí.',
- pts:['La meta es el resultado que quieres; el sistema es la manera en que trabajas para conseguirlo.','Dos personas pueden querer lo mismo y obtener resultados distintos porque sus rutinas son diferentes.','En vez de pensar solamente “quiero lograr esto”, conviene preguntarte “¿qué tendría que hacer con frecuencia?”.'],
- q:'Ejemplo: si quieres leer más, ¿qué rutina concreta podría hacer que leer forme parte de tu día?'},
-
-{id:'c2',g:2,c:'green',ico:'user',eyebrow:'Primera parte',title:'Tus hábitos también hablan de quién eres',
- text:'El libro propone que un hábito se vuelve más fuerte cuando lo relacionas con la clase de persona que quieres ser.',
- pts:['En vez de pensar solo “quiero correr”, puedes pensar “quiero ser una persona que se mueve y cuida su cuerpo”.','Cada vez que repites una acción, refuerzas un poco esa imagen de ti mismo.','No necesitas hacerlo perfecto. Lo importante es repetir suficientes acciones que vayan en esa dirección.'],
- q:'Completa la frase: “Quiero ser una persona que ___”. ¿Qué acción pequeña haría hoy esa persona?'},
-
-{id:'c3',g:2,c:'green',ico:'loop',eyebrow:'Cómo nace un hábito',title:'Del recordatorio a la recompensa',
- text:'Para explicar por qué repetimos ciertas conductas, el libro divide un hábito en cuatro momentos sencillos.',
- pts:['Primero aparece algo que llama tu atención o te recuerda la conducta.','Después aparece el deseo de obtener algo: placer, alivio, diversión, comodidad o algún beneficio.','Entonces haces la acción.','Al final recibes algún tipo de recompensa, y eso ayuda a que tu cerebro quiera repetirla.'],
- q:'Piensa en revisar el celular. ¿Qué suele hacer que lo agarres y qué obtienes cuando lo haces?'},
-
-{id:'c4',g:2,c:'green',ico:'broken',eyebrow:'Para los malos hábitos',title:'Hazles el camino más difícil',
- text:'Para reducir un hábito que no quieres, puedes cambiar las condiciones que hacen que sea tan fácil repetirlo.',
- pts:['Quita de la vista las cosas que lo disparan cuando sea posible.','Haz que la conducta requiera más pasos o más esfuerzo.','Busca alternativas que te den algo parecido sin repetir el hábito que quieres dejar.','Cambiar el ambiente suele ser más práctico que depender siempre de resistir la tentación.'],
- q:'Ejemplo: si el celular te distrae mientras trabajas, ¿qué podrías cambiar físicamente para que agarrarlo sea menos automático?'},
-
-{id:'ley1',g:3,c:'peach',ico:'eye',eyebrow:'Regla 1',title:'Haz que el hábito te recuerde que existe',
- text:'Si quieres hacer algo con frecuencia, ayuda mucho tener una señal clara que te lo recuerde.',
- pts:['Pon a la vista algo relacionado con el hábito: por ejemplo, deja el libro donde normalmente te sientas.','Puedes unir una acción nueva a otra que ya haces todos los días.','También ayuda decidir de antemano cuándo y dónde lo harás.'],
- q:'¿Qué podrías dejar preparado hoy para que mañana sea difícil olvidar tu hábito?'},
-
-{id:'ley2',g:3,c:'peach',ico:'heart',eyebrow:'Regla 2',title:'Hazlo más atractivo',
- text:'Es más fácil repetir algo cuando lo relacionamos con una experiencia que nos gusta o esperamos con ganas.',
- pts:['Puedes juntar una actividad que necesitas hacer con otra que disfrutas.','Las personas que te rodean también influyen: tendemos a ver como normal lo que nuestro grupo hace con frecuencia.','Encontrar una parte agradable del proceso ayuda a que no todo dependa del resultado final.'],
- q:'¿Qué cosa que disfrutas podrías relacionar con el hábito que quieres crear?'},
-
-{id:'ley3',g:3,c:'peach',ico:'clock',eyebrow:'Regla 3',title:'Haz que empezar sea fácil',
- text:'Cuando una acción necesita demasiado esfuerzo para comenzar, es más fácil posponerla. Por eso el libro propone reducir la dificultad del primer paso.',
- pts:['Prepara con anticipación lo que vas a necesitar.','Empieza con una versión muy pequeña del hábito que puedas hacer rápidamente.','Por ejemplo, “hacer ejercicio” puede empezar simplemente con ponerte la ropa y moverte unos minutos.','Primero haz que comenzar sea normal; después puedes aumentar el esfuerzo.'],
- q:'¿Cuál sería la versión más pequeña y fácil de tu hábito?'},
-
-{id:'ley4',g:3,c:'peach',ico:'check',eyebrow:'Regla 4',title:'Haz que terminar se sienta bien',
- text:'Los resultados de muchos buenos hábitos tardan en aparecer, así que ayuda tener alguna señal inmediata de que vas avanzando.',
- pts:['Registrar que cumpliste puede darte una sensación clara de progreso.','Una pequeña recompensa que no contradiga tu objetivo puede ayudar a mantener la conducta.','Un día malo no destruye un hábito; lo importante es regresar en cuanto puedas.'],
- q:'¿Cómo podrías notar o registrar cada vez que cumplas tu hábito?'},
-
-{id:'practicas',g:4,c:'lav',ico:'key',eyebrow:'Pruébalo tú',title:'Construye un hábito pequeño',
- pts:['Elige una sola conducta que quieras repetir.','Haz que el primer paso sea muy fácil.','Decide qué señal te lo recordará y en qué momento lo harás.','Pruébalo durante varios días y cambia lo que no esté funcionando.'],
- q:'¿Qué hábito quieres probar primero?'},
-
-{id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para recordar',title:'Las ideas principales',
- pts:['Los hábitos pequeños pueden producir cambios grandes cuando se mantienen.','Tu ambiente puede ayudarte o estorbarte más de lo que parece.','Un buen sistema facilita repetir la conducta correcta.','Pensar en quién quieres ser puede darle sentido a lo que haces todos los días.'],
- q:'Si tuvieras que explicarle el libro a alguien usando solo tres ideas, ¿cuáles serían?'},
-
-{id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu lectura',title:'¿Qué te llevas del libro?',
- pts:['No necesitas cambiar diez cosas al mismo tiempo.','Puedes probar una idea, observar qué pasa y ajustar tu sistema.','Esta guía te ayuda a recordar las ideas; tus resultados dependen de cómo las adaptes a tu propia vida.'],
- q:'¿Qué idea de esta guía quieres probar esta semana?'}
+  {
+    "id": "libro",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Para empezar",
+    "title": "El libro de un vistazo",
+    "text": "James Clear explica cómo construir rutinas que sea posible repetir. El libro empieza con las bases, desarrolla cuatro leyes para cambiar hábitos y termina con ideas para seguir mejorando.",
+    "pts": [
+      "Recorre los capítulos en el orden del libro.",
+      "Abre cada tarjeta para encontrar sus ideas principales.",
+      "Los ejemplos y preguntas son originales de Marginalia."
+    ],
+    "q": "¿Qué te gustaría entender de este libro?"
+  },
+  {
+    "id": "mensaje",
+    "g": 1,
+    "c": "blue",
+    "ico": "eye",
+    "eyebrow": "El hilo del libro",
+    "title": "La idea que conecta el libro",
+    "text": "La idea que une el recorrido es preparar las condiciones de una acción pequeña, en vez de depender solo de la motivación.",
+    "pts": [
+      "Los encabezados breves describen el tema de cada capítulo con palabras propias.",
+      "Después del recorrido encontrarás ideas para recordar y actividades."
+    ],
+    "q": "¿Qué parte del recorrido te llama más la atención?"
+  },
+  {
+    "id": "cap-1",
+    "g": 2,
+    "c": "green",
+    "ico": "gear",
+    "eyebrow": "Capítulo 1",
+    "title": "Lo pequeño cambia el rumbo",
+    "text": "Clear abre el libro explicando cómo se acumulan las acciones que repetimos. Propone mirar la rutina que sostenemos, además del resultado que deseamos.",
+    "pts": [
+      "Una mejora pequeña puede tardar en notarse.",
+      "La meta indica una dirección; el sistema organiza lo que haces a diario.",
+      "El autor invita a valorar la constancia, sin esperar un cambio inmediato."
+    ],
+    "q": "Ejemplo de Marginalia: guardas un archivo cada tarde y al mes tienes tu trabajo ordenado. ¿Qué acción pequeña te ahorraría problemas si la repitieras?"
+  },
+  {
+    "id": "cap-2",
+    "g": 2,
+    "c": "green",
+    "ico": "user",
+    "eyebrow": "Capítulo 2",
+    "title": "Actuar como la persona que quieres ser",
+    "text": "Este capítulo conecta los hábitos con la manera en que nos vemos. Clear propone construir esa imagen mediante acciones pequeñas que la respalden.",
+    "pts": [
+      "Puedes empezar por decidir qué cualidad quieres practicar.",
+      "Cada repetición aporta una prueba de que estás aprendiendo.",
+      "Una identidad demasiado rígida también puede dificultar cambiar."
+    ],
+    "q": "Ejemplo de Marginalia: quieres ser alguien atento y hoy recuerdas preguntar cómo salió una cita importante. ¿Qué acción mostraría una cualidad que quieres cultivar?"
+  },
+  {
+    "id": "cap-3",
+    "g": 2,
+    "c": "green",
+    "ico": "loop",
+    "eyebrow": "Capítulo 3",
+    "title": "Los cuatro momentos de un hábito",
+    "text": "Clear presenta su explicación de cómo se forma una rutina. Distingue una señal, un deseo, una respuesta y una recompensa.",
+    "pts": [
+      "La señal anuncia una posibilidad.",
+      "El deseo impulsa la acción y la respuesta es lo que haces.",
+      "La recompensa ayuda a explicar por qué quieres repetirlo."
+    ],
+    "q": "Ejemplo de Marginalia: ves una notificación, quieres saber qué dice, abres el chat y resuelves la duda. ¿Dónde comienza una de tus rutinas?"
+  },
+  {
+    "id": "cap-4",
+    "g": 3,
+    "c": "peach",
+    "ico": "eye",
+    "eyebrow": "Capítulo 4",
+    "title": "Notar lo que ya haces",
+    "text": "Antes de cambiar un hábito, el libro propone observarlo. Clear explica que muchas señales y respuestas pasan inadvertidas porque las repetimos sin pensarlas.",
+    "pts": [
+      "Registrar una rutina permite verla con más claridad.",
+      "El valor de un hábito depende de aquello que quieres construir.",
+      "Nombrar una acción puede ayudarte a salir del piloto automático."
+    ],
+    "q": "Ejemplo de Marginalia: anotas lo que haces al llegar a casa y descubres que abres el correo antes de saludar. ¿Qué rutina te gustaría observar sin juzgarla?"
+  },
+  {
+    "id": "cap-5",
+    "g": 3,
+    "c": "peach",
+    "ico": "clock",
+    "eyebrow": "Capítulo 5",
+    "title": "Dar un lugar concreto al hábito",
+    "text": "Este capítulo pasa del deseo general a un plan específico. Clear propone decidir cuándo y dónde actuar, o enlazar la acción nueva con una rutina conocida.",
+    "pts": [
+      "Un momento concreto reduce la necesidad de decidir cada vez.",
+      "Una actividad que ya repites puede servir de recordatorio.",
+      "El vínculo funciona mejor cuando la señal es clara y frecuente."
+    ],
+    "q": "Ejemplo de Marginalia: después de conectar la computadora, escribes la tarea principal del día. ¿Qué acción habitual podría recordarte la nueva?"
+  },
+  {
+    "id": "cap-6",
+    "g": 3,
+    "c": "peach",
+    "ico": "globe",
+    "eyebrow": "Capítulo 6",
+    "title": "Preparar el ambiente",
+    "text": "Clear destaca cómo el lugar influye en lo que hacemos. Propone organizar las señales visibles para facilitar la conducta deseada.",
+    "pts": [
+      "Lo que queda a mano suele llamar más nuestra atención.",
+      "Preparar un espacio puede apoyar un hábito sin depender de las ganas.",
+      "Asignar un uso claro a un lugar ayuda a asociarlo con una actividad."
+    ],
+    "q": "Ejemplo de Marginalia: dejas un cuaderno abierto junto a la lámpara para recordar tu rato de escritura. ¿Qué señal podrías colocar donde ya la vas a ver?"
+  },
+  {
+    "id": "cap-7",
+    "g": 3,
+    "c": "peach",
+    "ico": "broken",
+    "eyebrow": "Capítulo 7",
+    "title": "Reducir las tentaciones cercanas",
+    "text": "El capítulo cuestiona depender siempre del autocontrol. Clear propone disminuir el contacto con las señales que ponen en marcha una conducta que quieres cambiar.",
+    "pts": [
+      "Una señal conocida puede reactivar una rutina.",
+      "Quitar esa señal del entorno puede facilitar una decisión distinta.",
+      "El autor separa diseñar las condiciones de resistir a cada instante."
+    ],
+    "q": "Ejemplo de Marginalia: desactivas la vista previa del chat durante tu rato de concentración. ¿Qué señal hace más difícil sostener tu intención?"
+  },
+  {
+    "id": "cap-8",
+    "g": 5,
+    "c": "green",
+    "ico": "heart",
+    "eyebrow": "Capítulo 8",
+    "title": "Hacer atractiva la repetición",
+    "text": "Clear examina cómo influye lo que esperamos obtener de una conducta. Sugiere vincular una tarea necesaria con algo que nos resulte agradable.",
+    "pts": [
+      "Anticipar una recompensa puede animarnos a empezar.",
+      "Asociar dos actividades puede volver más deseable una rutina.",
+      "Conviene que el atractivo acompañe al hábito, sin impedirlo."
+    ],
+    "q": "Ejemplo de Marginalia: usas tus marcadores favoritos para repasar apuntes que sueles posponer. ¿Qué detalle agradable podrías incorporar a una tarea?"
+  },
+  {
+    "id": "cap-9",
+    "g": 5,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Capítulo 9",
+    "title": "Lo que el grupo vuelve normal",
+    "text": "El libro explica que también aprendemos hábitos al convivir. Clear analiza la influencia de las personas cercanas, la mayoría y quienes admiramos.",
+    "pts": [
+      "Pertenecer a un grupo puede hacer atractiva una conducta.",
+      "Una comunidad con prácticas compartidas ofrece modelos cotidianos.",
+      "El autor propone buscar entornos donde tu hábito deseado sea habitual."
+    ],
+    "q": "Ejemplo de Marginalia: te unes a un grupo que intercambia un dibujo cada semana. ¿Quiénes podrían acompañar la costumbre que quieres formar?"
+  },
+  {
+    "id": "cap-10",
+    "g": 5,
+    "c": "green",
+    "ico": "brain",
+    "eyebrow": "Capítulo 10",
+    "title": "Mirar qué hay detrás del deseo",
+    "text": "Clear propone distinguir la necesidad que queremos cubrir de la conducta que usamos para lograrlo. También revisa cómo la manera de describir un hábito cambia su atractivo.",
+    "pts": [
+      "Una misma necesidad puede tener respuestas diferentes.",
+      "La expectativa sobre una acción influye en las ganas de realizarla.",
+      "Revisar los costos de un mal hábito puede volverlo menos atractivo."
+    ],
+    "q": "Ejemplo de Marginalia: cuando buscas distraerte, pruebas salir al patio antes de abrir otra aplicación. ¿Qué buscas obtener con una rutina que quieres cambiar?"
+  },
+  {
+    "id": "cap-11",
+    "g": 6,
+    "c": "peach",
+    "ico": "steps",
+    "eyebrow": "Capítulo 11",
+    "title": "Practicar además de prepararse",
+    "text": "Este capítulo distingue organizar una actividad de hacerla. Clear explica que la repetición permite aprender lo que la preparación por sí sola no consigue.",
+    "pts": [
+      "Investigar puede ayudar, pero no reemplaza el intento.",
+      "El autor pone el foco en las repeticiones, no en un plazo fijo.",
+      "Un comienzo imperfecto aporta información para mejorar."
+    ],
+    "q": "Ejemplo de Marginalia: dejas de comparar tutoriales y grabas tu primer intento de una melodía. ¿Qué estás preparando tanto que todavía no lo empiezas?"
+  },
+  {
+    "id": "cap-12",
+    "g": 6,
+    "c": "peach",
+    "ico": "gear",
+    "eyebrow": "Capítulo 12",
+    "title": "Quitar obstáculos al comienzo",
+    "text": "Clear plantea que solemos elegir el camino que exige menos esfuerzo. Por eso propone preparar el entorno para que una buena acción tenga menos pasos.",
+    "pts": [
+      "Tener lo necesario listo facilita comenzar.",
+      "Agregar pasos puede dificultar un hábito que quieres reducir.",
+      "La preparación de hoy puede ayudar a la decisión de mañana."
+    ],
+    "q": "Ejemplo de Marginalia: guardas en una sola carpeta todo lo necesario para tu siguiente sesión de estudio. ¿Qué paso repetido podrías ahorrarte?"
+  },
+  {
+    "id": "cap-13",
+    "g": 6,
+    "c": "peach",
+    "ico": "clock",
+    "eyebrow": "Capítulo 13",
+    "title": "Empezar con una versión de dos minutos",
+    "text": "El libro propone reducir el inicio de una rutina hasta volverlo muy sencillo. Clear usa la regla de los dos minutos para practicar primero el acto de empezar.",
+    "pts": [
+      "Una versión mínima hace más fácil presentarte a la actividad.",
+      "No tiene que contener desde el primer día toda la meta.",
+      "Después de afianzar el comienzo puedes aumentar el esfuerzo."
+    ],
+    "q": "Ejemplo de Marginalia: para ordenar tu material, comienzas guardando únicamente los lápices. ¿Cuál sería un inicio tan pequeño que puedas repetir?"
+  },
+  {
+    "id": "cap-14",
+    "g": 6,
+    "c": "peach",
+    "ico": "key",
+    "eyebrow": "Capítulo 14",
+    "title": "Dejar una decisión preparada",
+    "text": "Clear describe decisiones que facilitan o dificultan conductas futuras. El capítulo incluye compromisos y automatizaciones que reducen la necesidad de elegir cada vez.",
+    "pts": [
+      "Un compromiso previo puede apoyar una intención cuando cambian las ganas.",
+      "Automatizar una tarea evita repetir algunas decisiones.",
+      "Conviene diseñar la ayuda de acuerdo con el hábito concreto."
+    ],
+    "q": "Ejemplo de Marginalia: programas una copia de seguridad para que tus archivos se guarden sin recordarlo cada noche. ¿Qué decisión podrías dejar resuelta de antemano?"
+  },
+  {
+    "id": "cap-15",
+    "g": 7,
+    "c": "green",
+    "ico": "check",
+    "eyebrow": "Capítulo 15",
+    "title": "Notar una recompensa cercana",
+    "text": "Clear observa que muchos beneficios llegan tarde, mientras que el esfuerzo se siente ahora. Propone añadir una satisfacción inmediata compatible con lo que queremos construir.",
+    "pts": [
+      "Sentir que una acción valió la pena puede favorecer su repetición.",
+      "La recompensa elegida no debería deshacer el propósito del hábito.",
+      "El libro distingue empezar una conducta de querer volver a hacerla."
+    ],
+    "q": "Ejemplo de Marginalia: al terminar de archivar documentos ves cómo queda libre una bandeja. ¿Qué señal cercana te permitiría disfrutar el avance?"
+  },
+  {
+    "id": "cap-16",
+    "g": 7,
+    "c": "green",
+    "ico": "loop",
+    "eyebrow": "Capítulo 16",
+    "title": "Registrar y volver después de una pausa",
+    "text": "Este capítulo trata de mantener una rutina visible en el tiempo. Clear propone registrar las repeticiones y retomar pronto después de un día perdido.",
+    "pts": [
+      "Ver el registro puede recordar el hábito y dar satisfacción.",
+      "Una interrupción no borra todo el trabajo anterior.",
+      "Contar repeticiones ayuda solo si no se pierde de vista su propósito."
+    ],
+    "q": "Ejemplo de Marginalia: olvidas regar el martes y revisas la tierra al día siguiente para retomar el cuidado. ¿Cómo volverías a tu rutina después de una pausa?"
+  },
+  {
+    "id": "cap-17",
+    "g": 7,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Capítulo 17",
+    "title": "Contar con alguien que te acompañe",
+    "text": "Clear explica cómo un acuerdo con otra persona puede apoyar un hábito. La responsabilidad compartida hace más visibles nuestros compromisos.",
+    "pts": [
+      "Decir qué harás permite que otra persona te pregunte por ello.",
+      "Un acuerdo concreto evita expectativas confusas.",
+      "El libro explora compromisos con consecuencias acordadas de antemano."
+    ],
+    "q": "Ejemplo de Marginalia: acuerdas con una amiga enviarse el viernes una foto del proyecto que cada una está construyendo. ¿Qué compromiso claro podrían revisar juntos?"
+  },
+  {
+    "id": "cap-18",
+    "g": 8,
+    "c": "peach",
+    "ico": "user",
+    "eyebrow": "Capítulo 18",
+    "title": "Elegir dónde desarrollar tus capacidades",
+    "text": "El capítulo considera las diferencias personales al escoger una actividad. Clear propone buscar un terreno donde nuestras inclinaciones puedan encontrarse con la práctica.",
+    "pts": [
+      "El autor no presenta el talento como sustituto del esfuerzo.",
+      "Explorar actividades ayuda a conocer lo que se ajusta a ti.",
+      "Adaptar una rutina puede ser más útil que imitar exactamente a otra persona."
+    ],
+    "q": "Ejemplo de Marginalia: descubres que disfrutas más dibujar mapas que retratos y eliges practicar por ahí. ¿Qué actividad te da ganas de seguir aprendiendo?"
+  },
+  {
+    "id": "cap-19",
+    "g": 8,
+    "c": "peach",
+    "ico": "mountain",
+    "eyebrow": "Capítulo 19",
+    "title": "Un reto que puedas sostener",
+    "text": "Clear propone una dificultad que exija esfuerzo sin resultar imposible. También habla de seguir practicando cuando una rutina deja de ser novedosa.",
+    "pts": [
+      "Un reto demasiado fácil puede aburrir; uno desbordante puede desalentar.",
+      "Ver avances ayuda a ajustar la dificultad.",
+      "La constancia incluye momentos en los que no hay entusiasmo."
+    ],
+    "q": "Ejemplo de Marginalia: subes poco a poco la dificultad de los rompecabezas en vez de elegir el más complejo. ¿Tu siguiente reto necesita ser mayor o más pequeño?"
+  },
+  {
+    "id": "cap-20",
+    "g": 8,
+    "c": "peach",
+    "ico": "eye",
+    "eyebrow": "Capítulo 20",
+    "title": "Revisar lo que ya haces bien",
+    "text": "El cierre de los capítulos advierte que lo automático también puede ocultar errores. Clear propone combinar hábitos con revisión para seguir aprendiendo.",
+    "pts": [
+      "Repetir sin observar puede mantener fallas pequeñas.",
+      "Revisar resultados permite ajustar la manera de practicar.",
+      "Una idea flexible de quién eres deja espacio para cambiar."
+    ],
+    "q": "Ejemplo de Marginalia: relees un texto antiguo y detectas algo que repites en cada borrador. ¿Qué parte de tu rutina merece una revisión?"
+  },
+  {
+    "id": "repetidas",
+    "g": 4,
+    "c": "lav",
+    "ico": "leaf",
+    "eyebrow": "Para recordar",
+    "title": "Las ideas que se repiten",
+    "text": "Estas ideas conectan distintos momentos del recorrido.",
+    "pts": [
+      "Las acciones pequeñas acumulan efectos cuando se repiten.",
+      "El ambiente puede facilitar o dificultar una rutina.",
+      "Lo que esperamos y sentimos al terminar influye en la repetición.",
+      "La constancia necesita revisiones y ajustes."
+    ],
+    "q": "¿Cuál aparece con más frecuencia en tu vida?"
+  },
+  {
+    "id": "practicas",
+    "g": 4,
+    "c": "lav",
+    "ico": "key",
+    "eyebrow": "Una aplicación posible",
+    "title": "Cómo llevarlo a tu día",
+    "text": "Una propuesta de Marginalia: elige una idea y úsala para observar una situación concreta.",
+    "pts": [
+      "Recuerda qué capítulo la desarrolla.",
+      "Prueba un paso pequeño en las actividades de esta página.",
+      "Anota qué te resultó útil y qué cambiarías."
+    ],
+    "q": "¿Qué idea quieres poner a prueba esta semana?"
+  },
+  {
+    "id": "resultado",
+    "g": 4,
+    "c": "lav",
+    "ico": "sun",
+    "eyebrow": "Tu opinión",
+    "title": "Qué te llevas del libro",
+    "text": "Cierra el recorrido formando tu propia opinión.",
+    "pts": [
+      "Explica una idea con tus palabras.",
+      "Distingue la propuesta del autor de tu experiencia.",
+      "Vuelve a la obra para conocer sus argumentos y matices."
+    ],
+    "q": "¿Con qué idea conectaste y cuál te gustaría cuestionar?"
+  }
 ];
 
 const QUOTES = [
@@ -628,7 +960,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('ha-done',[]));
+let done = new Set(store.get('ha-done-editorial-v2',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -645,13 +977,14 @@ DATA.forEach((d,i)=>{
 
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
-  const n=done.size;
+  const n=DATA.filter(d=>done.has(d.id)).length;
   document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('ha-done',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('ha-done-editorial-v2',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -665,7 +998,7 @@ function openCard(i){
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
-  done.add(d.id);store.set('ha-done',[...done]);refreshProgress();
+  done.add(d.id);store.set('ha-done-editorial-v2',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -693,7 +1026,7 @@ function drawDays(){
   daysEl.innerHTML=DN.map((d,i)=>`<button type="button" aria-pressed="${!!week[i]}" aria-label="${DL[i]}" data-i="${i}">${d}</button>`).join('');
   const n=week.filter(Boolean).length;
   let two=false;for(let i=1;i<7;i++){if(!week[i]&&!week[i-1]&&week.slice(0,i-1).some(Boolean))two=true}
-  document.getElementById('streak').textContent=n===0?'Marca el día cuando lo hagas.':n===7?'¡7 de 7! Ya eres alguien que cumple este hábito.':two?`Llevas ${n} de 7. Fallaste dos seguidos: no pasa nada, retómalo hoy.`:`Llevas ${n} de 7. Si un día no sale, retómalo en cuanto puedas.`;
+  document.getElementById('streak').textContent=n===0?'Marca el día cuando lo hagas.':n===7?'¡7 de 7! Completaste una semana de práctica.':two?`Llevas ${n} de 7. Fallaste dos seguidos: no pasa nada, retómalo hoy.`:`Llevas ${n} de 7. Si un día no sale, retómalo en cuanto puedas.`;
 }
 daysEl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i;week[i]=week[i]?0:1;store.set('ha-week',week);drawDays()});
 document.getElementById('week-reset').onclick=()=>{week=[0,0,0,0,0,0,0];store.set('ha-week',week);drawDays()};
@@ -701,14 +1034,46 @@ drawDays();
 
 /* Quiz */
 const QS=[
-  ['“Dejo la guitarra fuera del estuche, junto a mi cama.”','presencia','Si la ves, te acuerdas. Y si ya está afuera, es más fácil tocarla.'],
-  ['“Tengo el celular junto a mí mientras estudio.”','mente','Lo ves todo el tiempo y es muy fácil agarrarlo. Mejor déjalo en otro lado.'],
-  ['“Desde hoy voy a leer una hora diaria, aunque nunca leo.”','mente','Es demasiado para empezar. Mejor una página y luego vas subiendo.'],
-  ['“Después de lavarme los dientes en la noche, leo una página.”','presencia','Une el hábito nuevo a uno que ya tienes. Así no se te olvida.'],
-  ['“Guardo los dulces en una caja arriba del refri.”','presencia','Si no los ves y cuesta alcanzarlos, se te antojan menos.'],
-  ['“Ayer no hice ejercicio, entonces ya para qué sigo.”','mente','Un día sin hacerlo no borra tu avance. Retómalo en cuanto puedas.'],
-  ['“Marco con una X en el calendario cada día que practico.”','presencia','Ver tu avance se siente bien y te dan ganas de seguir.'],
-  ['“Soy alguien que se mueve, así que hoy camino aunque sea 5 minutos.”','presencia','Piensa en quién quiere ser y lo cumple, aunque sea poquito.']
+  [
+    "Dejo el cuaderno abierto donde voy a trabajar.",
+    "presencia",
+    "Capítulo 6: Clear propone preparar señales visibles en el ambiente."
+  ],
+  [
+    "Espero a tener ganas para decidir cuándo practicar.",
+    "mente",
+    "Capítulo 5: concretar un momento puede facilitar el comienzo."
+  ],
+  [
+    "Comparo cursos durante semanas, pero no hago ningún intento.",
+    "mente",
+    "Capítulo 11: prepararse no reemplaza practicar."
+  ],
+  [
+    "Empiezo por escribir una sola línea.",
+    "presencia",
+    "Capítulo 13: una versión pequeña ayuda a comenzar."
+  ],
+  [
+    "Preparo hoy los materiales que usaré mañana.",
+    "presencia",
+    "Capítulo 12: quitar pasos puede hacer más sencilla una rutina."
+  ],
+  [
+    "Si no veo resultados enseguida, concluyo que no sirve.",
+    "mente",
+    "Capítulo 1: Clear explica que los efectos pueden tardar en notarse."
+  ],
+  [
+    "Registro la práctica y retomo después de una pausa.",
+    "presencia",
+    "Capítulo 16: el registro y la vuelta a la rutina acompañan la constancia."
+  ],
+  [
+    "Reviso si mi rutina todavía sirve para lo que quiero.",
+    "presencia",
+    "Capítulo 20: el autor invita a revisar y ajustar los hábitos."
+  ]
 ];
 let qn=0,score=0;
 const qText=document.getElementById('q-text'),fb=document.getElementById('feedback'),qNext=document.getElementById('q-next'),opts=[...document.querySelectorAll('.opt')];

@@ -404,18 +404,18 @@ dialog{border-radius:16px}
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Aquí encuentras ideas, preguntas y actividades hechas para esta guía. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
+    <p>Aquí recorres los capítulos en orden, con explicaciones breves, ejemplos y preguntas de Marginalia. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 13 ideas exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 35 ideas exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="35" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Empieza aquí</h2>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
           <h2>Conecta con <span>las personas</span></h2>
@@ -425,15 +425,23 @@ dialog{border-radius:16px}
       </div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Conceptos clave</h2>
+      <h2 class="g-title"><span class="g-n">2</span>Parte I · Tratar con el prójimo</h2>
       <div class="g-grid" id="g-2"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Observa y practica</h2>
+      <h2 class="g-title"><span class="g-n">3</span>Parte II · Seis maneras de agradar</h2>
       <div class="g-grid" id="g-3"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Reflexiona</h2>
+      <h2 class="g-title"><span class="g-n">4</span>Parte III · Conversar para encontrar acuerdos</h2>
+      <div class="g-grid" id="g-5"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">5</span>Parte IV · Guiar sin humillar</h2>
+      <div class="g-grid" id="g-6"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">6</span>Las ideas que se repiten</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
           <div class="hand" id="quote-text">¿A quién podrías escuchar mejor hoy?</div>
@@ -507,7 +515,7 @@ dialog{border-radius:16px}
     <div class="source-note">
       <strong>Obra de referencia:</strong> Carnegie, D. <cite>Cómo ganar amigos e influir sobre las personas</cite>. Debolsillo, 2017.<br>
       <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
-      Las explicaciones, ejemplos, preguntas y actividades fueron escritos especialmente para esta guía independiente. No es una edición ni un resumen oficial, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
+      Esta es una guía independiente escrita con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
@@ -560,46 +568,531 @@ const I = {
 };
 
 const DATA = [
-  {id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Para empezar',title:'Cómo usar esta guía',
-   pts:['Esta guía te acompaña mientras lees. No reemplaza al libro.','Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.','Compara lo que lees aquí con el libro y con tu vida.'],
-   q:'¿Con quién te gustaría llevarte mejor?'},
-  {id:'mensaje',g:1,c:'blue',ico:'people',eyebrow:'La gran idea',title:'Primero, la otra persona',
-   text:'La idea principal del libro es que la gente se acerca a ti cuando sientes interés de verdad por ella.',
-   pts:['A todos nos gusta sentir que importamos.','Llevarte bien con otros no es un truco: se nota cuando es sincero y cuando no.'],
-   q:'¿Quién te hace sentir importante cuando platicas con él o ella? ¿Qué hace?'},
-  {id:'c1',g:2,c:'green',ico:'broken',eyebrow:'Idea clave',title:'Critica menos, entiende más',
-   pts:['Cuando criticas, la otra persona se defiende y casi nunca cambia.','Antes de juzgar, pregúntate por qué hizo lo que hizo.','Quejarte todo el tiempo aleja a la gente.'],
-   q:'Piensa en alguien que te molesta. ¿Por qué crees que actúa así?'},
-  {id:'c2',g:2,c:'green',ico:'star',eyebrow:'Idea clave',title:'Reconoce lo bueno',
-   pts:['Todos queremos que noten lo que hacemos bien.','Un reconocimiento funciona cuando es sincero y concreto: "Me gustó cómo explicaste eso".','Echar flores falsas no sirve: la gente lo nota.'],
-   q:'¿Qué hizo bien alguien cercano esta semana y todavía no se lo has dicho?'},
-  {id:'c3',g:2,c:'green',ico:'heart',eyebrow:'Idea clave',title:'Piensa en lo que el otro quiere',
-   pts:['Para convencer a alguien, piensa en lo que le importa a esa persona, no solo a ti.','Pregúntate: ¿qué gana la otra persona con esto?','Así es más fácil que quiera ayudarte.'],
-   q:'¿Qué necesitas pedirle a alguien? ¿Qué gana esa persona si te ayuda?'},
-  {id:'c4',g:2,c:'green',ico:'flag',eyebrow:'Idea clave',title:'Cuando te toca guiar',
-   pts:['Empieza diciendo algo bueno antes de corregir.','Pregunta en vez de dar órdenes: "¿Qué te parece si...?".','Corrige en privado y nunca hagas quedar mal a nadie frente a otros.'],
-   q:'La próxima vez que tengas que corregir a alguien, ¿cómo empezarías?'},
-  {id:'p1',g:3,c:'peach',ico:'chat',eyebrow:'Practica',title:'Interésate de verdad',
-   pts:['Haz preguntas sobre la otra persona y su vida.','Habla de lo que le gusta a ella, no solo de lo que te gusta a ti.','Recuerda lo que te contó y pregúntale después.'],
-   q:'¿Qué sabes de lo que le gusta a tu mejor amigo? ¿Y a alguien que apenas conoces?'},
-  {id:'p2',g:3,c:'peach',ico:'smile',eyebrow:'Practica',title:'Sonríe y di su nombre',
-   pts:['Una sonrisa sincera dice "me da gusto verte" sin palabras.','Para las personas, su nombre es una palabra muy importante.','Para recordarlo, repítelo cuando te presentan: "Mucho gusto, Ana".'],
-   q:'¿De quién no te sabes el nombre aunque lo ves seguido?'},
-  {id:'p3',g:3,c:'peach',ico:'ear',eyebrow:'Practica',title:'Escucha más de lo que hablas',
-   pts:['Deja que la otra persona hable. No la interrumpas.','Escuchar bien es poner atención, no solo esperar tu turno.','Mucha gente recuerda a quien la escuchó, no a quien habló más.'],
-   q:'En tu próxima plática, ¿puedes hacer dos preguntas antes de contar algo tuyo?'},
-  {id:'p4',g:3,c:'peach',ico:'scale',eyebrow:'Practica',title:'Cuando no están de acuerdo',
-   pts:['En una discusión casi nadie gana: aunque tengas razón, la otra persona se enoja.','Respeta su opinión. Evita decir "estás mal".','Si te equivocaste, dilo rápido. Eso baja la tensión.'],
-   q:'¿Cuándo fue la última vez que admitiste que te equivocaste? ¿Qué pasó?'},
-  {id:'practicas',g:4,c:'lav',ico:'key',eyebrow:'Reto de la semana',title:'Prueba y fíjate',
-   pts:['Aprende el nombre de alguien nuevo y úsalo.','Dale a una persona un reconocimiento sincero y concreto.','En una plática, escucha sin interrumpir ni una vez.','Anota en "Mi plática de hoy" lo que hiciste.'],
-   q:'¿Cuál de estos retos te cuesta más? Empieza por ese.'},
-  {id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para platicar',title:'Preguntas para discutir',
-   pts:['¿Cuál es la diferencia entre influir en alguien y manipularlo?','¿Se puede usar lo que dice el libro de forma falsa? ¿Cómo se nota?','¿Hay veces en que sí conviene discutir o criticar?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
-   q:'Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?'},
-  {id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu opinión',title:'¿Qué te llevas?',
-   pts:['Explica una idea con tus propias palabras.','Busca un ejemplo de tu vida que la apoye o que no.','Separa lo que dice el libro de lo que tú piensas.','Regresa al libro si quieres saber más.'],
-   q:'¿Qué idea te gustaría revisar directamente en el libro?'}
+  {
+    "id": "libro",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Para empezar",
+    "title": "El libro de un vistazo",
+    "text": "Carnegie examina cómo nos relacionamos, conversamos y pedimos colaboración. La edición revisada recorre cuatro partes: trato cotidiano, acercamiento a los demás, desacuerdos y liderazgo.",
+    "pts": [
+      "Recorre los capítulos en el orden del libro.",
+      "Abre cada tarjeta para encontrar sus ideas principales.",
+      "Los ejemplos y preguntas son originales de Marginalia."
+    ],
+    "q": "¿Qué te gustaría entender de este libro?"
+  },
+  {
+    "id": "mensaje",
+    "g": 1,
+    "c": "blue",
+    "ico": "eye",
+    "eyebrow": "El hilo del libro",
+    "title": "La idea que conecta el libro",
+    "text": "La idea que conecta el libro es prestar atención a los intereses y a la dignidad de la otra persona. Aquí los capítulos conservan su numeración dentro de cada parte; los encabezados breves están escritos para esta guía.",
+    "pts": [
+      "Los encabezados breves describen el tema de cada capítulo con palabras propias.",
+      "Después del recorrido encontrarás ideas para recordar y actividades."
+    ],
+    "q": "¿Qué parte del recorrido te llama más la atención?"
+  },
+  {
+    "id": "cap-1-1",
+    "g": 2,
+    "c": "green",
+    "ico": "broken",
+    "eyebrow": "Parte 1 · Capítulo 1",
+    "title": "Comprender antes de atacar",
+    "text": "Carnegie abre con el problema de la crítica que provoca defensa. Propone intentar comprender a la otra persona antes de condenarla.",
+    "pts": [
+      "El reproche personal puede cerrar una conversación.",
+      "Interesarse por los motivos ayuda a entender una conducta.",
+      "La guía distingue hablar de un problema de atacar a quien lo causó."
+    ],
+    "q": "Ejemplo de Marginalia: un compañero entrega tarde y preguntas qué lo frenó antes de llamarlo irresponsable. ¿Cómo nombrarías el problema sin descalificarlo?"
+  },
+  {
+    "id": "cap-1-2",
+    "g": 2,
+    "c": "green",
+    "ico": "star",
+    "eyebrow": "Parte 1 · Capítulo 2",
+    "title": "Reconocer algo concreto",
+    "text": "El autor presenta el aprecio sincero como una base del trato. Lo distingue de los elogios usados para conseguir un favor.",
+    "pts": [
+      "Reconocer un esfuerzo hace visible su valor.",
+      "El aprecio funciona como reconocimiento cuando es verdadero.",
+      "Un detalle concreto dice más que una alabanza vacía."
+    ],
+    "q": "Ejemplo de Marginalia: agradeces que alguien revisara las fechas de una invitación y evitara una confusión. ¿Qué contribución de otra persona has pasado por alto?"
+  },
+  {
+    "id": "cap-1-3",
+    "g": 2,
+    "c": "green",
+    "ico": "heart",
+    "eyebrow": "Parte 1 · Capítulo 3",
+    "title": "Entender qué le importa al otro",
+    "text": "Carnegie propone mirar una petición desde los intereses de quien la recibe. Busca que la cooperación tenga sentido para ambas personas.",
+    "pts": [
+      "Lo que tú quieres no explica por sí solo por qué otro participaría.",
+      "Conocer sus prioridades permite formular mejor una propuesta.",
+      "La aplicación respetuosa deja espacio para aceptar o rechazar."
+    ],
+    "q": "Ejemplo de Marginalia: propones compartir un trayecto porque a ambos les ahorra una vuelta. ¿Qué interés compartido hay en tu próxima petición?"
+  },
+  {
+    "id": "cap-2-1",
+    "g": 3,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Parte 2 · Capítulo 1",
+    "title": "Mostrar interés de verdad",
+    "text": "El inicio de esta parte cambia el foco de resultar interesante a interesarse por alguien. Carnegie invita a prestar atención a su vida y sus intereses.",
+    "pts": [
+      "La curiosidad se expresa en preguntas y atención.",
+      "Recordar lo que alguien contó permite retomar la conversación.",
+      "El interés fingido contradice la intención del capítulo."
+    ],
+    "q": "Ejemplo de Marginalia: preguntas cómo salió la mudanza que una vecina mencionó la semana pasada. ¿Qué te gustaría conocer mejor de alguien cercano?"
+  },
+  {
+    "id": "cap-2-2",
+    "g": 3,
+    "c": "peach",
+    "ico": "smile",
+    "eyebrow": "Parte 2 · Capítulo 2",
+    "title": "Recibir con amabilidad",
+    "text": "El capítulo trata de la primera impresión que transmitimos. Carnegie destaca la sonrisa como una manera sencilla de expresar una disposición cordial.",
+    "pts": [
+      "El gesto acompaña al tono con que saludamos.",
+      "Una bienvenida amable facilita el inicio de una conversación.",
+      "No hace falta convertir la amabilidad en una actuación."
+    ],
+    "q": "Ejemplo de Marginalia: al entrar alguien nuevo al taller, lo saludas y le haces espacio. ¿Cómo muestras que te da gusto recibir a alguien?"
+  },
+  {
+    "id": "cap-2-3",
+    "g": 3,
+    "c": "peach",
+    "ico": "user",
+    "eyebrow": "Parte 2 · Capítulo 3",
+    "title": "Recordar a quién tienes enfrente",
+    "text": "Carnegie se detiene en la importancia personal del nombre. Propone prestar atención al presentarnos y hacer el esfuerzo de recordarlo.",
+    "pts": [
+      "El nombre reconoce a una persona en particular.",
+      "Escuchar bien la presentación evita repetirla automáticamente sin atención.",
+      "En un ejemplo de la guía, preguntar cómo se pronuncia puede ser una muestra de cuidado."
+    ],
+    "q": "Ejemplo de Marginalia: coincides otra vez con tu nueva vecina y la saludas por su nombre. ¿A quién ves seguido y todavía no sabes cómo se llama?"
+  },
+  {
+    "id": "cap-2-4",
+    "g": 3,
+    "c": "peach",
+    "ico": "ear",
+    "eyebrow": "Parte 2 · Capítulo 4",
+    "title": "Dejar espacio para escuchar",
+    "text": "El libro plantea que una buena conversación no depende de hablar mucho. Carnegie destaca la atención que permite a la otra persona expresarse.",
+    "pts": [
+      "Escuchar implica seguir lo que dice, no solo esperar el turno.",
+      "Las preguntas pueden ayudarla a continuar.",
+      "Interrumpir para contar algo propio desplaza el foco."
+    ],
+    "q": "Ejemplo de Marginalia: una amiga cuenta un cambio de trabajo y le preguntas qué le preocupa antes de contar tu experiencia. ¿Qué te suele distraer cuando escuchas?"
+  },
+  {
+    "id": "cap-2-5",
+    "g": 3,
+    "c": "peach",
+    "ico": "chat",
+    "eyebrow": "Parte 2 · Capítulo 5",
+    "title": "Hablar de lo que le interesa",
+    "text": "Carnegie propone acercarse a los temas que importan al interlocutor. El capítulo conecta el interés con la preparación y la curiosidad.",
+    "pts": [
+      "Una conversación no tiene que girar siempre sobre tus aficiones.",
+      "Conocer algo del tema facilita hacer preguntas útiles.",
+      "La intención es encontrar un punto de encuentro."
+    ],
+    "q": "Ejemplo de Marginalia: tu vecino disfruta restaurar muebles y preguntas por el proyecto que está terminando. ¿Qué tema entusiasma a alguien con quien quieres conversar?"
+  },
+  {
+    "id": "cap-2-6",
+    "g": 3,
+    "c": "peach",
+    "ico": "star",
+    "eyebrow": "Parte 2 · Capítulo 6",
+    "title": "Hacer visible el valor de alguien",
+    "text": "Este capítulo reúne atención y reconocimiento. Carnegie propone tratar a los demás como personas valiosas, sin reservar el respeto para quien puede darnos algo.",
+    "pts": [
+      "Un trato atento puede expresar reconocimiento.",
+      "La sinceridad es parte de la propuesta.",
+      "El valor de una persona no depende de su utilidad para ti."
+    ],
+    "q": "Ejemplo de Marginalia: reconoces el cuidado con que una compañera recibe a quienes llegan al curso. ¿Cómo podrías mostrar aprecio sin esperar nada a cambio?"
+  },
+  {
+    "id": "cap-3-1",
+    "g": 5,
+    "c": "green",
+    "ico": "scale",
+    "eyebrow": "Parte 3 · Capítulo 1",
+    "title": "No convertir el desacuerdo en competencia",
+    "text": "Carnegie cuestiona las discusiones cuyo objetivo es derrotar al otro. Explica que tener la última palabra puede dañar la posibilidad de entenderse.",
+    "pts": [
+      "Ganar una disputa no garantiza cooperación.",
+      "Escuchar permite identificar el desacuerdo real.",
+      "La guía propone buscar un resultado útil para la conversación."
+    ],
+    "q": "Ejemplo de Marginalia: en una reunión dejan de discutir quién tuvo la idea y acuerdan qué necesitan resolver. ¿Qué sería más útil que demostrar que tienes razón?"
+  },
+  {
+    "id": "cap-3-2",
+    "g": 5,
+    "c": "green",
+    "ico": "chat",
+    "eyebrow": "Parte 3 · Capítulo 2",
+    "title": "Discrepar sin descalificar",
+    "text": "El capítulo examina el efecto de decirle a alguien que está equivocado de forma tajante. Carnegie propone respeto y apertura al expresar diferencias.",
+    "pts": [
+      "Una afirmación humillante puede activar la defensa.",
+      "Reconocer que también puedes equivocarte abre espacio.",
+      "El desacuerdo puede explicarse con datos sin atacar la dignidad."
+    ],
+    "q": "Ejemplo de Marginalia: encuentras dos fechas distintas y propones revisarlas juntos. ¿Cómo empezarías una corrección con respeto?"
+  },
+  {
+    "id": "cap-3-3",
+    "g": 5,
+    "c": "green",
+    "ico": "check",
+    "eyebrow": "Parte 3 · Capítulo 3",
+    "title": "Reconocer tu propio error",
+    "text": "Carnegie propone admitir una equivocación con claridad. El capítulo muestra cómo hacerse cargo puede reducir la tensión de una conversación difícil.",
+    "pts": [
+      "Aceptar un error evita prolongar su negación.",
+      "La explicación no necesita convertirse en una lista de excusas.",
+      "En la guía, el reconocimiento va acompañado de una reparación concreta."
+    ],
+    "q": "Ejemplo de Marginalia: enviaste un archivo incompleto y mandas la versión correcta reconociendo el fallo. ¿Qué error puedes admitir sin rodeos?"
+  },
+  {
+    "id": "cap-3-4",
+    "g": 5,
+    "c": "green",
+    "ico": "smile",
+    "eyebrow": "Parte 3 · Capítulo 4",
+    "title": "Empezar desde un trato cordial",
+    "text": "Carnegie aborda el tono con el que planteamos una diferencia. Propone iniciar de manera amistosa para facilitar que la otra persona escuche.",
+    "pts": [
+      "El tono inicial influye en el resto del diálogo.",
+      "La firmeza puede convivir con la cortesía.",
+      "Mostrar hostilidad desde el principio puede dificultar un acuerdo."
+    ],
+    "q": "Ejemplo de Marginalia: pides revisar una cuenta equivocada explicando lo que observaste con calma. ¿Cómo abrirías una conversación que te incomoda?"
+  },
+  {
+    "id": "cap-3-5",
+    "g": 5,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Parte 3 · Capítulo 5",
+    "title": "Encontrar un acuerdo inicial",
+    "text": "El autor propone comenzar por los puntos que ambas personas comparten. Desde ahí busca acercarse al asunto en el que existen diferencias.",
+    "pts": [
+      "Un objetivo común puede orientar la conversación.",
+      "Las preguntas ayudan a aclarar lo que sí está acordado.",
+      "El acuerdo debe ser real, sin forzar respuestas."
+    ],
+    "q": "Ejemplo de Marginalia: antes de decidir un horario, confirman que todos necesitan terminar a tiempo. ¿En qué coincides con alguien con quien discrepas?"
+  },
+  {
+    "id": "cap-3-6",
+    "g": 5,
+    "c": "green",
+    "ico": "ear",
+    "eyebrow": "Parte 3 · Capítulo 6",
+    "title": "Escuchar una queja hasta entenderla",
+    "text": "Carnegie recomienda dar espacio a quien necesita explicar su postura. El capítulo señala el problema de responder antes de escuchar lo suficiente.",
+    "pts": [
+      "La otra persona puede tener información que aún no conoces.",
+      "Hablar menos permite identificar su preocupación principal.",
+      "Escuchar no obliga a aceptar cualquier petición."
+    ],
+    "q": "Ejemplo de Marginalia: un compañero reclama cambios en un proyecto y le pides que termine de explicar cuáles le afectaron. ¿Qué necesitas entender antes de responder?"
+  },
+  {
+    "id": "cap-3-7",
+    "g": 5,
+    "c": "green",
+    "ico": "gear",
+    "eyebrow": "Parte 3 · Capítulo 7",
+    "title": "Dar participación en una propuesta",
+    "text": "El libro relaciona la cooperación con sentir que se ha participado en una decisión. Carnegie propone dejar espacio a las aportaciones de la otra persona.",
+    "pts": [
+      "Una idea compartida puede despertar más compromiso.",
+      "Preguntar permite mejorar una propuesta.",
+      "En la guía, reconocer la aportación evita apropiarse del trabajo ajeno."
+    ],
+    "q": "Ejemplo de Marginalia: presentas un plan incompleto y el equipo sugiere una manera más simple de realizarlo. ¿Qué decisión podrías construir con otros?"
+  },
+  {
+    "id": "cap-3-8",
+    "g": 5,
+    "c": "green",
+    "ico": "eye",
+    "eyebrow": "Parte 3 · Capítulo 8",
+    "title": "Mirar desde otra posición",
+    "text": "Carnegie pide intentar comprender el punto de vista ajeno. No se limita a oír la opinión: invita a pensar qué circunstancias la hacen comprensible.",
+    "pts": [
+      "Una conducta puede tener motivos que no ves desde tu posición.",
+      "Imaginar las prioridades del otro ayuda a formular preguntas.",
+      "Comprender una razón no significa compartirla."
+    ],
+    "q": "Ejemplo de Marginalia: alguien rechaza un horario y descubres que coincide con el cuidado de un familiar. ¿Qué información te falta sobre la situación de esa persona?"
+  },
+  {
+    "id": "cap-3-9",
+    "g": 5,
+    "c": "green",
+    "ico": "heart",
+    "eyebrow": "Parte 3 · Capítulo 9",
+    "title": "Reconocer sentimientos y deseos",
+    "text": "Este capítulo trata de la necesidad de sentirse comprendido. Carnegie propone mostrar consideración por lo que la otra persona quiere o siente.",
+    "pts": [
+      "El reconocimiento puede reducir la tensión.",
+      "Es posible validar una preocupación sin prometer resolverlo todo.",
+      "La empatía requiere atender al caso concreto."
+    ],
+    "q": "Ejemplo de Marginalia: tu amiga está frustrada porque cancelaron su curso y primero reconoces su decepción. ¿Qué podrías reconocer antes de ofrecer una solución?"
+  },
+  {
+    "id": "cap-3-10",
+    "g": 5,
+    "c": "green",
+    "ico": "scale",
+    "eyebrow": "Parte 3 · Capítulo 10",
+    "title": "Apelar a una intención valiosa",
+    "text": "Carnegie propone hablar a los motivos que las personas consideran dignos. Busca conectar una petición con valores que puedan compartir.",
+    "pts": [
+      "La propuesta puede apoyarse en responsabilidad o trato justo.",
+      "Atribuir solo malas intenciones puede cerrar el diálogo.",
+      "La aplicación necesita sinceridad, sin usar los valores para presionar."
+    ],
+    "q": "Ejemplo de Marginalia: al organizar un turno, planteas repartir de manera equitativa una tarea poco agradable. ¿Qué valor común podría guiar ese acuerdo?"
+  },
+  {
+    "id": "cap-3-11",
+    "g": 5,
+    "c": "green",
+    "ico": "eye",
+    "eyebrow": "Parte 3 · Capítulo 11",
+    "title": "Hacer una idea fácil de ver",
+    "text": "El autor propone presentar una idea de una forma que despierte atención. El capítulo destaca el efecto de mostrar algo, además de explicarlo.",
+    "pts": [
+      "Una demostración puede volver concreto un argumento.",
+      "Lo memorable debe ayudar a comprender la propuesta.",
+      "En la guía, claridad no significa exagerar resultados."
+    ],
+    "q": "Ejemplo de Marginalia: muestras dos versiones de una invitación para explicar cuál se lee mejor. ¿Qué podrías mostrar para que tu idea se entienda?"
+  },
+  {
+    "id": "cap-3-12",
+    "g": 5,
+    "c": "green",
+    "ico": "mountain",
+    "eyebrow": "Parte 3 · Capítulo 12",
+    "title": "Proponer un desafío que motive",
+    "text": "Carnegie cierra esta parte con la posibilidad de despertar ganas de superarse. Presenta el reto como una invitación a poner a prueba una capacidad.",
+    "pts": [
+      "Un desafío puede darle interés a una tarea.",
+      "El autor relaciona el esfuerzo con el deseo de mejorar.",
+      "En una aplicación respetuosa, el reto no se usa para avergonzar."
+    ],
+    "q": "Ejemplo de Marginalia: el grupo intenta preparar una exposición más clara que la anterior y decide cómo evaluarla. ¿Qué reto te animaría sin hacerte sentir presionado?"
+  },
+  {
+    "id": "cap-4-1",
+    "g": 6,
+    "c": "peach",
+    "ico": "star",
+    "eyebrow": "Parte 4 · Capítulo 1",
+    "title": "Reconocer antes de corregir",
+    "text": "Carnegie inicia la parte sobre liderazgo proponiendo reconocer lo que ya funciona. Busca que una corrección no borre todo el esfuerzo de la persona.",
+    "pts": [
+      "El reconocimiento debe referirse a algo real.",
+      "Corregir una parte no exige descalificar el conjunto.",
+      "La conversación necesita dejar claro qué se quiere mejorar."
+    ],
+    "q": "Ejemplo de Marginalia: reconoces la organización de un informe antes de revisar un dato pendiente. ¿Qué merece reconocimiento en el trabajo que vas a comentar?"
+  },
+  {
+    "id": "cap-4-2",
+    "g": 6,
+    "c": "peach",
+    "ico": "chat",
+    "eyebrow": "Parte 4 · Capítulo 2",
+    "title": "Señalar el problema con tacto",
+    "text": "El capítulo propone cuidar cómo llamamos la atención sobre un error. Carnegie busca evitar una acusación que provoque resentimiento.",
+    "pts": [
+      "El mensaje puede centrarse en la tarea.",
+      "La forma de señalar un fallo influye en cómo se recibe.",
+      "En la guía, el tacto no reemplaza la claridad sobre lo que debe cambiar."
+    ],
+    "q": "Ejemplo de Marginalia: revisan una lista juntos y preguntas si falta confirmar una entrega. ¿Cómo señalarías el detalle sin avergonzar?"
+  },
+  {
+    "id": "cap-4-3",
+    "g": 6,
+    "c": "peach",
+    "ico": "user",
+    "eyebrow": "Parte 4 · Capítulo 3",
+    "title": "Recordar que tú también aprendiste",
+    "text": "Carnegie recomienda reconocer los propios errores antes de hablar de los ajenos. Eso puede hacer una corrección menos distante o superior.",
+    "pts": [
+      "Compartir una dificultad propia puede acercar posiciones.",
+      "El aprendizaje suele incluir equivocaciones.",
+      "La experiencia propia debe servir de apoyo, no quitarle espacio al otro."
+    ],
+    "q": "Ejemplo de Marginalia: cuentas que también confundiste ese formato al empezar y luego revisan la corrección. ¿Qué experiencia tuya ayudaría a acompañar a alguien?"
+  },
+  {
+    "id": "cap-4-4",
+    "g": 6,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Parte 4 · Capítulo 4",
+    "title": "Preguntar en vez de imponer cada paso",
+    "text": "El libro propone usar preguntas para favorecer la participación. Carnegie relaciona ese espacio con la iniciativa y la cooperación.",
+    "pts": [
+      "Preguntar permite conocer otras maneras de resolver algo.",
+      "La persona puede aportar su criterio.",
+      "La guía distingue una pregunta abierta de una orden disfrazada."
+    ],
+    "q": "Ejemplo de Marginalia: preguntas qué orden de tareas permitiría terminar a tiempo y escuchas la propuesta. ¿Qué podrías preguntar en lugar de decidirlo todo?"
+  },
+  {
+    "id": "cap-4-5",
+    "g": 6,
+    "c": "peach",
+    "ico": "heart",
+    "eyebrow": "Parte 4 · Capítulo 5",
+    "title": "Cuidar la dignidad al corregir",
+    "text": "Carnegie se centra en no humillar a alguien cuando comete un error o recibe una decisión difícil. La forma de tratarlo también importa.",
+    "pts": [
+      "Una corrección pública puede añadir vergüenza innecesaria.",
+      "El respeto puede mantenerse aunque exista un desacuerdo.",
+      "La guía propone separar un fallo de la identidad de la persona."
+    ],
+    "q": "Ejemplo de Marginalia: hablas en privado sobre una confusión de fechas. ¿Cómo cuidarías a la persona sin ocultar el problema?"
+  },
+  {
+    "id": "cap-4-6",
+    "g": 6,
+    "c": "peach",
+    "ico": "steps",
+    "eyebrow": "Parte 4 · Capítulo 6",
+    "title": "Reconocer los avances pequeños",
+    "text": "El autor propone prestar atención a las mejoras, aunque todavía falte camino. Busca que el reconocimiento anime a continuar aprendiendo.",
+    "pts": [
+      "Un avance concreto puede pasar inadvertido si solo miras el resultado final.",
+      "El aprecio debe corresponder a lo que ocurrió.",
+      "Señalar qué mejoró ayuda a entender qué continuar."
+    ],
+    "q": "Ejemplo de Marginalia: notas que la nueva versión de un cartel se lee mejor y explicas qué cambió. ¿Qué pequeño avance de alguien puedes reconocer?"
+  },
+  {
+    "id": "cap-4-7",
+    "g": 6,
+    "c": "peach",
+    "ico": "star",
+    "eyebrow": "Parte 4 · Capítulo 7",
+    "title": "Expresar confianza en una capacidad",
+    "text": "Carnegie plantea que las expectativas favorables pueden animar a actuar mejor. Propone reconocer una cualidad que la persona pueda desarrollar.",
+    "pts": [
+      "La confianza se apoya en algo creíble.",
+      "El reconocimiento puede señalar una posibilidad de crecimiento.",
+      "En la guía, confiar no equivale a imponer una etiqueta perfecta."
+    ],
+    "q": "Ejemplo de Marginalia: recuerdas a alguien que suele observar detalles y le propones revisar un material contigo. ¿Qué capacidad real podrías ayudarle a reconocer?"
+  },
+  {
+    "id": "cap-4-8",
+    "g": 6,
+    "c": "peach",
+    "ico": "gear",
+    "eyebrow": "Parte 4 · Capítulo 8",
+    "title": "Hacer que mejorar parezca alcanzable",
+    "text": "El capítulo trata de animar a corregir un error sin presentarlo como un fracaso definitivo. Carnegie propone mostrar que el aprendizaje es posible.",
+    "pts": [
+      "Desalentar puede quitar las ganas de volver a intentar.",
+      "Una corrección concreta ofrece un camino.",
+      "La guía propone un siguiente paso pequeño y claro."
+    ],
+    "q": "Ejemplo de Marginalia: un compañero se pierde con una tabla y empiezan revisando una sola fila. ¿Cómo harías más manejable una corrección?"
+  },
+  {
+    "id": "cap-4-9",
+    "g": 6,
+    "c": "peach",
+    "ico": "flag",
+    "eyebrow": "Parte 4 · Capítulo 9",
+    "title": "Dar sentido a la colaboración",
+    "text": "Carnegie cierra explicando cómo presentar una tarea para que la persona encuentre razones para participar. Retoma la atención a sus intereses y al valor de su contribución.",
+    "pts": [
+      "La petición debe ser concreta.",
+      "Conviene explicar por qué importa esa participación.",
+      "Una cooperación respetuosa reconoce los límites de la otra persona."
+    ],
+    "q": "Ejemplo de Marginalia: invitas a alguien a preparar una actividad porque conoce el tema y acuerdan un alcance que puede asumir. ¿Cómo pedirías colaboración sin darla por hecha?"
+  },
+  {
+    "id": "repetidas",
+    "g": 4,
+    "c": "lav",
+    "ico": "leaf",
+    "eyebrow": "Para recordar",
+    "title": "Las ideas que se repiten",
+    "text": "Estas ideas conectan distintos momentos del recorrido.",
+    "pts": [
+      "Interesarse por la otra persona antes de intentar convencerla.",
+      "Escuchar lo suficiente para comprender sus motivos.",
+      "Reconocer de manera sincera lo que aporta.",
+      "Cuidar la dignidad al expresar diferencias o corregir."
+    ],
+    "q": "¿Cuál aparece con más frecuencia en tu vida?"
+  },
+  {
+    "id": "practicas",
+    "g": 4,
+    "c": "lav",
+    "ico": "key",
+    "eyebrow": "Una aplicación posible",
+    "title": "Cómo llevarlo a tu día",
+    "text": "Una propuesta de Marginalia: elige una idea y úsala para observar una situación concreta.",
+    "pts": [
+      "Recuerda qué capítulo la desarrolla.",
+      "Prueba un paso pequeño en las actividades de esta página.",
+      "Anota qué te resultó útil y qué cambiarías."
+    ],
+    "q": "¿Qué idea quieres poner a prueba esta semana?"
+  },
+  {
+    "id": "resultado",
+    "g": 4,
+    "c": "lav",
+    "ico": "sun",
+    "eyebrow": "Tu opinión",
+    "title": "Qué te llevas del libro",
+    "text": "Cierra el recorrido formando tu propia opinión.",
+    "pts": [
+      "Explica una idea con tus palabras.",
+      "Distingue la propuesta del autor de tu experiencia.",
+      "Vuelve a la obra para conocer sus argumentos y matices."
+    ],
+    "q": "¿Con qué idea conectaste y cuál te gustaría cuestionar?"
+  }
 ];
 
 const QUOTES = [
@@ -618,7 +1111,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('cg-done',[]));
+let done = new Set(store.get('cg-done-editorial-v2',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -635,13 +1128,14 @@ DATA.forEach((d,i)=>{
 
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
-  const n=done.size;
+  const n=DATA.filter(d=>done.has(d.id)).length;
   document.getElementById('progress-text').textContent=n===DATA.length?'¡Exploraste todo el mapa!':`${n} de ${DATA.length} ideas exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('cg-done',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('cg-done-editorial-v2',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -655,7 +1149,7 @@ function openCard(i){
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
-  done.add(d.id);store.set('cg-done',[...done]);refreshProgress();
+  done.add(d.id);store.set('cg-done-editorial-v2',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -686,14 +1180,46 @@ drawChecks();
 
 /* Quiz */
 const QS=[
-  ['“¡Qué bien te quedó el dibujo! Me gustan mucho los colores que usaste.”','presencia','Es un reconocimiento sincero y concreto. A la otra persona le queda claro qué hizo bien.'],
-  ['“Eso está mal. Ya te lo había dicho.”','mente','Es una crítica directa. La otra persona se defiende en vez de escuchar.'],
-  ['“¿Cómo te fue en tu partido del sábado?”','presencia','Se acordó de algo que le importa a la otra persona.'],
-  ['“Sí, sí, pero a mí me pasó algo peor...”','mente','Interrumpe y cambia el tema hacia sí mismo.'],
-  ['“Tienes razón, me equivoqué. Perdón.”','presencia','Admitir un error rápido baja la tensión.'],
-  ['“¿Qué te parece si lo intentamos de esta forma?”','presencia','Pregunta en vez de dar una orden. Así la otra persona participa.'],
-  ['“Oye, tú, el de la mochila azul.”','mente','No usa su nombre. Aprenderlo hace sentir a la persona tomada en cuenta.'],
-  ['“No importa lo que digas, yo sé que tengo razón.”','mente','Cierra la plática. Nadie cambia de opinión así.']
+  [
+    "Agradezco una ayuda y explico qué detalle me sirvió.",
+    "presencia",
+    "Parte I, capítulo 2: Carnegie propone un aprecio sincero y concreto."
+  ],
+  [
+    "Corrijo a una persona burlándome de su error.",
+    "mente",
+    "Parte IV, capítulo 5: el autor destaca el cuidado de la dignidad."
+  ],
+  [
+    "Pregunto por algo que mi amigo me contó la semana pasada.",
+    "presencia",
+    "Parte II, capítulo 1: interesarse requiere prestar atención a la otra persona."
+  ],
+  [
+    "Interrumpo una queja antes de entender qué ocurrió.",
+    "mente",
+    "Parte III, capítulo 6: Carnegie propone dar espacio para escuchar."
+  ],
+  [
+    "Reconozco mi error y explico cómo lo corregiré.",
+    "presencia",
+    "Parte III, capítulo 3: admitir una equivocación permite hacerse cargo."
+  ],
+  [
+    "Pregunto qué solución propone mi compañera.",
+    "presencia",
+    "Parte IV, capítulo 4: una pregunta puede abrir espacio para participar."
+  ],
+  [
+    "Uso elogios que no creo para obtener un favor.",
+    "mente",
+    "Parte I, capítulo 2: el aprecio que plantea Carnegie se distingue de la adulación."
+  ],
+  [
+    "Solo me importa demostrar que tengo razón.",
+    "mente",
+    "Parte III, capítulo 1: ganar una discusión puede dificultar el entendimiento."
+  ]
 ];
 let qn=0,score=0;
 const qText=document.getElementById('q-text'),fb=document.getElementById('feedback'),qNext=document.getElementById('q-next'),opts=[...document.querySelectorAll('.opt')];

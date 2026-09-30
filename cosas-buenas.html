@@ -404,36 +404,40 @@ dialog{border-radius:16px}
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Aquí encuentras ideas, preguntas y actividades hechas para esta guía. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
+    <p>Aquí recorres los capítulos en orden, con explicaciones breves, ejemplos y preguntas de Marginalia. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 13 ideas exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 14 ideas exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Empieza aquí</h2>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
           <h2>Busca lo <span>bueno</span></h2>
-          <p>Descubre cómo lo que piensas y lo que buscas cambia cómo te sientes.</p>
+          <p>Una mirada al sentido, la atención y el cuidado cotidiano en el libro de Rojas.</p>
           <div class="hand" style="font-size:1.35rem">Mira, agradece, cuídate</div>
         </div>
       </div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Conceptos clave</h2>
+      <h2 class="g-title"><span class="g-n">2</span>Capítulos 1–3 · Felicidad, amor y estrés</h2>
       <div class="g-grid" id="g-2"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Observa y practica</h2>
+      <h2 class="g-title"><span class="g-n">3</span>Capítulos 4–6 · Tiempo, atención y emociones</h2>
       <div class="g-grid" id="g-3"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Reflexiona</h2>
+      <h2 class="g-title"><span class="g-n">4</span>Capítulos 7–9 · Cuidado y desarrollo personal</h2>
+      <div class="g-grid" id="g-5"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">5</span>Las ideas que se repiten</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
           <div class="hand" id="quote-text">¿Qué cosa buena pasó hoy que casi no notaste?</div>
@@ -447,7 +451,7 @@ dialog{border-radius:16px}
   <section class="block" id="mi-dia">
     <div class="block-head">
       <h2>Mi día</h2>
-      <p>Entrena tu mente para ver lo bueno y revisa tus preocupaciones antes de que crezcan.</p>
+      <p>Práctica de Marginalia: observa tu atención (capítulo 5) y distingue una preocupación de un paso posible (capítulo 4).</p>
     </div>
     <div class="scan">
       <div class="sliders">
@@ -501,7 +505,7 @@ dialog{border-radius:16px}
     </div>
     <div class="journal">
       <div class="jcard"><label for="j1">¿Qué me preocupa que todavía no ha pasado?</label><textarea id="j1" placeholder="¿Qué tan probable es que pase de verdad?"></textarea></div>
-      <div class="jcard"><label for="j2">¿Quién es una persona vitamina en mi vida?</label><textarea id="j2" placeholder="¿Qué hace que me sienta bien con ella?"></textarea></div>
+      <div class="jcard"><label for="j2">¿Quién es una persona que te da apoyo en mi vida?</label><textarea id="j2" placeholder="¿Qué hace que me sienta bien con ella?"></textarea></div>
       <div class="jcard"><label for="j3">¿Qué le da sentido a mi día?</label><textarea id="j3" placeholder="Algo o alguien por lo que vale la pena levantarme..."></textarea></div>
     </div>
     <p class="hint" id="saved-hint" style="margin-top:8px"></p>
@@ -513,7 +517,7 @@ dialog{border-radius:16px}
     <div class="source-note">
       <strong>Obra de referencia:</strong> Rojas Estapé, M. <cite>Cómo hacer que te pasen cosas buenas</cite>. Espasa, 2018.<br>
       <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
-      Las explicaciones, ejemplos, preguntas y actividades fueron escritos especialmente para esta guía independiente. No es una edición ni un resumen oficial, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
+      Esta es una guía independiente escrita con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
@@ -569,53 +573,223 @@ const I = {
 };
 
 const DATA = [
-  {id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Para empezar',title:'Cómo usar esta guía',
-   pts:['Esta guía te acompaña mientras lees. No reemplaza al libro.','Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.','Compara lo que lees aquí con el libro y con tu vida.'],
-   q:'¿Qué te gustaría que cambiara en cómo te sientes?'},
-  {id:'mensaje',g:1,c:'blue',ico:'eye',eyebrow:'La gran idea',title:'Lo que piensas cambia lo que vives',
-   text:'La idea principal del libro es que la forma en que ves lo que te pasa afecta tu mente y también tu cuerpo.',
-   pts:['No siempre puedes cambiar lo que pasa, pero sí cómo lo miras.','Tu mente y tu cuerpo están conectados: lo que piensas se siente.'],
-   q:'Piensa en algo que te pasó esta semana. ¿Hay otra forma de verlo?'},
-  {id:'c1',g:2,c:'green',ico:'bell',eyebrow:'Idea clave',title:'La alarma del cuerpo',
-   pts:['Cuando te estresas, tu cuerpo suelta cortisol, una sustancia que te pone en alerta.','Eso ayuda en un peligro real, pero si la alarma está prendida todo el tiempo, te cansa y te enferma.','Si el estrés o la tristeza no se van, habla con alguien de confianza o con un profesional.'],
-   q:'¿Qué cosas prenden tu alarma? ¿Son peligros reales?'},
-  {id:'c2',g:2,c:'green',ico:'cloud',eyebrow:'Idea clave',title:'Preocuparte por lo que no ha pasado',
-   pts:['Muchas cosas que nos preocupan nunca pasan.','Pero tu cuerpo reacciona como si ya estuvieran pasando.','Pregúntate: ¿esto está pasando o solo me lo imagino?'],
-   q:'¿Qué te preocupaba hace un mes? ¿Pasó de verdad?'},
-  {id:'c3',g:2,c:'green',ico:'funnel',eyebrow:'Idea clave',title:'Ves lo que buscas',
-   pts:['Tu cerebro tiene un filtro que decide en qué te fijas.','Si buscas problemas, verás problemas. Si buscas cosas buenas, las vas a notar más.','Ese filtro se puede entrenar, un poco cada día.'],
-   q:'¿En qué te fijas más durante el día: en lo que sale mal o en lo que sale bien?'},
-  {id:'c4',g:2,c:'green',ico:'broken',eyebrow:'Idea clave',title:'Las heridas del pasado',
-   pts:['Lo que te dolió antes puede seguir afectando cómo reaccionas hoy.','Entender lo que pasó ayuda a que pese menos.','Perdonar no es decir que estuvo bien, es dejar de cargarlo.'],
-   q:'¿Hay algo del pasado que todavía cargas? ¿Qué te ayudaría a soltarlo un poco?'},
-  {id:'p1',g:3,c:'peach',ico:'people',eyebrow:'Practica',title:'Personas vitamina',
-   pts:['Hay personas que te llenan de energía y otras que te la quitan.','Busca pasar más tiempo con quienes te hacen bien.','Y tú también puedes ser una persona vitamina para otros.'],
-   q:'¿Quién te hace sentir bien después de verlo? ¿Para quién podrías ser tú esa persona?'},
-  {id:'p2',g:3,c:'peach',ico:'phone',eyebrow:'Practica',title:'Pantallas y recompensas rápidas',
-   pts:['Las redes y los videos dan pequeñas dosis de placer muy rápido.','Con el tiempo, lo lento (leer, platicar, estudiar) se siente aburrido.','Aburrirte un rato sin celular también es bueno para tu mente.'],
-   q:'¿Cuánto tiempo pasas en el celular antes de dormir? ¿Cómo te sientes después?'},
-  {id:'p3',g:3,c:'peach',ico:'lotus',eyebrow:'Practica',title:'Cuida tu cuerpo',
-   pts:['Dormir bien, moverte y comer bien ayudan a tu mente.','Respirar despacio calma la alarma del cuerpo.','Un abrazo o una plática con alguien querido también te hace bien.'],
-   q:'¿Cuál de estas cosas descuidas más: dormir, moverte o comer bien?'},
-  {id:'p4',g:3,c:'peach',ico:'star',eyebrow:'Practica',title:'Agradece y busca sentido',
-   pts:['Agradecer entrena tu filtro para ver lo bueno.','Tener algo por qué luchar hace que los días difíciles se aguanten mejor.','El sentido puede estar en algo pequeño: una persona, un proyecto, un sueño.'],
-   q:'¿Por qué te levantas en las mañanas?'},
-  {id:'practicas',g:4,c:'lav',ico:'key',eyebrow:'Reto de la semana',title:'Prueba y fíjate',
-   pts:['Anota tres cosas buenas cada noche, en "Mi día".','Deja el celular fuera de tu cuarto una noche.','Cuando te preocupes, pregúntate si depende de ti.','Pasa un rato con una persona vitamina.'],
-   q:'¿Cuál de estos retos te cuesta más? Empieza por ese.'},
-  {id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para platicar',title:'Preguntas para discutir',
-   pts:['¿Pensar positivo siempre ayuda, o a veces hay que aceptar que algo está mal?','¿Cuándo una preocupación sí es útil?','¿Qué pasa si no puedes alejarte de alguien que te resta?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
-   q:'Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?'},
-  {id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu opinión',title:'¿Qué te llevas?',
-   pts:['Explica una idea con tus propias palabras.','Busca un ejemplo de tu vida que la apoye o que no.','Separa lo que dice el libro de lo que tú piensas.','Regresa al libro si quieres saber más.'],
-   q:'¿Qué idea te gustaría revisar directamente en el libro?'}
+  {
+    "id": "libro",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Para empezar",
+    "title": "El libro de un vistazo",
+    "text": "Marian Rojas Estapé recorre la felicidad, el amor, el estrés y nuestra manera de interpretar lo que vivimos. El libro termina con propuestas de cuidado y desarrollo personal.",
+    "pts": [
+      "Recorre los capítulos en el orden del libro.",
+      "Abre cada tarjeta para encontrar sus ideas principales.",
+      "Los ejemplos y preguntas son originales de Marginalia."
+    ],
+    "q": "¿Qué te gustaría entender de este libro?"
+  },
+  {
+    "id": "mensaje",
+    "g": 1,
+    "c": "blue",
+    "ico": "eye",
+    "eyebrow": "El hilo del libro",
+    "title": "La idea que conecta el libro",
+    "text": "La autora conecta lo que pensamos, sentimos y atendemos con nuestra experiencia cotidiana. Esta guía recorre sus nueve capítulos y distingue sus propuestas de las reflexiones creadas para Marginalia.",
+    "pts": [
+      "Los encabezados breves describen el tema de cada capítulo con palabras propias.",
+      "Después del recorrido encontrarás ideas para recordar y actividades."
+    ],
+    "q": "¿Qué parte del recorrido te llama más la atención?"
+  },
+  {
+    "id": "cap-1",
+    "g": 2,
+    "c": "green",
+    "ico": "sun",
+    "eyebrow": "Capítulo 1",
+    "title": "Qué significa vivir con sentido",
+    "text": "Rojas empieza preguntándose qué entendemos por felicidad. La relaciona con el sentido que damos a la vida, incluso cuando atravesamos dificultades.",
+    "pts": [
+      "La autora distingue una vida con sentido de estar contento todo el tiempo.",
+      "Revisa el lugar de la autoestima y de nuestra actitud ante lo que ocurre.",
+      "También aborda el sufrimiento como parte de la experiencia humana."
+    ],
+    "q": "Ejemplo de Marginalia: un proyecto te cuesta, pero seguir aprendiendo le da valor al esfuerzo. ¿Qué hace valioso un día que no fue fácil?"
+  },
+  {
+    "id": "cap-2",
+    "g": 2,
+    "c": "green",
+    "ico": "heart",
+    "eyebrow": "Capítulo 2",
+    "title": "El lugar del amor",
+    "text": "El capítulo presenta el amor como un apoyo ante el sufrimiento. Rojas recorre distintas formas de vínculo, desde las personas cercanas hasta los ideales y los recuerdos.",
+    "pts": [
+      "El amor no se limita a una relación de pareja.",
+      "Los vínculos y las convicciones pueden dar orientación.",
+      "La autora también se detiene en los recuerdos que nos acompañan."
+    ],
+    "q": "Ejemplo de Marginalia: una conversación con tu hermana te recuerda que tienes compañía en un momento complicado. ¿Qué vínculo o convicción te sostiene?"
+  },
+  {
+    "id": "cap-3",
+    "g": 2,
+    "c": "green",
+    "ico": "bell",
+    "eyebrow": "Capítulo 3",
+    "title": "Entender la respuesta de estrés",
+    "text": "Rojas explica el cortisol y su relación con la respuesta de estrés. Distingue la alerta ante una dificultad de vivir preocupados de manera constante.",
+    "pts": [
+      "El cortisol participa en funciones normales del organismo.",
+      "La autora describe cómo la preocupación sostenida puede afectar al bienestar.",
+      "El capítulo conecta las experiencias emocionales con las respuestas del cuerpo."
+    ],
+    "q": "Ejemplo de Marginalia: antes de una presentación notas tensión aunque todavía estás en casa. ¿En qué momentos notas que te pones en alerta?"
+  },
+  {
+    "id": "cap-4",
+    "g": 3,
+    "c": "peach",
+    "ico": "cloud",
+    "eyebrow": "Capítulo 4",
+    "title": "El peso del pasado y del futuro",
+    "text": "El capítulo reúne dos formas de alejarnos de lo que ocurre hoy: volver a una herida y anticipar una amenaza. Rojas aborda la culpa, el perdón y la preocupación por lo que viene.",
+    "pts": [
+      "La autora invita a reconocer cómo influye lo vivido.",
+      "Propone revisar el lugar que damos a la culpa y al resentimiento.",
+      "También explica cómo la incertidumbre puede alimentar la preocupación."
+    ],
+    "q": "Ejemplo de Marginalia: repasas una conversación incómoda mientras imaginas que la siguiente también saldrá mal. ¿Qué pertenece a lo ocurrido y qué estás anticipando?"
+  },
+  {
+    "id": "cap-5",
+    "g": 3,
+    "c": "peach",
+    "ico": "eye",
+    "eyebrow": "Capítulo 5",
+    "title": "Notar desde dónde miras",
+    "text": "Rojas centra este capítulo en el presente y en cómo interpretamos lo que pasa. Destaca la influencia de nuestras creencias, nuestro estado de ánimo y aquello a lo que prestamos atención.",
+    "pts": [
+      "Lo que creemos puede orientar nuestra interpretación.",
+      "Nuestro estado de ánimo también influye en lo que notamos.",
+      "La autora propone aprender a observar con más atención."
+    ],
+    "q": "Ejemplo de Marginalia: un mensaje breve te parece frío en un día difícil, aunque no sabes qué estaba haciendo quien lo escribió. ¿Qué otra interpretación cabe antes de sacar una conclusión?"
+  },
+  {
+    "id": "cap-6",
+    "g": 3,
+    "c": "peach",
+    "ico": "heart",
+    "eyebrow": "Capítulo 6",
+    "title": "Las emociones también se sienten",
+    "text": "El capítulo examina la relación entre emociones y salud. Rojas invita a reconocer lo que sentimos y a revisar cómo lo expresamos.",
+    "pts": [
+      "La autora vincula la experiencia emocional con sensaciones corporales.",
+      "Dar nombre a lo que sentimos puede ayudarnos a explicarlo.",
+      "Su propuesta es atender la vida emocional, sin reducir una enfermedad a la actitud de quien la vive."
+    ],
+    "q": "Ejemplo de Marginalia: después de una discusión notas los hombros tensos y reconoces que sigues molesto. ¿Cómo notas en tu cuerpo una emoción que te cuesta expresar?"
+  },
+  {
+    "id": "cap-7",
+    "g": 5,
+    "c": "green",
+    "ico": "clock",
+    "eyebrow": "Capítulo 7",
+    "title": "Qué alimenta la tensión cotidiana",
+    "text": "Rojas revisa actitudes y situaciones que, según su planteamiento, aumentan el estrés. Entre ellas están querer controlarlo todo, la exigencia de perfección, la prisa y la vida digital.",
+    "pts": [
+      "El control absoluto es una expectativa difícil de sostener.",
+      "La autora cuestiona la exigencia de que todo salga perfecto.",
+      "También invita a revisar la relación con el tiempo y las pantallas."
+    ],
+    "q": "Ejemplo de Marginalia: revisas cinco veces un correo sencillo porque temes que tenga un pequeño error. ¿Qué exigencia te añade tensión sin mejorar mucho el resultado?"
+  },
+  {
+    "id": "cap-8",
+    "g": 5,
+    "c": "green",
+    "ico": "lotus",
+    "eyebrow": "Capítulo 8",
+    "title": "Buscar apoyos para cuidarte",
+    "text": "El capítulo reúne propuestas de la autora para afrontar el estrés. Incluye movimiento, atención a los vínculos, revisión de las preocupaciones y meditación.",
+    "pts": [
+      "Rojas invita a observar qué costumbres acompañan nuestro bienestar.",
+      "Propone revisar la forma de pensar y las relaciones que mantenemos.",
+      "Estas sugerencias se presentan aquí como ideas del libro, sin prometer un efecto médico individual."
+    ],
+    "q": "Ejemplo de Marginalia: reservas una pausa y una conversación tranquila durante una semana cargada. ¿Qué apoyo cotidiano podrías hacer más accesible?"
+  },
+  {
+    "id": "cap-9",
+    "g": 5,
+    "c": "green",
+    "ico": "steps",
+    "eyebrow": "Capítulo 9",
+    "title": "Conocer lo que quieres desarrollar",
+    "text": "Rojas cierra el recorrido con la idea de trabajar en una mejor versión de uno mismo. Conecta el autoconocimiento con aprender, elegir metas y sostener el esfuerzo.",
+    "pts": [
+      "Conocer tus capacidades ayuda a orientar una meta.",
+      "La autora da un lugar a la voluntad y a la formación.",
+      "El interés por lo que haces puede acompañar la constancia."
+    ],
+    "q": "Ejemplo de Marginalia: eliges mejorar una habilidad concreta y reservas un rato semanal para practicarla. ¿Qué te gustaría desarrollar y por qué te importa?"
+  },
+  {
+    "id": "repetidas",
+    "g": 4,
+    "c": "lav",
+    "ico": "leaf",
+    "eyebrow": "Para recordar",
+    "title": "Las ideas que se repiten",
+    "text": "Estas ideas conectan distintos momentos del recorrido.",
+    "pts": [
+      "Buscar sentido, además de momentos agradables.",
+      "Reconocer cuándo el pasado o el futuro ocupan nuestra atención.",
+      "Observar cómo interpretamos lo que ocurre.",
+      "Cuidar las relaciones y las costumbres cotidianas."
+    ],
+    "q": "¿Cuál aparece con más frecuencia en tu vida?"
+  },
+  {
+    "id": "practicas",
+    "g": 4,
+    "c": "lav",
+    "ico": "key",
+    "eyebrow": "Una aplicación posible",
+    "title": "Cómo llevarlo a tu día",
+    "text": "Una propuesta de Marginalia: elige una idea y úsala para observar una situación concreta.",
+    "pts": [
+      "Recuerda qué capítulo la desarrolla.",
+      "Prueba un paso pequeño en las actividades de esta página.",
+      "Anota qué te resultó útil y qué cambiarías."
+    ],
+    "q": "¿Qué idea quieres poner a prueba esta semana?"
+  },
+  {
+    "id": "resultado",
+    "g": 4,
+    "c": "lav",
+    "ico": "sun",
+    "eyebrow": "Tu opinión",
+    "title": "Qué te llevas del libro",
+    "text": "Cierra el recorrido formando tu propia opinión.",
+    "pts": [
+      "Explica una idea con tus palabras.",
+      "Distingue la propuesta del autor de tu experiencia.",
+      "Vuelve a la obra para conocer sus argumentos y matices."
+    ],
+    "q": "¿Con qué idea conectaste y cuál te gustaría cuestionar?"
+  }
 ];
 
 const QUOTES = [
   '¿Qué cosa buena pasó hoy que casi no notaste?',
   '¿Eso está pasando o solo lo estás imaginando?',
   'Reto: una noche sin celular en tu cuarto.',
-  '¿Quién es una persona vitamina para ti?',
+  '¿Quién es una persona que te da apoyo para ti?',
   '¿Por qué te levantas en las mañanas?',
   '¿Qué idea del libro te convence y cuál no?'
 ];
@@ -627,7 +801,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('cb-done',[]));
+let done = new Set(store.get('cb-done-editorial-v2',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -644,13 +818,14 @@ DATA.forEach((d,i)=>{
 
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
-  const n=done.size;
+  const n=DATA.filter(d=>done.has(d.id)).length;
   document.getElementById('progress-text').textContent=n===DATA.length?'¡Exploraste todo el mapa!':`${n} de ${DATA.length} ideas exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('cb-done',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('cb-done-editorial-v2',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -664,7 +839,7 @@ function openCard(i){
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
-  done.add(d.id);store.set('cb-done',[...done]);refreshProgress();
+  done.add(d.id);store.set('cb-done-editorial-v2',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -685,27 +860,59 @@ document.getElementById('g-save').onclick=()=>{
   if(!vals.length){gMsg.textContent='Escribe al menos una cosa buena.';return}
   days++;store.set('cb-days',days);
   ['g1','g2','g3'].forEach(id=>{document.getElementById(id).value='';store.set('cb-'+id,'')});
-  gMsg.textContent=`¡Guardado! Días guardados: ${days}. ${days>=7?'Tu filtro ya se está entrenando.':'Sigue mañana.'}`;
+  gMsg.textContent=`¡Guardado! Días guardados: ${days}. ${days>=7?'Llevas una semana de observaciones.':'Sigue mañana.'}`;
 };
 const wOut=document.getElementById('w-out');
 function worry(yes){
   const w=(document.getElementById('w-text').value.trim()||'eso').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
-  wOut.innerHTML=yes?`<b>Entonces haz un paso.</b> ¿Qué es lo más pequeño que puedes hacer hoy sobre ${w}? Hazlo y deja de darle vueltas.`
-                   :`<b>Entonces suéltalo por hoy.</b> Preocuparte por ${w} no lo va a cambiar. Respira, y regresa tu atención a lo que sí puedes hacer.`;
+  wOut.innerHTML=yes?`<b>Entonces haz un paso.</b> ¿Qué es lo más pequeño que puedes hacer hoy sobre ${w}? Elige un paso que puedas intentar.`
+                   :`<b>Prueba volver a lo que está a tu alcance.</b> Quizá no puedas resolver ${w} hoy. ¿Qué apoyo necesitas para acompañar esta incertidumbre?`;
 }
 document.getElementById('w-yes').onclick=()=>worry(true);
 document.getElementById('w-no').onclick=()=>worry(false);
 
 /* Quiz */
 const QS=[
-  ['“Me duermo viendo videos hasta las 2 de la mañana.”','mente','Dormir poco y la pantalla antes de dormir te dejan más cansado y de peor humor.'],
-  ['“Antes de dormir, anoto tres cosas buenas del día.”','presencia','Entrenas tu mente para fijarte en lo bueno.'],
-  ['“Seguro el examen me sale fatal. No puedo dejar de pensarlo.”','mente','Te preocupas por algo que no ha pasado y tu cuerpo lo vive como si ya pasara.'],
-  ['“Cuando me siento tenso, salgo a caminar 20 minutos.”','presencia','Moverte ayuda a apagar la alarma del cuerpo.'],
-  ['“Paso mucho tiempo con alguien que critica todo.”','mente','Estar cerca de alguien así te va quitando energía.'],
-  ['“Cuando llego a casa, abrazo a mi mamá.”','presencia','El contacto con quien quieres te hace sentir tranquilo y acompañado.'],
-  ['“Me aburrí un rato sin celular y se me ocurrió una idea.”','presencia','Aburrirte un poco le da espacio a tu mente para crear.'],
-  ['“No perdono lo que me hizo y lo repaso cada noche.”','mente','Repasarlo mantiene la herida abierta. Perdonar es dejar de cargarlo.']
+  [
+    "Me exijo estar feliz todo el tiempo.",
+    "mente",
+    "Capítulo 1: Rojas no reduce la felicidad a sentirse bien a cada momento."
+  ],
+  [
+    "Me pregunto qué le da sentido a un proyecto difícil.",
+    "presencia",
+    "Capítulo 1: el sentido ocupa un lugar central en su propuesta."
+  ],
+  [
+    "Doy por seguro que mañana ocurrirá lo peor.",
+    "mente",
+    "Capítulo 4: la autora examina la preocupación por lo que aún no sucede."
+  ],
+  [
+    "Distingo lo que pasó de la interpretación que hice.",
+    "presencia",
+    "Capítulo 5: Rojas invita a observar desde dónde miramos."
+  ],
+  [
+    "Creo que debo controlar cada detalle para estar bien.",
+    "mente",
+    "Capítulo 7: el libro cuestiona la necesidad de control y la exigencia de perfección."
+  ],
+  [
+    "Busco un momento para hablar de lo que siento.",
+    "presencia",
+    "Capítulo 6: la autora aborda reconocer y expresar emociones."
+  ],
+  [
+    "Reviso qué rutinas y vínculos me dan apoyo.",
+    "presencia",
+    "Capítulo 8: Rojas reúne propuestas de cuidado cotidiano."
+  ],
+  [
+    "Elijo una capacidad que quiero desarrollar y un primer paso.",
+    "presencia",
+    "Capítulo 9: autoconocimiento, metas y esfuerzo cierran el recorrido."
+  ]
 ];
 let qn=0,score=0;
 const qText=document.getElementById('q-text'),fb=document.getElementById('feedback'),qNext=document.getElementById('q-next'),opts=[...document.querySelectorAll('.opt')];

@@ -384,8 +384,8 @@ dialog{border-radius:16px}
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 11 secciones exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="11" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 13 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
@@ -402,8 +402,9 @@ dialog{border-radius:16px}
     </div>
     <div class="group"><h2 class="g-title"><span class="g-n">2</span>Capítulos 1–3</h2><div class="g-grid" id="g-2"></div></div>
     <div class="group"><h2 class="g-title"><span class="g-n">3</span>Capítulos 4–6</h2><div class="g-grid" id="g-3"></div></div>
+    <div class="group"><h2 class="g-title"><span class="g-n">4</span>Capítulos 7–10</h2><div class="g-grid" id="g-5"></div></div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Las ideas que se repiten</h2>
+      <h2 class="g-title"><span class="g-n">5</span>Las ideas que se repiten</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
           <div class="hand" id="quote-text">¿Qué idea del libro cambió más tu forma de mirar el presente?</div>
@@ -485,7 +486,7 @@ dialog{border-radius:16px}
     <div class="source-note">
       <strong>Obra de referencia:</strong> Tolle, E. <cite>El Poder del Ahora</cite>. Grijalbo, 2012.<br>
       <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
-      Las explicaciones, ejemplos, preguntas y actividades fueron escritos especialmente para esta guía independiente. No es una edición ni un resumen oficial, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
+      Esta es una guía independiente escrita con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
@@ -523,55 +524,202 @@ const I = {
 };
 
 const DATA = [
-{id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Antes de empezar',title:'El libro de un vistazo',
- text:'El libro parte de una idea sencilla: muchas veces sufrimos más porque nos quedamos atrapados en nuestros pensamientos, en lo que pasó o en lo que podría pasar.',
- pts:['Tolle propone volver la atención a lo que está pasando en este momento.','A lo largo del libro habla de los pensamientos, las emociones, el pasado, el futuro y de cómo estar más presentes en la vida diaria.'],
- q:'Antes de empezar, ¿qué significa para ti estar presente?'},
-{id:'mensaje',g:1,c:'blue',ico:'heart',eyebrow:'La idea que conecta todo',title:'De pensar tanto a estar presente',
- pts:['El libro no dice que debamos dejar de pensar. La idea es no creer automáticamente todo lo que pensamos.','Podemos aprender a notar nuestros pensamientos sin dejarnos llevar siempre por ellos.','El “Ahora” es este momento: lo que está pasando y lo que podemos hacer en este instante.'],
- q:'¿Cuándo notas que tu mente se va más al pasado o al futuro?'},
-
-{id:'c1',g:2,c:'green',ico:'brain',eyebrow:'Capítulo 1',title:'Usted no es su mente',
- text:'Este capítulo explica que tener pensamientos es normal, pero que no somos solamente lo que pasa por nuestra cabeza.',
- pts:['Tolle propone escuchar esa voz que habla dentro de nuestra cabeza sin seguirla automáticamente.','Cuando notas que estás pensando, ya puedes mirar ese pensamiento desde cierta distancia.','También explica que lo que pensamos puede afectar cómo se siente nuestro cuerpo.','La práctica es sencilla: notar los pensamientos sin pelear con ellos y sin juzgarte por tenerlos.'],
- q:'Ejemplo: si piensas “todo me sale mal”, ¿qué cambia si dices “estoy teniendo ese pensamiento” en vez de tomarlo como un hecho?'},
-
-{id:'c2',g:2,c:'rose',ico:'broken',eyebrow:'Capítulo 2',title:'La conciencia: el escape del dolor',
- text:'Aquí Tolle habla de cómo un dolor del pasado puede seguir afectándonos hoy cuando lo recordamos, lo repetimos o reaccionamos desde él.',
- pts:['El autor llama “cuerpo del dolor” a emociones y heridas del pasado que pueden volver a sentirse con fuerza.','La idea es darte cuenta de lo que sientes sin seguir alimentándolo con más y más pensamientos.','Muchas veces el miedo aparece porque imaginamos algo malo que podría pasar después.','Observar lo que sentimos antes de reaccionar puede ayudarnos a no repetir el mismo ciclo.'],
- q:'Ejemplo: recuerdas una discusión y vuelves a enojarte. ¿Qué está pasando realmente ahora y qué estás reviviendo en tu cabeza?'},
-
-{id:'c3',g:2,c:'lav',ico:'mountain',eyebrow:'Capítulo 3',title:'Avanzar profundamente hacia el Ahora',
- text:'Este capítulo habla de cuánto tiempo pasamos pensando en lo que ya pasó o preocupándonos por lo que todavía no ocurre.',
- pts:['Recordar y hacer planes es útil. El problema es quedarnos atrapados ahí todo el tiempo.','Aunque pensemos en ayer o mañana, nuestra vida está ocurriendo en este momento.','A veces un problema se siente enorme porque además de resolverlo imaginamos muchas cosas que podrían salir mal.','Volver al presente ayuda a preguntarnos algo más concreto: ¿qué puedo hacer ahora?'],
- q:'Ejemplo: tienes algo pendiente. ¿Puedes separar lo que necesitas hacer de todo lo que imaginas que podría salir mal?'},
-
-{id:'c4',g:3,c:'peach',ico:'cloud',eyebrow:'Capítulo 4',title:'Estrategias de la mente para evitar el Ahora',
- text:'Aquí el libro muestra algunas formas en que nos alejamos del presente sin darnos cuenta.',
- pts:['Quejarnos, darle vueltas a algo o pensar constantemente que las cosas deberían ser diferentes puede aumentar nuestro malestar.','El primer paso es simplemente darte cuenta de que lo estás haciendo.','Aceptar que algo ya está pasando no significa que te guste ni que tengas que quedarte sin hacer nada.','Después de reconocer la situación puedes decidir con más calma qué hacer para cambiarla.'],
- q:'Ejemplo: cambian tus planes. ¿Qué te molesta más: el cambio o seguir pensando “esto no debería estar pasando”?'},
-
-{id:'c5',g:3,c:'mint',ico:'lotus',eyebrow:'Capítulo 5',title:'El estado de presencia',
- text:'Este capítulo explica qué quiere decir Tolle cuando habla de estar presente: poner atención de verdad a lo que está pasando aquí y ahora.',
- pts:['Estar presente es notar lo que ocurre sin estar todo el tiempo perdido en pensamientos.','La respiración y las sensaciones del cuerpo pueden ayudarte a regresar al momento.','No necesitas hacer algo especial: puedes practicar mientras caminas, comes, trabajas o haces cualquier tarea.','Cuando te distraes, simplemente puedes darte cuenta y volver a lo que estás haciendo.'],
- q:'Ejemplo: ¿cómo sería caminar, comer o escuchar a alguien poniendo toda tu atención en eso durante un minuto?'},
-
-{id:'c6',g:3,c:'blue',ico:'globe',eyebrow:'Capítulo 6',title:'Vivir en un mundo iluminado',
- text:'En este capítulo la idea de estar presente se lleva a la vida diaria y a la manera en que tratamos a otras personas.',
- pts:['No necesitas alejarte del mundo para practicar lo que propone el libro.','Escuchar con atención puede cambiar la forma en que hablamos y reaccionamos con los demás.','Si notas una reacción antes de responder, tienes más oportunidad de elegir qué hacer.','La idea es llevar esa atención al trabajo, la familia, las relaciones y las cosas normales de cada día.'],
- q:'Ejemplo: en una conversación difícil, ¿qué cambiaría si escucharas hasta el final antes de pensar qué vas a responder?'},
-
-{id:'practicas',g:4,c:'peach',ico:'leaf',eyebrow:'Ideas que aparecen una y otra vez',title:'Cómo volver al presente',
- pts:['Nota lo que estás pensando sin seguir cada pensamiento.','Pon atención a tu respiración o a lo que siente tu cuerpo.','Date cuenta cuando estás peleando mentalmente con algo que ya pasó.','Pregúntate qué está pasando de verdad ahora y qué parte estás imaginando.'],
- q:'¿Cuál de estas ideas podrías probar hoy?'},
-
-{id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para recordar',title:'Las ideas principales',
- pts:['No eres solamente tus pensamientos: puedes observarlos.','Notar lo que sientes puede ayudarte a no reaccionar automáticamente.','El pasado ya pasó y el futuro todavía no llega; tu vida ocurre ahora.','Estar presente se practica en las cosas normales de todos los días.'],
- q:'Si tuvieras que contarle a alguien de qué trata el libro usando solo tres ideas, ¿cuáles serían?'},
-
-{id:'resultado',g:4,c:'yellow',ico:'sun',eyebrow:'Tu lectura',title:'¿Qué te llevas del libro?',
- pts:['Esta guía sirve para ayudarte a recordar lo que leíste, no para reemplazar el libro.','No tienes que estar de acuerdo con todo: también puedes cuestionar las ideas.','Tus ejemplos y notas pueden convertir esta guía en tu propia marginalia.'],
- q:'¿Qué idea quieres volver a buscar directamente en el libro?'}
+  {
+    "id": "libro",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "El libro de un vistazo",
+    "text": "El poder del ahora propone una práctica espiritual: volver la atención al momento que estamos viviendo. Tolle conecta esa idea con los pensamientos, las emociones, el cuerpo, las relaciones y la aceptación de los cambios.",
+    "pts": [
+      "Recorrerás sus diez capítulos en el orden del libro.",
+      "La idea que los une es notar cuándo la atención se queda atrapada en recuerdos, expectativas o comentarios mentales.",
+      "Los ejemplos y preguntas son de Marginalia; las explicaciones espirituales se atribuyen al autor."
+    ],
+    "q": "¿Qué significa para ti prestar atención al presente?"
+  },
+  {
+    "id": "c1",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Capítulo 1",
+    "title": "Usted no es su mente",
+    "text": "Tolle empieza distinguiendo los pensamientos de la capacidad de observarlos. Propone escuchar la voz interior sin dar por cierto todo lo que dice.",
+    "pts": [
+      "Pensar sirve para muchas tareas, pero el autor cuestiona que ocupe toda nuestra atención.",
+      "Notar un pensamiento permite tomar cierta distancia de él.",
+      "El capítulo también relaciona los pensamientos con las emociones y las sensaciones del cuerpo."
+    ],
+    "q": "Ejemplo de Marginalia: antes de entregar un proyecto piensas que saldrá mal. ¿Qué cambia si reconoces que es una predicción y no un hecho?"
+  },
+  {
+    "id": "c2",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Capítulo 2",
+    "title": "La conciencia: el escape del dolor",
+    "text": "Tolle habla del sufrimiento que se prolonga cuando seguimos alimentando recuerdos y reacciones. Usa la expresión cuerpo del dolor para describir, desde su mirada espiritual, el peso de viejas heridas.",
+    "pts": [
+      "El autor propone reconocer una emoción antes de reaccionar desde ella.",
+      "Invita a observar cómo una experiencia pasada influye en una situación actual.",
+      "También relaciona el miedo con la búsqueda de seguridad y con lo que imaginamos del futuro."
+    ],
+    "q": "Ejemplo de Marginalia: un comentario te recuerda una discusión antigua. ¿Qué pertenece a lo que está pasando hoy y qué viene de aquel recuerdo?"
+  },
+  {
+    "id": "c3",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Capítulo 3",
+    "title": "Avanzar profundamente hacia el Ahora",
+    "text": "Este capítulo desarrolla la idea central de volver al presente. Tolle distingue el tiempo que usamos para organizarnos del tiempo que pasamos reviviendo el pasado o esperando que el futuro nos complete.",
+    "pts": [
+      "Recordar y planear tienen una utilidad práctica.",
+      "El autor cuestiona aplazar toda satisfacción hasta lograr algo más.",
+      "Su propuesta es atender lo que podemos hacer en este momento."
+    ],
+    "q": "Ejemplo de Marginalia: preparas tu agenda de mañana y luego vuelves a la cena de hoy. ¿En qué momento planear se convierte para ti en seguir preocupándote?"
+  },
+  {
+    "id": "c4",
+    "g": 3,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Capítulo 4",
+    "title": "Estrategias de la mente para evitar el Ahora",
+    "text": "Tolle describe maneras cotidianas de alejarnos del momento que estamos viviendo. Entre ellas están la queja constante, la espera y la resistencia a algo que ya ocurre.",
+    "pts": [
+      "El capítulo invita a notar el malestar que se vuelve habitual.",
+      "El autor plantea cambiar una situación, salir de ella o aceptarla cuando no podemos modificarla.",
+      "Aceptar lo que ocurre no exige que nos guste."
+    ],
+    "q": "Ejemplo de Marginalia: se retrasa una entrega y eliges avisar a quien la espera. ¿Qué paso puedes dar después de reconocer el contratiempo?"
+  },
+  {
+    "id": "c5",
+    "g": 3,
+    "c": "rose",
+    "ico": "book",
+    "eyebrow": "Capítulo 5",
+    "title": "El estado de presencia",
+    "text": "Tolle explica la presencia como una atención despierta que no está ocupada todo el tiempo en comentar lo que ocurre. Relaciona esa experiencia con percibir la belleza y con su visión espiritual.",
+    "pts": [
+      "Estar atento no significa quedarse dormido o dejar de percibir.",
+      "El autor invita a observar sin poner inmediatamente una etiqueta a todo.",
+      "En este capítulo conecta esa quietud con enseñanzas religiosas; esa conexión forma parte de su interpretación."
+    ],
+    "q": "Ejemplo de Marginalia: miras cómo cambia la luz en la pared antes de buscar el teléfono. ¿Qué notas cuando dejas de comentar mentalmente lo que ves?"
+  },
+  {
+    "id": "c6",
+    "g": 3,
+    "c": "rose",
+    "ico": "book",
+    "eyebrow": "Capítulo 6",
+    "title": "El cuerpo interior",
+    "text": "Tolle propone dirigir la atención a cómo se siente el cuerpo desde dentro. Lo presenta como una forma de volver al presente y de conectar con lo que él llama el Ser.",
+    "pts": [
+      "Invita a notar las sensaciones en manos, pies y otras partes del cuerpo.",
+      "La respiración aparece como una ayuda para dirigir esa atención.",
+      "El capítulo lleva la práctica a momentos cotidianos, incluida la escucha de otra persona."
+    ],
+    "q": "Ejemplo de Marginalia: antes de abrir una videollamada notas el contacto de tus pies con el suelo. ¿Qué sientes al prestarles atención unos segundos?"
+  },
+  {
+    "id": "c7",
+    "g": 5,
+    "c": "rose",
+    "ico": "book",
+    "eyebrow": "Capítulo 7",
+    "title": "Puertas de entrada a lo No Manifestado",
+    "text": "El libro pasa a una explicación más espiritual. Tolle llama lo No Manifestado a una realidad sin forma y describe el silencio, el espacio y la atención al cuerpo como caminos para acercarse a ella.",
+    "pts": [
+      "El autor propone notar también las pausas entre sonidos.",
+      "Invita a percibir el espacio además de los objetos que lo ocupan.",
+      "Sus explicaciones sobre esa realidad son creencias espirituales del libro, no hechos que esta guía dé por demostrados."
+    ],
+    "q": "Ejemplo de Marginalia: al apagar la lavadora notas el silencio que queda en la habitación. ¿Cómo cambia tu atención cuando escuchas esa pausa?"
+  },
+  {
+    "id": "c8",
+    "g": 5,
+    "c": "rose",
+    "ico": "book",
+    "eyebrow": "Capítulo 8",
+    "title": "Relaciones iluminadas",
+    "text": "Tolle examina la expectativa de que una pareja resuelva nuestra sensación de carencia. Propone usar las relaciones para reconocer nuestras reacciones y practicar una atención más abierta.",
+    "pts": [
+      "El capítulo distingue el afecto de la necesidad de poseer o controlar.",
+      "El autor describe ciclos en los que la idealización da paso al reproche.",
+      "Propone observar el dolor propio y escuchar sin convertir cada diferencia en una lucha."
+    ],
+    "q": "Ejemplo de Marginalia: tu pareja pide tiempo para un proyecto personal y notas que lo interpretaste como rechazo. ¿Cómo podrías preguntar antes de sacar una conclusión?"
+  },
+  {
+    "id": "c9",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Capítulo 9",
+    "title": "Más allá de la felicidad y la infelicidad hay paz",
+    "text": "Tolle distingue sentirse contento porque algo sale bien de la paz interior que propone cultivar ante los cambios. Habla de las pérdidas, los ciclos de la vida y la compasión.",
+    "pts": [
+      "El autor recuerda que las situaciones agradables también cambian.",
+      "Su propuesta de aceptación permite reconocer tristeza sin fingir alegría.",
+      "Relaciona la compasión con reconocer la fragilidad que compartimos con otras personas."
+    ],
+    "q": "Ejemplo de Marginalia: termina una etapa laboral que disfrutabas y reconoces tu tristeza sin exigirte entusiasmo inmediato. ¿Qué emoción te cuesta permitirte?"
+  },
+  {
+    "id": "c10",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Capítulo 10",
+    "title": "El significado de la entrega",
+    "text": "El cierre explica qué entiende Tolle por entrega. La describe como reconocer el momento presente sin mantener una pelea interior continua, mientras hacemos lo que la situación requiere.",
+    "pts": [
+      "El autor distingue la entrega de la resignación pasiva.",
+      "Aceptar un hecho puede ir acompañado de actuar o de decir que no.",
+      "Lleva esta idea a las relaciones y a experiencias dolorosas desde su perspectiva espiritual."
+    ],
+    "q": "Ejemplo de Marginalia: cancelan una cita importante y buscas una nueva fecha. ¿Cómo sería reconocer lo ocurrido y ocuparte del siguiente paso?"
+  },
+  {
+    "id": "esencial",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Para recordar",
+    "title": "Las ideas que se repiten",
+    "text": "Los capítulos presentan distintas maneras de volver al presente. Tolle enlaza cuatro propuestas a lo largo del libro.",
+    "pts": [
+      "Observar los pensamientos sin creer automáticamente cada uno.",
+      "Reconocer las emociones antes de reaccionar.",
+      "Volver al cuerpo, la escucha o el silencio como prácticas de atención.",
+      "Aceptar un hecho sin renunciar a decidir qué hacer."
+    ],
+    "q": "¿Qué idea te ayuda a conectar los capítulos?"
+  },
+  {
+    "id": "resultado",
+    "g": 4,
+    "c": "yellow",
+    "ico": "book",
+    "eyebrow": "Tu lectura",
+    "title": "Qué te llevas del libro",
+    "text": "Puedes usar una situación cotidiana para pensar en lo leído. No necesitas aceptar toda la visión espiritual de Tolle para preguntarte qué te resulta útil o qué quieres discutir.",
+    "pts": [
+      "Elige una idea y observa cómo la entiendes en tu día.",
+      "Usa la práctica de respiración y el diario como actividades de Marginalia.",
+      "Consulta el libro para profundizar en lo que el resumen solo señala."
+    ],
+    "q": "¿Qué capítulo te gustaría volver a leer y por qué?"
+  }
 ];
 
 const QUOTES = [
@@ -590,7 +738,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('pda-done',[]));
+let done = new Set(store.get('pda-done-editorial-v2',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -607,13 +755,14 @@ DATA.forEach((d,i)=>{
 
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
-  const n=done.size;
+  const n=DATA.filter(d=>done.has(d.id)).length;
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
   document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('pda-done',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('pda-done-editorial-v2',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -627,7 +776,7 @@ function openCard(i){
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
-  done.add(d.id);store.set('pda-done',[...done]);refreshProgress();
+  done.add(d.id);store.set('pda-done-editorial-v2',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -670,7 +819,7 @@ const QS=[
   ['“Estoy enojado y siento los hombros tensos. Voy a esperar antes de contestar.”','presencia','Primero se fija en lo que siente y luego decide qué hacer.'],
   ['“Seguro mañana todo me va a salir mal.”','mente','Está adivinando el futuro como si ya hubiera pasado.'],
   ['“Mientras camino, siento mis pasos y oigo la calle.”','presencia','Pone atención a algo que hace todos los días.'],
-  ['“Si alguien no aprueba lo que hice, entonces todo salió mal.”','mente','Deja que la opinión de otro decida cómo se siente.']
+  ['“Aceptar el presente significa quedarme sin hacer nada.”','mente','Capítulo 10: Tolle distingue la entrega de la resignación; reconocer un hecho puede ir acompañado de actuar.']
 ];
 let qn=0,score=0;
 const qText=document.getElementById('q-text'),fb=document.getElementById('feedback'),qNext=document.getElementById('q-next'),opts=[...document.querySelectorAll('.opt')];

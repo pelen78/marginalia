@@ -392,36 +392,37 @@ dialog{border-radius:16px}
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Aquí encuentras ideas, preguntas y actividades hechas para esta guía. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
+    <p>Recorre los doce capítulos con explicaciones sencillas, ejemplos y preguntas creados para Marginalia. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 11 ideas exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="11" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 15 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Empieza aquí</h2>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
           <h2>Tú eliges <span>tu respuesta</span></h2>
-          <p>Descubre qué ideas te frenan y qué parte de lo que sientes depende de ti.</p>
+          <p>Recorre las propuestas de Dyer sobre autonomía, amor propio y decisiones cotidianas.</p>
           <div class="hand" style="font-size:1.35rem">Nota, pregunta, elige</div>
         </div>
       </div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Conceptos clave</h2>
+      <h2 class="g-title"><span class="g-n">2</span>Capítulos 1–4</h2>
       <div class="g-grid" id="g-2"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Observa y practica</h2>
+      <h2 class="g-title"><span class="g-n">3</span>Capítulos 5–8</h2>
       <div class="g-grid" id="g-3"></div>
     </div>
+    <div class="group"><h2 class="g-title"><span class="g-n">4</span>Capítulos 9–12</h2><div class="g-grid" id="g-5"></div></div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Reflexiona</h2>
+      <h2 class="g-title"><span class="g-n">5</span>Las ideas que se repiten</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
           <div class="hand" id="quote-text">¿Qué decisión estás dejando en manos de otra persona?</div>
@@ -493,7 +494,7 @@ dialog{border-radius:16px}
     <div class="source-note">
       <strong>Obra de referencia:</strong> Dyer, W. W. <cite>Tus zonas erróneas</cite>. Debolsillo, 2011.<br>
       <strong>Guía elaborada por:</strong> María Elena Montes Chávez<br>
-      Las explicaciones, ejemplos, preguntas y actividades fueron escritos especialmente para esta guía independiente. No es una edición ni un resumen oficial, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
+      Esta es una guía independiente escrita con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.
     </div>
   </footer>
 <nav class="mg-pager" aria-label="Otros libros">
@@ -535,43 +536,232 @@ const I = {
 };
 
 const DATA = [
-  {id:'libro',g:1,c:'blue',ico:'book',eyebrow:'Para empezar',title:'Cómo usar esta guía',
-   pts:['Esta guía te acompaña mientras lees. No reemplaza al libro.','Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.','Compara lo que lees aquí con el libro y con tu vida.'],
-   q:'¿Qué te gustaría aprender con este libro?'},
-  {id:'mensaje',g:1,c:'blue',ico:'heart',eyebrow:'La gran pregunta',title:'¿Quién decide cómo te sientes?',
-   text:'Muchas veces lo que sentimos no depende solo de lo que pasa, sino de lo que pensamos sobre eso.',
-   pts:['Separa lo que pasó de lo que te dijiste sobre lo que pasó.','Fíjate qué ideas se repiten y te detienen.'],
-   q:'Piensa en algo que te molestó esta semana. ¿Qué pasó y qué pensaste después?'},
-  {id:'c1',g:2,c:'green',ico:'brain',eyebrow:'Idea clave',title:'Lo que piensas y lo que sientes',
-   pts:['Casi siempre, antes de sentir algo, pensamos algo.','Si cambias lo que piensas, puede cambiar lo que sientes.','Hacerte cargo de lo que sientes no es echarte la culpa.'],
-   q:'¿Qué te dices cuando algo te sale mal?'},
-  {id:'c2',g:2,c:'green',ico:'heart',eyebrow:'Idea clave',title:'Vales por ser tú',
-   pts:['Vales aunque saques una mala calificación o pierdas un partido.','Si te tratas bien, es más fácil decidir sin miedo.','Puedes equivocarte y seguir queriéndote.'],
-   q:'¿Qué le dirías a un amigo que cometió el mismo error que tú?'},
-  {id:'c3',g:2,c:'green',ico:'people',eyebrow:'Idea clave',title:'Lo que piensan los demás',
-   pts:['Querer caer bien es normal. El problema es cuando eso decide por ti.','Nadie le cae bien a todo el mundo.','Puedes escuchar opiniones sin hacer siempre lo que dicen.'],
-   q:'¿Qué harías distinto si nadie fuera a opinar?'},
-  {id:'c4',g:2,c:'green',ico:'mountain',eyebrow:'Idea clave',title:'"Yo soy así"',
-   pts:['"Yo soy así" muchas veces es una costumbre, no algo fijo.','Lo que hiciste antes no decide lo que harás mañana.','Para cambiar, empieza con algo pequeño y distinto.'],
-   q:'Completa: "Siempre he sido ___". ¿Cuándo fue la última vez que no lo fuiste?'},
-  {id:'c5',g:3,c:'peach',ico:'cloud',eyebrow:'Fíjate',title:'Culpa, preocupación y enojo',
-   pts:['La culpa se queda en el pasado. La preocupación se va al futuro. Ninguna arregla el hoy.','Enojarte a veces es normal, pero quedarte enojado te afecta más a ti.','Pregúntate: ¿esto me ayuda a hacer algo o solo me cansa?'],
-   q:'¿Qué preocupación de esta semana puedes convertir en algo que sí puedes hacer?'},
-  {id:'c6',g:3,c:'peach',ico:'clock',eyebrow:'Practica',title:'Deja de dejarlo para después',
-   pts:['Dejar algo para después se siente bien ahora, pero luego pesa más.','Las ganas casi nunca llegan solas. Muchas veces llegan cuando ya empezaste.','Divide la tarea hasta que el primer paso dure diez minutos.'],
-   q:'¿Qué has dejado para después y cuál sería el primer paso?'},
-  {id:'reglas',g:3,c:'peach',ico:'scale',eyebrow:'Fíjate',title:'Reglas, "debería" y comparaciones',
-   pts:['Algunas reglas ayudan. Otras las seguimos solo porque "así se hace".','Esperar que todo sea justo puede ser una excusa para no hacer nada.','Compararte con otros te distrae de lo que tú sí puedes hacer.'],
-   q:'¿Qué "debería" sigues sin saber por qué?'},
-  {id:'practicas',g:3,c:'peach',ico:'key',eyebrow:'Reto de la semana',title:'Prueba algo nuevo',
-   pts:['Haz algo que nunca hayas hecho.','Di lo que piensas en un momento en que normalmente te callarías.','Toma una decisión pequeña sin pedir permiso ni opinión.','Escribe qué pasó y qué te daba miedo que pasara.'],
-   q:'Haz uno de estos retos y compara lo que temías con lo que pasó.'},
-  {id:'esencial',g:4,c:'lav',ico:'leaf',eyebrow:'Para platicar',title:'Preguntas para discutir',
-   pts:['¿Todas las emociones feas son malas, o algunas nos avisan de algo?','¿Cuál es la diferencia entre hacerte responsable y echarte la culpa?','¿Cuándo sí vale la pena escuchar lo que opinan otros?','¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?'],
-   q:'Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?'},
-  {id:'resultado',g:4,c:'lav',ico:'sun',eyebrow:'Tu opinión',title:'¿Qué te llevas?',
-   pts:['Explica una idea con tus propias palabras.','Busca un ejemplo de tu vida que la apoye o que no.','Separa lo que dice el libro de lo que tú piensas.','Regresa al libro si quieres saber más.'],
-   q:'¿Qué idea te gustaría revisar directamente en el libro?'}
+  {
+    "id": "libro",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "El libro de un vistazo",
+    "text": "Tus zonas erróneas revisa formas de pensar y actuar que, según Dyer, pueden quitarnos libertad. Sus doce capítulos pasan por el amor propio, la aprobación, la culpa, las reglas, la dependencia y el enojo.",
+    "pts": [
+      "La idea que conecta el libro es prestar atención a las decisiones que sí podemos tomar hoy.",
+      "Aquí encontrarás cada capítulo en orden, con una explicación breve y ejemplos creados para Marginalia.",
+      "Las afirmaciones sobre emociones se presentan como propuestas del autor, no como reglas que expliquen todos los casos."
+    ],
+    "q": "¿Qué parte de tu manera de decidir te gustaría entender mejor?"
+  },
+  {
+    "id": "c1",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Capítulo 1",
+    "title": "Haciéndote cargo de ti mismo",
+    "text": "Dyer abre el libro preguntando cuánto espacio dejamos para decidir por nosotros mismos. Propone revisar lo que nos decimos y aprovechar el presente para cambiar nuestra manera de responder.",
+    "pts": [
+      "El autor da mucha importancia a la relación entre pensamientos y emociones.",
+      "Invita a revisar las decisiones que dejamos en manos de otras personas.",
+      "Su propuesta es actuar para crecer, sin esperar a que todo esté resuelto."
+    ],
+    "q": "Ejemplo de Marginalia: una reunión salió mal y decides preparar mejor la siguiente. ¿Qué parte de esa situación sí puedes cambiar?"
+  },
+  {
+    "id": "c2",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Capítulo 2",
+    "title": "El primer amor",
+    "text": "El capítulo trata de la manera en que nos valoramos. Dyer plantea que reconocer nuestros errores no obliga a tratarnos con desprecio.",
+    "pts": [
+      "Separa el valor de una persona de lo bien o mal que hace una tarea.",
+      "Distingue el amor propio de presumir para recibir aplausos.",
+      "Propone aceptar el cuerpo y las cualidades propias sin exigir perfección."
+    ],
+    "q": "Ejemplo de Marginalia: olvidaste una cita y puedes disculparte sin insultarte. ¿Cómo hablarías contigo después de ese error?"
+  },
+  {
+    "id": "c3",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Capítulo 3",
+    "title": "Tú no necesitas la aprobación de los demás",
+    "text": "Dyer distingue entre disfrutar un cumplido y necesitar el visto bueno de todos para decidir. Examina cómo esa necesidad puede llevarnos a callar nuestras preferencias.",
+    "pts": [
+      "Escuchar opiniones no obliga a obedecerlas.",
+      "Buscar que nadie se moleste puede hacer que renuncies a lo que quieres.",
+      "El autor propone practicar pequeños desacuerdos sin convertirlos en una pelea."
+    ],
+    "q": "Ejemplo de Marginalia: eliges un curso que te interesa aunque tus amistades prefieran otro. ¿Qué decisión te cuesta tomar sin pedir aprobación?"
+  },
+  {
+    "id": "c4",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Capítulo 4",
+    "title": "La ruptura con el pasado",
+    "text": "Este capítulo revisa las etiquetas que repetimos sobre nosotros. Dyer propone comprobar si describen lo que hacemos hoy o si sirven para evitar un intento nuevo.",
+    "pts": [
+      "Una costumbre del pasado no cuenta toda tu historia.",
+      "Decir que nunca has sabido hacer algo puede frenar el aprendizaje.",
+      "El libro invita a probar conductas pequeñas que cuestionen esas etiquetas."
+    ],
+    "q": "Ejemplo de Marginalia: dices que no sabes organizarte, pero hoy anotas una tarea y la terminas. ¿Qué etiqueta podrías poner a prueba?"
+  },
+  {
+    "id": "c5",
+    "g": 3,
+    "c": "rose",
+    "ico": "book",
+    "eyebrow": "Capítulo 5",
+    "title": "Las emociones inútiles: culpabilidad y preocupación",
+    "text": "Dyer reúne aquí la culpa que nos mantiene mirando atrás y la preocupación que nos deja esperando lo peor. Critica sobre todo que nos paralicen en vez de ayudarnos a actuar.",
+    "pts": [
+      "El autor distingue aprender de un error de castigarse una y otra vez.",
+      "Prepararse para una dificultad es distinto de imaginarla sin hacer nada.",
+      "Propone volver a una acción posible en el presente."
+    ],
+    "q": "Ejemplo de Marginalia: te preocupa olvidar un pago y anotas su fecha. ¿Qué preocupación tuya puede convertirse en un paso concreto?"
+  },
+  {
+    "id": "c6",
+    "g": 3,
+    "c": "rose",
+    "ico": "book",
+    "eyebrow": "Capítulo 6",
+    "title": "Explorando lo desconocido",
+    "text": "El capítulo habla del miedo a probar algo sin saber cómo saldrá. Dyer invita a dejar espacio para la curiosidad, la espontaneidad y los intentos imperfectos.",
+    "pts": [
+      "Querer tener todo previsto puede limitar lo que te permites conocer.",
+      "Equivocarte en una actividad no define tu valor como persona.",
+      "El autor propone ensayar novedades sin exigir un resultado perfecto."
+    ],
+    "q": "Ejemplo de Marginalia: vas a una clase de dibujo sin esperar dibujar bien desde el principio. ¿Qué te gustaría probar por simple curiosidad?"
+  },
+  {
+    "id": "c7",
+    "g": 3,
+    "c": "rose",
+    "ico": "book",
+    "eyebrow": "Capítulo 7",
+    "title": "Rompiendo la barrera de los convencionalismos",
+    "text": "Dyer examina las reglas que seguimos solo porque las aprendimos de otros. Invita a pensar si todavía tienen sentido y a decidir con más criterio propio.",
+    "pts": [
+      "Una costumbre familiar puede revisarse sin despreciar a la familia.",
+      "El capítulo cuestiona los deberes que aceptamos sin preguntarnos por qué.",
+      "El autor valora la flexibilidad frente a las respuestas rígidas."
+    ],
+    "q": "Ejemplo de Marginalia: en casa siempre celebran de una forma, pero propones otra que también les acomoda. ¿Qué costumbre sigues sin haberla elegido?"
+  },
+  {
+    "id": "c8",
+    "g": 3,
+    "c": "rose",
+    "ico": "book",
+    "eyebrow": "Capítulo 8",
+    "title": "La trampa de la justicia",
+    "text": "El capítulo cuestiona la espera de que todo sea equitativo antes de seguir adelante. Dyer se centra en el desgaste de comparar continuamente lo que recibimos con lo que reciben otros.",
+    "pts": [
+      "El autor diferencia buscar cambios de quedarse atrapado en la queja.",
+      "Que otra persona tenga una ventaja no decide por sí solo tu siguiente paso.",
+      "Su propuesta es actuar sobre lo que puedes hacer aunque la situación siga siendo injusta."
+    ],
+    "q": "Ejemplo de Marginalia: otra persona recibe una oportunidad que querías; puedes pedir criterios claros y preparar tu próxima solicitud. ¿Qué harías después de reconocer tu molestia?"
+  },
+  {
+    "id": "c9",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Capítulo 9",
+    "title": "Terminando con las postergaciones ahora mismo",
+    "text": "Dyer aborda las tareas que dejamos pendientes mientras esperamos el momento ideal. Propone mirar lo que hacemos hoy, además de lo que prometemos hacer después.",
+    "pts": [
+      "Hablar mucho de un cambio no equivale a empezarlo.",
+      "Posponer puede evitar la incomodidad inmediata y mantener el problema.",
+      "El libro invita a dedicar un rato concreto a aquello que importa."
+    ],
+    "q": "Ejemplo de Marginalia: llevas días aplazando ordenar un cajón y empiezas por cinco objetos. ¿Cuál sería el primer paso de tu pendiente?"
+  },
+  {
+    "id": "c10",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Capítulo 10",
+    "title": "Proclama tu independencia",
+    "text": "Este capítulo trata de las relaciones en las que sentimos que no podemos elegir por nosotros mismos. Dyer propone mantener los vínculos sin renunciar a una vida propia.",
+    "pts": [
+      "Querer a alguien no exige coincidir en todas las decisiones.",
+      "La independencia que plantea el autor no implica romper los vínculos.",
+      "Invita a reconocer los acuerdos que aceptamos por obligación y a hablar de ellos."
+    ],
+    "q": "Ejemplo de Marginalia: quieres pasar una tarde a solas y se lo explicas a tu pareja. ¿Qué espacio propio te gustaría expresar con claridad?"
+  },
+  {
+    "id": "c11",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Capítulo 11",
+    "title": "Adiós a la ira",
+    "text": "Dyer se ocupa del enojo que termina dominando lo que hacemos. Relaciona esas reacciones con la exigencia de que las personas y las situaciones sean como esperamos.",
+    "pts": [
+      "El capítulo cuestiona usar la agresión para conseguir que otros cambien.",
+      "Propone observar qué expectativa aparece antes de una reacción intensa.",
+      "Sugiere practicar respuestas distintas; la guía no supone que todas las emociones se elijan a voluntad."
+    ],
+    "q": "Ejemplo de Marginalia: alguien usa tu taza sin avisar y decides pedir que lo consulte la próxima vez. ¿Cómo expresarías tu molestia sin atacar?"
+  },
+  {
+    "id": "c12",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Capítulo 12",
+    "title": "Retrato de una persona que ha eliminado todas las zonas erróneas",
+    "text": "El cierre reúne las características de la persona que Dyer considera libre de estas trabas. Es el retrato ideal que propone el autor para conectar los capítulos anteriores.",
+    "pts": [
+      "Describe a alguien que disfruta el presente y necesita menos aprobación.",
+      "Destaca la autonomía, la curiosidad y el trato sencillo con otras personas.",
+      "El retrato permite revisar lo aprendido sin convertirlo en una exigencia de ser perfecto."
+    ],
+    "q": "Ejemplo de Marginalia: eliges una decisión pequeña que se parezca a la vida que quieres. ¿Qué rasgo del retrato te interesa y cuál cuestionarías?"
+  },
+  {
+    "id": "esencial",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Para recordar",
+    "title": "Las ideas que se repiten",
+    "text": "Dyer vuelve varias veces a la autonomía y al uso del presente. Estas cuatro ideas unen su recorrido.",
+    "pts": [
+      "Revisar lo que nos decimos sobre nosotros mismos.",
+      "Separar nuestras preferencias de la necesidad de aprobación.",
+      "Pasar de darle vueltas a un problema a elegir un paso posible.",
+      "Mantener relaciones sin abandonar el criterio propio."
+    ],
+    "q": "¿Cuál de estas ideas aparece más en tu vida?"
+  },
+  {
+    "id": "resultado",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Tu lectura",
+    "title": "Qué te llevas del libro",
+    "text": "El cierre de la guía invita a elegir una idea y ponerla a prueba. También puedes anotar tus desacuerdos con Dyer.",
+    "pts": [
+      "Escoge un capítulo que quieras recordar.",
+      "Usa el registro y el diario para observar una situación concreta.",
+      "Vuelve a la obra para conocer los matices que un resumen breve deja fuera."
+    ],
+    "q": "¿Qué idea probarías esta semana y cómo sabrías si te resultó útil?"
+  }
 ];
 
 const QUOTES = [
@@ -590,7 +780,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('tze-done',[]));
+let done = new Set(store.get('tze-done-editorial-v2',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -607,13 +797,14 @@ DATA.forEach((d,i)=>{
 
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
-  const n=done.size;
-  document.getElementById('progress-text').textContent=n===DATA.length?'¡Exploraste todo el mapa!':`${n} de ${DATA.length} ideas exploradas`;
+  const n=DATA.filter(d=>done.has(d.id)).length;
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
+  document.getElementById('progress-text').textContent=n===DATA.length?'¡Exploraste todo el mapa!':`${n} de ${DATA.length} secciones exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('tze-done',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('tze-done-editorial-v2',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -627,7 +818,7 @@ function openCard(i){
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
-  done.add(d.id);store.set('tze-done',[...done]);refreshProgress();
+  done.add(d.id);store.set('tze-done-editorial-v2',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -644,8 +835,8 @@ const AREAS=[
   ['aprob','Me importó mucho lo que pensaran otros','Antes de decidir, pensé en qué iban a decir.','c3','Toma una decisión pequeña sin pedir opinión y ve qué pasa.'],
   ['culpa','Me sentí culpable por algo que ya pasó','Pensé mucho en algo que ya no puedo cambiar.','c5','Pregúntate qué aprendiste y qué harías distinto. Luego déjalo ir.'],
   ['preoc','Me preocupé por cosas que no han pasado','Imaginé problemas que todavía no existen.','c5','Escribe tu preocupación y una cosa que sí puedas hacer hoy.'],
-  ['pospon','Dejé algo importante para después','No hice algo que sí me importa.','c6','Elige esa tarea y haz solo los primeros diez minutos.'],
-  ['enojo','Me enojé y no se me pasaba','El enojo me duró más que el problema.','c5','La próxima vez, antes de contestar, fíjate qué estás pensando.'],
+  ['pospon','Dejé algo importante para después','No hice algo que sí me importa.','c9','Elige esa tarea y haz solo los primeros diez minutos.'],
+  ['enojo','Me enojé y no se me pasaba','El enojo me duró más que el problema.','c11','La próxima vez, antes de contestar, fíjate qué estás pensando.'],
   ['etiq','Dije "yo soy así"','Usé esa frase para no intentar algo.','c4','Haz algo pequeño que "no es de ti" y ve cómo te sientes.']
 ];
 const sl=document.getElementById('sliders');
@@ -667,14 +858,14 @@ updateFocus();
 
 /* Quiz */
 const QS=[
-  ['“Mi hermano me hace enojar.”','mente','Le echa la culpa a su hermano. Él hizo algo, pero cómo reaccionas lo decides tú.'],
+  ['“No puedo hacer nada con mi respuesta hasta que mi hermano cambie.”','mente','Capítulo 1: Dyer invita a revisar el margen de acción propio. Esto no significa que el daño causado por otros sea culpa tuya.'],
   ['“Me molestó lo que dijo. Voy a contestarle cuando me calme.”','presencia','Acepta que se molestó y decide cuándo y cómo contestar.'],
   ['“Así soy yo, siempre he sido tímido.”','mente','Usa "así soy yo" para no intentarlo.'],
   ['“No sé si me va a salir, pero lo voy a intentar.”','presencia','No sabe cómo le irá, pero lo intenta de todos modos.'],
   ['“Lo hago cuando tenga ganas.”','mente','Espera a tener ganas. Es otra forma de dejarlo para después.'],
   ['“Le pregunté a mi amiga qué opina, pero yo decido.”','presencia','Escucha a su amiga, pero la decisión es suya.'],
   ['“No es justo que a ella le vaya mejor.”','mente','Se fija en la otra persona y no en lo que él sí puede hacer.'],
-  ['“Me equivoqué. ¿Qué aprendí y qué hago ahora?”','presencia','En vez de culparse, aprende y busca qué hacer.']
+  ['“Me equivoqué. ¿Qué aprendí y qué hago ahora?”','presencia','Capítulo 5: el libro distingue aprender de un error de seguir castigándose por él.']
 ];
 let qn=0,score=0;
 const qText=document.getElementById('q-text'),fb=document.getElementById('feedback'),qNext=document.getElementById('q-next'),opts=[...document.querySelectorAll('.opt')];
