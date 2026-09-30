@@ -28,17 +28,8 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
 </style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta name="robots" content="noindex">
-<style>/* En construcción: ocultar la guía hasta que esté lista (borrar este bloque y #uc para publicarla) */
-body>*:not(#uc){display:none!important}
-#uc{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:24px 16px;box-sizing:border-box;background:var(--bg);color:var(--ink);text-align:center}
-#uc .box{max-width:460px;padding:32px 26px;border:1.5px solid var(--line);border-radius:20px;background:var(--paper);box-shadow:var(--shadow)}
-#uc small{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-#uc h1{font-family:var(--f-display);font-size:clamp(1.7rem,6vw,2.3rem);margin:10px 0 8px;line-height:1.1}
-#uc p{color:var(--muted);margin:0 0 22px;line-height:1.55}
-#uc a{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;border-radius:999px;padding:9px 20px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
-</style>
 <title>Guía visual · Te desafío a prosperar</title>
-<meta name="description" content="Recorre los 16 desafíos de Te desafío a prosperar con reflexiones propias de Marginalia, ejemplos sencillos y preguntas para acompañar tu lectura.">
+<meta name="description" content="Recorre los 17 desafíos de Te desafío a prosperar, audita tu tipo de crisis con reflexiones propias de Marginalia, ejemplos sencillos y preguntas para acompañar tu lectura.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
@@ -403,12 +394,30 @@ dialog{border-radius:16px}
 }
 @media (prefers-reduced-motion:reduce){.mg-menu ul{animation:none}.mg-pager a{transition:none}}
 </style>
+<style>
+.tipos{display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-top:2px;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;color:var(--muted)}
+.tipos b{font-weight:400;border:1px solid var(--edge);color:var(--ink);border-radius:999px;padding:1px 7px}
+.dlg-tipos{margin:0 0 12px}
+.cx{display:grid;gap:18px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+@media (max-width:760px){.cx{grid-template-columns:minmax(0,1fr)}}
+.cx-step{padding:20px;border:1.5px solid var(--line);border-radius:20px;background:var(--paper)}
+.cx-step h3{margin:0 0 4px;font-family:var(--f-display);font-weight:400;font-size:1.25rem}
+.cx-opts{display:grid;gap:8px;margin-top:12px}
+.cx-opts button{text-align:left;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:14px;padding:10px 14px;font:inherit;line-height:1.3;cursor:pointer}
+.cx-opts button small{display:block;color:var(--muted);font-size:.85rem}
+.cx-opts button:hover{border-color:var(--ink)}
+.cx-opts button[aria-pressed="true"]{border-color:var(--accent);background:var(--c-peach)}
+.cx-out{grid-column:1/-1;padding:22px;border-radius:20px;background:var(--paper);border:1.5px dashed var(--line)}
+.cx-code{font-family:var(--f-mono);font-size:2rem;color:var(--accent);line-height:1}
+.cx-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.cx-list button{border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:.92rem;cursor:pointer}
+.cx-list button:hover{border-color:var(--accent)}
+</style>
 <link rel="stylesheet" href="feedback.css">
 <script src="feedback.js" defer></script>
 <link rel="stylesheet" href="reading-cards.css">
 </head>
 <body>
-<main id="uc"><div class="box"><small>En construcción</small><h1>Te desafío a prosperar</h1><p>Esta guía todavía se está preparando. Muy pronto podrás leerla aquí.</p><a href="index.html#libros">&larr; Volver a la biblioteca</a></div></main>
 <nav class="mg-nav" aria-label="Biblioteca">
   <div class="in">
     <a class="mg-brand" href="index.html#inicio" aria-label="Marginalia, inicio"><span class="s3" style="transform:rotate(-3deg)" aria-hidden="true">M</span><span class="s0" style="transform:rotate(2deg)" aria-hidden="true">A</span><span class="s6" style="transform:rotate(-2deg)" aria-hidden="true">R</span><span class="s0" style="transform:rotate(1deg)" aria-hidden="true">G</span><span class="s4" style="transform:rotate(3deg)" aria-hidden="true">I</span><span class="s0" style="transform:rotate(-1deg)" aria-hidden="true">N</span><span class="s3" style="transform:rotate(2deg)" aria-hidden="true">A</span><span class="s2" style="transform:rotate(-3deg)" aria-hidden="true">L</span><span class="s0" style="transform:rotate(1deg)" aria-hidden="true">I</span><span class="s1" style="transform:rotate(-2deg)" aria-hidden="true">A</span></a>
@@ -433,12 +442,12 @@ dialog{border-radius:16px}
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Recorre los dieciséis desafíos en orden, con una tarjeta para cada uno. Las explicaciones, ejemplos y preguntas son reflexiones propias de Marginalia inspiradas en sus títulos; no son resúmenes de los capítulos. Lee el libro para conocer las propuestas completas del autor. Esta guía es independiente del autor y la editorial.</p>
+    <p>Recorre la introducción, los diecisiete desafíos y el epílogo en orden, con una tarjeta para cada uno. Cada tarjeta indica para qué tipos de crisis sugiere el libro ese ejercicio. Las tarjetas de la introducción y del Desafío 1 explican con palabras propias lo que plantea el autor; las demás explicaciones, ejemplos y preguntas son reflexiones propias de Marginalia inspiradas en sus títulos; no son resúmenes de los capítulos. Lee el libro para conocer las propuestas completas del autor. Esta guía es independiente del autor y la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 21 secciones exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="21" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 24 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
@@ -449,8 +458,8 @@ dialog{border-radius:16px}
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
           <h2>Bienestar <span>integral</span></h2>
-          <p>Dieciséis desafíos para crecer en lo económico y en lo emocional.</p>
-          <div class="hand" style="font-size:1.35rem">Valórate, crece, comparte</div>
+          <p>Diecisiete desafíos para salir de la crisis y crecer en lo material, lo emocional y en proyectos nobles.</p>
+          <div class="hand" style="font-size:1.35rem">Audita, imagina, crece</div>
         </div>
       </div>
     </div>
@@ -467,11 +476,11 @@ dialog{border-radius:16px}
       <div class="g-grid" id="g-4"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">5</span>Desafíos 13–16</h2>
+      <h2 class="g-title"><span class="g-n">5</span>Desafíos 13–17</h2>
       <div class="g-grid" id="g-5"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">6</span>Lo esencial de tu lectura</h2>
+      <h2 class="g-title"><span class="g-n">6</span>Epílogo y lo esencial</h2>
       <div class="g-grid" id="g-6">
         <div class="quote">
           <div class="hand" id="quote-text">¿Qué harías distinto si de verdad creyeras que vales más?</div>
@@ -481,6 +490,38 @@ dialog{border-radius:16px}
       </div>
     </div>
   </div>
+
+  <section class="block" id="audita">
+    <div class="block-head">
+      <h2>Audita tu crisis</h2>
+      <p>Basado en el Desafío 1. Elige de dónde viene tu problema principal y cómo llegó. Verás tu tipo de crisis y los desafíos que el índice del libro sugiere para ese tipo.</p>
+    </div>
+    <div class="cx">
+      <div class="cx-step">
+        <div class="hand" style="font-size:1.4rem">Paso 1</div>
+        <h3>¿De dónde viene?</h3>
+        <div class="cx-opts" id="cx-origen" role="group" aria-label="Origen de la crisis">
+          <button type="button" data-v="1" aria-pressed="false">Personas abusivas<small>Alguien te engaña, te maltrata o te quiere perjudicar.</small></button>
+          <button type="button" data-v="2" aria-pressed="false">Errores propios<small>Malas decisiones, descuidos o cosas que dejaste de hacer.</small></button>
+          <button type="button" data-v="3" aria-pressed="false">Adversidad natural<small>Enfermedades, accidentes, desastres o pérdidas que nadie buscó.</small></button>
+        </div>
+      </div>
+      <div class="cx-step">
+        <div class="hand" style="font-size:1.4rem">Paso 2</div>
+        <h3>¿Cómo llegó?</h3>
+        <div class="cx-opts" id="cx-forma" role="group" aria-label="Forma de la crisis">
+          <button type="button" data-v="A" aria-pressed="false">Poco a poco (paulatina)<small>Un desgaste lento que se acumula día con día y casi nadie nota.</small></button>
+          <button type="button" data-v="B" aria-pressed="false">De golpe (repentina)<small>Un impacto fuerte e inesperado que cambia todo de un día a otro.</small></button>
+        </div>
+      </div>
+      <div class="cx-out" aria-live="polite">
+        <div class="cx-code" id="cx-code">?</div>
+        <p id="cx-desc" style="margin:8px 0 0">Elige una opción en cada paso para ver tu tipo de crisis.</p>
+        <div class="cx-list" id="cx-list"></div>
+        <p class="hint" style="margin:12px 0 0">Si tienes varios problemas, repite el ejercicio con cada uno. Esta herramienta te ayuda a ordenar ideas; no sustituye la ayuda de un profesional.</p>
+      </div>
+    </div>
+  </section>
 
   <section class="block" id="mi-prosperidad">
     <div class="block-head">
@@ -535,7 +576,7 @@ dialog{border-radius:16px}
       <p>Tres preguntas de Marginalia para llevar la lectura a tu día. Lo que escribas se queda solo en este navegador.</p>
     </div>
     <div class="journal">
-      <div class="jcard"><label for="j1">¿Qué sé hacer bien que otros valoran?</label><textarea id="j1" placeholder="Ejemplo: explico con paciencia, soy puntual..."></textarea></div>
+      <div class="jcard"><label for="j1">¿Qué tipo de crisis vivo hoy y qué la causa?</label><textarea id="j1" placeholder="Ejemplo: 2-A, porque dejé crecer mis deudas poco a poco..."></textarea></div>
       <div class="jcard"><label for="j2">¿Qué idea sobre el dinero aprendí de niño?</label><textarea id="j2" placeholder="¿Me ayuda hoy o me frena?"></textarea></div>
       <div class="jcard"><label for="j3">¿Qué paso pequeño daré esta semana?</label><textarea id="j3" placeholder="Algo concreto: aprender algo nuevo, ordenar mis gastos, pedir un consejo..."></textarea></div>
     </div>
@@ -554,9 +595,9 @@ dialog{border-radius:16px}
 </nav>
 
   <footer>
-    <div class="source-note"><strong>Obra de referencia:</strong> Sánchez, C. C. <cite>Te desafío a prosperar: técnicas comprobadas para lograr mayores ingresos y bienestar integral</cite>. Ediciones Selectas Diamante, 2013.</div>
+    <div class="source-note"><strong>Obra de referencia:</strong> Sánchez, C. C. <cite>Te desafío a prosperar: una guía completa para ganar más dinero y crecer en la crisis</cite>. Ediciones Selectas Diamante (Grupo Editorial Diamante).</div>
 
-    <details class="guide-sources"><summary>Fuentes de esta guía</summary><p>Consultamos la <a href="https://books.apple.com/mx/book/te-desaf%C3%ADo-a-prosperar/id667643517" target="_blank" rel="noopener">descripción de la editorial</a> y el <a href="https://www.perlego.com/es/book/1868023/te-desafo-a-prosperar-tcnicas-comprobadas-para-lograr-mayores-ingresos-y-bienestar-integral-pdf" target="_blank" rel="noopener">índice del libro</a>, que muestra los títulos de los dieciséis desafíos. Seguimos los dieciséis títulos en orden. No consultamos el texto íntegro: las explicaciones, ejemplos, preguntas y actividades son reflexiones propias de Marginalia para acompañar la lectura, no resúmenes ni citas del autor.</p></details>
+    <details class="guide-sources"><summary>Fuentes de esta guía</summary><p>Seguimos el índice de la edición de Grupo Editorial Diamante, que incluye la introducción, diecisiete desafíos, el epílogo y los tipos de crisis que atiende cada ejercicio. Las tarjetas de la introducción y del Desafío 1 explican con palabras propias las ideas de esas secciones, incluida la clasificación de las crisis por su origen y su forma. En los demás desafíos, las explicaciones, ejemplos, preguntas y actividades son reflexiones propias de Marginalia inspiradas en los títulos, no resúmenes ni citas del autor.</p></details>
     <div class="guide-credits">
     <p class="credits-author"><strong>Guías elaboradas por:</strong> Marginalia</p>
     <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
@@ -611,322 +652,314 @@ const I = {
   sun:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 34a14 14 0 0 1 28 0z" fill="currentColor" fill-opacity=".25"/><path d="M24 8v6M10 14l4 4M38 14l-4 4M4 28h5M39 28h5M4 40h40"/></svg>'
 };
 
+const ALL=["1-A","2-A","3-A","1-B","2-B","3-B"];
 const DATA = [
   {
-    "id": "libro",
-    "g": 1,
-    "c": "blue",
-    "ico": "book",
+    "id": "libro", "g": 1, "c": "blue", "ico": "book",
     "eyebrow": "Antes de empezar",
     "title": "El libro de un vistazo",
-    "text": "El libro propone dieciséis desafíos sobre prosperidad. Esta guía los recorre en el orden del índice, con una tarjeta para cada uno.",
+    "text": "El libro propone diecisiete desafíos para salir de una crisis y mejorar tu situación económica. Esta guía los recorre en el orden del índice, con una tarjeta para cada uno.",
     "pts": [
-      "Lee el desafío en tu ejemplar y abre su tarjeta para acompañar la lectura.",
-      "Cada explicación, ejemplo y pregunta es una reflexión propia de Marginalia inspirada en el título; no un resumen del capítulo.",
-      "Puedes estar de acuerdo, tener dudas o llegar a una conclusión distinta."
+      "Lee el desafío en tu ejemplar y después abre su tarjeta.",
+      "Cada tarjeta indica para qué tipos de crisis sugiere el libro ese ejercicio.",
+      "Las explicaciones, ejemplos y preguntas son reflexiones propias de Marginalia, no un resumen del capítulo."
     ],
-    "q": "¿Qué te gustaría observar durante esta lectura: tu trabajo, tus costumbres o lo que entiendes por bienestar?"
+    "q": "¿Qué te gustaría observar durante esta lectura: tu trabajo, tu dinero o tu manera de enfrentar los problemas?"
   },
   {
-    "id": "mensaje",
-    "g": 1,
-    "c": "blue",
-    "ico": "scale",
-    "eyebrow": "La propuesta del libro",
-    "title": "Prosperar es más que dinero",
-    "text": "La descripción editorial relaciona la prosperidad con el bienestar económico y emocional. Marginalia propone usar esa idea para mirar distintos aspectos de tu vida.",
+    "id": "intro", "g": 1, "c": "blue", "ico": "chat",
+    "eyebrow": "Introducción",
+    "title": "Déjame hablarte de “tú”",
+    "text": "El autor abre el libro como una charla entre amigos: te invita a sentarte a su lado y te avisa que te dirá cosas que tal vez no quieras oír. No se presenta como motivador; dice que solo comparte ideas que ha vivido y comprobado.",
     "pts": [
-      "Piensa en tu trabajo, tus relaciones, tu descanso y tu tiempo.",
-      "Elige un aspecto que quieras observar mientras lees.",
-      "Compara estas reflexiones con el contenido del libro y con tu propia experiencia."
+      "Lee con calma, como si fuera una conversación y no una clase.",
+      "Si una idea te incomoda, anótala: puede ser la que más necesitas revisar.",
+      "Toma lo que te sirva y adáptalo a tu propia vida."
     ],
-    "q": "Ejemplo de Marginalia: alguien gana más, pero ya no tiene tiempo para su familia. ¿Está prosperando?"
+    "q": "¿Qué consejo te cuesta escuchar, aunque sabes que tiene algo de razón?"
   },
   {
-    "id": "d1",
-    "g": 2,
-    "c": "green",
-    "ico": "user",
+    "id": "metas", "g": 1, "c": "blue", "ico": "scale",
+    "eyebrow": "La meta del libro",
+    "title": "Tres partes de la prosperidad",
+    "text": "Para el autor, prosperar no es solo tener dinero. Habla de bienestar material, bienestar emocional y proyectos nobles, es decir, metas honestas de las que puedas sentirte orgulloso.",
+    "pts": [
+      "Bienestar material: tener lo que necesitas y un ingreso que te alcance.",
+      "Bienestar emocional: estar en paz contigo y con tu gente.",
+      "Proyectos nobles: lograr cosas buenas, sin hacer daño para conseguirlas."
+    ],
+    "q": "Ejemplo de Marginalia: alguien gana más, pero ya no tiene tiempo para su familia. ¿Está prosperando en las tres partes?"
+  },
+  {
+    "id": "d1", "g": 2, "c": "green", "ico": "funnel",
     "eyebrow": "Desafío 1",
+    "title": "Audita tu crisis",
+    "tipos": ALL,
+    "text": "Antes de resolver un problema hay que entenderlo. El autor propone revisar tu vida como un auditor: separar los problemas enredados, como cables en una caja, y ver de dónde viene cada uno.",
+    "pts": [
+      "Según su origen, una crisis puede venir de personas abusivas, de errores propios o de la adversidad natural (enfermedades, accidentes, desastres).",
+      "Según cómo llega, puede ser repentina (un golpe fuerte) o paulatina (un desgaste lento que casi nadie nota).",
+      "El ejercicio: anota tus actividades diarias, marca las que te causan estrés y clasifica cada una.",
+      "Usa la herramienta “Audita tu crisis” más abajo para encontrar tu tipo."
+    ],
+    "q": "Una crisis lenta puede pasar desapercibida durante meses. ¿Hay algo en tu rutina que te está desgastando sin que lo hayas nombrado?"
+  },
+  {
+    "id": "d2", "g": 2, "c": "green", "ico": "user",
+    "eyebrow": "Desafío 2",
     "title": "Recuerda quién eres",
-    "text": "Reflexión de Marginalia: antes de pensar en cuánto ganas, recuerda qué te importa y qué sabes hacer. Tu ingreso describe una parte de tu situación; no decide tu valor como persona.",
+    "tipos": ["1-A","2-A","3-A"],
+    "text": "Reflexión de Marginalia: cuando una crisis dura mucho, es fácil olvidar lo que sabes hacer y lo que te importa. Tu situación de hoy describe un momento; no decide tu valor como persona.",
     "pts": [
       "Nombra una habilidad que hayas aprendido con esfuerzo.",
-      "Recuerda un momento en que ayudaste a alguien con esa habilidad.",
-      "Elige algo que quieras mejorar sin compararte con los demás."
+      "Recuerda un momento difícil que ya superaste y qué te ayudó.",
+      "Escribe tres cosas que te definen y que ningún problema te puede quitar."
     ],
     "q": "Ejemplo: perdiste un trabajo, pero conservas tu experiencia. ¿Qué sabes hacer que podría servirte para empezar de nuevo?"
   },
   {
-    "id": "d2",
-    "g": 2,
-    "c": "green",
-    "ico": "eye",
-    "eyebrow": "Desafío 2",
-    "title": "Deja de atraer la pobreza",
-    "text": "Reflexión de Marginalia: este título puede servir para revisar costumbres que te dificultan avanzar. Tener problemas económicos no significa que los hayas deseado ni que todo dependa de tu actitud.",
-    "pts": [
-      "Distingue lo que puedes cambiar de lo que hoy está fuera de tus manos.",
-      "Observa una costumbre concreta, como evitar revisar tus gastos.",
-      "Piensa qué apoyo necesitas y a quién podrías pedirlo."
-    ],
-    "q": "Ejemplo: pospones abrir tus recibos porque te preocupan. ¿Qué paso pequeño te ayudaría a mirar tu situación con más calma?"
-  },
-  {
-    "id": "d3",
-    "g": 2,
-    "c": "green",
-    "ico": "leaf",
+    "id": "d3", "g": 2, "c": "green", "ico": "cloud",
     "eyebrow": "Desafío 3",
-    "title": "Comienza a atraer la riqueza",
-    "text": "Reflexión de Marginalia: podemos leer la idea de atraer riqueza como una invitación a crear oportunidades con acciones concretas. Desear un cambio puede darte dirección; practicar y buscar opciones permite empezar.",
+    "title": "Imagina",
+    "tipos": ["1-A","2-A","3-A"],
+    "text": "Reflexión de Marginalia: imaginar con detalle cómo quieres que sea tu vida te da una dirección. Una imagen clara ayuda a elegir el siguiente paso, aunque todavía no tengas todo resuelto.",
     "pts": [
-      "Identifica algo útil que puedas ofrecer a otras personas.",
-      "Busca una oportunidad pequeña para practicarlo o darlo a conocer.",
-      "Observa qué resultado tuviste y ajusta el siguiente intento."
+      "Describe cómo sería un día normal cuando la crisis haya pasado.",
+      "Fíjate en los detalles: dónde estás, con quién y qué haces.",
+      "Elige una acción pequeña que te acerque a esa imagen."
     ],
-    "q": "Ejemplo: sabes reparar bicicletas y tus vecinos necesitan ayuda. ¿Cómo podrías dar a conocer lo que haces de forma clara?"
+    "q": "Si ya hubieras salido de tu crisis, ¿qué sería lo primero que notarías distinto en tu día?"
   },
   {
-    "id": "d4",
-    "g": 2,
-    "c": "green",
-    "ico": "heart",
+    "id": "d4", "g": 2, "c": "green", "ico": "loop",
     "eyebrow": "Desafío 4",
-    "title": "Acepta que deseas ganar más",
-    "text": "Reflexión de Marginalia: puedes querer mejorar tus ingresos y seguir valorando lo que ya tienes. Ponerle un propósito a ese deseo ayuda a entender qué cambio buscas en tu vida.",
+    "title": "Cambia tu polaridad",
+    "tipos": ["2-A","2-B"],
+    "text": "Reflexión de Marginalia: la palabra polaridad hace pensar en un imán que atrae o aleja. Esta tarjeta invita a revisar si tu manera de hablar y de actuar acerca o aleja a las personas y las oportunidades.",
     "pts": [
-      "Escribe para qué te gustaría contar con más ingresos.",
-      "Distingue tus necesidades de lo que quieres solo para compararte con alguien.",
-      "Piensa qué tiempo y esfuerzo podrías dedicar sin descuidarte."
+      "Escucha cómo hablas de tu trabajo y de tu vida durante un día.",
+      "Cambia una queja por una propuesta concreta.",
+      "Observa cómo responde la gente cuando cambias tu actitud."
     ],
-    "q": "Ejemplo: quieres ganar más para estudiar. ¿Qué cambiaría si describes esa meta con claridad, en lugar de sentir culpa por desearla?"
+    "q": "Ejemplo: cada vez que te preguntan cómo estás, hablas de lo mal que te va. ¿Qué pasaría si compartieras un plan en lugar de una queja?"
   },
   {
-    "id": "d5",
-    "g": 3,
-    "c": "peach",
-    "ico": "scale",
+    "id": "d5", "g": 3, "c": "peach", "ico": "key",
     "eyebrow": "Desafío 5",
-    "title": "Corrige tu personalidad financiera",
-    "text": "Reflexión de Marginalia: observa cómo actúas al recibir, gastar y conversar sobre dinero. Aquí usamos la idea de personalidad financiera para hacer preguntas sobre tus costumbres, sin ponerte una etiqueta.",
+    "title": "Vuélvete acreedor(a)",
+    "tipos": ALL,
+    "text": "Reflexión de Marginalia: un acreedor es alguien a quien otros le deben, no alguien que debe. Esta tarjeta invita a pensar cómo pasar de vivir con deudas a tener algo guardado y dar más de lo que pides.",
     "pts": [
-      "Anota una decisión sobre dinero que hayas tomado esta semana.",
-      "Piensa qué sentías y qué información tenías al decidir.",
-      "Elige una costumbre que quieras observar mejor antes de cambiarla."
+      "Haz una lista de lo que debes y a quién.",
+      "Elige una deuda pequeña para empezar a pagarla.",
+      "Aparta una cantidad fija, aunque sea poca, cada vez que recibas dinero."
+    ],
+    "q": "Ejemplo: usas la tarjeta para cubrir gastos de cada mes. ¿Qué gasto podrías recortar para dejar de depender de ella?"
+  },
+  {
+    "id": "d6", "g": 3, "c": "peach", "ico": "heart",
+    "eyebrow": "Desafío 6",
+    "title": "Acepta que deseas ganar más",
+    "tipos": ["2-A","3-A"],
+    "text": "Reflexión de Marginalia: puedes querer mejorar tus ingresos sin sentir culpa. Ponerle un propósito claro a ese deseo te ayuda a trabajar por él con honestidad.",
+    "pts": [
+      "Escribe para qué te gustaría ganar más.",
+      "Distingue lo que necesitas de lo que quieres solo para aparentar.",
+      "Piensa qué tiempo y esfuerzo podrías dedicar sin descuidar a tu familia."
+    ],
+    "q": "Ejemplo: quieres ganar más para estudiar. ¿Qué cambiaría si lo dices en voz alta, en lugar de sentir culpa por desearlo?"
+  },
+  {
+    "id": "d7", "g": 3, "c": "peach", "ico": "brain",
+    "eyebrow": "Desafío 7",
+    "title": "Corrige tu personalidad financiera",
+    "tipos": ["2-A","3-A"],
+    "text": "Reflexión de Marginalia: cada persona tiene su manera de ganar, gastar y guardar dinero. Esta tarjeta invita a observar tus costumbres sin ponerte una etiqueta, para decidir cuál quieres corregir.",
+    "pts": [
+      "Anota una decisión sobre dinero que tomaste esta semana.",
+      "Piensa qué sentías cuando la tomaste: prisa, miedo, gusto o calma.",
+      "Elige una costumbre que quieras cambiar primero."
     ],
     "q": "Ejemplo: aceptas trabajos sin hablar del pago porque te incomoda. ¿Qué necesitarías preparar para tener esa conversación?"
   },
   {
-    "id": "d6",
-    "g": 3,
-    "c": "peach",
-    "ico": "steps",
-    "eyebrow": "Desafío 6",
+    "id": "d8", "g": 3, "c": "peach", "ico": "steps",
+    "eyebrow": "Desafío 8",
     "title": "No te conformes",
-    "text": "Reflexión de Marginalia: reconocer lo que has logrado no te impide buscar una mejora. Crecer puede ser aprender algo o cambiar una rutina, sin exigir que toda tu vida cambie de golpe.",
+    "tipos": ["2-A","3-A"],
+    "text": "Reflexión de Marginalia: agradecer lo que tienes no significa dejar de crecer. Puedes buscar una mejora con pasos pequeños, sin exigir que toda tu vida cambie de golpe.",
     "pts": [
-      "Elige una situación en la que te gustaría avanzar.",
+      "Elige una parte de tu vida en la que te gustaría avanzar.",
       "Describe una mejora pequeña que puedas intentar esta semana.",
-      "Revisa tu esfuerzo y tu descanso para que el intento sea sostenible."
+      "Revisa que el esfuerzo sea algo que puedas mantener."
     ],
     "q": "Ejemplo: repites una tarea que siempre te cuesta. ¿Qué podrías preguntar o aprender para hacerla un poco mejor?"
   },
   {
-    "id": "d7",
-    "g": 3,
-    "c": "peach",
-    "ico": "star",
-    "eyebrow": "Desafío 7",
+    "id": "d9", "g": 4, "c": "blue", "ico": "star",
+    "eyebrow": "Desafío 9",
     "title": "Eleva tu cotización",
-    "text": "Reflexión de Marginalia: dicho de forma sencilla, piensa cómo mejorar lo que puedes ofrecer en tu trabajo y cómo explicarlo. El precio de un servicio no mide el valor de una persona.",
+    "tipos": ["2-A","3-A"],
+    "text": "Reflexión de Marginalia: tu cotización es cuánto valen en el mercado tu trabajo y tus servicios. Para subirla, puedes mejorar lo que ofreces y aprender a explicarlo. Ese precio no mide tu valor como persona.",
     "pts": [
       "Identifica un problema que ayudas a resolver.",
       "Elige una habilidad que te permita resolverlo mejor.",
       "Prepara un ejemplo concreto para explicar lo que aportas."
     ],
-    "q": "Ejemplo: organizaste un proceso y el equipo tarda menos. ¿Cómo contarías esa mejora al hablar de tus responsabilidades?"
+    "q": "Ejemplo: organizaste un proceso y el equipo ahora tarda menos. ¿Cómo contarías esa mejora al pedir un aumento?"
   },
   {
-    "id": "d8",
-    "g": 3,
-    "c": "peach",
-    "ico": "chat",
-    "eyebrow": "Desafío 8",
+    "id": "d10", "g": 4, "c": "blue", "ico": "shield",
+    "eyebrow": "Desafío 10",
     "title": "Trabaja sin exhibir tus penas",
-    "text": "Reflexión de Marginalia: podemos preguntarnos cómo comunicar una dificultad sin descargarla sobre otra persona. Mantener una conversación respetuosa también permite pedir ayuda y expresar lo que necesitas.",
+    "tipos": ALL,
+    "text": "Reflexión de Marginalia: todos cargamos problemas, pero no hace falta mostrarlos en cada conversación de trabajo. Puedes pedir ayuda con respeto en el lugar adecuado y cuidar tu imagen profesional.",
     "pts": [
-      "Antes de hablar, identifica qué quieres resolver.",
-      "Explica la situación y la ayuda que necesitas con claridad.",
-      "Busca un espacio adecuado para recibir apoyo emocional."
+      "Antes de hablar de un problema, piensa qué quieres resolver.",
+      "Explica la situación y lo que necesitas con claridad.",
+      "Busca un espacio de confianza para desahogarte."
     ],
     "q": "Ejemplo: una dificultad personal retrasa una entrega. ¿Cómo avisarías a tiempo y propondrías un nuevo acuerdo?"
   },
   {
-    "id": "d9",
-    "g": 4,
-    "c": "blue",
-    "ico": "book",
-    "eyebrow": "Desafío 9",
+    "id": "d11", "g": 4, "c": "blue", "ico": "ear",
+    "eyebrow": "Desafío 11",
     "title": "Sé humilde con tu profesión",
-    "text": "Reflexión de Marginalia: saber mucho de algo no significa haber terminado de aprender. La humildad puede mostrarse al escuchar una sugerencia, reconocer un error o preguntar lo que no entiendes.",
+    "tipos": ["2-A","2-B"],
+    "text": "Reflexión de Marginalia: tener un título o experiencia no significa haber terminado de aprender. La humildad se nota al escuchar, al reconocer un error y al aceptar trabajos sencillos cuando hace falta.",
     "pts": [
       "Piensa qué podrías aprender de alguien con otra experiencia.",
       "Pide una sugerencia concreta sobre una tarea que haces.",
-      "Valora tu trabajo y el de otras personas, aunque sean diferentes."
+      "Valora todo trabajo honesto, aunque no sea el que imaginabas."
     ],
     "q": "Ejemplo: alguien que acaba de llegar propone una mejora. ¿Puedes escucharla antes de decidir si te sirve?"
   },
   {
-    "id": "d10",
-    "g": 4,
-    "c": "blue",
-    "ico": "mountain",
-    "eyebrow": "Desafío 10",
+    "id": "d12", "g": 4, "c": "blue", "ico": "mountain",
+    "eyebrow": "Desafío 12",
     "title": "Quita piedras de tus tobillos",
-    "text": "Reflexión de Marginalia: imagina una piedra que hace más pesado tu camino. Puedes usar esa imagen para reconocer un pendiente, una costumbre o un compromiso que hoy te está desgastando.",
+    "tipos": ["2-A"],
+    "text": "Reflexión de Marginalia: imagina que caminas con piedras atadas a los tobillos. Pueden ser pendientes, malos hábitos o compromisos que tú mismo aceptaste y que hoy te hacen más lento.",
     "pts": [
-      "Nombra una dificultad concreta, sin intentar resolver todo a la vez.",
-      "Separa lo que puedes hacer de lo que requiere ayuda.",
-      "Elige un primer paso pequeño y un momento para darlo."
+      "Nombra una piedra concreta, sin intentar resolver todo a la vez.",
+      "Separa lo que puedes hacer tú de lo que requiere ayuda.",
+      "Elige un primer paso y un día para darlo."
     ],
     "q": "Ejemplo: aceptas tareas que no puedes terminar y acumulas pendientes. ¿Qué compromiso necesitas aclarar antes de aceptar otro?"
   },
   {
-    "id": "d11",
-    "g": 4,
-    "c": "blue",
-    "ico": "brain",
-    "eyebrow": "Desafío 11",
-    "title": "Rompe los mitos del dinero",
-    "text": "Reflexión de Marginalia: algunas frases sobre el dinero se vuelven reglas porque las escuchamos muchas veces. Revisarlas ayuda a distinguir una experiencia personal de una afirmación sobre todo el mundo.",
-    "pts": [
-      "Escribe una frase que hayas aprendido sobre el dinero.",
-      "Busca una situación en la que esa frase no se cumpla.",
-      "Reescríbela de una manera más precisa y menos absoluta."
-    ],
-    "q": "Ejemplo: escuchaste que toda persona con dinero es deshonesta. ¿Conoces algún caso que te invite a revisar esa idea?"
-  },
-  {
-    "id": "d12",
-    "g": 4,
-    "c": "blue",
-    "ico": "key",
-    "eyebrow": "Desafío 12",
-    "title": "No te aferres a los bienes",
-    "text": "Reflexión de Marginalia: puedes cuidar tus cosas sin hacer que definan quién eres. Esta tarjeta invita a pensar qué disfrutas de ellas y cuánto espacio ocupan en tus decisiones.",
-    "pts": [
-      "Elige un objeto y describe para qué te sirve de verdad.",
-      "Observa si lo conservas por gusto, necesidad o miedo a lo que otros piensen.",
-      "Recuerda una experiencia valiosa que no dependió de comprar algo."
-    ],
-    "q": "Ejemplo: algo que compraste ya no te sirve, pero sientes que soltarlo sería fracasar. ¿Qué significa ese objeto para ti?"
-  },
-  {
-    "id": "d13",
-    "g": 5,
-    "c": "pink",
-    "ico": "people",
+    "id": "d13", "g": 5, "c": "pink", "ico": "eye",
     "eyebrow": "Desafío 13",
-    "title": "Fortalece solo a gente honesta",
-    "text": "Reflexión de Marginalia: al elegir con quién colaborar, fíjate en cómo actúa esa persona. La confianza puede crecer cuando hay acuerdos claros, información suficiente y respeto por los demás.",
+    "title": "Rompe los mitos del dinero",
+    "tipos": ["2-A","2-B"],
+    "text": "Reflexión de Marginalia: algunas frases sobre el dinero se vuelven reglas porque las escuchamos desde niños. Revisarlas te ayuda a ver si te protegen o te frenan.",
     "pts": [
-      "Pregunta lo que no entiendas antes de aceptar un acuerdo.",
-      "Observa si la persona cumple lo que promete y reconoce sus errores.",
+      "Escribe una frase que aprendiste sobre el dinero.",
+      "Busca un caso en el que esa frase no se cumpla.",
+      "Reescríbela de una manera más justa y menos absoluta."
+    ],
+    "q": "Ejemplo: escuchaste que toda persona con dinero es deshonesta. ¿Conoces a alguien que te haga dudar de esa idea?"
+  },
+  {
+    "id": "d14", "g": 5, "c": "pink", "ico": "leaf",
+    "eyebrow": "Desafío 14",
+    "title": "No te aferres a los bienes",
+    "tipos": ALL,
+    "text": "Reflexión de Marginalia: puedes cuidar tus cosas sin que definan quién eres. A veces soltar un objeto, un gasto o una apariencia libera espacio para salir adelante.",
+    "pts": [
+      "Elige un objeto y piensa para qué te sirve de verdad.",
+      "Observa si lo conservas por gusto, necesidad o miedo a lo que otros piensen.",
+      "Recuerda algo valioso que viviste y que no dependió de comprar algo."
+    ],
+    "q": "Ejemplo: pagas un auto que ya no puedes mantener, pero venderlo te da vergüenza. ¿Qué pesa más: el objeto o la tranquilidad?"
+  },
+  {
+    "id": "d15", "g": 5, "c": "pink", "ico": "people",
+    "eyebrow": "Desafío 15",
+    "title": "Fortalece sólo a gente noble",
+    "tipos": ["1-A","1-B"],
+    "text": "Reflexión de Marginalia: tu tiempo, tu dinero y tu apoyo tienen valor. Antes de dárselos a alguien, fíjate si esa persona actúa con honestidad y respeto.",
+    "pts": [
+      "Pregunta lo que no entiendas antes de aceptar un trato.",
+      "Observa si la persona cumple lo que promete.",
       "Date tiempo para decidir cuando alguien te presione."
     ],
-    "q": "Ejemplo: te ofrecen ganar rápido, pero evitan explicar cómo. ¿Qué necesitas aclarar antes de comprometerte?"
+    "q": "Ejemplo: te ofrecen ganar rápido, pero no te explican cómo. ¿Qué necesitas aclarar antes de comprometerte?"
   },
   {
-    "id": "d14",
-    "g": 5,
-    "c": "pink",
-    "ico": "smile",
-    "eyebrow": "Desafío 14",
-    "title": "Disfruta tus tesoros",
-    "text": "Reflexión de Marginalia: tus tesoros pueden incluir personas, recuerdos, capacidades y momentos tranquilos. Reconocerlos puede ayudarte a cuidar lo que ya da sentido a tu vida.",
+    "id": "d16", "g": 5, "c": "pink", "ico": "clock",
+    "eyebrow": "Desafío 16",
+    "title": "Disfruta tus tesoros durante este lustro",
+    "tipos": ALL,
+    "text": "Reflexión de Marginalia: un lustro son cinco años. Esta tarjeta invita a pensar qué personas y momentos valiosos tienes hoy y cómo disfrutarlos en los próximos años, sin dejarlo para “algún día”.",
     "pts": [
-      "Nombra tres cosas que agradeces hoy, grandes o pequeñas.",
-      "Elige una persona o actividad a la que quieras dedicar tiempo.",
-      "Haz espacio para disfrutar sin convertirlo en otra obligación."
+      "Nombra tres tesoros que tienes hoy y que no se compran.",
+      "Piensa cómo estarán esas personas o cosas dentro de cinco años.",
+      "Elige un momento sencillo para disfrutarlos esta semana."
     ],
-    "q": "Ejemplo: trabajas pensando en tu familia y casi no conviven. ¿Qué momento sencillo podrían compartir esta semana?"
+    "q": "Ejemplo: trabajas pensando en tus hijos, pero casi no los ves. ¿Qué podrían hacer juntos este fin de semana?"
   },
   {
-    "id": "d15",
-    "g": 5,
-    "c": "pink",
-    "ico": "globe",
-    "eyebrow": "Desafío 15",
+    "id": "d17", "g": 5, "c": "pink", "ico": "globe",
+    "eyebrow": "Desafío 17",
     "title": "Haz negocios que trasciendan",
-    "text": "Reflexión de Marginalia: podemos entender trascender como dejar algo útil que dure. Si trabajas o emprendes, piensa en el efecto que tiene lo que haces sobre clientes, compañeros y comunidad.",
+    "tipos": ALL,
+    "text": "Reflexión de Marginalia: trascender es dejar algo bueno que dure más allá de ti. Si trabajas o emprendes, piensa en el efecto que tiene lo que haces en tus clientes, compañeros y comunidad.",
     "pts": [
       "Describe a quién ayuda tu trabajo y de qué manera.",
-      "Observa si lo que prometes coincide con lo que entregas.",
-      "Elige una mejora que beneficie también a quienes trabajan contigo."
+      "Revisa si lo que prometes coincide con lo que entregas.",
+      "Elige una mejora que también beneficie a quienes trabajan contigo."
     ],
-    "q": "Ejemplo: vendes un producto y enseñas a cuidarlo para que dure. ¿Qué otra acción haría más útil tu trabajo para tus clientes?"
+    "q": "Ejemplo: vendes un producto y enseñas a cuidarlo para que dure. ¿Qué otra acción haría tu trabajo más útil para tus clientes?"
   },
   {
-    "id": "d16",
-    "g": 5,
-    "c": "pink",
-    "ico": "sun",
-    "eyebrow": "Desafío 16",
-    "title": "Acaba con la crisis para siempre",
-    "text": "Reflexión de Marginalia: el título plantea una aspiración muy amplia. Para llevarla a algo concreto, esta guía propone pensar cómo responder mejor a una dificultad; nadie puede evitar todos los imprevistos.",
+    "id": "epilogo", "g": 6, "c": "lav", "ico": "sun",
+    "eyebrow": "A manera de epílogo",
+    "title": "Cierre del libro",
+    "text": "Al terminar los diecisiete desafíos, el libro cierra con un epílogo. Léelo con tus notas a la mano y compara cómo estabas al empezar con cómo te sientes ahora.",
     "pts": [
-      "Recuerda una dificultad que hayas superado y qué te ayudó.",
-      "Identifica una señal que te permitiría pedir apoyo más pronto.",
-      "Escribe un primer paso posible si esa situación vuelve a presentarse."
+      "Vuelve a tu auditoría del Desafío 1 y revisa si tu tipo de crisis cambió.",
+      "Marca los desafíos que ya pusiste en práctica.",
+      "Elige uno para seguir trabajando el próximo mes."
     ],
-    "q": "Ejemplo: un cambio inesperado afecta tu trabajo. ¿Qué aprendiste de otras dificultades y con quién podrías conversar ahora?"
+    "q": "¿Qué desafío te costó más aceptar y por qué?"
   },
   {
-    "id": "esencial",
-    "g": 6,
-    "c": "lav",
-    "ico": "leaf",
+    "id": "esencial", "g": 6, "c": "lav", "ico": "leaf",
     "eyebrow": "Para recordar",
     "title": "Lo que puedes observar",
-    "text": "Después de recorrer los dieciséis desafíos, estas preguntas de Marginalia pueden ayudarte a ordenar tus notas.",
+    "text": "Después de recorrer los diecisiete desafíos, estas preguntas de Marginalia pueden ayudarte a ordenar tus notas.",
     "pts": [
-      "Tú: qué sabes hacer, qué quieres aprender y cómo te tratas.",
+      "Tú: qué sabes hacer, qué quieres lograr y cómo te tratas.",
       "Tu trabajo: qué aportas y qué podrías mejorar.",
-      "Tu dinero: qué costumbres e ideas quieres revisar.",
+      "Tu dinero: qué deudas, costumbres e ideas quieres revisar.",
       "Tu gente: con quién colaboras y cómo cuidas tus vínculos."
     ],
     "q": "¿Cuál de estos cuatro aspectos te gustaría seguir explorando?"
   },
   {
-    "id": "practicas",
-    "g": 6,
-    "c": "lav",
-    "ico": "flag",
+    "id": "practicas", "g": 6, "c": "lav", "ico": "flag",
     "eyebrow": "De la lectura a tu día",
     "title": "Un desafío para esta semana",
     "text": "Esta propuesta de Marginalia te ayuda a probar algo concreto. Elige un solo desafío para que sea fácil recordarlo.",
     "pts": [
-      "Escoge una reflexión de esta guía y escribe qué quieres probar.",
+      "Escoge un desafío y escribe qué quieres probar.",
       "Ponle un momento sencillo: al llegar al trabajo, al recibir tu pago o antes de dormir.",
       "Al final de la semana, anota qué pudiste hacer y qué cambiarías. No hace falta que salga perfecto."
     ],
-    "q": "Ejemplo de Marginalia: eliges no conformarte. ¿Qué harías distinto el lunes por la mañana?"
+    "q": "Ejemplo de Marginalia: eliges “Vuélvete acreedor(a)”. ¿Qué gasto revisarías el lunes por la mañana?"
   },
   {
-    "id": "resultado",
-    "g": 6,
-    "c": "lav",
-    "ico": "sun",
+    "id": "resultado", "g": 6, "c": "lav", "ico": "check",
     "eyebrow": "Tu lectura personal",
     "title": "¿Qué te llevas?",
     "text": "Cierra con tu propia opinión. Compara lo que leíste en el libro, lo que propone Marginalia y lo que tú has vivido.",
     "pts": [
-      "Explica una idea con tus palabras, sin intentar repetir una frase del libro.",
+      "Explica una idea con tus palabras, sin repetir una frase del libro.",
       "Piensa en una situación donde te serviría y otra donde necesitarías algo distinto.",
-      "Distingue lo que plantea el autor, lo que propone esta guía y lo que tú concluyes. Vuelve al libro si necesitas aclararlo."
+      "Distingue lo que plantea el autor, lo que propone esta guía y lo que tú concluyes."
     ],
-    "q": "¿Qué desafío te gustaría leer con calma directamente en el libro?"
+    "q": "¿Qué desafío te gustaría releer con calma directamente en el libro?"
   }
 ];
 
@@ -953,6 +986,7 @@ DATA.forEach((d,i)=>{
   b.style.setProperty('--tint',`var(--c-${d.c})`);b.style.setProperty('--edge',`var(--e-${d.c})`);
   const shown=d.pts.slice(0,2);
   b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
+    ${d.tipos?`<div class="tipos"><span>Crisis:</span>${d.tipos.map(t=>`<b>${t}</b>`).join('')}</div>`:''}
     ${d.text?`<p><b>${d.text}</b></p>`:''}
     <ul>${shown.map(p=>`<li>${p}</li>`).join('')}</ul>
     <div class="more"><span>${d.pts.length>2?`+${d.pts.length-2} más · `:''}Explorar →</span><span class="done-badge">✓ Explorado</span></div>`;
@@ -981,7 +1015,7 @@ function openCard(i){
   document.getElementById('dlg-eyebrow').textContent=d.eyebrow;
   document.getElementById('dlg-title').textContent=d.title;
   const all=d.text?[d.text,...d.pts]:d.pts;
-  document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="reading-point">${p}</div></li>`).join('');
+  document.getElementById('dlg-list').innerHTML=(d.tipos?`<li class="dlg-tipos" style="list-style:none"><div class="tipos"><span>Ejercicio sugerido para crisis tipo:</span>${d.tipos.map(t=>`<b>${t}</b>`).join('')}</div></li>`:'')+all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="reading-point">${p}</div></li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
   dlg.querySelector('.dlg-body').scrollTop=0;
@@ -1039,8 +1073,8 @@ const QS=[
   ['“Me quejo con los clientes de lo mal que me va.”','aleja','Puedes explicar una dificultad y pedir apoyo con respeto, sin descargarla sobre un cliente.'],
   ['“Anoto mis gastos para saber a dónde va mi dinero.”','acerca','Conocer tus números te ayuda a decidir mejor.'],
   ['“El dinero es malo; la gente rica siempre es deshonesta.”','aleja','Es una idea general que puede frenarte sin que lo notes.'],
-  ['“Elijo hacer negocios solo con gente honesta.”','acerca','Rodearte de personas confiables protege tu trabajo y tu tranquilidad.'],
-  ['“Pido prestado para comprar algo que solo quiero presumir.”','aleja','Una deuda para aparentar pesa más de lo que da.'],
+  ['“Elijo apoyar y hacer negocios solo con gente noble.”','acerca','Rodearte de personas confiables protege tu trabajo y tu tranquilidad.'],
+  ['“Pido prestado para comprar algo que solo quiero presumir.”','aleja','Una deuda para aparentar te aleja de ser acreedor(a).'],
   ['“Aparto tiempo para disfrutar con mi familia.”','acerca','El bienestar completo también incluye a las personas que quieres.']
 ];
 let qn=0,score=0;
@@ -1062,6 +1096,24 @@ opts.forEach(o=>o.onclick=()=>{
 });
 qNext.onclick=()=>{if(qn>=QS.length){qn=0;score=0}else qn++;showQ()};
 showQ();
+
+/* Audita tu crisis */
+const CX_ORIGEN={1:'personas abusivas',2:'errores propios',3:'la adversidad natural'};
+const CX_FORMA={A:'paulatina (por desgaste)',B:'repentina (por impacto)'};
+let cx=store.get('tdp-cx',{});
+function drawCx(){
+  ['origen','forma'].forEach(k=>document.querySelectorAll('#cx-'+k+' button').forEach(b=>b.setAttribute('aria-pressed',String(cx[k]===b.dataset.v))));
+  const list=document.getElementById('cx-list');
+  if(!cx.origen||!cx.forma){document.getElementById('cx-code').textContent='?';list.innerHTML='';return}
+  const code=cx.origen+'-'+cx.forma;
+  document.getElementById('cx-code').textContent=code;
+  const recs=DATA.filter(d=>d.tipos&&d.tipos.includes(code)&&d.id!=='d1');
+  document.getElementById('cx-desc').innerHTML=`Tu crisis es <b>${CX_FORMA[cx.forma]}</b> y viene de <b>${CX_ORIGEN[cx.origen]}</b>. Según el índice del libro, estos ${recs.length} desafíos tienen ejercicios para tu tipo de crisis:`;
+  list.innerHTML=recs.map(d=>`<button type="button" data-id="${d.id}">${d.eyebrow.replace('Desafío ','')}. ${d.title}</button>`).join('');
+  [...list.children].forEach(b=>b.onclick=()=>openCard(DATA.findIndex(d=>d.id===b.dataset.id)));
+}
+['origen','forma'].forEach(k=>document.querySelectorAll('#cx-'+k+' button').forEach(b=>b.onclick=()=>{cx[k]=b.dataset.v;store.set('tdp-cx',cx);drawCx()}));
+drawCx();
 
 /* Journal */
 const hint=document.getElementById('saved-hint');
