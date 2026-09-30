@@ -534,6 +534,10 @@ document.getElementById('replay-intro').addEventListener('click', () => {
 
 /* ================= DATOS Y SITIO ================= */
 const BOOKS = [
+  { id:"biblia", file:"biblia.html", title:"La Biblia", full:"La Biblia", author:"Diversos autores", cat:"Espiritualidad",
+    blurb:"Una guía para empezar a leer la Biblia católica, conocer cada uno de sus libros y reflexionar con calma.", motto:"Lee, comprende, reflexiona",
+    q:"¿Qué pasaje te gustaría comprender mejor?",
+    cover:{bg:"#344f4b", ink:"#efe6d6", art:"scripture"} },
   { id:"ahora", file:"el-poder-del-ahora.html", title:"El poder del ahora", full:"El Poder del Ahora", author:"Eckhart Tolle", cat:"Espiritualidad",
     blurb:"Una invitación a vivir el presente como el único lugar donde la vida realmente sucede.", motto:"Fíjate, pregunta, compara",
     q:"¿Qué cambia cuando pones atención a lo que pasa ahorita?",
@@ -576,6 +580,7 @@ function wrapTitle(t, max){
 function coverSVG(b){
   const {bg,ink,art}=b.cover;
   const arts={
+    scripture:`<path d="M38 128q31-14 62 3 31-17 62-3v87q-31-13-62 3-31-16-62-3z" fill="none" stroke="#e9d9b8" stroke-width="2.5"/><path d="M100 131v87M52 148q17-5 34 3M52 162q17-5 34 3M114 151q17-8 34-3M114 165q17-8 34-3" fill="none" stroke="#e9d9b8" stroke-width="1.5"/><path d="M95 225v23l5-4 5 4v-23" fill="#cb9972"/>`,
     mountains:`<circle cx="100" cy="92" r="26" fill="#c77e62"/>
       <path d="M0 170c30-30 50-40 80-26s50 4 70-14 40-10 50-4v74H0z" fill="#9aa88f"/>
       <path d="M0 190c40-26 70-10 100-18s60-26 100-8v56H0z" fill="#d1a18a"/>

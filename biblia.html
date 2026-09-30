@@ -1,0 +1,3144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Independent study guide notice */
+.guide-note{max-width:900px;margin:4px auto 28px;padding:16px 20px;border:1.5px solid var(--line);
+  border-radius:20px;background:var(--paper);box-shadow:var(--shadow);text-align:center}
+.guide-note strong{font-family:var(--f-display)}
+.guide-note p{margin:4px 0;color:var(--muted);font-size:.94rem}
+.source-note{width:100%;margin:0;padding:0;
+  color:var(--muted);font-size:.88rem;line-height:1.55}
+.source-note strong{color:var(--ink)}
+
+
+footer .guide-credits{margin-top:18px;color:var(--muted);font-size:.88rem;line-height:1.65}
+footer .credits-author{margin:0 0 8px;color:var(--ink)}
+footer .credits-author strong{font-weight:600}
+footer .credits-note{margin:0}
+footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.02em}
+
+.dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
+</style>
+<script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>La Biblia · Guía de lectura y reflexiones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: mapa mental de 3 columnas con el sol central; en móvil una sola columna. Pastel acuarela. */
+:root{
+  --bg:#f6f4ee; --paper:#fffdf8; --ink:#1f2a3a; --muted:#566273; --line:#d9d4c7;
+  --sun:#fbe7a1; --sun-2:#f7c95c; --accent:#d9406b;
+  --c-blue:#dcecfb; --c-pink:#fbe0e6; --c-green:#dff1e2; --c-peach:#fde6cc; --c-lav:#e8e0f7; --c-yellow:#fdf1c7; --c-mint:#d9f1ea; --c-rose:#fcdde3;
+  --e-blue:#3a7bd5; --e-pink:#d9406b; --e-green:#3f9b5a; --e-peach:#e07b2a; --e-lav:#7d5bc4; --e-yellow:#c99a12; --e-mint:#2f9a82; --e-rose:#c53a5a;
+  --shadow:0 2px 0 rgba(31,42,58,.06),0 8px 24px -12px rgba(31,42,58,.18);
+  --f-display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131722; --paper:#1b2130; --ink:#eef1f6; --muted:#a8b2c3; --line:#2e3748;
+  --sun:#4a3d17; --sun-2:#e0b240; --accent:#f07a9a;
+  --c-blue:#1c2a40; --c-pink:#3a2130; --c-green:#1c3326; --c-peach:#3a2a1a; --c-lav:#2a2340; --c-yellow:#383016; --c-mint:#17332d; --c-rose:#3b1f28;
+  --e-blue:#79aef5; --e-pink:#f07a9a; --e-green:#7ccf93; --e-peach:#f3a766; --e-lav:#b39cf0; --e-yellow:#e9c75a; --e-mint:#6fd1b8; --e-rose:#f38aa3;
+  --shadow:0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131722; --paper:#1b2130; --ink:#eef1f6; --muted:#a8b2c3; --line:#2e3748;
+  --sun:#4a3d17; --sun-2:#e0b240; --accent:#f07a9a;
+  --c-blue:#1c2a40; --c-pink:#3a2130; --c-green:#1c3326; --c-peach:#3a2a1a; --c-lav:#2a2340; --c-yellow:#383016; --c-mint:#17332d; --c-rose:#3b1f28;
+  --e-blue:#79aef5; --e-pink:#f07a9a; --e-green:#7ccf93; --e-peach:#f3a766; --e-lav:#b39cf0; --e-yellow:#e9c75a; --e-mint:#6fd1b8; --e-rose:#f38aa3;
+  --shadow:0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1180px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:12px}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding-block:40px 20px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.01em;display:inline-block;padding:4px 28px 0;background:linear-gradient(100deg,transparent 2%,var(--c-mint) 8%,var(--c-blue) 60%,transparent 98%);border-radius:40px}
+.hero .sub{font-family:var(--f-display);font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(.8rem,1.8vw,1.05rem);margin-top:10px;color:var(--muted)}
+.author{display:inline-block;margin-top:12px;padding:4px 18px;border-radius:999px;background:var(--c-pink);font-family:var(--f-display);font-weight:700;letter-spacing:.08em}
+.hand{font-family:var(--f-hand);font-size:1.6rem;line-height:1.1;color:var(--ink)}
+.corner{position:absolute;top:34px;max-width:170px}
+.corner.l{left:0;transform:rotate(-8deg);text-align:left}
+.corner.r{right:0;transform:rotate(8deg);width:130px;height:130px;border-radius:50%;background:var(--sun);display:grid;place-items:center;text-align:center;padding:12px}
+@media (max-width:860px){.corner{display:none}}
+
+/* Progress */
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 20px;margin:18px auto 26px;font-weight:600;color:var(--muted)}
+.track{width:220px;max-width:60vw;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--e-green),var(--e-yellow));transition:width .5s ease}
+.chip{border:1.5px solid var(--line);background:var(--paper);padding:6px 14px;border-radius:999px;font-weight:700;font-size:.9rem}
+.chip:hover{border-color:var(--accent)}
+
+/* Map: cuatro etapas en orden de lectura */
+.map{display:grid;gap:40px}
+.g-title{display:flex;align-items:center;gap:12px;font-size:clamp(1.4rem,2.6vw,1.8rem);font-weight:800;margin-bottom:14px}
+.g-n{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:1.1rem;flex:none}
+.g-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:stretch}
+.card{position:relative;z-index:1;text-align:left;border:0;border-radius:24px;padding:18px 20px 16px;background:var(--tint);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-3px) rotate(-.3deg)}
+.card .top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.card .eyebrow{font-family:var(--f-display);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--edge)}
+.card h3{font-size:1.28rem;font-weight:700}
+.card .ico{flex:none;width:46px;height:46px;color:var(--edge)}
+.card ul{margin:2px 0 0;padding-left:18px;font-size:.95rem;color:var(--ink)}
+.card li{margin-block:3px}
+.card li::marker{color:var(--edge)}
+.card .more{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:.85rem;color:var(--edge);padding-top:6px}
+.done-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:99px;background:var(--paper);font-size:.78rem;visibility:hidden}
+.card.is-done .done-badge{visibility:visible}
+.card.is-done{outline:2.5px dashed var(--edge);outline-offset:-7px}
+.card p{margin:0;font-size:.97rem}
+
+.center{position:relative;z-index:1;border-radius:24px;
+  background:radial-gradient(circle at 50% 40%,var(--c-yellow),var(--sun) 70%);box-shadow:0 0 0 10px color-mix(in srgb,var(--sun) 45%,transparent),0 0 60px 10px color-mix(in srgb,var(--sun-2) 30%,transparent);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:8px}
+.center h2{font-size:clamp(1.8rem,3vw,2.3rem);font-weight:800}
+.center h2 span{display:block;font-size:1.35em;line-height:.9}
+.center p{margin:0;font-weight:600;max-width:26ch}
+@keyframes breathe{50%{transform:scale(1.025)}}
+
+.quote{align-self:center;text-align:center;padding:10px;min-width:0}
+.quote .hand{font-size:1.7rem}
+.quote .by{font-family:var(--f-hand);font-size:1.4rem;color:var(--muted);margin-top:6px}
+.quote button{margin-top:10px}
+
+/* Sections */
+section.block{margin-top:64px}
+.block-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-bottom:18px}
+.block-head h2{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800}
+.block-head p{margin:0;color:var(--muted);max-width:52ch}
+
+.breath{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:center;padding:26px;border:1px solid var(--line);border-radius:20px;background:var(--paper)}
+.orb-wrap{text-align:center}.orb{width:136px;height:136px;margin:0 auto 15px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:var(--c-mint)}.phase{font-size:.9rem;color:var(--muted)}.seg{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.seg button{padding:8px 14px;border:1px solid var(--line);border-radius:20px;background:var(--paper);color:var(--ink)}.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.controls{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0}.stats{color:var(--muted);font-size:.9rem}@media(max-width:600px){.breath{grid-template-columns:1fr;padding:20px}}
+/* Quiz */
+.quiz{background:var(--paper);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+.q-count{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.q-text{font-family:var(--f-hand);font-size:clamp(1.8rem,3.6vw,2.4rem);line-height:1.15;margin:10px 0 18px;min-height:2.5em}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.q-opts{grid-template-columns:1fr}}
+.opt{border:2px solid var(--line);border-radius:20px;padding:16px;text-align:left;background:var(--bg);display:flex;gap:12px;align-items:center;font-weight:700;font-size:1.05rem}
+.opt small{display:block;font-weight:600;color:var(--muted);font-size:.85rem}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt.right{border-color:var(--e-green);background:var(--c-green)}
+.opt.wrong{border-color:var(--e-rose);background:var(--c-rose)}
+.opt svg{width:36px;height:36px;flex:none}
+.feedback{margin-top:14px;min-height:3em;font-weight:600}
+.feedback b{color:var(--accent)}
+
+/* Journal */
+.journal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:820px){.journal{grid-template-columns:1fr}}
+.jcard{background:var(--paper);border-radius:22px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0}
+.jcard label{font-family:var(--f-hand);font-size:1.5rem;line-height:1.1}
+.jcard textarea{width:100%;min-height:110px;resize:vertical;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--bg);color:var(--ink);font:inherit}
+.hint{font-size:.85rem;color:var(--muted)}
+
+/* Footer */
+footer{margin-top:30px;display:block}
+@media (max-width:560px){.foot-msg{text-align:left}}
+
+/* Dialog */
+dialog{border:0;border-radius:28px;padding:0;max-width:min(640px,calc(100vw - 32px));width:100%;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog::backdrop{background:rgba(20,25,35,.45);backdrop-filter:blur(3px)}
+.dlg-head{background:var(--tint);padding:24px 26px 18px;display:flex;gap:16px;align-items:flex-start}
+.dlg-head .ico{width:58px;height:58px;color:var(--edge);flex:none}
+.dlg-head h3{font-size:1.7rem}
+.dlg-body{padding:18px 26px 24px}
+.dlg-body ol{padding-left:0;list-style:none;margin:0;display:grid;gap:10px;counter-reset:p}
+.dlg-body li{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:var(--bg)}
+.dlg-body li::before{counter-increment:p;content:counter(p);flex:none;width:26px;height:26px;border-radius:50%;background:var(--tint);color:var(--edge);font-weight:800;display:grid;place-items:center;font-size:.85rem}
+@media (prefers-reduced-motion:no-preference){.dlg-body li{animation:rise .45s ease both}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.reflect{margin-top:16px;padding:14px 16px;border-radius:16px;border:2px dashed var(--edge)}
+.reflect .hand{font-size:1.45rem}
+.dlg-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:0 26px 24px}
+.x{border:0;background:transparent;margin-left:auto;font-size:1.6rem;line-height:1;padding:4px 8px;color:var(--ink)}
+</style>
+
+<style>
+/* Marginalia: diseño a juego con la biblioteca (solo estilo) */
+:root{
+  --bg:#f3ede2; --paper:#f9f5ee; --ink:#1e1a17; --muted:#7a6f63; --line:#dbd1c1;
+  --sun:#efe4d3; --sun-2:#d9bf98; --accent:#c4552f; --blue:#23408e;
+  --c-blue:#e5e5ea; --c-pink:#f3dfd4; --c-green:#e3e6d8; --c-peach:#f4e2d2; --c-lav:#ebe2e4; --c-yellow:#f3e9d3; --c-mint:#e0e6dc; --c-rose:#f2ddd6;
+  --e-blue:#23408e; --e-pink:#c4552f; --e-green:#56704a; --e-peach:#b8572c; --e-lav:#6b4e7a; --e-yellow:#8f6a24; --e-mint:#3f6f5f; --e-rose:#a8382f;
+  --shadow:0 1px 0 rgba(60,40,20,.04),0 18px 34px -20px rgba(60,40,20,.35);
+  --grain:.5;
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Fraunces",Georgia,serif;
+  --f-hand:"Caveat",cursive;
+  --f-mono:"Space Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#191613; --paper:#211d19; --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --sun:#2a241f; --sun-2:#8a6f4c; --accent:#e07a55; --blue:#93a9ea;
+  --c-blue:#25242a; --c-pink:#33251f; --c-green:#252a21; --c-peach:#33271e; --c-lav:#2c2429; --c-yellow:#2e281d; --c-mint:#222a25; --c-rose:#332220;
+  --e-blue:#93a9ea; --e-pink:#e07a55; --e-green:#a3bb95; --e-peach:#e8a071; --e-lav:#c3a3d6; --e-yellow:#dcb66e; --e-mint:#86c4ae; --e-rose:#ea8b80;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#191613; --paper:#211d19; --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --sun:#2a241f; --sun-2:#8a6f4c; --accent:#e07a55; --blue:#93a9ea;
+  --c-blue:#25242a; --c-pink:#33251f; --c-green:#252a21; --c-peach:#33271e; --c-lav:#2c2429; --c-yellow:#2e281d; --c-mint:#222a25; --c-rose:#332220;
+  --e-blue:#93a9ea; --e-pink:#e07a55; --e-green:#a3bb95; --e-peach:#e8a071; --e-lav:#c3a3d6; --e-yellow:#dcb66e; --e-mint:#86c4ae; --e-rose:#ea8b80;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}
+
+body{font-size:17px;line-height:1.55}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:var(--grain);mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .3  0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+h1,h2,h3{font-weight:400}
+.hand{font-size:1.5rem;line-height:1.15;color:var(--accent)}
+
+/* Trazos a mano */
+.mark{position:relative;display:inline-block;white-space:nowrap;isolation:isolate}
+.mark svg{position:absolute;left:-8px;top:-8px;width:calc(100% + 16px);height:calc(100% + 16px);overflow:visible;pointer-events:none}
+.mark path{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s cubic-bezier(.6,0,.2,1) .35s}
+.mark.ci path{stroke:var(--blue)}
+.in .mark path,.mark.in path{stroke-dashoffset:0}
+
+/* Aparición suave */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* Encabezado */
+.hero{padding-block:56px 26px;position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;left:50%;top:50%;width:min(280px,64vw);aspect-ratio:1;translate:-50% -50%;z-index:-1;border-radius:50%;
+  background:color-mix(in srgb,var(--accent) 6%,transparent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
+  outline:1px dashed color-mix(in srgb,var(--accent) 35%,transparent);outline-offset:10px;animation:mg-breathe 8s ease-in-out infinite}
+.guide-note{position:relative;z-index:1}
+@keyframes mg-breathe{0%,100%{transform:scale(.92)}50%{transform:scale(1)}}
+.hero h1{font-weight:400;font-size:clamp(2.8rem,6.5vw,5rem);background:none;padding:0;letter-spacing:-.015em}
+.hero h1 .mark{font-style:italic;font-weight:300;color:var(--accent)}
+.hero .sub{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:1.2rem;font-weight:300;margin-top:12px;color:var(--muted)}
+.hero .sub cite{font-style:italic;color:var(--ink)}
+.author{background:none;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.22em;font-weight:400;color:var(--muted);padding:0;margin-top:16px}
+.author::before,.author::after{content:"";display:inline-block;width:28px;border-top:1px dashed var(--muted);vertical-align:middle;margin:0 12px}
+.corner.r{background:var(--c-peach)}
+.corner .hand,.corner.l{color:var(--accent)}
+
+.guide-note{border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:none}
+.guide-note strong{font-weight:400;font-size:1.3rem}
+
+/* Progreso y chips */
+.bar{font-weight:400;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.track{height:6px}
+.fill{background:linear-gradient(90deg,var(--blue),var(--accent))}
+.chip{border:1.5px solid var(--line);background:transparent;font-family:var(--f-mono);font-weight:400;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;transition:border-color .2s}
+.chip:hover{border-color:var(--ink)}
+
+/* Mapa */
+.g-title{font-weight:400;font-size:clamp(1.7rem,2.8vw,2.2rem)}
+.g-n{background:none;color:var(--accent);border:1.5px solid var(--accent);font-family:var(--f-hand);font-weight:700;font-size:1.4rem;width:38px;height:38px}
+.card{border-radius:14px;border:1px solid color-mix(in srgb,var(--edge) 16%,transparent);box-shadow:none;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-4px) rotate(-.5deg);box-shadow:var(--shadow)}
+.card:nth-child(even):hover{transform:translateY(-4px) rotate(.5deg)}
+.card .eyebrow{font-family:var(--f-mono);font-weight:400;font-size:.66rem;letter-spacing:.2em}
+.card h3{font-weight:600;font-size:1.35rem}
+.card ul{font-size:1rem}
+.card .more{font-family:var(--f-hand);font-weight:700;font-size:1.2rem}
+.card.is-done{outline:1.5px dashed var(--edge)}
+.done-badge{font-family:var(--f-mono);font-size:.68rem}
+
+.center{border-radius:16px;background:var(--sun);box-shadow:none;border:1px solid var(--line)}
+.center h2{font-weight:400;font-size:clamp(2rem,3.2vw,2.6rem)}
+.center h2 span{font-style:italic;font-weight:300;color:var(--accent);font-size:1.2em}
+.center p{font-weight:400}
+.quote .hand{font-size:1.8rem}
+.quote .by{font-family:var(--f-mono);font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* Secciones */
+.block-head h2{font-weight:400;font-size:clamp(2rem,3.5vw,2.6rem)}
+.block-head p{font-size:1.08rem;font-style:italic;font-weight:300}
+.breath,.scan,.quiz{border-radius:16px;box-shadow:none;background:var(--paper);border:1px solid var(--line)}
+.orb{background:radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--accent) 45%,var(--paper)),var(--accent));box-shadow:0 0 0 14px color-mix(in srgb,var(--accent) 14%,transparent)}
+.phase{color:var(--accent)}
+.scan-out{border-radius:14px;background:var(--bg);border:1px dashed var(--line)}
+.scan-out h3{font-weight:400;font-size:1.6rem}
+.hb-field label,.srow label{font-weight:600}
+.hb-field input{border-radius:10px;border:1.5px solid var(--line);background:var(--bg)}
+.days button{border-width:1.5px;font-weight:400;font-family:var(--f-mono);font-size:.95rem;border-color:var(--accent);color:var(--ink)}
+.days button[aria-pressed="true"]{background:var(--accent);color:var(--paper)}
+.btn{border-radius:999px;background:var(--ink);color:var(--bg);font-family:var(--f-mono);font-weight:400;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;transition:background .2s,transform .2s}
+.btn:hover{opacity:1;background:var(--accent);color:var(--paper);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.seg{border-width:1.5px}
+.seg button{font-family:var(--f-mono);font-weight:400;font-size:.74rem;letter-spacing:.06em}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.q-count{font-family:var(--f-mono);font-weight:400;font-size:.78rem;letter-spacing:.1em}
+.q-text{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(1.8rem,3.4vw,2.4rem)}
+.opt{border:1.5px solid var(--line);border-radius:12px;background:var(--bg);font-weight:600;font-size:1.1rem}
+.opt small{font-weight:400;font-size:.92rem}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.feedback{font-weight:400;font-size:1.08rem}
+.feedback b{color:var(--accent)}
+.jcard{border-radius:16px;box-shadow:none;background:var(--paper);border:1px solid var(--line)}
+.jcard label{font-family:var(--f-hand);font-weight:700;font-size:1.6rem;color:var(--accent)}
+.jcard textarea{border-radius:10px;border:1.5px solid var(--line);background:var(--bg)}
+.hint{font-style:italic}
+
+/* Pie */
+footer{border-top:1px solid var(--line);padding-top:20px}
+
+/* Ventana */
+dialog{border-radius:16px}
+.dlg-head h3{font-weight:600;font-size:1.9rem}
+#dlg-eyebrow{font-family:var(--f-mono)!important;font-weight:400!important;font-size:.7rem;letter-spacing:.2em!important}
+.dlg-body li{border-radius:10px}
+.dlg-body li::before{font-family:var(--f-hand);font-weight:700;font-size:1.05rem}
+.reflect{border:1.5px dashed var(--edge);border-radius:12px}
+.reflect .hand{font-size:1.45rem}
+
+@media (prefers-reduced-motion:reduce){.hero::before{animation:none}.rv{opacity:1;transform:none;transition:none}.mark path{stroke-dashoffset:0;transition:none}}
+</style>
+<style>
+/* Marginalia: navegación entre libros */
+.mg-nav{position:sticky;top:0;z-index:50;margin-inline:-16px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.mg-nav .in{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.mg-brand{display:inline-flex;gap:.02em;text-decoration:none;color:var(--ink);font-size:1.4rem;line-height:1;white-space:nowrap}
+.mg-brand span{display:inline-block;padding:.05em .07em;min-width:.55em;text-align:center;transition:transform .3s}
+.mg-brand .s0{font-family:var(--f-display);font-weight:700}
+.mg-brand .s1{font-family:var(--f-hand);font-weight:700;color:var(--accent);font-size:1.12em}
+.mg-brand .s2{font-family:var(--f-mono);font-weight:700;background:var(--blue);color:var(--bg)}
+.mg-brand .s3{font-family:var(--f-display);font-style:italic;color:var(--blue)}
+.mg-brand .s4{font-family:var(--f-display);font-weight:300;background:var(--accent);color:var(--bg)}
+.mg-brand .s6{font-family:var(--f-mono);background:var(--ink);color:var(--bg)}
+.mg-back{margin-left:auto;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);font-size:1rem;padding:6px 10px;border-radius:999px;transition:color .2s}
+.mg-back:hover{color:var(--accent)}
+.mg-menu{position:relative}
+.mg-menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);border-radius:999px;padding:7px 16px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;user-select:none;transition:background .2s}
+.mg-menu summary:hover{background:var(--accent)}
+.mg-menu summary::-webkit-details-marker{display:none}
+.mg-menu summary svg{width:14px;height:14px;transition:transform .2s ease}
+.mg-menu[open] summary svg{transform:rotate(180deg)}
+.mg-menu ul{position:absolute;right:0;top:calc(100% + 8px);width:min(320px,calc(100vw - 32px));margin:0;padding:8px;list-style:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transform-origin:top right;animation:mg-pop .16s ease-out}
+@keyframes mg-pop{from{opacity:0;transform:scale(.97) translateY(-4px)}}
+.mg-menu li a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.25}
+.mg-menu li a:hover{background:var(--bg)}
+.mg-menu li a small{display:block;color:var(--muted);font-size:.85rem;font-style:italic}
+.mg-menu li a[aria-current="page"]{background:var(--c-peach);color:var(--accent)}
+.mg-menu li.sep{border-top:1px dashed var(--line);margin:6px 4px}
+.mg-pager{max-width:1180px;margin:56px auto 0;display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+.mg-pager a{text-decoration:none;color:var(--ink);padding:14px 18px;border-radius:14px;background:var(--paper);border:1px solid var(--line);line-height:1.25;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.mg-pager a:hover{transform:translateY(-3px) rotate(-.4deg);box-shadow:var(--shadow)}
+.mg-pager a small{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.mg-pager a b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.mg-pager .nx{text-align:right}
+.mg-pager .home{background:var(--ink);color:var(--bg);border-color:var(--ink);padding:10px 18px;border-radius:999px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+.mg-pager .home:hover{background:var(--accent);border-color:var(--accent)}
+@media (max-width:640px){
+  .mg-nav .in{flex-wrap:wrap;gap:8px 12px}
+  .mg-brand{margin-right:auto}
+  .mg-back{margin-left:0;padding:6px 0;font-size:.9rem}
+  .mg-menu{margin-left:auto}
+  .mg-menu summary{font-size:.65rem;padding:7px 11px;letter-spacing:.03em}
+  .mg-back span{display:inline}
+  .mg-brand{font-size:1.15rem}
+  .mg-pager{grid-template-columns:1fr 1fr}
+  .mg-pager .home{grid-column:1/-1;grid-row:1;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.mg-menu ul{animation:none}.mg-pager a{transition:none}}
+</style>
+<link rel="stylesheet" href="feedback.css">
+<script src="feedback.js" defer></script>
+<style>.reading-source{font-size:.88rem;line-height:1.7;color:var(--muted);padding-bottom:14px;border-bottom:1px dashed var(--line)}.reading-source a,.source-note a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}.orb span{font-variant-numeric:tabular-nums;font-size:1.3rem}.guide-note p{max-width:76ch;margin:6px auto}.btn:disabled{opacity:.55;cursor:default}.map{scroll-margin-top:100px}</style><style>
+/* A long guide with a quiet, browsable outline. */
+[hidden]{display:none!important}
+.section-intro{max-width:76ch;color:var(--muted);line-height:1.7;margin:0 0 22px}
+.map>.group{margin-bottom:44px}.map .card{min-height:0;text-align:left}.map .card p{font-weight:400;line-height:1.65}.map .card .more{margin-top:auto;padding-top:14px}
+.map #g-1 .card p{font-size:1rem}.map #g-1{grid-template-columns:repeat(3,minmax(0,1fr))}
+.book-directory{margin:60px 0;scroll-margin-top:100px}.directory-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:25px}.directory-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:500;margin:8px 0}.directory-head p{color:var(--muted);line-height:1.6}
+.search-label{display:block;font-size:.95rem;margin-bottom:8px}.search-row{display:flex;gap:12px}.search-row input{width:100%;min-width:0;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:15px 18px;border-radius:12px;font:inherit;font-size:1rem}.search-row input:focus-visible{outline:2px solid var(--e-blue);outline-offset:3px}.directory-tools{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:14px 0 30px}.directory-tools p{font-size:.9rem;color:var(--muted)}
+.testament-label{font-family:var(--f-mono);letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;font-weight:400;color:var(--muted);margin:30px 0 15px}
+.book-group{border-top:1px solid var(--line);margin:0!important;padding:0!important}.book-group>summary{display:flex;align-items:center;gap:20px;cursor:pointer;list-style:none;padding:23px 4px}.book-group>summary::-webkit-details-marker,.reflection-group>summary::-webkit-details-marker{display:none}.section-number{font-family:var(--f-mono);font-size:.85rem;color:var(--muted)}.section-name{display:grid;gap:5px;flex:1}.section-kicker{font-size:.88rem;color:var(--muted)}.section-title{font-family:var(--f-display);font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.25}.section-count{font-size:.9rem;color:var(--muted);white-space:nowrap}.section-toggle{font-size:1.7rem;width:24px;text-align:center;color:var(--e-peach)}.book-group[open]>summary .section-toggle{transform:rotate(45deg)}.book-group-content{padding:8px 0 28px}.book-group .g-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.book-directory>.hint{margin-top:25px;line-height:1.6}.reflection-group{border-top:1px solid var(--line);padding-top:24px!important}.reflection-group>summary{list-style:none;cursor:pointer}.reflection-group .g-title{display:flex;justify-content:space-between;gap:20px}.reflection-group[open]>summary .g-title span{transform:rotate(45deg)}.map>.quote{padding:32px;margin:35px 0}.dlg-body li{line-height:1.75}.hero .btn{margin:4px}.source-note{line-height:1.8}.book-group>summary:focus-visible,.reflection-group>summary:focus-visible{outline:2px solid var(--e-blue);outline-offset:5px;border-radius:8px}
+@media(max-width:900px){.map #g-1,.book-group .g-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.map #g-1,.book-group .g-grid{grid-template-columns:1fr}.directory-head{display:block}.directory-head p br{display:none}.directory-tools{align-items:start;flex-direction:column}.book-group>summary{gap:12px;padding:20px 0}.section-number{display:none}.section-kicker{font-size:.8rem}.section-count{font-size:.8rem}.section-toggle{width:18px;flex-shrink:0}.reflection-group .g-title{font-size:1.6rem}.search-row{gap:8px}.hero .btn{font-size:.9rem}.book-directory{margin:40px 0}.dlg-foot .btn{padding:12px;font-size:.9rem}}
+</style><style>.dlg-body li{font-weight:400}.point-copy{min-width:0}.point-copy>b{display:block;margin-bottom:5px}.dlg-head{position:sticky;top:0;z-index:2}.dlg-foot{position:sticky;bottom:0;background:var(--paper);z-index:2}</style></head>
+<body>
+<nav class="mg-nav" aria-label="Biblioteca">
+  <div class="in">
+    <a class="mg-brand" href="index.html#inicio" aria-label="Marginalia, inicio"><span class="s3" style="transform:rotate(-3deg)" aria-hidden="true">M</span><span class="s0" style="transform:rotate(2deg)" aria-hidden="true">A</span><span class="s6" style="transform:rotate(-2deg)" aria-hidden="true">R</span><span class="s0" style="transform:rotate(1deg)" aria-hidden="true">G</span><span class="s4" style="transform:rotate(3deg)" aria-hidden="true">I</span><span class="s0" style="transform:rotate(-1deg)" aria-hidden="true">N</span><span class="s3" style="transform:rotate(2deg)" aria-hidden="true">A</span><span class="s2" style="transform:rotate(-3deg)" aria-hidden="true">L</span><span class="s0" style="transform:rotate(1deg)" aria-hidden="true">I</span><span class="s1" style="transform:rotate(-2deg)" aria-hidden="true">A</span></a>
+    <a class="mg-back" href="index.html#libros">&larr; <span>Biblioteca</span></a>
+    <details class="mg-menu">
+      <summary>Cambiar libro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <ul><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="despertar-el-corazon.html">Despertar el corazón<small>Sandra García Sánchez-Beato</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li></ul>
+    </details>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>Guía de <span class="mark ul">lectura</span></h1>
+    <div class="sub"><cite>La Biblia</cite> · Guía católica de lectura</div>
+    <div class="author">73 LIBROS · PASO A PASO</div>
+    <div style="margin-top:20px"><a class="btn" href="#map" style="display:inline-block;text-decoration:none">Por dónde empezar</a> <a class="btn ghost" href="#recorrido" style="display:inline-block;text-decoration:none">Buscar un libro</a></div>
+  </header>
+
+
+  <aside class="guide-note" aria-label="Acerca de esta guía">
+    <strong>Una invitación a leer con respeto</strong>
+    <p>Una guía para saber por dónde empezar y qué encontrarás en cada uno de los 73 libros de la Biblia católica. Abre una sección, elige un libro y léelo a tu ritmo. Los resúmenes y las reflexiones son de Marginalia; no sustituyen la Sagrada Escritura ni el acompañamiento de tu comunidad de fe.</p>
+  </aside>
+
+  <div class="bar" aria-live="polite">
+    <span id="progress-text">0 de 73 libros explorados</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="73" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <button class="chip" id="reset" type="button">Reiniciar</button>
+  </div>
+
+  <div class="map" id="map">
+    <section class="group"><h2 class="g-title"><span class="g-n">01</span>Antes de abrir tu Biblia</h2><p class="section-intro">Seis ayudas para comenzar. Abre una tarjeta para leer la explicación completa.</p><div class="g-grid" id="g-1"></div></section>
+    <section class="book-directory" id="recorrido" aria-labelledby="directory-title">
+      <div class="directory-head"><div><div class="eyebrow">EL RECORRIDO COMPLETO</div><h2 id="directory-title">Un libro a la vez</h2></div><p>Un resumen, sus partes principales<br>y una pregunta para acompañarte.</p></div>
+      <label for="book-search" class="search-label">Encuentra un libro</label>
+      <div class="search-row"><input id="book-search" type="search" placeholder="Prueba con Génesis, Tobías, Juan…" autocomplete="off" aria-controls="book-sections"><button class="chip" id="clear-search" type="button">Limpiar</button></div>
+      <div class="directory-tools"><p id="search-status" role="status">46 libros del Antiguo Testamento · 27 del Nuevo</p><button class="chip" id="expand-books" type="button">Abrir todas las secciones</button></div>
+      <div id="book-sections">
+<h3 class="testament-label">Antiguo Testamento</h3><details class="book-group group" id="seccion-2"><summary><span class="section-number">01</span><span class="section-name"><span class="section-kicker">Los comienzos y la alianza</span><span class="section-title">Pentateuco</span></span><span class="section-count">5 libros</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">Cinco libros que narran los orígenes, la formación de Israel, la salida de Egipto y el aprendizaje de una vida en alianza con Dios. Combinan relatos y leyes.</p><div class="g-grid" id="g-2"></div></div></details><details class="book-group group" id="seccion-3"><summary><span class="section-number">02</span><span class="section-name"><span class="section-kicker">La vida de un pueblo</span><span class="section-title">Libros históricos</span></span><span class="section-count">16 libros</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">Entrada en la tierra, reyes, crisis, exilio y regreso. Aquí se reúnen también relatos de fe como Rut, Tobías, Judit y Ester: no todos tienen la misma forma de contar.</p><div class="g-grid" id="g-3"></div></div></details><details class="book-group group" id="seccion-4"><summary><span class="section-number">03</span><span class="section-name"><span class="section-kicker">Orar y aprender a vivir</span><span class="section-title">Poesía y sabiduría</span></span><span class="section-count">7 libros</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">Oración, amor, decisiones y preguntas por el dolor y el sentido. Estos libros conversan entre sí; un proverbio y un lamento no dicen las cosas del mismo modo.</p><div class="g-grid" id="g-4"></div></div></details><details class="book-group group" id="seccion-5"><summary><span class="section-number">04</span><span class="section-name"><span class="section-kicker">Justicia, llamada y esperanza</span><span class="section-title">Profetas</span></span><span class="section-count">18 libros</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">Hablan a comunidades concretas en tiempos de crisis. Denuncian, consuelan y llaman a volver a Dios. «Profetas menores» designa libros breves, no voces menos importantes.</p><div class="g-grid" id="g-5"></div></div></details><h3 class="testament-label">Nuevo Testamento</h3><details class="book-group group" id="seccion-6"><summary><span class="section-number">05</span><span class="section-name"><span class="section-kicker">La vida y el anuncio de Jesús</span><span class="section-title">Evangelios</span></span><span class="section-count">4 libros</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">Cuatro testimonios de la vida, enseñanza, muerte y resurrección de Jesús. Cada uno tiene su voz; conviene leer uno completo antes de comparar sus pasajes.</p><div class="g-grid" id="g-6"></div></div></details><details class="book-group group" id="seccion-7"><summary><span class="section-number">06</span><span class="section-name"><span class="section-kicker">La fe sale al encuentro</span><span class="section-title">Hechos de los Apóstoles</span></span><span class="section-count">1 libro</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">La continuación de Lucas: el Espíritu, las primeras comunidades y la expansión del Evangelio. Una historia de misión, encuentros y decisiones compartidas.</p><div class="g-grid" id="g-7"></div></div></details><details class="book-group group" id="seccion-8"><summary><span class="section-number">07</span><span class="section-name"><span class="section-kicker">Crecer como comunidad</span><span class="section-title">Cartas de la tradición paulina</span></span><span class="section-count">13 libros</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">Trece cartas transmitidas bajo el nombre de Pablo. Responden a personas y comunidades concretas. Las notas de cada edición explican las cuestiones de autoría de algunas de ellas.</p><div class="g-grid" id="g-8"></div></div></details><details class="book-group group" id="seccion-9"><summary><span class="section-number">08</span><span class="section-name"><span class="section-kicker">Perseverar, amar y servir</span><span class="section-title">Hebreos y cartas católicas</span></span><span class="section-count">8 libros</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">Hebreos tiene un lugar propio. Junto a él reunimos las cartas de Santiago, Pedro, Juan y Judas, llamadas «católicas» en el sentido de universales o generales; algunas tienen destinatarios particulares.</p><div class="g-grid" id="g-9"></div></div></details><details class="book-group group" id="seccion-10"><summary><span class="section-number">09</span><span class="section-name"><span class="section-kicker">La esperanza permanece</span><span class="section-title">Apocalipsis</span></span><span class="section-count">1 libro</span><span class="section-toggle" aria-hidden="true">+</span></summary><div class="book-group-content"><p class="section-intro">El cierre del Nuevo Testamento habla mediante visiones y símbolos. Su invitación es la fidelidad a Cristo y la esperanza, no el cálculo de fechas.</p><div class="g-grid" id="g-10"></div></div></details></div><p id="no-books" hidden>No encontramos ese libro. Prueba con otro nombre o limpia la búsqueda.</p>
+      <p class="hint">El progreso recuerda las fichas que abriste en este navegador; no indica que hayas terminado de leer el texto bíblico.</p>
+    </section>
+    <details class="group reflection-group"><summary><h2 class="g-title">Pasajes para detenerte y reflexionar <span aria-hidden="true">+</span></h2></summary><p class="section-intro">Después de orientarte, puedes volver a estas lecturas con más calma. Son reflexiones de Marginalia que acompañan el pasaje.</p><div class="g-grid" id="g-11"></div></details>
+    <div class="quote"><div class="hand" id="quote-text">¿Qué pasaje te gustaría volver a leer con más calma?</div><div class="by">Pregunta de esta guía</div><button class="chip" id="next-quote" type="button">Otra pregunta</button></div>
+  </div>
+
+  <section class="block" id="pausa">
+    <div class="block-head">
+      <h2>Una pausa para la lectura</h2>
+      <p>Elige un pasaje. Lee sin prisa y deja un momento para pensar o, si lo deseas, orar.</p>
+    </div>
+    <div class="breath">
+      <div class="orb-wrap">
+        <div>
+          <div class="orb" id="orb"><span id="orb-n">·</span></div>
+          <div class="phase" id="phase">Listo cuando tú lo estés</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem">Lee · guarda silencio · responde</h3>
+        <p style="color:var(--muted)">Primero lee el pasaje completo. Después puedes usar este tiempo para volver a una frase, guardar silencio y escribir una pregunta o una oración. No hay una respuesta que debas sentir ni un ritmo obligatorio.</p>
+        <div class="seg" role="group" aria-label="Duración">
+          <button type="button" data-min="1" aria-pressed="true">1 min</button>
+          <button type="button" data-min="3" aria-pressed="false">3 min</button>
+          <button type="button" data-min="5" aria-pressed="false">5 min</button>
+        </div>
+        <div class="controls">
+          <button class="btn" id="b-start" type="button">Comenzar</button>
+          <button class="btn ghost" id="b-stop" type="button">Detener</button>
+        </div>
+        <div class="stats" id="b-stats">Tiempo restante 1:00</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="quiz">
+    <div class="block-head">
+      <h2>Leer con cuidado</h2>
+      <p>Un ejercicio para distinguir una lectura atenta de una conclusión apresurada. No evalúa tu fe ni tus creencias.</p>
+    </div>
+    <div class="quiz">
+      <div class="q-count" id="q-count">1 / 8</div>
+      <div class="q-text" id="q-text"></div>
+      <div class="q-opts">
+        <button class="opt" type="button" data-a="revisar" id="o-revisar">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30a9 9 0 0 1 2-17 10 10 0 0 1 18 1 8 8 0 0 1 0 16H14z"/><circle cx="14" cy="38" r="3"/><circle cx="8" cy="44" r="1.6"/></svg>
+          <span>Conviene revisar<small>la conclusión va más allá del pasaje</small></span>
+        </button>
+        <button class="opt" type="button" data-a="contexto" id="o-contexto">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="8"/><path d="M24 6v5M24 37v5M6 24h5M37 24h5M11 11l3.5 3.5M33.5 33.5 37 37M11 37l3.5-3.5M33.5 14.5 37 11"/></svg>
+          <span>Atiende al contexto<small>observa lo que el pasaje presenta</small></span>
+        </button>
+      </div>
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+      <div class="controls"><button class="btn" id="q-next" type="button" hidden>Siguiente</button></div>
+    </div>
+  </section>
+
+  <section class="block" id="diario">
+    <div class="block-head">
+      <h2>Mi diario de lectura</h2>
+      <p>Un espacio para tus preguntas y reflexiones. Tus notas se guardan en este navegador; no se envían con los comentarios ni se sincronizan entre dispositivos.</p>
+    </div>
+    <div class="journal">
+      <div class="jcard"><label for="j1">¿Qué pasaje leí y qué dice en su contexto?</label><textarea id="j1" placeholder="Anota la referencia y lo que observaste…"></textarea></div>
+      <div class="jcard"><label for="j2">¿Qué pregunta o reflexión me acompaña?</label><textarea id="j2" placeholder="Puedes escribir también una oración, si lo deseas…"></textarea></div>
+      <div class="jcard"><label for="j3">¿Qué quisiera llevar a mi vida?</label><textarea id="j3" placeholder="Un gesto, una conversación o una nueva lectura…"></textarea></div>
+    </div>
+    <p class="hint" id="saved-hint" style="margin-top:8px"></p>
+  </section>
+
+<section class="mg-feedback-invite" aria-label="Comentarios sobre esta guía">
+  <p>¿Te sirvió esta guía? Me gustaría saber qué piensas.</p>
+  <button class="btn ghost" id="mg-feedback-open" type="button" aria-haspopup="dialog">Dejar comentario</button>
+</section>
+
+<nav class="mg-pager" aria-label="Otros libros">
+  <a class="pv" href="tus-zonas-erroneas.html"><small>&larr; Anterior</small><b>Tus zonas erróneas</b></a>
+  <a class="home" href="index.html#libros">Biblioteca</a>
+  <a class="nx" href="el-poder-del-ahora.html"><small>Siguiente &rarr;</small><b>El poder del ahora</b></a>
+</nav>
+
+  <footer>
+    <div class="source-note"><strong>Texto bíblico de consulta:</strong> <a href="https://www.vatican.va/archive/ESL0506/_INDEX.HTM" target="_blank" rel="noopener noreferrer"><cite>El libro del Pueblo de Dios</cite>, edición católica en español disponible en el sitio del Vaticano</a>. Cada ficha enlaza el libro y una lectura inicial. Ester y Daniel incluyen enlaces a sus secciones griegas; Baruc, a la Carta de Jeremías. Las divisiones propuestas son orientativas y la numeración puede variar entre ediciones.<br><strong>Orientación católica:</strong> <a href="https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html" target="_blank" rel="noopener noreferrer">Catecismo de la Iglesia Católica, 101–141</a>. Para Tobías, Baruc, Eclesiástico y 1 Macabeos se consultaron también las <a href="https://bible.usccb.org/bible" target="_blank" rel="noopener noreferrer">introducciones bíblicas de la USCCB (en inglés)</a>. Esta es una guía independiente; no es una publicación oficial de la Iglesia. Los resúmenes y preguntas están redactados con palabras propias.</div>
+    <div class="guide-credits">
+    <p class="credits-author"><strong>Guías elaboradas por:</strong> Marginalia</p>
+    <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
+    <p class="credits-copyright">© 2026 Marginalia. Todos los derechos reservados.<br>Este aviso se refiere al contenido original de la guía, no a las traducciones bíblicas enlazadas.</p>
+    </div>
+  </footer>
+</div>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg-head" id="dlg-head">
+    <div class="ico" id="dlg-ico"></div>
+    <div style="min-width:0"><div id="dlg-eyebrow" style="font-family:var(--f-display);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--edge)"></div><h3 id="dlg-title"></h3></div>
+    <button class="x" id="dlg-x" type="button" aria-label="Cerrar">×</button>
+  </div>
+  <div class="dlg-body"><p class="reading-source" id="dlg-source"></p><ol id="dlg-list"></ol><div class="reflect" id="dlg-reflect"></div><p class="dlg-signature">Marginalia · mymarginalia.net</p></div>
+  <div class="dlg-foot">
+    <button class="btn ghost" id="dlg-prev" type="button">← Anterior</button>
+    <button class="btn" id="dlg-next" type="button">Siguiente →</button>
+  </div>
+</dialog>
+
+<script>
+const I = {
+  book:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 12c-5-4-12-4-18-2v28c6-2 13-2 18 2 5-4 12-4 18-2V10c-6-2-13-2-18 2z"/><path d="M24 12v28"/></svg>',
+  heart:'<svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 41S6 30 6 18a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 12-18 23-18 23z"/></svg>',
+  cloud:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30a9 9 0 0 1 2-17 10 10 0 0 1 18 1 8 8 0 0 1 0 16H14z"/><circle cx="14" cy="38" r="3"/><circle cx="8" cy="44" r="1.6"/></svg>',
+  brain:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-6 6 6 6 0 0 0-4 10 6 6 0 0 0 4 10 6 6 0 0 0 12 2V10a4 4 0 0 0-6-2zM30 8a6 6 0 0 1 6 6 6 6 0 0 1 4 10 6 6 0 0 1-4 10 6 6 0 0 1-12 2"/><path d="M14 20h4M30 26h4M18 30h-3"/></svg>',
+  broken:'<svg viewBox="0 0 48 48" fill="currentColor"><path d="M22 14 18 22l6 4-4 8 2 7S6 30 6 18a9 9 0 0 1 16-4zM26 41l3-8-5-5 5-9-2-4a9 9 0 0 1 15 3c0 12-16 23-16 23z"/></svg>',
+  mountain:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 40 18 14l8 12 4-6 14 20z"/><path d="M14 22l4 3 4-3M20 40c4-4 10-4 12-10"/></svg>',
+  lotus:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle cx="24" cy="9" r="4"/><path d="M24 14v12M16 20l8 6 8-6M12 38c4-6 8-8 12-8s8 2 12 8M8 40h32"/></svg>',
+  globe:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c6 6 6 28 0 34M24 7c-6 6-6 28 0 34"/></svg>',
+  leaf:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40C8 20 22 8 40 8c0 18-12 32-30 32z"/><path d="M10 40 30 18"/></svg>',
+  sun:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 34a14 14 0 0 1 28 0z" fill="currentColor" fill-opacity=".25"/><path d="M24 8v6M10 14l4 4M38 14l-4 4M4 28h5M39 28h5M4 40h40"/></svg>'
+};
+
+const DATA = [
+  {
+    "id": "mapa-catolico",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "Una Biblia, muchos libros",
+    "text": "Esta guía sigue la Biblia católica: 46 libros del Antiguo Testamento y 27 del Nuevo. Su orden reúne tipos de escritos; no es una sola línea del tiempo.",
+    "pts": [
+      "<b>Antiguo Testamento:</b> reúne la historia, la oración y la sabiduría de Israel. Conserva su valor para la fe cristiana; no es una parte que deba descartarse.",
+      "<b>Nuevo Testamento:</b> presenta a Jesucristo, las primeras comunidades y su esperanza. Los cuatro Evangelios ocupan un lugar central en la lectura cristiana.",
+      "<b>Los deuterocanónicos:</b> Tobías, Judit, Sabiduría, Eclesiástico, Baruc y 1 y 2 Macabeos, junto con partes de Ester y Daniel, forman parte de la Biblia católica. Muchas ediciones protestantes no los incluyen. Aquí podrás encontrarlos dentro de sus secciones.",
+      "<b>Esta guía:</b> cada ficha resume un libro y orienta su lectura. Las divisiones son ayudas para recorrerlo; no sustituyen el texto ni pretenden agotar su significado."
+    ],
+    "q": "¿Qué parte de la Biblia conoces y cuál te gustaría descubrir?",
+    "refs": [
+      {
+        "label": "Canon católico · Catecismo, 120–125",
+        "url": "https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html"
+      }
+    ]
+  },
+  {
+    "id": "ruta",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "Por dónde empezar",
+    "text": "No necesitas comenzar en la primera página ni entenderlo todo de una vez. Te propongo esta ruta inicial, que después puedes ampliar a tu ritmo.",
+    "pts": [
+      "<b>1 · Conoce a Jesús:</b> empieza por Marcos, desde el capítulo 1. Lee un episodio o un capítulo cada vez hasta terminarlo. Anota qué hace Jesús, qué dice y cómo reaccionan quienes lo escuchan.",
+      "<b>2 · Amplía la mirada:</b> continúa con Lucas y después con Hechos. Así podrás seguir el camino de Jesús y la vida de las primeras comunidades.",
+      "<b>3 · Escucha la oración:</b> intercala algunos salmos. Puedes comenzar por 23, 13 y 139 según la numeración hebrea. Lee el poema entero, incluidos sus cambios de tono.",
+      "<b>4 · Vuelve a las raíces:</b> lee Génesis y Éxodo en tramos cortos. Rut ofrece también una historia breve que puedes recorrer completa.",
+      "<b>5 · Mira la vida compartida:</b> sigue con Filipenses y Santiago. Después acércate a Juan, a los profetas y al resto de las cartas con sus introducciones.",
+      "<b>6 · Completa el recorrido:</b> usa el índice de abajo para elegir lo que falta. Si un libro se vuelve difícil, guarda tu pregunta y retómalo con notas o acompañamiento. No es una carrera ni un plan obligatorio."
+    ],
+    "q": "¿Qué momento pequeño y realista puedo dedicar a esta lectura?",
+    "refs": [
+      {
+        "label": "Comenzar con Marcos 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__PV3.HTM"
+      }
+    ]
+  },
+  {
+    "id": "referencias",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "Cómo encontrar un pasaje",
+    "text": "Una referencia te dice el libro, el capítulo y los versículos. Aprender a leerla hace mucho más sencillo moverte por la Biblia.",
+    "pts": [
+      "<b>Ejemplo:</b> Lc 10,25–37 significa Evangelio según Lucas, capítulo 10, versículos del 25 al 37. «Lc» es la abreviatura del libro. Algunas ediciones usan dos puntos: Lc 10:25–37.",
+      "<b>Los números:</b> el grande suele señalar el capítulo; los pequeños dentro del texto señalan los versículos. Los títulos intermedios y las notas ayudan a orientarte, pero no forman parte del pasaje bíblico.",
+      "<b>Libros con número:</b> 1 Cor es la Primera carta a los Corintios. Ese 1 forma parte del nombre del libro. No indica su primer capítulo.",
+      "<b>Distintas ediciones:</b> Eclesiástico también se llama Sirácida; Eclesiastés, Qohélet; Tobías, Tobit. La numeración de algunos salmos y de pasajes de Joel, Ester o Daniel puede variar. Consulta el índice y las notas.",
+      "<b>Lee alrededor:</b> antes de quedarte con una frase, revisa el párrafo completo y lo que sucede antes y después."
+    ],
+    "q": "¿Qué descubro al leer una frase junto con su contexto?",
+    "refs": [
+      {
+        "label": "Ejemplo: Lucas 10",
+        "url": "https://www.vatican.va/archive/ESL0506/__PVS.HTM"
+      }
+    ]
+  },
+  {
+    "id": "generos",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "No todo se lee de la misma manera",
+    "text": "Una narración, un poema y una carta comunican de formas distintas. Reconocer el tipo de texto ayuda a escuchar lo que quiere decir.",
+    "pts": [
+      "<b>Relatos y leyes:</b> pregunta qué sucede, quién actúa y en qué sociedad. Relatar una acción no siempre significa aprobarla. Las leyes atienden situaciones concretas de la vida antigua.",
+      "<b>Poesía y sabiduría:</b> un salmo expresa oración mediante imágenes; un proverbio ofrece una enseñanza breve. Una imagen no necesita tomarse como una descripción física y un consejo no es una garantía automática.",
+      "<b>Profecía:</b> no consiste solo en anunciar el futuro. Los profetas también denuncian injusticias y llaman a sus contemporáneos a cambiar de vida.",
+      "<b>Evangelios y parábolas:</b> los Evangelios dan testimonio de Jesús. Sus parábolas son relatos que invitan a mirar de otra manera; conviene buscar el centro de cada historia sin forzar cada detalle.",
+      "<b>Cartas y visiones:</b> las cartas responden a problemas de comunidades. Los textos apocalípticos, como Apocalipsis y parte de Daniel, usan símbolos para hablar de conflicto y esperanza."
+    ],
+    "q": "¿Qué tipo de texto tengo delante y qué cambia al reconocerlo?",
+    "refs": [
+      {
+        "label": "Contexto y géneros literarios · Catecismo, 109–114",
+        "url": "https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html"
+      }
+    ]
+  },
+  {
+    "id": "leer-orar",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "Leer, comprender y responder",
+    "text": "Prueba una lectura breve y atenta. Primero escucha el pasaje; después deja espacio a lo que despierta en ti.",
+    "pts": [
+      "<b>Prepara:</b> elige un momento tranquilo y una Biblia católica con introducciones y notas. Puedes comenzar con una oración sencilla pidiendo luz y disposición para escuchar.",
+      "<b>Lee:</b> recorre un pasaje completo. Vuelve a leerlo y distingue quién habla, a quién se dirige y qué ocurre. Si algo no se entiende, anótalo sin inventar una respuesta.",
+      "<b>Comprende:</b> consulta la introducción del libro y las notas. En la lectura católica, el contexto, el conjunto de la Escritura y la Tradición de la Iglesia ayudan a interpretar el pasaje.",
+      "<b>Reflexiona y ora:</b> separa dos preguntas: «¿Qué dice el texto?» y «¿Qué respuesta despierta en mí?». Puedes dar gracias, pedir ayuda o guardar silencio; no necesitas producir una emoción especial.",
+      "<b>Responde:</b> escribe una pregunta, una oración o un gesto concreto para tu día. Esta es una propuesta sencilla de lectura orante; la reflexión personal no es la única interpretación posible."
+    ],
+    "q": "¿Qué quiero escuchar antes de buscar una respuesta rápida?",
+    "refs": []
+  },
+  {
+    "id": "preguntas",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "Cuando algo te cueste entender",
+    "text": "Habrá palabras extrañas, relatos difíciles y preguntas que necesiten tiempo. Puedes detenerte: comprender también es aprender a preguntar.",
+    "pts": [
+      "<b>Palabras que vuelven:</b> alianza es el vínculo entre Dios y su pueblo; Evangelio significa buena noticia; gracia habla del don gratuito de Dios; conversión es volver a él y reorientar la vida.",
+      "<b>Personas y lugares:</b> distingue el pueblo de Israel del reino del norte llamado Israel, y este del reino de Judá. Tras la división de la monarquía, muchos relatos alternan entre los dos reinos.",
+      "<b>Textos difíciles:</b> ante la guerra, la esclavitud o normas que hoy sorprenden, no apliques una frase de forma aislada. Consulta el contexto, las notas y la lectura del conjunto. La fe no exige ignorar el dolor de las personas.",
+      "<b>Busca compañía:</b> una comunidad de lectura, un catequista o una persona con formación bíblica puede ayudarte. Preguntar con respeto no es una falta de fe.",
+      "<b>Conserva la pregunta:</b> el diario de abajo te permite anotarla. Volver después a un pasaje puede ser más fecundo que obligarte a cerrarlo hoy."
+    ],
+    "q": "¿Qué pregunta quisiera conversar con alguien que pueda orientarme?",
+    "refs": []
+  },
+  {
+    "id": "libro-genesis",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Génesis",
+    "text": "Comienza con la creación y las rupturas de la humanidad, y después sigue a Abraham y su familia. Entre promesas, viajes, rivalidades y reconciliaciones, se prepara el camino del pueblo de Israel. Dios sigue llamando a personas imperfectas a vivir en relación con él.",
+    "pts": [
+      "<b>Sus partes:</b> 1–11: creación, desobediencia, diluvio y Babel; las grandes preguntas sobre Dios y la humanidad. 12–25: Abraham y la promesa. 25–36: Isaac, Jacob y sus familias. 37–50: José, sus hermanos y la llegada a Egipto.",
+      "<b>Cómo leerlo:</b> Distingue los relatos de los orígenes de las historias familiares. Atiende a su mensaje de fe; no les exijas el formato de un informe científico. Las acciones de un personaje no son siempre ejemplos para imitar.",
+      "<b>Para comenzar:</b> Génesis 12. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué cambia cuando una promesa se vive con paciencia?",
+    "refs": [
+      {
+        "label": "Leer Génesis · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P2.HTM"
+      },
+      {
+        "label": "Para comenzar: Génesis 12",
+        "url": "https://www.vatican.va/archive/ESL0506/__PD.HTM"
+      }
+    ],
+    "source_index": 0
+  },
+  {
+    "id": "libro-exodo",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Éxodo",
+    "text": "Israel pasa de la esclavitud en Egipto a una vida que debe aprender a construir en libertad. Dios llama a Moisés, libera al pueblo y establece una alianza con él. El camino incluye miedo, quejas, una grave infidelidad y una relación que se renueva.",
+    "pts": [
+      "<b>Sus partes:</b> 1–15: opresión, llamada de Moisés, Pascua y salida de Egipto. 16–18: aprendizaje en el desierto. 19–24: alianza y mandamientos. 25–40: santuario, becerro de oro, renovación y presencia de Dios entre su pueblo.",
+      "<b>Cómo leerlo:</b> Lee la liberación junto con la responsabilidad que viene después. «Alianza» significa aquí un vínculo entre Dios y su pueblo que compromete la forma de vivir y de tratar a otros.",
+      "<b>Para comenzar:</b> Éxodo 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Para qué quiero usar mi libertad?",
+    "refs": [
+      {
+        "label": "Leer Éxodo · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P1H.HTM"
+      },
+      {
+        "label": "Para comenzar: Éxodo 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__P1J.HTM"
+      }
+    ],
+    "source_index": 1
+  },
+  {
+    "id": "libro-levitico",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Levítico",
+    "text": "Reúne instrucciones sobre el culto, los sacerdotes, la pureza y la vida del pueblo. Su pregunta central es cómo vivir cerca del Dios santo. Junto a normas rituales aparecen deberes concretos hacia los pobres, los extranjeros y el prójimo.",
+    "pts": [
+      "<b>Sus partes:</b> 1–7: sacrificios y ofrendas. 8–10: servicio sacerdotal. 11–16: pureza y expiación. 17–26: santidad en la vida comunitaria, fiestas y justicia. 27: votos y ofrendas dedicadas a Dios.",
+      "<b>Cómo leerlo:</b> Lee las normas dentro del mundo religioso del antiguo Israel. La pureza ritual no equivale siempre a culpa moral. Para una primera lectura, observa cómo la santidad también pide honestidad y cuidado del prójimo.",
+      "<b>Para comenzar:</b> Levítico 19. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo se nota el respeto a Dios en mi trato cotidiano?",
+    "refs": [
+      {
+        "label": "Leer Levítico · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P2M.HTM"
+      },
+      {
+        "label": "Para comenzar: Levítico 19",
+        "url": "https://www.vatican.va/archive/ESL0506/__P34.HTM"
+      }
+    ],
+    "source_index": 2
+  },
+  {
+    "id": "libro-numeros",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Números",
+    "text": "Cuenta la marcha de Israel por el desierto, desde la organización del campamento hasta la preparación para entrar en la tierra prometida. Los censos conviven con relatos de cansancio, conflicto, desconfianza y nuevas oportunidades. Una generación da paso a otra.",
+    "pts": [
+      "<b>Sus partes:</b> 1–10: organización y salida del Sinaí. 11–25: dificultades del camino, exploradores, rebeliones y Balaam. 26–36: nuevo censo y preparación para la vida en la tierra.",
+      "<b>Cómo leerlo:</b> No necesitas memorizar los censos para seguir el hilo. Pregunta qué dificultad atraviesa el pueblo en cada episodio y cómo responde. El desierto es un lugar real del relato y también un tiempo de formación.",
+      "<b>Para comenzar:</b> Números 13. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo respondo cuando avanzar toma más tiempo del esperado?",
+    "refs": [
+      {
+        "label": "Leer Números · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P3E.HTM"
+      },
+      {
+        "label": "Para comenzar: Números 13",
+        "url": "https://www.vatican.va/archive/ESL0506/__P3Q.HTM"
+      }
+    ],
+    "source_index": 3
+  },
+  {
+    "id": "libro-deuteronomio",
+    "g": 2,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Deuteronomio",
+    "text": "Presenta las últimas enseñanzas de Moisés antes de que Israel entre en la tierra. Recordar la liberación debe ayudar al pueblo a vivir con fidelidad, gratitud y justicia. La alianza se dirige a una nueva generación que debe hacerla suya.",
+    "pts": [
+      "<b>Sus partes:</b> 1–4: memoria del camino. 5–11: mandamientos y amor a Dios. 12–26: normas para la vida del pueblo. 27–30: renovación de la alianza y elección de la vida. 31–34: despedida y muerte de Moisés.",
+      "<b>Cómo leerlo:</b> Observa la insistencia en recordar, escuchar y transmitir. Las leyes pertenecen a una sociedad antigua; busca también el cuidado de la viuda, el huérfano y el extranjero que atraviesa el libro.",
+      "<b>Para comenzar:</b> Deuteronomio 6. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué memoria valiosa quiero transmitir con mi manera de vivir?",
+    "refs": [
+      {
+        "label": "Leer Deuteronomio · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P4F.HTM"
+      },
+      {
+        "label": "Para comenzar: Deuteronomio 6",
+        "url": "https://www.vatican.va/archive/ESL0506/__P4K.HTM"
+      }
+    ],
+    "source_index": 4
+  },
+  {
+    "id": "libro-josue",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Josué",
+    "text": "Relata la entrada de Israel en Canaán, los conflictos por la tierra y su distribución entre las tribus. Termina llamando al pueblo a renovar su fidelidad a Dios. La promesa recibida se convierte en una responsabilidad compartida.",
+    "pts": [
+      "<b>Sus partes:</b> 1–5: preparación y paso del Jordán. 6–12: relatos de conquista. 13–21: reparto de la tierra. 22–24: tensiones entre tribus, despedida de Josué y renovación de la alianza.",
+      "<b>Cómo leerlo:</b> Los relatos bélicos usan formas antiguas de narrar victorias. Necesitan contexto histórico y una lectura del conjunto de la Escritura; no autorizan la violencia religiosa de hoy. Detente también en la memoria y el compromiso del pueblo.",
+      "<b>Para comenzar:</b> Josué 24. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué compromisos sostienen realmente mi vida?",
+    "refs": [
+      {
+        "label": "Leer Josué · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P5E.HTM"
+      },
+      {
+        "label": "Para comenzar: Josué 24",
+        "url": "https://www.vatican.va/archive/ESL0506/__P61.HTM"
+      }
+    ],
+    "source_index": 5
+  },
+  {
+    "id": "libro-jueces",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Jueces",
+    "text": "Describe una época de inestabilidad anterior a la monarquía. Israel repite ciclos de infidelidad, opresión, súplica y liberación. Los jueces son dirigentes y libertadores, pero sus historias muestran también debilidades y una violencia cada vez más grave.",
+    "pts": [
+      "<b>Sus partes:</b> 1–3: situación inicial y ciclo de las crisis. 3–16: relatos de jueces como Débora, Gedeón, Jefté y Sansón. 17–21: desorden religioso y violencia entre las tribus.",
+      "<b>Cómo leerlo:</b> Lee con atención quién actúa y qué consecuencias deja. Que la Biblia relate un daño no significa que lo apruebe. Los últimos capítulos buscan mostrar una sociedad profundamente quebrada, no ofrecer modelos de conducta.",
+      "<b>Para comenzar:</b> Jueces 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué patrones dañinos se repiten cuando nadie asume responsabilidad?",
+    "refs": [
+      {
+        "label": "Leer Jueces · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P63.HTM"
+      },
+      {
+        "label": "Para comenzar: Jueces 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__P66.HTM"
+      }
+    ],
+    "source_index": 6
+  },
+  {
+    "id": "libro-rut",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Rut",
+    "text": "Una viuda moabita decide acompañar a su suegra Noemí a Belén. En medio de la pérdida y la pobreza, la lealtad de Rut y la generosidad de Booz abren una posibilidad de futuro. La historia termina vinculando esta familia con David.",
+    "pts": [
+      "<b>Sus partes:</b> 1: pérdida y decisión de acompañar. 2: Rut recoge espigas y conoce a Booz. 3: búsqueda de protección y futuro. 4: resolución familiar y genealogía de David.",
+      "<b>Cómo leerlo:</b> Es un buen libro para leer completo al comenzar: tiene cuatro capítulos. Las costumbres de cosecha y parentesco necesitan explicación, pero el cuidado de una persona extranjera y vulnerable es un hilo claro.",
+      "<b>Para comenzar:</b> Rut 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿A quién puedo acompañar sin dejarlo solo ante su pérdida?",
+    "refs": [
+      {
+        "label": "Leer Rut · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PME.HTM"
+      },
+      {
+        "label": "Para comenzar: Rut 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__PME.HTM"
+      }
+    ],
+    "source_index": 29
+  },
+  {
+    "id": "libro-1-samuel",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "1 Samuel",
+    "text": "Israel pasa del tiempo de los jueces a la monarquía. Samuel acompaña esa transición; Saúl se convierte en rey y David comienza a destacar. El libro pregunta qué significa gobernar escuchando a Dios y qué sucede cuando el poder se mezcla con miedo y celos.",
+    "pts": [
+      "<b>Sus partes:</b> 1–7: Ana, Samuel y el arca. 8–15: petición de un rey y reinado de Saúl. 16–31: elección de David, amistad con Jonatán, persecución y muerte de Saúl.",
+      "<b>Cómo leerlo:</b> Compara las decisiones de los personajes sin convertirlos en héroes perfectos. Ana y Samuel ayudan a ver que la historia no comienza en un palacio, sino también en la oración y la escucha.",
+      "<b>Para comenzar:</b> 1 Samuel 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Sé escuchar antes de decidir por otras personas?",
+    "refs": [
+      {
+        "label": "Leer 1 Samuel · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P6P.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Samuel 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__P6R.HTM"
+      }
+    ],
+    "source_index": 7
+  },
+  {
+    "id": "libro-2-samuel",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "2 Samuel",
+    "text": "David llega a ser rey de todo Israel y establece su capital en Jerusalén. Recibe una promesa para su casa, pero también comete graves abusos. Sus decisiones dañan vidas y abren conflictos familiares y políticos que el relato no oculta.",
+    "pts": [
+      "<b>Sus partes:</b> 1–10: consolidación del reino y promesa a David. 11–12: Betsabé, Urías y denuncia de Natán. 13–20: violencia familiar y rebeliones. 21–24: relatos y poemas que completan el retrato de su reinado.",
+      "<b>Cómo leerlo:</b> La elección de David no vuelve correctas todas sus acciones. Lee su arrepentimiento junto con el daño que no desaparece automáticamente. Natán muestra la importancia de decir la verdad frente al poder.",
+      "<b>Para comenzar:</b> 2 Samuel 12. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Puedo reconocer el daño que causé sin justificarme?",
+    "refs": [
+      {
+        "label": "Leer 2 Samuel · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P7K.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Samuel 12",
+        "url": "https://www.vatican.va/archive/ESL0506/__P7V.HTM"
+      }
+    ],
+    "source_index": 8
+  },
+  {
+    "id": "libro-1-reyes",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "1 Reyes",
+    "text": "Comienza con Salomón, la construcción del templo y el esplendor del reino, pero también narra sus fracturas. Tras su muerte, el reino se divide. Los profetas, especialmente Elías, denuncian la infidelidad y los abusos de los gobernantes.",
+    "pts": [
+      "<b>Sus partes:</b> 1–11: reinado de Salomón, templo y deterioro de su fidelidad. 12–16: división entre Israel y Judá. 17–22: Elías, Ajab y conflictos en torno al culto y la justicia.",
+      "<b>Cómo leerlo:</b> Observa cómo el libro evalúa a los reyes por su relación con Dios, además de sus logros políticos. La historia de la viña de Nabot permite ver con claridad el abuso contra una persona sin poder.",
+      "<b>Para comenzar:</b> 1 Reyes 21. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué límites necesita el poder para no pasar por encima de otros?",
+    "refs": [
+      {
+        "label": "Leer 1 Reyes · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P89.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Reyes 21",
+        "url": "https://www.vatican.va/archive/ESL0506/__P8T.HTM"
+      }
+    ],
+    "source_index": 9
+  },
+  {
+    "id": "libro-2-reyes",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "2 Reyes",
+    "text": "Continúa las historias de los reinos de Israel y Judá. El ministerio de Eliseo, las reformas de algunos reyes y las repetidas infidelidades desembocan en la caída de Samaría y Jerusalén. El exilio aparece como una ruptura profunda, aunque el final deja una pequeña apertura.",
+    "pts": [
+      "<b>Sus partes:</b> 1–8: Elías, Eliseo y sus intervenciones. 9–17: conflictos y caída del reino del norte. 18–25: últimos reyes de Judá, reformas, conquista de Jerusalén y deportación.",
+      "<b>Cómo leerlo:</b> Ubica siempre de qué reino se habla: Israel al norte y Judá al sur. Es una interpretación religiosa de la historia; no la conviertas en una regla para culpar a toda persona que hoy sufre una desgracia.",
+      "<b>Para comenzar:</b> 2 Reyes 22. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué hacemos cuando descubrimos que debemos cambiar de rumbo?",
+    "refs": [
+      {
+        "label": "Leer 2 Reyes · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P8V.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Reyes 22",
+        "url": "https://www.vatican.va/archive/ESL0506/__P9G.HTM"
+      }
+    ],
+    "source_index": 10
+  },
+  {
+    "id": "libro-1-cronicas",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "1 Crónicas",
+    "text": "Vuelve sobre la historia de Israel desde las genealogías hasta el reinado de David. Da especial importancia al culto, los servidores del templo y la preparación de su construcción. Ayuda a una comunidad a reconocer sus raíces y su continuidad.",
+    "pts": [
+      "<b>Sus partes:</b> 1–9: genealogías y pertenencia al pueblo. 10–21: reinado de David. 22–29: preparativos del templo, organización del servicio y encargo a Salomón.",
+      "<b>Cómo leerlo:</b> No es una repetición sin propósito de Samuel. Selecciona y ordena recuerdos con un interés particular por la comunidad y el culto. Puedes recorrer las genealogías observando qué vínculos quiere conservar.",
+      "<b>Para comenzar:</b> 1 Crónicas 29. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué recibí de quienes vinieron antes y cómo lo cuidaré?",
+    "refs": [
+      {
+        "label": "Leer 1 Crónicas · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PNT.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Crónicas 29",
+        "url": "https://www.vatican.va/archive/ESL0506/__POL.HTM"
+      }
+    ],
+    "source_index": 35
+  },
+  {
+    "id": "libro-2-cronicas",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "2 Crónicas",
+    "text": "Sigue a Salomón y a los reyes de Judá, con el templo de Jerusalén como centro. Narra momentos de fidelidad, reformas y extravío. Después de la destrucción y el exilio, termina con la autorización para regresar y reconstruir.",
+    "pts": [
+      "<b>Sus partes:</b> 1–9: Salomón y el templo. 10–28: reyes de Judá y distintas respuestas a Dios. 29–35: reformas de Ezequías y Josías. 36: caída, exilio y decreto de Ciro.",
+      "<b>Cómo leerlo:</b> Compáralo con Reyes sin exigir que ambos destaquen lo mismo. Aquí sobresalen el culto y la posibilidad de volver a Dios. Sus llamados al arrepentimiento se dirigen a una comunidad concreta.",
+      "<b>Para comenzar:</b> 2 Crónicas 34. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué necesita ser renovado en una comunidad para volver a empezar?",
+    "refs": [
+      {
+        "label": "Leer 2 Crónicas · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__POM.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Crónicas 34",
+        "url": "https://www.vatican.va/archive/ESL0506/__PPJ.HTM"
+      }
+    ],
+    "source_index": 36
+  },
+  {
+    "id": "libro-esdras",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Esdras",
+    "text": "Relata el regreso de grupos de exiliados y la reconstrucción del templo. Más adelante, Esdras impulsa la enseñanza de la Ley y una reforma de la comunidad. El entusiasmo por recomenzar convive con oposición y decisiones difíciles sobre la identidad del pueblo.",
+    "pts": [
+      "<b>Sus partes:</b> 1–6: retorno, reconstrucción y dedicación del templo. 7–8: misión y llegada de Esdras. 9–10: crisis y medidas sobre los matrimonios con personas de otros pueblos.",
+      "<b>Cómo leerlo:</b> Lee las medidas de separación dentro de la preocupación antigua por la supervivencia comunitaria. No deben trasladarse sin más a las familias actuales. Compáralas con otras voces bíblicas, como la historia de Rut.",
+      "<b>Para comenzar:</b> Esdras 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo podemos cuidar nuestra identidad sin perder de vista la dignidad ajena?",
+    "refs": [
+      {
+        "label": "Leer Esdras · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PPM.HTM"
+      },
+      {
+        "label": "Para comenzar: Esdras 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PPO.HTM"
+      }
+    ],
+    "source_index": 37
+  },
+  {
+    "id": "libro-nehemias",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Nehemías",
+    "text": "Nehemías dirige la reconstrucción de las murallas de Jerusalén entre amenazas y dificultades internas. El libro también habla de deudas, injusticias y renovación religiosa. Recuperar una ciudad implica más que levantar sus paredes.",
+    "pts": [
+      "<b>Sus partes:</b> 1–7: proyecto, oposición, justicia interna y reconstrucción. 8–10: lectura de la Ley, oración y compromiso. 11–13: organización de la población, dedicación y nuevas reformas.",
+      "<b>Cómo leerlo:</b> Fíjate en el capítulo 5: el proyecto común no puede avanzar ignorando la explotación entre hermanos. La lectura pública de la Ley muestra también la necesidad de explicar lo que se escucha.",
+      "<b>Para comenzar:</b> Nehemías 5. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿A quién estamos dejando atrás mientras construimos algo juntos?",
+    "refs": [
+      {
+        "label": "Leer Nehemías · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PPW.HTM"
+      },
+      {
+        "label": "Para comenzar: Nehemías 5",
+        "url": "https://www.vatican.va/archive/ESL0506/__PQ0.HTM"
+      }
+    ],
+    "source_index": 38
+  },
+  {
+    "id": "libro-tobias-tobit",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Tobías (Tobit)",
+    "text": "Tobit y Sara atraviesan sufrimientos distintos y presentan a Dios su dolor. El viaje del joven Tobías, acompañado por Rafael, enlaza sus historias. El relato reúne vida familiar, oración, fidelidad, ayuda al necesitado y esperanza de curación.",
+    "pts": [
+      "<b>Sus partes:</b> 1–3: dificultades de Tobit y Sara. 4–6: consejos y comienzo del viaje. 7–11: matrimonio de Tobías y Sara, regreso y curación de Tobit. 12–14: revelación de Rafael, alabanza y despedida.",
+      "<b>Cómo leerlo:</b> Léelo como una narración religiosa que enseña mediante una historia, no como un manual médico. Los gestos de cuidado importan tanto como el desenlace. En algunas Biblias el título es «Tobit».",
+      "<b>Para comenzar:</b> Tobías (Tobit) 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Quién me ha acompañado en un camino que no sabía recorrer?",
+    "refs": [
+      {
+        "label": "Leer Tobías (Tobit) · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PQV.HTM"
+      },
+      {
+        "label": "Para comenzar: Tobías (Tobit) 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__PQY.HTM"
+      }
+    ],
+    "source_index": 41
+  },
+  {
+    "id": "libro-judit",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Judit",
+    "text": "Ante la amenaza de un ejército, una comunidad pierde la esperanza. Judit, viuda israelita, ora y actúa con valentía para liberar a su pueblo. La narración destaca a una mujer que interviene cuando los dirigentes creen que ya no hay salida.",
+    "pts": [
+      "<b>Sus partes:</b> 1–7: amenaza militar y asedio de Betulia. 8–10: presentación de Judit, oración y preparación. 11–13: encuentro con Holofernes y acción decisiva. 14–16: liberación y alabanza.",
+      "<b>Cómo leerlo:</b> Su forma narrativa y sus dificultades cronológicas piden leerla como relato religioso, no como una crónica moderna. La violencia pertenece al mundo de la historia; no es una instrucción para resolver conflictos actuales.",
+      "<b>Para comenzar:</b> Judit 8. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué puede aportar una voz que la comunidad no estaba escuchando?",
+    "refs": [
+      {
+        "label": "Leer Judit · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PQF.HTM"
+      },
+      {
+        "label": "Para comenzar: Judit 8",
+        "url": "https://www.vatican.va/archive/ESL0506/__PQM.HTM"
+      }
+    ],
+    "source_index": 40
+  },
+  {
+    "id": "libro-ester",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Ester",
+    "text": "Una joven judía llega a ser reina y debe decidir si se arriesga para defender a su pueblo, amenazado por un decreto de exterminio. Mardoqueo y Ester intervienen en una historia de peligro, vuelcos inesperados y memoria de la liberación.",
+    "pts": [
+      "<b>Sus partes:</b> El relato principal recorre la llegada de Ester a la corte, la amenaza de Amán y la defensa del pueblo. La edición católica incluye además secciones griegas con oraciones, sueños y otros detalles que pueden aparecer intercalados o como suplementos.",
+      "<b>Cómo leerlo:</b> Consulta las notas de tu edición: los añadidos griegos no se numeran igual en todas las Biblias. Observa el riesgo de Ester y la situación vulnerable de una minoría, sin convertir la historia en rechazo hacia otros pueblos.",
+      "<b>Para comenzar:</b> Ester 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cuándo callar me protege a mí, pero deja desprotegidos a otros?",
+    "refs": [
+      {
+        "label": "Leer Ester · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PN7.HTM"
+      },
+      {
+        "label": "Para comenzar: Ester 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__PNA.HTM"
+      },
+      {
+        "label": "Ester · secciones griegas",
+        "url": "https://www.vatican.va/archive/ESL0506/__PQ9.HTM"
+      }
+    ],
+    "source_index": 33
+  },
+  {
+    "id": "libro-1-macabeos",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "1 Macabeos",
+    "text": "Narra la resistencia judía ante la persecución religiosa y la imposición de costumbres que amenazan su fe. Matatías y sus hijos encabezan la lucha. La recuperación del templo ocupa un lugar central, junto con alianzas y disputas por la autonomía.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: persecución y comienzo de la resistencia. 3–9: liderazgo de Judas Macabeo. 9–12: etapa de Jonatán. 13–16: gobierno de Simón y acontecimientos finales.",
+      "<b>Cómo leerlo:</b> Ubícalo antes del Nuevo Testamento. Su perspectiva favorece a los dirigentes de la rebelión; lee sus guerras y alianzas dentro de ese contexto. Ayuda a comprender la memoria religiosa del pueblo judío.",
+      "<b>Para comenzar:</b> 1 Macabeos 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo se conserva una convicción en tiempos de presión?",
+    "refs": [
+      {
+        "label": "Leer 1 Macabeos · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PR9.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Macabeos 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__PRC.HTM"
+      }
+    ],
+    "source_index": 42
+  },
+  {
+    "id": "libro-2-macabeos",
+    "g": 3,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "2 Macabeos",
+    "text": "Vuelve sobre parte del conflicto macabeo con otro enfoque. Destaca el templo, la fidelidad de quienes sufren persecución y la confianza en la resurrección. No continúa simplemente donde terminó 1 Macabeos: cuenta acontecimientos que se superponen.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: cartas y presentación. 3–7: crisis del templo, persecución y martirio. 8–10: victorias de Judas y purificación del templo. 10–15: nuevos conflictos hasta la derrota de Nicanor.",
+      "<b>Cómo leerlo:</b> Lee con especial cuidado los capítulos de martirio, que contienen violencia. El libro expresa esperanza más allá de la muerte e incluye la oración por los difuntos, importante en la tradición católica.",
+      "<b>Para comenzar:</b> 2 Macabeos 7. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué significa esperar en Dios cuando no hay una salida inmediata?",
+    "refs": [
+      {
+        "label": "Leer 2 Macabeos · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PRP.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Macabeos 7",
+        "url": "https://www.vatican.va/archive/ESL0506/__PRV.HTM"
+      }
+    ],
+    "source_index": 43
+  },
+  {
+    "id": "libro-job",
+    "g": 4,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Job",
+    "text": "Un hombre justo pierde sus bienes, a sus hijos y la salud. Sus amigos intentan explicar su sufrimiento, pero sus respuestas terminan acusándolo. Job protesta, pregunta y busca a Dios. El libro cuestiona la idea de que todo dolor sea castigo por una culpa personal.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: presentación y desgracias. 3–31: lamentos y debates. 32–37: discursos de Elihú. 38–42: respuesta divina, respuesta de Job y desenlace.",
+      "<b>Cómo leerlo:</b> Distingue lo que dice cada personaje: los amigos no hablan siempre con razón. La respuesta de Dios amplía el horizonte, pero no ofrece una explicación sencilla de cada pérdida ni borra su dolor.",
+      "<b>Para comenzar:</b> Job 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Puedo acompañar el dolor de alguien sin apresurar una explicación?",
+    "refs": [
+      {
+        "label": "Leer Job · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PKC.HTM"
+      },
+      {
+        "label": "Para comenzar: Job 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PKE.HTM"
+      }
+    ],
+    "source_index": 27
+  },
+  {
+    "id": "libro-salmos",
+    "g": 4,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Salmos",
+    "text": "Reúne 150 oraciones y poemas de alabanza, súplica, agradecimiento, arrepentimiento y confianza. En ellos se habla a Dios desde situaciones muy distintas. Es un libro para escuchar y orar poco a poco, no solo para buscar frases agradables.",
+    "pts": [
+      "<b>Sus partes:</b> La colección se organiza en cinco libros: 1–41, 42–72, 73–89, 90–106 y 107–150 según la numeración hebrea. Dentro de ellos se mezclan diversos tipos de oración, no una historia continua.",
+      "<b>Cómo leerlo:</b> Elige un salmo y observa a quién se habla y qué emoción expresa. Algunas ediciones y la liturgia usan una numeración diferente, a menudo indicada entre paréntesis: el salmo del pastor es 23 (22).",
+      "<b>Para comenzar:</b> Salmos 23. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué puedo decir hoy a Dios con sinceridad?",
+    "refs": [
+      {
+        "label": "Leer Salmos · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PG6.HTM"
+      },
+      {
+        "label": "Para comenzar: Salmos 23",
+        "url": "https://www.vatican.va/archive/ESL0506/__PGS.HTM"
+      }
+    ],
+    "source_index": 26
+  },
+  {
+    "id": "libro-proverbios",
+    "g": 4,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Proverbios",
+    "text": "Reúne enseñanzas breves para aprender a vivir con prudencia, justicia y respeto a Dios. Habla del trabajo, el dinero, las palabras, las amistades y las decisiones. La sabiduría se presenta como algo que debe buscarse y practicarse.",
+    "pts": [
+      "<b>Sus partes:</b> 1–9: invitaciones a elegir la sabiduría. 10–29: distintas colecciones de proverbios. 30: palabras de Agur. 31: consejos de Lemuel y poema sobre una mujer capaz.",
+      "<b>Cómo leerlo:</b> Lee unos pocos dichos a la vez. Son observaciones y enseñanzas sobre la vida, no promesas automáticas de prosperidad. A veces dos proverbios muestran aspectos distintos que deben valorarse según la situación.",
+      "<b>Para comenzar:</b> Proverbios 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué pequeña decisión requiere hoy más prudencia de mi parte?",
+    "refs": [
+      {
+        "label": "Leer Proverbios · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PLJ.HTM"
+      },
+      {
+        "label": "Para comenzar: Proverbios 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PLL.HTM"
+      }
+    ],
+    "source_index": 28
+  },
+  {
+    "id": "libro-eclesiastes-qohelet",
+    "g": 4,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Eclesiastés (Qohélet)",
+    "text": "Una voz reflexiona sobre el trabajo, el tiempo, el placer, la muerte y los límites del conocimiento. Cuestiona la pretensión de controlar la vida o asegurar el sentido mediante los logros. También invita a recibir con gratitud los bienes sencillos.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: búsqueda y balance de distintas experiencias. 3–6: tiempo, trabajo, desigualdad y disfrute. 7–12: sabiduría, límites, vejez y conclusión del libro.",
+      "<b>Cómo leerlo:</b> «Vanidad» puede evocar lo fugaz, como un soplo, además de lo que parece inútil. No conviertas una frase aislada en la conclusión total: sigue la tensión entre las preguntas y las invitaciones a vivir.",
+      "<b>Para comenzar:</b> Eclesiastés (Qohélet) 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué disfrute sencillo estoy posponiendo por querer tener todo resuelto?",
+    "refs": [
+      {
+        "label": "Leer Eclesiastés (Qohélet) · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PMQ.HTM"
+      },
+      {
+        "label": "Para comenzar: Eclesiastés (Qohélet) 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PMS.HTM"
+      }
+    ],
+    "source_index": 31
+  },
+  {
+    "id": "libro-cantar-de-los-cantares",
+    "g": 4,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Cantar de los Cantares",
+    "text": "Es una colección de poemas de amor que celebra el deseo, la belleza, la búsqueda y el encuentro. Sus voces dialogan mediante imágenes de jardines, perfumes y paisajes. Las tradiciones judía y cristiana también lo han leído como expresión del amor entre Dios y su pueblo.",
+    "pts": [
+      "<b>Sus partes:</b> A lo largo de sus ocho capítulos se suceden búsqueda, encuentro, separación y nuevos encuentros. No hay una única división aceptada ni una narración lineal que deba reconstruirse a la fuerza.",
+      "<b>Cómo leerlo:</b> Empieza escuchando las voces y las imágenes del poema. Su sentido amoroso humano merece atención; las lecturas espirituales se apoyan en esa riqueza y no necesitan borrar el cuerpo, la ternura o el deseo.",
+      "<b>Para comenzar:</b> Cantar de los Cantares 2. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué diferencia hay entre amar a alguien y querer poseerlo?",
+    "refs": [
+      {
+        "label": "Leer Cantar de los Cantares · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PMI.HTM"
+      },
+      {
+        "label": "Para comenzar: Cantar de los Cantares 2",
+        "url": "https://www.vatican.va/archive/ESL0506/__PMJ.HTM"
+      }
+    ],
+    "source_index": 30
+  },
+  {
+    "id": "libro-sabiduria",
+    "g": 4,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Sabiduría",
+    "text": "Invita a buscar la justicia y la sabiduría que viene de Dios. Reflexiona sobre el destino de los justos, la aparente ventaja de los malvados y la esperanza más allá de la muerte. Después vuelve sobre la historia del éxodo y critica la idolatría.",
+    "pts": [
+      "<b>Sus partes:</b> 1–5: justicia, muerte y destino de justos e injustos. 6–9: elogio y petición de la sabiduría. 10–19: acción de la sabiduría en la historia y reflexión sobre el éxodo.",
+      "<b>Cómo leerlo:</b> El libro habla con la voz literaria de Salomón; no hace falta entenderlo como un diario escrito por ese rey. Relaciona la sabiduría con la justicia concreta, no solo con saber muchas cosas.",
+      "<b>Para comenzar:</b> Sabiduría 9. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué necesito pedir para decidir con justicia y no solo con conveniencia?",
+    "refs": [
+      {
+        "label": "Leer Sabiduría · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PS4.HTM"
+      },
+      {
+        "label": "Para comenzar: Sabiduría 9",
+        "url": "https://www.vatican.va/archive/ESL0506/__PSC.HTM"
+      }
+    ],
+    "source_index": 44
+  },
+  {
+    "id": "libro-eclesiastico-siracida",
+    "g": 4,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Eclesiástico (Sirácida)",
+    "text": "Ofrece enseñanzas sobre la amistad, la familia, el habla, el dinero, la enfermedad, la oración y el respeto a Dios. Une experiencia cotidiana y tradición de Israel. También recuerda a personajes del pasado como parte de una herencia de fe.",
+    "pts": [
+      "<b>Sus partes:</b> El prólogo presenta la traducción de la obra. 1–42: enseñanzas para vivir con sabiduría. 42–43: admiración por la creación. 44–50: memoria de los antepasados. 51: oración y búsqueda de la sabiduría.",
+      "<b>Cómo leerlo:</b> No lo confundas con Eclesiastés. Sus consejos nacen de una sociedad antigua: conviene distinguir su propósito educativo de costumbres que hoy necesitan una lectura crítica y contextual. Busca también sus consejos sobre amistad y cuidado.",
+      "<b>Para comenzar:</b> Eclesiástico (Sirácida) 6. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué hace que una amistad sea confiable?",
+    "refs": [
+      {
+        "label": "Leer Eclesiástico (Sirácida) · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PSN.HTM"
+      },
+      {
+        "label": "Para comenzar: Eclesiástico (Sirácida) 6",
+        "url": "https://www.vatican.va/archive/ESL0506/__PSS.HTM"
+      }
+    ],
+    "source_index": 45
+  },
+  {
+    "id": "libro-isaias",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Isaías",
+    "text": "Reúne denuncias de la injusticia, llamados a confiar en Dios y palabras de consuelo para un pueblo herido. Sus distintas secciones se sitúan ante crisis del reino de Judá, el exilio y la reconstrucción. La esperanza incluye paz, justicia y renovación.",
+    "pts": [
+      "<b>Sus partes:</b> 1–39: denuncias y promesas ante las crisis de Judá. 40–55: consuelo y esperanza de retorno desde el exilio. 56–66: desafíos de la comunidad y visión de una creación renovada.",
+      "<b>Cómo leerlo:</b> Ubica cada sección en su horizonte. La lectura cristiana reconoce en varios pasajes una relación con Jesús; atiende también al significado que tenían para Israel. Los poemas del Siervo requieren leer el conjunto, no solo un versículo.",
+      "<b>Para comenzar:</b> Isaías 40. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo puede el consuelo ir acompañado de justicia?",
+    "refs": [
+      {
+        "label": "Leer Isaías · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P9L.HTM"
+      },
+      {
+        "label": "Para comenzar: Isaías 40",
+        "url": "https://www.vatican.va/archive/ESL0506/__PAO.HTM"
+      }
+    ],
+    "source_index": 11
+  },
+  {
+    "id": "libro-jeremias",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Jeremías",
+    "text": "Jeremías llama a Judá a cambiar de vida antes de la caída de Jerusalén. Su mensaje encuentra rechazo y le causa sufrimiento. Entre advertencias y lamentos aparecen promesas de retorno y de una alianza escrita en el corazón.",
+    "pts": [
+      "<b>Sus partes:</b> 1: vocación. 2–25: denuncias y llamados. 26–45: conflictos, acciones del profeta, caída de la ciudad y palabras de esperanza. 46–51: mensajes sobre las naciones. 52: relato final de la caída de Jerusalén.",
+      "<b>Cómo leerlo:</b> El orden no es siempre cronológico. Observa cuándo habla el profeta, cuándo se cuenta su historia y cuándo aparece una promesa. No uses la esperanza del libro para negar la gravedad de la pérdida.",
+      "<b>Para comenzar:</b> Jeremías 31. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué cambiaría si mis convicciones se volvieran una forma de vivir?",
+    "refs": [
+      {
+        "label": "Leer Jeremías · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PBH.HTM"
+      },
+      {
+        "label": "Para comenzar: Jeremías 31",
+        "url": "https://www.vatican.va/archive/ESL0506/__PCB.HTM"
+      }
+    ],
+    "source_index": 12
+  },
+  {
+    "id": "libro-lamentaciones",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Lamentaciones",
+    "text": "Cinco poemas lloran la destrucción de Jerusalén. Dan voz al hambre, la soledad, la culpa, la protesta y la súplica. En medio de la devastación aparece una esperanza frágil, que no silencia el sufrimiento ni obliga a fingir serenidad.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: ciudad abandonada y destrucción. 3: sufrimiento personal, memoria y esperanza. 4: contraste entre la vida anterior y la ruina. 5: oración comunitaria que pide restauración.",
+      "<b>Cómo leerlo:</b> Lee despacio y permite que el lamento sea lamento. El libro no pide resolver todo dolor con una frase alentadora. Sus imágenes pertenecen a una catástrofe colectiva que exige escucha y memoria.",
+      "<b>Para comenzar:</b> Lamentaciones 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Sé dar espacio a un dolor que todavía no tiene palabras de consuelo?",
+    "refs": [
+      {
+        "label": "Leer Lamentaciones · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PN2.HTM"
+      },
+      {
+        "label": "Para comenzar: Lamentaciones 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PN4.HTM"
+      }
+    ],
+    "source_index": 32
+  },
+  {
+    "id": "libro-baruc",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Baruc",
+    "text": "Se sitúa en el horizonte del exilio y reúne confesión, petición de misericordia, elogio de la sabiduría y consuelo para Jerusalén. Invita a reconocer las propias faltas sin renunciar a la esperanza del regreso y la renovación.",
+    "pts": [
+      "<b>Sus partes:</b> 1–3: marco del exilio, reconocimiento de la culpa y oración. 3–4: búsqueda de la sabiduría. 4–5: consuelo y retorno. La Carta de Jeremías suele formar el capítulo 6; algunas ediciones la presentan por separado.",
+      "<b>Cómo leerlo:</b> Observa que es una colección de distintos tipos de texto. La sabiduría se vincula con la enseñanza recibida por Israel. La Carta de Jeremías cuestiona el poder atribuido a los ídolos.",
+      "<b>Para comenzar:</b> Baruc 5. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo puedo reconocer un error sin perder la esperanza de cambiar?",
+    "refs": [
+      {
+        "label": "Leer Baruc · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PU2.HTM"
+      },
+      {
+        "label": "Para comenzar: Baruc 5",
+        "url": "https://www.vatican.va/archive/ESL0506/__PU6.HTM"
+      },
+      {
+        "label": "Carta de Jeremías",
+        "url": "https://www.vatican.va/archive/ESL0506/__PU7.HTM"
+      }
+    ],
+    "source_index": 46
+  },
+  {
+    "id": "libro-ezequiel",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Ezequiel",
+    "text": "Entre los exiliados, Ezequiel anuncia la caída de Jerusalén y denuncia las infidelidades del pueblo. Después proclama renovación: un corazón nuevo, vida donde parecía haber muerte y una presencia divina que no abandona definitivamente a su pueblo.",
+    "pts": [
+      "<b>Sus partes:</b> 1–24: visiones y advertencias sobre Jerusalén. 25–32: mensajes sobre otras naciones. 33–39: restauración, pastores y huesos secos. 40–48: visión del templo y de una tierra renovada.",
+      "<b>Cómo leerlo:</b> Las visiones y acciones simbólicas no se leen como descripciones corrientes. Algunas imágenes son duras; usa las notas de tu Biblia. La visión de los huesos secos habla primero de la restauración del pueblo.",
+      "<b>Para comenzar:</b> Ezequiel 37. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Dónde parece imposible recomenzar y qué podría devolver vida?",
+    "refs": [
+      {
+        "label": "Leer Ezequiel · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PCZ.HTM"
+      },
+      {
+        "label": "Para comenzar: Ezequiel 37",
+        "url": "https://www.vatican.va/archive/ESL0506/__PDZ.HTM"
+      }
+    ],
+    "source_index": 13
+  },
+  {
+    "id": "libro-daniel",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Daniel",
+    "text": "Presenta relatos de fidelidad a Dios bajo poderes extranjeros y visiones que sostienen la esperanza ante la persecución. Los imperios parecen invencibles, pero no tienen la última palabra. La edición católica incluye también pasajes conservados en griego.",
+    "pts": [
+      "<b>Sus partes:</b> 1–6: relatos de Daniel y sus compañeros. 7–12: visiones sobre reinos, persecución y esperanza. Las secciones griegas incluyen la oración y el canto en el horno, Susana, y Bel y el dragón; suelen aparecer en el capítulo 3 y en 13–14 o como suplementos.",
+      "<b>Cómo leerlo:</b> Los animales y números de las visiones son símbolos. No los conviertas en un calendario del fin del mundo. Revisa la numeración de tu edición para encontrar las secciones griegas.",
+      "<b>Para comenzar:</b> Daniel 6. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué sostiene la fidelidad cuando el ambiente presiona en otra dirección?",
+    "refs": [
+      {
+        "label": "Leer Daniel · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PNH.HTM"
+      },
+      {
+        "label": "Para comenzar: Daniel 6",
+        "url": "https://www.vatican.va/archive/ESL0506/__PNM.HTM"
+      },
+      {
+        "label": "Daniel · secciones griegas",
+        "url": "https://www.vatican.va/archive/ESL0506/__PU8.HTM"
+      }
+    ],
+    "source_index": 34
+  },
+  {
+    "id": "libro-oseas",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Oseas",
+    "text": "Usa la imagen de una relación herida para hablar de la infidelidad de Israel y del amor de Dios. Denuncia el culto vacío y las alianzas que sustituyen la confianza. Sus palabras de juicio conviven con ternura y llamados al retorno.",
+    "pts": [
+      "<b>Sus partes:</b> 1–3: historia e imágenes matrimoniales. 4–13: denuncias y anuncios de consecuencias, con pasajes de amor y esperanza. 14: invitación a volver y promesa de restauración.",
+      "<b>Cómo leerlo:</b> La metáfora matrimonial pertenece a un contexto antiguo y contiene imágenes difíciles. No es una justificación del maltrato ni una obligación de permanecer en una relación peligrosa. Lee también la ternura de Dios hacia su pueblo.",
+      "<b>Para comenzar:</b> Oseas 11. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo se expresa una fidelidad que busca el bien y no el dominio?",
+    "refs": [
+      {
+        "label": "Leer Oseas · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PEB.HTM"
+      },
+      {
+        "label": "Para comenzar: Oseas 11",
+        "url": "https://www.vatican.va/archive/ESL0506/__PEL.HTM"
+      }
+    ],
+    "source_index": 14
+  },
+  {
+    "id": "libro-joel",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Joel",
+    "text": "Una calamidad que arruina los campos se convierte en un llamado a reunir al pueblo y volver a Dios. El libro pasa de la desolación a la restauración y anuncia la efusión del Espíritu. También presenta el juicio sobre las naciones.",
+    "pts": [
+      "<b>Sus partes:</b> Primero describe la plaga y el lamento comunitario; luego llama al retorno y anuncia renovación. La parte final habla del Espíritu y del juicio. Se divide en tres o cuatro capítulos según la edición.",
+      "<b>Cómo leerlo:</b> No te desconciertes si la referencia cambia entre Biblias. En la edición enlazada hay cuatro capítulos y el anuncio del Espíritu está en el tercero. Observa la dimensión comunitaria de la respuesta.",
+      "<b>Para comenzar:</b> Joel 2. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo puede una comunidad responder unida ante una crisis?",
+    "refs": [
+      {
+        "label": "Leer Joel · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PEP.HTM"
+      },
+      {
+        "label": "Para comenzar: Joel 2",
+        "url": "https://www.vatican.va/archive/ESL0506/__PEQ.HTM"
+      }
+    ],
+    "source_index": 15
+  },
+  {
+    "id": "libro-amos",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Amós",
+    "text": "Denuncia una prosperidad construida sobre la explotación de los pobres. El culto no puede encubrir el abuso, el fraude o la indiferencia. Sus advertencias de juicio buscan hacer visible una injusticia que muchos prefieren no mirar.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: denuncias contra naciones y contra Israel. 3–6: críticas a la injusticia y a la falsa seguridad. 7–9: visiones, conflicto del profeta y promesa final de restauración.",
+      "<b>Cómo leerlo:</b> Pregunta quién se beneficia y quién queda lastimado en cada denuncia. La crítica al culto no significa que toda oración sea inútil: rechaza la separación entre la relación con Dios y el trato al prójimo.",
+      "<b>Para comenzar:</b> Amós 5. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Hay alguna comodidad mía que dependa de no mirar una injusticia?",
+    "refs": [
+      {
+        "label": "Leer Amós · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PET.HTM"
+      },
+      {
+        "label": "Para comenzar: Amós 5",
+        "url": "https://www.vatican.va/archive/ESL0506/__PEX.HTM"
+      }
+    ],
+    "source_index": 16
+  },
+  {
+    "id": "libro-abdias",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Abdías",
+    "text": "Este breve libro denuncia a Edom por su actitud ante la desgracia de Judá. La soberbia y el aprovechamiento de la caída del hermano quedan bajo juicio. El horizonte final anuncia restauración y el reinado de Dios.",
+    "pts": [
+      "<b>Sus partes:</b> Versículos 1–14: denuncia contra Edom y su participación en la desgracia de Jerusalén. 15–21: día del Señor, restauración y soberanía de Dios. Tiene un solo capítulo.",
+      "<b>Cómo leerlo:</b> Identifica primero a los pueblos y el conflicto. No conviertas el juicio del texto en una invitación a vengarte. Su pregunta moral alcanza la alegría cruel y el beneficio obtenido del dolor ajeno.",
+      "<b>Para comenzar:</b> Abdías 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué hago cuando alguien con quien tengo diferencias atraviesa una desgracia?",
+    "refs": [
+      {
+        "label": "Leer Abdías · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PF2.HTM"
+      },
+      {
+        "label": "Para comenzar: Abdías 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__PF2.HTM"
+      }
+    ],
+    "source_index": 17
+  },
+  {
+    "id": "libro-jonas",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Jonás",
+    "text": "Un profeta huye de la misión de ir a Nínive. Después de ser rescatado, anuncia su mensaje y la ciudad cambia de conducta. El conflicto final está en su dificultad para aceptar la misericordia de Dios hacia quienes considera enemigos.",
+    "pts": [
+      "<b>Sus partes:</b> 1: huida y tormenta. 2: oración desde el pez. 3: predicación y respuesta de Nínive. 4: enojo de Jonás y pregunta de Dios.",
+      "<b>Cómo leerlo:</b> No te quedes solo con el episodio del pez. La última pregunta ilumina el libro entero: invita al lector a examinar los límites que pone a la compasión. Su forma narrativa enseña mediante contrastes y sorpresa.",
+      "<b>Para comenzar:</b> Jonás 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Me cuesta aceptar que también otros reciban misericordia?",
+    "refs": [
+      {
+        "label": "Leer Jonás · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PF3.HTM"
+      },
+      {
+        "label": "Para comenzar: Jonás 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__PF6.HTM"
+      }
+    ],
+    "source_index": 18
+  },
+  {
+    "id": "libro-miqueas",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Miqueas",
+    "text": "Denuncia a dirigentes y poderosos que despojan al pueblo, y a quienes usan la religión para obtener ventajas. También anuncia paz y renovación. La fidelidad se expresa en justicia, misericordia y una relación humilde con Dios.",
+    "pts": [
+      "<b>Sus partes:</b> 1–3: denuncias y juicio contra injusticias de Samaría y Jerusalén. 4–5: esperanza de paz y un nuevo gobierno. 6–7: reclamación de Dios, respuesta humana y confianza final.",
+      "<b>Cómo leerlo:</b> Lee las palabras conocidas sobre la justicia dentro de la crítica concreta al abuso. Las promesas de paz no eliminan el llamado a cambiar las relaciones que producen sufrimiento.",
+      "<b>Para comenzar:</b> Miqueas 6. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué acto de justicia o misericordia está hoy a mi alcance?",
+    "refs": [
+      {
+        "label": "Leer Miqueas · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PF7.HTM"
+      },
+      {
+        "label": "Para comenzar: Miqueas 6",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFC.HTM"
+      }
+    ],
+    "source_index": 19
+  },
+  {
+    "id": "libro-nahum",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Nahúm",
+    "text": "Anuncia la caída de Nínive, capital del poder asirio. Para quienes habían sufrido su violencia, el anuncio abre una expectativa de alivio. El libro utiliza poesía intensa para presentar el derrumbe de una ciudad que parecía intocable.",
+    "pts": [
+      "<b>Sus partes:</b> 1: presentación del poder y la justicia de Dios. 2: descripción poética del asalto a Nínive. 3: denuncia de la ciudad y de las causas de su ruina.",
+      "<b>Cómo leerlo:</b> Sitúalo en la experiencia de pueblos sometidos por un imperio. Sus imágenes bélicas no son permiso para desear daño a cualquier adversario. Leerlo junto a Jonás ayuda a escuchar distintas voces bíblicas sobre Nínive.",
+      "<b>Para comenzar:</b> Nahúm 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué esperanza necesitan quienes viven bajo un poder abusivo?",
+    "refs": [
+      {
+        "label": "Leer Nahúm · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFE.HTM"
+      },
+      {
+        "label": "Para comenzar: Nahúm 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFE.HTM"
+      }
+    ],
+    "source_index": 20
+  },
+  {
+    "id": "libro-habacuc",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Habacuc",
+    "text": "El profeta pregunta por qué persisten la violencia y la injusticia. La respuesta abre una nueva dificultad: el poder que castiga también es violento. El libro conserva ese diálogo exigente y termina en una oración de confianza en medio de la incertidumbre.",
+    "pts": [
+      "<b>Sus partes:</b> 1: queja del profeta y respuesta que provoca otra pregunta. 2: espera, respuesta y denuncias contra el opresor. 3: oración poética ante Dios.",
+      "<b>Cómo leerlo:</b> No confundas confianza con ausencia de preguntas. El profeta presenta su desconcierto sin disimularlo. Lee el final después del diálogo completo para comprender que la confianza no nace de una situación resuelta.",
+      "<b>Para comenzar:</b> Habacuc 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Puedo expresar mis preguntas sin pensar que por eso dejo de creer?",
+    "refs": [
+      {
+        "label": "Leer Habacuc · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFH.HTM"
+      },
+      {
+        "label": "Para comenzar: Habacuc 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFJ.HTM"
+      }
+    ],
+    "source_index": 21
+  },
+  {
+    "id": "libro-sofonias",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Sofonías",
+    "text": "Anuncia el día del Señor como juicio sobre la idolatría, la corrupción y la indiferencia. El llamado alcanza a Judá y a otras naciones. Su final abre espacio para un pueblo humilde y una alegría renovada por la presencia de Dios.",
+    "pts": [
+      "<b>Sus partes:</b> 1: juicio sobre Judá y Jerusalén. 2: llamado a buscar a Dios y anuncios sobre las naciones. 3: denuncia de Jerusalén, purificación y promesa de alegría.",
+      "<b>Cómo leerlo:</b> El tono cambia del estremecimiento al consuelo. No lo reduzcas a amenazas ni saltes directamente al final esperanzador. Pregunta qué actitudes quiere transformar el mensaje.",
+      "<b>Para comenzar:</b> Sofonías 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué lugar tienen la humildad y la alegría en mi relación con Dios?",
+    "refs": [
+      {
+        "label": "Leer Sofonías · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFK.HTM"
+      },
+      {
+        "label": "Para comenzar: Sofonías 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFM.HTM"
+      }
+    ],
+    "source_index": 22
+  },
+  {
+    "id": "libro-ageo",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Ageo",
+    "text": "Después del retorno del exilio, la reconstrucción del templo se ha detenido. Ageo pide revisar las prioridades y retomar la tarea. Anima a una comunidad que puede sentirse pequeña ante el recuerdo de tiempos anteriores.",
+    "pts": [
+      "<b>Sus partes:</b> 1: llamado a reconstruir y respuesta del pueblo. 2: ánimo ante el desaliento, enseñanza sobre la santidad y promesa vinculada a Zorobabel.",
+      "<b>Cómo leerlo:</b> El templo representa la vida común ante Dios; no es una invitación genérica a gastar en edificios religiosos. Lee el mensaje dentro de una comunidad que busca reconstruirse después del exilio.",
+      "<b>Para comenzar:</b> Ageo 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué tarea compartida hemos pospuesto mientras atendemos solo lo nuestro?",
+    "refs": [
+      {
+        "label": "Leer Ageo · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFN.HTM"
+      },
+      {
+        "label": "Para comenzar: Ageo 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFN.HTM"
+      }
+    ],
+    "source_index": 23
+  },
+  {
+    "id": "libro-zacarias",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Zacarías",
+    "text": "Combina visiones de restauración, llamados a la justicia y anuncios de un futuro para Jerusalén. Se dirige a una comunidad que reconstruye su vida tras el exilio. Sus imágenes de reyes y pastores tendrán especial importancia en la lectura cristiana.",
+    "pts": [
+      "<b>Sus partes:</b> 1–6: visiones y signos de renovación. 7–8: preguntas sobre el ayuno, justicia y esperanza. 9–14: anuncios sobre reyes, pastores, conflictos y el reinado de Dios.",
+      "<b>Cómo leerlo:</b> No intentes convertir cada imagen en un suceso de actualidad. Atiende a la situación de reconstrucción y al vínculo entre oración y justicia. Las citas del Nuevo Testamento abren además una lectura cristiana del libro.",
+      "<b>Para comenzar:</b> Zacarías 7. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Mis prácticas religiosas me vuelven más atento a quien necesita ayuda?",
+    "refs": [
+      {
+        "label": "Leer Zacarías · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFP.HTM"
+      },
+      {
+        "label": "Para comenzar: Zacarías 7",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFV.HTM"
+      }
+    ],
+    "source_index": 24
+  },
+  {
+    "id": "libro-malaquias",
+    "g": 5,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Antiguo Testamento",
+    "title": "Malaquías",
+    "text": "Presenta un diálogo de preguntas y respuestas que denuncia un culto descuidado, abusos e infidelidades. Pide coherencia a sacerdotes y pueblo. Termina mirando hacia una intervención de Dios y recordando la enseñanza de Moisés.",
+    "pts": [
+      "<b>Sus partes:</b> Sus discusiones recorren el amor de Dios, la responsabilidad sacerdotal, la fidelidad y la justicia. El cierre anuncia un mensajero y recuerda a Elías. Algunas ediciones tienen tres capítulos y otras cuatro.",
+      "<b>Cómo leerlo:</b> Observa la estructura de objeción y respuesta. Los pasajes sobre ofrendas pertenecen a ese marco de alianza y culto; no son una fórmula para comprar prosperidad mediante donaciones.",
+      "<b>Para comenzar:</b> Malaquías 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué distancia hay entre lo que digo honrar y lo que de verdad cuido?",
+    "refs": [
+      {
+        "label": "Leer Malaquías · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PG3.HTM"
+      },
+      {
+        "label": "Para comenzar: Malaquías 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PG5.HTM"
+      }
+    ],
+    "source_index": 25
+  },
+  {
+    "id": "libro-mateo",
+    "g": 6,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Mateo",
+    "text": "Presenta a Jesús como Mesías y maestro, en relación profunda con las Escrituras de Israel. El anuncio del Reino se expresa en enseñanzas, curaciones y llamados al seguimiento. Su muerte y resurrección desembocan en una misión para todos los pueblos.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: nacimiento e infancia. 3–4: preparación del ministerio. 5–25: enseñanzas y acciones, incluidos el Sermón de la Montaña y las parábolas. 26–28: pasión, muerte, resurrección y envío.",
+      "<b>Cómo leerlo:</b> Observa cómo alterna discursos y relatos. Los conflictos con ciertos dirigentes deben leerse en su contexto; no justifican culpar al pueblo judío en conjunto. Jesús, sus discípulos y su mundo son judíos.",
+      "<b>Para comenzar:</b> Mateo 5. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué enseñanza de Jesús me invita a cambiar una acción concreta?",
+    "refs": [
+      {
+        "label": "Leer Mateo · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PUB.HTM"
+      },
+      {
+        "label": "Para comenzar: Mateo 5",
+        "url": "https://www.vatican.va/archive/ESL0506/__PUF.HTM"
+      }
+    ],
+    "source_index": 49
+  },
+  {
+    "id": "libro-marcos",
+    "g": 6,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Marcos",
+    "text": "Narra con ritmo vivo las acciones de Jesús y la dificultad de sus discípulos para comprenderlo. La pregunta por su identidad conduce hacia Jerusalén y la cruz. Seguirlo implica aprender un camino de servicio que contradice la búsqueda de prestigio.",
+    "pts": [
+      "<b>Sus partes:</b> 1–8: anuncio, curaciones, conflictos y pregunta por Jesús. 8–10: camino y enseñanza a los discípulos. 11–13: Jerusalén. 14–16: pasión, muerte y anuncio de la resurrección.",
+      "<b>Cómo leerlo:</b> Es una buena puerta de entrada por su brevedad. Fíjate en las preguntas y los malentendidos. Las notas sobre Marcos 16,9–20 explican la historia de su transmisión; conviene leerlas con calma.",
+      "<b>Para comenzar:</b> Marcos 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo cambia mi idea de grandeza al mirar a Jesús servir?",
+    "refs": [
+      {
+        "label": "Leer Marcos · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PV3.HTM"
+      },
+      {
+        "label": "Para comenzar: Marcos 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__PV3.HTM"
+      }
+    ],
+    "source_index": 50
+  },
+  {
+    "id": "libro-lucas",
+    "g": 6,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Lucas",
+    "text": "Cuenta la vida de Jesús destacando la misericordia, la oración, la acción del Espíritu y la atención a quienes quedan al margen. Un largo camino hacia Jerusalén reúne enseñanzas y encuentros. La resurrección abre a los discípulos una comprensión nueva.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: nacimientos de Juan y Jesús. 3–9: comienzo y ministerio en Galilea. 9–19: viaje a Jerusalén. 19–24: últimos días, pasión, resurrección y despedida.",
+      "<b>Cómo leerlo:</b> Observa a quién recibe Jesús y quién se sorprende por ello. Lucas tiene una continuación en Hechos. Leer ambos permite unir los encuentros de Jesús con la vida de las primeras comunidades.",
+      "<b>Para comenzar:</b> Lucas 15. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿A quién me cuesta recibir con la misma dignidad que a los demás?",
+    "refs": [
+      {
+        "label": "Leer Lucas · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PVJ.HTM"
+      },
+      {
+        "label": "Para comenzar: Lucas 15",
+        "url": "https://www.vatican.va/archive/ESL0506/__PVX.HTM"
+      }
+    ],
+    "source_index": 51
+  },
+  {
+    "id": "libro-juan",
+    "g": 6,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Juan",
+    "text": "Presenta a Jesús como la Palabra hecha carne. Sus signos y conversaciones invitan a creer y a recibir vida en él. El amor, la permanencia y el don de sí atraviesan su despedida, su muerte y los encuentros del Resucitado con sus discípulos.",
+    "pts": [
+      "<b>Sus partes:</b> 1: prólogo y primeros testimonios. 2–12: signos y encuentros. 13–17: cena, despedida y oración. 18–20: pasión y resurrección. 21: encuentro junto al lago y misión de Pedro.",
+      "<b>Cómo leerlo:</b> Lee despacio las imágenes de agua, luz, pan, pastor y vid. Suelen tener varios niveles de sentido. Las expresiones polémicas sobre «los judíos» necesitan contexto y nunca autorizan hostilidad contra un pueblo.",
+      "<b>Para comenzar:</b> Juan 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué significa para mí recibir vida, además de seguir adelante?",
+    "refs": [
+      {
+        "label": "Leer Juan · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PW7.HTM"
+      },
+      {
+        "label": "Para comenzar: Juan 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__PWA.HTM"
+      }
+    ],
+    "source_index": 52
+  },
+  {
+    "id": "libro-hechos-de-los-apostoles",
+    "g": 7,
+    "c": "blue",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Hechos de los Apóstoles",
+    "text": "Continúa el relato de Lucas y muestra cómo el Evangelio se extiende desde Jerusalén hasta Roma. El Espíritu impulsa el testimonio, la vida comunitaria y la apertura a otros pueblos. También aparecen conflictos, persecuciones y decisiones que exigen discernimiento.",
+    "pts": [
+      "<b>Sus partes:</b> 1–7: Pentecostés y comunidad de Jerusalén. 8–12: expansión, conversión de Pablo y apertura a gentiles. 13–20: viajes y misión de Pablo. 21–28: arresto, defensa y llegada a Roma.",
+      "<b>Cómo leerlo:</b> No idealices a las primeras comunidades: comparten bienes y fe, pero también enfrentan desacuerdos. Observa cómo escuchan, deliberan y cambian al comprender mejor el alcance de la misión.",
+      "<b>Para comenzar:</b> Hechos de los Apóstoles 2. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué hace que una comunidad sea un lugar de acogida y no de exclusión?",
+    "refs": [
+      {
+        "label": "Leer Hechos de los Apóstoles · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PWS.HTM"
+      },
+      {
+        "label": "Para comenzar: Hechos de los Apóstoles 2",
+        "url": "https://www.vatican.va/archive/ESL0506/__PWT.HTM"
+      }
+    ],
+    "source_index": 53
+  },
+  {
+    "id": "libro-romanos",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Romanos",
+    "text": "Pablo expone el alcance de la salvación en Cristo y la necesidad que toda persona tiene de la gracia de Dios. Habla de fe, pecado, vida nueva y Espíritu. También reflexiona sobre Israel y sobre una convivencia que no desprecie a quien piensa distinto.",
+    "pts": [
+      "<b>Sus partes:</b> 1–4: necesidad de salvación y fe. 5–8: vida nueva en Cristo y en el Espíritu. 9–11: Israel y la fidelidad de Dios. 12–16: vida comunitaria, exhortaciones y saludos.",
+      "<b>Cómo leerlo:</b> Es una carta de argumentos largos: no saques una frase de su razonamiento. La gracia es don de Dios, no premio al rendimiento. Lee los capítulos sobre Israel evitando cualquier actitud de superioridad cristiana.",
+      "<b>Para comenzar:</b> Romanos 12. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo se expresa la misericordia recibida en mi trato a otros?",
+    "refs": [
+      {
+        "label": "Leer Romanos · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PXK.HTM"
+      },
+      {
+        "label": "Para comenzar: Romanos 12",
+        "url": "https://www.vatican.va/archive/ESL0506/__PXV.HTM"
+      }
+    ],
+    "source_index": 54
+  },
+  {
+    "id": "libro-1-corintios",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "1 Corintios",
+    "text": "Pablo responde a una comunidad con divisiones y muchas preguntas sobre su vida compartida. Trata la sexualidad, las relaciones, las comidas, el culto, los dones y la resurrección. El amor orienta el uso de la libertad y de cualquier capacidad.",
+    "pts": [
+      "<b>Sus partes:</b> 1–4: divisiones y sabiduría de la cruz. 5–10: problemas de conducta y convivencia. 11–14: reuniones, cena del Señor y dones. 15: resurrección. 16: colecta y despedida.",
+      "<b>Cómo leerlo:</b> Cada respuesta atiende una situación concreta. El conocido capítulo sobre el amor está dentro de una discusión sobre dones y rivalidades; no se limita al amor de pareja. Lee las normas comunitarias con sus notas históricas.",
+      "<b>Para comenzar:</b> 1 Corintios 13. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Uso mis capacidades para servir o para sentirme por encima de otros?",
+    "refs": [
+      {
+        "label": "Leer 1 Corintios · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PY0.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Corintios 13",
+        "url": "https://www.vatican.va/archive/ESL0506/__PYC.HTM"
+      }
+    ],
+    "source_index": 55
+  },
+  {
+    "id": "libro-2-corintios",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "2 Corintios",
+    "text": "Una relación herida entre Pablo y la comunidad atraviesa esta carta. Él explica su ministerio, habla de reconciliación y organiza ayuda para otros creyentes. Frente a la apariencia de fuerza, encuentra en la fragilidad un lugar donde se manifiesta la gracia.",
+    "pts": [
+      "<b>Sus partes:</b> 1–7: dificultades, consuelo y reconciliación. 8–9: colecta solidaria. 10–13: defensa del ministerio y advertencias finales.",
+      "<b>Cómo leerlo:</b> El tono cambia mucho: hay afecto, alivio y confrontación. Reconstruye la relación que está detrás. La valoración de la debilidad no convierte el abuso en algo bueno ni elimina la necesidad de proteger a quien sufre.",
+      "<b>Para comenzar:</b> 2 Corintios 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Puedo reconocer mi fragilidad sin pensar que por eso no tengo nada que ofrecer?",
+    "refs": [
+      {
+        "label": "Leer 2 Corintios · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PYG.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Corintios 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__PYJ.HTM"
+      }
+    ],
+    "source_index": 56
+  },
+  {
+    "id": "libro-galatas",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Gálatas",
+    "text": "Pablo defiende que los creyentes de origen no judío no necesitan adoptar la circuncisión para pertenecer a Cristo. La vida cristiana se funda en la gracia y se expresa en una fe activa por el amor. La libertad pide dejarse conducir por el Espíritu.",
+    "pts": [
+      "<b>Sus partes:</b> 1–2: misión de Pablo y conflicto. 3–4: promesa, Ley, fe y condición de hijos. 5–6: libertad, vida en el Espíritu y ayuda mutua.",
+      "<b>Cómo leerlo:</b> Comprende la pregunta histórica que está en juego. No es un ataque general al judaísmo ni un permiso para vivir sin responsabilidad. La libertad culmina en servir y cargar con las dificultades de otros.",
+      "<b>Para comenzar:</b> Gálatas 5. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Mi libertad deja más espacio al amor o solo a mis preferencias?",
+    "refs": [
+      {
+        "label": "Leer Gálatas · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PYT.HTM"
+      },
+      {
+        "label": "Para comenzar: Gálatas 5",
+        "url": "https://www.vatican.va/archive/ESL0506/__PYX.HTM"
+      }
+    ],
+    "source_index": 57
+  },
+  {
+    "id": "libro-efesios",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Efesios",
+    "text": "Celebra la obra de Dios en Cristo y la unión de personas antes separadas. Presenta a la Iglesia como un cuerpo llamado a crecer en el amor. La nueva identidad recibida debe reflejarse en la convivencia y en una vida distinta.",
+    "pts": [
+      "<b>Sus partes:</b> 1–3: bendición, salvación y unidad en Cristo. 4–6: vida comunitaria, relaciones y resistencia espiritual.",
+      "<b>Cómo leerlo:</b> Une las enseñanzas sobre unidad con los gestos concretos de paciencia y perdón. Las instrucciones domésticas pertenecen a un mundo jerárquico antiguo; no justifican dominación, esclavitud ni violencia familiar.",
+      "<b>Para comenzar:</b> Efesios 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué palabra o acción mía puede ayudar a reconstruir una relación?",
+    "refs": [
+      {
+        "label": "Leer Efesios · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PYZ.HTM"
+      },
+      {
+        "label": "Para comenzar: Efesios 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZ2.HTM"
+      }
+    ],
+    "source_index": 58
+  },
+  {
+    "id": "libro-filipenses",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Filipenses",
+    "text": "Desde la prisión, Pablo agradece el apoyo de una comunidad querida y la anima a vivir unida. La alegría convive con las dificultades. Jesús, que se entrega y sirve, es el centro de una vida que abandona la rivalidad y aprende a mirar a los demás.",
+    "pts": [
+      "<b>Sus partes:</b> 1: situación de Pablo y ánimo a la comunidad. 2: humildad de Cristo y ejemplos de servicio. 3: camino de fe y esperanza. 4: reconciliación, gratitud y despedida.",
+      "<b>Cómo leerlo:</b> La alegría del libro no exige fingir felicidad. Se sitúa dentro de una relación de fe, ayuda y esperanza. Lee las frases sobre fortaleza en el contexto de abundancia, necesidad y apoyo recibido.",
+      "<b>Para comenzar:</b> Filipenses 2. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué cambiaría si en una discusión buscara también el bien del otro?",
+    "refs": [
+      {
+        "label": "Leer Filipenses · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZ5.HTM"
+      },
+      {
+        "label": "Para comenzar: Filipenses 2",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZ6.HTM"
+      }
+    ],
+    "source_index": 59
+  },
+  {
+    "id": "libro-colosenses",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Colosenses",
+    "text": "Afirma la centralidad de Cristo frente a enseñanzas y prácticas que amenazan con desplazarlo. Su muerte y resurrección fundamentan una vida nueva. El cambio se vuelve visible en la compasión, el perdón, la gratitud y la convivencia.",
+    "pts": [
+      "<b>Sus partes:</b> 1: acción de gracias y primacía de Cristo. 2: advertencias sobre otras exigencias religiosas. 3–4: vida nueva, relaciones, oración y saludos.",
+      "<b>Cómo leerlo:</b> No se trata solo de rechazar errores ajenos. Atiende al paso de la fe proclamada a la conducta. Las normas del hogar reflejan estructuras antiguas y necesitan contexto, no una aplicación que legitime sometimiento.",
+      "<b>Para comenzar:</b> Colosenses 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué hábito concreto ayudaría a que mi trato fuera más compasivo?",
+    "refs": [
+      {
+        "label": "Leer Colosenses · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZ9.HTM"
+      },
+      {
+        "label": "Para comenzar: Colosenses 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZB.HTM"
+      }
+    ],
+    "source_index": 60
+  },
+  {
+    "id": "libro-1-tesalonicenses",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "1 Tesalonicenses",
+    "text": "Pablo anima a una comunidad joven que ha recibido el Evangelio entre dificultades. Agradece su fe y responde a la inquietud por los creyentes que han muerto. La esperanza en la venida del Señor debe acompañarse de cuidado mutuo y vida responsable.",
+    "pts": [
+      "<b>Sus partes:</b> 1–3: gratitud, recuerdo de la misión y afecto. 4: vida fraterna y esperanza ante la muerte. 5: vigilancia, convivencia y oración.",
+      "<b>Cómo leerlo:</b> Sus imágenes sobre la venida del Señor buscan consolar y orientar, no ofrecer fechas. La esperanza aparece junto a tareas pequeñas: animar, sostener al débil, tener paciencia y buscar el bien.",
+      "<b>Para comenzar:</b> 1 Tesalonicenses 5. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿A quién puedo animar con una presencia paciente?",
+    "refs": [
+      {
+        "label": "Leer 1 Tesalonicenses · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZD.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Tesalonicenses 5",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZH.HTM"
+      }
+    ],
+    "source_index": 61
+  },
+  {
+    "id": "libro-2-tesalonicenses",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "2 Tesalonicenses",
+    "text": "La comunidad necesita firmeza en medio de persecuciones y confusión sobre el día del Señor. La carta corrige la idea de que ese día ya haya llegado y pide una vida responsable. Esperar no significa abandonar las obligaciones compartidas.",
+    "pts": [
+      "<b>Sus partes:</b> 1: ánimo ante la persecución. 2: aclaraciones sobre el día del Señor. 3: oración, trabajo y disciplina comunitaria.",
+      "<b>Cómo leerlo:</b> El lenguaje sobre el mal es difícil y requiere notas de contexto. No lo uses para identificar enemigos actuales ni fijar fechas. La exhortación al trabajo no autoriza despreciar a quien no consigue empleo o no puede trabajar.",
+      "<b>Para comenzar:</b> 2 Tesalonicenses 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo puedo sostener la esperanza sin descuidar mis responsabilidades?",
+    "refs": [
+      {
+        "label": "Leer 2 Tesalonicenses · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZI.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Tesalonicenses 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZK.HTM"
+      }
+    ],
+    "source_index": 62
+  },
+  {
+    "id": "libro-1-timoteo",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "1 Timoteo",
+    "text": "Se ocupa de la enseñanza y de la organización de una comunidad cristiana. Habla de la oración, los responsables, el cuidado de las viudas y el uso del dinero. Busca que la vida de la comunidad sea coherente con la fe que anuncia.",
+    "pts": [
+      "<b>Sus partes:</b> 1: enseñanza y encargo a Timoteo. 2–3: oración y responsabilidades. 4: cuidado del ministerio. 5–6: relaciones, atención a necesidades y advertencias sobre la riqueza.",
+      "<b>Cómo leerlo:</b> Lee sus normas a la luz de la situación social de las primeras comunidades. Distingue las disposiciones de ese contexto de los principios de cuidado, honestidad y servicio que las orientan.",
+      "<b>Para comenzar:</b> 1 Timoteo 6. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué lugar ocupa el dinero en mis decisiones y preocupaciones?",
+    "refs": [
+      {
+        "label": "Leer 1 Timoteo · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZL.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Timoteo 6",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZQ.HTM"
+      }
+    ],
+    "source_index": 63
+  },
+  {
+    "id": "libro-2-timoteo",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "2 Timoteo",
+    "text": "Con tono de despedida, anima a Timoteo a perseverar en el servicio, transmitir lo recibido y afrontar dificultades. La Escritura y la memoria de la fe acompañan esa tarea. También deja ver la necesidad humana de compañía.",
+    "pts": [
+      "<b>Sus partes:</b> 1: memoria y ánimo. 2: perseverancia y transmisión fiel. 3: dificultades y valor de la Escritura. 4: encargo final, balance y peticiones personales.",
+      "<b>Cómo leerlo:</b> Observa la combinación de firmeza y afecto. Perseverar no significa actuar con dureza: la carta también pide paciencia al enseñar y corregir. Su despedida hace visible la fragilidad de quien sirve.",
+      "<b>Para comenzar:</b> 2 Timoteo 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué enseñanza buena recibí y a quién puedo transmitirla con paciencia?",
+    "refs": [
+      {
+        "label": "Leer 2 Timoteo · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZR.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Timoteo 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZR.HTM"
+      }
+    ],
+    "source_index": 64
+  },
+  {
+    "id": "libro-tito",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Tito",
+    "text": "Orienta la vida de las comunidades de Creta: responsables confiables, enseñanza sana y una conducta que exprese la gracia recibida. La fe debe hacerse reconocible en el trato, la responsabilidad y la disposición para el bien.",
+    "pts": [
+      "<b>Sus partes:</b> 1: responsables y problemas de enseñanza. 2: vida de distintos grupos y gracia de Dios. 3: convivencia, salvación y buenas obras.",
+      "<b>Cómo leerlo:</b> Las exhortaciones reflejan su entorno social. Evita repetir como juicios sobre un pueblo las frases polémicas que cita. Busca el vínculo entre la bondad de Dios y una vida servicial.",
+      "<b>Para comenzar:</b> Tito 3. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿En qué se vuelve visible la bondad que digo valorar?",
+    "refs": [
+      {
+        "label": "Leer Tito · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZV.HTM"
+      },
+      {
+        "label": "Para comenzar: Tito 3",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZX.HTM"
+      }
+    ],
+    "source_index": 65
+  },
+  {
+    "id": "libro-filemon",
+    "g": 8,
+    "c": "peach",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Filemón",
+    "text": "Pablo intercede por Onésimo ante Filemón y pide que lo reciba como un hermano querido. La carta sitúa una relación marcada por la esclavitud ante la pertenencia común a Cristo. Es breve, personal y profundamente exigente en sus implicaciones.",
+    "pts": [
+      "<b>Sus partes:</b> Versículos 1–7: saludo y reconocimiento. 8–21: petición a favor de Onésimo. 22–25: planes y saludos. Tiene un solo capítulo.",
+      "<b>Cómo leerlo:</b> No es un tratado moderno de abolición ni una aprobación de la esclavitud. Observa el cambio de mirada que pide respecto de una persona colocada en una posición inferior, dentro de una estructura injusta.",
+      "<b>Para comenzar:</b> Filemón 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿A quién sigo mirando por su posición antes que por su dignidad?",
+    "refs": [
+      {
+        "label": "Leer Filemón · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZY.HTM"
+      },
+      {
+        "label": "Para comenzar: Filemón 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZY.HTM"
+      }
+    ],
+    "source_index": 66
+  },
+  {
+    "id": "libro-hebreos",
+    "g": 9,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Hebreos",
+    "text": "Anima a perseverar presentando a Jesús como sumo sacerdote y mediador de la nueva alianza. Usa el lenguaje del santuario y los sacrificios para explicar su entrega. La fe se vive como un camino sostenido por la esperanza y por una comunidad.",
+    "pts": [
+      "<b>Sus partes:</b> 1–4: el Hijo, la escucha y el descanso prometido. 5–10: sacerdocio de Cristo y alianza. 11: testigos de la fe. 12–13: perseverancia y vida comunitaria.",
+      "<b>Cómo leerlo:</b> Su autor no se conoce con certeza; no conviene atribuirlo a Pablo como un hecho seguro. Para comprender sus imágenes, consulta Éxodo y Levítico. Su lectura cristiana no justifica desprecio por el judaísmo.",
+      "<b>Para comenzar:</b> Hebreos 11. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué me ayuda a perseverar cuando todavía no veo el resultado?",
+    "refs": [
+      {
+        "label": "Leer Hebreos · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PZZ.HTM"
+      },
+      {
+        "label": "Para comenzar: Hebreos 11",
+        "url": "https://www.vatican.va/archive/ESL0506/__P109.HTM"
+      }
+    ],
+    "source_index": 67
+  },
+  {
+    "id": "libro-santiago",
+    "g": 9,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Santiago",
+    "text": "Insiste en una fe que se reconoce por lo que hace. Denuncia el favoritismo hacia los ricos, el daño de la lengua y la injusticia. La sabiduría, la paciencia, la oración y el cuidado del necesitado forman parte de una misma vida.",
+    "pts": [
+      "<b>Sus partes:</b> 1: pruebas, escucha y práctica. 2: favoritismo, fe y obras. 3: palabras y sabiduría. 4: conflictos y presunción. 5: injusticia, paciencia y oración.",
+      "<b>Cómo leerlo:</b> No lo leas como una simple rivalidad con Pablo. Santiago discute una fe que se queda en palabras; pregunta qué efecto tiene en el trato real. Lee los ejemplos antes de sacar una conclusión doctrinal.",
+      "<b>Para comenzar:</b> Santiago 2. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué acción daría hoy contenido a lo que digo creer?",
+    "refs": [
+      {
+        "label": "Leer Santiago · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10C.HTM"
+      },
+      {
+        "label": "Para comenzar: Santiago 2",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10D.HTM"
+      }
+    ],
+    "source_index": 68
+  },
+  {
+    "id": "libro-1-pedro",
+    "g": 9,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "1 Pedro",
+    "text": "Anima a creyentes que viven como minoría y afrontan rechazo. Recuerda su esperanza en la resurrección de Jesús y los llama a una vida santa, fraterna y servicial. La identidad recibida debe sostenerlos sin convertirlos en agresores.",
+    "pts": [
+      "<b>Sus partes:</b> 1: esperanza y nueva vida. 2–3: identidad y conducta en la sociedad. 4: servicio y dificultades. 5: cuidado de la comunidad y ánimo final.",
+      "<b>Cómo leerlo:</b> Las instrucciones sobre sufrimiento y subordinación pertenecen a su contexto. No deben usarse para pedir a una víctima que soporte violencia sin buscar protección. Distingue fidelidad ante el rechazo de aceptación del abuso.",
+      "<b>Para comenzar:</b> 1 Pedro 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo puedo poner un don al servicio de los demás?",
+    "refs": [
+      {
+        "label": "Leer 1 Pedro · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10H.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Pedro 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10K.HTM"
+      }
+    ],
+    "source_index": 69
+  },
+  {
+    "id": "libro-2-pedro",
+    "g": 9,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "2 Pedro",
+    "text": "Llama a crecer en una fe que transforma la conducta y advierte sobre maestros que engañan y dañan. También responde a quienes se burlan de la espera del Señor. La paciencia divina abre un tiempo de conversión y responsabilidad.",
+    "pts": [
+      "<b>Sus partes:</b> 1: crecimiento y memoria del testimonio recibido. 2: denuncia de falsos maestros. 3: esperanza, paciencia y vida orientada al futuro de Dios.",
+      "<b>Cómo leerlo:</b> No conviertas sus imágenes del final en cálculos o pronósticos. La pregunta práctica del libro es cómo vivir mientras se espera: con integridad, paz y disposición a crecer.",
+      "<b>Para comenzar:</b> 2 Pedro 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Qué cualidad necesito cultivar para que mi fe madure?",
+    "refs": [
+      {
+        "label": "Leer 2 Pedro · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10M.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Pedro 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10M.HTM"
+      }
+    ],
+    "source_index": 70
+  },
+  {
+    "id": "libro-1-juan",
+    "g": 9,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "1 Juan",
+    "text": "Vincula la fe en Jesucristo con una vida en la luz y con el amor entre hermanos. Escribe ante conflictos en la comunidad y ofrece criterios para discernir. Conocer a Dios no puede separarse del trato a las personas.",
+    "pts": [
+      "<b>Sus partes:</b> El escrito vuelve varias veces sobre tres hilos: caminar en la luz, reconocer a Jesús y amar. Los capítulos 1–2 presentan la comunión y la conducta; 3–4 profundizan el amor y el discernimiento; 5 reúne fe, confianza y oración.",
+      "<b>Cómo leerlo:</b> No busques una sucesión rígida de temas: las ideas regresan y se profundizan. Sus contrastes fuertes pertenecen a una situación de conflicto. La afirmación sobre el amor debe leerse junto a sus consecuencias concretas.",
+      "<b>Para comenzar:</b> 1 Juan 4. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Puede reconocerse mi amor a Dios en cómo trato a alguien cercano?",
+    "refs": [
+      {
+        "label": "Leer 1 Juan · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10P.HTM"
+      },
+      {
+        "label": "Para comenzar: 1 Juan 4",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10S.HTM"
+      }
+    ],
+    "source_index": 71
+  },
+  {
+    "id": "libro-2-juan",
+    "g": 9,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "2 Juan",
+    "text": "Esta breve carta pide perseverar en la verdad y en el amor, y advierte sobre enseñanzas que niegan la venida de Jesucristo en la carne. La hospitalidad de la comunidad aparece unida a la responsabilidad por lo que se difunde.",
+    "pts": [
+      "<b>Sus partes:</b> Versículos 1–3: saludo. 4–6: verdad y mandamiento del amor. 7–11: advertencia sobre los engañadores. 12–13: deseo de encuentro y despedida. Tiene un solo capítulo.",
+      "<b>Cómo leerlo:</b> Su destinataria, «la Señora elegida», suele entenderse como una comunidad, aunque se ha interpretado de otras maneras. La advertencia sobre acoger maestros no es permiso para faltar al respeto a quien cree distinto.",
+      "<b>Para comenzar:</b> 2 Juan 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo puedo unir convicción, discernimiento y respeto?",
+    "refs": [
+      {
+        "label": "Leer 2 Juan · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10U.HTM"
+      },
+      {
+        "label": "Para comenzar: 2 Juan 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10U.HTM"
+      }
+    ],
+    "source_index": 72
+  },
+  {
+    "id": "libro-3-juan",
+    "g": 9,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "3 Juan",
+    "text": "Elogia a Gayo por recibir y ayudar a los hermanos que viajan al servicio del Evangelio. Contrasta esa hospitalidad con el control ejercido por Diótrefes, que rechaza a otros. Muestra cómo el liderazgo puede abrir o cerrar una comunidad.",
+    "pts": [
+      "<b>Sus partes:</b> Versículos 1–8: afecto y reconocimiento de la hospitalidad de Gayo. 9–12: crítica a Diótrefes y buen testimonio de Demetrio. 13–15: deseo de encuentro y saludo. Tiene un solo capítulo.",
+      "<b>Cómo leerlo:</b> Aunque es muy breve, deja ver relaciones y tensiones reales. Observa la diferencia entre servir a la comunidad y actuar como si fuera propiedad de alguien.",
+      "<b>Para comenzar:</b> 3 Juan 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Mi manera de participar deja espacio a otros?",
+    "refs": [
+      {
+        "label": "Leer 3 Juan · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10V.HTM"
+      },
+      {
+        "label": "Para comenzar: 3 Juan 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10V.HTM"
+      }
+    ],
+    "source_index": 73
+  },
+  {
+    "id": "libro-judas",
+    "g": 9,
+    "c": "lav",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Judas",
+    "text": "Exhorta a cuidar la fe frente a personas que dañan la comunidad y justifican su conducta. Recurre a ejemplos bíblicos y tradiciones judías conocidas por sus destinatarios. Termina invitando a la oración, la misericordia y la confianza en Dios.",
+    "pts": [
+      "<b>Sus partes:</b> Versículos 1–4: saludo y motivo. 5–16: ejemplos y advertencias. 17–23: perseverancia y cuidado de otros. 24–25: alabanza final. Tiene un solo capítulo.",
+      "<b>Cómo leerlo:</b> Algunas referencias proceden de tradiciones que no aparecen en la mayoría de los libros bíblicos; consulta las notas. Evita usar su lenguaje de confrontación para etiquetar a cualquier persona con la que discrepas.",
+      "<b>Para comenzar:</b> Judas 1. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo cuidar lo que creo sin perder la misericordia?",
+    "refs": [
+      {
+        "label": "Leer Judas · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10W.HTM"
+      },
+      {
+        "label": "Para comenzar: Judas 1",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10W.HTM"
+      }
+    ],
+    "source_index": 74
+  },
+  {
+    "id": "libro-apocalipsis",
+    "g": 10,
+    "c": "green",
+    "ico": "book",
+    "kind": "book",
+    "eyebrow": "Nuevo Testamento",
+    "title": "Apocalipsis",
+    "text": "Mediante cartas y visiones, anima a comunidades a permanecer fieles a Jesucristo frente al sufrimiento y los poderes que exigen lealtad absoluta. El Cordero ocupa el centro. Su horizonte final es la derrota del mal y la comunión de Dios con la humanidad en una creación renovada.",
+    "pts": [
+      "<b>Sus partes:</b> 1–3: visión inicial y mensajes a siete iglesias. 4–5: trono y Cordero. 6–20: ciclos de visiones, conflicto y juicio. 21–22: nueva Jerusalén, vida y esperanza final.",
+      "<b>Cómo leerlo:</b> Es literatura apocalíptica: comunica mediante símbolos, números e imágenes tomadas de otros libros bíblicos. No es un calendario secreto ni una lista de personajes actuales. Sigue su llamado a la fidelidad y a la esperanza.",
+      "<b>Para comenzar:</b> Apocalipsis 21. Lee ese capítulo completo y después sigue el recorrido del libro."
+    ],
+    "q": "¿Cómo puede la esperanza ayudarme a resistir el mal sin reproducirlo?",
+    "refs": [
+      {
+        "label": "Leer Apocalipsis · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10X.HTM"
+      },
+      {
+        "label": "Para comenzar: Apocalipsis 21",
+        "url": "https://www.vatican.va/archive/ESL0506/__P11H.HTM"
+      }
+    ],
+    "source_index": 75
+  },
+  {
+    "id": "creacion",
+    "g": 11,
+    "c": "green",
+    "ico": "leaf",
+    "eyebrow": "Génesis 1:26–31 · 2:1–3, 15",
+    "title": "La vida recibida y su cuidado",
+    "text": "Los relatos de la creación presentan la vida como obra de Dios. Hablan de la dignidad humana, de la responsabilidad ante la tierra y del descanso. Invitan a contemplar antes de pensar solo en lo que podemos obtener.",
+    "pts": [
+      "<b>Contexto:</b> al comienzo de Génesis, Dios crea y reconoce la bondad de lo creado. Génesis 1 presenta al ser humano, varón y mujer, a imagen de Dios.",
+      "<b>En palabras sencillas:</b> Génesis 2:15 sitúa al ser humano en el jardín con una tarea de cultivo y cuidado. El descanso también tiene un lugar en el relato.",
+      "<b>Para la vida diaria:</b> una reflexión posible es preguntarnos cómo tratamos a las personas y cómo cuidamos aquello que se nos ha confiado."
+    ],
+    "q": "¿Qué persona, espacio o parte de la naturaleza podrías cuidar con más atención esta semana?",
+    "refs": [
+      {
+        "label": "Génesis 1:26–31 · 2:1–3, 15 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P2.HTM"
+      },
+      {
+        "label": "Génesis 2",
+        "url": "https://www.vatican.va/archive/ESL0506/__P3.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "moises",
+    "g": 11,
+    "c": "pink",
+    "ico": "heart",
+    "eyebrow": "Éxodo 3:1–12",
+    "title": "Dios escucha el sufrimiento",
+    "text": "En el encuentro de la zarza ardiente, Moisés recibe una misión relacionada con el sufrimiento de Israel en Egipto. El relato une la presencia de Dios con la liberación de un pueblo oprimido.",
+    "pts": [
+      "<b>Contexto:</b> Moisés cuida un rebaño cuando se acerca a la zarza. Allí escucha que Dios conoce la aflicción de su pueblo y lo envía ante el faraón.",
+      "<b>En palabras sencillas:</b> Moisés pregunta quién es él para asumir esa misión. La respuesta del relato pone el acento en que Dios lo acompañará.",
+      "<b>Para reflexionar:</b> este pasaje puede invitarnos a escuchar un dolor que solemos pasar por alto. La historia de Israel tiene su propio contexto; no es una fórmula para que todo proyecto personal tenga éxito."
+    ],
+    "q": "¿Hay alguien cuyo sufrimiento necesitas escuchar antes de intentar darle una respuesta?",
+    "refs": [
+      {
+        "label": "Éxodo 3:1–12 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P1J.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "mana",
+    "g": 11,
+    "c": "yellow",
+    "ico": "sun",
+    "eyebrow": "Éxodo 16:1–30",
+    "title": "El sustento de cada día",
+    "text": "Después de salir de Egipto, el pueblo pasa hambre en el desierto. El relato del maná habla de la provisión de Dios, de aprender a confiar y de seguir unas instrucciones que incluyen el descanso.",
+    "pts": [
+      "<b>Contexto:</b> el pueblo se queja ante Moisés y Aarón. Dios anuncia alimento en medio del camino por el desierto.",
+      "<b>En palabras sencillas:</b> cada familia recoge lo necesario. El sexto día se prepara una porción doble para poder descansar el séptimo; el relato no prohíbe toda previsión.",
+      "<b>Para la vida diaria:</b> una pregunta posible es cómo distinguir lo que necesitamos de lo que acumulamos por miedo, sin olvidar las necesidades de los demás."
+    ],
+    "q": "¿Qué significa para ti tener lo suficiente, y qué lugar dejas al descanso?",
+    "refs": [
+      {
+        "label": "Éxodo 16:1–30 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P1W.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "pastor",
+    "g": 11,
+    "c": "green",
+    "ico": "leaf",
+    "eyebrow": "Salmo 23",
+    "title": "Confianza en medio del camino",
+    "text": "El salmo se dirige a Dios con la imagen de un pastor que guía y cuida. Su confianza no depende de que desaparezcan los lugares oscuros: también habla de compañía al atravesarlos.",
+    "pts": [
+      "<b>Contexto:</b> estamos ante un poema de oración. El pastor, el agua y la mesa son imágenes que expresan cuidado, guía y acogida.",
+      "<b>En palabras sencillas:</b> el salmista nombra tanto el descanso como el peligro. El texto no dice que una persona creyente nunca pasará por dificultades.",
+      "<b>Para reflexionar:</b> puedes detenerte en una imagen del salmo y pensar qué significa para ti. Si lo deseas, convierte esa reflexión en una oración."
+    ],
+    "q": "¿Qué imagen de este salmo te acompaña hoy, y por qué?",
+    "refs": [
+      {
+        "label": "Salmo 23 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PGS.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "lamento",
+    "g": 11,
+    "c": "blue",
+    "ico": "cloud",
+    "eyebrow": "Salmo 13",
+    "title": "También hay lugar para el lamento",
+    "text": "El Salmo 13 comienza con preguntas nacidas del dolor y termina con una expresión de confianza. La oración que contiene no oculta la angustia ni exige aparentar que todo está bien.",
+    "pts": [
+      "<b>Contexto:</b> el salmista se siente olvidado, pide una respuesta y recuerda la misericordia de Dios. Es una oración de lamento.",
+      "<b>En palabras sencillas:</b> la pregunta y la confianza aparecen en un mismo poema. El texto no cuenta cuánto duró el sufrimiento ni ofrece un plazo para resolverlo.",
+      "<b>Para la vida diaria:</b> esta lectura puede abrir un espacio para nombrar con sinceridad lo que duele, sin obligarte a encontrar una explicación inmediata."
+    ],
+    "q": "¿Qué pregunta o preocupación te gustaría expresar con honestidad, en una oración o en tu diario?",
+    "refs": [
+      {
+        "label": "Salmo 13 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PGI.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "tiempos",
+    "g": 11,
+    "c": "yellow",
+    "ico": "sun",
+    "eyebrow": "Eclesiastés 3:1–15",
+    "title": "Reconocer los tiempos de la vida",
+    "text": "Este pasaje reúne experiencias opuestas: nacer y morir, llorar y reír, guardar y soltar. Después se pregunta por el trabajo humano y por los límites de lo que podemos comprender.",
+    "pts": [
+      "<b>Contexto:</b> Eclesiastés reflexiona sobre la vida, el paso del tiempo y lo que escapa a nuestro control. El poema forma parte de esa búsqueda.",
+      "<b>En palabras sencillas:</b> la vida no permanece en una sola estación. El pasaje reconoce esa variedad; no ofrece un calendario para saber cuándo terminará cada dificultad.",
+      "<b>Para reflexionar:</b> reconocer el momento que atraviesas puede ayudarte a preguntarte qué necesita atención, sin exigir que todas las etapas se sientan iguales."
+    ],
+    "q": "¿Qué necesita este momento de tu vida: paciencia, compañía, descanso, una decisión o algo distinto?",
+    "refs": [
+      {
+        "label": "Eclesiastés 3:1–15 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PMS.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "justicia",
+    "g": 11,
+    "c": "pink",
+    "ico": "heart",
+    "eyebrow": "Miqueas 6:1–8",
+    "title": "La fe y el trato a los demás",
+    "text": "Miqueas presenta una conversación en la que se recuerda lo que Dios ha hecho por su pueblo y se pregunta cómo responder. El pasaje destaca la justicia, la misericordia y una vida humilde ante Dios.",
+    "pts": [
+      "<b>Contexto:</b> el capítulo comienza como un reclamo de Dios a su pueblo. Luego pregunta si grandes ofrendas bastarían para responderle.",
+      "<b>En palabras sencillas:</b> el versículo 8 desplaza la atención hacia la manera de vivir: obrar con justicia, amar la misericordia y caminar humildemente con Dios.",
+      "<b>Para la vida diaria:</b> una reflexión posible es revisar si lo que decimos creer se reconoce en cómo escuchamos, tratamos y respondemos a otras personas."
+    ],
+    "q": "¿En qué situación concreta podrías actuar con más justicia y misericordia?",
+    "refs": [
+      {
+        "label": "Miqueas 6:1–8 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PFC.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "samaritano",
+    "g": 11,
+    "c": "green",
+    "ico": "heart",
+    "eyebrow": "Lucas 10:25–37",
+    "title": "Hacerse cercano a quien necesita ayuda",
+    "text": "Jesús responde a una pregunta sobre el prójimo con la parábola del buen samaritano. El centro del relato es la misericordia que se vuelve ayuda concreta hacia un hombre herido.",
+    "pts": [
+      "<b>Contexto:</b> un intérprete de la ley conversa con Jesús sobre la vida eterna, el amor a Dios y el amor al prójimo. Entonces pregunta quién es su prójimo.",
+      "<b>En palabras sencillas:</b> un sacerdote y un levita pasan de largo. El samaritano se acerca, atiende las heridas y procura que el hombre siga recibiendo cuidado.",
+      "<b>Para la vida diaria:</b> una reflexión posible es mirar a quien necesita ayuda antes de decidir si pertenece a nuestro grupo. Ayudar puede ser acompañar o buscar a alguien capaz de atender la necesidad."
+    ],
+    "q": "¿Qué gesto de ayuda está a tu alcance hoy, con cuidado por la otra persona y por ti?",
+    "refs": [
+      {
+        "label": "Lucas 10:25–37 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PVS.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "regreso",
+    "g": 11,
+    "c": "pink",
+    "ico": "heart",
+    "eyebrow": "Lucas 15:11–32",
+    "title": "El regreso y la misericordia",
+    "text": "La parábola de un padre y sus dos hijos presenta un regreso, una acogida y un resentimiento. Invita a mirar tanto al hijo que vuelve como al que se siente dejado de lado.",
+    "pts": [
+      "<b>Contexto:</b> al inicio del capítulo se critica que Jesús reciba a pecadores y coma con ellos. Las parábolas de Lucas 15 responden a esa situación.",
+      "<b>En palabras sencillas:</b> el hijo menor reconoce su falta y vuelve. El padre lo recibe y también sale a hablar con el mayor, que no quiere entrar en la celebración.",
+      "<b>Para reflexionar:</b> la misericordia y el arrepentimiento son centrales en esta historia. Al relacionarla con nuestra vida, conviene distinguir acoger, reparar un daño y reconstruir la confianza."
+    ],
+    "q": "¿Qué te hace pensar cada personaje sobre reconocer un error, recibir misericordia o alegrarte por otra persona?",
+    "refs": [
+      {
+        "label": "Lucas 15:11–32 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PVX.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "servicio",
+    "g": 11,
+    "c": "blue",
+    "ico": "heart",
+    "eyebrow": "Juan 13:1–17, 34–35",
+    "title": "El amor que se expresa sirviendo",
+    "text": "En la cena con sus discípulos, Jesús les lava los pies. Después explica ese gesto como un ejemplo y los llama a amarse unos a otros siguiendo el amor que él les ha mostrado.",
+    "pts": [
+      "<b>Contexto:</b> Juan sitúa la escena antes de la Pascua y de la muerte de Jesús. Pedro se sorprende y al principio se resiste a que Jesús le lave los pies.",
+      "<b>En palabras sencillas:</b> quien es llamado Maestro y Señor realiza una tarea de servicio. El gesto y sus palabras relacionan el amor con acciones concretas.",
+      "<b>Para la vida diaria:</b> una reflexión posible es reconocer las tareas de cuidado que a veces pasan inadvertidas, y pensar cómo compartirlas con humildad."
+    ],
+    "q": "¿A quién podrías servir con un gesto sencillo, sin esperar reconocimiento?",
+    "refs": [
+      {
+        "label": "Juan 13:1–17, 34–35 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PWJ.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "pascua",
+    "g": 11,
+    "c": "yellow",
+    "ico": "sun",
+    "eyebrow": "Marcos 15:33–47 · 16:1–8",
+    "title": "La cruz y el anuncio de la resurrección",
+    "text": "La muerte y la resurrección de Jesús ocupan un lugar central en la fe cristiana. Estos pasajes presentan su muerte, su sepultura y el anuncio que reciben las mujeres al acudir al sepulcro.",
+    "pts": [
+      "<b>Contexto:</b> Marcos narra la crucifixión bajo la autoridad de Pilato. Varias mujeres acompañan los acontecimientos; José de Arimatea se ocupa de la sepultura.",
+      "<b>En palabras sencillas:</b> al volver al sepulcro, las mujeres encuentran la piedra retirada y a un joven que anuncia que Jesús ha resucitado. El relato también nombra su temor y su asombro.",
+      "<b>Para reflexionar:</b> este anuncio es más que una imagen de superación personal para la fe cristiana. Puedes acercarte a él con tus preguntas, tu esperanza y la lectura de tu comunidad."
+    ],
+    "q": "¿Qué preguntas y qué esperanza despierta en ti este relato?",
+    "refs": [
+      {
+        "label": "Marcos 15:33–47 · 16:1–8 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__PVH.HTM"
+      },
+      {
+        "label": "Marcos 16",
+        "url": "https://www.vatican.va/archive/ESL0506/__PVI.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "fe-obras",
+    "g": 11,
+    "c": "green",
+    "ico": "leaf",
+    "eyebrow": "Santiago 2:1–17",
+    "title": "Una fe que se nota en el cuidado",
+    "text": "La carta de Santiago cuestiona el favoritismo hacia los ricos y una fe que se queda solo en palabras. Usa el ejemplo de una persona sin ropa ni alimento para preguntar qué ayuda realmente.",
+    "pts": [
+      "<b>Contexto:</b> la carta se dirige a una comunidad creyente. Describe un trato desigual dentro de la reunión y después habla de la relación entre fe y obras.",
+      "<b>En palabras sencillas:</b> desearle bienestar a alguien no atiende por sí solo una necesidad material. El pasaje pide coherencia entre lo que se afirma y lo que se hace.",
+      "<b>Para la vida diaria:</b> una reflexión posible es revisar si tratamos con la misma dignidad a quien puede favorecernos y a quien no puede ofrecernos nada."
+    ],
+    "q": "¿Qué palabra de buena voluntad podrías acompañar con una ayuda concreta?",
+    "refs": [
+      {
+        "label": "Santiago 2:1–17 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P10D.HTM"
+      }
+    ],
+    "kind": "reflection"
+  },
+  {
+    "id": "esperanza",
+    "g": 11,
+    "c": "blue",
+    "ico": "sun",
+    "eyebrow": "Apocalipsis 21:1–5",
+    "title": "La esperanza de una creación renovada",
+    "text": "La visión de un cielo nuevo y una tierra nueva presenta a Dios habitando con su pueblo y el fin del llanto y la muerte. Es una imagen de esperanza dentro del lenguaje de visiones de Apocalipsis.",
+    "pts": [
+      "<b>Contexto:</b> el pasaje forma parte del cierre de Apocalipsis. Juan relata una visión de renovación y de la cercanía de Dios.",
+      "<b>En palabras sencillas:</b> estas imágenes anuncian una transformación profunda. El fragmento no ofrece una fecha ni un calendario para predecir acontecimientos.",
+      "<b>Para reflexionar:</b> puedes preguntarte cómo sostener la esperanza y acompañar el dolor presente sin minimizarlo con respuestas rápidas."
+    ],
+    "q": "¿Qué significa para ti acompañar a quien sufre sin perder la esperanza?",
+    "refs": [
+      {
+        "label": "Apocalipsis 21:1–5 · texto bíblico",
+        "url": "https://www.vatican.va/archive/ESL0506/__P11H.HTM"
+      }
+    ],
+    "kind": "reflection"
+  }
+];
+
+const QUOTES = [
+  "¿Qué pasaje te gustaría volver a leer con más calma?",
+  "¿Qué pregunta quisieras conversar con alguien de tu comunidad?",
+  "¿Qué aprendiste al leer lo que viene antes y después del pasaje?",
+  "¿Qué gesto de cuidado podrías llevar a tu día?",
+  "¿Qué palabra te gustaría guardar en tu diario?",
+  "¿Qué parte de la lectura necesita más tiempo y atención?"
+];
+
+const store = {
+  get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+};
+
+/* Map */
+const map = document.getElementById('map');
+let done = new Set(store.get('biblia-done-editorial-v2',[]));
+DATA.forEach((d,i)=>{
+  const b=document.createElement('button');
+  b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
+  b.style.setProperty('--tint',`var(--c-${d.c})`);b.style.setProperty('--edge',`var(--e-${d.c})`);
+  const shown=[];
+  b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
+    ${d.text?`<p>${d.text}</p>`:''}
+    
+    <div class="more"><span>${d.kind==='book'?'Leer la guía':'Explorar'} →</span><span class="done-badge">✓ Explorado</span></div>`;
+  b.addEventListener('click',()=>openCard(i));
+  const gEl=document.getElementById('g-'+d.g);
+  gEl.appendChild(b);
+});
+
+function refreshProgress(){
+  DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
+  const books=DATA.filter(d=>d.kind==='book'); const n=books.filter(d=>done.has(d.id)).length;
+  document.getElementById('track').setAttribute('aria-valuemax',books.length);
+  document.getElementById('progress-text').textContent=`${n} de ${books.length} libros explorados`;
+  document.getElementById('fill').style.width=(n/books.length*100)+'%';
+  document.getElementById('track').setAttribute('aria-valuenow',n);
+}
+refreshProgress();
+document.getElementById('reset').onclick=()=>{done.clear();store.set('biblia-done-editorial-v2',[]);refreshProgress()};
+
+/* Dialog */
+const dlg=document.getElementById('dlg'); let cur=0;
+function openCard(i){
+  cur=(i+DATA.length)%DATA.length; const d=DATA[cur];
+  dlg.style.setProperty('--tint',`var(--c-${d.c})`);dlg.style.setProperty('--edge',`var(--e-${d.c})`);
+  document.getElementById('dlg-ico').innerHTML=I[d.ico];
+  document.getElementById('dlg-eyebrow').textContent=d.eyebrow;
+  document.getElementById('dlg-title').textContent=d.title;
+  document.getElementById('dlg-source').innerHTML=d.refs.length?'Para leer y consultar: '+d.refs.map(r=>`<a href="${r.url}" target="_blank" rel="noopener noreferrer">${r.label} ↗</a>`).join(' · '):'Orientación de lectura · Marginalia';
+  const all=d.text?[d.text,...d.pts]:d.pts;
+  document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="point-copy">${p}</div></li>`).join('');
+  document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
+  if(!dlg.open)dlg.showModal();
+  dlg.scrollTop=0; document.querySelector('.dlg-body').scrollTop=0;
+  done.add(d.id);store.set('biblia-done-editorial-v2',[...done]);refreshProgress();
+}
+document.getElementById('dlg-x').onclick=()=>dlg.close();
+function moveCard(step){const current=DATA[cur]; const scope=DATA.map((d,i)=>({d,i})).filter(x=>current.kind==='book'?x.d.kind==='book'&&!document.getElementById('card-'+x.d.id).hidden:x.d.g===current.g);const pos=scope.findIndex(x=>x.i===cur);if(scope.length)openCard(scope[(pos+step+scope.length)%scope.length].i)}
+document.getElementById('dlg-next').onclick=()=>moveCard(1);
+document.getElementById('dlg-prev').onclick=()=>moveCard(-1);
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')moveCard(1);if(e.key==='ArrowLeft')moveCard(-1)});
+
+
+/* Book directory: native disclosure sections and accent-insensitive search. */
+const searchInput=document.getElementById('book-search');
+const bookGroups=[...document.querySelectorAll('.book-group')];
+const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let savedOpen=null;
+function updateSectionButton(){const visible=bookGroups.filter(g=>!g.hidden);document.getElementById('expand-books').textContent=visible.length&&visible.every(g=>g.open)?'Cerrar todas las secciones':'Abrir todas las secciones'}
+function filterBooks(){
+ const query=normalize(searchInput.value.trim());let count=0;
+ if(query&&savedOpen===null)savedOpen=bookGroups.map(g=>g.open);
+ DATA.filter(d=>d.kind==='book').forEach(d=>{const card=document.getElementById('card-'+d.id);card.hidden=query&&!normalize(d.title).includes(query);if(!card.hidden)count++});
+ bookGroups.forEach((g,i)=>{g.hidden=![...g.querySelectorAll('.card')].some(c=>!c.hidden);if(query)g.open=!g.hidden;else if(savedOpen!==null)g.open=savedOpen[i]});
+ document.querySelectorAll('.testament-label').forEach(h=>{let el=h.nextElementSibling,visible=false;while(el&&!el.classList.contains('testament-label')){if(el.classList.contains('book-group')&&!el.hidden)visible=true;el=el.nextElementSibling}h.hidden=!visible});
+ if(!query)savedOpen=null;
+ document.getElementById('search-status').textContent=query?`${count} ${count===1?'libro encontrado':'libros encontrados'}`:'46 libros del Antiguo Testamento · 27 del Nuevo';
+ document.getElementById('no-books').hidden=count!==0;
+ document.getElementById('expand-books').disabled=count===0;
+ updateSectionButton();
+}
+searchInput.addEventListener('input',filterBooks);
+document.getElementById('clear-search').onclick=()=>{searchInput.value='';filterBooks();searchInput.focus()};
+document.getElementById('expand-books').onclick=()=>{const visible=bookGroups.filter(g=>!g.hidden);const open=!visible.every(g=>g.open);visible.forEach(g=>g.open=open);updateSectionButton()};
+bookGroups.forEach(g=>g.addEventListener('toggle',updateSectionButton));
+
+/* Quotes */
+let qi=0;
+document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
+
+/* Quiet reading: wall-clock time also works when the tab is in the background. */
+let mins=1,timer=null,deadline=0;
+const orbN=document.getElementById('orb-n'),phaseEl=document.getElementById('phase'),stats=document.getElementById('b-stats');
+const fmt=s=>`${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+function stopPause(message){clearInterval(timer);timer=null;orbN.textContent='·';phaseEl.textContent=message;document.getElementById('b-start').disabled=false;document.querySelectorAll('.seg button').forEach(b=>b.disabled=false)}
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{if(timer)return;document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));mins=+b.dataset.min;stats.textContent='Tiempo restante '+fmt(mins*60)});
+function tickPause(){const left=Math.max(0,Math.ceil((deadline-Date.now())/1000));stats.textContent='Tiempo restante '+fmt(left);orbN.textContent=fmt(left);if(left===0){stopPause('Puedes seguir a tu ritmo');stats.textContent='Pausa terminada. Puedes continuar en tu diario.'}}
+document.getElementById('b-start').onclick=()=>{if(timer)return;deadline=Date.now()+mins*60000;phaseEl.textContent='Un momento para reflexionar';document.getElementById('b-start').disabled=true;document.querySelectorAll('.seg button').forEach(b=>b.disabled=true);timer=setInterval(tickPause,250);tickPause()};
+document.getElementById('b-stop').onclick=()=>{if(timer){stopPause('Retoma cuando lo desees');stats.textContent='Tiempo restante '+fmt(mins*60)}};
+window.addEventListener('pagehide',()=>stopPause('Listo cuando tú lo estés'));
+
+/* Quiz */
+const QS=[
+  [
+    "El Salmo 23 menciona tanto el descanso como un camino oscuro.",
+    "contexto",
+    "El poema expresa confianza en la compañía de Dios y también reconoce el peligro."
+  ],
+  [
+    "El Salmo 23 garantiza que una persona creyente nunca tendrá dificultades.",
+    "revisar",
+    "El propio salmo menciona un valle oscuro y adversarios; no afirma que no habrá dificultades."
+  ],
+  [
+    "En Lucas 10, el samaritano ayuda al hombre herido con acciones concretas.",
+    "contexto",
+    "Se acerca, atiende sus heridas y procura alojamiento y cuidado."
+  ],
+  [
+    "La parábola de Lucas 15 solo habla del hijo menor.",
+    "revisar",
+    "También presenta al padre y al hijo mayor. Leer el final ayuda a escuchar la historia completa."
+  ],
+  [
+    "Santiago 2 pregunta qué ayuda recibe una persona necesitada si solo le ofrecemos palabras.",
+    "contexto",
+    "El ejemplo de la ropa y el alimento relaciona la fe con la atención a necesidades concretas."
+  ],
+  [
+    "Eclesiastés 3 permite calcular la fecha en que acabará una etapa difícil.",
+    "revisar",
+    "El poema habla de tiempos y experiencias de la vida; no ofrece un calendario personal."
+  ],
+  [
+    "Éxodo 16 incluye instrucciones para preparar alimento antes del día de descanso.",
+    "contexto",
+    "El sexto día se recoge una porción doble. El pasaje no prohíbe toda previsión."
+  ],
+  [
+    "Apocalipsis 21:1–5 indica una fecha para el fin del mundo.",
+    "revisar",
+    "El pasaje presenta una visión de renovación y esperanza, no una fecha."
+  ]
+];
+let qn=0,score=0;
+const qText=document.getElementById('q-text'),fb=document.getElementById('feedback'),qNext=document.getElementById('q-next'),opts=[...document.querySelectorAll('.opt')];
+function showQ(){
+  opts.forEach(o=>{o.disabled=false;o.classList.remove('right','wrong')});fb.innerHTML='';qNext.hidden=true;
+  if(qn>=QS.length){
+    document.getElementById('q-count').textContent='Resultado';
+    qText.textContent=`Revisaste ${QS.length} situaciones. Puedes volver a los pasajes y seguir preguntando; esta actividad no mide tu fe.`;
+    opts.forEach(o=>o.disabled=true);qNext.textContent='Volver a revisar';qNext.hidden=false;return;
+  }
+  document.getElementById('q-count').textContent=`Lectura ${qn+1} / ${QS.length}`;
+  qText.textContent=QS[qn][0];qNext.textContent='Siguiente';
+}
+opts.forEach(o=>o.onclick=()=>{
+  const [,ans,why]=QS[qn],ok=o.dataset.a===ans; if(ok)score++;
+  opts.forEach(x=>{x.disabled=true;if(x.dataset.a===ans)x.classList.add('right');else if(x===o)x.classList.add('wrong')});
+  fb.innerHTML=`<b>${ok?'Así lo presenta el pasaje.':'Volvamos al contexto.'}</b> ${why}`;qNext.hidden=false;qNext.focus();
+});
+qNext.onclick=()=>{if(qn>=QS.length){qn=0;score=0}else qn++;showQ()};
+showQ();
+
+/* Journal */
+const hint=document.getElementById('saved-hint');
+['j1','j2','j3'].forEach(id=>{
+  const t=document.getElementById(id);t.value=store.get('biblia-'+id,'');
+  t.addEventListener('input',()=>{hint.textContent=store.set('biblia-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
+});
+</script>
+
+<script>
+document.addEventListener("click",e=>{document.querySelectorAll(".mg-menu[open]").forEach(d=>{if(!d.contains(e.target))d.removeAttribute("open")})});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".mg-menu[open]").forEach(d=>{d.removeAttribute("open");d.querySelector("summary").focus()})});
+</script>
+<script>
+/* Marginalia: trazos a mano y aparición suave */
+(()=>{
+  const P={ul:'M2 88 C 20 80, 35 96, 52 86 S 82 80, 98 90',ci:'M52 4 C 82 2, 99 22, 97 48 C 95 80, 70 98, 44 96 C 16 94, 2 74, 3 48 C 4 20, 26 2, 60 8'};
+  // Subraya la última palabra de cada título de sección
+  document.querySelectorAll('.block-head h2').forEach(h=>{
+    const n=[...h.childNodes].reverse().find(x=>x.nodeType===3&&x.textContent.trim());
+    if(!n) return;
+    const m=n.textContent.match(/^(.*?)(\S+)(\s*)$/s); if(!m) return;
+    const s=document.createElement('span'); s.className='mark ul'; s.textContent=m[2];
+    n.replaceWith(document.createTextNode(m[1]),s,document.createTextNode(m[3]));
+  });
+  document.querySelectorAll('.mark').forEach(m=>{
+    const t=m.classList.contains('ci')?'ci':'ul';
+    m.insertAdjacentHTML('beforeend',`<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${P[t]}" pathLength="1" vector-effect="non-scaling-stroke"/></svg>`);
+  });
+  const els=[...document.querySelectorAll('.hero,.guide-note,.map > .group,section.block,footer,.mg-pager')];
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(e=>e.classList.add('in'));return}
+  els.forEach(e=>e.classList.add('rv'));
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(e=>io.observe(e));
+  // Logo: una letra cambia de vez en cuando al pasar el mouse
+  const b=document.querySelector('.mg-brand'); if(!b) return;
+  const L=[...b.children], S=['s0','s1','s2','s3','s4','s6']; let tm;
+  b.addEventListener('mouseenter',()=>{clearInterval(tm);tm=setInterval(()=>{const l=L[Math.floor(Math.random()*L.length)];l.className=S[Math.floor(Math.random()*S.length)];l.style.transform=`rotate(${(Math.random()*6-3).toFixed(1)}deg)`},260)});
+  b.addEventListener('mouseleave',()=>clearInterval(tm));
+})();
+</script>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "436402644d794b97a2858b07a06d0514"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
