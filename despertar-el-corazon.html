@@ -364,7 +364,7 @@ dialog{border-radius:16px}
 .mg-menu summary::-webkit-details-marker{display:none}
 .mg-menu summary svg{width:14px;height:14px;transition:transform .2s ease}
 .mg-menu[open] summary svg{transform:rotate(180deg)}
-.mg-menu ul{position:absolute;right:0;top:calc(100% + 8px);width:min(320px,calc(100vw - 32px));margin:0;padding:8px;list-style:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transform-origin:top right;animation:mg-pop .16s ease-out}
+.mg-menu ul{max-height:calc(100vh - 160px);max-height:calc(100dvh - 160px);overflow-y:auto;overscroll-behavior:contain;position:absolute;right:0;top:calc(100% + 8px);width:min(320px,calc(100vw - 32px));margin:0;padding:8px;list-style:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transform-origin:top right;animation:mg-pop .16s ease-out}
 @keyframes mg-pop{from{opacity:0;transform:scale(.97) translateY(-4px)}}
 .mg-menu li a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.25}
 .mg-menu li a:hover{background:var(--bg)}
@@ -403,7 +403,7 @@ dialog{border-radius:16px}
     <a class="mg-back" href="index.html#libros">&larr; <span>Biblioteca</span></a>
     <details class="mg-menu">
       <summary>Cambiar libro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-      <ul><li><a href="biblia.html">La Biblia<small>Guía y reflexiones</small></a></li><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li></ul>
+      <ul><li><a href="biblia.html">La Biblia<small>Guía y reflexiones</small></a></li><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li><a href="te-desafio-a-prosperar.html">Te desafío a prosperar<small>Carlos Cuauhtémoc Sánchez</small></a></li></ul>
     </details>
   </div>
 </nav>

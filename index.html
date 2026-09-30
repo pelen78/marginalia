@@ -562,6 +562,10 @@ const BOOKS = [
     blurb:"Reconocer las trampas mentales que nos frenan y tomar las riendas de nuestras decisiones.", motto:"Nota, pregunta, elige",
     q:"¿Qué decisión estás dejando en manos de otra persona?",
     cover:{bg:"#ddd3c5", ink:"#4a3f35", art:"arch"} },
+  { id:"prosperar", file:"te-desafio-a-prosperar.html", title:"Te desafío a prosperar", full:"Te desafío a prosperar", author:"Carlos Cuauhtémoc Sánchez", cat:"Prosperidad",
+    blurb:"Recorre los dieciséis desafíos con reflexiones propias, ejemplos y preguntas para pensar en tu trabajo, tu dinero y tu bienestar.", motto:"Lee, reflexiona, da un paso",
+    q:"¿Qué paso pequeño podrías dar esta semana para cuidar tu bienestar?",
+    cover:{bg:"#e2ddc6", ink:"#56553d", art:"prosperity"} },
 ];
 
 const ICONS = {
@@ -580,6 +584,12 @@ function wrapTitle(t, max){
 function coverSVG(b){
   const {bg,ink,art}=b.cover;
   const arts={
+    prosperity:`<path d="M100 222V107" fill="none" stroke="#62794e" stroke-width="3"/>
+      <path d="M100 161c-32 0-45-18-47-33 26-2 43 11 47 33z" fill="#7d9168"/>
+      <path d="M100 146c31-1 46-18 48-34-25-2-43 11-48 34z" fill="#5b734d"/>
+      <path d="M100 117c-7-14-3-29 2-36 5 13 5 26-2 36z" fill="#8c9d76"/>
+      ${[0,1,2,3,4].map(i=>`<path d="M65 ${224-i*10}v8c0 10 70 10 70 0v-8" fill="#b69958"/><ellipse cx="100" cy="${224-i*10}" rx="35" ry="8" fill="#cbb274" stroke="#a88d53" stroke-width="1.5"/>`).join("")}`,
+
     scripture:`<path d="M38 128q31-14 62 3 31-17 62-3v87q-31-13-62 3-31-16-62-3z" fill="none" stroke="#e9d9b8" stroke-width="2.5"/><path d="M100 131v87M52 148q17-5 34 3M52 162q17-5 34 3M114 151q17-8 34-3M114 165q17-8 34-3" fill="none" stroke="#e9d9b8" stroke-width="1.5"/><path d="M95 225v23l5-4 5 4v-23" fill="#cb9972"/>`,
     mountains:`<circle cx="100" cy="92" r="26" fill="#c77e62"/>
       <path d="M0 170c30-30 50-40 80-26s50 4 70-14 40-10 50-4v74H0z" fill="#9aa88f"/>
