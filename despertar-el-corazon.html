@@ -21,6 +21,10 @@ footer .credits-note{margin:0}
 footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.02em}
 
 .dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
+.guide-sources{margin-top:14px;color:var(--muted);font-size:.88rem;line-height:1.65}
+.guide-sources summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.guide-sources p{max-width:80ch;margin:8px 0 0}
+.guide-sources a{color:inherit}
 </style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <title>Guía visual · Despertar el corazón</title>
@@ -406,7 +410,7 @@ dialog{border-radius:16px}
 <div class="wrap">
   <header class="hero">
     <h1>Guía de <span class="mark ul">lectura</span></h1>
-    <div class="sub">Sobre <cite>Despertar el corazón</cite>, de Sandra García Sánchez-Beato</div>
+    <div class="sub">Sobre <cite>Despertar el corazón: el arte de quererse bien</cite>, de Sandra García Sánchez-Beato</div>
     <div class="author">GUÍA INDEPENDIENTE</div>
     <div id="book-purchase" style="margin-top:20px">
       <a class="btn" href="https://meli.la/1wvbLuZ" target="_blank" rel="sponsored noopener" aria-label="Comprar Despertar el corazón en Mercado Libre (abre en una pestaña nueva)" style="display:inline-block;text-decoration:none;text-align:center">Comprar libro</a>
@@ -416,36 +420,36 @@ dialog{border-radius:16px}
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una guía para leer el libro</strong>
-    <p>Aquí encuentras ideas, preguntas y actividades hechas para esta guía. No es el libro ni lo reemplaza. No tiene relación con el autor ni con la editorial.</p>
+    <p>Una guía por temas, con explicaciones sencillas, ejemplos y preguntas de Marginalia. No sigue el índice capítulo por capítulo ni reemplaza el libro. No tiene relación con la autora ni con la editorial.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 13 ideas exploradas</span>
+    <span id="progress-text">0 de 13 secciones exploradas</span>
     <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Empieza aquí</h2>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
           <h2>Quiérete <span>bien</span></h2>
-          <p>Descubre cómo tratarte con más cariño y, desde ahí, querer mejor a los demás.</p>
+          <p>Un recorrido por el autoconocimiento, el cuidado y la práctica cotidiana.</p>
           <div class="hand" style="font-size:1.35rem">Nota, abraza, cuida</div>
         </div>
       </div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Conceptos clave</h2>
+      <h2 class="g-title"><span class="g-n">2</span>Ideas para explorar</h2>
       <div class="g-grid" id="g-2"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Observa y practica</h2>
+      <h2 class="g-title"><span class="g-n">3</span>Llévalo a tu día</h2>
       <div class="g-grid" id="g-3"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Reflexiona</h2>
+      <h2 class="g-title"><span class="g-n">4</span>Lo esencial del libro</h2>
       <div class="g-grid" id="g-4">
         <div class="quote">
           <div class="hand" id="quote-text">¿Cómo te hablarías hoy si fueras tu mejor amigo?</div>
@@ -459,7 +463,7 @@ dialog{border-radius:16px}
   <section class="block" id="mi-corazon">
     <div class="block-head">
       <h2>Mi corazón hoy</h2>
-      <p>Dos prácticas cortas para tratarte con más cariño. Úsalas cuando te sientas mal contigo.</p>
+      <p>Dos ejercicios de Marginalia para explorar cómo te hablas y cómo estás hoy.</p>
     </div>
     <div class="scan">
       <div class="sliders">
@@ -474,7 +478,7 @@ dialog{border-radius:16px}
         <div class="hand" style="font-size:1.6rem">Pausa de 3 pasos</div>
         <div class="q-count" id="st-n">Paso 1 de 3</div>
         <h3 id="st-t">Nota lo que sientes</h3>
-        <p id="st-d" style="margin:0">Di en voz baja: "Esto me duele" o "Esto es difícil". No lo escondas ni lo hagas más grande.</p>
+        <p id="st-d" style="margin:0">Di en voz baja: "Esto me duele" o "Esto es difícil". Puedes reconocerlo sin juzgarte por sentirlo.</p>
         <div class="controls">
           <button class="btn ghost" id="st-prev" type="button">← Atrás</button>
           <button class="btn" id="st-next" type="button">Siguiente →</button>
@@ -486,7 +490,7 @@ dialog{border-radius:16px}
   <section class="block" id="quiz">
     <div class="block-head">
       <h2>¿Crítica o cariño?</h2>
-      <p>Lee cada frase que alguien se dice a sí mismo. ¿Se está criticando o se está cuidando?</p>
+      <p>Actividad de Marginalia: lee cada frase y distingue si expresa crítica o cuidado. No es una prueba psicológica.</p>
     </div>
     <div class="quiz">
       <div class="q-count" id="q-count">1 / 8</div>
@@ -509,7 +513,7 @@ dialog{border-radius:16px}
   <section class="block" id="diario">
     <div class="block-head">
       <h2>Mi práctica de hoy</h2>
-      <p>Tres preguntas para conocerte mejor. Lo que escribas se queda solo en este navegador.</p>
+      <p>Tres preguntas de Marginalia para llevar la lectura a tu día. Lo que escribas se queda solo en este navegador.</p>
     </div>
     <div class="journal">
       <div class="jcard"><label for="j1">¿Qué creo de mí que tal vez no es cierto?</label><textarea id="j1" placeholder="Ejemplo: no soy bueno para..."></textarea></div>
@@ -532,6 +536,8 @@ dialog{border-radius:16px}
 
   <footer>
     <div class="source-note"><strong>Obra de referencia:</strong> García Sánchez-Beato, S. <cite>Despertar el corazón: el arte de quererse bien</cite>. Chinmayam Ediciones, 2021.</div>
+
+    <details class="guide-sources"><summary>Fuentes de esta guía</summary><p>Consultamos la <a href="https://chinmayam-ediciones.com/libro/despertar-el-corazon-sandra-garcia-sanchez-beato-2021/" target="_blank" rel="noopener">ficha de la editorial</a> y la <a href="https://adharapsicologia.es/libros-direccion-editorial/" target="_blank" rel="noopener">presentación de la autora</a>. Estas fuentes describen el enfoque general, pero no muestran el índice completo. Por eso organizamos la guía por temas y señalamos las actividades propias de Marginalia.</p></details>
     <div class="guide-credits">
     <p class="credits-author"><strong>Guías elaboradas por:</strong> Marginalia</p>
     <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
@@ -592,185 +598,195 @@ const DATA = [
     "g": 1,
     "c": "blue",
     "ico": "book",
-    "eyebrow": "Para empezar",
-    "title": "Cómo usar esta guía",
+    "eyebrow": "Antes de empezar",
+    "title": "El libro de un vistazo",
     "pts": [
-      "Esta guía te acompaña mientras lees. No reemplaza al libro.",
-      "Cada tarjeta explica una idea con palabras sencillas y termina con una pregunta.",
-      "Compara lo que lees aquí con el libro y con tu vida."
+      "La presentación de la autora destaca el autoconocimiento, las emociones y el cultivo de hábitos más amables.",
+      "Esta guía está organizada por temas; no reproduce el índice ni resume cada capítulo del libro.",
+      "Las explicaciones prácticas, los ejemplos y las preguntas de estas tarjetas son propuestas de Marginalia para acompañar tu lectura."
     ],
-    "q": "¿Qué te gustaría cambiar en cómo te tratas a ti mismo?"
+    "q": "¿Qué te gustaría comprender mejor: cómo te hablas, lo que sientes o cómo te relacionas?",
+    "text": "Sandra García Sánchez-Beato reúne psicología y meditación para explorar cómo nos tratamos y cómo nos relacionamos con los demás."
   },
   {
     "id": "mensaje",
     "g": 1,
     "c": "blue",
     "ico": "heart",
-    "eyebrow": "La gran idea",
-    "title": "Quererte bien es el comienzo",
-    "text": "La idea principal del libro es aprender a tratarte con cariño, porque desde ahí también quieres mejor a los demás.",
+    "eyebrow": "La propuesta del libro",
+    "title": "Aprender a quererte bien",
+    "text": "La autora propone cultivar una relación más amable con uno mismo y con los demás. Combina reflexiones con prácticas y meditaciones guiadas.",
     "pts": [
-      "Quererte no es creerte mejor que nadie. Es tratarte con respeto y paciencia.",
-      "Si te tratas bien, es más fácil tratar bien a otros."
+      "En la presentación editorial, la bondad se entiende como una capacidad que podemos cultivar. Es parte de la mirada de la autora.",
+      "Para explorar esa propuesta, Marginalia te invita a observar una situación cotidiana sin exigirte hacerlo todo bien.",
+      "El libro incluye audios de meditación. Puedes acudir a ellos para conocer las prácticas de la autora."
     ],
-    "q": "Del 1 al 10, ¿qué tan bien te tratas? ¿Qué te haría subir un punto?"
+    "q": "Ejemplo de Marginalia: algo no sale como esperabas. ¿Cómo reconocerías el error sin convertirlo en un insulto hacia ti?"
   },
   {
     "id": "c1",
     "g": 2,
     "c": "green",
     "ico": "chat",
-    "eyebrow": "Idea clave",
-    "title": "Tu voz interior",
+    "eyebrow": "Reflexión de Marginalia",
+    "title": "Escucha cómo te hablas",
     "pts": [
-      "A veces pensamos frases sobre lo que hacemos, como si habláramos con nosotros mismos.",
-      "Esas frases pueden ser muy duras, incluso más de lo que le diríamos a otra persona.",
-      "Esta guía te invita a notar qué te dices cuando algo sale mal."
+      "Anota una frase que aparezca cuando algo sale mal. Basta con observarla; no tienes que cambiarla de inmediato.",
+      "Decir que olvidaste una tarea describe algo que pasó. Decir que eres un desastre añade una etiqueta sobre ti.",
+      "Prueba una frase más precisa: olvidé esta tarea y puedo decidir cómo repararlo."
     ],
-    "q": "¿Qué te dices cuando cometes un error?"
+    "q": "Ejemplo de Marginalia: olvidaste una cita y piensas «todo lo hago mal». ¿Cómo contarías lo ocurrido sin esa etiqueta?",
+    "text": "Una forma de empezar a conocerte es prestar atención a las frases que te dices. Esta actividad te ayuda a distinguir un error concreto de un juicio sobre toda tu persona."
   },
   {
     "id": "c2",
     "g": 2,
     "c": "green",
     "ico": "brain",
-    "eyebrow": "Idea clave",
-    "title": "Lo que crees de ti",
+    "eyebrow": "Reflexión de Marginalia",
+    "title": "Revisa lo que crees de ti",
     "pts": [
-      "Algunas ideas sobre ti pueden venir de lo que te dijeron o viviste cuando eras pequeño.",
-      "Pensar que no eres bueno para algo no demuestra que no puedas aprenderlo.",
-      "Puedes preguntarte si esa idea sigue siendo cierta y buscar ejemplos de lo que sí has aprendido."
+      "Elige una idea sobre ti que use palabras como siempre, nunca o incapaz.",
+      "Busca una situación concreta en la que esa descripción no encaje del todo.",
+      "Cambia la frase general por algo que puedas comprobar o practicar: esto me cuesta y quiero aprender."
     ],
-    "q": "¿Qué idea tienes de ti que tal vez ya no es cierta?"
+    "q": "Ejemplo de Marginalia: dices «no sé hablar con nadie», pero ayer conversaste a gusto con una vecina. ¿Qué descripción sería más justa?",
+    "text": "A veces una frase que repetimos sobre nosotros parece una verdad definitiva. Esta reflexión propone mirar los hechos antes de aceptarla."
   },
   {
     "id": "c3",
     "g": 2,
     "c": "green",
     "ico": "mountain",
-    "eyebrow": "Idea clave",
-    "title": "Lo que traes del pasado",
+    "eyebrow": "Reflexión de Marginalia",
+    "title": "Reconoce tus respuestas habituales",
     "pts": [
-      "Lo que viviste antes puede influir en cómo te ves ahora.",
-      "Puedes intentar entender qué aprendiste de esas experiencias.",
-      "Notarlo puede ayudarte a decidir si quieres seguir haciendo las cosas de la misma manera."
+      "Elige una situación pequeña, como recibir una corrección o esperar una respuesta.",
+      "Describe qué pasó, qué pensaste y qué hiciste. Intenta separar los hechos de lo que imaginaste.",
+      "Piensa en otra respuesta posible para la próxima vez, aunque sea pedir unos minutos antes de contestar."
     ],
-    "q": "¿Qué aprendiste en tu casa sobre cómo tratarte a ti mismo?"
+    "q": "Ejemplo de Marginalia: alguien tarda en responder y envías varios mensajes. ¿Qué sabes con certeza y qué estás suponiendo?",
+    "text": "Conocerte también puede ser notar qué haces cuando algo te incomoda. Esta propuesta se centra en observar una reacción cotidiana y pensar si quieres repetirla."
   },
   {
     "id": "c4",
     "g": 2,
     "c": "green",
     "ico": "cloud",
-    "eyebrow": "Idea clave",
-    "title": "Tus emociones son mensajes",
+    "eyebrow": "Reflexión de Marginalia",
+    "title": "Ponle nombre a lo que sientes",
     "pts": [
-      "Sentir tristeza, enojo o miedo no te convierte en una mala persona.",
-      "Notar lo que sientes puede ayudarte a preguntarte qué te está pasando y qué necesitas.",
-      "Si lo que sientes te pesa mucho o durante mucho tiempo, puedes buscar apoyo de alguien de confianza o de un profesional."
+      "Prueba palabras sencillas: tristeza, enojo, alegría, miedo o cansancio. Puedes sentir varias cosas a la vez.",
+      "Distingue la emoción de la acción: sentir enojo y responder con un insulto son cosas diferentes.",
+      "Pregúntate qué necesitas ahora y qué respuesta puedes elegir con cuidado hacia ti y hacia los demás."
     ],
-    "q": "¿Qué emoción sentiste más esta semana? ¿Qué crees que te quería decir?"
+    "q": "Ejemplo de Marginalia: cambian un plan que te ilusionaba. ¿Qué sientes y cómo podrías decirlo sin atacar a nadie?",
+    "text": "Esta actividad propone detenerte y describir tu emoción antes de decidir qué hacer. No necesitas encontrar enseguida una explicación para todo lo que sientes."
   },
   {
     "id": "p1",
     "g": 3,
     "c": "peach",
     "ico": "smile",
-    "eyebrow": "Practica",
+    "eyebrow": "Práctica de Marginalia",
     "title": "Háblate como a un amigo",
     "pts": [
-      "Cuando te equivoques, prueba hablarte con el cuidado que tendrías con un amigo.",
-      "Puedes reconocer el error y pensar cómo corregirlo sin insultarte.",
-      "Equivocarse le pasa a todo el mundo; no eres el único que tiene que volver a intentar."
+      "Escribe qué pasó en una frase breve y concreta.",
+      "Imagina que un amigo te cuenta lo mismo. Anota qué le dirías para acompañarlo y ayudarlo a actuar.",
+      "Dirige esas palabras hacia ti y elige un paso posible: disculparte, pedir ayuda o volver a intentarlo."
     ],
-    "q": "Piensa en tu último error. ¿Qué te diría tu mejor amigo?"
+    "q": "Ejemplo de Marginalia: entregaste tarde un trabajo. ¿Qué frase combinaría comprensión con un plan para repararlo?",
+    "text": "Tratarte con cariño puede incluir reconocer un error y hacerte cargo. El ejercicio consiste en buscar palabras que ayuden a corregirlo sin humillarte."
   },
   {
     "id": "p2",
     "g": 3,
     "c": "peach",
     "ico": "shield",
-    "eyebrow": "Practica",
-    "title": "Pon límites con cariño",
+    "eyebrow": "Práctica de Marginalia",
+    "title": "Expresa un límite con respeto",
     "pts": [
-      "A veces decir que no es una forma de cuidar tu tiempo o tu descanso.",
-      "Puedes explicar lo que no puedes hacer sin insultar ni despreciar a la otra persona.",
-      "Puede que alguien se moleste al oír un no. Eso no significa por sí solo que tu decisión esté mal."
+      "Piensa en una petición concreta que no puedas o no quieras aceptar.",
+      "Expresa tu respuesta de forma breve: hoy no puedo, necesito descansar o esto no me viene bien.",
+      "Si quieres ofrecer otra opción, procura que sea algo que realmente puedas cumplir."
     ],
-    "q": "¿A qué dijiste que sí esta semana cuando querías decir que no?"
+    "q": "Ejemplo de Marginalia: te piden un favor cuando ya tienes un compromiso. ¿Cómo dirías que no con claridad y respeto?",
+    "text": "Este ejercicio invita a decir con claridad qué puedes ofrecer y qué no. Un límite describe tu decisión sin descalificar a la otra persona."
   },
   {
     "id": "p3",
     "g": 3,
     "c": "peach",
     "ico": "user",
-    "eyebrow": "Practica",
-    "title": "Cuerpo, mente y espíritu",
+    "eyebrow": "Práctica de Marginalia",
+    "title": "Elige un cuidado pequeño",
     "pts": [
-      "Cuidarte incluye atender cosas del cuerpo, como dormir, comer y moverte.",
-      "También puedes buscar tiempo para descansar y hacer algo que disfrutes.",
-      "Si para ti es importante la vida espiritual, puedes dedicarle un momento de silencio, calma o agradecimiento."
+      "Observa qué has dejado para después: una pausa, una comida tranquila o un rato con alguien que aprecias.",
+      "Elige una sola acción que esté a tu alcance hoy.",
+      "Al terminar, nota cómo fue. Si no te ayudó o no pudiste hacerla, ajusta el plan sin regañarte."
     ],
-    "q": "¿Cuál de las tres partes has descuidado más últimamente?"
+    "q": "Ejemplo de Marginalia: llevas toda la tarde trabajando sin parar. ¿Qué pausa breve podrías hacer de verdad?",
+    "text": "Cuidarte puede empezar con una decisión sencilla dentro de tu día. Esta actividad propone elegir algo posible, sin convertir el bienestar en otra lista de exigencias."
   },
   {
     "id": "p4",
     "g": 3,
     "c": "peach",
     "ico": "lotus",
-    "eyebrow": "Practica",
-    "title": "Medita un momento",
+    "eyebrow": "Práctica de Marginalia",
+    "title": "Haz una pausa para observar",
     "pts": [
-      "Una forma de empezar a meditar es reservar unos minutos para notar cómo te sientes y cómo respiras.",
-      "Si aparecen pensamientos, puedes darte cuenta y volver a prestar atención a la respiración.",
-      "El libro incluye meditaciones guiadas para acompañar la lectura."
+      "Busca una postura cómoda y nota el apoyo de los pies o de la silla.",
+      "Observa unas respiraciones sin intentar hacerlas perfectas. Si te distraes, vuelve con suavidad a lo que estás notando.",
+      "Puedes mantener los ojos abiertos y terminar cuando quieras. Si deseas seguir las meditaciones del libro, consulta sus audios."
     ],
-    "q": "¿En qué momento del día podrías darte cinco minutos de calma?"
-  },
-  {
-    "id": "practicas",
-    "g": 4,
-    "c": "lav",
-    "ico": "key",
-    "eyebrow": "Reto de la semana",
-    "title": "Prueba y fíjate",
-    "pts": [
-      "Cada vez que te critiques, cambia la frase por una más amable.",
-      "Pon un límite pequeño con respeto.",
-      "Haz una meditación del libro o la \"Pausa de 3 pasos\".",
-      "Haz algo solo porque te gusta."
-    ],
-    "q": "¿Cuál de estos retos te cuesta más? Empieza por ese."
+    "q": "Ejemplo de Marginalia: vas a responder un mensaje que te molestó. ¿Qué notas si haces una pausa antes de escribir?",
+    "text": "El libro incorpora meditaciones guiadas. Aquí tienes una pausa breve creada por Marginalia para observar cómo estás; es distinta de los audios de la autora."
   },
   {
     "id": "esencial",
     "g": 4,
     "c": "lav",
     "ico": "leaf",
-    "eyebrow": "Para platicar",
-    "title": "Preguntas para discutir",
+    "eyebrow": "Para recordar",
+    "title": "Las ideas principales",
     "pts": [
-      "¿Quererse a uno mismo es ser egoísta?",
-      "¿Tratarte con cariño significa no exigirte nada?",
-      "¿Se puede querer bien a otros sin quererte a ti?",
-      "¿Qué ideas del libro usarías y con cuáles no estás de acuerdo?"
+      "Conocerte: prestar atención a tu experiencia es uno de los ejes que destaca la autora.",
+      "Relacionarte: el libro invita a explorar el cuidado hacia uno mismo y hacia otras personas.",
+      "Practicar: las reflexiones se acompañan de recursos y meditaciones. Revisa el libro para conocer su desarrollo."
     ],
-    "q": "Elige una idea con la que no estés de acuerdo. ¿Por qué no te convence?"
+    "q": "¿Cómo conectarías estas tres ideas con una situación de tu vida?",
+    "text": "La presentación del libro conecta el autoconocimiento, el trato amable y la práctica. Este cierre recoge ese enfoque general; no es un resumen completo de sus capítulos."
+  },
+  {
+    "id": "practicas",
+    "g": 4,
+    "c": "lav",
+    "ico": "key",
+    "eyebrow": "De la lectura a tu día",
+    "title": "Una idea para esta semana",
+    "pts": [
+      "Escoge una tarjeta que te haya servido y explica qué quieres probar.",
+      "Ponle un momento sencillo: al terminar de trabajar, después de comer o antes de responder un mensaje.",
+      "Al final de la semana, escribe qué pudiste hacer y qué cambiarías. No hace falta que haya salido perfecto."
+    ],
+    "q": "Ejemplo de Marginalia: eliges hablarte con más respeto al equivocarte. ¿Qué frase te gustaría recordar en ese momento?",
+    "text": "Esta propuesta de Marginalia te ayuda a probar algo concreto y observar qué ocurre. Elige una sola práctica para que sea fácil recordarla."
   },
   {
     "id": "resultado",
     "g": 4,
     "c": "lav",
     "ico": "sun",
-    "eyebrow": "Tu opinión",
+    "eyebrow": "Tu lectura personal",
     "title": "¿Qué te llevas?",
     "pts": [
-      "Explica una idea con tus propias palabras.",
-      "Busca un ejemplo de tu vida que la apoye o que no.",
-      "Separa lo que dice el libro de lo que tú piensas.",
-      "Regresa al libro si quieres saber más."
+      "Explica una idea con tus palabras, sin intentar repetir una frase del libro.",
+      "Piensa en una situación donde te serviría y otra donde necesitarías algo distinto.",
+      "Distingue lo que plantea la autora, lo que propone esta guía y lo que tú concluyes. Vuelve al texto original si necesitas aclararlo."
     ],
-    "q": "¿Qué idea te gustaría revisar directamente en el libro?"
+    "q": "¿Qué te gustaría revisar directamente en el libro antes de formarte una opinión?",
+    "text": "Termina con tu propia opinión. Puedes encontrar una propuesta útil y, al mismo tiempo, tener dudas o discrepar de otras ideas."
   }
 ];
 
@@ -790,7 +806,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('dc-done',[]));
+let done = new Set(store.get('dc-done-editorial-v2',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -807,13 +823,14 @@ DATA.forEach((d,i)=>{
 
 function refreshProgress(){
   DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
-  const n=done.size;
-  document.getElementById('progress-text').textContent=n===DATA.length?'¡Exploraste todo el mapa!':`${n} de ${DATA.length} ideas exploradas`;
+  const n=DATA.filter(d=>done.has(d.id)).length;
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
+  document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;
   document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
   document.getElementById('track').setAttribute('aria-valuenow',n);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('dc-done',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('dc-done-editorial-v2',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -827,7 +844,7 @@ function openCard(i){
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms">${p}</li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
   if(!dlg.open)dlg.showModal();
-  done.add(d.id);store.set('dc-done',[...done]);refreshProgress();
+  done.add(d.id);store.set('dc-done-editorial-v2',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -853,9 +870,9 @@ document.getElementById('k-save').onclick=()=>{
 };
 drawKind();
 const STEPS=[
-  ['Nota lo que sientes','Di en voz baja: "Esto me duele" o "Esto es difícil". No lo escondas ni lo hagas más grande.'],
-  ['Recuerda que no estás solo','Todas las personas se sienten así a veces. Equivocarse y sufrir es parte de ser humano.'],
-  ['Date un poco de cariño','Pon una mano en tu pecho y respira despacio. Dite algo amable, como: "Estoy haciendo lo que puedo".']
+  ['Nota lo que sientes','Di en voz baja: "Esto me duele" o "Esto es difícil". Puedes reconocerlo sin juzgarte por sentirlo.'],
+  ['Recuerda que no estás solo','Otras personas también pasan por momentos difíciles. Puedes pedir compañía o apoyo.'],
+  ['Date un poco de cariño','Si te resulta cómodo, apoya una mano en tu pecho y respira a tu ritmo. Dite algo amable, como: "Estoy haciendo lo que puedo".']
 ];
 let st=0;
 function drawStep(){document.getElementById('st-n').textContent=`Paso ${st+1} de 3`;document.getElementById('st-t').textContent=STEPS[st][0];document.getElementById('st-d').textContent=STEPS[st][1];
@@ -866,7 +883,7 @@ drawStep();
 
 /* Quiz */
 const QS=[
-  ['“Soy un tonto, todo me sale mal.”','mente','Se habla con mucha dureza. A un amigo nunca le diría eso.'],
+  ['“Soy un tonto, todo me sale mal.”','mente','Se habla con mucha dureza. Describe toda su persona con un insulto, en lugar de señalar lo que pasó.'],
   ['“Me equivoqué, como todos. ¿Qué puedo aprender?”','presencia','Acepta el error sin atacarse y busca aprender.'],
   ['“Hoy estoy cansada. Voy a descansar sin sentirme culpable.”','presencia','Escucha lo que necesita su cuerpo.'],
   ['“Tengo que decir que sí a todo o dejarán de quererme.”','mente','Cree que para que la quieran no puede poner límites.'],
