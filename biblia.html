@@ -361,7 +361,169 @@ dialog{border-radius:16px}
 .book-group{border-top:1px solid var(--line);margin:0!important;padding:0!important}.book-group>summary{display:flex;align-items:center;gap:20px;cursor:pointer;list-style:none;padding:23px 4px}.book-group>summary::-webkit-details-marker,.reflection-group>summary::-webkit-details-marker{display:none}.section-number{font-family:var(--f-mono);font-size:.85rem;color:var(--muted)}.section-name{display:grid;gap:5px;flex:1}.section-kicker{font-size:.88rem;color:var(--muted)}.section-title{font-family:var(--f-display);font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.25}.section-count{font-size:.9rem;color:var(--muted);white-space:nowrap}.section-toggle{font-size:1.7rem;width:24px;text-align:center;color:var(--e-peach)}.book-group[open]>summary .section-toggle{transform:rotate(45deg)}.book-group-content{padding:8px 0 28px}.book-group .g-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.book-directory>.hint{margin-top:25px;line-height:1.6}.reflection-group{border-top:1px solid var(--line);padding-top:24px!important}.reflection-group>summary{list-style:none;cursor:pointer}.reflection-group .g-title{display:flex;justify-content:space-between;gap:20px}.reflection-group[open]>summary .g-title span{transform:rotate(45deg)}.map>.quote{padding:32px;margin:35px 0}.dlg-body li{line-height:1.75}.hero .btn{margin:4px}.source-note{line-height:1.8}.book-group>summary:focus-visible,.reflection-group>summary:focus-visible{outline:2px solid var(--e-blue);outline-offset:5px;border-radius:8px}
 @media(max-width:900px){.map #g-1,.book-group .g-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.map #g-1,.book-group .g-grid{grid-template-columns:1fr}.directory-head{display:block}.directory-head p br{display:none}.directory-tools{align-items:start;flex-direction:column}.book-group>summary{gap:12px;padding:20px 0}.section-number{display:none}.section-kicker{font-size:.8rem}.section-count{font-size:.8rem}.section-toggle{width:18px;flex-shrink:0}.reflection-group .g-title{font-size:1.6rem}.search-row{gap:8px}.hero .btn{font-size:.9rem}.book-directory{margin:40px 0}.dlg-foot .btn{padding:12px;font-size:.9rem}}
-</style><style>.dlg-body li{font-weight:400}.point-copy{min-width:0}.point-copy>b{display:block;margin-bottom:5px}.dlg-head{position:sticky;top:0;z-index:2}.dlg-foot{position:sticky;bottom:0;background:var(--paper);z-index:2}</style></head>
+</style><style>.dlg-body li{font-weight:400}.point-copy{min-width:0}.point-copy>b{display:block;margin-bottom:5px}.dlg-head{position:sticky;top:0;z-index:2}.dlg-foot{position:sticky;bottom:0;background:var(--paper);z-index:2}</style>
+<style id="mg-pdf-export">
+/* Marginalia · Guardar respuestas como PDF */
+.mg-save-pdf{
+  margin-top:24px;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+.mg-save-pdf .mg-pdf-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.mg-save-pdf .mg-pdf-note{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:.86rem;
+  font-style:italic;
+  max-width:70ch;
+}
+#mg-pdf-sheet{display:none}
+
+@media print{
+  body.mg-notes-print{
+    background:#fff!important;
+    color:#211d19!important;
+    padding:0!important;
+  }
+  body.mg-notes-print > *:not(#mg-pdf-sheet){
+    display:none!important;
+  }
+  body.mg-notes-print #mg-pdf-sheet{
+    display:block!important;
+  }
+  body.mg-notes-print #mg-pdf-sheet *{
+    box-sizing:border-box;
+  }
+}
+</style>
+
+
+<style id="mg-clear-field">
+/* Marginalia · borrar una respuesta del diario */
+.jcard .mg-field-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+.jcard .mg-field-head label{
+  flex:1;
+}
+.mg-clear-field{
+  flex:none;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-family:var(--f-mono);
+  font-size:.66rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:4px 2px;
+  cursor:pointer;
+}
+.mg-clear-field:hover{
+  color:var(--accent);
+}
+.mg-clear-field:disabled{
+  opacity:.35;
+  cursor:default;
+}
+</style>
+
+
+<style id="mg-compact-pager">
+/* Marginalia · navegación inferior compacta */
+.mg-pager{
+  max-width:1180px;
+  margin:34px auto 0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  gap:10px;
+  align-items:center;
+}
+.mg-pager a{
+  min-height:56px;
+  padding:10px 14px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:var(--ink);
+  background:var(--paper);
+  border:1px solid var(--line);
+  line-height:1.15;
+}
+.mg-pager a:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+.mg-pager a b{
+  font-family:var(--f-display);
+  font-weight:400;
+  font-size:1.05rem;
+}
+.mg-pager .mg-arrow{
+  flex:none;
+  font-family:var(--f-mono);
+  font-size:.95rem;
+  color:var(--muted);
+}
+.mg-pager .pv{
+  justify-content:flex-start;
+}
+.mg-pager .nx{
+  justify-content:flex-end;
+  text-align:right;
+}
+.mg-pager .home{
+  min-height:44px;
+  padding:9px 16px;
+  border-radius:999px;
+  justify-content:center;
+  background:var(--ink);
+  color:var(--bg);
+  border-color:var(--ink);
+  font-family:var(--f-mono);
+  font-size:.7rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.mg-pager .home:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+}
+@media (max-width:640px){
+  .mg-pager{
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-top:28px;
+  }
+  .mg-pager .home{
+    grid-column:1/-1;
+    grid-row:1;
+    min-height:40px;
+  }
+  .mg-pager a{
+    min-height:52px;
+    padding:9px 10px;
+  }
+  .mg-pager a b{
+    font-size:.94rem;
+  }
+  .mg-pager .mg-arrow{
+    font-size:.85rem;
+  }
+}
+</style>
+
+</head>
 <body>
 <nav class="mg-nav" aria-label="Biblioteca">
   <div class="in">
@@ -467,12 +629,38 @@ dialog{border-radius:16px}
       <p>Un espacio para tus preguntas y reflexiones. Tus notas se guardan en este navegador; no se envían con los comentarios ni se sincronizan entre dispositivos.</p>
     </div>
     <div class="journal">
-      <div class="jcard"><label for="j1">¿Qué pasaje leí y qué dice en su contexto?</label><textarea id="j1" placeholder="Anota la referencia y lo que observaste…"></textarea></div>
-      <div class="jcard"><label for="j2">¿Qué pregunta o reflexión me acompaña?</label><textarea id="j2" placeholder="Puedes escribir también una oración, si lo deseas…"></textarea></div>
-      <div class="jcard"><label for="j3">¿Qué quisiera llevar a mi vida?</label><textarea id="j3" placeholder="Un gesto, una conversación o una nueva lectura…"></textarea></div>
+      <div class="jcard">
+      <div class="mg-field-head">
+        <label for="j1">¿Qué pasaje leí y qué dice en su contexto?</label>
+        <button class="mg-clear-field" type="button" data-clear="j1">Borrar</button>
+      </div>
+      <textarea id="j1" placeholder="Anota la referencia y lo que observaste…"></textarea>
+    </div>
+      <div class="jcard">
+      <div class="mg-field-head">
+        <label for="j2">¿Qué pregunta o reflexión me acompaña?</label>
+        <button class="mg-clear-field" type="button" data-clear="j2">Borrar</button>
+      </div>
+      <textarea id="j2" placeholder="Puedes escribir también una oración, si lo deseas…"></textarea>
+    </div>
+      <div class="jcard">
+      <div class="mg-field-head">
+        <label for="j3">¿Qué quisiera llevar a mi vida?</label>
+        <button class="mg-clear-field" type="button" data-clear="j3">Borrar</button>
+      </div>
+      <textarea id="j3" placeholder="Un gesto, una conversación o una nueva lectura…"></textarea>
+    </div>
     </div>
     <p class="hint" id="saved-hint" style="margin-top:8px"></p>
   </section>
+
+
+<section class="mg-save-pdf" id="guardar-pdf" aria-label="Guardar notas en PDF">
+  <div class="mg-pdf-actions">
+    <button class="btn" id="mg-save-pdf" type="button">Guardar mis notas en PDF</button>
+  </div>
+  <p class="mg-pdf-note">Se abrirá la ventana de impresión. Elige <strong>Guardar como PDF</strong>. Tus respuestas no se envían a Marginalia.</p>
+</section>
 
 <section class="mg-feedback-invite" aria-label="Comentarios sobre esta guía">
   <p>¿Te sirvió esta guía? Me gustaría saber qué piensas.</p>
@@ -480,9 +668,9 @@ dialog{border-radius:16px}
 </section>
 
 <nav class="mg-pager" aria-label="Otros libros">
-  <a class="pv" href="te-desafio-a-prosperar.html"><small>&larr; Anterior</small><b>Te desafío a prosperar</b></a>
+  <a class="pv" href="te-desafio-a-prosperar.html" aria-label="Libro anterior: Te desafío a prosperar"><span class="mg-arrow" aria-hidden="true">&larr;</span><b>Te desafío a prosperar</b></a>
   <a class="home" href="index.html#libros">Biblioteca</a>
-  <a class="nx" href="el-poder-del-ahora.html"><small>Siguiente &rarr;</small><b>El poder del ahora</b></a>
+  <a class="nx" href="el-poder-del-ahora.html" aria-label="Siguiente libro: El poder del ahora"><b>El poder del ahora</b><span class="mg-arrow" aria-hidden="true">&rarr;</span></a>
 </nav>
 
   <footer>
@@ -3137,8 +3325,197 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelect
   b.addEventListener('mouseleave',()=>clearInterval(tm));
 })();
 </script>
+
+<script id="mg-pdf-export-script">
+/* Marginalia · prepara una hoja limpia y abre Guardar como PDF */
+(()=>{
+  const $=id=>document.getElementById(id);
+  const clean=id=>{
+    const node=$(id);
+    const value=node && typeof node.value==="string" ? node.value.trim() : "";
+    return value || "—";
+  };
+  const put=(id,value)=>{
+    const node=$(id);
+    if(node) node.textContent=value || "—";
+  };
+
+  function fillPdf(){
+    put("pdf-date","Reflexiones personales · "+new Intl.DateTimeFormat("es-MX",{dateStyle:"long"}).format(new Date()));
+    put("pdf-j1",clean("j1"));
+    put("pdf-j2",clean("j2"));
+    put("pdf-j3",clean("j3"));
+  }
+
+  const btn=$("mg-save-pdf");
+  if(!btn) return;
+
+  btn.addEventListener("click",()=>{
+    fillPdf();
+    const oldTitle=document.title;
+    document.title="Mi diario - La Biblia - Marginalia";
+    document.body.classList.add("mg-notes-print");
+
+    const restore=()=>{
+      document.body.classList.remove("mg-notes-print");
+      document.title=oldTitle;
+      window.removeEventListener("afterprint",restore);
+    };
+    window.addEventListener("afterprint",restore);
+
+    requestAnimationFrame(()=>{
+      window.print();
+      setTimeout(()=>{
+        if(document.body.classList.contains("mg-notes-print")) restore();
+      },3000);
+    });
+  });
+})();
+</script>
+
+
+<script>
+/* Marginalia · borrar respuesta individual del diario */
+(()=>{
+  const hint=document.getElementById('saved-hint');
+
+  function syncButton(id){
+    const field=document.getElementById(id);
+    const btn=document.querySelector(`.mg-clear-field[data-clear="${id}"]`);
+    if(btn && field) btn.disabled=!field.value.trim();
+  }
+
+  ['j1','j2','j3'].forEach(id=>{
+    const field=document.getElementById(id);
+    if(!field) return;
+    syncButton(id);
+    field.addEventListener('input',()=>syncButton(id));
+  });
+
+  document.querySelectorAll('.mg-clear-field').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const id=btn.dataset.clear;
+      const field=document.getElementById(id);
+      if(!field || !field.value.trim()) return;
+
+      const ok=window.confirm('¿Borrar esta respuesta?');
+      if(!ok) return;
+
+      field.value='';
+      try{
+        localStorage.removeItem('biblia-'+id);
+      }catch(e){}
+
+      if(hint) hint.textContent='Respuesta borrada de este navegador.';
+      syncButton(id);
+      field.focus();
+    });
+  });
+})();
+</script>
+
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "436402644d794b97a2858b07a06d0514"}'></script>
 <!-- End Cloudflare Web Analytics -->
+
+<section id="mg-pdf-sheet" aria-hidden="true">
+  <style>
+    #mg-pdf-sheet{
+      font-family:Georgia,"Times New Roman",serif;
+      color:#211d19;
+      background:#fff;
+      line-height:1.5;
+    }
+    #mg-pdf-sheet .pdf-wrap{
+      max-width:760px;
+      margin:0 auto;
+      padding:4mm 2mm;
+    }
+    #mg-pdf-sheet .pdf-brand{
+      font-family:Arial,sans-serif;
+      font-size:11px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#7a6f63;
+      margin-bottom:10px;
+    }
+    #mg-pdf-sheet h1{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:32px;
+      line-height:1.15;
+      font-weight:400;
+      margin:0 0 5px;
+    }
+    #mg-pdf-sheet .pdf-sub{
+      margin:0 0 26px;
+      color:#7a6f63;
+      font-size:15px;
+      font-style:italic;
+    }
+    #mg-pdf-sheet .pdf-section-title{
+      margin:28px 0 12px;
+      padding-top:14px;
+      border-top:1px solid #d8d0c5;
+      font-family:Arial,sans-serif;
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:#8b4b31;
+    }
+    #mg-pdf-sheet .pdf-item{
+      break-inside:avoid;
+      margin:0 0 18px;
+      padding:0 0 14px;
+      border-bottom:1px solid #ebe5dc;
+    }
+    #mg-pdf-sheet .pdf-item h2{
+      font-family:Arial,sans-serif;
+      font-size:12px;
+      line-height:1.4;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      color:#8b4b31;
+      margin:0 0 6px;
+      font-weight:600;
+    }
+    #mg-pdf-sheet .pdf-item p{
+      font-size:16px;
+      line-height:1.55;
+      margin:0;
+      white-space:pre-wrap;
+    }
+    #mg-pdf-sheet .pdf-foot{
+      margin-top:28px;
+      padding-top:12px;
+      border-top:1px solid #d8d0c5;
+      color:#7a6f63;
+      font:11px/1.5 Arial,sans-serif;
+    }
+    @page{margin:16mm}
+  </style>
+  <div class="pdf-wrap">
+    <div class="pdf-brand">Marginalia</div>
+    <h1>Mi diario · La Biblia</h1>
+    <p class="pdf-sub" id="pdf-date"></p>
+
+    <div class="pdf-section-title">Mi diario de lectura</div>
+
+    <div class="pdf-item">
+      <h2>¿Qué pasaje leí y qué dice en su contexto?</h2>
+      <p id="pdf-j1"></p>
+    </div>
+    <div class="pdf-item">
+      <h2>¿Qué pregunta o reflexión me acompaña?</h2>
+      <p id="pdf-j2"></p>
+    </div>
+    <div class="pdf-item">
+      <h2>¿Qué quisiera llevar a mi vida?</h2>
+      <p id="pdf-j3"></p>
+    </div>
+
+    <div class="pdf-foot">Creado desde mymarginalia.net · Esta hoja contiene las respuestas personales del lector.</div>
+  </div>
+</section>
+
 </body>
 </html>
