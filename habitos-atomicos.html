@@ -566,7 +566,7 @@ dialog{border-radius:16px}
   </aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 13 secciones exploradas</span>
+    <span id="progress-text">0 de 25 secciones exploradas</span>
     <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="25" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
@@ -578,7 +578,7 @@ dialog{border-radius:16px}
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
           <h2>Pequeños cambios, <span>grandes resultados</span></h2>
-          <p>Una guía sencilla para entender cómo el libro propone crear buenos hábitos y hacer más difíciles los malos.</p>
+          <p>Las cuatro leyes de James Clear: hacerlo obvio, atractivo, sencillo y satisfactorio. Un recorrido para crear buenos hábitos y debilitar los malos.</p>
           <div class="hand" style="font-size:1.35rem">Entiende · prueba · ajusta</div>
         </div>
       </div>
@@ -716,7 +716,7 @@ dialog{border-radius:16px}
 </nav>
 
   <footer>
-    <div class="source-note"><strong>Obra de referencia:</strong> Clear, J. <cite>Hábitos atómicos</cite>. Paidós, 2019.</div>
+    <div class="source-note"><strong>Obra de referencia:</strong> Clear, J. <cite>Hábitos atómicos</cite>. Paidós, 2019. Las cuatro leyes se presentan en el capítulo 3 y se desarrollan en los capítulos 4–17.</div>
     <div class="guide-credits">
     <p class="credits-author"><strong>Guías elaboradas por:</strong> Marginalia</p>
     <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
@@ -783,14 +783,16 @@ const DATA = [
     "g": 1,
     "c": "blue",
     "ico": "eye",
-    "eyebrow": "El hilo del libro",
-    "title": "La idea que conecta el libro",
-    "text": "La idea que une el recorrido es preparar las condiciones de una acción pequeña, en vez de depender solo de la motivación.",
+    "eyebrow": "El marco de James Clear",
+    "title": "Las 4 Leyes del Cambio de Comportamiento",
+    "text": "James Clear presenta las cuatro leyes del cambio de conducta para diseñar buenos hábitos. Cada ley actúa sobre una etapa del ciclo: señal, anhelo, respuesta y recompensa.",
     "pts": [
-      "El título de cada tarjeta te dice de qué trata ese capítulo.",
-      "Al terminar los capítulos, encontrarás un resumen de las ideas principales y actividades para probarlas."
+      "Hacerlo obvio (señal): que la señal del hábito sea fácil de reconocer.",
+      "Hacerlo atractivo (anhelo): que anticipar la experiencia te dé ganas de actuar.",
+      "Hacerlo sencillo (respuesta): que la acción requiera poco esfuerzo para empezar.",
+      "Hacerlo satisfactorio (recompensa): que terminar deje una sensación agradable que invite a repetir."
     ],
-    "q": "¿Qué parte del recorrido te llama más la atención?"
+    "q": "¿A tu hábito le falta una señal clara, atractivo, facilidad o una recompensa cercana?"
   },
   {
     "id": "cap-1",
@@ -828,14 +830,15 @@ const DATA = [
     "c": "green",
     "ico": "loop",
     "eyebrow": "Capítulo 3",
-    "title": "Los cuatro momentos de un hábito",
-    "text": "Clear presenta su explicación de cómo se forma una rutina. Distingue una señal, un deseo, una respuesta y una recompensa.",
+    "title": "Señal, anhelo, respuesta y recompensa",
+    "text": "Clear divide el ciclo de un hábito en cuatro etapas. Las cuatro leyes permiten intervenir en ellas para facilitar una conducta o, al invertirlas, dificultarla.",
     "pts": [
-      "La señal es algo que te recuerda una acción, como ver que llegó un mensaje.",
-      "El deseo es lo que esperas conseguir. La respuesta es lo que haces para conseguirlo.",
-      "La recompensa es lo que obtienes al final y que puede darte ganas de repetir."
+      "Señal: percibes algo que anuncia una posible recompensa. La primera ley propone hacer evidente esa señal.",
+      "Anhelo: deseas el cambio de estado que esperas obtener, como sentirte tranquilo o entretenido. La segunda ley busca volver atractiva la conducta.",
+      "Respuesta: realizas una acción o un pensamiento. La tercera ley propone reducir el esfuerzo necesario para hacerlo.",
+      "Recompensa: obtienes lo que buscabas y aprendes qué vale la pena repetir. La cuarta ley busca que el resultado inmediato sea satisfactorio."
     ],
-    "q": "Ejemplo de Marginalia: ves una notificación, quieres saber qué dice, abres el chat y resuelves la duda. ¿Dónde comienza una de tus rutinas?"
+    "q": "Ejemplo de Marginalia: ves tu cuaderno de dibujo, deseas relajarte, haces un boceto y disfrutas haber creado algo. ¿Cómo reconocerías las cuatro etapas en un hábito tuyo?"
   },
   {
     "id": "cap-4",
@@ -844,11 +847,11 @@ const DATA = [
     "ico": "eye",
     "eyebrow": "Capítulo 4",
     "title": "Notar lo que ya haces",
-    "text": "Antes de cambiar un hábito, el libro propone observarlo. Clear explica que muchas señales y respuestas pasan inadvertidas porque las repetimos sin pensarlas.",
+    "text": "La primera ley empieza por reconocer las señales y conductas que ya forman parte de tu día. Clear propone un registro de hábitos para observar lo que haces en automático.",
     "pts": [
-      "Anotar lo que haces a diario ayuda a notar costumbres que antes pasabas por alto.",
-      "Un hábito te ayuda o te estorba según lo que quieras lograr.",
-      "Decir qué estás haciendo puede ayudarte a darte cuenta antes de hacerlo por costumbre."
+      "Escribe tus acciones cotidianas en orden, desde que te levantas.",
+      "Marca cada hábito como positivo, negativo o neutral según si ayuda a construir la identidad que deseas.",
+      "Nombrar en voz alta una acción y su posible consecuencia puede ayudarte a tomar conciencia antes de repetirla."
     ],
     "q": "Ejemplo de Marginalia: anotas lo que haces al llegar a casa y descubres que abres el correo antes de saludar. ¿Qué rutina te gustaría observar sin juzgarla?"
   },
@@ -859,11 +862,11 @@ const DATA = [
     "ico": "clock",
     "eyebrow": "Capítulo 5",
     "title": "Dar un lugar concreto al hábito",
-    "text": "Este capítulo pasa del deseo general a un plan específico. Clear propone decidir cuándo y dónde actuar, o enlazar la acción nueva con una rutina conocida.",
+    "text": "Para hacerlo obvio, Clear propone dos herramientas: la intención de implementación y la acumulación de hábitos. Ambas convierten una intención general en una señal concreta para actuar.",
     "pts": [
-      "Elegir una hora o un momento evita tener que decidir cada día cuándo empezar.",
-      "Algo que ya haces todos los días puede recordarte la nueva actividad.",
-      "El recordatorio sirve mejor si sabes reconocerlo y aparece con frecuencia."
+      "Intención de implementación: decide qué acción realizarás, a qué hora y en qué lugar.",
+      "Acumulación de hábitos: coloca la nueva acción justo después de un hábito que ya haces.",
+      "Elige una señal precisa y una rutina que ocurra con la frecuencia que necesitas; así sabrás cuándo empezar."
     ],
     "q": "Ejemplo de Marginalia: después de conectar la computadora, escribes la tarea principal del día. ¿Qué acción habitual podría recordarte la nueva?"
   },
@@ -874,11 +877,11 @@ const DATA = [
     "ico": "globe",
     "eyebrow": "Capítulo 6",
     "title": "Preparar el ambiente",
-    "text": "Clear destaca cómo el lugar influye en lo que hacemos. Propone organizar las señales visibles para facilitar la conducta deseada.",
+    "text": "La primera ley también se aplica al ambiente. Clear explica que las señales de un lugar pueden impulsar una conducta, incluso cuando no estás pensando en ella.",
     "pts": [
-      "Lo que tienes cerca y a la vista suele llamar más tu atención.",
-      "Dejar listo lo que necesitas puede facilitar que empieces, incluso con pocas ganas.",
-      "Usar un lugar para la misma actividad puede ayudarte a recordarla cuando estés ahí."
+      "Haz visibles las señales del hábito que quieres practicar: coloca lo necesario donde puedas encontrarlo.",
+      "Repetir una actividad en un contexto estable ayuda a asociar ese lugar con la conducta.",
+      "Asignar un espacio a una actividad puede reducir la competencia entre señales, como trabajar y distraerte en el mismo sitio."
     ],
     "q": "Ejemplo de Marginalia: dejas un cuaderno abierto junto a la lámpara para recordar tu rato de escritura. ¿Qué señal podrías colocar donde ya la vas a ver?"
   },
@@ -888,12 +891,12 @@ const DATA = [
     "c": "peach",
     "ico": "broken",
     "eyebrow": "Capítulo 7",
-    "title": "Reducir las tentaciones cercanas",
-    "text": "El capítulo cuestiona depender siempre del autocontrol. Clear propone disminuir el contacto con las señales que ponen en marcha una conducta que quieres cambiar.",
+    "title": "Invertir la primera ley: hacerlo invisible",
+    "text": "Para debilitar un mal hábito, Clear propone invertir la primera ley: hacerlo invisible. Reducir la exposición a sus señales evita tener que resistir la misma tentación continuamente.",
     "pts": [
-      "Ver algo relacionado con una costumbre puede darte ganas de repetirla.",
-      "Quitar ese recordatorio de tu vista puede hacer más fácil elegir otra cosa.",
-      "Clear propone preparar el lugar para tener menos tentaciones, en vez de resistirlas todo el día."
+      "Identifica qué objeto, lugar o situación pone en marcha la conducta.",
+      "Retira esa señal de tu ambiente o reduce las ocasiones en que te encuentras con ella.",
+      "El autocontrol puede servir en un momento concreto; preparar el entorno ayuda a depender menos de él cada día."
     ],
     "q": "Ejemplo de Marginalia: desactivas la vista previa del chat durante tu rato de concentración. ¿Qué señal hace más difícil sostener tu intención?"
   },
@@ -903,14 +906,14 @@ const DATA = [
     "c": "green",
     "ico": "heart",
     "eyebrow": "Capítulo 8",
-    "title": "Hacer atractiva la repetición",
-    "text": "Clear examina cómo influye lo que esperamos obtener de una conducta. Sugiere vincular una tarea necesaria con algo que nos resulte agradable.",
+    "title": "Vincular el hábito con algo que deseas",
+    "text": "La segunda ley actúa sobre el anhelo: hacerlo atractivo. Clear explica que anticipar una recompensa puede impulsarnos a actuar y propone la vinculación de tentaciones.",
     "pts": [
-      "Pensar en algo agradable que obtendrás puede animarte a empezar.",
-      "Juntar una tarea con algo que disfrutas puede hacer que tengas más ganas de hacerla.",
-      "Lo agradable debe acompañar la tarea, sin distraerte tanto que dejes de hacerla."
+      "Une una acción que necesitas realizar con otra que quieres hacer.",
+      "Puedes reservar algo que disfrutas para acompañar la actividad necesaria o hacerlo después de ella.",
+      "La anticipación de lo agradable aporta una razón cercana para empezar, aunque el beneficio principal tarde en llegar."
     ],
-    "q": "Ejemplo de Marginalia: usas tus marcadores favoritos para repasar apuntes que sueles posponer. ¿Qué detalle agradable podrías incorporar a una tarea?"
+    "q": "Ejemplo de Marginalia: reservas tu lista de música favorita para el momento de ordenar el escritorio. ¿Qué disfrute podrías vincular con una tarea que pospones?"
   },
   {
     "id": "cap-9",
@@ -921,9 +924,9 @@ const DATA = [
     "title": "Lo que el grupo vuelve normal",
     "text": "El libro explica que también aprendemos hábitos al convivir. Clear analiza la influencia de las personas cercanas, la mayoría y quienes admiramos.",
     "pts": [
-      "Si las personas con las que convives hacen algo, puede darte ganas de hacerlo también.",
-      "Estar con gente que ya practica ese hábito te permite ver cómo lo hace.",
-      "Clear propone buscar compañía entre personas que hagan con frecuencia lo que tú quieres aprender."
+      "Tendemos a imitar a las personas cercanas, a la mayoría y a quienes tienen prestigio o poder.",
+      "Únete a un grupo donde el hábito que deseas sea normal y donde ya tengas algo en común con los demás.",
+      "Una conducta puede resultar más atractiva cuando permite sentir que perteneces al grupo."
     ],
     "q": "Ejemplo de Marginalia: te unes a un grupo que intercambia un dibujo cada semana. ¿Quiénes podrían acompañar la costumbre que quieres formar?"
   },
@@ -933,12 +936,12 @@ const DATA = [
     "c": "green",
     "ico": "brain",
     "eyebrow": "Capítulo 10",
-    "title": "Mirar qué hay detrás del deseo",
-    "text": "Clear propone distinguir la necesidad que queremos cubrir de la conducta que usamos para lograrlo. También revisa cómo la manera de describir un hábito cambia su atractivo.",
+    "title": "Cambiar el atractivo de una conducta",
+    "text": "Clear distingue el anhelo inmediato de la necesidad que hay detrás. Cambiar cómo interpretas una conducta puede aumentar su atractivo o reducirlo.",
     "pts": [
-      "Puedes buscar lo mismo de varias maneras; por ejemplo, descansar sin usar siempre el celular.",
-      "Lo que crees que una actividad te dará influye en tus ganas de hacerla.",
-      "Pensar en los problemas que te trae una costumbre puede quitarle parte de su atractivo."
+      "Para un buen hábito, destaca lo que te permite hacer y crea un ritual agradable justo antes de empezar.",
+      "Para un mal hábito, invierte la segunda ley: hacerlo poco atractivo. Haz presentes los beneficios de dejarlo y lo que te cuesta mantenerlo.",
+      "Reconoce qué necesidad intentas cubrir: una misma necesidad puede satisfacerse con conductas distintas."
     ],
     "q": "Ejemplo de Marginalia: cuando buscas distraerte, pruebas salir al patio antes de abrir otra aplicación. ¿Qué buscas obtener con una rutina que quieres cambiar?"
   },
@@ -949,11 +952,11 @@ const DATA = [
     "ico": "steps",
     "eyebrow": "Capítulo 11",
     "title": "Practicar además de prepararse",
-    "text": "Este capítulo distingue organizar una actividad de hacerla. Clear explica que la repetición permite aprender lo que la preparación por sí sola no consigue.",
+    "text": "La tercera ley actúa sobre la respuesta: hacerlo sencillo. Clear distingue prepararse de actuar y explica que un hábito se afianza al repetir la conducta.",
     "pts": [
-      "Leer o buscar consejos puede ayudarte, pero también necesitas intentar la actividad.",
-      "Clear se fija en cuántas veces practicas, sin prometer que el hábito se forme en un número fijo de días.",
-      "Aunque el primer intento salga mal, te puede enseñar qué cambiar para el siguiente."
+      "Planear y aprender pueden ayudar, pero la práctica es la que produce experiencia y resultados.",
+      "La formación de un hábito depende de las repeticiones; no hay un número fijo de días que lo garantice.",
+      "Empieza con una acción que puedas repetir y mejora a partir de lo que ocurra al practicarla."
     ],
     "q": "Ejemplo de Marginalia: dejas de comparar tutoriales y grabas tu primer intento de una melodía. ¿Qué estás preparando tanto que todavía no lo empiezas?"
   },
@@ -964,11 +967,11 @@ const DATA = [
     "ico": "gear",
     "eyebrow": "Capítulo 12",
     "title": "Quitar obstáculos al comienzo",
-    "text": "Clear plantea que solemos elegir el camino que exige menos esfuerzo. Por eso propone preparar el entorno para que una buena acción tenga menos pasos.",
+    "text": "Clear llama ley del menor esfuerzo a nuestra tendencia a elegir la opción que exige menos energía. La tercera ley aprovecha esa tendencia al quitar obstáculos a la conducta deseada.",
     "pts": [
-      "Tener los materiales listos hace más fácil empezar.",
-      "Poner un paso extra puede hacer más difícil repetir una costumbre que quieres dejar.",
-      "Lo que dejes preparado hoy puede ahorrarte esfuerzo mañana."
+      "Reduce los pasos entre tú y el buen hábito: deja a mano los materiales y facilita el comienzo.",
+      "Prepara el ambiente al terminar para que la próxima repetición sea más fácil.",
+      "Para un mal hábito, invierte la tercera ley: hacerlo difícil. Añade pasos y obstáculos que frenen la respuesta automática."
     ],
     "q": "Ejemplo de Marginalia: guardas en una sola carpeta todo lo necesario para tu siguiente sesión de estudio. ¿Qué paso repetido podrías ahorrarte?"
   },
@@ -979,11 +982,11 @@ const DATA = [
     "ico": "clock",
     "eyebrow": "Capítulo 13",
     "title": "Empezar con una versión de dos minutos",
-    "text": "El libro propone reducir el inicio de una rutina hasta volverlo muy sencillo. Clear usa la regla de los dos minutos para practicar primero el acto de empezar.",
+    "text": "La regla de los dos minutos consiste en reducir un hábito nuevo a una versión inicial que tome dos minutos o menos. El objetivo es aprender a empezar de forma constante.",
     "pts": [
-      "Una versión muy corta del hábito hace más fácil dar el primer paso.",
-      "No necesitas hacer todo lo que deseas desde el primer día.",
-      "Cuando empezar ya sea parte de tu rutina, puedes hacer un poco más."
+      "Elige una acción de entrada pequeña y clara que conduzca hacia la rutina que deseas.",
+      "Una decisión breve, como ponerte los zapatos para salir, puede orientar lo que haces después.",
+      "Primero vuelve habitual el comienzo; luego aumenta la dificultad. Los dos minutos son una puerta de entrada, no un límite permanente."
     ],
     "q": "Ejemplo de Marginalia: para ordenar tu material, comienzas guardando únicamente los lápices. ¿Cuál sería un inicio tan pequeño que puedas repetir?"
   },
@@ -993,12 +996,12 @@ const DATA = [
     "c": "peach",
     "ico": "key",
     "eyebrow": "Capítulo 14",
-    "title": "Dejar una decisión preparada",
-    "text": "Clear explica cómo una decisión que tomas hoy puede ayudarte después. Propone dejar cosas preparadas o programadas para hacer más fácil el hábito cuando tengas menos ganas.",
+    "title": "Automatizar y comprometerte de antemano",
+    "text": "Clear propone tomar decisiones hoy que faciliten la conducta de mañana. La automatización y los mecanismos de compromiso reducen la necesidad de volver a decidir en el momento de la tentación.",
     "pts": [
-      "Decidir algo con anticipación puede ayudarte a cumplirlo cuando tengas menos ganas.",
-      "Dejar una tarea programada permite que se haga sin tener que decidirlo cada vez.",
-      "Elige una ayuda que sirva para el hábito que quieres practicar."
+      "Automatiza una acción repetida cuando sea posible, como una copia de seguridad programada.",
+      "Un mecanismo de compromiso limita de antemano una elección que podría apartarte de tu intención.",
+      "Una compra o una preparación hecha una sola vez puede facilitar muchas repeticiones futuras."
     ],
     "q": "Ejemplo de Marginalia: programas una copia de seguridad para que tus archivos se guarden sin recordarlo cada noche. ¿Qué decisión podrías dejar resuelta de antemano?"
   },
@@ -1009,11 +1012,11 @@ const DATA = [
     "ico": "check",
     "eyebrow": "Capítulo 15",
     "title": "Notar una recompensa cercana",
-    "text": "Clear observa que muchos beneficios llegan tarde, mientras que el esfuerzo se siente ahora. Propone añadir una satisfacción inmediata compatible con lo que queremos construir.",
+    "text": "La cuarta ley actúa sobre la recompensa: hacerlo satisfactorio. Clear explica que las primeras tres leyes ayudan a realizar una conducta y la cuarta favorece que se repita.",
     "pts": [
-      "Si al terminar sientes que valió la pena, puede darte más ganas de volver a hacerlo.",
-      "Elige una recompensa que no eche a perder lo que buscas con el hábito.",
-      "Una cosa es animarte a empezar y otra es encontrar ganas de repetir al día siguiente."
+      "Muchos buenos hábitos exigen esfuerzo ahora y ofrecen beneficios después; una satisfacción inmediata puede ayudar a sostenerlos.",
+      "Elige un refuerzo que coincida con la identidad y el resultado que buscas, sin contradecirlos.",
+      "También puedes hacer visible el beneficio de evitar un mal hábito, por ejemplo registrando el dinero que no gastaste."
     ],
     "q": "Ejemplo de Marginalia: al terminar de archivar documentos ves cómo queda libre una bandeja. ¿Qué señal cercana te permitiría disfrutar el avance?"
   },
@@ -1026,11 +1029,11 @@ const DATA = [
     "title": "Registrar y volver después de una pausa",
     "text": "Este capítulo trata de mantener una rutina visible en el tiempo. Clear propone registrar las repeticiones y retomar pronto después de un día perdido.",
     "pts": [
-      "Ver los días que has practicado puede recordarte lo que quieres hacer y animarte a seguir.",
-      "Dejar de hacerlo un día no borra lo que ya habías avanzado.",
-      "El registro debe ayudarte a mejorar, no convertirse en marcar casillas sin pensar para qué."
+      "Un registro hace visible el progreso y ofrece una pequeña satisfacción al terminar la acción.",
+      "Clear propone evitar dos omisiones seguidas: si pierdes una ocasión, vuelve en la siguiente oportunidad.",
+      "Mide para apoyar el hábito; no confundas completar una casilla con conseguir lo que realmente buscas."
     ],
-    "q": "Ejemplo de Marginalia: olvidas regar el martes y revisas la tierra al día siguiente para retomar el cuidado. ¿Cómo volverías a tu rutina después de una pausa?"
+    "q": "Ejemplo de Marginalia: marcas cada sesión de dibujo; si pierdes una, haces un boceto breve en la siguiente ocasión. ¿Qué versión pequeña te ayudaría a retomar?"
   },
   {
     "id": "cap-17",
@@ -1038,14 +1041,14 @@ const DATA = [
     "c": "green",
     "ico": "people",
     "eyebrow": "Capítulo 17",
-    "title": "Contar con alguien que te acompañe",
-    "text": "Clear explica cómo un acuerdo con otra persona puede apoyar un hábito. La responsabilidad compartida hace más visibles nuestros compromisos.",
+    "title": "Invertir la cuarta ley: hacerlo insatisfactorio",
+    "text": "Para reducir un mal hábito, Clear propone que tenga un costo inmediato. Un socio corresponsable y un contrato de hábitos pueden hacer visible el compromiso y la consecuencia de incumplirlo.",
     "pts": [
-      "Contarle a alguien lo que harás permite que después te pregunte cómo te fue.",
-      "Acordar qué harás y cuándo evita que cada persona espere algo diferente.",
-      "Clear también explica acuerdos en los que decides antes qué pasará si no cumples."
+      "Pide a alguien que revise contigo una conducta concreta, en vez de hacer una promesa vaga.",
+      "Acuerden por adelantado qué harán, cómo lo comprobarán y qué consecuencia tendrá incumplir.",
+      "La inversión de la cuarta ley es hacerlo insatisfactorio: que repetir el mal hábito pierda parte de su recompensa inmediata."
     ],
-    "q": "Ejemplo de Marginalia: acuerdas con una amiga enviarse el viernes una foto del proyecto que cada una está construyendo. ¿Qué compromiso claro podrían revisar juntos?"
+    "q": "Ejemplo de Marginalia: acuerdas con un amigo practicar antes de tu rato de videojuegos; si no cumples, ese día renuncias a jugar. ¿Qué acuerdo concreto te ayudaría a responder por tu compromiso?"
   },
   {
     "id": "cap-18",
@@ -1098,15 +1101,15 @@ const DATA = [
     "c": "lav",
     "ico": "leaf",
     "eyebrow": "Para recordar",
-    "title": "Las ideas principales",
-    "text": "Las ideas principales para recordar después de recorrer los capítulos.",
+    "title": "Las cuatro leyes, en sentido inverso",
+    "text": "Clear propone invertir las mismas cuatro leyes para debilitar un mal hábito. Puedes actuar sobre la señal, el anhelo, la respuesta o la recompensa.",
     "pts": [
-      "Hacer algo pequeño muchas veces puede producir un cambio con el tiempo.",
-      "El lugar y las cosas que te rodean pueden facilitar o dificultar un hábito.",
-      "Lo que esperas obtener y lo que sientes al terminar influyen en tus ganas de repetir.",
-      "Conviene revisar la rutina y cambiar lo que ya no te ayuda."
+      "Hacerlo invisible: reduce el contacto con las señales que lo activan.",
+      "Hacerlo poco atractivo: recuerda qué ganas al dejarlo y qué te cuesta mantenerlo.",
+      "Hacerlo difícil: aumenta los pasos y el esfuerzo necesarios para realizarlo.",
+      "Hacerlo insatisfactorio: establece una consecuencia inmediata y un compromiso que otra persona pueda revisar."
     ],
-    "q": "¿Cuál aparece con más frecuencia en tu vida?"
+    "q": "¿Qué parte de un mal hábito podrías cambiar primero?"
   },
   {
     "id": "practicas",
@@ -1115,13 +1118,14 @@ const DATA = [
     "ico": "key",
     "eyebrow": "Una aplicación posible",
     "title": "Cómo llevarlo a tu día",
-    "text": "Una propuesta de Marginalia: elige una idea y úsala para observar una situación concreta.",
+    "text": "Una aplicación de Marginalia basada en las cuatro leyes: elige un hábito pequeño y prepara cada parte de su repetición.",
     "pts": [
-      "Busca el capítulo donde se explica la idea que elegiste.",
-      "Prueba una de las actividades de esta página.",
-      "Escribe qué te sirvió y qué harías de otra manera."
+      "Obvio: define cuándo y dónde empezarás, o qué hábito anterior te servirá de señal.",
+      "Atractivo: vincúlalo con algo que disfrutes o con un grupo que ya lo practique.",
+      "Sencillo: prepara los materiales y elige una versión inicial de dos minutos o menos.",
+      "Satisfactorio: registra que lo hiciste y reconoce el avance con algo compatible con tu objetivo."
     ],
-    "q": "¿Qué idea quieres poner a prueba esta semana?"
+    "q": "¿Qué pequeño ajuste harías en cada una de las cuatro leyes para tu hábito de esta semana?"
   },
   {
     "id": "resultado",
@@ -1234,42 +1238,42 @@ const QS=[
   [
     "Dejo el cuaderno abierto donde voy a trabajar.",
     "presencia",
-    "Capítulo 6: Clear propone preparar señales visibles en el ambiente."
+    "Primera ley: hacerlo obvio. Una señal visible facilita recordar el hábito (cap. 6)."
   ],
   [
     "Espero a tener ganas para decidir cuándo practicar.",
     "mente",
-    "Capítulo 5: concretar un momento puede facilitar el comienzo."
+    "Primera ley: Clear propone decidir cuándo y dónde actuar, o enlazar la acción con un hábito existente (cap. 5)."
   ],
   [
-    "Comparo cursos durante semanas, pero no hago ningún intento.",
-    "mente",
-    "Capítulo 11: prepararse no reemplaza practicar."
+    "Reservo mi música favorita para acompañar la tarea que suelo posponer.",
+    "presencia",
+    "Segunda ley: hacerlo atractivo. Vincular algo que necesitas hacer con algo que disfrutas puede animarte a empezar (cap. 8)."
   ],
   [
     "Empiezo por escribir una sola línea.",
     "presencia",
-    "Capítulo 13: una versión pequeña ayuda a comenzar."
+    "Tercera ley: hacerlo sencillo. La regla de los dos minutos reduce el inicio del hábito para facilitar la repetición (cap. 13)."
   ],
   [
-    "Preparo hoy los materiales que usaré mañana.",
-    "presencia",
-    "Capítulo 12: quitar pasos puede hacer más sencilla una rutina."
-  ],
-  [
-    "Si no veo resultados enseguida, concluyo que no sirve.",
+    "Dejo todos los materiales guardados en lugares difíciles de alcanzar.",
     "mente",
-    "Capítulo 1: Clear explica que los efectos pueden tardar en notarse."
+    "Tercera ley: preparar el ambiente y reducir los pasos facilita actuar; añadir obstáculos lo hace más difícil (cap. 12)."
   ],
   [
-    "Registro la práctica y retomo después de una pausa.",
-    "presencia",
-    "Capítulo 16: el registro y la vuelta a la rutina acompañan la constancia."
+    "Para dejar un mal hábito, mantengo sus señales siempre a la vista.",
+    "mente",
+    "Inversión de la primera ley: hacerlo invisible. Reducir la exposición a sus señales ayuda a no activarlo (cap. 7)."
   ],
   [
-    "Reviso si mi rutina todavía sirve para lo que quiero.",
+    "Registro la práctica y, si pierdo una ocasión, retomo en la siguiente.",
     "presencia",
-    "Capítulo 20: el autor invita a revisar y ajustar los hábitos."
+    "Cuarta ley: hacerlo satisfactorio. El registro muestra el progreso; Clear también propone evitar dos omisiones seguidas (cap. 16)."
+  ],
+  [
+    "Acuerdo con alguien una consecuencia concreta si incumplo mi compromiso.",
+    "presencia",
+    "Inversión de la cuarta ley: hacerlo insatisfactorio. Un socio corresponsable y un contrato pueden añadir un costo inmediato al incumplimiento (cap. 17)."
   ]
 ];
 let qn=0,score=0;
