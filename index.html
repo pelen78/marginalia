@@ -560,6 +560,9 @@ const BOOKS = [
     blurb:"Reconocer las trampas mentales que nos frenan y tomar las riendas de nuestras decisiones.", motto:"Nota, pregunta, elige",
     q:"¿Qué decisión estás dejando en manos de otra persona?",
     cover:{bg:"#ddd3c5", ink:"#4a3f35", art:"arch"} },
+  {"id": "ie", "file": "inteligencia-emocional.html", "title": "Inteligencia emocional", "full": "Inteligencia emocional", "author": "Daniel Goleman", "cat": "Psicología", "blurb": "Dieciséis capítulos para entender las emociones, la empatía y las habilidades que ayudan a convivir.", "motto": "Reconoce, comprende, responde", "q": "¿Qué emoción te cuesta más reconocer?", "cover": {"bg": "#c9d5cd", "ink": "#263e39", "art": "emotion"}},
+  {"id": "aod", "file": "amar-o-depender.html", "title": "¿Amar o depender?", "full": "¿Amar o depender?", "author": "Walter Riso", "cat": "Relaciones", "blurb": "Las tres partes de Walter Riso sobre dependencia afectiva, autonomía y amor con respeto propio.", "motto": "Quiere, cuídate, decide", "q": "¿Qué diferencia hay entre amar y depender?", "cover": {"bg": "#e8d4cc", "ink": "#593d3b", "art": "heart"}},
+  {"id": "sa", "file": "el-sutil-arte-de-que-te-importe-un-carajo.html", "title": "El sutil arte de que te importe un carajo", "full": "El sutil arte de que te importe un carajo", "author": "Mark Manson", "cat": "Bienestar", "blurb": "Nueve capítulos para revisar tus valores, elegir lo que importa y afrontar los problemas de la vida.", "motto": "Cuestiona, elige, actúa", "q": "¿Qué merece más atención en tu vida?", "cover": {"bg": "#b85632", "ink": "#fff2de", "art": "compass"}},
 ];
 // Guías en construcción: se muestran en la biblioteca pero no se puede entrar
 const LIVE=BOOKS.filter(b=>!b.soon);
@@ -580,6 +583,10 @@ function wrapTitle(t, max){
 function coverSVG(b){
   const {bg,ink,art}=b.cover;
   const arts={
+    emotion:`<path d="M99 100c-20-28-57-4-44 21-26 13-14 52 9 51-4 29 32 38 36 15V99m1 0c20-27 57-3 44 22 26 13 14 52-9 51 4 29-32 38-35 15" fill="none" stroke="#537969" stroke-width="3"/><path d="M70 129q18 0 20 17M127 147q-18 0-16 18M71 167q8-13 17-11" fill="none" stroke="#8b5f4d" stroke-width="2.5"/>`,
+    heart:`<path d="M100 212s-66-41-66-83c0-38 48-43 66-13 18-30 66-25 66 13 0 42-66 83-66 83z" fill="#ba7c72"/><path d="M100 118v87M71 131q-15 12-7 30" fill="none" stroke="#f1dace" stroke-width="2.5"/>`,
+    compass:`<circle cx="100" cy="173" r="57" fill="none" stroke="#f6d7ae" stroke-width="2"/><circle cx="100" cy="173" r="47" fill="none" stroke="#f6d7ae" stroke-width="1" stroke-dasharray="2 7"/><path d="M119 140 106 179 81 206 94 167z" fill="#f4e0bc"/><path d="m119 140-25 27 12 12z" fill="#552c24"/><circle cx="100" cy="173" r="4" fill="#b85632"/>`,
+
     prosperity:`<path d="M100 222V107" fill="none" stroke="#62794e" stroke-width="3"/>
       <path d="M100 161c-32 0-45-18-47-33 26-2 43 11 47 33z" fill="#7d9168"/>
       <path d="M100 146c31-1 46-18 48-34-25-2-43 11-48 34z" fill="#5b734d"/>
