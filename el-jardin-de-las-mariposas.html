@@ -9,53 +9,328 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="apple-mobile-web-app-title" content="Marginalia">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#1d463d">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Independent study guide notice */
+.guide-note{max-width:900px;margin:4px auto 28px;padding:16px 20px;border:1.5px solid var(--line);
+  border-radius:20px;background:var(--paper);box-shadow:var(--shadow);text-align:center}
+.guide-note strong{font-family:var(--f-display)}
+.guide-note p{margin:4px 0;color:var(--muted);font-size:.94rem}
+.source-note{width:100%;margin:0;padding:0;
+  color:var(--muted);font-size:.88rem;line-height:1.55}
+.source-note strong{color:var(--ink)}
+
+
+footer .guide-credits{margin-top:18px;color:var(--muted);font-size:.88rem;line-height:1.65}
+footer .credits-author{margin:0 0 8px;color:var(--ink)}
+footer .credits-author strong{font-weight:600}
+footer .credits-note{margin:0}
+footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.02em}
+
+.dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
+</style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <title>Guía visual de lectura · El jardín de las mariposas</title>
 <link rel="canonical" href="https://mymarginalia.net/el-jardin-de-las-mariposas.html">
 <meta name="description" content="Guía independiente de Marginalia sobre El jardín de las mariposas, de Dot Hutchison. Resumen por bloques, temas, reflexiones y final explicado con spoilers opcionales.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
 <style>
+/* Layout: mapa mental de 3 columnas con el sol central; en móvil una sola columna. Pastel acuarela. */
 :root{
-  --bg:#ece8df; --paper:#f8f4eb; --paper2:#f2ecdf; --ink:#1d211e; --muted:#716d65; --line:#d7cdbd;
-  --green:#1d463d; --green2:#315c4e; --wine:#742f41; --gold:#ad874f; --black:#151916;
-  --sage:#dfe5d9; --rose:#ead8d8; --sand:#e8ddca; --mist:#dfe4e1; --lav:#e3dce4; --amber:#eee0bd;
-  --shadow:0 18px 46px -28px rgba(31,30,24,.42);
-  --display:"Fraunces",Georgia,serif; --body:"Fraunces",Georgia,serif; --hand:"Caveat",cursive; --mono:"Space Mono",monospace;
-  --f-display:var(--display); --f-body:var(--body); --f-hand:var(--hand); --f-mono:var(--mono); --accent:var(--wine);
+  --bg:#f6f4ee; --paper:#fffdf8; --ink:#1f2a3a; --muted:#566273; --line:#d9d4c7;
+  --sun:#fbe7a1; --sun-2:#f7c95c; --accent:#d9406b;
+  --c-blue:#dcecfb; --c-pink:#fbe0e6; --c-green:#dff1e2; --c-peach:#fde6cc; --c-lav:#e8e0f7; --c-yellow:#fdf1c7; --c-mint:#d9f1ea; --c-rose:#fcdde3;
+  --e-blue:#3a7bd5; --e-pink:#d9406b; --e-green:#3f9b5a; --e-peach:#e07b2a; --e-lav:#7d5bc4; --e-yellow:#c99a12; --e-mint:#2f9a82; --e-rose:#c53a5a;
+  --shadow:0 2px 0 rgba(31,42,58,.06),0 8px 24px -12px rgba(31,42,58,.18);
+  --f-display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Comic Sans MS",cursive;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#141815; --paper:#1d221e; --paper2:#222821; --ink:#f1eadf; --muted:#aaa297; --line:#3a4038;
-  --green:#78a999; --green2:#557e70; --wine:#d38899; --gold:#d7b777; --black:#f1eadf;
-  --sage:#25322a; --rose:#35262b; --sand:#332d24; --mist:#27302d; --lav:#302834; --amber:#382f1f;
-  --shadow:0 20px 50px -28px rgba(0,0,0,.8); color-scheme:dark;
-}}
+  --bg:#131722; --paper:#1b2130; --ink:#eef1f6; --muted:#a8b2c3; --line:#2e3748;
+  --sun:#4a3d17; --sun-2:#e0b240; --accent:#f07a9a;
+  --c-blue:#1c2a40; --c-pink:#3a2130; --c-green:#1c3326; --c-peach:#3a2a1a; --c-lav:#2a2340; --c-yellow:#383016; --c-mint:#17332d; --c-rose:#3b1f28;
+  --e-blue:#79aef5; --e-pink:#f07a9a; --e-green:#7ccf93; --e-peach:#f3a766; --e-lav:#b39cf0; --e-yellow:#e9c75a; --e-mint:#6fd1b8; --e-rose:#f38aa3;
+  --shadow:0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#141815; --paper:#1d221e; --paper2:#222821; --ink:#f1eadf; --muted:#aaa297; --line:#3a4038;
-  --green:#78a999; --green2:#557e70; --wine:#d38899; --gold:#d7b777; --black:#f1eadf;
-  --sage:#25322a; --rose:#35262b; --sand:#332d24; --mist:#27302d; --lav:#302834; --amber:#382f1f;
-  --shadow:0 20px 50px -28px rgba(0,0,0,.8); color-scheme:dark;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--body);padding:0 16px 48px}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:.16;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32 0 0 0 0 .28 0 0 0 0 .22 0 0 0 .12 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-a{color:inherit}
-button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:10px}
-.wrap{max-width:1180px;margin:0 auto}
+  --bg:#131722; --paper:#1b2130; --ink:#eef1f6; --muted:#a8b2c3; --line:#2e3748;
+  --sun:#4a3d17; --sun-2:#e0b240; --accent:#f07a9a;
+  --c-blue:#1c2a40; --c-pink:#3a2130; --c-green:#1c3326; --c-peach:#3a2a1a; --c-lav:#2a2340; --c-yellow:#383016; --c-mint:#17332d; --c-rose:#3b1f28;
+  --e-blue:#79aef5; --e-pink:#f07a9a; --e-green:#7ccf93; --e-peach:#f3a766; --e-lav:#b39cf0; --e-yellow:#e9c75a; --e-mint:#6fd1b8; --e-rose:#f38aa3;
+  --shadow:0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark}
 
-/* nav */
-.mg-nav{position:sticky;top:0;z-index:80;margin:0 -16px;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.mg-nav .in{max-width:1180px;margin:auto;padding:11px 16px;display:flex;align-items:center;gap:14px}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1180px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:12px}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding-block:40px 20px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.01em;display:inline-block;padding:4px 28px 0;background:linear-gradient(100deg,transparent 2%,var(--c-mint) 8%,var(--c-blue) 60%,transparent 98%);border-radius:40px}
+.hero .sub{font-family:var(--f-display);font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(.8rem,1.8vw,1.05rem);margin-top:10px;color:var(--muted)}
+.author{display:inline-block;margin-top:12px;padding:4px 18px;border-radius:999px;background:var(--c-pink);font-family:var(--f-display);font-weight:700;letter-spacing:.08em}
+.hand{font-family:var(--f-hand);font-size:1.6rem;line-height:1.1;color:var(--ink)}
+.corner{position:absolute;top:34px;max-width:170px}
+.corner.l{left:0;transform:rotate(-8deg);text-align:left}
+.corner.r{right:0;transform:rotate(8deg);width:130px;height:130px;border-radius:50%;background:var(--sun);display:grid;place-items:center;text-align:center;padding:12px}
+@media (max-width:860px){.corner{display:none}}
+
+/* Progress */
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 20px;margin:18px auto 26px;font-weight:600;color:var(--muted)}
+.track{width:220px;max-width:60vw;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--e-green),var(--e-yellow));transition:width .5s ease}
+.chip{border:1.5px solid var(--line);background:var(--paper);padding:6px 14px;border-radius:999px;font-weight:700;font-size:.9rem}
+.chip:hover{border-color:var(--accent)}
+
+/* Map: cuatro etapas en orden de lectura */
+.map{display:grid;gap:40px}
+.g-title{display:flex;align-items:center;gap:12px;font-size:clamp(1.4rem,2.6vw,1.8rem);font-weight:800;margin-bottom:14px}
+.g-n{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:1.1rem;flex:none}
+.g-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:stretch}
+.card{position:relative;z-index:1;text-align:left;border:0;border-radius:24px;padding:18px 20px 16px;background:var(--tint);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-3px) rotate(-.3deg)}
+.card .top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.card .eyebrow{font-family:var(--f-display);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--edge)}
+.card h3{font-size:1.28rem;font-weight:700}
+.card .ico{flex:none;width:46px;height:46px;color:var(--edge)}
+.card ul{margin:2px 0 0;padding-left:18px;font-size:.95rem;color:var(--ink)}
+.card li{margin-block:3px}
+.card li::marker{color:var(--edge)}
+.card .more{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:.85rem;color:var(--edge);padding-top:6px}
+.done-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:99px;background:var(--paper);font-size:.78rem;visibility:hidden}
+.card.is-done .done-badge{visibility:visible}
+.card.is-done{outline:2.5px dashed var(--edge);outline-offset:-7px}
+.card p{margin:0;font-size:.97rem}
+
+.center{position:relative;z-index:1;border-radius:24px;
+  background:radial-gradient(circle at 50% 40%,var(--c-yellow),var(--sun) 70%);box-shadow:0 0 0 10px color-mix(in srgb,var(--sun) 45%,transparent),0 0 60px 10px color-mix(in srgb,var(--sun-2) 30%,transparent);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:8px}
+.center h2{font-size:clamp(1.8rem,3vw,2.3rem);font-weight:800}
+.center h2 span{display:block;font-size:1.35em;line-height:.9}
+.center p{margin:0;font-weight:600;max-width:26ch}
+@keyframes breathe{50%{transform:scale(1.025)}}
+
+.quote{align-self:center;text-align:center;padding:10px;min-width:0}
+.quote .hand{font-size:1.7rem}
+.quote .by{font-family:var(--f-hand);font-size:1.4rem;color:var(--muted);margin-top:6px}
+.quote button{margin-top:10px}
+
+/* Sections */
+section.block{margin-top:64px}
+.block-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-bottom:18px}
+.block-head h2{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800}
+.block-head p{margin:0;color:var(--muted);max-width:52ch}
+
+/* Breathing */
+.breath{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center;background:var(--paper);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+@media (max-width:760px){.breath{grid-template-columns:1fr}}
+.orb-wrap{display:grid;place-items:center;min-height:300px}
+.orb{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 40% 35%,var(--c-mint),var(--e-mint));box-shadow:0 0 0 14px color-mix(in srgb,var(--e-mint) 18%,transparent);display:grid;place-items:center;transition:transform 4s ease-in-out;max-width:100%}
+.orb span{font-family:var(--f-display);font-weight:800;font-size:2rem;color:#fff}
+.phase{font-family:var(--f-hand);font-size:2.2rem;min-height:2.6rem;text-align:center}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{border:0;border-radius:999px;padding:10px 20px;font-weight:700;background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:hover{opacity:.9}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:transparent;padding:8px 14px;font-weight:700;font-size:.9rem}
+.seg button[aria-pressed="true"]{background:var(--c-mint);color:var(--ink)}
+.stats{font-variant-numeric:tabular-nums;color:var(--muted);margin-top:10px;font-weight:600}
+
+/* Quiz */
+.quiz{background:var(--paper);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+.q-count{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.q-text{font-family:var(--f-hand);font-size:clamp(1.8rem,3.6vw,2.4rem);line-height:1.15;margin:10px 0 18px;min-height:2.5em}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.q-opts{grid-template-columns:1fr}}
+.opt{border:2px solid var(--line);border-radius:20px;padding:16px;text-align:left;background:var(--bg);display:flex;gap:12px;align-items:center;font-weight:700;font-size:1.05rem}
+.opt small{display:block;font-weight:600;color:var(--muted);font-size:.85rem}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt.right{border-color:var(--e-green);background:var(--c-green)}
+.opt.wrong{border-color:var(--e-rose);background:var(--c-rose)}
+.opt svg{width:36px;height:36px;flex:none}
+.feedback{margin-top:14px;min-height:3em;font-weight:600}
+.feedback b{color:var(--accent)}
+
+/* Journal */
+.journal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:820px){.journal{grid-template-columns:1fr}}
+.jcard{background:var(--paper);border-radius:22px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0}
+.jcard label{font-family:var(--f-hand);font-size:1.5rem;line-height:1.1}
+.jcard textarea{width:100%;min-height:110px;resize:vertical;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--bg);color:var(--ink);font:inherit}
+.hint{font-size:.85rem;color:var(--muted)}
+
+/* Footer */
+footer{margin-top:30px;display:block}
+@media (max-width:560px){.foot-msg{text-align:left}}
+
+/* Dialog */
+dialog{border:0;border-radius:28px;padding:0;max-width:min(640px,calc(100vw - 32px));width:100%;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog::backdrop{background:rgba(20,25,35,.45);backdrop-filter:blur(3px)}
+.dlg-head{background:var(--tint);padding:24px 26px 18px;display:flex;gap:16px;align-items:flex-start}
+.dlg-head .ico{width:58px;height:58px;color:var(--edge);flex:none}
+.dlg-head h3{font-size:1.7rem}
+.dlg-body{padding:18px 26px 24px}
+.dlg-body ol{padding-left:0;list-style:none;margin:0;display:grid;gap:10px;counter-reset:p}
+.dlg-body li{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:var(--bg)}
+.dlg-body li::before{counter-increment:p;content:counter(p);flex:none;width:26px;height:26px;border-radius:50%;background:var(--tint);color:var(--edge);font-weight:800;display:grid;place-items:center;font-size:.85rem}
+@media (prefers-reduced-motion:no-preference){.dlg-body li{animation:rise .45s ease both}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.reflect{margin-top:16px;padding:14px 16px;border-radius:16px;border:2px dashed var(--edge)}
+.reflect .hand{font-size:1.45rem}
+.dlg-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:0 26px 24px}
+.x{border:0;background:transparent;margin-left:auto;font-size:1.6rem;line-height:1;padding:4px 8px;color:var(--ink)}
+</style>
+
+<style>
+/* Marginalia: diseño a juego con la biblioteca (solo estilo) */
+:root{
+  --bg:#f3ede2; --paper:#f9f5ee; --ink:#1e1a17; --muted:#7a6f63; --line:#dbd1c1;
+  --sun:#efe4d3; --sun-2:#d9bf98; --accent:#c4552f; --blue:#23408e;
+  --c-blue:#e5e5ea; --c-pink:#f3dfd4; --c-green:#e3e6d8; --c-peach:#f4e2d2; --c-lav:#ebe2e4; --c-yellow:#f3e9d3; --c-mint:#e0e6dc; --c-rose:#f2ddd6;
+  --e-blue:#23408e; --e-pink:#c4552f; --e-green:#56704a; --e-peach:#b8572c; --e-lav:#6b4e7a; --e-yellow:#8f6a24; --e-mint:#3f6f5f; --e-rose:#a8382f;
+  --shadow:0 1px 0 rgba(60,40,20,.04),0 18px 34px -20px rgba(60,40,20,.35);
+  --grain:.5;
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Fraunces",Georgia,serif;
+  --f-hand:"Caveat",cursive;
+  --f-mono:"Space Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#191613; --paper:#211d19; --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --sun:#2a241f; --sun-2:#8a6f4c; --accent:#e07a55; --blue:#93a9ea;
+  --c-blue:#25242a; --c-pink:#33251f; --c-green:#252a21; --c-peach:#33271e; --c-lav:#2c2429; --c-yellow:#2e281d; --c-mint:#222a25; --c-rose:#332220;
+  --e-blue:#93a9ea; --e-pink:#e07a55; --e-green:#a3bb95; --e-peach:#e8a071; --e-lav:#c3a3d6; --e-yellow:#dcb66e; --e-mint:#86c4ae; --e-rose:#ea8b80;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#191613; --paper:#211d19; --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --sun:#2a241f; --sun-2:#8a6f4c; --accent:#e07a55; --blue:#93a9ea;
+  --c-blue:#25242a; --c-pink:#33251f; --c-green:#252a21; --c-peach:#33271e; --c-lav:#2c2429; --c-yellow:#2e281d; --c-mint:#222a25; --c-rose:#332220;
+  --e-blue:#93a9ea; --e-pink:#e07a55; --e-green:#a3bb95; --e-peach:#e8a071; --e-lav:#c3a3d6; --e-yellow:#dcb66e; --e-mint:#86c4ae; --e-rose:#ea8b80;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}
+
+body{font-size:17px;line-height:1.55}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:var(--grain);mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .3  0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+h1,h2,h3{font-weight:400}
+.hand{font-size:1.5rem;line-height:1.15;color:var(--accent)}
+
+/* Trazos a mano */
+.mark{position:relative;display:inline-block;white-space:nowrap;isolation:isolate}
+.mark svg{position:absolute;left:-8px;top:-8px;width:calc(100% + 16px);height:calc(100% + 16px);overflow:visible;pointer-events:none}
+.mark path{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s cubic-bezier(.6,0,.2,1) .35s}
+.mark.ci path{stroke:var(--blue)}
+.in .mark path,.mark.in path{stroke-dashoffset:0}
+
+/* Aparición suave */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* Encabezado */
+.hero{padding-block:56px 26px;position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;left:50%;top:50%;width:min(280px,64vw);aspect-ratio:1;translate:-50% -50%;z-index:-1;border-radius:50%;
+  background:color-mix(in srgb,var(--accent) 6%,transparent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
+  outline:1px dashed color-mix(in srgb,var(--accent) 35%,transparent);outline-offset:10px;animation:mg-breathe 8s ease-in-out infinite}
+.guide-note{position:relative;z-index:1}
+@keyframes mg-breathe{0%,100%{transform:scale(.92)}50%{transform:scale(1)}}
+.hero h1{font-weight:400;font-size:clamp(2.8rem,6.5vw,5rem);background:none;padding:0;letter-spacing:-.015em}
+.hero h1 .mark{font-style:italic;font-weight:300;color:var(--accent)}
+.hero .sub{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:1.2rem;font-weight:300;margin-top:12px;color:var(--muted)}
+.hero .sub cite{font-style:italic;color:var(--ink)}
+.author{background:none;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.22em;font-weight:400;color:var(--muted);padding:0;margin-top:16px}
+.author::before,.author::after{content:"";display:inline-block;width:28px;border-top:1px dashed var(--muted);vertical-align:middle;margin:0 12px}
+.corner.r{background:var(--c-peach)}
+.corner .hand,.corner.l{color:var(--accent)}
+
+.guide-note{border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:none}
+.guide-note strong{font-weight:400;font-size:1.3rem}
+
+/* Progreso y chips */
+.bar{font-weight:400;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.track{height:6px}
+.fill{background:linear-gradient(90deg,var(--blue),var(--accent))}
+.chip{border:1.5px solid var(--line);background:transparent;font-family:var(--f-mono);font-weight:400;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;transition:border-color .2s}
+.chip:hover{border-color:var(--ink)}
+
+/* Mapa */
+.g-title{font-weight:400;font-size:clamp(1.7rem,2.8vw,2.2rem)}
+.g-n{background:none;color:var(--accent);border:1.5px solid var(--accent);font-family:var(--f-hand);font-weight:700;font-size:1.4rem;width:38px;height:38px}
+.card{border-radius:14px;border:1px solid color-mix(in srgb,var(--edge) 16%,transparent);box-shadow:none;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-4px) rotate(-.5deg);box-shadow:var(--shadow)}
+.card:nth-child(even):hover{transform:translateY(-4px) rotate(.5deg)}
+.card .eyebrow{font-family:var(--f-mono);font-weight:400;font-size:.66rem;letter-spacing:.2em}
+.card h3{font-weight:600;font-size:1.35rem}
+.card ul{font-size:1rem}
+.card .more{font-family:var(--f-hand);font-weight:700;font-size:1.2rem}
+.card.is-done{outline:1.5px dashed var(--edge)}
+.done-badge{font-family:var(--f-mono);font-size:.68rem}
+
+.center{border-radius:16px;background:var(--sun);box-shadow:none;border:1px solid var(--line)}
+.center h2{font-weight:400;font-size:clamp(2rem,3.2vw,2.6rem)}
+.center h2 span{font-style:italic;font-weight:300;color:var(--accent);font-size:1.2em}
+.center p{font-weight:400}
+.quote .hand{font-size:1.8rem}
+.quote .by{font-family:var(--f-mono);font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* Secciones */
+.block-head h2{font-weight:400;font-size:clamp(2rem,3.5vw,2.6rem)}
+.block-head p{font-size:1.08rem;font-style:italic;font-weight:300}
+.breath,.scan,.quiz{border-radius:16px;box-shadow:none;background:var(--paper);border:1px solid var(--line)}
+.orb{background:radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--accent) 45%,var(--paper)),var(--accent));box-shadow:0 0 0 14px color-mix(in srgb,var(--accent) 14%,transparent)}
+.phase{color:var(--accent)}
+.scan-out{border-radius:14px;background:var(--bg);border:1px dashed var(--line)}
+.scan-out h3{font-weight:400;font-size:1.6rem}
+.hb-field label,.srow label{font-weight:600}
+.hb-field input{border-radius:10px;border:1.5px solid var(--line);background:var(--bg)}
+.days button{border-width:1.5px;font-weight:400;font-family:var(--f-mono);font-size:.95rem;border-color:var(--accent);color:var(--ink)}
+.days button[aria-pressed="true"]{background:var(--accent);color:var(--paper)}
+.btn{border-radius:999px;background:var(--ink);color:var(--bg);font-family:var(--f-mono);font-weight:400;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;transition:background .2s,transform .2s}
+.btn:hover{opacity:1;background:var(--accent);color:var(--paper);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.seg{border-width:1.5px}
+.seg button{font-family:var(--f-mono);font-weight:400;font-size:.74rem;letter-spacing:.06em}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.q-count{font-family:var(--f-mono);font-weight:400;font-size:.78rem;letter-spacing:.1em}
+.q-text{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(1.8rem,3.4vw,2.4rem)}
+.opt{border:1.5px solid var(--line);border-radius:12px;background:var(--bg);font-weight:600;font-size:1.1rem}
+.opt small{font-weight:400;font-size:.92rem}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.feedback{font-weight:400;font-size:1.08rem}
+.feedback b{color:var(--accent)}
+.jcard{border-radius:16px;box-shadow:none;background:var(--paper);border:1px solid var(--line)}
+.jcard label{font-family:var(--f-hand);font-weight:700;font-size:1.6rem;color:var(--accent)}
+.jcard textarea{border-radius:10px;border:1.5px solid var(--line);background:var(--bg)}
+.hint{font-style:italic}
+
+/* Pie */
+footer{border-top:1px solid var(--line);padding-top:20px}
+
+/* Ventana */
+dialog{border-radius:16px}
+.dlg-head h3{font-weight:600;font-size:1.9rem}
+#dlg-eyebrow{font-family:var(--f-mono)!important;font-weight:400!important;font-size:.7rem;letter-spacing:.2em!important}
+.dlg-body li{border-radius:10px}
+.dlg-body li::before{font-family:var(--f-hand);font-weight:700;font-size:1.05rem}
+.reflect{border:1.5px dashed var(--edge);border-radius:12px}
+.reflect .hand{font-size:1.45rem}
+
+@media (prefers-reduced-motion:reduce){.hero::before{animation:none}.rv{opacity:1;transform:none;transition:none}.mark path{stroke-dashoffset:0;transition:none}}
+</style>
+<style>
+/* Marginalia: navegación entre libros */
+.mg-nav{position:sticky;top:0;z-index:50;margin-inline:-16px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.mg-nav .in{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
 .mg-brand{display:inline-flex;gap:.02em;text-decoration:none;color:var(--ink);font-size:1.4rem;line-height:1;white-space:nowrap}
 .mg-brand span{display:inline-block;padding:.05em .07em;min-width:.55em;text-align:center;transition:transform .3s}
 .mg-brand .s0{font-family:var(--f-display);font-weight:700}
 .mg-brand .s1{font-family:var(--f-hand);font-weight:700;color:var(--accent);font-size:1.12em}
-.mg-brand .s2{font-family:var(--f-mono);font-weight:700;background:var(--green);color:var(--bg)}
-.mg-brand .s3{font-family:var(--f-display);font-style:italic;color:var(--green)}
+.mg-brand .s2{font-family:var(--f-mono);font-weight:700;background:var(--blue);color:var(--bg)}
+.mg-brand .s3{font-family:var(--f-display);font-style:italic;color:var(--blue)}
 .mg-brand .s4{font-family:var(--f-display);font-weight:300;background:var(--accent);color:var(--bg)}
 .mg-brand .s6{font-family:var(--f-mono);background:var(--ink);color:var(--bg)}
 .mg-back{margin-left:auto;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);font-size:1rem;padding:6px 10px;border-radius:999px;transition:color .2s}
@@ -71,7 +346,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .mg-menu li a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.25}
 .mg-menu li a:hover{background:var(--bg)}
 .mg-menu li a small{display:block;color:var(--muted);font-size:.85rem;font-style:italic}
-.mg-menu li a[aria-current="page"]{background:var(--rose);color:var(--accent)}
+.mg-menu li a[aria-current="page"]{background:var(--c-peach);color:var(--accent)}
 .mg-menu li.sep{border-top:1px dashed var(--line);margin:6px 4px}
 .mg-pager{max-width:1180px;margin:56px auto 0;display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
 .mg-pager a{text-decoration:none;color:var(--ink);padding:14px 18px;border-radius:14px;background:var(--paper);border:1px solid var(--line);line-height:1.25;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
@@ -93,141 +368,6 @@ button{font:inherit;color:inherit;cursor:pointer}
   .mg-pager .home{grid-column:1/-1;grid-row:1;text-align:center}
 }
 @media (prefers-reduced-motion:reduce){.mg-menu ul{animation:none}.mg-pager a{transition:none}}
-
-/* hero */
-.hero{position:relative;text-align:center;padding:70px 12px 34px;isolation:isolate;overflow:hidden}
-.hero::before{content:"";position:absolute;width:min(520px,86vw);aspect-ratio:1;left:50%;top:48%;translate:-50% -50%;border-radius:50%;z-index:-3;background:radial-gradient(circle at 44% 34%,color-mix(in srgb,var(--green) 18%,transparent),color-mix(in srgb,var(--green) 6%,transparent) 58%,transparent 73%);border:1px solid color-mix(in srgb,var(--green) 32%,transparent);outline:1px dashed color-mix(in srgb,var(--wine) 30%,transparent);outline-offset:15px}
-.hero::after{content:"";position:absolute;inset:8% 4% 0;z-index:-4;opacity:.16;background:radial-gradient(circle at 20% 40%,var(--gold) 0 1px,transparent 2px),radial-gradient(circle at 75% 22%,var(--wine) 0 1px,transparent 2px),radial-gradient(circle at 70% 72%,var(--green) 0 1px,transparent 2px);background-size:38px 38px,47px 47px,57px 57px}
-.kicker{font:700 .72rem/1.4 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
-.hero h1{font-family:var(--display);font-weight:300;line-height:.95;font-size:clamp(3.1rem,8vw,6.7rem);margin:0;letter-spacing:-.035em}
-.hero h1 em{font-style:italic;color:var(--wine);font-weight:300}
-.hero .sub{max-width:690px;margin:18px auto 0;color:var(--muted);font-size:clamp(1rem,2vw,1.18rem)}
-.hero .author{margin-top:16px;font:400 .72rem/1.4 var(--mono);letter-spacing:.19em;text-transform:uppercase;color:var(--muted)}
-.butterfly{position:absolute;width:72px;height:72px;color:var(--wine);opacity:.8}
-.b1{left:8%;top:90px;transform:rotate(-16deg)}
-.b2{right:9%;top:150px;width:52px;height:52px;color:var(--green);transform:rotate(13deg)}
-.b3{right:21%;bottom:12px;width:36px;height:36px;color:var(--gold);transform:rotate(-8deg)}
-@media(max-width:780px){.butterfly{display:none}.hero{padding-top:56px}}
-
-.note-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:6px auto 28px}
-.note.spoil{border-color:color-mix(in srgb,var(--gold) 45%,var(--line));background:color-mix(in srgb,var(--amber) 50%,var(--paper))}
-.note{border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:17px 20px;box-shadow:var(--shadow)}
-.note strong{font-family:var(--display);font-weight:600;font-size:1.12rem}
-.note p{margin:5px 0 0;color:var(--muted);font-size:.95rem}
-.note.warn{border-color:color-mix(in srgb,var(--wine) 42%,var(--line));background:color-mix(in srgb,var(--rose) 55%,var(--paper))}
-@media(max-width:900px){.note-grid{grid-template-columns:1fr}}
-
-/* progress */
-.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:11px 18px;margin:22px auto 34px;color:var(--muted);font:400 .74rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.track{width:230px;max-width:58vw;height:6px;background:var(--line);border-radius:99px;overflow:hidden}
-.fill{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--wine),var(--gold));transition:width .45s ease}
-.chip{border:1px solid var(--line);background:transparent;border-radius:999px;padding:6px 14px;font:400 .7rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.chip:hover{border-color:var(--green);color:var(--green)}
-
-/* groups */
-.map{display:grid;gap:50px}
-.group{scroll-margin-top:85px}
-.g-title{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:400;font-size:clamp(1.65rem,3vw,2.25rem);margin:0 0 15px}
-.g-n{display:grid;place-items:center;width:39px;height:39px;border-radius:50%;border:1.5px solid var(--wine);color:var(--wine);font:700 1.3rem/1 var(--hand);flex:none}
-.group-intro{margin:-5px 0 16px 52px;color:var(--muted);font-style:italic;max-width:72ch}
-.people-clusters{display:grid;gap:28px;margin-top:22px}
-.people-cluster{padding-top:18px;border-top:1px dashed var(--line)}
-.people-cluster:first-child{padding-top:0;border-top:0}
-.cluster-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin:0 0 13px}
-.cluster-label{font:700 1.36rem/1.05 var(--hand);color:var(--wine)}
-.cluster-head p{margin:0;color:var(--muted);font-size:.93rem;font-style:italic}
-.g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:17px;align-items:stretch}
-.card{position:relative;text-align:left;border:1px solid color-mix(in srgb,var(--edge) 18%,var(--line));border-radius:15px;padding:19px;background:var(--tint);box-shadow:none;display:flex;flex-direction:column;gap:9px;min-width:0;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
-.card:hover{transform:translateY(-4px) rotate(-.35deg);box-shadow:var(--shadow)}
-.card:nth-child(even):hover{transform:translateY(-4px) rotate(.35deg)}
-.card .top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-.eyebrow{font:400 .65rem/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--edge)}
-.card h3{font-family:var(--display);font-weight:600;font-size:1.34rem;line-height:1.13;margin:3px 0 0}
-.ico{width:42px;height:42px;color:var(--edge);flex:none}
-.card p{margin:0;font-size:.97rem}
-.card ul{margin:1px 0 0;padding-left:18px;font-size:.95rem}
-.card li{margin:3px 0}
-.card li::marker{color:var(--edge)}
-.more{margin-top:auto;padding-top:7px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--edge);font:700 1.15rem/1.1 var(--hand)}
-.done{visibility:hidden;font:400 .64rem/1 var(--mono);text-transform:uppercase;letter-spacing:.07em;background:var(--paper);padding:4px 8px;border-radius:999px}
-.card.is-done{outline:1.5px dashed var(--edge);outline-offset:-7px}
-.card.is-done .done{visibility:visible}
-.center-card{grid-column:1/-1;background:linear-gradient(135deg,color-mix(in srgb,var(--green) 13%,var(--paper)),color-mix(in srgb,var(--wine) 7%,var(--paper)));border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center}
-.center-card .big{font-family:var(--display);font-weight:300;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1.1}
-.center-card .big em{color:var(--wine)}
-.center-card p{margin:4px 0 0;color:var(--muted)}
-.center-card .stamp{width:90px;height:90px;border:1px dashed var(--green);border-radius:50%;display:grid;place-items:center;color:var(--green);font:700 1.2rem/1 var(--hand);text-align:center;transform:rotate(4deg)}
-@media(max-width:720px){.center-card{grid-template-columns:1fr}.center-card .stamp{display:none}.group-intro{margin-left:0}.cluster-head{display:block}.cluster-head p{margin-top:5px}}
-
-/* spoiler */
-.spoiler-wrap{margin-top:58px;border:1px solid color-mix(in srgb,var(--wine) 34%,var(--line));border-radius:18px;background:var(--paper);overflow:hidden}
-.spoiler-head{padding:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(110deg,color-mix(in srgb,var(--wine) 8%,var(--paper)),color-mix(in srgb,var(--green) 6%,var(--paper)))}
-.spoiler-head h2{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,3vw,2.35rem);margin:0}
-.spoiler-head p{margin:4px 0 0;color:var(--muted);max-width:64ch}
-.btn{border:0;border-radius:999px;padding:10px 18px;background:var(--ink);color:var(--bg);font:400 .74rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-2px);background:var(--wine);color:#fff}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.btn.ghost:hover{border-color:var(--wine);color:var(--wine);background:transparent}
-.spoiler-body{display:none;padding:22px}
-.spoiler-wrap.open .spoiler-body{display:block}
-.spoiler-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.scard{border:1px solid var(--line);border-radius:13px;padding:17px;background:var(--bg)}
-.scard b{display:block;color:var(--wine);font-family:var(--display);font-size:1.18rem;margin-bottom:4px}
-.scard p{margin:0}
-@media(max-width:720px){.spoiler-grid{grid-template-columns:1fr}}
-
-/* themes */
-.pullquote{grid-column:1/-1;text-align:center;padding:30px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);margin:2px 0 6px}
-.pullquote .hand{font:700 clamp(1.65rem,3.6vw,2.45rem)/1.1 var(--hand);color:var(--green)}
-.pullquote .small{font:400 .68rem/1.4 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:9px}
-
-/* journal */
-.block{margin-top:62px}
-.block-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-bottom:18px}
-.block-head h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,3.5vw,2.6rem);margin:0}
-.block-head p{margin:0;color:var(--muted);font-style:italic;max-width:58ch}
-.journal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.jcard{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;flex-direction:column;gap:8px}
-.jhead{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
-.jcard label,.jcard .mg-field-head label{font:700 1.55rem/1.08 var(--hand);color:var(--wine)}
-.clear{border:0;background:transparent;color:var(--muted);font:400 .62rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 0}
-.clear:hover{color:var(--wine)}
-.jcard textarea{width:100%;min-height:130px;resize:vertical;border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:var(--bg);color:var(--ink);font:inherit}
-.hint{color:var(--muted);font-size:.85rem;font-style:italic}
-@media(max-width:820px){.journal{grid-template-columns:1fr}}
-
-/* footer */
-footer{margin-top:46px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.88rem}
-footer strong{color:var(--ink);font-weight:600}
-.copy{margin-top:14px;font:400 .62rem/1.4 var(--mono);letter-spacing:.04em}
-
-/* dialog */
-dialog{border:0;border-radius:17px;padding:0;width:min(670px,calc(100vw - 30px));max-height:min(84vh,760px);background:var(--paper);color:var(--ink);box-shadow:0 28px 90px -28px rgba(0,0,0,.55)}
-dialog::backdrop{background:rgba(16,22,19,.55);backdrop-filter:blur(3px)}
-.dlg-head{padding:22px 24px 17px;background:var(--tint);display:flex;gap:14px;align-items:flex-start;position:sticky;top:0;z-index:2}
-.dlg-head h3{font-family:var(--display);font-weight:600;font-size:1.8rem;line-height:1.1;margin:3px 0 0}
-.x{border:0;background:transparent;font-size:1.5rem;margin-left:auto;line-height:1;padding:3px 6px}
-.dlg-body{padding:18px 24px 22px;overflow:auto}
-.dlg-list{padding:0;list-style:none;margin:0;display:grid;gap:9px;counter-reset:p}
-.dlg-list li{display:flex;gap:11px;align-items:flex-start;padding:10px 12px;border-radius:10px;background:var(--bg)}
-.dlg-list li::before{counter-increment:p;content:counter(p);flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--tint);color:var(--edge);font:700 1rem/1 var(--hand)}
-.reflect{margin-top:15px;padding:14px 15px;border:1.5px dashed var(--edge);border-radius:11px}
-.reflect .hand{font:700 1.42rem/1.05 var(--hand);color:var(--edge)}
-.source-note{margin-top:15px;padding-top:11px;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
-.dlg-foot{display:flex;justify-content:space-between;gap:10px;padding:0 24px 22px}
-
-
-
-/* Marginalia: notas de la guía, créditos y firma */
-footer .source-note{border:0;margin:0;padding:0;color:var(--muted);font-size:.88rem;line-height:1.55}
-footer .source-note strong{color:var(--ink)}
-footer .guide-credits{margin-top:18px;color:var(--muted);font-size:.88rem;line-height:1.65}
-footer .credits-author{margin:0 0 8px;color:var(--ink)}
-footer .credits-author strong{font-weight:600}
-footer .credits-note{margin:0}
-footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.02em}
-.dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
-.mg-pager a{color:var(--ink)}
 </style>
 <link rel="stylesheet" href="feedback.css">
 <script src="feedback.js" defer></script>
@@ -378,6 +518,42 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
   .mg-pager .mg-arrow{font-size:.85rem}
 }
 </style>
+
+
+<style id="jdm-extra">
+/* El jardín de las mariposas: piezas propias de la novela, con el estilo de Marginalia */
+.note-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:4px auto 28px}
+.note-grid .guide-note{max-width:none;margin:0;text-align:left}
+.note-grid .guide-note.spoil{background:var(--c-yellow)}
+.note-grid .guide-note.warn{background:var(--c-rose)}
+.note-grid .guide-note a{color:var(--accent)}
+@media (max-width:900px){.note-grid{grid-template-columns:1fr}}
+.group-intro{margin:-6px 0 18px 50px;color:var(--muted);font-style:italic;font-weight:300;max-width:72ch}
+.people-clusters{display:grid;gap:28px;margin-top:8px}
+.people-cluster{padding-top:18px;border-top:1px dashed var(--line)}
+.people-cluster:first-child{padding-top:0;border-top:0}
+.cluster-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:0 0 14px}
+.cluster-label{font-family:var(--f-hand);font-weight:700;font-size:1.45rem;line-height:1.05;color:var(--accent)}
+.cluster-head p{margin:0;color:var(--muted);font-size:.95rem;font-style:italic}
+#g-1 .center{grid-column:1/-1;min-height:200px}
+#g-1 .center p{max-width:52ch}
+#g-5 .quote{grid-column:1/-1;padding:24px 10px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+@media (max-width:720px){.group-intro{margin-left:0}.cluster-head{display:block}.cluster-head p{margin-top:4px}}
+/* Final explicado */
+.spoiler-wrap{border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden}
+.spoiler-head{padding:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--c-peach)}
+.spoiler-head h2{font-weight:400;font-size:clamp(1.8rem,3.2vw,2.4rem)}
+.spoiler-head p{margin:6px 0 0;color:var(--muted);max-width:64ch;font-style:italic;font-weight:300}
+.spoiler-body{display:none;padding:22px}
+.spoiler-wrap.open .spoiler-body{display:block}
+.spoiler-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.scard{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--bg)}
+.scard b{display:block;color:var(--accent);font-family:var(--f-display);font-weight:600;font-size:1.2rem;margin-bottom:4px}
+.scard p{margin:0}
+.spoiler-body .source-note{margin-top:16px}
+@media (max-width:720px){.spoiler-grid{grid-template-columns:1fr}}
+#dlg-source{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+</style>
 <link rel="stylesheet" href="mobile-readability.css">
 </head>
 <body>
@@ -393,89 +569,82 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
 </nav>
 
 <div class="wrap">
-<header class="hero">
-  <svg class="butterfly b1" viewBox="0 0 100 80" aria-hidden="true"><path fill="currentColor" d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z" opacity=".88"/><path d="M50 34v30" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-  <svg class="butterfly b2" viewBox="0 0 100 80" aria-hidden="true"><path fill="currentColor" d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z" opacity=".8"/><path d="M50 34v30" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-  <svg class="butterfly b3" viewBox="0 0 100 80" aria-hidden="true"><path fill="currentColor" d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z"/></svg>
-  <div class="kicker">Guía visual de lectura · Marginalia</div>
-  <h1>El jardín de las <em>mariposas</em></h1>
-  <p class="sub">Una guía para seguir la historia sin perderse entre nombres, recuerdos y saltos temporales, y para mirar de cerca lo que la novela plantea sobre identidad, memoria, familia y supervivencia.</p>
-  <div class="author">Sobre <cite>El jardín de las mariposas</cite>, de Dot Hutchison · guía independiente</div>
-  <div id="book-purchase" style="margin-top:20px">
+  <header class="hero">
+    <h1>Guía de <span class="mark ul">lectura</span></h1>
+    <div class="sub">Sobre <cite>El jardín de las mariposas</cite>, de Dot Hutchison</div>
+    <div class="author">GUÍA INDEPENDIENTE</div>
+    <div id="book-purchase" style="margin-top:20px">
     <a class="btn" href="https://meli.la/1nK9ua1" target="_blank" rel="sponsored noopener" aria-label="Comprar El jardín de las mariposas en Mercado Libre (abre en una pestaña nueva)" style="display:inline-block;text-decoration:none;text-align:center">Comprar libro</a>
   </div>
-</header>
+  </header>
 
-<div class="note-grid">
-  <aside class="note"><strong>Cómo está organizada esta guía</strong><p>La novela tiene tres capítulos muy extensos. Primero ubicamos a las personas clave y después recorremos los hechos en bloques de lectura creados por Marginalia. Los nombres de estos bloques son editoriales y no sustituyen los capítulos originales. Esta guía no es el libro ni lo reemplaza, y no tiene relación con la autora ni con la editorial.</p></aside>
-  <aside class="note spoil"><strong>Aviso de spoilers</strong><p>Las secciones 1 y 2 se pueden consultar mientras lees. Desde la sección 3 se cuentan los hechos principales de la novela, incluido el tramo final. Las grandes revelaciones están ocultas en <a href="#spoilers">El final explicado</a> y solo aparecen si tú lo decides.</p></aside>
-  <aside class="note warn"><strong>Advertencia de contenido</strong><p>La historia incluye secuestro, abuso sexual, violencia, asesinato, menores de edad, coerción y trauma. Los resúmenes evitan detalles gráficos innecesarios, pero no esconden la naturaleza de lo que ocurre.</p></aside>
-</div>
+  <div class="note-grid">
+    <aside class="guide-note "><strong>Cómo está organizada esta guía</strong><p>La novela tiene tres capítulos muy extensos. Primero ubicamos a las personas clave y después recorremos los hechos en bloques de lectura creados por Marginalia. Los nombres de estos bloques son editoriales y no sustituyen los capítulos originales. Esta guía no es el libro ni lo reemplaza, y no tiene relación con la autora ni con la editorial.</p></aside>
+    <aside class="guide-note spoil"><strong>Aviso de spoilers</strong><p>Las secciones 1 y 2 se pueden consultar mientras lees. Desde la sección 3 se cuentan los hechos principales de la novela, incluido el tramo final. Las grandes revelaciones están ocultas en <a href="#spoilers">El final explicado</a> y solo aparecen si tú lo decides.</p></aside>
+    <aside class="guide-note warn"><strong>Advertencia de contenido</strong><p>La historia incluye secuestro, abuso sexual, violencia, asesinato, menores de edad, coerción y trauma. Los resúmenes evitan detalles gráficos innecesarios, pero no esconden la naturaleza de lo que ocurre.</p></aside>
+  </div>
 
-<div class="bar" aria-live="polite">
-  <span id="progress-text">0 secciones exploradas</span>
-  <div class="track" id="track" role="progressbar" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><div class="fill" id="fill"></div></div>
-  <button class="chip" id="reset" type="button">Reiniciar</button>
-</div>
+  <div class="bar" aria-live="polite">
+    <span id="progress-text">0 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <button class="chip" id="reset" type="button">Reiniciar</button>
+  </div>
 
-<main class="map" id="map">
-  <section class="group" id="g1-wrap">
-    <h2 class="g-title"><span class="g-n">1</span>Antes de entrar al Jardín</h2>
-    <p class="group-intro">Primero ubicamos la estructura del libro y el misterio desde el que empieza la narración.</p>
-    <div class="g-grid" id="g-1">
-      <div class="center-card">
-        <div>
-          <div class="eyebrow">Mapa de lectura</div>
-          <div class="big">Tres capítulos enormes, <em>una historia fragmentada</em></div>
+  <div class="map" id="map">
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">1</span>Antes de entrar al Jardín</h2>
+      <p class="group-intro">Primero ubicamos la estructura del libro y el misterio desde el que empieza la narración.</p>
+      <p class="reading-card-hint">Abre una tarjeta para leer la explicación completa.</p>
+      <div class="g-grid" id="g-1">
+        <div class="center" id="center">
+          <h2>Tres capítulos enormes, <span>una historia fragmentada</span></h2>
           <p>El interrogatorio del FBI ocurre en el presente. La mayor parte del Jardín aparece a través de los recuerdos de Inara/Maya.</p>
+          <div class="hand" style="font-size:1.35rem">Lee sin prisa</div>
         </div>
-        <div></div>
-        <div class="stamp">leer<br>sin prisa</div>
       </div>
     </div>
-  </section>
-
-  <section class="group">
-    <h2 class="g-title"><span class="g-n">2</span>Personas que sostienen la historia</h2>
-    <p class="group-intro">No es una lista de todos los personajes. Aquí están quienes cambian el rumbo de Maya/Inara, explican cómo funciona el Jardín o resultan decisivos para entender por qué la historia termina como termina.</p>
-    <div class="people-clusters">
-      <div class="people-cluster">
-        <div class="cluster-head"><div class="cluster-label">En el centro del Jardín</div><p>Quienes concentran el conflicto principal.</p></div>
-        <div class="g-grid" id="g-2a"></div>
-      </div>
-      <div class="people-cluster">
-        <div class="cluster-head"><div class="cluster-label">La familia que Maya encuentra</div><p>Personas que la acompañan, la recuerdan o le ofrecen una forma distinta de pertenecer.</p></div>
-        <div class="g-grid" id="g-2b"></div>
-      </div>
-      <div class="people-cluster">
-        <div class="cluster-head"><div class="cluster-label">Quienes reconstruyen la verdad</div><p>Los agentes que escuchan su relato y obligan a ordenar lo que ocurrió.</p></div>
-        <div class="g-grid" id="g-2c"></div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">2</span>Personas que sostienen la historia</h2>
+      <p class="group-intro">No es una lista de todos los personajes. Aquí están quienes cambian el rumbo de Maya/Inara, explican cómo funciona el Jardín o resultan decisivos para entender por qué la historia termina como termina.</p>
+      <div class="people-clusters">
+        <div class="people-cluster">
+          <div class="cluster-head"><div class="cluster-label">En el centro del Jardín</div><p>Quienes concentran el conflicto principal.</p></div>
+          <div class="g-grid" id="g-2a"></div>
+        </div>
+        <div class="people-cluster">
+          <div class="cluster-head"><div class="cluster-label">La familia que Maya encuentra</div><p>Personas que la acompañan, la recuerdan o le ofrecen una forma distinta de pertenecer.</p></div>
+          <div class="g-grid" id="g-2b"></div>
+        </div>
+        <div class="people-cluster">
+          <div class="cluster-head"><div class="cluster-label">Quienes reconstruyen la verdad</div><p>Los agentes que escuchan su relato y obligan a ordenar lo que ocurrió.</p></div>
+          <div class="g-grid" id="g-2c"></div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section class="group">
-    <h2 class="g-title"><span class="g-n">3</span>Lo que ocurre</h2>
-    <p class="group-intro">Con los personajes ya ubicados, recorremos los hechos principales de la novela en bloques más cortos y fáciles de consultar.</p>
-    <div class="g-grid" id="g-3"></div>
-  </section>
-
-  <section class="group">
-    <h2 class="g-title"><span class="g-n">4</span>Lo que queda después</h2>
-    <p class="group-intro">La novela no termina cuando se abren las puertas. El “Exterior” también exige aprender a vivir de nuevo.</p>
-    <div class="g-grid" id="g-4"></div>
-  </section>
-
-  <section class="group">
-    <h2 class="g-title"><span class="g-n">5</span>Temas para mirar más de cerca</h2>
-    <p class="group-intro">Estas tarjetas ya no siguen la trama en orden: reúnen ideas que aparecen una y otra vez.</p>
-    <div class="g-grid" id="g-5">
-      <div class="pullquote"><div class="hand" id="quote-text">¿Un nombre dice quién eres… o solo cómo te llaman?</div><div class="small">Pregunta de Marginalia</div><button class="chip" id="next-quote" type="button" style="margin-top:12px">Otra pregunta</button></div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">3</span>Lo que ocurre</h2>
+      <p class="group-intro">Con los personajes ya ubicados, recorremos los hechos principales de la novela en bloques más cortos y fáciles de consultar.</p>
+      <div class="g-grid" id="g-3"></div>
     </div>
-  </section>
-</main>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">4</span>Lo que queda después</h2>
+      <p class="group-intro">La novela no termina cuando se abren las puertas. El “Exterior” también exige aprender a vivir de nuevo.</p>
+      <div class="g-grid" id="g-4"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">5</span>Temas para mirar más de cerca</h2>
+      <p class="group-intro">Estas tarjetas ya no siguen la trama en orden: reúnen ideas que aparecen una y otra vez.</p>
+      <div class="g-grid" id="g-5">
+        <div class="quote">
+          <div class="hand" id="quote-text">¿Un nombre dice quién eres… o solo cómo te llaman?</div>
+          <div class="by">Pregunta de Marginalia</div>
+          <button class="chip" id="next-quote" type="button">Otra pregunta</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<section class="spoiler-wrap" id="spoilers">
+  <section class="block spoiler-wrap" id="spoilers">
   <div class="spoiler-head">
     <div><h2>El final explicado</h2><p>Esta parte reúne las revelaciones y el cierre. Está oculta para que puedas usar la guía mientras lees sin arruinarte el final.</p></div>
     <button class="btn" id="spoiler-btn" type="button" aria-expanded="false">Mostrar spoilers</button>
@@ -491,16 +660,18 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
   </div>
 </section>
 
-<section class="block" id="diario">
-  <div class="block-head"><h2>Mis notas de lectura</h2><p>Tres preguntas creadas por Marginalia para acompañar la lectura. Tus respuestas se quedan en este navegador.</p></div>
+  <section class="block" id="diario">
+    <div class="block-head">
+      <h2>Mis notas de lectura</h2>
+      <p>Tres preguntas creadas por Marginalia para acompañar la lectura. Tus respuestas se quedan en este navegador.</p></div>
   <div class="journal">
     <div class="jcard"><div class="mg-field-head"><label for="j1">¿Qué significa conservar tu identidad?</label><button class="mg-clear-field" type="button" data-clear="j1">Borrar</button></div><textarea id="j1" placeholder="Piensa en nombres, etiquetas, papeles y decisiones propias…"></textarea></div>
     <div class="jcard"><div class="mg-field-head"><label for="j2">¿Qué convierte a un grupo en familia?</label><button class="mg-clear-field" type="button" data-clear="j2">Borrar</button></div><textarea id="j2" placeholder="¿La sangre, la espera, el cuidado, la memoria, la elección…?"></textarea></div>
     <div class="jcard"><div class="mg-field-head"><label for="j3">¿Qué imagen del libro no olvidas?</label><button class="mg-clear-field" type="button" data-clear="j3">Borrar</button></div><textarea id="j3" placeholder="Puede ser una mariposa, el cristal, el carrusel, la cueva, un nombre…"></textarea></div>
   </div>
   <p class="hint" id="saved-hint"></p>
-  
-</section>
+    <p class="hint" id="saved-hint" style="margin-top:8px"></p>
+  </section>
 
 <section class="mg-save-pdf" id="guardar-pdf" aria-label="Guardar notas en PDF">
   <div class="mg-pdf-actions">
@@ -536,8 +707,6 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
   <div class="dlg-foot"><button class="btn ghost" id="dlg-prev" type="button">← Anterior</button><button class="btn" id="dlg-next" type="button">Siguiente →</button></div>
 </dialog>
 
-
-
 <script>
 const I={
  butterfly:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M23 23C18 9 7 7 6 16c-1 7 6 12 15 10-8 4-11 11-6 14 6 3 9-6 9-15 0 9 3 18 9 15 5-3 2-10-6-14 9 2 16-3 15-10-1-9-12-7-17 7"/><path d="M24 20v21M20 8l4 7 4-7"/></svg>',
@@ -550,62 +719,138 @@ const I={
  door:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 43V7h24v36M18 43V12h13v31"/><circle cx="28" cy="27" r="1.5"/></svg>',
  scale:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 7v34M12 12h24M24 12 13 30M24 12l11 18"/><path d="M6 30h14c0 5-3 8-7 8s-7-3-7-8zM28 30h14c0 5-3 8-7 8s-7-3-7-8zM17 41h14"/></svg>'
 };
-const C={green:['sage','green'],wine:['rose','wine'],sand:['sand','gold'],mist:['mist','green'],lav:['lav','wine'],amber:['amber','gold']};
 const DATA=[
-{id:'vista',g:1,c:'mist',ico:'book',eyebrow:'Antes de empezar',title:'El libro de un vistazo',text:'La novela comienza después del rescate. Una joven conocida como Maya está frente al FBI y cuenta, a su manera, cómo era el lugar del que acaba de salir.',pts:['El presente es el interrogatorio con Victor Hanoverian y Brandon Eddison.','Los recuerdos reconstruyen el Jardín, la vida antes del secuestro y la relación con las otras Mariposas.','El misterio no es solo qué ocurrió: también quién es realmente la narradora.'],q:'¿Qué cambia cuando una historia de terror empieza después de que la protagonista ya sobrevivió?',pages:'Capítulo 1, inicio · pp. 6–10'},
+{id:'vista',g:1,c:'blue',ico:'book',eyebrow:'Antes de empezar',title:'El libro de un vistazo',text:'La novela comienza después del rescate. Una joven conocida como Maya está frente al FBI y cuenta, a su manera, cómo era el lugar del que acaba de salir.',pts:['El presente es el interrogatorio con Victor Hanoverian y Brandon Eddison.','Los recuerdos reconstruyen el Jardín, la vida antes del secuestro y la relación con las otras Mariposas.','El misterio no es solo qué ocurrió: también quién es realmente la narradora.'],q:'¿Qué cambia cuando una historia de terror empieza después de que la protagonista ya sobrevivió?',pages:'Capítulo 1, inicio · pp. 6–10'},
 
 {id:'maya',g:'2a',c:'lav',ico:'name',eyebrow:'Personaje central',title:'Maya / Inara · contar sin entregarlo todo',text:'Es la sobreviviente desde cuya voz conocemos el Jardín. Observadora, irónica y difícil de leer, decide qué contar, cuándo hacerlo y qué partes de sí misma conservar.',pts:['Las otras sobrevivientes la miran como una figura de referencia.','El nombre “Maya” pertenece al Jardín; “Inara” pertenece a la vida que ella había construido antes.','Su historia también pregunta si sobrevivir significa recuperar una identidad anterior o poder elegir una nueva.'],q:'¿Por qué controlar el propio relato puede ser una forma de recuperar poder?',pages:'Toda la novela; identidad desarrollada desde el capítulo 1'},
-{id:'jardinero',g:'2a',c:'wine',ico:'garden',eyebrow:'Personaje',title:'El Jardinero · posesión disfrazada de cuidado',text:'El hombre que creó el Jardín se considera protector y coleccionista. Su aparente ternura convive con un sistema basado en secuestro, abuso, control y muerte.',pts:['Su obsesión es preservar la belleza, no respetar la libertad.','Convierte a las jóvenes en “Mariposas” mediante nombres, reglas y tatuajes.','La contradicción entre afecto y violencia es una de las ideas más inquietantes de la novela.'],q:'¿Puede llamarse cuidado a algo que no permite que la otra persona diga que no?',pages:'A lo largo de la novela'},
-{id:'avery',g:'2a',c:'amber',ico:'fire',eyebrow:'Personaje',title:'Avery · la violencia sin disfraz',text:'El hijo mayor del Jardinero representa una forma de violencia mucho menos contenida. Su necesidad de dominio y de reconocimiento dentro de la familia vuelve cada vez más inestable el Jardín.',pts:['Busca miedo y control de una manera más abierta que su padre.','Su rivalidad con Desmond agrava el conflicto familiar.','Sus decisiones terminan acelerando el derrumbe del sistema que el Jardinero creía controlar.'],q:'¿Qué cambia cuando la violencia deja de esconderse detrás de una explicación “amorosa”?',pages:'Capítulos 1–3'},
+{id:'jardinero',g:'2a',c:'rose',ico:'garden',eyebrow:'Personaje',title:'El Jardinero · posesión disfrazada de cuidado',text:'El hombre que creó el Jardín se considera protector y coleccionista. Su aparente ternura convive con un sistema basado en secuestro, abuso, control y muerte.',pts:['Su obsesión es preservar la belleza, no respetar la libertad.','Convierte a las jóvenes en “Mariposas” mediante nombres, reglas y tatuajes.','La contradicción entre afecto y violencia es una de las ideas más inquietantes de la novela.'],q:'¿Puede llamarse cuidado a algo que no permite que la otra persona diga que no?',pages:'A lo largo de la novela'},
+{id:'avery',g:'2a',c:'yellow',ico:'fire',eyebrow:'Personaje',title:'Avery · la violencia sin disfraz',text:'El hijo mayor del Jardinero representa una forma de violencia mucho menos contenida. Su necesidad de dominio y de reconocimiento dentro de la familia vuelve cada vez más inestable el Jardín.',pts:['Busca miedo y control de una manera más abierta que su padre.','Su rivalidad con Desmond agrava el conflicto familiar.','Sus decisiones terminan acelerando el derrumbe del sistema que el Jardinero creía controlar.'],q:'¿Qué cambia cuando la violencia deja de esconderse detrás de una explicación “amorosa”?',pages:'Capítulos 1–3'},
 {id:'desmond',g:'2a',c:'green',ico:'scale',eyebrow:'Personaje',title:'Desmond · saber y decidir',text:'El hijo menor entra al Jardín creyendo primero la versión de su padre. Poco a poco descubre que la realidad no encaja con esa historia y queda obligado a decidir qué hacer con lo que sabe.',pts:['Quiere conservar la imagen de un padre admirable, y eso retrasa su reacción.','Maya lo confronta con la diferencia entre dudar y permanecer neutral.','Su conflicto muestra que descubrir la verdad no sirve de mucho si nunca se actúa sobre ella.'],q:'¿En qué momento no elegir también se convierte en una elección?',pages:'Capítulo 2 y tramo final'},
-{id:'keely',g:'2a',c:'mist',ico:'people',eyebrow:'Punto de quiebre',title:'Keely · la niña que cambia el límite',text:'Keely es una niña de doce años que llega al Jardín cerca del tramo final. Su llegada rompe incluso las reglas que el propio Jardinero había establecido y vuelve mucho más difícil fingir que ese mundo está bajo control.',pts:['Hasta entonces, el Jardinero evitaba secuestrar a menores de dieciséis años.','Maya y las otras Mariposas intentan proteger a Keely desde que aparece.','Su presencia obliga a varios personajes a decidir de qué lado están.'],q:'¿Por qué a veces una situación que ya era intolerable necesita un último hecho para que alguien finalmente actúe?',pages:'Final del capítulo 2 y capítulo 3'},
+{id:'keely',g:'2a',c:'blue',ico:'people',eyebrow:'Punto de quiebre',title:'Keely · la niña que cambia el límite',text:'Keely es una niña de doce años que llega al Jardín cerca del tramo final. Su llegada rompe incluso las reglas que el propio Jardinero había establecido y vuelve mucho más difícil fingir que ese mundo está bajo control.',pts:['Hasta entonces, el Jardinero evitaba secuestrar a menores de dieciséis años.','Maya y las otras Mariposas intentan proteger a Keely desde que aparece.','Su presencia obliga a varios personajes a decidir de qué lado están.'],q:'¿Por qué a veces una situación que ya era intolerable necesita un último hecho para que alguien finalmente actúe?',pages:'Final del capítulo 2 y capítulo 3'},
 
-{id:'lyonette',g:'2b',c:'sand',ico:'people',eyebrow:'Personaje',title:'Lyonette / Cassidy · enseñar a sobrevivir',text:'Es la primera guía de Maya dentro del Jardín. Conoce las reglas, acompaña a las recién llegadas y demuestra que cuidar a otras puede convertirse en una forma de resistencia.',pts:['Le enseña a Maya cómo moverse dentro de ese mundo sin fingir que es normal.','Su cercanía ayuda a Maya a entender la importancia de recordar a las otras chicas.','Su verdadero nombre, Cassidy Lawrence, representa la parte de ella que existía antes del Jardín.'],q:'¿Qué puede dar una persona a los demás cuando ella misma no tiene una salida?',pages:'Capítulo 1 · especialmente pp. 11–38'},
+{id:'lyonette',g:'2b',c:'peach',ico:'people',eyebrow:'Personaje',title:'Lyonette / Cassidy · enseñar a sobrevivir',text:'Es la primera guía de Maya dentro del Jardín. Conoce las reglas, acompaña a las recién llegadas y demuestra que cuidar a otras puede convertirse en una forma de resistencia.',pts:['Le enseña a Maya cómo moverse dentro de ese mundo sin fingir que es normal.','Su cercanía ayuda a Maya a entender la importancia de recordar a las otras chicas.','Su verdadero nombre, Cassidy Lawrence, representa la parte de ella que existía antes del Jardín.'],q:'¿Qué puede dar una persona a los demás cuando ella misma no tiene una salida?',pages:'Capítulo 1 · especialmente pp. 11–38'},
 {id:'bliss',g:'2b',c:'lav',ico:'butterfly',eyebrow:'Personaje',title:'Bliss · rabia, humor y lealtad',text:'Bliss rechaza las ilusiones del Jardinero y convierte el sarcasmo, la creatividad y la rabia en una forma de resistencia. Con Maya crea una amistad basada en la franqueza.',pts:['No intenta hacer bonito lo que está pasando.','Crea objetos de arcilla que conservan recuerdos y vínculos entre las chicas.','Su lealtad aparece tanto en los momentos cotidianos como cuando el Jardín entra en crisis.'],q:'¿Puede el humor ayudar a resistir sin minimizar el dolor?',pages:'Capítulos 1–3'},
-{id:'sophia',g:'2b',c:'mist',ico:'people',eyebrow:'Personaje',title:'Sophia · alguien que sí espera',text:'Antes del secuestro, Sophia es una de las mujeres con las que Inara comparte departamento en Nueva York. Su manera de cuidar contrasta con casi todas las familias que la protagonista ha conocido.',pts:['Es una figura maternal sin exigir que Inara se convierta en su hija.','Representa la posibilidad de que alguien se vaya y aun así conserve un lugar al que volver.','Su importancia crece al final y conecta el pasado de Inara con preguntas que el Jardín parecía haber dejado enterradas.'],q:'¿Qué diferencia hay entre poseer a alguien y hacerle saber que puede volver?',pages:'Vida antes del Jardín y capítulo 3'},
+{id:'sophia',g:'2b',c:'blue',ico:'people',eyebrow:'Personaje',title:'Sophia · alguien que sí espera',text:'Antes del secuestro, Sophia es una de las mujeres con las que Inara comparte departamento en Nueva York. Su manera de cuidar contrasta con casi todas las familias que la protagonista ha conocido.',pts:['Es una figura maternal sin exigir que Inara se convierta en su hija.','Representa la posibilidad de que alguien se vaya y aun así conserve un lugar al que volver.','Su importancia crece al final y conecta el pasado de Inara con preguntas que el Jardín parecía haber dejado enterradas.'],q:'¿Qué diferencia hay entre poseer a alguien y hacerle saber que puede volver?',pages:'Vida antes del Jardín y capítulo 3'},
 
 {id:'victor',g:'2c',c:'green',ico:'scale',eyebrow:'FBI',title:'Victor Hanoverian · escuchar lo que no se dice',text:'Victor conduce gran parte del interrogatorio. En vez de limitarse a exigir respuestas rápidas, aprende a seguir el modo en que Inara cuenta su historia y a prestar atención a lo que evita decir.',pts:['Su experiencia con jóvenes y sus propias hijas influye en la manera en que la trata.','Entiende que presionarla demasiado puede cerrar la única vía hacia la historia completa.','Funciona como puente entre el relato de Inara y la investigación oficial.'],q:'¿Escuchar bien significa aceptar todo lo que alguien dice o saber qué preguntar después?',pages:'Capítulos 1–3 · marco del interrogatorio'},
-{id:'eddison',g:'2c',c:'wine',ico:'people',eyebrow:'FBI',title:'Brandon Eddison · la necesidad de saber',text:'Eddison es más impaciente y confrontativo que Victor. Su historia personal con una hermana desaparecida hace que para él identificar a las víctimas y dar respuestas a sus familias sea algo profundamente personal.',pts:['Su reacción frente a Inara contrasta con la paciencia de Victor.','Defiende la idea de que saber qué ocurrió puede permitir a una familia comenzar a hacer duelo.','Su propia pérdida vuelve concreto uno de los grandes temas del libro: lo devastador que puede ser no saber.'],q:'¿La verdad siempre repara algo, o a veces su valor está simplemente en terminar con la incertidumbre?',pages:'Capítulos 1–3; conversación sobre su hermana en cap. 2'},
+{id:'eddison',g:'2c',c:'rose',ico:'people',eyebrow:'FBI',title:'Brandon Eddison · la necesidad de saber',text:'Eddison es más impaciente y confrontativo que Victor. Su historia personal con una hermana desaparecida hace que para él identificar a las víctimas y dar respuestas a sus familias sea algo profundamente personal.',pts:['Su reacción frente a Inara contrasta con la paciencia de Victor.','Defiende la idea de que saber qué ocurrió puede permitir a una familia comenzar a hacer duelo.','Su propia pérdida vuelve concreto uno de los grandes temas del libro: lo devastador que puede ser no saber.'],q:'¿La verdad siempre repara algo, o a veces su valor está simplemente en terminar con la incertidumbre?',pages:'Capítulos 1–3; conversación sobre su hermana en cap. 2'},
 
 {id:'inara',g:3,c:'lav',ico:'name',eyebrow:'Bloque 1',title:'El interrogatorio: Maya no quiere decir quién es',text:'Desde el inicio, la narradora controla la información. El FBI sabe que las otras jóvenes la escuchan y confían en ella, pero ni siquiera tiene certeza de su nombre.',pts:['“Maya” es un nombre recibido dentro del Jardín.','“Inara Morrissey” es la identidad que había construido antes del secuestro.','La tensión entre nombre, identidad e historia atraviesa toda la novela.'],q:'¿Puede una identidad elegida sentirse más verdadera que la que aparece en un documento?',pages:'Capítulo 1 · pp. 6–30'},
 {id:'llegada',g:3,c:'green',ico:'garden',eyebrow:'Bloque 2',title:'Bienvenida al Jardín',text:'Maya despierta en un lugar bellísimo y cerrado. Lyonette le explica poco a poco las reglas y la conduce al espacio que dará nombre a su cautiverio.',pts:['El contraste entre belleza y horror es deliberado: flores, agua, luz y mariposas conviven con el encierro.','Las nuevas chicas reciben ayuda de quienes ya aprendieron a sobrevivir allí.','El Jardín funciona como un mundo separado, con su propio lenguaje y sus propias reglas.'],q:'¿Por qué resulta más inquietante una prisión hermosa que una claramente hostil?',pages:'Capítulo 1 · pp. 11–16'},
-{id:'alas',g:3,c:'wine',ico:'butterfly',eyebrow:'Bloque 3',title:'Las alas y los nombres',text:'El Jardinero tatúa alas en la espalda de las jóvenes y les asigna un nombre. Lo que parece una obra de belleza funciona también como marca de posesión.',pts:['Las alas transforman a las cautivas en la “colección” que el Jardinero imagina poseer.','Los nombres nuevos pueden servir para borrar, sobrevivir o interpretar un papel.','Las chicas conservan en secreto fragmentos de la identidad que tenían antes.'],q:'¿Qué diferencia hay entre transformar a alguien y definirlo?',pages:'Capítulo 1 · pp. 14–30'},
-{id:'reglas',g:3,c:'sand',ico:'glass',eyebrow:'Bloque 4',title:'Las reglas del Jardín',text:'El cautiverio tiene rutinas, cámaras, horarios, privilegios y castigos. Nada de eso convierte el lugar en seguro: solo lo vuelve predecible.',pts:['La vida cotidiana puede parecer organizada y aun así estar construida sobre la violencia.','Las jóvenes aprenden conductas de generaciones anteriores.','Cumplir 21 años, enfermar gravemente o “no adaptarse” puede significar la muerte.'],q:'¿Por qué la previsibilidad puede convertirse en una forma de supervivencia incluso dentro de algo terrible?',pages:'Capítulos 1–2 · especialmente pp. 54–64'},
-{id:'antes',g:3,c:'mist',ico:'book',eyebrow:'Bloque 5',title:'Antes del Jardín también había una historia',text:'El interrogatorio obliga a Inara a hablar de su infancia, Nueva York y el departamento que compartía con otras jóvenes. Allí aparece por primera vez la idea de un hogar elegido.',pts:['Su pasado ayuda a entender por qué se volvió tan autosuficiente y desconfiada.','El departamento y el trabajo le ofrecen una forma de pertenencia que nunca tuvo en casa.','La novela contrapone la familia biológica con las personas que deciden cuidarse entre sí.'],q:'¿Cuándo un lugar se convierte en hogar: cuando vives ahí o cuando alguien espera que regreses?',pages:'Capítulo 1 · pp. 17–49'},
+{id:'alas',g:3,c:'rose',ico:'butterfly',eyebrow:'Bloque 3',title:'Las alas y los nombres',text:'El Jardinero tatúa alas en la espalda de las jóvenes y les asigna un nombre. Lo que parece una obra de belleza funciona también como marca de posesión.',pts:['Las alas transforman a las cautivas en la “colección” que el Jardinero imagina poseer.','Los nombres nuevos pueden servir para borrar, sobrevivir o interpretar un papel.','Las chicas conservan en secreto fragmentos de la identidad que tenían antes.'],q:'¿Qué diferencia hay entre transformar a alguien y definirlo?',pages:'Capítulo 1 · pp. 14–30'},
+{id:'reglas',g:3,c:'peach',ico:'glass',eyebrow:'Bloque 4',title:'Las reglas del Jardín',text:'El cautiverio tiene rutinas, cámaras, horarios, privilegios y castigos. Nada de eso convierte el lugar en seguro: solo lo vuelve predecible.',pts:['La vida cotidiana puede parecer organizada y aun así estar construida sobre la violencia.','Las jóvenes aprenden conductas de generaciones anteriores.','Cumplir 21 años, enfermar gravemente o “no adaptarse” puede significar la muerte.'],q:'¿Por qué la previsibilidad puede convertirse en una forma de supervivencia incluso dentro de algo terrible?',pages:'Capítulos 1–2 · especialmente pp. 54–64'},
+{id:'antes',g:3,c:'blue',ico:'book',eyebrow:'Bloque 5',title:'Antes del Jardín también había una historia',text:'El interrogatorio obliga a Inara a hablar de su infancia, Nueva York y el departamento que compartía con otras jóvenes. Allí aparece por primera vez la idea de un hogar elegido.',pts:['Su pasado ayuda a entender por qué se volvió tan autosuficiente y desconfiada.','El departamento y el trabajo le ofrecen una forma de pertenencia que nunca tuvo en casa.','La novela contrapone la familia biológica con las personas que deciden cuidarse entre sí.'],q:'¿Cuándo un lugar se convierte en hogar: cuando vives ahí o cuando alguien espera que regreses?',pages:'Capítulo 1 · pp. 17–49'},
 {id:'rutina',g:3,c:'green',ico:'people',eyebrow:'Bloque 6',title:'Sobrevivir juntas',text:'Gran parte de la vida en el Jardín es espera: comidas, lecturas, juegos, conversaciones, miedo y pérdidas. Las chicas crean formas de acompañarse.',pts:['La cueva detrás de la cascada se vuelve un espacio de conversación y relativa privacidad.','Leer, correr, bailar, dibujar, peinar y crear objetos ayudan a conservar algo propio.','Conocer a las demás también significa aceptar que perderlas dolerá.'],q:'¿Qué pequeñas actividades pueden proteger una parte de la identidad cuando casi todo lo demás ha sido controlado?',pages:'Capítulo 1 · pp. 60–66; capítulo 2'},
-{id:'ruptura',g:3,c:'amber',ico:'fire',eyebrow:'Bloque 7',title:'Cuando el Jardín deja de sostenerse',text:'Avery secuestra a Keely, una niña de doce años, y la lleva al Jardín. Su llegada rompe incluso las reglas internas del lugar. Sumada a la rivalidad entre Avery y Desmond, convierte una situación ya violenta en un punto de no retorno.',pts:['Desmond ya conocía gran parte de la verdad, pero hasta entonces no había sido capaz de romper con su padre.','Avery, el hijo mayor del Jardinero, lleva su necesidad de control cada vez más lejos y pone en peligro a todos.','El rescate llega en medio de una confrontación familiar, disparos y un incendio que destruye el equilibrio del Jardín.'],q:'¿Saber que algo está mal obliga también a actuar?',pages:'Final del capítulo 2 y capítulo 3 · pp. 160–196'},
+{id:'ruptura',g:3,c:'yellow',ico:'fire',eyebrow:'Bloque 7',title:'Cuando el Jardín deja de sostenerse',text:'Avery secuestra a Keely, una niña de doce años, y la lleva al Jardín. Su llegada rompe incluso las reglas internas del lugar. Sumada a la rivalidad entre Avery y Desmond, convierte una situación ya violenta en un punto de no retorno.',pts:['Desmond ya conocía gran parte de la verdad, pero hasta entonces no había sido capaz de romper con su padre.','Avery, el hijo mayor del Jardinero, lleva su necesidad de control cada vez más lejos y pone en peligro a todos.','El rescate llega en medio de una confrontación familiar, disparos y un incendio que destruye el equilibrio del Jardín.'],q:'¿Saber que algo está mal obliga también a actuar?',pages:'Final del capítulo 2 y capítulo 3 · pp. 160–196'},
 
 {id:'familia',g:4,c:'green',ico:'people',eyebrow:'Después del rescate',title:'Familia es quien espera que vuelvas',text:'Al salir, las sobrevivientes deben reencontrarse con personas, nombres y vidas que ya no encajan de la misma forma. Para Inara, la pregunta central es quién sigue esperando por ella.',pts:['Las otras Mariposas son compañeras de cautiverio, pero también familia.','Sophia y las amigas de Nueva York conservaron sus cosas y un lugar para ella.','El final reabre la posibilidad de pertenecer sin ser poseída.'],q:'¿Qué diferencia hay entre que alguien te retenga y que alguien te espere?',pages:'Capítulo 3 · pp. 181–206'},
-{id:'exterior',g:4,c:'mist',ico:'door',eyebrow:'Después del rescate',title:'El Exterior tampoco es sencillo',text:'La libertad física no resuelve de inmediato lo que ocurrió. La novela deja abiertas las heridas del duelo, la identidad, el juicio y la adaptación.',pts:['Algunas familias recuperan a sus hijas; otras reciben por fin respuestas sobre quienes murieron.','Las sobrevivientes siguen usando los nombres del Jardín porque abandonar una identidad también requiere tiempo.','El rescate inicia otro proceso: no lo termina.'],q:'¿Por qué “estar a salvo” y “estar bien” no significan lo mismo?',pages:'Capítulo 3 · pp. 181–206'},
+{id:'exterior',g:4,c:'blue',ico:'door',eyebrow:'Después del rescate',title:'El Exterior tampoco es sencillo',text:'La libertad física no resuelve de inmediato lo que ocurrió. La novela deja abiertas las heridas del duelo, la identidad, el juicio y la adaptación.',pts:['Algunas familias recuperan a sus hijas; otras reciben por fin respuestas sobre quienes murieron.','Las sobrevivientes siguen usando los nombres del Jardín porque abandonar una identidad también requiere tiempo.','El rescate inicia otro proceso: no lo termina.'],q:'¿Por qué “estar a salvo” y “estar bien” no significan lo mismo?',pages:'Capítulo 3 · pp. 181–206'},
 
 {id:'identidad',g:5,c:'lav',ico:'name',eyebrow:'Tema',title:'Identidad · quién te llama y quién eliges ser',text:'Maya e Inara no son simples alias intercambiables. Cada nombre pertenece a una etapa distinta de su vida y a una relación diferente con el control y la elección.',pts:['El Jardinero nombra para poseer.','Inara es una identidad construida por ella antes del cautiverio.','Al final, la novela agrega una capa más a esta pregunta. La encontrarás en «El final explicado».'],q:'¿Es posible que dos nombres distintos sean verdaderos de maneras diferentes?',pages:'Tema transversal; cierre en pp. 205–206'},
-{id:'belleza',g:5,c:'wine',ico:'butterfly',eyebrow:'Tema',title:'Belleza convertida en posesión',text:'El Jardín existe porque el captor confunde preservar algo bello con tener derecho sobre ello. Las mariposas son la metáfora central de esa contradicción.',pts:['Una mariposa real puede volar; una “Mariposa” del Jardín es retenida.','El tatuaje convierte el cuerpo de cada joven en parte de la colección.','Preservar sin consentimiento no es admirar: es controlar.'],q:'¿Qué cambia cuando dejamos de mirar a una persona como alguien y empezamos a mirarla como algo?',pages:'Tema transversal'},
-{id:'memoria',g:5,c:'sand',ico:'book',eyebrow:'Tema',title:'Recordar también duele',text:'Los personajes conservan nombres, historias, dibujos, libros y pequeños objetos para no desaparecer dentro del Jardín. Al mismo tiempo, olvidar algunas cosas puede ser una estrategia de supervivencia.',pts:['Lyonette pide que no olviden su nombre real.','Bliss crea objetos; otras chicas dibujan o repiten datos de sus familias.','Inara se protege evitando aferrarse a ciertas personas y recuerdos.'],q:'¿Recordar siempre ayuda, o a veces también puede lastimar?',pages:'Tema transversal'},
-{id:'trauma',g:5,c:'amber',ico:'door',eyebrow:'Tema',title:'Sobrevivir no es el final de la historia',text:'El cierre evita presentar el rescate como una solución mágica. Seguir viva permite comenzar, pero no borra lo sucedido.',pts:['Quedan pérdidas que no pueden repararse.','Las sobrevivientes necesitarán reconstruir relaciones, identidades y rutinas.','La justicia puede impedir que el daño continúe, pero no puede deshacerlo.'],q:'¿Qué puede significar “seguir adelante” cuando no existe una forma de volver a ser quien eras antes?',pages:'Capítulo 3 · especialmente pp. 181–206'}
+{id:'belleza',g:5,c:'rose',ico:'butterfly',eyebrow:'Tema',title:'Belleza convertida en posesión',text:'El Jardín existe porque el captor confunde preservar algo bello con tener derecho sobre ello. Las mariposas son la metáfora central de esa contradicción.',pts:['Una mariposa real puede volar; una “Mariposa” del Jardín es retenida.','El tatuaje convierte el cuerpo de cada joven en parte de la colección.','Preservar sin consentimiento no es admirar: es controlar.'],q:'¿Qué cambia cuando dejamos de mirar a una persona como alguien y empezamos a mirarla como algo?',pages:'Tema transversal'},
+{id:'memoria',g:5,c:'peach',ico:'book',eyebrow:'Tema',title:'Recordar también duele',text:'Los personajes conservan nombres, historias, dibujos, libros y pequeños objetos para no desaparecer dentro del Jardín. Al mismo tiempo, olvidar algunas cosas puede ser una estrategia de supervivencia.',pts:['Lyonette pide que no olviden su nombre real.','Bliss crea objetos; otras chicas dibujan o repiten datos de sus familias.','Inara se protege evitando aferrarse a ciertas personas y recuerdos.'],q:'¿Recordar siempre ayuda, o a veces también puede lastimar?',pages:'Tema transversal'},
+{id:'trauma',g:5,c:'yellow',ico:'door',eyebrow:'Tema',title:'Sobrevivir no es el final de la historia',text:'El cierre evita presentar el rescate como una solución mágica. Seguir viva permite comenzar, pero no borra lo sucedido.',pts:['Quedan pérdidas que no pueden repararse.','Las sobrevivientes necesitarán reconstruir relaciones, identidades y rutinas.','La justicia puede impedir que el daño continúe, pero no puede deshacerlo.'],q:'¿Qué puede significar “seguir adelante” cuando no existe una forma de volver a ser quien eras antes?',pages:'Capítulo 3 · especialmente pp. 181–206'}
 ];
 const QUOTES=['¿Un nombre dice quién eres… o solo cómo te llaman?','¿Qué convierte a unas compañeras de cautiverio en familia?','¿Qué diferencia hay entre recordar a alguien y poseerlo?','¿La libertad empieza cuando se abre una puerta o cuando puedes elegir?','¿Qué hace más daño: no saber la verdad o saberla demasiado tarde?'];
+
 const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}};
+
+/* Mapa */
 let done=new Set(store.get('jardin-done-v1',[]));
-const dlg=document.getElementById('dlg'); let cur=0;
-function vars(d){const [t,e]=C[d.c]||C.green;return [`var(--${t})`,`var(--${e})`]}
 DATA.forEach((d,i)=>{
- const b=document.createElement('button');b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;const [t,e]=vars(d);b.style.setProperty('--tint',t);b.style.setProperty('--edge',e);
- const shown=d.pts.slice(0,2);
- b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div><p><b>${d.text}</b></p><ul>${shown.map(p=>`<li>${p}</li>`).join('')}</ul><div class="more"><span>${d.pts.length>2?`+${d.pts.length-2} idea · `:''}Explorar →</span><span class="done">✓ leído</span></div>`;
- b.addEventListener('click',()=>openCard(i));
- const g=document.getElementById('g-'+d.g);const quote=g.querySelector('.pullquote');if(quote)g.insertBefore(b,quote);else g.appendChild(b);
+  const b=document.createElement('button');
+  b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
+  b.style.setProperty('--tint',`var(--c-${d.c})`);b.style.setProperty('--edge',`var(--e-${d.c})`);
+  const shown=d.pts.slice(0,2);
+  b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
+    ${d.text?`<p><b>${d.text}</b></p>`:''}
+    <ul>${shown.map(p=>`<li>${p}</li>`).join('')}</ul>
+    <div class="more"><span>${d.pts.length>2?`+${d.pts.length-2} idea · `:''}Explorar →</span><span class="done-badge">✓ Explorado</span></div>`;
+  b.addEventListener('click',()=>openCard(i));
+  const g=document.getElementById('g-'+d.g);const q=g.querySelector('.quote');
+  if(q)g.insertBefore(b,q);else g.appendChild(b);
 });
-function refresh(){DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));const n=DATA.filter(d=>done.has(d.id)).length;document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;document.getElementById('fill').style.width=(n/DATA.length*100)+'%';document.getElementById('track').setAttribute('aria-valuemax',DATA.length);document.getElementById('track').setAttribute('aria-valuenow',n)}
-function openCard(i){cur=(i+DATA.length)%DATA.length;const d=DATA[cur];const [t,e]=vars(d);dlg.style.setProperty('--tint',t);dlg.style.setProperty('--edge',e);document.getElementById('dlg-ico').innerHTML=I[d.ico];document.getElementById('dlg-eyebrow').textContent=d.eyebrow;document.getElementById('dlg-title').textContent=d.title;document.getElementById('dlg-list').innerHTML=[d.text,...d.pts].map(x=>`<li><div>${x}</div></li>`).join('');document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para pensar</div><div>${d.q}</div>`;document.getElementById('dlg-source').textContent='Ubicación en el libro: '+d.pages+'.';if(!dlg.open)dlg.showModal();done.add(d.id);store.set('jardin-done-v1',[...done]);refresh();dlg.querySelector('.dlg-body').scrollTop=0}
-document.getElementById('dlg-x').onclick=()=>dlg.close();document.getElementById('dlg-next').onclick=()=>openCard(cur+1);document.getElementById('dlg-prev').onclick=()=>openCard(cur-1);dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')openCard(cur+1);if(e.key==='ArrowLeft')openCard(cur-1)});
-document.getElementById('reset').onclick=()=>{done.clear();store.set('jardin-done-v1',[]);refresh()};refresh();
-let qi=0;document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
-const sp=document.getElementById('spoilers'),spb=document.getElementById('spoiler-btn');spb.onclick=()=>{const o=sp.classList.toggle('open');spb.setAttribute('aria-expanded',o);spb.textContent=o?'Ocultar spoilers':'Mostrar spoilers'};
-const hint=document.getElementById('saved-hint');['j1','j2','j3'].forEach(id=>{const t=document.getElementById(id);t.value=store.get('jardin-'+id,'');t.addEventListener('input',()=>{hint.textContent=store.set('jardin-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'})});
+
+function refreshProgress(){
+  DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
+  const n=DATA.filter(d=>done.has(d.id)).length;
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
+  document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;
+  document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
+  document.getElementById('track').setAttribute('aria-valuenow',n);
+}
+refreshProgress();
+document.getElementById('reset').onclick=()=>{done.clear();store.set('jardin-done-v1',[]);refreshProgress()};
+
+/* Ventana */
+const dlg=document.getElementById('dlg'); let cur=0;
+function openCard(i){
+  cur=(i+DATA.length)%DATA.length; const d=DATA[cur];
+  dlg.style.setProperty('--tint',`var(--c-${d.c})`);dlg.style.setProperty('--edge',`var(--e-${d.c})`);
+  document.getElementById('dlg-ico').innerHTML=I[d.ico];
+  document.getElementById('dlg-eyebrow').textContent=d.eyebrow;
+  document.getElementById('dlg-title').textContent=d.title;
+  const all=d.text?[d.text,...d.pts]:d.pts;
+  document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="reading-point">${p}</div></li>`).join('');
+  document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para pensar</div><div>${d.q}</div>`;
+  document.getElementById('dlg-source').textContent=d.pages?'Ubicación en el libro: '+d.pages+'.':'';
+  if(!dlg.open)dlg.showModal();
+  dlg.querySelector('.dlg-body').scrollTop=0;
+  done.add(d.id);store.set('jardin-done-v1',[...done]);refreshProgress();
+}
+document.getElementById('dlg-x').onclick=()=>dlg.close();
+document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
+document.getElementById('dlg-prev').onclick=()=>openCard(cur-1);
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')openCard(cur+1);if(e.key==='ArrowLeft')openCard(cur-1)});
+
+/* Preguntas */
+let qi=0;
+document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
+
+/* Final explicado */
+const sp=document.getElementById('spoilers'),spb=document.getElementById('spoiler-btn');
+spb.onclick=()=>{const o=sp.classList.toggle('open');spb.setAttribute('aria-expanded',o);spb.textContent=o?'Ocultar spoilers':'Mostrar spoilers'};
+
+/* Diario */
+const hint=document.getElementById('saved-hint');
+['j1','j2','j3'].forEach(id=>{
+  const t=document.getElementById(id);t.value=store.get('jardin-'+id,'');
+  t.addEventListener('input',()=>{hint.textContent=store.set('jardin-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
+});
 </script>
+
 <script>
 document.addEventListener("click",e=>{document.querySelectorAll(".mg-menu[open]").forEach(d=>{if(!d.contains(e.target))d.removeAttribute("open")})});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".mg-menu[open]").forEach(d=>{d.removeAttribute("open");d.querySelector("summary").focus()})});
+</script>
+<script>
+/* Marginalia: trazos a mano y aparición suave */
+(()=>{
+  const P={ul:'M2 88 C 20 80, 35 96, 52 86 S 82 80, 98 90',ci:'M52 4 C 82 2, 99 22, 97 48 C 95 80, 70 98, 44 96 C 16 94, 2 74, 3 48 C 4 20, 26 2, 60 8'};
+  // Subraya la última palabra de cada título de sección
+  document.querySelectorAll('.block-head h2').forEach(h=>{
+    const n=[...h.childNodes].reverse().find(x=>x.nodeType===3&&x.textContent.trim());
+    if(!n) return;
+    const m=n.textContent.match(/^(.*?)(\S+)(\s*)$/s); if(!m) return;
+    const s=document.createElement('span'); s.className='mark ul'; s.textContent=m[2];
+    n.replaceWith(document.createTextNode(m[1]),s,document.createTextNode(m[3]));
+  });
+  document.querySelectorAll('.mark').forEach(m=>{
+    const t=m.classList.contains('ci')?'ci':'ul';
+    m.insertAdjacentHTML('beforeend',`<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${P[t]}" pathLength="1" vector-effect="non-scaling-stroke"/></svg>`);
+  });
+  const els=[...document.querySelectorAll('.hero,.guide-note,.map .group,section.block,footer,.mg-pager')];
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(e=>e.classList.add('in'));return}
+  els.forEach(e=>e.classList.add('rv'));
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(e=>io.observe(e));
+  // Logo: una letra cambia de vez en cuando al pasar el mouse
+  const b=document.querySelector('.mg-brand'); if(!b) return;
+  const L=[...b.children], S=['s0','s1','s2','s3','s4','s6']; let tm;
+  b.addEventListener('mouseenter',()=>{clearInterval(tm);tm=setInterval(()=>{const l=L[Math.floor(Math.random()*L.length)];l.className=S[Math.floor(Math.random()*S.length)];l.style.transform=`rotate(${(Math.random()*6-3).toFixed(1)}deg)`},260)});
+  b.addEventListener('mouseleave',()=>clearInterval(tm));
+})();
 </script></script>
 <script id="mg-pdf-export-script">
 /* Marginalia · prepara una hoja limpia y abre Guardar como PDF */
