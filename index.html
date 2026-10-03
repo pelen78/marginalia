@@ -557,6 +557,7 @@ const BOOKS = [
     blurb:"Pequeños cambios, resultados extraordinarios: cómo construir buenos hábitos y romper los malos.", motto:"Pequeño, fácil, diario",
     q:"¿Qué hábito pequeño podrías empezar hoy?",
     cover:{bg:"#e6ddcd", ink:"#4a4038", art:"leaf"} },
+  {"id": "th", "file": "tiny-habits.html", "title": "Tiny Habits", "full": "Tiny Habits", "author": "BJ Fogg", "cat": "Hábitos", "blurb": "Ocho capítulos para empezar con acciones pequeñas, unirlas a tu rutina y reconocer cada avance.", "motto": "Simplifica, conecta, celebra", "q": "¿Qué cambio sería más fácil si empezaras más pequeño?", "cover": {"bg": "#dce2ce", "ink": "#354b3b", "art": "sprout"}},
   { id:"amigos", file:"como-ganar-amigos.html", title:"Cómo ganar amigos e influir sobre las personas", full:"Cómo ganar amigos e influir sobre las personas", author:"Dale Carnegie", cat:"Relaciones",
     blurb:"El clásico sobre escuchar de verdad, reconocer a los demás y tratar a la gente con respeto.", motto:"Escucha, sonríe, reconoce",
     q:"¿A quién podrías escuchar mejor hoy?",
@@ -592,6 +593,14 @@ function wrapTitle(t, max){
 function coverSVG(b){
   const {bg,ink,art}=b.cover;
   const arts={
+    sprout:`<path d="M35 233h130" stroke="#859478" stroke-width="2"/>
+      <ellipse cx="100" cy="222" rx="43" ry="11" fill="#b6c3a3"/>
+      <path d="M100 220V159" stroke="#4d6a4d" stroke-width="3" fill="none"/>
+      <path d="M100 183c-29-1-44-18-45-36 26-2 45 13 45 36z" fill="#7f9568"/>
+      <path d="M100 165c29-1 44-18 45-37-25-1-44 14-45 37z" fill="#58734d"/>
+      <path d="M100 159c-7-13-4-26 1-36 5 13 5 25-1 36z" fill="#94a67e"/>
+      <circle cx="57" cy="235" r="3" fill="#b68d62"/><circle cx="72" cy="243" r="4" fill="#b68d62"/><circle cx="90" cy="247" r="5" fill="#b68d62"/>`,
+
     kempis:`<path d="M55 238V132a45 45 0 0 1 90 0v106" fill="#9b7957"/><path d="M67 238V132a33 33 0 0 1 66 0v106" fill="#e2cba4"/><path d="M100 115v81M80 140h40" fill="none" stroke="#66513e" stroke-width="5"/><path d="M43 238h114M35 247h130" stroke="#c5a67b" stroke-width="3"/><path d="M77 214q12-7 23 0 12-7 23 0v18q-12-6-23 0-11-6-23 0z" fill="#f4e7cc"/><path d="M100 214v18" stroke="#9b7957"/>`,
     emotion:`<path d="M99 100c-20-28-57-4-44 21-26 13-14 52 9 51-4 29 32 38 36 15V99m1 0c20-27 57-3 44 22 26 13 14 52-9 51 4 29-32 38-35 15" fill="none" stroke="#537969" stroke-width="3"/><path d="M70 129q18 0 20 17M127 147q-18 0-16 18M71 167q8-13 17-11" fill="none" stroke="#8b5f4d" stroke-width="2.5"/>`,
     heart:`<path d="M100 212s-66-41-66-83c0-38 48-43 66-13 18-30 66-25 66 13 0 42-66 83-66 83z" fill="#ba7c72"/><path d="M100 118v87M71 131q-15 12-7 30" fill="none" stroke="#f1dace" stroke-width="2.5"/>`,
