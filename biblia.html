@@ -23,7 +23,8 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
 .dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
 </style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<title>La Biblia · Guía de lectura y reflexiones</title>
+<title>La Biblia · Resúmenes por capítulo</title>
+<meta name="description" content="Los 73 libros de la Biblia católica resumidos capítulo por capítulo, con lenguaje sencillo y enlaces al texto bíblico.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
@@ -523,6 +524,22 @@ dialog{border-radius:16px}
 }
 </style>
 
+<link rel="stylesheet" href="reading-cards.css">
+<style>
+.book-chapter-count{font-family:var(--f-mono);font-size:.72rem!important;color:var(--muted);margin-top:auto!important;padding-top:12px}
+.chapter-toolbar{flex:0 0 auto;display:grid;gap:7px;padding:14px 26px;border-bottom:1px solid var(--line);background:var(--paper)}
+.chapter-toolbar label{font-size:.82rem;color:var(--muted)}
+.chapter-toolbar select{width:100%;min-width:0;min-height:44px;border:1px solid var(--line);border-radius:10px;padding:10px 32px 10px 12px;background:var(--bg);color:var(--ink);font:inherit;font-size:1rem}
+.chapter-toolbar select:focus-visible{outline:2px solid var(--edge);outline-offset:3px}
+.chapter-kicker{font-family:var(--f-mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 12px}
+#chapter-title{font-family:var(--f-display);font-size:1.5rem;line-height:1.25;margin:0 0 14px;font-weight:600}
+#chapter-summary{font-size:1.08rem;line-height:1.85;margin:0 0 22px}
+.chapter-note{font-size:.84rem;line-height:1.6;color:var(--muted);padding:12px 14px;border-left:3px solid var(--edge);background:var(--bg);margin:16px 0}
+#dlg .btn:disabled{opacity:.45;cursor:default;transform:none;box-shadow:none}
+@media(max-width:600px){.chapter-toolbar{padding:12px 16px}.chapter-toolbar select{font-size:1rem}#chapter-title{font-size:1.25rem}#chapter-summary{font-size:1rem;line-height:1.75}}
+@media(max-height:480px){#dlg .dlg-head{padding-block:10px}#dlg .dlg-head .ico{display:none}.chapter-toolbar{padding-block:7px;grid-template-columns:auto minmax(0,1fr);align-items:center}#dlg .dlg-foot{padding-block:8px}}
+
+</style>
 </head>
 <body>
 <nav class="mg-nav" aria-label="Biblioteca">
@@ -540,14 +557,14 @@ dialog{border-radius:16px}
   <header class="hero">
     <h1>Guía de <span class="mark ul">lectura</span></h1>
     <div class="sub"><cite>La Biblia</cite> · Guía católica de lectura</div>
-    <div class="author">73 LIBROS · PASO A PASO</div>
+    <div class="author">73 LIBROS · CAPÍTULO POR CAPÍTULO</div>
     <div style="margin-top:20px"><a class="btn" href="#map" style="display:inline-block;text-decoration:none">Por dónde empezar</a> <a class="btn ghost" href="#recorrido" style="display:inline-block;text-decoration:none">Buscar un libro</a></div>
   </header>
 
 
   <aside class="guide-note" aria-label="Acerca de esta guía">
     <strong>Una invitación a leer con respeto</strong>
-    <p>Una guía para saber por dónde empezar y qué encontrarás en cada uno de los 73 libros de la Biblia católica. Abre una sección, elige un libro y léelo a tu ritmo. Los resúmenes y las reflexiones son de Marginalia; no sustituyen la Sagrada Escritura ni el acompañamiento de tu comunidad de fe.</p>
+    <p>Los 73 libros de la Biblia católica, resumidos capítulo por capítulo con palabras sencillas. Elige un libro, consulta su vista general y usa el selector para pasar a un capítulo. Cada resumen enlaza el texto bíblico completo. Las reflexiones personales aparecen por separado; esta guía acompaña la lectura de la Sagrada Escritura.</p>
   </aside>
 
   <div class="bar" aria-live="polite">
@@ -559,7 +576,7 @@ dialog{border-radius:16px}
   <div class="map" id="map">
     <section class="group"><h2 class="g-title"><span class="g-n">01</span>Antes de abrir tu Biblia</h2><p class="section-intro">Seis ayudas para comenzar. Abre una tarjeta para leer la explicación completa.</p><div class="g-grid" id="g-1"></div></section>
     <section class="book-directory" id="recorrido" aria-labelledby="directory-title">
-      <div class="directory-head"><div><div class="eyebrow">EL RECORRIDO COMPLETO</div><h2 id="directory-title">Un libro a la vez</h2></div><p>Un resumen, sus partes principales<br>y una pregunta para acompañarte.</p></div>
+      <div class="directory-head"><div><div class="eyebrow">EL RECORRIDO COMPLETO</div><h2 id="directory-title">Un libro a la vez</h2></div><p>Una vista general y resúmenes sencillos<br>de cada capítulo, a tu ritmo.</p></div>
       <label for="book-search" class="search-label">Encuentra un libro</label>
       <div class="search-row"><input id="book-search" type="search" placeholder="Prueba con Génesis, Tobías, Juan…" autocomplete="off" aria-controls="book-sections"><button class="chip" id="clear-search" type="button">Limpiar</button></div>
       <div class="directory-tools"><p id="search-status" role="status">46 libros del Antiguo Testamento · 27 del Nuevo</p><button class="chip" id="expand-books" type="button">Abrir todas las secciones</button></div>
@@ -674,7 +691,7 @@ dialog{border-radius:16px}
 </nav>
 
   <footer>
-    <div class="source-note"><strong>Texto bíblico de consulta:</strong> <a href="https://www.vatican.va/archive/ESL0506/_INDEX.HTM" target="_blank" rel="noopener noreferrer"><cite>El libro del Pueblo de Dios</cite>, edición católica en español disponible en el sitio del Vaticano</a>. Cada ficha enlaza el libro y una lectura inicial. Ester y Daniel incluyen enlaces a sus secciones griegas; Baruc, a la Carta de Jeremías. Las divisiones propuestas son orientativas y la numeración puede variar entre ediciones.<br><strong>Orientación católica:</strong> <a href="https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html" target="_blank" rel="noopener noreferrer">Catecismo de la Iglesia Católica, 101–141</a>. Para Tobías, Baruc, Eclesiástico y 1 Macabeos se consultaron también las <a href="https://bible.usccb.org/bible" target="_blank" rel="noopener noreferrer">introducciones bíblicas de la USCCB (en inglés)</a>. Esta es una guía independiente; no es una publicación oficial de la Iglesia. Los resúmenes y preguntas están redactados con palabras propias.</div>
+    <div class="source-note"><strong>Texto bíblico de consulta:</strong> <a href="https://www.vatican.va/archive/ESL0506/_INDEX.HTM" target="_blank" rel="noopener noreferrer"><cite>El libro del Pueblo de Dios</cite>, edición católica en español disponible en el sitio del Vaticano</a>. Cada resumen enlaza su capítulo completo. Se sigue la numeración de esta edición: Joel tiene 4 capítulos y Malaquías, 3; los salmos usan la numeración hebrea. Las adiciones griegas de Ester y Daniel tienen entradas propias. La Carta de Jeremías se presenta como Baruc 6. Las divisiones en capítulos pueden variar en otras Biblias.<br><strong>Orientación católica:</strong> <a href="https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html" target="_blank" rel="noopener noreferrer">Catecismo de la Iglesia Católica, 101–141</a>. Para Tobías, Baruc, Eclesiástico y 1 Macabeos se consultaron también las <a href="https://bible.usccb.org/bible" target="_blank" rel="noopener noreferrer">introducciones bíblicas de la USCCB (en inglés)</a>. Para preparar los resúmenes se usaron también el texto y los sumarios de la <a href="https://www.gutenberg.org/ebooks/1581" target="_blank" rel="noopener noreferrer">Biblia Douay-Rheims, revisión de Challoner, de dominio público</a>; su numeración se adaptó a la edición enlazada. Esta es una guía independiente; no es una publicación oficial de la Iglesia. Los resúmenes breves presentan el tema principal de cada capítulo y no sustituyen su lectura completa. Las preguntas de reflexión son propuestas de Marginalia.</div>
     <div class="guide-credits">
     <p class="credits-author"><strong>Guías elaboradas por:</strong> Marginalia</p>
     <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
@@ -689,13 +706,29 @@ dialog{border-radius:16px}
     <div style="min-width:0"><div id="dlg-eyebrow" style="font-family:var(--f-display);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--edge)"></div><h3 id="dlg-title"></h3></div>
     <button class="x" id="dlg-x" type="button" aria-label="Cerrar">×</button>
   </div>
-  <div class="dlg-body"><p class="reading-source" id="dlg-source"></p><ol id="dlg-list"></ol><div class="reflect" id="dlg-reflect"></div><p class="dlg-signature">Marginalia · mymarginalia.net</p></div>
+  <div class="chapter-toolbar" id="chapter-toolbar" hidden>
+    <label for="chapter-select">Elige una lectura</label>
+    <select id="chapter-select" aria-controls="chapter-reading dlg-list dlg-reflect"></select>
+  </div>
+  <div class="dlg-body">
+    <section id="chapter-reading" aria-live="polite" hidden>
+      <p class="chapter-kicker">Resumen en palabras sencillas</p>
+      <h4 id="chapter-title"></h4>
+      <p id="chapter-summary"></p>
+    </section>
+    <p class="reading-source" id="dlg-source"></p>
+    <p class="chapter-note" id="chapter-note" hidden></p>
+    <ol id="dlg-list"></ol>
+    <div class="reflect" id="dlg-reflect"></div>
+    <p class="dlg-signature">Marginalia · mymarginalia.net</p>
+  </div>
   <div class="dlg-foot">
     <button class="btn ghost" id="dlg-prev" type="button">← Anterior</button>
     <button class="btn" id="dlg-next" type="button">Siguiente →</button>
   </div>
 </dialog>
 
+<script src="biblia-capitulos.js"></script>
 <script>
 const I = {
   book:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 12c-5-4-12-4-18-2v28c6-2 13-2 18 2 5-4 12-4 18-2V10c-6-2-13-2-18 2z"/><path d="M24 12v28"/></svg>',
@@ -723,7 +756,7 @@ const DATA = [
       "<b>Antiguo Testamento:</b> reúne la historia, la oración y la sabiduría de Israel. Conserva su valor para la fe cristiana; no es una parte que deba descartarse.",
       "<b>Nuevo Testamento:</b> presenta a Jesucristo, las primeras comunidades y su esperanza. Los cuatro Evangelios ocupan un lugar central en la lectura cristiana.",
       "<b>Los deuterocanónicos:</b> Tobías, Judit, Sabiduría, Eclesiástico, Baruc y 1 y 2 Macabeos, junto con partes de Ester y Daniel, forman parte de la Biblia católica. Muchas ediciones protestantes no los incluyen. Aquí podrás encontrarlos dentro de sus secciones.",
-      "<b>Esta guía:</b> cada ficha resume un libro y orienta su lectura. Las divisiones son ayudas para recorrerlo; no sustituyen el texto ni pretenden agotar su significado."
+      "<b>Esta guía:</b> cada libro tiene una vista general y resúmenes breves de todos sus capítulos. El selector permite ir directamente a una lectura. Las preguntas personales están separadas del resumen."
     ],
     "q": "¿Qué parte de la Biblia conoces y cuál te gustaría descubrir?",
     "refs": [
@@ -3133,6 +3166,7 @@ const store = {
 };
 
 /* Map */
+const CHAPTER_DATA = window.MARGINALIA_BIBLE_CHAPTERS || {};
 const map = document.getElementById('map');
 let done = new Set(store.get('biblia-done-editorial-v2',[]));
 DATA.forEach((d,i)=>{
@@ -3142,8 +3176,9 @@ DATA.forEach((d,i)=>{
   const shown=[];
   b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
     ${d.text?`<p>${d.text}</p>`:''}
+    ${CHAPTER_DATA[d.id]?`<p class="book-chapter-count">${CHAPTER_DATA[d.id].countLabel}</p>`:''}
     
-    <div class="more"><span>${d.kind==='book'?'Leer la guía':'Explorar'} →</span><span class="done-badge">✓ Explorado</span></div>`;
+    <div class="more"><span>${d.kind==='book'?'Leer por capítulos':'Explorar'} →</span><span class="done-badge">✓ Explorado</span></div>`;
   b.addEventListener('click',()=>openCard(i));
   const gEl=document.getElementById('g-'+d.g);
   gEl.appendChild(b);
@@ -3160,28 +3195,114 @@ function refreshProgress(){
 refreshProgress();
 document.getElementById('reset').onclick=()=>{done.clear();store.set('biblia-done-editorial-v2',[]);refreshProgress()};
 
-/* Dialog */
-const dlg=document.getElementById('dlg'); let cur=0;
+/* Dialog: book overview and individually sourced chapter summaries. */
+const dlg=document.getElementById('dlg');
+const chapterSelect=document.getElementById('chapter-select');
+const previousButton=document.getElementById('dlg-prev');
+const nextButton=document.getElementById('dlg-next');
+let cur=0, readingIndex=-1;
+
+function bookScope(){
+  return DATA.map((d,i)=>({d,i})).filter(x=>x.d.kind==='book'&&!document.getElementById('card-'+x.d.id).hidden);
+}
+function neighborBook(step){
+  const scope=bookScope();
+  const position=scope.findIndex(x=>x.i===cur);
+  return scope[position+step];
+}
+function renderReading(){
+  const d=DATA[cur], book=CHAPTER_DATA[d.id];
+  const chapter=book&&book.chapters[readingIndex];
+  const overview=!chapter;
+  document.getElementById('chapter-reading').hidden=overview;
+  document.getElementById('dlg-list').hidden=!overview;
+  document.getElementById('dlg-reflect').hidden=!overview;
+  document.getElementById('chapter-note').hidden=!book||!book.note;
+  document.getElementById('chapter-note').textContent=book?book.note:'';
+  chapterSelect.value=String(readingIndex);
+  document.getElementById('dlg-eyebrow').textContent=d.eyebrow;
+  if(chapter){
+    document.getElementById('chapter-title').textContent=chapter.label;
+    document.getElementById('chapter-summary').textContent=chapter.summary;
+    const source=document.getElementById('dlg-source');
+    source.replaceChildren();
+    const link=document.createElement('a');
+    link.href=chapter.url;link.target='_blank';link.rel='noopener noreferrer';
+    link.textContent='Leer el texto bíblico completo ↗';
+    link.setAttribute('aria-label','Leer '+d.title+', '+chapter.label.toLowerCase()+', en el Vaticano (abre otra pestaña)');
+    source.appendChild(link);
+  }else{
+    document.getElementById('dlg-source').innerHTML=d.refs.length?'Para leer y consultar: '+d.refs.map(r=>`<a href="${r.url}" target="_blank" rel="noopener noreferrer">${r.label} ↗</a>`).join(' · '):'Orientación de lectura · Marginalia';
+  }
+  previousButton.disabled=false;nextButton.disabled=false;
+  previousButton.textContent='← Anterior';nextButton.textContent='Siguiente →';
+  previousButton.setAttribute('aria-label','Lectura anterior');nextButton.setAttribute('aria-label','Lectura siguiente');
+  if(book){
+    if(readingIndex===-1){
+      const previous=neighborBook(-1);
+      previousButton.disabled=!previous;
+      previousButton.textContent='← Libro ant.';
+      previousButton.setAttribute('aria-label',previous?'Libro anterior: '+previous.d.title:'No hay un libro anterior en esta selección');
+      nextButton.textContent='Comenzar →';
+      nextButton.setAttribute('aria-label','Leer '+book.chapters[0].label.toLowerCase());
+    }else if(readingIndex===0){
+      previousButton.textContent='← Resumen';
+      previousButton.setAttribute('aria-label','Volver a la vista general de '+d.title);
+    }
+    if(readingIndex===book.chapters.length-1){
+      const next=neighborBook(1);
+      nextButton.disabled=!next;
+      nextButton.textContent=next?'Otro libro →':'Fin del libro';
+      nextButton.setAttribute('aria-label',next?'Libro siguiente: '+next.d.title:'Has llegado a la última lectura de esta selección');
+    }
+  }
+  document.querySelector('#dlg .dlg-body').scrollTop=0;
+}
 function openCard(i){
-  cur=(i+DATA.length)%DATA.length; const d=DATA[cur];
+  cur=(i+DATA.length)%DATA.length;readingIndex=-1;
+  const d=DATA[cur],book=CHAPTER_DATA[d.id];
   dlg.style.setProperty('--tint',`var(--c-${d.c})`);dlg.style.setProperty('--edge',`var(--e-${d.c})`);
   document.getElementById('dlg-ico').innerHTML=I[d.ico];
-  document.getElementById('dlg-eyebrow').textContent=d.eyebrow;
   document.getElementById('dlg-title').textContent=d.title;
-  document.getElementById('dlg-source').innerHTML=d.refs.length?'Para leer y consultar: '+d.refs.map(r=>`<a href="${r.url}" target="_blank" rel="noopener noreferrer">${r.label} ↗</a>`).join(' · '):'Orientación de lectura · Marginalia';
+  document.getElementById('chapter-toolbar').hidden=!book;
+  chapterSelect.replaceChildren();
+  if(book){
+    chapterSelect.add(new Option('Vista general · '+book.countLabel,'-1'));
+    book.chapters.forEach((chapter,index)=>chapterSelect.add(new Option(chapter.label,String(index))));
+  }
   const all=d.text?[d.text,...d.pts]:d.pts;
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="point-copy">${p}</div></li>`).join('');
-  document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
+  document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar · propuesta de Marginalia</div><div>${d.q}</div>`;
+  renderReading();
   if(!dlg.open)dlg.showModal();
-  dlg.scrollTop=0; document.querySelector('.dlg-body').scrollTop=0;
   done.add(d.id);store.set('biblia-done-editorial-v2',[...done]);refreshProgress();
 }
+function moveCard(step){
+  const current=DATA[cur],book=CHAPTER_DATA[current.id];
+  if(book){
+    const target=readingIndex+step;
+    if(target>=-1&&target<book.chapters.length){readingIndex=target;renderReading();return}
+    const neighbor=neighborBook(step);
+    if(neighbor)openCard(neighbor.i);
+    return;
+  }
+  const scope=DATA.map((d,i)=>({d,i})).filter(x=>current.kind==='book'?x.d.kind==='book'&&!document.getElementById('card-'+x.d.id).hidden:x.d.g===current.g);
+  const pos=scope.findIndex(x=>x.i===cur);
+  if(scope.length)openCard(scope[(pos+step+scope.length)%scope.length].i);
+}
+chapterSelect.addEventListener('change',()=>{
+  const book=CHAPTER_DATA[DATA[cur].id],selected=Number(chapterSelect.value);
+  if(book&&Number.isInteger(selected)&&selected>=-1&&selected<book.chapters.length){readingIndex=selected;renderReading()}
+});
 document.getElementById('dlg-x').onclick=()=>dlg.close();
-function moveCard(step){const current=DATA[cur]; const scope=DATA.map((d,i)=>({d,i})).filter(x=>current.kind==='book'?x.d.kind==='book'&&!document.getElementById('card-'+x.d.id).hidden:x.d.g===current.g);const pos=scope.findIndex(x=>x.i===cur);if(scope.length)openCard(scope[(pos+step+scope.length)%scope.length].i)}
-document.getElementById('dlg-next').onclick=()=>moveCard(1);
-document.getElementById('dlg-prev').onclick=()=>moveCard(-1);
+nextButton.onclick=()=>moveCard(1);
+previousButton.onclick=()=>moveCard(-1);
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
-dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')moveCard(1);if(e.key==='ArrowLeft')moveCard(-1)});
+dlg.addEventListener('keydown',e=>{
+  if(e.target.closest('select,input,textarea')||e.altKey||e.ctrlKey||e.metaKey)return;
+  if(e.key==='ArrowRight'){e.preventDefault();moveCard(1)}
+  if(e.key==='ArrowLeft'){e.preventDefault();moveCard(-1)}
+});
 
 
 /* Book directory: native disclosure sections and accent-insensitive search. */
