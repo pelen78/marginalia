@@ -548,6 +548,7 @@ const BOOKS = [
     blurb:"Una guía para empezar a leer la Biblia católica, conocer cada uno de sus libros y reflexionar con calma.", motto:"Lee, comprende, reflexiona",
     q:"¿Qué pasaje te gustaría comprender mejor?",
     cover:{bg:"#344f4b", ink:"#efe6d6", art:"scripture"} },
+  {"id": "ic", "file": "imitacion-de-cristo.html", "title": "Imitación de Cristo", "full": "Imitación de Cristo", "author": "Tomás de Kempis", "cat": "Espiritualidad", "blurb": "Los 114 capítulos de un clásico de espiritualidad cristiana: humildad, oración, vida interior y Eucaristía.", "motto": "Lee, medita, reflexiona", "q": "¿Qué enseñanza quisieras llevar a tu vida?", "cover": {"bg": "#66513e", "ink": "#f4e7cc", "art": "kempis"}},
   { id:"ahora", file:"el-poder-del-ahora.html", title:"El poder del ahora", full:"El Poder del Ahora", author:"Eckhart Tolle", cat:"Espiritualidad",
     blurb:"Una invitación a vivir el presente como el único lugar donde la vida realmente sucede.", motto:"Fíjate, pregunta, compara",
     q:"¿Qué cambia cuando pones atención a lo que pasa ahorita?",
@@ -591,6 +592,7 @@ function wrapTitle(t, max){
 function coverSVG(b){
   const {bg,ink,art}=b.cover;
   const arts={
+    kempis:`<path d="M55 238V132a45 45 0 0 1 90 0v106" fill="#9b7957"/><path d="M67 238V132a33 33 0 0 1 66 0v106" fill="#e2cba4"/><path d="M100 115v81M80 140h40" fill="none" stroke="#66513e" stroke-width="5"/><path d="M43 238h114M35 247h130" stroke="#c5a67b" stroke-width="3"/><path d="M77 214q12-7 23 0 12-7 23 0v18q-12-6-23 0-11-6-23 0z" fill="#f4e7cc"/><path d="M100 214v18" stroke="#9b7957"/>`,
     emotion:`<path d="M99 100c-20-28-57-4-44 21-26 13-14 52 9 51-4 29 32 38 36 15V99m1 0c20-27 57-3 44 22 26 13 14 52-9 51 4 29-32 38-35 15" fill="none" stroke="#537969" stroke-width="3"/><path d="M70 129q18 0 20 17M127 147q-18 0-16 18M71 167q8-13 17-11" fill="none" stroke="#8b5f4d" stroke-width="2.5"/>`,
     heart:`<path d="M100 212s-66-41-66-83c0-38 48-43 66-13 18-30 66-25 66 13 0 42-66 83-66 83z" fill="#ba7c72"/><path d="M100 118v87M71 131q-15 12-7 30" fill="none" stroke="#f1dace" stroke-width="2.5"/>`,
     compass:`<circle cx="100" cy="173" r="57" fill="none" stroke="#f6d7ae" stroke-width="2"/><circle cx="100" cy="173" r="47" fill="none" stroke="#f6d7ae" stroke-width="1" stroke-dasharray="2 7"/><path d="M119 140 106 179 81 206 94 167z" fill="#f4e0bc"/><path d="m119 140-25 27 12 12z" fill="#552c24"/><circle cx="100" cy="173" r="4" fill="#b85632"/>`,

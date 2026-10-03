@@ -1,0 +1,2682 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Marginalia">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Independent study guide notice */
+.guide-note{max-width:900px;margin:4px auto 28px;padding:16px 20px;border:1.5px solid var(--line);
+  border-radius:20px;background:var(--paper);box-shadow:var(--shadow);text-align:center}
+.guide-note strong{font-family:var(--f-display)}
+.guide-note p{margin:4px 0;color:var(--muted);font-size:.94rem}
+.source-note{width:100%;margin:0;padding:0;
+  color:var(--muted);font-size:.88rem;line-height:1.55}
+.source-note strong{color:var(--ink)}
+
+
+footer .guide-credits{margin-top:18px;color:var(--muted);font-size:.88rem;line-height:1.65}
+footer .credits-author{margin:0 0 8px;color:var(--ink)}
+footer .credits-author strong{font-weight:600}
+footer .credits-note{margin:0}
+footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.02em}
+
+.dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
+</style>
+<script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>Guía visual de lectura · Imitación de Cristo</title>
+<meta name="description" content="Resumen de Imitación de Cristo de Tomás de Kempis: sus 114 capítulos en lenguaje sencillo, organizados en cuatro libros, con preguntas y notas de lectura.">
+<link rel="canonical" href="https://mymarginalia.net/imitacion-de-cristo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: mapa mental de 3 columnas con el sol central; en móvil una sola columna. Pastel acuarela. */
+:root{
+  --bg:#f6f4ee; --paper:#fffdf8; --ink:#1f2a3a; --muted:#566273; --line:#d9d4c7;
+  --sun:#fbe7a1; --sun-2:#f7c95c; --accent:#d9406b;
+  --c-blue:#dcecfb; --c-pink:#fbe0e6; --c-green:#dff1e2; --c-peach:#fde6cc; --c-lav:#e8e0f7; --c-yellow:#fdf1c7; --c-mint:#d9f1ea; --c-rose:#fcdde3;
+  --e-blue:#3a7bd5; --e-pink:#d9406b; --e-green:#3f9b5a; --e-peach:#e07b2a; --e-lav:#7d5bc4; --e-yellow:#c99a12; --e-mint:#2f9a82; --e-rose:#c53a5a;
+  --shadow:0 2px 0 rgba(31,42,58,.06),0 8px 24px -12px rgba(31,42,58,.18);
+  --f-display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131722; --paper:#1b2130; --ink:#eef1f6; --muted:#a8b2c3; --line:#2e3748;
+  --sun:#4a3d17; --sun-2:#e0b240; --accent:#f07a9a;
+  --c-blue:#1c2a40; --c-pink:#3a2130; --c-green:#1c3326; --c-peach:#3a2a1a; --c-lav:#2a2340; --c-yellow:#383016; --c-mint:#17332d; --c-rose:#3b1f28;
+  --e-blue:#79aef5; --e-pink:#f07a9a; --e-green:#7ccf93; --e-peach:#f3a766; --e-lav:#b39cf0; --e-yellow:#e9c75a; --e-mint:#6fd1b8; --e-rose:#f38aa3;
+  --shadow:0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131722; --paper:#1b2130; --ink:#eef1f6; --muted:#a8b2c3; --line:#2e3748;
+  --sun:#4a3d17; --sun-2:#e0b240; --accent:#f07a9a;
+  --c-blue:#1c2a40; --c-pink:#3a2130; --c-green:#1c3326; --c-peach:#3a2a1a; --c-lav:#2a2340; --c-yellow:#383016; --c-mint:#17332d; --c-rose:#3b1f28;
+  --e-blue:#79aef5; --e-pink:#f07a9a; --e-green:#7ccf93; --e-peach:#f3a766; --e-lav:#b39cf0; --e-yellow:#e9c75a; --e-mint:#6fd1b8; --e-rose:#f38aa3;
+  --shadow:0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1180px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:12px}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding-block:40px 20px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.01em;display:inline-block;padding:4px 28px 0;background:linear-gradient(100deg,transparent 2%,var(--c-mint) 8%,var(--c-blue) 60%,transparent 98%);border-radius:40px}
+.hero .sub{font-family:var(--f-display);font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(.8rem,1.8vw,1.05rem);margin-top:10px;color:var(--muted)}
+.author{display:inline-block;margin-top:12px;padding:4px 18px;border-radius:999px;background:var(--c-pink);font-family:var(--f-display);font-weight:700;letter-spacing:.08em}
+.hand{font-family:var(--f-hand);font-size:1.6rem;line-height:1.1;color:var(--ink)}
+.corner{position:absolute;top:34px;max-width:170px}
+.corner.l{left:0;transform:rotate(-8deg);text-align:left}
+.corner.r{right:0;transform:rotate(8deg);width:130px;height:130px;border-radius:50%;background:var(--sun);display:grid;place-items:center;text-align:center;padding:12px}
+@media (max-width:860px){.corner{display:none}}
+
+/* Progress */
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 20px;margin:18px auto 26px;font-weight:600;color:var(--muted)}
+.track{width:220px;max-width:60vw;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--e-green),var(--e-yellow));transition:width .5s ease}
+.chip{border:1.5px solid var(--line);background:var(--paper);padding:6px 14px;border-radius:999px;font-weight:700;font-size:.9rem}
+.chip:hover{border-color:var(--accent)}
+
+/* Map: cuatro etapas en orden de lectura */
+.map{display:grid;gap:40px}
+.g-title{display:flex;align-items:center;gap:12px;font-size:clamp(1.4rem,2.6vw,1.8rem);font-weight:800;margin-bottom:14px}
+.g-n{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:1.1rem;flex:none}
+.g-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:stretch}
+.card{position:relative;z-index:1;text-align:left;border:0;border-radius:24px;padding:18px 20px 16px;background:var(--tint);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-3px) rotate(-.3deg)}
+.card .top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.card .eyebrow{font-family:var(--f-display);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--edge)}
+.card h3{font-size:1.28rem;font-weight:700}
+.card .ico{flex:none;width:46px;height:46px;color:var(--edge)}
+.card ul{margin:2px 0 0;padding-left:18px;font-size:.95rem;color:var(--ink)}
+.card li{margin-block:3px}
+.card li::marker{color:var(--edge)}
+.card .more{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:.85rem;color:var(--edge);padding-top:6px}
+.done-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:99px;background:var(--paper);font-size:.78rem;visibility:hidden}
+.card.is-done .done-badge{visibility:visible}
+.card.is-done{outline:2.5px dashed var(--edge);outline-offset:-7px}
+.card p{margin:0;font-size:.97rem}
+
+.center{position:relative;z-index:1;border-radius:24px;
+  background:radial-gradient(circle at 50% 40%,var(--c-yellow),var(--sun) 70%);box-shadow:0 0 0 10px color-mix(in srgb,var(--sun) 45%,transparent),0 0 60px 10px color-mix(in srgb,var(--sun-2) 30%,transparent);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:8px}
+.center h2{font-size:clamp(1.8rem,3vw,2.3rem);font-weight:800}
+.center h2 span{display:block;font-size:1.35em;line-height:.9}
+.center p{margin:0;font-weight:600;max-width:26ch}
+@keyframes breathe{50%{transform:scale(1.025)}}
+
+.quote{align-self:center;text-align:center;padding:10px;min-width:0}
+.quote .hand{font-size:1.7rem}
+.quote .by{font-family:var(--f-hand);font-size:1.4rem;color:var(--muted);margin-top:6px}
+.quote button{margin-top:10px}
+
+/* Sections */
+section.block{margin-top:64px}
+.block-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-bottom:18px}
+.block-head h2{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800}
+.block-head p{margin:0;color:var(--muted);max-width:52ch}
+
+.btn{border:0;border-radius:999px;padding:10px 20px;font-weight:700;background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:hover{opacity:.9}
+/* Journal */
+.journal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:820px){.journal{grid-template-columns:1fr}}
+.jcard{background:var(--paper);border-radius:22px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0}
+.jcard label{font-family:var(--f-hand);font-size:1.5rem;line-height:1.1}
+.jcard textarea{width:100%;min-height:110px;resize:vertical;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--bg);color:var(--ink);font:inherit}
+.hint{font-size:.85rem;color:var(--muted)}
+
+/* Footer */
+footer{margin-top:30px;display:block}
+@media (max-width:560px){.foot-msg{text-align:left}}
+
+/* Dialog */
+dialog{border:0;border-radius:28px;padding:0;max-width:min(640px,calc(100vw - 32px));width:100%;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog::backdrop{background:rgba(20,25,35,.45);backdrop-filter:blur(3px)}
+.dlg-head{background:var(--tint);padding:24px 26px 18px;display:flex;gap:16px;align-items:flex-start}
+.dlg-head .ico{width:58px;height:58px;color:var(--edge);flex:none}
+.dlg-head h3{font-size:1.7rem}
+.dlg-body{padding:18px 26px 24px}
+.dlg-body ol{padding-left:0;list-style:none;margin:0;display:grid;gap:10px;counter-reset:p}
+.dlg-body li{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:var(--bg)}
+.dlg-body li::before{counter-increment:p;content:counter(p);flex:none;width:26px;height:26px;border-radius:50%;background:var(--tint);color:var(--edge);font-weight:800;display:grid;place-items:center;font-size:.85rem}
+@media (prefers-reduced-motion:no-preference){.dlg-body li{animation:rise .45s ease both}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.reflect{margin-top:16px;padding:14px 16px;border-radius:16px;border:2px dashed var(--edge)}
+.reflect .hand{font-size:1.45rem}
+.dlg-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:0 26px 24px}
+.x{border:0;background:transparent;margin-left:auto;font-size:1.6rem;line-height:1;padding:4px 8px;color:var(--ink)}
+</style>
+
+<style>
+/* Marginalia: diseño a juego con la biblioteca (solo estilo) */
+:root{
+  --bg:#f3ede2; --paper:#f9f5ee; --ink:#1e1a17; --muted:#7a6f63; --line:#dbd1c1;
+  --sun:#efe4d3; --sun-2:#d9bf98; --accent:#c4552f; --blue:#23408e;
+  --c-blue:#e5e5ea; --c-pink:#f3dfd4; --c-green:#e3e6d8; --c-peach:#f4e2d2; --c-lav:#ebe2e4; --c-yellow:#f3e9d3; --c-mint:#e0e6dc; --c-rose:#f2ddd6;
+  --e-blue:#23408e; --e-pink:#c4552f; --e-green:#56704a; --e-peach:#b8572c; --e-lav:#6b4e7a; --e-yellow:#8f6a24; --e-mint:#3f6f5f; --e-rose:#a8382f;
+  --shadow:0 1px 0 rgba(60,40,20,.04),0 18px 34px -20px rgba(60,40,20,.35);
+  --grain:.5;
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Fraunces",Georgia,serif;
+  --f-hand:"Caveat",cursive;
+  --f-mono:"Space Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#191613; --paper:#211d19; --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --sun:#2a241f; --sun-2:#8a6f4c; --accent:#e07a55; --blue:#93a9ea;
+  --c-blue:#25242a; --c-pink:#33251f; --c-green:#252a21; --c-peach:#33271e; --c-lav:#2c2429; --c-yellow:#2e281d; --c-mint:#222a25; --c-rose:#332220;
+  --e-blue:#93a9ea; --e-pink:#e07a55; --e-green:#a3bb95; --e-peach:#e8a071; --e-lav:#c3a3d6; --e-yellow:#dcb66e; --e-mint:#86c4ae; --e-rose:#ea8b80;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#191613; --paper:#211d19; --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --sun:#2a241f; --sun-2:#8a6f4c; --accent:#e07a55; --blue:#93a9ea;
+  --c-blue:#25242a; --c-pink:#33251f; --c-green:#252a21; --c-peach:#33271e; --c-lav:#2c2429; --c-yellow:#2e281d; --c-mint:#222a25; --c-rose:#332220;
+  --e-blue:#93a9ea; --e-pink:#e07a55; --e-green:#a3bb95; --e-peach:#e8a071; --e-lav:#c3a3d6; --e-yellow:#dcb66e; --e-mint:#86c4ae; --e-rose:#ea8b80;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}
+
+body{font-size:17px;line-height:1.55}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:var(--grain);mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .3  0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+h1,h2,h3{font-weight:400}
+.hand{font-size:1.5rem;line-height:1.15;color:var(--accent)}
+
+/* Trazos a mano */
+.mark{position:relative;display:inline-block;white-space:nowrap;isolation:isolate}
+.mark svg{position:absolute;left:-8px;top:-8px;width:calc(100% + 16px);height:calc(100% + 16px);overflow:visible;pointer-events:none}
+.mark path{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s cubic-bezier(.6,0,.2,1) .35s}
+.mark.ci path{stroke:var(--blue)}
+.in .mark path,.mark.in path{stroke-dashoffset:0}
+
+/* Aparición suave */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* Encabezado */
+.hero{padding-block:56px 26px;position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;left:50%;top:50%;width:min(280px,64vw);aspect-ratio:1;translate:-50% -50%;z-index:-1;border-radius:50%;
+  background:color-mix(in srgb,var(--accent) 6%,transparent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
+  outline:1px dashed color-mix(in srgb,var(--accent) 35%,transparent);outline-offset:10px;animation:mg-breathe 8s ease-in-out infinite}
+.guide-note{position:relative;z-index:1}
+@keyframes mg-breathe{0%,100%{transform:scale(.92)}50%{transform:scale(1)}}
+.hero h1{font-weight:400;font-size:clamp(2.8rem,6.5vw,5rem);background:none;padding:0;letter-spacing:-.015em}
+.hero h1 .mark{font-style:italic;font-weight:300;color:var(--accent)}
+.hero .sub{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:1.2rem;font-weight:300;margin-top:12px;color:var(--muted)}
+.hero .sub cite{font-style:italic;color:var(--ink)}
+.author{background:none;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.22em;font-weight:400;color:var(--muted);padding:0;margin-top:16px}
+.author::before,.author::after{content:"";display:inline-block;width:28px;border-top:1px dashed var(--muted);vertical-align:middle;margin:0 12px}
+.corner.r{background:var(--c-peach)}
+.corner .hand,.corner.l{color:var(--accent)}
+
+.guide-note{border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:none}
+.guide-note strong{font-weight:400;font-size:1.3rem}
+
+/* Progreso y chips */
+.bar{font-weight:400;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.track{height:6px}
+.fill{background:linear-gradient(90deg,var(--blue),var(--accent))}
+.chip{border:1.5px solid var(--line);background:transparent;font-family:var(--f-mono);font-weight:400;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;transition:border-color .2s}
+.chip:hover{border-color:var(--ink)}
+
+/* Mapa */
+.g-title{font-weight:400;font-size:clamp(1.7rem,2.8vw,2.2rem)}
+.g-n{background:none;color:var(--accent);border:1.5px solid var(--accent);font-family:var(--f-hand);font-weight:700;font-size:1.4rem;width:38px;height:38px}
+.card{border-radius:14px;border:1px solid color-mix(in srgb,var(--edge) 16%,transparent);box-shadow:none;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-4px) rotate(-.5deg);box-shadow:var(--shadow)}
+.card:nth-child(even):hover{transform:translateY(-4px) rotate(.5deg)}
+.card .eyebrow{font-family:var(--f-mono);font-weight:400;font-size:.66rem;letter-spacing:.2em}
+.card h3{font-weight:600;font-size:1.35rem}
+.card ul{font-size:1rem}
+.card .more{font-family:var(--f-hand);font-weight:700;font-size:1.2rem}
+.card.is-done{outline:1.5px dashed var(--edge)}
+.done-badge{font-family:var(--f-mono);font-size:.68rem}
+
+.center{border-radius:16px;background:var(--sun);box-shadow:none;border:1px solid var(--line)}
+.center h2{font-weight:400;font-size:clamp(2rem,3.2vw,2.6rem)}
+.center h2 span{font-style:italic;font-weight:300;color:var(--accent);font-size:1.2em}
+.center p{font-weight:400}
+.quote .hand{font-size:1.8rem}
+.quote .by{font-family:var(--f-mono);font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* Secciones */
+.block-head h2{font-weight:400;font-size:clamp(2rem,3.5vw,2.6rem)}
+.block-head p{font-size:1.08rem;font-style:italic;font-weight:300}
+.breath,.scan,.quiz{border-radius:16px;box-shadow:none;background:var(--paper);border:1px solid var(--line)}
+.orb{background:radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--accent) 45%,var(--paper)),var(--accent));box-shadow:0 0 0 14px color-mix(in srgb,var(--accent) 14%,transparent)}
+.phase{color:var(--accent)}
+.scan-out{border-radius:14px;background:var(--bg);border:1px dashed var(--line)}
+.scan-out h3{font-weight:400;font-size:1.6rem}
+.hb-field label,.srow label{font-weight:600}
+.hb-field input{border-radius:10px;border:1.5px solid var(--line);background:var(--bg)}
+.days button{border-width:1.5px;font-weight:400;font-family:var(--f-mono);font-size:.95rem;border-color:var(--accent);color:var(--ink)}
+.days button[aria-pressed="true"]{background:var(--accent);color:var(--paper)}
+.btn{border-radius:999px;background:var(--ink);color:var(--bg);font-family:var(--f-mono);font-weight:400;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;transition:background .2s,transform .2s}
+.btn:hover{opacity:1;background:var(--accent);color:var(--paper);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.seg{border-width:1.5px}
+.seg button{font-family:var(--f-mono);font-weight:400;font-size:.74rem;letter-spacing:.06em}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.q-count{font-family:var(--f-mono);font-weight:400;font-size:.78rem;letter-spacing:.1em}
+.q-text{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(1.8rem,3.4vw,2.4rem)}
+.opt{border:1.5px solid var(--line);border-radius:12px;background:var(--bg);font-weight:600;font-size:1.1rem}
+.opt small{font-weight:400;font-size:.92rem}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.feedback{font-weight:400;font-size:1.08rem}
+.feedback b{color:var(--accent)}
+.jcard{border-radius:16px;box-shadow:none;background:var(--paper);border:1px solid var(--line)}
+.jcard label{font-family:var(--f-hand);font-weight:700;font-size:1.6rem;color:var(--accent)}
+.jcard textarea{border-radius:10px;border:1.5px solid var(--line);background:var(--bg)}
+.hint{font-style:italic}
+
+/* Pie */
+footer{border-top:1px solid var(--line);padding-top:20px}
+
+/* Ventana */
+dialog{border-radius:16px}
+.dlg-head h3{font-weight:600;font-size:1.9rem}
+#dlg-eyebrow{font-family:var(--f-mono)!important;font-weight:400!important;font-size:.7rem;letter-spacing:.2em!important}
+.dlg-body li{border-radius:10px}
+.dlg-body li::before{font-family:var(--f-hand);font-weight:700;font-size:1.05rem}
+.reflect{border:1.5px dashed var(--edge);border-radius:12px}
+.reflect .hand{font-size:1.45rem}
+
+@media (prefers-reduced-motion:reduce){.hero::before{animation:none}.rv{opacity:1;transform:none;transition:none}.mark path{stroke-dashoffset:0;transition:none}}
+</style>
+<style>
+/* Marginalia: navegación entre libros */
+.mg-nav{position:sticky;top:0;z-index:50;margin-inline:-16px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.mg-nav .in{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.mg-brand{display:inline-flex;gap:.02em;text-decoration:none;color:var(--ink);font-size:1.4rem;line-height:1;white-space:nowrap}
+.mg-brand span{display:inline-block;padding:.05em .07em;min-width:.55em;text-align:center;transition:transform .3s}
+.mg-brand .s0{font-family:var(--f-display);font-weight:700}
+.mg-brand .s1{font-family:var(--f-hand);font-weight:700;color:var(--accent);font-size:1.12em}
+.mg-brand .s2{font-family:var(--f-mono);font-weight:700;background:var(--blue);color:var(--bg)}
+.mg-brand .s3{font-family:var(--f-display);font-style:italic;color:var(--blue)}
+.mg-brand .s4{font-family:var(--f-display);font-weight:300;background:var(--accent);color:var(--bg)}
+.mg-brand .s6{font-family:var(--f-mono);background:var(--ink);color:var(--bg)}
+.mg-back{margin-left:auto;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);font-size:1rem;padding:6px 10px;border-radius:999px;transition:color .2s}
+.mg-back:hover{color:var(--accent)}
+.mg-menu{position:relative}
+.mg-menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);border-radius:999px;padding:7px 16px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;user-select:none;transition:background .2s}
+.mg-menu summary:hover{background:var(--accent)}
+.mg-menu summary::-webkit-details-marker{display:none}
+.mg-menu summary svg{width:14px;height:14px;transition:transform .2s ease}
+.mg-menu[open] summary svg{transform:rotate(180deg)}
+.mg-menu ul{max-height:calc(100vh - 160px);max-height:calc(100dvh - 160px);overflow-y:auto;overscroll-behavior:contain;position:absolute;right:0;top:calc(100% + 8px);width:min(320px,calc(100vw - 32px));margin:0;padding:8px;list-style:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transform-origin:top right;animation:mg-pop .16s ease-out}
+@keyframes mg-pop{from{opacity:0;transform:scale(.97) translateY(-4px)}}
+.mg-menu li a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.25}
+.mg-menu li a:hover{background:var(--bg)}
+.mg-menu li a small{display:block;color:var(--muted);font-size:.85rem;font-style:italic}
+.mg-menu li a[aria-current="page"]{background:var(--c-peach);color:var(--accent)}
+.mg-menu li.sep{border-top:1px dashed var(--line);margin:6px 4px}
+.mg-pager{max-width:1180px;margin:56px auto 0;display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+.mg-pager a{text-decoration:none;color:var(--ink);padding:14px 18px;border-radius:14px;background:var(--paper);border:1px solid var(--line);line-height:1.25;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.mg-pager a:hover{transform:translateY(-3px) rotate(-.4deg);box-shadow:var(--shadow)}
+.mg-pager a small{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.mg-pager a b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.mg-pager .nx{text-align:right}
+.mg-pager .home{background:var(--ink);color:var(--bg);border-color:var(--ink);padding:10px 18px;border-radius:999px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+.mg-pager .home:hover{background:var(--accent);border-color:var(--accent)}
+@media (max-width:640px){
+  .mg-nav .in{flex-wrap:wrap;gap:8px 12px}
+  .mg-brand{margin-right:auto}
+  .mg-back{margin-left:0;padding:6px 0;font-size:.9rem}
+  .mg-menu{margin-left:auto}
+  .mg-menu summary{font-size:.65rem;padding:7px 11px;letter-spacing:.03em}
+  .mg-back span{display:inline}
+  .mg-brand{font-size:1.15rem}
+  .mg-pager{grid-template-columns:1fr 1fr}
+  .mg-pager .home{grid-column:1/-1;grid-row:1;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.mg-menu ul{animation:none}.mg-pager a{transition:none}}
+</style>
+<link rel="stylesheet" href="feedback.css">
+<script src="feedback.js" defer></script>
+<link rel="stylesheet" href="reading-cards.css">
+
+<style id="mg-pdf-export">
+/* Marginalia · Guardar respuestas como PDF */
+.mg-save-pdf{
+  margin-top:24px;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+.mg-save-pdf .mg-pdf-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.mg-save-pdf .mg-pdf-note{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:.86rem;
+  font-style:italic;
+  max-width:70ch;
+}
+#mg-pdf-sheet{display:none}
+
+@media print{
+  body.mg-notes-print{
+    background:#fff!important;
+    color:#211d19!important;
+    padding:0!important;
+  }
+  body.mg-notes-print > *:not(#mg-pdf-sheet){
+    display:none!important;
+  }
+  body.mg-notes-print #mg-pdf-sheet{
+    display:block!important;
+  }
+  body.mg-notes-print #mg-pdf-sheet *{
+    box-sizing:border-box;
+  }
+}
+</style>
+
+
+<style id="mg-clear-field">
+/* Marginalia · borrar una respuesta del diario */
+.jcard .mg-field-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+.jcard .mg-field-head label{flex:1}
+.mg-clear-field{
+  flex:none;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-family:var(--f-mono);
+  font-size:.66rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:4px 2px;
+  cursor:pointer;
+}
+.mg-clear-field:hover{color:var(--accent)}
+.mg-clear-field:disabled{opacity:.35;cursor:default}
+</style>
+
+
+<style id="mg-compact-pager">
+/* Marginalia · navegación inferior compacta */
+.mg-pager{
+  max-width:1180px;
+  margin:34px auto 0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  gap:10px;
+  align-items:center;
+}
+.mg-pager a{
+  min-height:56px;
+  padding:10px 14px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:var(--ink);
+  background:var(--paper);
+  border:1px solid var(--line);
+  line-height:1.15;
+}
+.mg-pager a:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+.mg-pager a b{
+  font-family:var(--f-display);
+  font-weight:400;
+  font-size:1.05rem;
+}
+.mg-pager .mg-arrow{
+  flex:none;
+  font-family:var(--f-mono);
+  font-size:.95rem;
+  color:var(--muted);
+}
+.mg-pager .pv{justify-content:flex-start}
+.mg-pager .nx{justify-content:flex-end;text-align:right}
+.mg-pager .home{
+  min-height:44px;
+  padding:9px 16px;
+  border-radius:999px;
+  justify-content:center;
+  background:var(--ink);
+  color:var(--bg);
+  border-color:var(--ink);
+  font-family:var(--f-mono);
+  font-size:.7rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.mg-pager .home:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+}
+@media (max-width:640px){
+  .mg-pager{
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-top:28px;
+  }
+  .mg-pager .home{
+    grid-column:1/-1;
+    grid-row:1;
+    min-height:40px;
+  }
+  .mg-pager a{
+    min-height:52px;
+    padding:9px 10px;
+  }
+  .mg-pager a b{font-size:.94rem}
+  .mg-pager .mg-arrow{font-size:.85rem}
+}
+</style>
+
+<style>
+#dlg-source{margin-top:18px;padding-top:12px;border-top:1px solid var(--line)}
+.g-title{overflow-wrap:anywhere}
+@media(max-width:600px){#dlg .dlg-head .ico{display:none}#dlg .dlg-head h3{font-size:1.2rem}#dlg .dlg-head{gap:6px}}
+</style>
+
+<style id="kempis-navigation">
+.book-jumps{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:8px 0 30px}
+.book-jumps a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding:10px 12px;font-family:var(--f-mono);font-size:.75rem}
+.book-jumps a:hover{color:var(--accent);border-color:var(--accent)}
+.book-jumps span{color:var(--muted)}
+.chapter-search{max-width:720px;margin:0 auto 32px}.chapter-search label{display:block;margin-bottom:8px;font-weight:600}.search-row{display:flex;gap:10px}
+.chapter-search input{min-width:0;flex:1;border:1px solid var(--line);border-radius:10px;padding:13px 15px;background:var(--paper);color:var(--ink);font:inherit}
+.chapter-search input::placeholder{color:var(--muted)}#search-status{font-size:.9rem;color:var(--muted);margin:10px 0 0}
+.map{gap:16px}.book-group{border-top:1px solid var(--line);scroll-margin-top:90px;min-width:0}
+.book-group>summary{display:flex;align-items:center;gap:16px;list-style:none;cursor:pointer;padding:24px 0;user-select:none}
+.book-group>summary::-webkit-details-marker{display:none}.book-label{display:block;font: .68rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.book-title{display:block;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.2;text-wrap:balance}.book-toggle{margin-left:auto;font-size:1.6rem;color:var(--accent);padding:0 8px}.book-group[open] .book-toggle{transform:rotate(45deg)}
+.book-desc{margin:0 0 20px;color:var(--muted)}.book-group .g-grid{padding-bottom:24px}.card-preview{color:var(--muted);font-weight:400}.card .ico{width:30px;height:30px}
+.card h3{line-height:1.25}.card{gap:12px;min-height:200px}.closing-question{margin:40px auto 0;max-width:650px;padding:24px;border-top:1px dashed var(--line)}
+.btn:disabled{opacity:.4;cursor:default}.guide-note p+p{margin-top:12px;font-size:.86rem}
+@media(max-width:600px){.book-jumps{gap:4px}.book-jumps a{padding:9px 8px}.book-group>summary{gap:10px}.book-title{font-size:1.4rem}.g-grid{grid-template-columns:1fr}.chapter-search input{font-size:16px}.search-row{flex-wrap:wrap}.card{min-height:0}.card .more{padding-top:0}}
+@media(prefers-reduced-motion:reduce){.hero::before{animation:none}.card,.fill{transition:none}}
+</style>
+</head>
+<body>
+<nav class="mg-nav" aria-label="Biblioteca">
+  <div class="in">
+    <a class="mg-brand" href="index.html#inicio" aria-label="Marginalia, inicio"><span class="s3" style="transform:rotate(-3deg)" aria-hidden="true">M</span><span class="s0" style="transform:rotate(2deg)" aria-hidden="true">A</span><span class="s6" style="transform:rotate(-2deg)" aria-hidden="true">R</span><span class="s0" style="transform:rotate(1deg)" aria-hidden="true">G</span><span class="s4" style="transform:rotate(3deg)" aria-hidden="true">I</span><span class="s0" style="transform:rotate(-1deg)" aria-hidden="true">N</span><span class="s3" style="transform:rotate(2deg)" aria-hidden="true">A</span><span class="s2" style="transform:rotate(-3deg)" aria-hidden="true">L</span><span class="s0" style="transform:rotate(1deg)" aria-hidden="true">I</span><span class="s1" style="transform:rotate(-2deg)" aria-hidden="true">A</span></a>
+    <a class="mg-back" href="index.html#libros">&larr; <span>Biblioteca</span></a>
+    <details class="mg-menu">
+      <summary>Cambiar libro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <ul><li><a href="biblia.html">La Biblia<small>Guía y reflexiones</small></a></li><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li><a href="inteligencia-emocional.html">Inteligencia emocional<small>Daniel Goleman</small></a></li><li><a href="amar-o-depender.html">¿Amar o depender?<small>Walter Riso</small></a></li><li><a href="el-sutil-arte-de-que-te-importe-un-carajo.html">El sutil arte de que te importe un carajo<small>Mark Manson</small></a></li></ul>
+    </details>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>Guía de <span class="mark ul">lectura</span></h1>
+    <div class="sub">Sobre <cite>Imitación de Cristo</cite>, de Tomás de Kempis</div>
+    <div class="author">GUÍA INDEPENDIENTE</div>
+</header>
+
+
+  <aside class="guide-note" aria-label="Acerca de esta guía"><strong>Cuatro libros, una lectura pausada</strong><p>Los 114 capítulos, en su orden original y explicados con palabras sencillas. Espiritualidad cristiana de tradición católica: humildad, oración, seguimiento de Jesús y Eucaristía.</p><p>Los títulos de los capítulos están simplificados. Las preguntas de reflexión son de Marginalia. Los consejos sobre obediencia, renuncia y mortificación se explican en su contexto monástico.</p></aside>
+
+  <div class="bar" aria-live="polite">
+    <span id="progress-text">0 de 114 capítulos explorados</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="114" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <button class="chip" id="reset" type="button">Reiniciar</button>
+  </div>
+
+  <nav class="book-jumps" aria-label="Ir a un libro"><a href="#libro-1">Libro I <span>· 25 cap.</span></a><a href="#libro-2">Libro II <span>· 12 cap.</span></a><a href="#libro-3">Libro III <span>· 59 cap.</span></a><a href="#libro-4">Libro IV <span>· 18 cap.</span></a></nav>
+  <div class="chapter-search"><label for="chapter-search">Buscar un capítulo</label><div class="search-row"><input type="search" id="chapter-search" placeholder="Por ejemplo: paciencia, oración o comunión" aria-controls="map" autocomplete="off"><button type="button" class="chip" id="clear-search" hidden>Limpiar</button></div><p id="search-status" role="status">Abre un libro y elige un capítulo para leer su resumen y reflexionar.</p></div>
+  <div class="map" id="map"><details class="group book-group" id="libro-1" open>
+      <summary><span class="g-n">I</span><span><span class="book-label">Libro I · 25 capítulos</span><span class="book-title">Avisos provechosos para la vida espiritual</span></span><span class="book-toggle" aria-hidden="true">+</span></summary>
+      <p class="book-desc">Consejos para la conducta, la humildad y la vida religiosa.</p><div class="g-grid" id="g-1"></div>
+    </details><details class="group book-group" id="libro-2">
+      <summary><span class="g-n">II</span><span><span class="book-label">Libro II · 12 capítulos</span><span class="book-title">De la conversión interior</span></span><span class="book-toggle" aria-hidden="true">+</span></summary>
+      <p class="book-desc">El recogimiento, la amistad con Jesús y el sentido de la cruz.</p><div class="g-grid" id="g-2"></div>
+    </details><details class="group book-group" id="libro-3">
+      <summary><span class="g-n">III</span><span><span class="book-label">Libro III · 59 capítulos</span><span class="book-title">De la consolación interior</span></span><span class="book-toggle" aria-hidden="true">+</span></summary>
+      <p class="book-desc">Un diálogo de oración entre el alma y Jesucristo.</p><div class="g-grid" id="g-3"></div>
+    </details><details class="group book-group" id="libro-4">
+      <summary><span class="g-n">IV</span><span><span class="book-label">Libro IV · 18 capítulos</span><span class="book-title">Del Santísimo Sacramento</span></span><span class="book-toggle" aria-hidden="true">+</span></summary>
+      <p class="book-desc">Reflexiones sobre la comunión y la Eucaristía en la fe católica.</p><div class="g-grid" id="g-4"></div>
+    </details></div>
+  <div class="quote closing-question"><div class="hand" id="quote-text">¿Qué enseñanza de Jesús quisieras comprender mejor?</div><div class="by">Pregunta de esta guía</div><button class="chip" id="next-quote" type="button">Otra pregunta</button></div>
+
+  <section class="block" id="diario">
+    <div class="block-head">
+      <h2>Mis notas de lectura</h2>
+      <p>Tres preguntas para conectar la lectura con tu experiencia. Lo que escribas se queda solo en este navegador.</p>
+    </div>
+    <div class="journal">
+      <div class="jcard">
+      <div class="mg-field-head">
+        <label for="j1">¿Qué capítulo me ayudó a comprender algo nuevo?</label>
+        <button class="mg-clear-field" type="button" data-clear="j1">Borrar</button>
+      </div>
+      <textarea id="j1" placeholder="Anota el libro, el capítulo y lo que comprendiste…"></textarea>
+    </div>
+      <div class="jcard">
+      <div class="mg-field-head">
+        <label for="j2">¿Qué idea quiero pensar con más calma?</label>
+        <button class="mg-clear-field" type="button" data-clear="j2">Borrar</button>
+      </div>
+      <textarea id="j2" placeholder="Escribe una pregunta o una idea que te llamó la atención…"></textarea>
+    </div>
+      <div class="jcard">
+      <div class="mg-field-head">
+        <label for="j3">¿Qué enseñanza quisiera llevar a mi vida?</label>
+        <button class="mg-clear-field" type="button" data-clear="j3">Borrar</button>
+      </div>
+      <textarea id="j3" placeholder="Piensa en una acción pequeña y concreta…"></textarea>
+    </div>
+    </div>
+    <p class="hint" id="saved-hint" style="margin-top:8px"></p>
+  </section>
+
+
+<section class="mg-save-pdf" id="guardar-pdf" aria-label="Guardar notas en PDF">
+  <div class="mg-pdf-actions">
+    <button class="btn" id="mg-save-pdf" type="button">Guardar mis notas en PDF</button>
+  </div>
+  <p class="mg-pdf-note">Se abrirá la ventana de impresión. Elige <strong>Guardar como PDF</strong>. Tus respuestas no se envían a Marginalia.</p>
+</section>
+
+<section class="mg-feedback-invite" aria-label="Comentarios sobre esta guía">
+  <p>¿Te sirvió esta guía? Me gustaría saber qué piensas.</p>
+  <button class="btn ghost" id="mg-feedback-open" type="button" aria-haspopup="dialog">Dejar comentario</button>
+</section>
+
+<nav class="mg-pager" aria-label="Otros libros">
+  <a class="pv" href="biblia.html" aria-label="Libro anterior: La Biblia"><span class="mg-arrow" aria-hidden="true">&larr;</span><b>La Biblia</b></a>
+  <a class="home" href="index.html#libros">Biblioteca</a>
+  <a class="nx" href="el-poder-del-ahora.html" aria-label="Siguiente libro: El poder del ahora"><b>El poder del ahora</b><span class="mg-arrow" aria-hidden="true">&rarr;</span></a>
+</nav>
+
+  <footer>
+    <div class="source-note"><strong>Obra de referencia:</strong> Tomás de Kempis. <cite>Imitación de Cristo</cite>. Guía elaborada a partir del ejemplar digital consultado de 71 páginas, con sus cuatro libros y 114 capítulos. Las referencias de cada resumen cuentan las páginas del PDF, incluida la portada; pueden variar entre ediciones.</div>
+    <div class="guide-credits">
+    <p class="credits-author"><strong>Guías elaboradas por:</strong> Marginalia</p>
+    <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
+    <p class="credits-copyright">© 2026 Marginalia. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</div>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg-head" id="dlg-head">
+    <div class="ico" id="dlg-ico"></div>
+    <div style="min-width:0"><div id="dlg-eyebrow" style="font-family:var(--f-display);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--edge)"></div><h3 id="dlg-title"></h3></div>
+    <button class="x" id="dlg-x" type="button" aria-label="Cerrar">×</button>
+  </div>
+  <div class="dlg-body" tabindex="0" role="region" aria-label="Explicación de la tarjeta"><ol id="dlg-list"></ol><div class="reflect" id="dlg-reflect"></div><p class="source-note" id="dlg-source" hidden></p><p class="dlg-signature">Marginalia · mymarginalia.net</p></div>
+  <div class="dlg-foot">
+    <button class="btn ghost" id="dlg-prev" type="button">← Anterior</button>
+    <button class="btn" id="dlg-next" type="button">Siguiente →</button>
+  </div>
+</dialog>
+
+<script>
+const I = {
+  book:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 12c-5-4-12-4-18-2v28c6-2 13-2 18 2 5-4 12-4 18-2V10c-6-2-13-2-18 2z"/><path d="M24 12v28"/></svg>',
+  heart:'<svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 41S6 30 6 18a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 12-18 23-18 23z"/></svg>',
+  cloud:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30a9 9 0 0 1 2-17 10 10 0 0 1 18 1 8 8 0 0 1 0 16H14z"/><circle cx="14" cy="38" r="3"/><circle cx="8" cy="44" r="1.6"/></svg>',
+  brain:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-6 6 6 6 0 0 0-4 10 6 6 0 0 0 4 10 6 6 0 0 0 12 2V10a4 4 0 0 0-6-2zM30 8a6 6 0 0 1 6 6 6 6 0 0 1 4 10 6 6 0 0 1-4 10 6 6 0 0 1-12 2"/><path d="M14 20h4M30 26h4M18 30h-3"/></svg>',
+  broken:'<svg viewBox="0 0 48 48" fill="currentColor"><path d="M22 14 18 22l6 4-4 8 2 7S6 30 6 18a9 9 0 0 1 16-4zM26 41l3-8-5-5 5-9-2-4a9 9 0 0 1 15 3c0 12-16 23-16 23z"/></svg>',
+  mountain:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M4 40 18 14l8 12 4-6 14 20z"/><path d="M14 22l4 3 4-3M20 40c4-4 10-4 12-10"/></svg>',
+  lotus:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle cx="24" cy="9" r="4"/><path d="M24 14v12M16 20l8 6 8-6M12 38c4-6 8-8 12-8s8 2 12 8M8 40h32"/></svg>',
+  globe:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c6 6 6 28 0 34M24 7c-6 6-6 28 0 34"/></svg>',
+  leaf:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40C8 20 22 8 40 8c0 18-12 32-30 32z"/><path d="M10 40 30 18"/></svg>',
+  sun:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 34a14 14 0 0 1 28 0z" fill="currentColor" fill-opacity=".25"/><path d="M24 8v6M10 14l4 4M38 14l-4 4M4 28h5M39 28h5M4 40h40"/></svg>'
+};
+
+const DATA = [
+  {
+    "id": "ic-1-01",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 1",
+    "title": "Seguir a Cristo con la vida",
+    "text": "El libro comienza proponiendo que conocer a Jesús implica seguir su ejemplo en la conducta. Para Kempis, aprender muchas cosas sobre la fe sirve poco si faltan el amor y la humildad. Invita a orientar la vida hacia Dios y la eternidad, en vez de hacer de la riqueza, los honores o los placeres la meta principal.",
+    "pts": [
+      "La fe se expresa en la manera de vivir y tratar a los demás.",
+      "Los bienes pasajeros ocupan un lugar secundario frente al amor a Dios."
+    ],
+    "q": "¿Qué acción concreta expresa mejor lo que dices creer?",
+    "pages": "PDF, página 4"
+  },
+  {
+    "id": "ic-1-02",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 2",
+    "title": "Reconocer los propios límites",
+    "text": "Kempis cuestiona el orgullo de quien presume de saber mucho o se considera superior. Propone reconocer la propia fragilidad y dar más importancia a la caridad que al prestigio intelectual. Su expresión de desprecio de sí pertenece al lenguaje ascético del libro: busca rebajar la presunción y recuerda que tampoco conocemos hasta dónde resistiremos nuestras propias faltas.",
+    "pts": [
+      "El conocimiento aumenta la responsabilidad de actuar con coherencia.",
+      "Ver una falta ajena no autoriza a sentirse mejor que esa persona."
+    ],
+    "q": "¿En qué situación te cuesta reconocer que también puedes equivocarte?",
+    "pages": "PDF, página 4"
+  },
+  {
+    "id": "ic-1-03",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 3",
+    "title": "Aprender la verdad y practicarla",
+    "text": "La verdad que busca el autor nace de la unión con Dios y transforma la conducta. Advierte que acumular opiniones o discutir cuestiones difíciles puede distraer de corregir los propios defectos. Aclara que el conocimiento es bueno, pero pone por delante una conciencia recta, la caridad y una vida que corresponda a lo aprendido.",
+    "pts": [
+      "Ordenar las intenciones ayuda a dar unidad a las acciones.",
+      "La sabiduría se reconoce en el bien realizado, además de lo estudiado."
+    ],
+    "q": "¿Qué idea que ya conoces te falta llevar a la práctica?",
+    "pages": "PDF, páginas 4–5"
+  },
+  {
+    "id": "ic-1-04",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 4",
+    "title": "Actuar con prudencia",
+    "text": "El capítulo pide examinar lo que escuchamos antes de creerlo o repetirlo, especialmente cuando perjudica a otra persona. También aconseja evitar la terquedad en las decisiones y escuchar a alguien sensato y de buena conciencia. Para Kempis, la humildad permite aprender y favorece una forma de actuar más serena.",
+    "pts": [
+      "Las noticias sobre otros necesitan cuidado antes de convertirse en juicios.",
+      "Pedir consejo supone aceptar que el propio criterio puede ser incompleto."
+    ],
+    "q": "¿Qué convendría comprobar antes de repetirlo?",
+    "pages": "PDF, página 5"
+  },
+  {
+    "id": "ic-1-05",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 5",
+    "title": "Leer la Escritura con humildad",
+    "text": "Kempis invita a leer la Biblia buscando la verdad y el provecho espiritual. Considera valiosos tanto los textos sencillos como los profundos, y pide atender al mensaje en vez de dejarse impresionar por la fama de quien escribe. Recomienda preguntar con buena disposición y escuchar, sin convertir la lectura en una exhibición de saber.",
+    "pts": [
+      "La lectura religiosa se orienta a comprender y vivir la fe.",
+      "La sencillez del lenguaje también puede comunicar una enseñanza importante."
+    ],
+    "q": "¿Qué cambia cuando lees para aprender y no para destacar?",
+    "pages": "PDF, páginas 5–6"
+  },
+  {
+    "id": "ic-1-06",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 6",
+    "title": "Revisar los deseos que nos dominan",
+    "text": "Según el capítulo, el deseo desordenado produce inquietud: quien lo sigue se irrita al encontrar obstáculos y puede sentir remordimiento después de satisfacerlo. El autor relaciona la paz con la humildad y el dominio de las pasiones. Dentro de su propuesta espiritual, aprender a renunciar a ciertos impulsos permite dirigir el corazón hacia Dios.",
+    "pts": [
+      "Obtener lo deseado no asegura la paz de la conciencia.",
+      "La vida interior exige revisar qué deseos gobiernan las decisiones."
+    ],
+    "q": "¿Qué deseo se vuelve desproporcionado cuando alguien te contradice?",
+    "pages": "PDF, página 6"
+  },
+  {
+    "id": "ic-1-07",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 7",
+    "title": "Confiar en Dios sin presumir",
+    "text": "El autor aconseja hacer lo que está a nuestro alcance y confiar el resultado a Dios. Advierte sobre el orgullo apoyado en la riqueza, las influencias, el aspecto físico o las propias capacidades. También considera una forma de soberbia presumir de las buenas obras, porque atribuye a Dios todo bien y reconoce que su juicio supera la apariencia.",
+    "pts": [
+      "Servir a otros forma parte del seguimiento de Cristo.",
+      "Reconocer los dones recibidos puede convertirse en gratitud en vez de superioridad."
+    ],
+    "q": "¿Qué capacidad tuya podrías poner al servicio de alguien?",
+    "pages": "PDF, página 6"
+  },
+  {
+    "id": "ic-1-08",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 8",
+    "title": "Cuidar la cercanía y las confidencias",
+    "text": "Este consejo, dirigido a un ambiente religioso de retiro, recomienda elegir con prudencia a quién se confía la intimidad. Kempis prefiere la compañía sencilla y devota, y desaconseja buscar reconocimiento entre personas poderosas. Incluye restricciones de trato propias de ese contexto monástico. Distingue el amor debido a todos del grado de familiaridad que se establece con cada persona.",
+    "pts": [
+      "La confianza personal se deposita en personas de buen juicio.",
+      "El prestigio de alguien no basta para conocer su vida de cerca."
+    ],
+    "q": "¿Qué hace que una persona sea digna de tu confianza?",
+    "pages": "PDF, página 6"
+  },
+  {
+    "id": "ic-1-09",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 9",
+    "title": "La obediencia en la vida religiosa",
+    "text": "Kempis presenta la obediencia a un superior como una disciplina para renunciar a la voluntad propia. Distingue entre someterse por obligación y hacerlo de corazón por amor a Dios. En ese marco comunitario, cambiar de lugar no resuelve por sí solo la inquietud interior. También recuerda que nadie sabe todo y que a veces conviene ceder el propio parecer por la paz.",
+    "pts": [
+      "El capítulo trata especialmente de la relación entre religioso y superior.",
+      "La disposición interior importa tanto como el cumplimiento exterior."
+    ],
+    "q": "¿Cómo distingue el autor obedecer por obligación y hacerlo por convicción?",
+    "pages": "PDF, páginas 6–7"
+  },
+  {
+    "id": "ic-1-10",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 10",
+    "title": "Dar espacio al silencio",
+    "text": "El autor observa que muchas conversaciones buscan distraer o aliviar el corazón, pero pueden terminar alimentando la vanidad y dispersando la atención. Propone moderar las palabras, cuidar el tiempo y reservar espacio para la oración. También valora las conversaciones espirituales cuando ayudan a las personas a crecer juntas en su relación con Dios.",
+    "pts": [
+      "La forma de conversar influye en el recogimiento interior.",
+      "Hablar puede ser provechoso cuando contribuye al bien de quienes escuchan."
+    ],
+    "q": "¿Qué conversación te dejó claridad y cuál solo te dispersó?",
+    "pages": "PDF, página 7"
+  },
+  {
+    "id": "ic-1-11",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 11",
+    "title": "Trabajar las raíces de la inquietud",
+    "text": "Kempis relaciona la falta de paz con la intromisión en asuntos ajenos y con deseos que ocupan todo el corazón. Pide corregir los defectos desde su raíz, en lugar de limitarse a cumplir prácticas religiosas externas. El crecimiento requiere constancia en las cosas pequeñas, perseverancia ante las dificultades y confianza en la ayuda de Dios.",
+    "pts": [
+      "Las costumbres pequeñas preparan para afrontar dificultades mayores.",
+      "El paso del tiempo no garantiza por sí mismo una vida espiritual más profunda."
+    ],
+    "q": "¿Qué hábito concreto te gustaría corregir con constancia?",
+    "pages": "PDF, página 7"
+  },
+  {
+    "id": "ic-1-12",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 12",
+    "title": "Buscar a Dios en la adversidad",
+    "text": "El capítulo interpreta las contrariedades y las críticas como ocasiones para reconocer la fragilidad propia y la necesidad de Dios. Al perder apoyos externos, el creyente puede revisar dónde coloca su esperanza. El lenguaje del destierro y del deseo de estar con Cristo expresa la orientación del autor hacia la vida eterna y su desconfianza de una seguridad terrenal absoluta.",
+    "pts": [
+      "Las dificultades pueden poner al descubierto la búsqueda de aprobación.",
+      "La respuesta que propone el texto es acudir a Dios con humildad y oración."
+    ],
+    "q": "¿Dónde buscas apoyo cuando tus buenas intenciones son malinterpretadas?",
+    "pages": "PDF, páginas 7–8"
+  },
+  {
+    "id": "ic-1-13",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 13",
+    "title": "Atravesar las tentaciones con paciencia",
+    "text": "Kempis afirma que nadie está completamente libre de tentaciones. Recomienda reconocerlas desde el comienzo, trabajar sus raíces y pedir ayuda a Dios. La paciencia, la humildad y el consejo de otra persona permiten resistir mejor que una lucha impaciente basada solo en la propia fuerza. También pide comprensión hacia quien está pasando por una prueba semejante.",
+    "pts": [
+      "Cambiar de lugar no elimina automáticamente las dificultades interiores.",
+      "La firmeza se prueba en las molestias pequeñas y en las grandes adversidades."
+    ],
+    "q": "¿A quién puedes pedir consejo cuando una dificultad se repite?",
+    "pages": "PDF, páginas 8–9"
+  },
+  {
+    "id": "ic-1-14",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 14",
+    "title": "Examinarse antes de juzgar",
+    "text": "El autor pide mirar las propias intenciones antes de juzgar la conducta ajena. Señala que nuestras preferencias pueden parecer verdades indiscutibles: creemos estar en paz mientras todo sale como queremos, pero nos alteramos ante una contradicción. La conversión que propone consiste en dejar que el amor a Dios revise también esos intereses escondidos.",
+    "pts": [
+      "El amor propio puede alterar la manera de interpretar lo que hacen otros.",
+      "Examinar la propia conducta resulta más provechoso que vigilar constantemente la ajena."
+    ],
+    "q": "¿Qué juicio tuyo podría estar influido por una preferencia personal?",
+    "pages": "PDF, página 9"
+  },
+  {
+    "id": "ic-1-15",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 15",
+    "title": "Hacer el bien por amor",
+    "text": "Kempis sostiene que el valor espiritual de una obra depende del amor con que se realiza. Una acción pequeña puede ser fecunda, mientras una grande puede esconder comodidad o deseo de recompensa. Permite cambiar una obra buena por otra más necesaria para el prójimo, siempre que el cambio responda a la caridad y al bien común.",
+    "pts": [
+      "La intención se revisa incluso cuando la acción parece generosa.",
+      "Para el autor, todo bien recibido y realizado remite finalmente a Dios."
+    ],
+    "q": "¿A quién beneficia de verdad la ayuda que estás ofreciendo?",
+    "pages": "PDF, página 9"
+  },
+  {
+    "id": "ic-1-16",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 16",
+    "title": "Convivir con los defectos ajenos",
+    "text": "El capítulo propone paciencia ante defectos que no logramos corregir, junto con oración y ayuda mutua. Recuerda la contradicción de exigir perfección a otros mientras pedimos comprensión para nuestras propias faltas. Si una advertencia no da resultado, insiste en dejar la disputa obstinada y reconocer que todos necesitamos apoyo, consuelo y corrección.",
+    "pts": [
+      "La convivencia revela cuánto cuesta aplicar a otros la comprensión que pedimos.",
+      "La comunidad se sostiene cuando sus miembros se ayudan a llevar sus cargas."
+    ],
+    "q": "¿Qué comprensión recibes y te cuesta ofrecer a otra persona?",
+    "pages": "PDF, páginas 9–10"
+  },
+  {
+    "id": "ic-1-17",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 17",
+    "title": "Vivir la vocación en comunidad",
+    "text": "En este capítulo específicamente monástico, Kempis explica que la vida religiosa exige perseverar en la convivencia y aceptar renuncias personales. El vestido o los signos de pertenencia no bastan: deben acompañarse de una transformación de las costumbres. Presenta el monasterio como un lugar de servicio, trabajo y aprendizaje de la humildad ante Dios.",
+    "pts": [
+      "La vocación se reconoce en la conducta diaria, además de sus signos externos.",
+      "La convivencia exige aprender a ceder y a servir."
+    ],
+    "q": "¿Qué conducta daría coherencia a un compromiso que has asumido?",
+    "pages": "PDF, página 10"
+  },
+  {
+    "id": "ic-1-18",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 18",
+    "title": "Aprender de los primeros religiosos",
+    "text": "El autor recuerda el ejemplo de santos, mártires y antiguos monjes que perseveraron en la oración, el trabajo y una vida austera. Elogia sus renuncias y su entrega a Dios para cuestionar la comodidad de los religiosos de su tiempo. El centro del capítulo es recuperar el fervor de una vocación mirando modelos de caridad, paciencia y fidelidad.",
+    "pts": [
+      "Los ejemplos antiguos funcionan como estímulo dentro de la tradición monástica.",
+      "Kempis valora una entrega que se mantiene incluso en circunstancias difíciles."
+    ],
+    "q": "¿Qué ejemplo de constancia te anima a cuidar tus compromisos?",
+    "pages": "PDF, páginas 10–11"
+  },
+  {
+    "id": "ic-1-19",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 19",
+    "title": "Renovar el propósito cada día",
+    "text": "Kempis recomienda comenzar el día con un propósito y terminarlo revisando pensamientos, palabras y acciones. Pide constancia en la oración y en el trabajo, confiando en la gracia de Dios. También introduce matices: las prácticas deben adaptarse a cada persona y momento, y atender al prójimo puede justificar interrumpir una rutina espiritual.",
+    "pts": [
+      "Las tareas comunes tienen prioridad sobre una devoción personal que las descuida.",
+      "El examen diario permite reconocer faltas y retomar un propósito concreto."
+    ],
+    "q": "¿Qué propósito podrías revisar con sinceridad al terminar el día?",
+    "pages": "PDF, páginas 11–12"
+  },
+  {
+    "id": "ic-1-20",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 20",
+    "title": "Reservar un espacio de silencio",
+    "text": "Desde el ideal de retiro monástico, el autor aconseja reducir conversaciones innecesarias y buscar tiempo para la oración y la lectura. Presenta la soledad como un espacio para reconocer las propias faltas y acercarse a Jesús. Advierte que incluso una buena reputación puede volver presuntuosa a una persona si deja de cuidar su vida interior.",
+    "pts": [
+      "El recogimiento se vuelve más familiar cuando se practica con constancia.",
+      "El capítulo invita a agradecer a Dios y revisar la conciencia en el silencio."
+    ],
+    "q": "¿Qué distracción podrías apartar para dedicar un momento a la reflexión?",
+    "pages": "PDF, páginas 12–13"
+  },
+  {
+    "id": "ic-1-21",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 21",
+    "title": "Arrepentirse de corazón",
+    "text": "La compunción es el dolor por las propias faltas que mueve a buscar a Dios y cambiar de vida. Kempis la presenta con un lenguaje exigente de lágrimas, penitencia y temor al juicio. Pide examinarse antes de corregir a otros y sustituir hábitos que dañan la conciencia por otros más acordes con la fe.",
+    "pts": [
+      "El arrepentimiento del capítulo busca una transformación de la conducta.",
+      "Sus imágenes de castigo y penitencia pertenecen a la espiritualidad ascética del texto."
+    ],
+    "q": "¿Qué diferencia encuentras entre lamentar una falta y empezar a repararla?",
+    "pages": "PDF, página 13"
+  },
+  {
+    "id": "ic-1-22",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 22",
+    "title": "Reconocer la fragilidad humana",
+    "text": "El autor recuerda que nadie puede acomodar toda la vida a su voluntad y que la riqueza o el poder también traen preocupaciones. Interpreta la fragilidad y la repetición de las faltas desde la doctrina del pecado y la esperanza de la vida eterna. Aun con esa visión severa, llama a comenzar la enmienda mientras queda tiempo.",
+    "pts": [
+      "La apariencia de una vida cómoda no revela todas sus dificultades.",
+      "La paciencia y la misericordia de Dios sostienen el esfuerzo por mejorar."
+    ],
+    "q": "¿Qué cambio has aplazado porque esperabas circunstancias perfectas?",
+    "pages": "PDF, páginas 13–14"
+  },
+  {
+    "id": "ic-1-23",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 23",
+    "title": "Recordar que el tiempo es limitado",
+    "text": "Kempis propone pensar en la muerte para vivir con mayor responsabilidad ante Dios. La duración de la vida es incierta, por lo que aconseja aprovechar el presente para practicar el bien, corregir faltas y cuidar la conciencia. En su perspectiva cristiana, prepararse para morir significa orientar la vida hacia Cristo y la eternidad.",
+    "pts": [
+      "La cantidad de años vividos no equivale a una vida bien aprovechada.",
+      "El texto recomienda actuar ahora, en lugar de confiar toda reparación al futuro."
+    ],
+    "q": "¿Qué asunto importante merece atención mientras tienes la oportunidad de atenderlo?",
+    "pages": "PDF, páginas 14–15"
+  },
+  {
+    "id": "ic-1-24",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 24",
+    "title": "La responsabilidad ante el juicio de Dios",
+    "text": "El capítulo presenta el juicio divino y las penas del pecado con imágenes religiosas muy severas. Su propósito es impulsar el arrepentimiento, el perdón y una vida coherente. Para Kempis, la paciencia, la misericordia y la conciencia limpia tendrán más valor que el poder o el prestigio; el amor a Dios es la orientación más plena para apartarse del mal.",
+    "pts": [
+      "El juicio aparece como una rendición de cuentas que no se evita con apariencias.",
+      "Perdonar, pedir perdón y corregirse forman parte de la preparación que propone."
+    ],
+    "q": "¿Qué responsabilidad personal te invita a reconocer este capítulo?",
+    "pages": "PDF, páginas 15–16"
+  },
+  {
+    "id": "ic-1-25",
+    "g": 1,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Libro I · Capítulo 25",
+    "title": "Perseverar en la enmienda",
+    "text": "Kempis invita al religioso a recordar su vocación y avanzar sin exigir una certeza anticipada sobre su perseverancia. Propone trabajar precisamente lo que más cuesta, imitar los buenos ejemplos y mirar la vida de Jesús crucificado. La fidelidad se construye al cuidar las pequeñas acciones, aprovechar el tiempo y renovar el esfuerzo con la ayuda de Dios.",
+    "pts": [
+      "La incertidumbre sobre el futuro no impide hacer hoy el bien posible.",
+      "La constancia depende del ejercicio diario y de la gracia, además del entusiasmo inicial."
+    ],
+    "q": "¿Qué paso puedes dar hoy sin esperar a sentirte completamente seguro?",
+    "pages": "PDF, páginas 16–18"
+  },
+  {
+    "id": "ic-2-01",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 1",
+    "title": "Preparar una morada interior para Cristo",
+    "text": "El segundo libro comienza invitando a volver el corazón hacia Dios. Kempis describe la vida interior como una relación cercana con Jesús que sostiene al creyente en las dificultades. Recomienda contemplar la pasión de Cristo y disminuir el apego a los apoyos pasajeros. El recogimiento, según el capítulo, puede mantenerse también en medio del trabajo necesario.",
+    "pts": [
+      "La conversión comprende las intenciones y la manera de afrontar la vida.",
+      "La confianza en Cristo ocupa el centro de la paz que busca el autor."
+    ],
+    "q": "¿Qué lugar tiene la vida interior en tus ocupaciones habituales?",
+    "pages": "PDF, páginas 19–20"
+  },
+  {
+    "id": "ic-2-02",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 2",
+    "title": "Aceptar la corrección con humildad",
+    "text": "Kempis aconseja preocuparse primero por la conciencia y por la relación con Dios, en vez de contar partidarios y adversarios. Considera que reconocer los defectos, incluso cuando otros los señalan, puede preservar la humildad. La defensa última del creyente queda confiada a Dios, que conoce el momento y la manera de ayudarlo.",
+    "pts": [
+      "La corrección puede revelar algo que la buena reputación mantenía oculto.",
+      "El capítulo pide abandonar la necesidad de quedar siempre por encima de los demás."
+    ],
+    "q": "¿Qué parte de una crítica podrías examinar sin justificarte de inmediato?",
+    "pages": "PDF, página 20"
+  },
+  {
+    "id": "ic-2-03",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 3",
+    "title": "Contribuir a la paz",
+    "text": "El autor invita a revisar la propia agitación antes de intentar corregir a otros. Señala que el enojo alimenta sospechas y nos hace olvidar nuestras obligaciones. La convivencia pacífica requiere ofrecer la paciencia que también necesitamos recibir. El mérito espiritual se muestra especialmente al convivir con personas difíciles y afrontar contradicciones sin aumentar la discordia.",
+    "pts": [
+      "Tener paz interior influye en cómo interpretamos las acciones ajenas.",
+      "Kempis valora a quien procura llevar paz a otras personas."
+    ],
+    "q": "¿Qué reacción tuya suele aumentar una discusión?",
+    "pages": "PDF, página 20"
+  },
+  {
+    "id": "ic-2-04",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 4",
+    "title": "Actuar con una intención sencilla",
+    "text": "Kempis compara la sencillez y la pureza con dos alas: una dirige la intención a Dios y la otra ordena los afectos. Si una obra busca agradar a Dios y beneficiar al prójimo, puede alimentar la vida interior. El capítulo relaciona la mirada sobre el mundo con la disposición del corazón y reconoce en las criaturas señales de la bondad divina.",
+    "pts": [
+      "Una intención clara puede dar unidad a las tareas de cada día.",
+      "La conversión modifica tanto la conducta como la manera de mirar."
+    ],
+    "q": "¿Qué intención está guiando una decisión que hoy te ocupa?",
+    "pages": "PDF, páginas 20–21"
+  },
+  {
+    "id": "ic-2-05",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 5",
+    "title": "Volver la mirada hacia uno mismo",
+    "text": "El capítulo advierte que podemos confundir una reacción apasionada con celo por el bien, y luego justificarla. Kempis pide atender a la propia conciencia antes de hablar de los asuntos ajenos. Para él, el recogimiento consiste en poner a Dios en el centro y reconocer los apegos que dispersan el corazón.",
+    "pts": [
+      "Las buenas explicaciones de una acción no garantizan que su motivo sea bueno.",
+      "La revisión interior exige tiempo y sinceridad acerca de las propias faltas."
+    ],
+    "q": "¿Hay una reacción que hayas justificado sin revisar su verdadero motivo?",
+    "pages": "PDF, página 21"
+  },
+  {
+    "id": "ic-2-06",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 6",
+    "title": "La alegría de una conciencia recta",
+    "text": "Kempis sitúa la alegría espiritual en una conciencia que busca actuar bien ante Dios. La alabanza o el desprecio de los demás no cambian por sí solos lo que una persona es. Por eso invita a cuidar las intenciones y la conducta, confiando más en el conocimiento que Dios tiene del corazón que en la aprobación pública.",
+    "pts": [
+      "La reputación exterior puede diferir de la realidad de la conciencia.",
+      "La rectitud interior permite sostenerse también durante la adversidad."
+    ],
+    "q": "¿Qué decisión conservarías aunque nadie la aplaudiera?",
+    "pages": "PDF, página 21"
+  },
+  {
+    "id": "ic-2-07",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 7",
+    "title": "Poner a Jesús en el centro del amor",
+    "text": "Kempis presenta el amor de Jesús como el apoyo fiel que permanece frente a la fragilidad de los vínculos y bienes humanos. Invita a confiarle la vida y la muerte, y a revisar si buscamos en los demás solamente descanso o provecho. La prioridad absoluta de Cristo organiza los afectos dentro de la propuesta espiritual del libro.",
+    "pts": [
+      "El autor contrapone la permanencia de Cristo a lo cambiante de la vida humana.",
+      "El corazón se dispone para Dios al renunciar a convertir otros apoyos en su fin último."
+    ],
+    "q": "¿Qué significa para el autor amar a Jesús por encima de todas las cosas?",
+    "pages": "PDF, páginas 21–22"
+  },
+  {
+    "id": "ic-2-08",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 8",
+    "title": "Cultivar la amistad con Jesús",
+    "text": "El capítulo describe la relación con Jesús como una amistad que se cuida mediante humildad, paz y recogimiento. Pide amar a amigos y enemigos por él y orar por todos, sin buscar ocupar el centro del corazón ajeno. También reconoce que el consuelo espiritual cambia: cuando falta, invita a perseverar con esperanza en la voluntad de Dios.",
+    "pts": [
+      "La amistad con Cristo orienta la manera de amar a otras personas.",
+      "Los cambios en el ánimo espiritual no deben llevar a desesperar."
+    ],
+    "q": "¿Cómo relaciona este capítulo la oración con el trato a amigos y adversarios?",
+    "pages": "PDF, página 22"
+  },
+  {
+    "id": "ic-2-09",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 9",
+    "title": "Permanecer fiel cuando falta el consuelo",
+    "text": "Kempis distingue la fidelidad a Dios del gusto que se siente al rezar. Afirma que incluso los santos atravesaron periodos de sequedad y tentación. El consuelo se recibe con gratitud, como un don; su ausencia se atraviesa con paciencia y oración. La intención es aprender a amar a Dios sin hacer de la satisfacción personal una condición.",
+    "pts": [
+      "El entusiasmo espiritual puede alternarse con momentos de aridez.",
+      "El texto propone confiar en la misericordia de Dios durante ambas experiencias."
+    ],
+    "q": "¿Qué te ayuda a sostener un compromiso cuando desaparece el entusiasmo?",
+    "pages": "PDF, páginas 22–23"
+  },
+  {
+    "id": "ic-2-10",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 10",
+    "title": "Agradecer los dones recibidos",
+    "text": "El autor pide recibir la ayuda y el consuelo de Dios con gratitud y humildad. Advierte que una experiencia agradable o elevada puede alimentar la soberbia si se toma como mérito propio. Valora los dones pequeños y propone reconocer su origen. Cuando el consuelo disminuye, invita a continuar la oración y la paciencia, sin exigirlo como un derecho.",
+    "pts": [
+      "El fruto que busca en una experiencia espiritual es una mayor humildad.",
+      "Agradecer también lo pequeño ayuda a reconocer el valor del don recibido."
+    ],
+    "q": "¿Qué bien cotidiano has dejado de agradecer por considerarlo insignificante?",
+    "pages": "PDF, páginas 23–24"
+  },
+  {
+    "id": "ic-2-11",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 11",
+    "title": "Amar a Cristo sin buscar recompensa",
+    "text": "Kempis observa que muchas personas desean los beneficios de seguir a Jesús y pocas aceptan las dificultades de ese seguimiento. Plantea un amor que permanezca también cuando faltan consuelo y ventajas. Incluso dar bienes, hacer penitencia o saber mucho resulta insuficiente si persiste la búsqueda de admiración o de provecho personal.",
+    "pts": [
+      "El capítulo examina qué esperamos recibir a cambio de nuestra entrega.",
+      "La pobreza de espíritu incluye, para el autor, renunciar a la propia exaltación."
+    ],
+    "q": "¿Qué queda de una acción generosa cuando no recibes reconocimiento?",
+    "pages": "PDF, páginas 24–25"
+  },
+  {
+    "id": "ic-2-12",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Libro II · Capítulo 12",
+    "title": "El camino de la cruz",
+    "text": "La cruz ocupa aquí el centro del seguimiento de Jesús. Kempis afirma que las dificultades acompañan cualquier vida y pide atravesarlas unidos a Cristo, con la esperanza de compartir su resurrección. Dentro de su visión ascética, llega a valorar el sufrimiento aceptado por amor a Dios. Esa disposición depende de la gracia, pues reconoce que supera la inclinación humana espontánea.",
+    "pts": [
+      "La pasión y la resurrección de Cristo dan el sentido religioso de este capítulo.",
+      "El autor sitúa la fidelidad durante la adversidad por encima del consuelo agradable."
+    ],
+    "q": "¿Cómo une el capítulo la esperanza cristiana y las dificultades de la vida?",
+    "pages": "PDF, páginas 25–27"
+  },
+  {
+    "id": "ic-3-01",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 1",
+    "title": "Escuchar a Cristo en el interior",
+    "text": "El tercer libro adopta la forma de un diálogo de oración entre el alma y Jesucristo. Comienza invitando a reducir las distracciones para atender a Dios en el corazón. La voz de Cristo, tal como la presenta el autor, ofrece paz y orienta al creyente hacia lo eterno.",
+    "pts": [
+      "El diálogo es un recurso espiritual de la obra para meditar la relación con Jesús.",
+      "La escucha requiere atención y disposición para dejar lo que dispersa."
+    ],
+    "q": "¿Qué ocupa tu atención cuando intentas guardar silencio?",
+    "pages": "PDF, página 28"
+  },
+  {
+    "id": "ic-3-02",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 2",
+    "title": "Pedir una comprensión que transforme",
+    "text": "El alma reconoce que maestros y profetas pueden explicar las palabras de la fe, pero pide a Dios la luz interior para comprenderlas y vivirlas. La oración solicita algo más que información: desea amor, fuerza para actuar y corrección de la propia vida. La enseñanza exterior encuentra así su sentido en una transformación interior.",
+    "pts": [
+      "En el texto, Dios permite que la enseñanza produzca fruto en el corazón.",
+      "Conocer y creer una palabra implica también acogerla y ponerla en práctica."
+    ],
+    "q": "¿Qué enseñanza te gustaría comprender también con tus acciones?",
+    "pages": "PDF, página 28"
+  },
+  {
+    "id": "ic-3-03",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 3",
+    "title": "Acoger la palabra con humildad",
+    "text": "La voz de Cristo pide escuchar con recogimiento y conservar sus palabras para los momentos difíciles. El capítulo contrasta el esfuerzo dedicado a ganancias pasajeras con la poca atención prestada a la vida eterna. Termina en una oración que reconoce la propia pobreza y solicita la gracia necesaria para hacer la voluntad de Dios.",
+    "pts": [
+      "La lectura puede adquirir un sentido nuevo cuando llega una prueba.",
+      "La respuesta propuesta combina escucha, perseverancia y petición de ayuda."
+    ],
+    "q": "¿Qué enseñanza quisieras recordar cuando te encuentres bajo presión?",
+    "pages": "PDF, páginas 28–29"
+  },
+  {
+    "id": "ic-3-04",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 4",
+    "title": "Vivir con verdad ante Dios",
+    "text": "El diálogo invita a presentarse ante Dios con sinceridad, reconociendo tanto las faltas como el bien que se dejó de hacer. Advierte contra usar las buenas obras para engrandecerse o reducir la devoción a signos externos. El autor sitúa la conversión del corazón por encima de la curiosidad orgullosa sobre los misterios divinos.",
+    "pts": [
+      "Los libros y las imágenes acompañan una devoción que debe llegar al interior.",
+      "Reconocer la propia fragilidad forma parte de la humildad que propone Kempis."
+    ],
+    "q": "¿Qué diferencia hay entre parecer devoto y cuidar realmente las intenciones?",
+    "pages": "PDF, páginas 29–30"
+  },
+  {
+    "id": "ic-3-05",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 5",
+    "title": "La fuerza del amor a Dios",
+    "text": "El alma agradece a Dios su consuelo y le pide un amor más firme. Kempis describe ese amor como una fuerza que sostiene el esfuerzo, da generosidad y permite perseverar en las dificultades. El amante busca a Dios mismo por encima de los dones recibidos y aprende a amar a otras personas desde esa relación.",
+    "pts": [
+      "El amor aparece unido a la fidelidad, la prudencia, la humildad y el agradecimiento.",
+      "El capítulo reconoce que amar puede implicar dolor y esfuerzo."
+    ],
+    "q": "¿Qué cambia en una tarea cuando la haces por amor?",
+    "pages": "PDF, páginas 30–31"
+  },
+  {
+    "id": "ic-3-06",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 6",
+    "title": "La fidelidad que pone a prueba el amor",
+    "text": "El capítulo distingue amar a Dios de depender de un sentimiento agradable. Una contradicción o la pérdida de consuelo permiten reconocer la firmeza del propósito. También diferencia las imaginaciones que aparecen contra la voluntad de la decisión de aceptarlas. Frente a la dificultad o una caída, pide retomar la oración con confianza y humildad.",
+    "pts": [
+      "Los sentimientos cambiantes no bastan para medir la fidelidad espiritual.",
+      "El texto anima a recomenzar y a evitar la presunción sobre las propias fuerzas."
+    ],
+    "q": "¿Cómo distingues un pensamiento involuntario de una decisión que eliges sostener?",
+    "pages": "PDF, páginas 31–32"
+  },
+  {
+    "id": "ic-3-07",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 7",
+    "title": "Recibir la gracia sin presumir",
+    "text": "Kempis recomienda discreción acerca de las experiencias espirituales y constancia cuando desaparece el entusiasmo. Advierte que emprender prácticas superiores a las propias fuerzas, sin consejo ni prudencia, puede desorientar. La vida interior se valora por la humildad y la caridad, más que por visiones, conocimientos o momentos de exaltación.",
+    "pts": [
+      "El fervor necesita acompañarse de sensatez y reconocimiento de los propios límites.",
+      "La oración y las buenas obras pueden continuar durante la sequedad."
+    ],
+    "q": "¿Qué compromiso puedes sostener de manera realista, incluso cuando baja el entusiasmo?",
+    "pages": "PDF, páginas 32–33"
+  },
+  {
+    "id": "ic-3-08",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 8",
+    "title": "Reconocer la dependencia de Dios",
+    "text": "En esta oración, el alma se presenta como débil y pequeña ante Dios. Emplea expresiones intensas de abatimiento propias del libro para reconocer que no se basta a sí misma. A la vez, agradece un amor divino que se adelanta a sus necesidades, la fortalece y la ayuda a encontrarse al dejar la búsqueda egoísta de sí.",
+    "pts": [
+      "El reconocimiento de la fragilidad desemboca aquí en confianza y gratitud.",
+      "La gracia se entiende como un don que supera lo merecido o esperado."
+    ],
+    "q": "¿Qué diferencia ves entre atribuirte todo y reconocer la ayuda que recibes?",
+    "pages": "PDF, página 33"
+  },
+  {
+    "id": "ic-3-09",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 9",
+    "title": "Orientarlo todo hacia Dios",
+    "text": "La voz de Cristo pide que Dios sea el fin de los deseos y las acciones. El capítulo presenta los bienes como dones que proceden de él y que deben volver a él en agradecimiento. Esa orientación busca corregir la vanagloria, la envidia y la apropiación orgullosa de lo recibido.",
+    "pts": [
+      "Los dones se reconocen como bienes recibidos, además de capacidades utilizadas.",
+      "La caridad ensancha el corazón al desplazar la necesidad de sobresalir."
+    ],
+    "q": "¿Cómo cambiaría tu manera de usar un talento si lo vivieras como un don?",
+    "pages": "PDF, página 33"
+  },
+  {
+    "id": "ic-3-10",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 10",
+    "title": "Servir a Dios con gratitud",
+    "text": "El alma agradece la creación, la conversión y la posibilidad de servir a Dios en la vida religiosa. Kempis presenta ese servicio como respuesta a un amor previo: Dios ya ha dado los bienes con los que se le sirve. Renunciar a lo que aparta de él se describe como un camino de libertad interior y alegría espiritual.",
+    "pts": [
+      "La vocación religiosa aparece como una gracia que se recibe agradecidamente.",
+      "El servicio nace del reconocimiento de los beneficios de Dios."
+    ],
+    "q": "¿Qué servicio podrías entender como una respuesta agradecida?",
+    "pages": "PDF, páginas 33–34"
+  },
+  {
+    "id": "ic-3-11",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 11",
+    "title": "Examinar los propios deseos",
+    "text": "La voz de Cristo invita a revisar los deseos antes de convertirlos en decisiones. Incluso una intención que parece buena puede esconder orgullo o interés personal. Kempis propone pedir orientación a Dios, actuar con prudencia y moderar un entusiasmo que pueda causar desorden. En su marco ascético, aprender a contentarse con poco ayuda a ordenar el corazón.",
+    "pts": [
+      "Una apariencia de bien no sustituye el examen de las motivaciones.",
+      "El deseo necesita discernimiento, consejo y una medida adecuada."
+    ],
+    "q": "¿Qué intención convendría revisar antes de actuar?",
+    "pages": "PDF, página 34"
+  },
+  {
+    "id": "ic-3-12",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 12",
+    "title": "Aprender paciencia en la dificultad",
+    "text": "El diálogo presenta la paciencia como una necesidad de toda la vida. La paz espiritual puede existir en medio de las pruebas cuando el creyente permanece unido a Dios. Frente a los placeres pasajeros y las malas costumbres, Kempis propone oración, trabajo útil y perseverancia, con la esperanza puesta en la vida eterna.",
+    "pts": [
+      "El capítulo relaciona la paciencia con la lucha por ordenar los deseos.",
+      "Cambiar una costumbre exige práctica sostenida y ayuda de la gracia."
+    ],
+    "q": "¿Qué costumbre buena te ayudaría a responder con más paciencia?",
+    "pages": "PDF, páginas 34–35"
+  },
+  {
+    "id": "ic-3-13",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 13",
+    "title": "La obediencia en la vida religiosa",
+    "text": "En el contexto monástico, Kempis presenta la obediencia al superior como un ejercicio de humildad y renuncia a la propia voluntad. Su modelo es Cristo, que asumió una vida humana de servicio. El lenguaje de rebajamiento es intenso, pero el diálogo también afirma que el alma es preciosa para Dios y que su perdón manifiesta amor.",
+    "pts": [
+      "La enseñanza se sitúa en una comunidad religiosa y su disciplina.",
+      "La humildad se vincula tanto con el servicio de Cristo como con la misericordia divina."
+    ],
+    "q": "¿Cómo relaciona este capítulo la obediencia monástica con el ejemplo de Jesús?",
+    "pages": "PDF, página 35"
+  },
+  {
+    "id": "ic-3-14",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 14",
+    "title": "Humildad ante el juicio de Dios",
+    "text": "El alma contempla con temor y respeto los juicios de Dios. Reconoce que incluso las personas que parecen firmes pueden caer, y que ninguna virtud se sostiene sin ayuda divina. Esta oración busca frenar el orgullo por las propias obras y disminuir la dependencia de las alabanzas humanas, siempre cambiantes.",
+    "pts": [
+      "La fragilidad invita a vigilar la propia conducta sin presumir de seguridad.",
+      "El reconocimiento de las virtudes se acompaña de gratitud por la gracia."
+    ],
+    "q": "¿Qué te ayuda a recibir un reconocimiento sin sentirte superior?",
+    "pages": "PDF, páginas 35–36"
+  },
+  {
+    "id": "ic-3-15",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 15",
+    "title": "Pedir con confianza y apertura",
+    "text": "Kempis propone presentar los deseos a Dios dejando en sus manos lo que sea mejor. La oración pide un bien si favorece su gloria y la salvación del alma, sin imponer el momento ni la forma de recibirlo. El capítulo termina solicitando que la propia voluntad se una a la divina y encuentre allí descanso.",
+    "pts": [
+      "El deseo personal puede necesitar corrección y discernimiento.",
+      "La confianza incluye aceptar una respuesta distinta de la esperada."
+    ],
+    "q": "¿Qué petición te cuesta hacer sin aferrarte a un resultado concreto?",
+    "pages": "PDF, página 36"
+  },
+  {
+    "id": "ic-3-16",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 16",
+    "title": "Buscar en Dios un consuelo duradero",
+    "text": "El alma reconoce que los placeres y apoyos del mundo no pueden satisfacerla por completo. Su esperanza se dirige a Dios y a la vida eterna, mientras utiliza con medida los bienes presentes. El diálogo invita a conservar la confianza cuando falta el consuelo sensible y a aceptar ese tiempo como parte de la vida espiritual.",
+    "pts": [
+      "Los bienes temporales se valoran desde una esperanza que los supera.",
+      "La ausencia de una emoción agradable no cierra la posibilidad de confiar."
+    ],
+    "q": "¿Qué sostiene tu esperanza cuando no encuentras alivio inmediato?",
+    "pages": "PDF, página 36"
+  },
+  {
+    "id": "ic-3-17",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 17",
+    "title": "Confiar en lo que Dios dispone",
+    "text": "La voz de Cristo recuerda que la mirada humana es limitada y que Dios conoce lo que conviene al alma. Esta responde ofreciendo aceptar la abundancia o la pobreza, la alegría o la dificultad. Su petición central es permanecer unida a Dios y ser preservada del pecado, por encima de conseguir circunstancias favorables.",
+    "pts": [
+      "La oración expresa disponibilidad ante situaciones que no se controlan.",
+      "El bien principal del capítulo es conservar la relación con Dios."
+    ],
+    "q": "¿Qué consideras esencial mantener cuando cambian tus circunstancias?",
+    "pages": "PDF, páginas 36–37"
+  },
+  {
+    "id": "ic-3-18",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 18",
+    "title": "Mirar las dificultades desde la vida de Cristo",
+    "text": "Cristo aparece recordando la pobreza, las ofensas y la ingratitud que aceptó por amor durante su vida terrena. El alma agradece ese ejemplo y la salvación que atribuye a su pasión. Kempis anima a recorrer las dificultades con paciencia, apoyándose en la gracia y orientando la vida hacia el reino eterno.",
+    "pts": [
+      "La paciencia cristiana se inspira aquí en la vida y la pasión de Jesús.",
+      "El agradecimiento acompaña la petición de fuerza para perseverar."
+    ],
+    "q": "¿Qué aspecto del ejemplo de Jesús quiere destacar el autor ante la adversidad?",
+    "pages": "PDF, página 37"
+  },
+  {
+    "id": "ic-3-19",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 19",
+    "title": "Una paciencia que no elige las pruebas",
+    "text": "Kempis sostiene que la paciencia se reconoce cuando la dificultad resulta incómoda y viene de alguien inesperado. En su enseñanza ascética, soportar una ofensa por amor a Dios cuenta más que escoger pruebas fáciles de aceptar. El alma admite que esa disposición supera sus fuerzas y pide la ayuda de la gracia.",
+    "pts": [
+      "El capítulo cuestiona una paciencia que depende del rango o la simpatía de quien ofende.",
+      "La respuesta espiritual propuesta se apoya en la oración y el ejemplo de Cristo."
+    ],
+    "q": "¿Por qué resulta más difícil tener paciencia con unas personas que con otras?",
+    "pages": "PDF, páginas 37–38"
+  },
+  {
+    "id": "ic-3-20",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 20",
+    "title": "Reconocer la propia fragilidad",
+    "text": "El alma confiesa que una pequeña contrariedad puede alterarla y que algunas imágenes o pensamientos son difíciles de apartar. Pide a Dios fuerza y claridad en vez de fingir que domina todas sus reacciones. El capítulo contrasta las promesas del placer, la riqueza y el prestigio con la paz que busca en la vida espiritual.",
+    "pts": [
+      "Reconocer una dificultad abre espacio para pedir ayuda.",
+      "La oración expresa tanto el cansancio interior como el deseo de volver a Dios."
+    ],
+    "q": "¿Qué dificultad podrías reconocer con sinceridad en lugar de ocultarla?",
+    "pages": "PDF, página 38"
+  },
+  {
+    "id": "ic-3-21",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 21",
+    "title": "Descansar en Dios por encima de sus dones",
+    "text": "El alma pide encontrar en Dios un descanso mayor que el que ofrecen la salud, el conocimiento, los honores o incluso las experiencias espirituales. Su deseo es amar a Dios mismo, más allá de los beneficios que recibe. La oración pasa de la añoranza y el dolor al agradecimiento por una presencia que reconoce como fruto de la misericordia.",
+    "pts": [
+      "El capítulo distingue al dador de los dones que concede.",
+      "La búsqueda comienza, según el alma, porque Dios ya la ha despertado."
+    ],
+    "q": "¿Cómo distingue esta oración el amor a Dios del apego a sus beneficios?",
+    "pages": "PDF, páginas 38–39"
+  },
+  {
+    "id": "ic-3-22",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 22",
+    "title": "Agradecer sin compararse",
+    "text": "Kempis invita a recordar los bienes del cuerpo y del alma como dones de Dios. Quien recibió más no debe presumir, y quien recibió menos no necesita vivir en la envidia. La oración propone agradecer también una vida humilde y discreta, tomando como ejemplo la sencillez de los apóstoles y confiando en la voluntad divina.",
+    "pts": [
+      "La gratitud pierde fuerza cuando se convierte en comparación.",
+      "La cantidad de dones recibidos no justifica sentirse superior a otra persona."
+    ],
+    "q": "¿Qué bien de tu vida podrías agradecer sin compararlo con el de alguien más?",
+    "pages": "PDF, páginas 39–40"
+  },
+  {
+    "id": "ic-3-23",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 23",
+    "title": "Cuatro disposiciones para la paz",
+    "text": "El capítulo reúne cuatro consejos de su espiritualidad ascética: ceder la propia voluntad, preferir menos posesiones, aceptar un lugar humilde y desear que se cumpla la voluntad de Dios. El alma reconoce la dificultad de vivirlos. Después pide ayuda frente a los pensamientos que la inquietan y luz para ordenar sus deseos.",
+    "pts": [
+      "La paz se relaciona con la humildad, la sencillez y la confianza en Dios.",
+      "Los consejos desembocan en oración, porque el alma admite que necesita ayuda."
+    ],
+    "q": "¿Cuál de estas cuatro disposiciones te resulta más difícil de comprender?",
+    "pages": "PDF, página 40"
+  },
+  {
+    "id": "ic-3-24",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 24",
+    "title": "Dejar la curiosidad sobre la vida ajena",
+    "text": "La voz de Cristo pide al alma que atienda su propia conducta y reduzca el interés innecesario por lo que otros hacen o dicen. Dios conoce sus intenciones, mientras cada persona debe responder por sus actos. Kempis relaciona la búsqueda de prestigio y relaciones influyentes con la dispersión del corazón.",
+    "pts": [
+      "El capítulo cuestiona la curiosidad que distrae de las propias responsabilidades.",
+      "La vigilancia interior y la oración ocupan el lugar del juicio sobre otros."
+    ],
+    "q": "¿Qué atención dedicada a la vida ajena podrías devolver a tus propias responsabilidades?",
+    "pages": "PDF, páginas 40–41"
+  },
+  {
+    "id": "ic-3-25",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 25",
+    "title": "Una paz que atraviesa los cambios",
+    "text": "Kempis sitúa la paz del corazón en la humildad, la paciencia y la disposición a cumplir la voluntad de Dios. Advierte que la ausencia de problemas o una emoción religiosa intensa no demuestran por sí mismas crecimiento espiritual. El diálogo valora la fidelidad y el agradecimiento que permanecen tanto en circunstancias favorables como difíciles.",
+    "pts": [
+      "La paz espiritual puede convivir con esfuerzos y contrariedades.",
+      "El crecimiento se reconoce en la orientación de la vida, además de lo que se siente."
+    ],
+    "q": "¿En qué apoyas tu paz cuando las cosas no salen como esperabas?",
+    "pages": "PDF, página 41"
+  },
+  {
+    "id": "ic-3-26",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 26",
+    "title": "Cuidar lo necesario sin quedar atrapado",
+    "text": "El alma pide libertad interior para atravesar las preocupaciones diarias sin perder su orientación hacia Dios. Reconoce que comer, vestirse y atender el cuerpo son necesidades que deben cuidarse. Su petición es usar esos bienes con medida y evitar que el exceso de apego desplace la oración, la paciencia y el amor a lo eterno.",
+    "pts": [
+      "El texto reconoce expresamente la necesidad de sostener la vida corporal.",
+      "La oración humilde acompaña la búsqueda de una relación moderada con los bienes."
+    ],
+    "q": "¿Qué cuidado necesario ocupa hoy más espacio del que le corresponde?",
+    "pages": "PDF, páginas 41–42"
+  },
+  {
+    "id": "ic-3-27",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 27",
+    "title": "Soltar los apegos que quitan libertad",
+    "text": "Kempis llama amor propio al apego desordenado al interés personal, las posesiones y el prestigio. Señala que cambiar de lugar o conseguir más cosas no resuelve por sí solo la inquietud del corazón. El alma pide al Espíritu Santo fuerza interior y sabiduría para distinguir lo pasajero, resistir la adulación y buscar a Dios.",
+    "pts": [
+      "El problema señalado es la forma de aferrarse a los bienes y honores.",
+      "La libertad interior requiere revisar los deseos, además de las circunstancias."
+    ],
+    "q": "¿Qué cambio interior esperas conseguir mediante un cambio exterior?",
+    "pages": "PDF, página 42"
+  },
+  {
+    "id": "ic-3-28",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 28",
+    "title": "No depender de las opiniones ajenas",
+    "text": "La voz de Cristo invita a conservar la calma ante los comentarios desfavorables. Dentro de su enseñanza sobre humildad, Kempis recomienda mirar la propia conducta y acudir a Dios antes de reaccionar. La opinión de otra persona no transforma por sí misma lo que alguien es; hacer depender de ella la paz produce inquietud.",
+    "pts": [
+      "El capítulo propone distancia frente a la alabanza y la crítica.",
+      "El silencio y la oración ayudan a no responder desde la agitación."
+    ],
+    "q": "¿Cuánto cambia tu tranquilidad según lo que otros dicen de ti?",
+    "pages": "PDF, página 42"
+  },
+  {
+    "id": "ic-3-29",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 29",
+    "title": "Orar en medio de la angustia",
+    "text": "El alma reconoce su aflicción y pide a Dios que la ayude a atravesarla con paciencia. La oración combina el deseo de ser liberada con la aceptación de la voluntad divina. Su confianza se apoya en la misericordia y en el recuerdo de otras ocasiones en que encontró auxilio durante una dificultad.",
+    "pts": [
+      "La oración expresa el dolor de forma directa, sin ocultarlo.",
+      "Recordar la ayuda recibida sostiene la esperanza durante la prueba."
+    ],
+    "q": "¿Qué recuerdo de apoyo te ayuda cuando atraviesas una dificultad?",
+    "pages": "PDF, páginas 42–43"
+  },
+  {
+    "id": "ic-3-30",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 30",
+    "title": "Recobrar la confianza sin anticipar desgracias",
+    "text": "El diálogo invita a acudir a la oración y a perseverar cuando falta el consuelo. Kempis advierte que imaginar males futuros puede añadir un sufrimiento innecesario al presente. La voz de Cristo recuerda que una contrariedad no significa que todo esté perdido y pide confiar en una misericordia capaz de renovar las fuerzas.",
+    "pts": [
+      "El estado de ánimo del momento no permite juzgar toda la vida espiritual.",
+      "La esperanza se ejercita atendiendo al día presente y esperando con paciencia."
+    ],
+    "q": "¿Qué preocupación se apoya en algo que aún no ha ocurrido?",
+    "pages": "PDF, página 43"
+  },
+  {
+    "id": "ic-3-31",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 31",
+    "title": "Preparar el corazón para la contemplación",
+    "text": "El alma pide desprenderse de los apegos que dificultan su encuentro con Dios. Kempis distingue el conocimiento adquirido mediante el estudio de la sabiduría espiritual que transforma las intenciones. Critica que se valoren mucho los talentos visibles y poco la paciencia, la humildad y el recogimiento. Para él, la contemplación requiere gracia y una vida interior coherente.",
+    "pts": [
+      "Desear contemplar a Dios implica cuidar las disposiciones del corazón.",
+      "El valor de una acción incluye la intención de la que nace."
+    ],
+    "q": "¿Qué cualidad interior sueles pasar por alto al admirar a alguien?",
+    "pages": "PDF, páginas 43–44"
+  },
+  {
+    "id": "ic-3-32",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 32",
+    "title": "La renuncia como camino de libertad",
+    "text": "Kempis presenta la renuncia al interés egoísta como parte central de la perfección religiosa. El alma reconoce que esta entrega no se consigue de inmediato. La voz de Cristo la anima a perseverar y a buscar una sabiduría que puede parecer pequeña ante el mundo, pero que debe reflejarse en las obras.",
+    "pts": [
+      "El capítulo vincula la libertad espiritual con el desprendimiento y la obediencia religiosa.",
+      "Comprender una enseñanza exige tiempo y práctica, además de palabras."
+    ],
+    "q": "¿Por qué el alma dice que esta enseñanza no es una tarea de un solo día?",
+    "pages": "PDF, página 44"
+  },
+  {
+    "id": "ic-3-33",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 33",
+    "title": "Mantener el rumbo entre emociones cambiantes",
+    "text": "El diálogo reconoce que el ánimo pasa por alegría, tristeza, entusiasmo y cansancio. La persona no controla todos esos cambios, pero puede orientar su intención hacia Dios en medio de ellos. Kempis invita a examinar los intereses que se mezclan con un propósito aparentemente recto y a recuperar una intención más sencilla.",
+    "pts": [
+      "Los deseos del momento pueden cambiar rápidamente.",
+      "Un propósito estable ayuda a atravesar la variación del ánimo."
+    ],
+    "q": "¿Qué propósito quieres cuidar aunque hoy te sientas diferente que ayer?",
+    "pages": "PDF, páginas 44–45"
+  },
+  {
+    "id": "ic-3-34",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 34",
+    "title": "Encontrar en Dios el centro de la alegría",
+    "text": "El alma celebra a Dios como su bien principal y como la presencia que da sentido a los demás bienes. Pide luz para purificar y renovar su interior, porque reconoce que todavía vive conflictos entre sus deseos. La oración reúne gratitud, anhelo de unión y petición de ayuda frente a esa lucha.",
+    "pts": [
+      "Los bienes de la creación se reciben como motivo para alabar al Creador.",
+      "El deseo de unión con Dios convive con el reconocimiento de la propia dificultad."
+    ],
+    "q": "¿Cómo cambia la mirada sobre lo cotidiano cuando se vive desde el agradecimiento?",
+    "pages": "PDF, página 45"
+  },
+  {
+    "id": "ic-3-35",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 35",
+    "title": "Perseverar sin esperar una vida sin pruebas",
+    "text": "Kempis utiliza la imagen de un combate espiritual para describir las tentaciones y dificultades de la vida. Recomienda paciencia, constancia y confianza en Dios. Recuerda que los santos también conocieron la sequedad y el sufrimiento, y sitúa el descanso pleno en la vida eterna, hacia la que se dirige la esperanza cristiana.",
+    "pts": [
+      "La falta de consuelo no es presentada como una experiencia extraña a la santidad.",
+      "La perseverancia necesita apoyarse en Dios y renovarse a lo largo del camino."
+    ],
+    "q": "¿Qué te ayuda a mantener un compromiso cuando deja de resultar fácil?",
+    "pages": "PDF, páginas 45–46"
+  },
+  {
+    "id": "ic-3-36",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 36",
+    "title": "Actuar con conciencia sin agradar a todos",
+    "text": "El capítulo recuerda que nadie puede evitar todos los juicios desfavorables. Toma a san Pablo como ejemplo de alguien que trabajó por otros y aun así recibió críticas. Kempis propone confiar en Dios y conservar la paciencia; también reconoce que a veces Pablo respondió para evitar que su silencio confundiera a otras personas.",
+    "pts": [
+      "La búsqueda del bien no garantiza la aprobación de todo el mundo.",
+      "El ejemplo de Pablo incluye tanto la paciencia como una respuesta oportuna."
+    ],
+    "q": "¿Cuándo conviene aclarar una crítica y cuándo dejar de discutir?",
+    "pages": "PDF, página 46"
+  },
+  {
+    "id": "ic-3-37",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 37",
+    "title": "Renovar la entrega en lo cotidiano",
+    "text": "La voz de Cristo pide una entrega constante, tanto en los asuntos pequeños como en los grandes. Kempis observa que algunas personas ofrecen todo al comienzo y luego recuperan sus reservas cuando llegan dificultades. En su lenguaje ascético, renunciar a sí mismo significa dejar los apegos y buscar una unión más plena con Jesús.",
+    "pts": [
+      "La entrega se presenta como una disposición que necesita renovarse.",
+      "El capítulo relaciona el apego desordenado con el temor y las preocupaciones excesivas."
+    ],
+    "q": "¿Qué diferencia hay entre una promesa inicial y una disposición sostenida?",
+    "pages": "PDF, página 46"
+  },
+  {
+    "id": "ic-3-38",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 38",
+    "title": "Conservar la libertad entre las ocupaciones",
+    "text": "Kempis invita a ocuparse de los asuntos exteriores sin quedar dominado por ellos. Los bienes temporales pueden servir a un fin bueno cuando se usan con orden. Ante decisiones difíciles, propone acudir a la oración, como Moisés, y evitar conclusiones precipitadas basadas únicamente en las apariencias o en palabras agradables.",
+    "pts": [
+      "Las tareas se realizan mejor cuando no absorben por completo el interior.",
+      "El discernimiento pide detenerse, escuchar y pedir orientación a Dios."
+    ],
+    "q": "¿En qué decisión te ayudaría detenerte antes de dejarte llevar por la primera impresión?",
+    "pages": "PDF, páginas 46–47"
+  },
+  {
+    "id": "ic-3-39",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 39",
+    "title": "Soltar la insistencia en el propio plan",
+    "text": "El alma encomienda sus asuntos a Dios y pide no quedar atrapada por lo que podría suceder. La respuesta señala que a veces se desea algo con intensidad y luego pierde su atractivo al conseguirlo. Kempis recomienda vigilar esos cambios del deseo, renunciar al afán de imponerlo todo y perseverar en la oración.",
+    "pts": [
+      "La intensidad de un deseo no garantiza que sea estable.",
+      "Las decisiones pequeñas también permiten ejercitar confianza y desprendimiento."
+    ],
+    "q": "¿Qué deseo parecía indispensable y perdió importancia después de conseguirlo?",
+    "pages": "PDF, página 47"
+  },
+  {
+    "id": "ic-3-40",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 40",
+    "title": "Reconocer de dónde viene el bien",
+    "text": "El alma contrasta su propia fragilidad y sus cambios con la bondad constante de Dios. Agradece la ayuda que la sostiene y reconoce como don cualquier bien que realiza. Kempis critica la vanagloria y dirige la alabanza hacia Dios, cerrando con una oración a la Trinidad.",
+    "pts": [
+      "El lenguaje de pequeñez expresa la dependencia de la gracia en esta espiritualidad.",
+      "La gratitud busca sustituir la necesidad de atribuirse todo el mérito."
+    ],
+    "q": "¿Cómo puedes reconocer tu esfuerzo y agradecer al mismo tiempo lo que has recibido?",
+    "pages": "PDF, páginas 47–48"
+  },
+  {
+    "id": "ic-3-41",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 41",
+    "title": "Desprenderse de la necesidad de honores",
+    "text": "El capítulo aborda la tristeza que puede aparecer al ver reconocidos a otros mientras uno pasa inadvertido. La voz de Cristo orienta la mirada hacia Dios. El alma responde con expresiones severas de humildad, propias del tono ascético de la obra, y pide liberarse de la vanidad que le impide encontrar paz interior.",
+    "pts": [
+      "El deseo de reconocimiento puede convertirse en una fuente de comparación y malestar.",
+      "El texto sitúa la unión con Dios por encima del honor social."
+    ],
+    "q": "¿Qué sientes cuando el reconocimiento llega a otra persona?",
+    "pages": "PDF, página 48"
+  },
+  {
+    "id": "ic-3-42",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 42",
+    "title": "Ordenar la amistad desde el amor a Dios",
+    "text": "Kempis propone que el amor a los amigos encuentre su fundamento en Dios, a quien considera permanente frente a las pérdidas humanas. Su ideal de recogimiento religioso pide desprenderse incluso de los afectos que ocupan todo el corazón. La humildad y la libertad frente al apego aparecen como disposiciones para recibir la gracia.",
+    "pts": [
+      "La amistad se interpreta dentro de una relación prioritaria con Dios.",
+      "La fuerte llamada al desprendimiento pertenece al marco ascético de la obra."
+    ],
+    "q": "¿Qué diferencia plantea el autor entre amar a alguien y hacer depender de él toda la paz?",
+    "pages": "PDF, página 48"
+  },
+  {
+    "id": "ic-3-43",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 43",
+    "title": "Aprender para transformar la vida",
+    "text": "La voz de Cristo pide que la lectura y el estudio no sirvan para exhibir superioridad. Kempis valora una enseñanza que mueva a corregir las faltas y a amar a Dios. Explica que un mismo libro puede producir frutos distintos en cada lector, porque la comprensión espiritual también depende de la disposición interior y de la gracia.",
+    "pts": [
+      "El conocimiento se juzga por su relación con la conducta y la vida espiritual.",
+      "La humildad prepara al lector para recibir una enseñanza con profundidad."
+    ],
+    "q": "¿Qué lectura ha cambiado una acción tuya, además de darte información?",
+    "pages": "PDF, páginas 48–49"
+  },
+  {
+    "id": "ic-3-44",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 44",
+    "title": "Elegir qué merece nuestra atención",
+    "text": "El capítulo recomienda no entrar en todas las discusiones ni empeñarse en imponer el propio parecer. El alma observa que se trabaja intensamente por pequeñas ganancias mientras se descuida el crecimiento espiritual. Kempis invita a volver al interior y a revisar la importancia real que se concede a cada asunto.",
+    "pts": [
+      "Dejar una disputa puede proteger la paz y liberar atención.",
+      "Las preocupaciones visibles pueden desplazar asuntos interiores más importantes."
+    ],
+    "q": "¿Qué discusión está recibiendo más energía de la que merece?",
+    "pages": "PDF, página 49"
+  },
+  {
+    "id": "ic-3-45",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 45",
+    "title": "Hablar con verdad y creer con prudencia",
+    "text": "El alma recuerda decepciones y fidelidades inesperadas, y reconoce lo difícil que es preverlo todo. Kempis recomienda no aceptar ni repetir cualquier comentario, guardar la discreción y elegir con cuidado a quién se confía algo. La oración pide palabras verdaderas y coherencia para no cometer la indiscreción que se critica en otros.",
+    "pts": [
+      "La prudencia incluye verificar antes de creer y pensar antes de hablar.",
+      "La confianza última se dirige a Dios, a quien el texto presenta como siempre fiel."
+    ],
+    "q": "¿Qué podrías evitar repetir hasta saber si es cierto y necesario?",
+    "pages": "PDF, página 49"
+  },
+  {
+    "id": "ic-3-46",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 46",
+    "title": "Recibir una crítica con verdad y confianza",
+    "text": "El diálogo distingue entre una falta real, que pide enmienda, y una acusación injusta, ante la que propone paciencia y confianza en Dios. Kempis examina el temor al desprecio y la facilidad para justificarse. El alma termina pidiendo misericordia y humildad, porque reconoce que su propia conciencia tampoco conoce todo con claridad.",
+    "pts": [
+      "El primer paso propuesto es examinar sinceramente la propia conducta.",
+      "Ni la acusación ni una defensa favorable sustituyen el juicio de Dios en la obra."
+    ],
+    "q": "¿Qué parte de una crítica merece revisión, aunque su forma resulte desagradable?",
+    "pages": "PDF, páginas 49–50"
+  },
+  {
+    "id": "ic-3-47",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 47",
+    "title": "Sostener el esfuerzo con esperanza eterna",
+    "text": "La voz de Cristo anima a continuar las tareas y la oración sin dejarse vencer por el cansancio. Contrasta la duración limitada de las pruebas con la paz de la vida eterna. La imagen de los santos, que atravesaron dificultades y ahora descansan junto a Dios, sirve de aliento para perseverar.",
+    "pts": [
+      "La esperanza cristiana da un horizonte a los esfuerzos del presente.",
+      "El texto reúne lectura, trabajo, canto, silencio y oración dentro de una misma fidelidad."
+    ],
+    "q": "¿Qué esperanza te ayuda a sostener un esfuerzo que tarda en dar fruto?",
+    "pages": "PDF, páginas 50–51"
+  },
+  {
+    "id": "ic-3-48",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 48",
+    "title": "Reconocer hacia dónde va el corazón",
+    "text": "El alma anhela la paz de la eternidad y expresa el cansancio que le producen las preocupaciones, las tentaciones y sus propias contradicciones. Reconoce también que se distrae al orar. Kempis observa que el pensamiento vuelve con facilidad a lo que se ama, y pide a Dios que reúna una atención dispersa.",
+    "pts": [
+      "La imagen de la vida como peregrinación sostiene el deseo de unión con Dios.",
+      "Las distracciones permiten reconocer qué ocupa habitualmente el corazón."
+    ],
+    "q": "¿A qué vuelve tu pensamiento cuando intentas estar en silencio?",
+    "pages": "PDF, página 51"
+  },
+  {
+    "id": "ic-3-49",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 49",
+    "title": "Esperar sin abandonar la tarea presente",
+    "text": "La voz de Cristo presenta el deseo de la vida eterna como un don que debe recibirse con gratitud. A la vez, recuerda que todavía queda un tiempo de trabajo y prueba. En su marco monástico, Kempis vincula esa espera con la obediencia, la humildad y la disposición a servir sin buscar reconocimiento.",
+    "pts": [
+      "El deseo de lo eterno se acompaña de perseverancia en la vida presente.",
+      "Incluso un deseo espiritual puede mezclarse con interés personal."
+    ],
+    "q": "¿Cómo puede una esperanza futura ayudarte a cumplir una responsabilidad actual?",
+    "pages": "PDF, páginas 51–52"
+  },
+  {
+    "id": "ic-3-50",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 50",
+    "title": "Poner el desconsuelo en manos de Dios",
+    "text": "El alma expresa su tristeza y se entrega a Dios cuando no encuentra el consuelo de otros momentos. En el lenguaje penitencial de la obra, interpreta las pruebas como una ocasión de corrección y humildad. Termina pidiendo discernimiento para valorar lo que Dios considera bueno y no depender de las apariencias ni de la alabanza humana.",
+    "pts": [
+      "El capítulo transforma el desconsuelo en una oración de confianza y examen interior.",
+      "Sus imágenes severas de corrección pertenecen a la espiritualidad ascética del texto."
+    ],
+    "q": "¿Qué pide aprender el alma al final de esta oración?",
+    "pages": "PDF, páginas 52–53"
+  },
+  {
+    "id": "ic-3-51",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 51",
+    "title": "Volver a las tareas sencillas",
+    "text": "Kempis reconoce que nadie permanece siempre en el fervor o en una contemplación intensa. Cuando aparece la sequedad, propone continuar con tareas humildes y buenas obras, esperando con paciencia la renovación interior. La vida espiritual incluye estos trabajos ordinarios y la confianza en Dios durante los cambios del ánimo.",
+    "pts": [
+      "La falta de entusiasmo puede acompañarse de una práctica sencilla y constante.",
+      "Las buenas obras cotidianas también forman parte del camino espiritual."
+    ],
+    "q": "¿Qué acción sencilla puedes sostener en un día de poco ánimo?",
+    "pages": "PDF, página 53"
+  },
+  {
+    "id": "ic-3-52",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 52",
+    "title": "Arrepentirse y esperar misericordia",
+    "text": "Esta oración emplea un lenguaje penitencial muy severo para reconocer el pecado y la dificultad de cambiar. El alma afirma que el consuelo divino es un don de misericordia, no algo que pueda exigir por sus méritos. El capítulo desemboca en esperanza: el arrepentimiento sincero permite pedir perdón y buscar la reconciliación con Dios.",
+    "pts": [
+      "El eje de la oración es la conversión del corazón y la petición de perdón.",
+      "La severidad con que el alma se describe se acompaña de confianza en la misericordia."
+    ],
+    "q": "¿Cómo pasa esta oración del reconocimiento de la falta a la esperanza de reconciliación?",
+    "pages": "PDF, páginas 53–54"
+  },
+  {
+    "id": "ic-3-53",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 53",
+    "title": "Hacer espacio para la gracia",
+    "text": "Kempis recomienda silencio, soledad y oración como medios para disponer el corazón a la gracia. Desde su ideal de retiro religioso, pide examinar los apegos a placeres, relaciones e intereses propios. Describe el dominio de sí como un orden en el que los deseos siguen a la razón y esta se orienta hacia Dios.",
+    "pts": [
+      "El recogimiento busca reducir aquello que dispersa la atención espiritual.",
+      "La renuncia se dirige a los afectos que el autor considera desordenados."
+    ],
+    "q": "¿Qué entiende el autor por tener un corazón disponible para Dios?",
+    "pages": "PDF, página 54"
+  },
+  {
+    "id": "ic-3-54",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 54",
+    "title": "Distinguir el interés propio de la gracia",
+    "text": "Kempis compara dos orientaciones interiores. Llama naturaleza a las inclinaciones heridas que buscan comodidad, prestigio y provecho propio, y gracia al don de Dios que conduce a la humildad, la generosidad y el servicio. La comparación invita a examinar motivaciones que pueden parecer buenas y a dirigir las acciones hacia Dios y el bien de otros.",
+    "pts": [
+      "En este capítulo, naturaleza tiene un sentido espiritual y moral específico.",
+      "La gracia se reconoce en la caridad, el desprendimiento y la ausencia de vanagloria."
+    ],
+    "q": "¿Qué diferencia hay entre ayudar para recibir reconocimiento y ayudar por el bien de alguien?",
+    "pages": "PDF, páginas 54–55"
+  },
+  {
+    "id": "ic-3-55",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 55",
+    "title": "Necesitar ayuda para vivir el bien conocido",
+    "text": "El alma reconoce que puede distinguir el bien y, aun así, tener dificultad para realizarlo. Kempis explica esa tensión desde la doctrina del pecado original: la naturaleza fue creada buena, pero está herida. Por eso pide la gracia de Dios para comenzar, continuar y completar las buenas obras, uniendo la fe con la caridad.",
+    "pts": [
+      "Conocer lo correcto no garantiza por sí solo la fuerza para vivirlo.",
+      "La gracia aparece como ayuda que ilumina, fortalece y transforma el corazón."
+    ],
+    "q": "¿En qué situación notas una distancia entre lo que sabes y lo que haces?",
+    "pages": "PDF, páginas 55–56"
+  },
+  {
+    "id": "ic-3-56",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 56",
+    "title": "Seguir a Cristo con la vida",
+    "text": "El diálogo presenta a Jesús como camino, verdad y vida. Seguirlo significa guardar sus mandamientos y aceptar la cruz dentro del sentido cristiano de entrega y perseverancia. Kempis insiste en que conocer estas palabras debe llevar a practicarlas. El cierre invita a avanzar juntos, apoyados en Cristo como ejemplo y ayuda.",
+    "pts": [
+      "La imitación de Jesús se expresa en decisiones y acciones concretas.",
+      "La cruz se vincula con la fidelidad del discípulo y la esperanza de vida eterna."
+    ],
+    "q": "¿Qué diferencia señala el capítulo entre conocer el camino de Jesús y recorrerlo?",
+    "pages": "PDF, páginas 56–57"
+  },
+  {
+    "id": "ic-3-57",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 57",
+    "title": "Recomenzar después de una falta",
+    "text": "La voz de Cristo reconoce la facilidad con que una pequeña contrariedad puede inquietar al alma. La anima a no quedar abatida por mucho tiempo, a cuidar sus palabras cuando está irritada y a volver a confiar. Kempis presenta la humildad y la paciencia ante la propia fragilidad como parte del crecimiento espiritual.",
+    "pts": [
+      "Una caída o una reacción difícil no significan que todo esté perdido.",
+      "La oración permite reconocer la debilidad y retomar el camino."
+    ],
+    "q": "¿Cómo podrías corregir una reacción sin quedarte atrapado en ella?",
+    "pages": "PDF, página 57"
+  },
+  {
+    "id": "ic-3-58",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 58",
+    "title": "Aceptar los límites del propio conocimiento",
+    "text": "Kempis desaconseja las disputas sobre los juicios ocultos de Dios y sobre qué santo tiene mayor gloria. Considera que esas comparaciones alimentan orgullo y rivalidad. Presenta a los santos unidos por el amor y orienta al lector hacia la humildad, la propia conversión y una devoción que produzca frutos en su vida.",
+    "pts": [
+      "El capítulo distingue la vida espiritual de la curiosidad que busca clasificar lo inaccesible.",
+      "La comunión de los santos se describe como una unión de amor y gratitud a Dios."
+    ],
+    "q": "¿Qué pregunta te ayuda a vivir mejor y cuál solo alimenta una discusión?",
+    "pages": "PDF, páginas 57–58"
+  },
+  {
+    "id": "ic-3-59",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Libro III · Capítulo 59",
+    "title": "Confiar la vida entera a Dios",
+    "text": "El tercer libro termina con una oración que presenta a Dios como esperanza, amigo fiel y refugio. El alma reconoce que las relaciones, los conocimientos y los bienes no bastan para sostenerla sin su ayuda. Pide que Dios habite en ella, la conserve en medio de los peligros y la conduzca por el camino de la paz.",
+    "pts": [
+      "La confianza reúne las alegrías, las necesidades y las pruebas de la vida.",
+      "La petición final busca una presencia divina que transforme y acompañe al alma."
+    ],
+    "q": "¿Qué quisieras confiar a Dios al terminar esta parte de la lectura?",
+    "pages": "PDF, páginas 58–59"
+  },
+  {
+    "id": "ic-4-01",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 1",
+    "title": "Acercarse a la comunión con reverencia",
+    "text": "El cuarto libro comienza con la invitación de Jesús a recibirlo en la Eucaristía, entendida desde la fe católica como su presencia real. El alma desea acercarse, pero reconoce su falta de preparación. Los ejemplos bíblicos del arca y del templo le sirven para valorar el recogimiento, la gratitud y la reverencia ante el sacramento.",
+    "pts": [
+      "La comunión se presenta como encuentro con Cristo, por encima de la curiosidad religiosa.",
+      "La familiaridad con el sacramento puede llevar a descuidar su significado."
+    ],
+    "q": "¿Qué contraste hace el autor entre la preparación de los antiguos templos y la del corazón?",
+    "pages": "PDF, páginas 60–61"
+  },
+  {
+    "id": "ic-4-02",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 2",
+    "title": "Reconocer el amor en la Eucaristía",
+    "text": "El alma se acerca a Jesús confiando en su bondad, como alguien necesitado que busca alimento y ayuda. Agradece que Cristo se entregue en el sacramento, bajo las especies de pan y vino, según la fe que expresa la obra. Kempis invita a renovar la devoción y a no vivir la misa como una costumbre vacía.",
+    "pts": [
+      "La Eucaristía se entiende como don de amor que supera el mérito personal.",
+      "La gratitud y la humildad acompañan la preparación para recibirla."
+    ],
+    "q": "¿Qué ayuda a vivir con atención algo que se repite con frecuencia?",
+    "pages": "PDF, páginas 61–62"
+  },
+  {
+    "id": "ic-4-03",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 3",
+    "title": "La comunión como alimento del camino",
+    "text": "El alma pide recibir a Cristo con devoción y renovar su unión con él. Kempis presenta la comunión frecuente como alimento espiritual que sostiene a quien reconoce su fragilidad. La relaciona con la oración, la confesión y una preparación adecuada, para perseverar en el bien durante la vida, entendida como peregrinación.",
+    "pts": [
+      "La frecuencia de la comunión aparece unida al cuidado de la disposición interior.",
+      "La imagen del alimento expresa la necesidad de renovar las fuerzas espirituales."
+    ],
+    "q": "¿Por qué utiliza el capítulo la imagen de alguien que necesita alimento para seguir caminando?",
+    "pages": "PDF, página 62"
+  },
+  {
+    "id": "ic-4-04",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 4",
+    "title": "Crecer en fe, esperanza y caridad",
+    "text": "El alma pide la gracia de recibir la Eucaristía con fe y amor. Kempis atribuye al sacramento frutos espirituales como el fortalecimiento de la esperanza, el crecimiento de la caridad y la ayuda frente a las tentaciones. Reconoce que el creyente puede acercarse con poco fervor y pedir a Cristo que complete lo que le falta.",
+    "pts": [
+      "Los frutos descritos pertenecen al sentido espiritual del sacramento en la obra.",
+      "La humildad permite pedir ayuda sin aparentar una devoción perfecta."
+    ],
+    "q": "¿Qué fruto espiritual destaca más para ti en este capítulo?",
+    "pages": "PDF, páginas 62–63"
+  },
+  {
+    "id": "ic-4-05",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 5",
+    "title": "El sacerdocio como responsabilidad de servicio",
+    "text": "El capítulo se dirige especialmente al sacerdote y expone la dignidad de celebrar la Eucaristía según la fe católica. Kempis insiste en que ese ministerio exige una vida coherente, oración y humildad. Interpreta las cruces de las vestiduras litúrgicas como recordatorio de la pasión de Cristo y de la responsabilidad de interceder por todos.",
+    "pts": [
+      "La dignidad del ministerio se acompaña de una responsabilidad mayor.",
+      "La celebración se vincula con el bien de la Iglesia, los vivos y los difuntos."
+    ],
+    "q": "¿Qué responsabilidades une el autor a la dignidad del sacerdocio?",
+    "pages": "PDF, páginas 63–64"
+  },
+  {
+    "id": "ic-4-06",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 6",
+    "title": "Pedir orientación para prepararse",
+    "text": "En esta breve oración, el alma expresa dos temores: alejarse de Cristo y acercarse al sacramento sin la disposición debida. En vez de resolver sola esa tensión, le pide que le enseñe a preparar el corazón. El capítulo abre así la reflexión sobre el examen interior y la reverencia antes de la comunión.",
+    "pts": [
+      "El deseo de recibir a Cristo convive con el reconocimiento de la propia fragilidad.",
+      "La preparación comienza con una petición humilde de orientación."
+    ],
+    "q": "¿Qué necesita aprender el alma para acercarse con confianza y respeto?",
+    "pages": "PDF, página 64"
+  },
+  {
+    "id": "ic-4-07",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 7",
+    "title": "Examinar la conciencia y proponerse cambiar",
+    "text": "El capítulo recomienda una preparación que incluya humildad, examen de conciencia, arrepentimiento y confesión. Recorre faltas cotidianas como juzgar con dureza, hablar sin cuidado o acumular buenos propósitos sin cumplirlos. La revisión termina en una entrega a Dios y en la confianza de que su voluntad es la conversión y la vida del pecador.",
+    "pts": [
+      "El examen busca conducir a una enmienda concreta, además de reconocer errores.",
+      "La petición de perdón se apoya en la misericordia divina."
+    ],
+    "q": "¿Qué propósito de cambio podrías convertir en una acción concreta?",
+    "pages": "PDF, página 64"
+  },
+  {
+    "id": "ic-4-08",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 8",
+    "title": "Ofrecer la propia vida con Cristo",
+    "text": "La voz de Cristo relaciona su entrega en la cruz con la respuesta que espera del creyente. Kempis afirma que ofrecer bienes sin entregar el corazón deja incompleta esa respuesta. La misa se presenta como ocasión para poner ante Dios la voluntad, los deseos y la vida entera, buscando una unión más profunda con Jesús.",
+    "pts": [
+      "La ofrenda tiene un sentido personal y espiritual, más amplio que dar cosas.",
+      "La entrega voluntaria precede y orienta las demás obras."
+    ],
+    "q": "¿Qué diferencia plantea el capítulo entre ofrecer algo y comprometerse uno mismo?",
+    "pages": "PDF, páginas 64–65"
+  },
+  {
+    "id": "ic-4-09",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 9",
+    "title": "Orar por todos y buscar reconciliación",
+    "text": "El alma ofrece a Dios sus faltas, sus buenas obras y los deseos de quienes la rodean. La oración incluye familiares, amigos, benefactores, vivos y difuntos. También recuerda a quienes la han ofendido y a quienes ella ha dañado, pidiendo perdón mutuo y que desaparezcan la ira y las sospechas que dificultan el amor al prójimo.",
+    "pts": [
+      "La oración personal se abre a las necesidades de otras personas.",
+      "La reconciliación incluye reconocer tanto el daño recibido como el causado."
+    ],
+    "q": "¿A quién quisieras incluir hoy en una oración de reconciliación?",
+    "pages": "PDF, página 65"
+  },
+  {
+    "id": "ic-4-10",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 10",
+    "title": "Evitar que el escrúpulo aleje de la comunión",
+    "text": "Kempis advierte que las tentaciones, la ansiedad por sentirse devoto y las dudas excesivas pueden apartar del sacramento. Recomienda seguir un consejo prudente, confesarse y buscar reconciliación. Reconoce que puede haber motivos legítimos para abstenerse y presenta la comunión espiritual como expresión del deseo de unión con Cristo cuando no se puede recibir sacramentalmente.",
+    "pts": [
+      "El capítulo distingue la preparación cuidadosa de una inquietud que paraliza.",
+      "La práctica religiosa también debe considerar el bien de la comunidad."
+    ],
+    "q": "¿Qué diferencia encuentras entre prepararse con cuidado y buscar una seguridad imposible?",
+    "pages": "PDF, páginas 65–66"
+  },
+  {
+    "id": "ic-4-11",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 11",
+    "title": "La Escritura y la Eucaristía como sustento",
+    "text": "El alma describe dos ayudas para su camino de fe: la palabra de Dios como luz y la Eucaristía como alimento. Kempis las compara con dos mesas ofrecidas en la Iglesia. La esperanza de contemplar a Dios plenamente acompaña la vida presente, y el capítulo pide a los sacerdotes coherencia y reverencia en su ministerio.",
+    "pts": [
+      "La lectura de la Escritura orienta los pasos del creyente.",
+      "El sacramento alimenta la unión con Cristo dentro de la fe expresada por la obra."
+    ],
+    "q": "¿Qué aporta la imagen de la luz y qué aporta la del alimento?",
+    "pages": "PDF, páginas 66–67"
+  },
+  {
+    "id": "ic-4-12",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 12",
+    "title": "Cuidar el encuentro antes y después",
+    "text": "La voz de Cristo compara la preparación interior con disponer una casa para alguien amado. Kempis pide hacer lo posible con atención, sabiendo que la gracia no se compra con el esfuerzo. También recomienda recogimiento después de comulgar: el cuidado del encuentro debe continuar, y la falta de emoción no exige abandonar la oración.",
+    "pts": [
+      "La preparación combina diligencia, humildad y confianza en la gracia.",
+      "El agradecimiento posterior forma parte del sentido de la comunión."
+    ],
+    "q": "¿Cómo cambia una experiencia cuando también cuidas el tiempo que viene después?",
+    "pages": "PDF, páginas 67–68"
+  },
+  {
+    "id": "ic-4-13",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 13",
+    "title": "Desear una unión íntima con Cristo",
+    "text": "El alma desea abrir a Jesús todo su corazón, como en una conversación entre amigos que se aman. La comunión aparece como encuentro que orienta hacia lo eterno y profundiza la unión con Dios. Ante el amor recibido, la respuesta que propone Kempis es ofrecer el corazón entero y pedir que Cristo permanezca en él.",
+    "pts": [
+      "La oración utiliza el lenguaje de la amistad y del amor para expresar la intimidad espiritual.",
+      "El don recibido invita a una respuesta libre y personal."
+    ],
+    "q": "¿Qué expresa la imagen de conversar con Jesús como con un amigo?",
+    "pages": "PDF, página 68"
+  },
+  {
+    "id": "ic-4-14",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 14",
+    "title": "Aprender del fervor de otros",
+    "text": "El alma contempla la devoción con que otras personas reciben la comunión y reconoce que no siente el mismo entusiasmo. Convierte esa comparación en una petición humilde: desea crecer en fe, esperanza y amor. Aunque no experimente todavía ese fervor, ofrece el deseo de amar a Cristo con mayor profundidad.",
+    "pts": [
+      "La admiración por otros se transforma en oración, en vez de quedarse en comparación.",
+      "El deseo sincero de crecer también forma parte de la vida espiritual."
+    ],
+    "q": "¿Qué ejemplo ajeno te inspira a crecer sin necesidad de imitar sus emociones?",
+    "pages": "PDF, páginas 68–69"
+  },
+  {
+    "id": "ic-4-15",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 15",
+    "title": "Esperar la devoción con humildad",
+    "text": "Kempis invita a pedir la devoción con constancia, esperarla con paciencia y recibirla con gratitud. Advierte que la falta de fervor no debe llevar a un abatimiento excesivo. Propone revisar los apegos y entregarse a Dios, dejando en sus manos el momento y la forma del consuelo, con la intención puesta en su gloria.",
+    "pts": [
+      "La vida espiritual reúne petición, espera, agradecimiento y acción.",
+      "El consuelo no se presenta como algo que pueda exigirse a voluntad."
+    ],
+    "q": "¿Cómo puedes perseverar sin exigir sentir siempre lo mismo?",
+    "pages": "PDF, página 69"
+  },
+  {
+    "id": "ic-4-16",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 16",
+    "title": "Presentar a Cristo las propias necesidades",
+    "text": "El alma se acerca a Jesús reconociendo su debilidad, sus tentaciones y su necesidad de ayuda. Pide alimento para su hambre espiritual, luz para comprender y amor que transforme el corazón. La oración utiliza la imagen del fuego para expresar una unión que renueve su interior y dé paciencia ante las dificultades.",
+    "pts": [
+      "La oración nombra las necesidades con sinceridad y confianza.",
+      "La transformación pedida incluye amor, claridad y perseverancia."
+    ],
+    "q": "¿Qué necesidad interior quisieras expresar con palabras sencillas?",
+    "pages": "PDF, páginas 69–70"
+  },
+  {
+    "id": "ic-4-17",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 17",
+    "title": "Unir el propio deseo a la alabanza de todos",
+    "text": "El alma desea recibir a Cristo con el amor y la reverencia de los santos. Recuerda la disponibilidad de María y la alegría de Juan Bautista como ejemplos de acogida. Ofrece sus deseos y se une a la alabanza de toda la creación, incluyendo en su oración a otras personas y pidiendo que también se acuerden de ella.",
+    "pts": [
+      "La devoción personal se abre a la comunión con otros creyentes.",
+      "Los ejemplos de María y Juan Bautista expresan confianza, humildad y alegría."
+    ],
+    "q": "¿Qué actitud de esos dos ejemplos te ayuda a comprender el deseo de recibir a Cristo?",
+    "pages": "PDF, página 70"
+  },
+  {
+    "id": "ic-4-18",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Libro IV · Capítulo 18",
+    "title": "Acercarse al misterio con fe y humildad",
+    "text": "El libro termina invitando a recibir la Eucaristía con reverencia y confianza. Kempis reconoce el valor de buscar la verdad con humildad, pero desaconseja una curiosidad orgullosa que pretende comprender por completo el misterio. Dentro de la fe católica que sostiene la obra, la razón reconoce sus límites y la vida se orienta a imitar a Cristo.",
+    "pts": [
+      "La búsqueda sincera de comprensión se distingue de la pretensión de dominar todo misterio.",
+      "La conclusión reúne fe, amor y una vida coherente con las enseñanzas de Jesús."
+    ],
+    "q": "¿Qué enseñanza de la obra quieres seguir pensando después de terminarla?",
+    "pages": "PDF, páginas 70–71"
+  }
+];
+
+const QUOTES = ["¿Qué enseñanza de Jesús quisieras comprender mejor?", "¿Qué capítulo te invitó a revisar una intención?", "¿Qué diferencia encuentras entre humildad y búsqueda de reconocimiento?"];
+
+const store = {
+  get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+};
+
+/* Map */
+const map = document.getElementById('map');
+let done = new Set(store.get('ic-done-v1',[]));
+DATA.forEach((d,i)=>{
+  const b=document.createElement('button');
+  b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;b.setAttribute('aria-haspopup','dialog');b.setAttribute('aria-label',d.eyebrow+': '+d.title);
+  b.style.setProperty('--tint',`var(--c-${d.c})`);b.style.setProperty('--edge',`var(--e-${d.c})`);
+  const preview=d.text.split(/(?<=\.)\s/)[0];
+  b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
+    <p class="card-preview">${preview}</p>
+    <div class="more"><span>Leer resumen →</span><span class="done-badge">✓ Explorado</span></div>`;
+  b.addEventListener('click',()=>openCard(i));
+  const gEl=document.getElementById('g-'+d.g);
+  const quote=gEl.querySelector('.quote');
+  if(quote)gEl.insertBefore(b,quote);else gEl.appendChild(b);
+});
+
+function refreshProgress(){
+  DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
+  const n=DATA.filter(d=>done.has(d.id)).length;
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
+  document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} capítulos explorados`;
+  document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
+  document.getElementById('track').setAttribute('aria-valuenow',n);
+}
+refreshProgress();
+document.getElementById('reset').onclick=()=>{done.clear();store.set('ic-done-v1',[]);refreshProgress()};
+
+/* Dialog */
+const dlg=document.getElementById('dlg'); let cur=0;
+function openCard(i){
+  cur=Math.max(0,Math.min(i,DATA.length-1)); const d=DATA[cur];
+  document.getElementById('dlg-prev').disabled=cur===0;
+  document.getElementById('dlg-next').disabled=cur===DATA.length-1;
+  dlg.style.setProperty('--tint',`var(--c-${d.c})`);dlg.style.setProperty('--edge',`var(--e-${d.c})`);
+  document.getElementById('dlg-ico').innerHTML=I[d.ico];
+  document.getElementById('dlg-eyebrow').textContent=d.eyebrow;
+  document.getElementById('dlg-title').textContent=d.title;
+  const all=d.text?[d.text,...d.pts]:d.pts;
+  document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="reading-point">${p}</div></li>`).join('');
+  document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para reflexionar</div><div>${d.q}</div>`;
+  const source=document.getElementById('dlg-source');
+  source.hidden=!d.pages;
+  source.textContent=d.pages?'Referencia en el ejemplar consultado: '+d.pages+'.':'';
+  if(!dlg.open)dlg.showModal();
+  dlg.querySelector('.dlg-body').scrollTop=0;
+  done.add(d.id);store.set('ic-done-v1',[...done]);refreshProgress();
+}
+document.getElementById('dlg-x').onclick=()=>dlg.close();
+document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
+document.getElementById('dlg-prev').onclick=()=>openCard(cur-1);
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')openCard(cur+1);if(e.key==='ArrowLeft')openCard(cur-1)});
+
+/* Quotes */
+let qi=0;
+document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
+
+/* Journal */
+const hint=document.getElementById('saved-hint');
+['j1','j2','j3'].forEach(id=>{
+  const t=document.getElementById(id);t.value=store.get('ic-'+id,'');
+  t.addEventListener('input',()=>{hint.textContent=store.set('ic-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
+});
+</script>
+
+<script>
+document.addEventListener("click",e=>{document.querySelectorAll(".mg-menu[open]").forEach(d=>{if(!d.contains(e.target))d.removeAttribute("open")})});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".mg-menu[open]").forEach(d=>{d.removeAttribute("open");d.querySelector("summary").focus()})});
+</script>
+<script>
+/* Marginalia: trazos a mano y aparición suave */
+(()=>{
+  const P={ul:'M2 88 C 20 80, 35 96, 52 86 S 82 80, 98 90',ci:'M52 4 C 82 2, 99 22, 97 48 C 95 80, 70 98, 44 96 C 16 94, 2 74, 3 48 C 4 20, 26 2, 60 8'};
+  // Subraya la última palabra de cada título de sección
+  document.querySelectorAll('.block-head h2').forEach(h=>{
+    const n=[...h.childNodes].reverse().find(x=>x.nodeType===3&&x.textContent.trim());
+    if(!n) return;
+    const m=n.textContent.match(/^(.*?)(\S+)(\s*)$/s); if(!m) return;
+    const s=document.createElement('span'); s.className='mark ul'; s.textContent=m[2];
+    n.replaceWith(document.createTextNode(m[1]),s,document.createTextNode(m[3]));
+  });
+  document.querySelectorAll('.mark').forEach(m=>{
+    const t=m.classList.contains('ci')?'ci':'ul';
+    m.insertAdjacentHTML('beforeend',`<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${P[t]}" pathLength="1" vector-effect="non-scaling-stroke"/></svg>`);
+  });
+  const els=[...document.querySelectorAll('.hero,.guide-note,section.block,footer,.mg-pager')];
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(e=>e.classList.add('in'));return}
+  els.forEach(e=>e.classList.add('rv'));
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(e=>io.observe(e));
+  // Logo: una letra cambia de vez en cuando al pasar el mouse
+  const b=document.querySelector('.mg-brand'); if(!b) return;
+  const L=[...b.children], S=['s0','s1','s2','s3','s4','s6']; let tm;
+  b.addEventListener('mouseenter',()=>{clearInterval(tm);tm=setInterval(()=>{const l=L[Math.floor(Math.random()*L.length)];l.className=S[Math.floor(Math.random()*S.length)];l.style.transform=`rotate(${(Math.random()*6-3).toFixed(1)}deg)`},260)});
+  b.addEventListener('mouseleave',()=>clearInterval(tm));
+})();
+</script>
+
+<script id="mg-pdf-export-script">
+/* Marginalia · prepara una hoja limpia y abre Guardar como PDF */
+(()=>{
+  const $=id=>document.getElementById(id);
+  const clean=id=>{
+    const node=$(id);
+    const value=node && typeof node.value==="string" ? node.value.trim() : "";
+    return value || "—";
+  };
+  const put=(id,value)=>{
+    const node=$(id);
+    if(node) node.textContent=value || "—";
+  };
+
+  function fillPdf(){
+    put("pdf-date","Reflexiones personales · "+new Intl.DateTimeFormat("es-MX",{dateStyle:"long"}).format(new Date()));
+    put("pdf-j1",clean("j1"));
+    put("pdf-j2",clean("j2"));
+    put("pdf-j3",clean("j3"));
+  }
+
+  const btn=$("mg-save-pdf");
+  if(!btn) return;
+
+  btn.addEventListener("click",()=>{
+    fillPdf();
+    const oldTitle=document.title;
+    document.title="Mis notas - Imitación de Cristo - Marginalia";
+    document.body.classList.add("mg-notes-print");
+
+    const restore=()=>{
+      document.body.classList.remove("mg-notes-print");
+      document.title=oldTitle;
+      window.removeEventListener("afterprint",restore);
+    };
+    window.addEventListener("afterprint",restore);
+
+    requestAnimationFrame(()=>{
+      window.print();
+      setTimeout(()=>{
+        if(document.body.classList.contains("mg-notes-print")) restore();
+      },3000);
+    });
+  });
+})();
+</script>
+
+
+<script id="mg-clear-field-script">
+/* Marginalia · borrar una respuesta individual */
+(()=>{
+  const hint=document.getElementById('saved-hint');
+
+  function syncButton(id){
+    const field=document.getElementById(id);
+    const btn=document.querySelector(`.mg-clear-field[data-clear="${id}"]`);
+    if(btn && field) btn.disabled=!field.value.trim();
+  }
+
+  ['j1','j2','j3'].forEach(id=>{
+    const field=document.getElementById(id);
+    if(!field) return;
+    syncButton(id);
+    field.addEventListener('input',()=>syncButton(id));
+  });
+
+  document.querySelectorAll('.mg-clear-field').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const id=btn.dataset.clear;
+      const field=document.getElementById(id);
+      if(!field || !field.value.trim()) return;
+
+      if(!window.confirm('¿Borrar esta respuesta?')) return;
+
+      field.value='';
+      try{ localStorage.removeItem('ic-'+id); }catch(e){}
+
+      if(hint) hint.textContent='Respuesta borrada de este navegador.';
+      syncButton(id);
+      field.focus();
+    });
+  });
+})();
+</script>
+
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "436402644d794b97a2858b07a06d0514"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+<section id="mg-pdf-sheet" aria-hidden="true">
+  <style>
+    #mg-pdf-sheet{
+      font-family:Georgia,"Times New Roman",serif;
+      color:#211d19;
+      background:#fff;
+      line-height:1.5;
+    }
+    #mg-pdf-sheet .pdf-wrap{
+      max-width:760px;
+      margin:0 auto;
+      padding:4mm 2mm;
+    }
+    #mg-pdf-sheet .pdf-brand{
+      font-family:Arial,sans-serif;
+      font-size:11px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#7a6f63;
+      margin-bottom:10px;
+    }
+    #mg-pdf-sheet h1{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:32px;
+      line-height:1.15;
+      font-weight:400;
+      margin:0 0 5px;
+    }
+    #mg-pdf-sheet .pdf-sub{
+      margin:0 0 26px;
+      color:#7a6f63;
+      font-size:15px;
+      font-style:italic;
+    }
+    #mg-pdf-sheet .pdf-section-title{
+      margin:28px 0 12px;
+      padding-top:14px;
+      border-top:1px solid #d8d0c5;
+      font-family:Arial,sans-serif;
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:#8b4b31;
+    }
+    #mg-pdf-sheet .pdf-item{
+      break-inside:avoid;
+      margin:0 0 18px;
+      padding:0 0 14px;
+      border-bottom:1px solid #ebe5dc;
+    }
+    #mg-pdf-sheet .pdf-item h2{
+      font-family:Arial,sans-serif;
+      font-size:12px;
+      line-height:1.4;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      color:#8b4b31;
+      margin:0 0 6px;
+      font-weight:600;
+    }
+    #mg-pdf-sheet .pdf-item p{
+      font-size:16px;
+      line-height:1.55;
+      margin:0;
+      white-space:pre-wrap;
+    }
+    #mg-pdf-sheet .pdf-foot{
+      margin-top:28px;
+      padding-top:12px;
+      border-top:1px solid #d8d0c5;
+      color:#7a6f63;
+      font:11px/1.5 Arial,sans-serif;
+    }
+    @page{margin:16mm}
+  </style>
+  <div class="pdf-wrap">
+    <div class="pdf-brand">Marginalia</div>
+    <h1>Mis notas · Imitación de Cristo</h1>
+    <p class="pdf-sub" id="pdf-date"></p>
+
+    <div class="pdf-section-title">Mis notas de lectura</div>
+
+    <div class="pdf-item">
+      <h2>¿Qué capítulo me ayudó a comprender algo nuevo?</h2>
+      <p id="pdf-j1"></p>
+    </div>
+    <div class="pdf-item">
+      <h2>¿Qué idea quiero pensar con más calma?</h2>
+      <p id="pdf-j2"></p>
+    </div>
+    <div class="pdf-item">
+      <h2>¿Qué enseñanza quisiera llevar a mi vida?</h2>
+      <p id="pdf-j3"></p>
+    </div>
+
+    <div class="pdf-foot">Creado desde mymarginalia.net · Esta hoja contiene las respuestas personales del lector.</div>
+  </div>
+</section>
+
+
+<script id="kempis-search">
+(()=>{
+ const input=document.getElementById('chapter-search'),clear=document.getElementById('clear-search'),status=document.getElementById('search-status');
+ const groups=[...document.querySelectorAll('.book-group')],cards=[...document.querySelectorAll('#map .card')];
+ const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ const searchable=DATA.map(d=>normalize([d.eyebrow,d.title,d.text,...d.pts].join(' ')));
+ let savedOpen=null;
+ function filter(){
+  const terms=normalize(input.value.trim()).split(/\s+/).filter(Boolean);
+  if(terms.length && savedOpen===null)savedOpen=groups.map(g=>g.open);
+  let count=0;
+  cards.forEach((card,i)=>{card.hidden=!terms.every(t=>searchable[i].includes(t));if(!card.hidden)count++});
+  groups.forEach((g,i)=>{g.hidden=terms.length>0 && !g.querySelector('.card:not([hidden])');if(terms.length)g.open=!g.hidden;else if(savedOpen)g.open=savedOpen[i]});
+  if(!terms.length)savedOpen=null;
+  clear.hidden=!terms.length;
+  status.textContent=terms.length?(count?`${count} ${count===1?'capítulo encontrado':'capítulos encontrados'}.`:'No hay capítulos con esa búsqueda. Prueba otra palabra.'):'Abre un libro y elige un capítulo para leer su resumen y reflexionar.';
+ }
+ input.addEventListener('input',filter);
+ clear.addEventListener('click',()=>{input.value='';filter();input.focus()});
+ document.querySelectorAll('.book-jumps a').forEach(a=>a.addEventListener('click',()=>{input.value='';filter();const g=document.querySelector(a.getAttribute('href'));g.open=true;g.querySelector('summary').focus({preventScroll:true})}));
+ if(/^#libro-[1-4]$/.test(location.hash)){const g=document.querySelector(location.hash);g.open=true;requestAnimationFrame(()=>g.scrollIntoView())}
+})();
+</script>
+</body>
+</html>
