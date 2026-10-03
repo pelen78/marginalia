@@ -1,0 +1,68 @@
+/* Shared reading adjustments for the library and every guide on small screens. */
+@media screen and (max-width: 760px) {
+  :root { --muted: #51483f; }
+  :root[data-theme="dark"] { --muted: #c6baac; }
+
+  /* Keep the secondary text distinct without relying on thin, pale letters. */
+  .hero p,
+  .hero .sub,
+  .section-head p,
+  .block-head p { font-weight: 400; }
+
+  .blurb,
+  .guide-note p,
+  .reading-card-hint,
+  .card p,
+  .card ul {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  .book .au,
+  .section-head p,
+  .q-src,
+  .mg-menu li a small { font-size: .9375rem; }
+
+  .book-category {
+    color: color-mix(in srgb, var(--terra) 75%, var(--ink));
+    font-size: .75rem;
+  }
+  .card .eyebrow,
+  .card .more {
+    color: color-mix(in srgb, var(--edge) 75%, var(--ink));
+  }
+  .filters button,
+  .book .btn,
+  .card .eyebrow,
+  .author,
+  .quote .by,
+  #dlg-eyebrow {
+    font-size: .75rem;
+  }
+  .filters button { padding-block: 8px; }
+
+  .hint,
+  .source-note,
+  .reading-source,
+  .dlg-signature,
+  .chapter-note,
+  .chapter-toolbar label,
+  .mg-save-pdf .mg-pdf-note,
+  #mg-feedback-dialog .mg-feedback-meta {
+    font-size: .9375rem;
+    line-height: 1.65;
+  }
+  .chapter-kicker,
+  .site-credits .credits-copyright,
+  footer .credits-copyright { font-size: .75rem; }
+  .site-credits,
+  footer .guide-credits { font-size: .9375rem; }
+
+  #dlg .dlg-body { line-height: 1.65; }
+  input::placeholder,
+  textarea::placeholder { color: var(--muted); opacity: 1; }
+}
+
+/* Increase contrast in automatic dark mode as well as an explicitly chosen theme. */
+@media screen and (max-width: 760px) and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --muted: #c6baac; }
+}
