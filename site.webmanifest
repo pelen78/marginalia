@@ -1,0 +1,32 @@
+{
+  "id": "/",
+  "name": "Marginalia",
+  "short_name": "Marginalia",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "description": "Resúmenes de libros por capítulos, explicados en lenguaje sencillo.",
+  "theme_color": "#f3ede2",
+  "background_color": "#f3ede2",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
