@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mymarginalia.net/sitemap.xml
