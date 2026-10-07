@@ -1,0 +1,27 @@
+/* Shared novel sections, based on La biblioteca de la medianoche. */
+.map .quote{grid-column:1/-1;padding:24px 10px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+#spoilers,#diario{scroll-margin-top:86px}
+.spoiler-wrap{border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden}
+.spoiler-head{padding:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--c-peach)}
+.spoiler-head h2{font-weight:400;font-size:clamp(1.8rem,3.2vw,2.4rem)}
+.spoiler-head p{margin:6px 0 0;color:var(--muted);max-width:64ch;font-style:italic;font-weight:300}
+.spoiler-body{padding:22px}
+.spoiler-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.scard{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--bg)}
+.scard b{display:block;color:var(--accent);font-family:var(--f-display);font-weight:600;font-size:1.2rem;margin-bottom:4px}
+.scard p{margin:0}
+.spoiler-body .source-note{margin-top:16px}
+@media (max-width:720px){.spoiler-grid{grid-template-columns:1fr}}
+
+.novel-notes{grid-template-columns:minmax(0,1fr)}
+.novel-notes textarea{min-height:280px;line-height:1.7;overflow-wrap:anywhere}
+#mg-pdf-sheet{font-family:Georgia,"Times New Roman",serif;color:#211d19;background:#fff;line-height:1.5}
+#mg-pdf-sheet .pdf-wrap{max-width:760px;margin:0 auto;padding:4mm 2mm}
+#mg-pdf-sheet .pdf-brand{font:11px Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#7a6f63;margin-bottom:10px}
+#mg-pdf-sheet h1{font:400 32px/1.15 Georgia,serif;margin:0 0 5px}
+#mg-pdf-sheet .pdf-sub{margin:0 0 26px;color:#7a6f63;font-size:15px;font-style:italic}
+#mg-pdf-sheet .pdf-section-title{margin:28px 0 12px;padding-top:14px;border-top:1px solid #d8d0c5;font:12px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8b4b31}
+#mg-pdf-sheet #pdf-notes{font-size:16px;line-height:1.55;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;orphans:3;widows:3}
+#mg-pdf-sheet .pdf-foot{margin-top:28px;padding-top:12px;border-top:1px solid #d8d0c5;color:#7a6f63;font:11px/1.5 Arial,sans-serif}
+@media print{body.mg-notes-print::after{display:none!important}}
+@page{margin:16mm}

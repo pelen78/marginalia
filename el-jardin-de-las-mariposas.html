@@ -524,13 +524,11 @@ dialog{border-radius:16px}
 /* Novel-specific notices and ending use the same spacing and typography as the guides. */
 .guide-note .notice-label{font-family:var(--f-body);font-size:inherit;font-weight:600}
 .guide-note a,.reading-card-hint a{color:var(--accent);text-underline-offset:3px}
-#spoiler-body{margin-top:22px}
-.ending-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--paper)}
-.ending-card h3{font-size:1.35rem;line-height:1.2;font-weight:600}
-.ending-card p{margin:12px 0 0}
 #dlg-source{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
 </style>
 <link rel="stylesheet" href="mobile-readability.css">
+<link rel="stylesheet" href="novel-reading.css">
+<script src="novel-notes.js" defer></script>
 </head>
 <body>
 <nav class="mg-nav" aria-label="Biblioteca">
@@ -594,31 +592,30 @@ dialog{border-radius:16px}
     </div>
   </div>
 
-  <section class="block" id="spoilers" aria-labelledby="spoilers-title">
-    <div class="block-head"><h2 id="spoilers-title">El final explicado</h2><p>Lee esta parte después de terminar la novela: revela el rescate, las identidades y el sentido del cierre.</p></div>
-    <button class="btn" id="spoiler-btn" type="button" aria-expanded="false" aria-controls="spoiler-body">Mostrar spoilers</button>
-    <div id="spoiler-body" hidden>
-      <div class="g-grid">
-        <article class="ending-card"><h3>1. La llamada sí se hizo</h3><p>Desmond denuncia el Jardín después de la llegada de Keely y proporciona nombres de cautivas. La primera inspección no las encuentra, porque las paredes ocultan las habitaciones. Al comprobar los nombres, entre ellos Cassidy Lawrence, la policía detecta la conexión con otras desapariciones y vuelve con el FBI. Recordar a Lyonette ayuda así a encontrar a las que siguen vivas.</p><p class="source-note">Capítulo 3 · pp. 190–193.</p></article>
-        <article class="ending-card"><h3>2. La confrontación y el incendio</h3><p>El Jardinero castiga a Desmond por denunciarlo. Avery, furioso por el trato que recibe su hermano, dispara contra él y contra su padre. Después de que Sirvat entra al cuarto donde se guarda el formaldehído, una explosión inicia el incendio. Bliss mata a Avery cuando vuelve a atacar a las jóvenes. El Jardín se derrumba en medio de la violencia que su creador creía controlar.</p><p class="source-note">Capítulo 3 · pp. 190–195.</p></article>
-        <article class="ending-card"><h3>3. Salir no significa que todas se salven</h3><p>Maya y varias compañeras abren un paso junto a un árbol caído; los bomberos rompen el cristal del invernadero exterior y las ayudan a salir. Una segunda explosión causa nuevas pérdidas. Desmond sobrevive y enfrenta una recuperación larga; su posible responsabilidad como cómplice queda abierta. Geoffrey MacIntosh, el Jardinero, también sobrevive y será llevado a juicio.</p><p class="source-note">Capítulo 3 · pp. 189 y 195–197.</p></article>
-        <article class="ending-card"><h3>4. Sophia era la Mariposa que escapó</h3><p>Sophia había sido Lara dentro del Jardín. Escapó años antes y se lo contó a Inara antes de que la secuestraran. Eso explica parte de su aparente calma al despertar allí. Inara no entró voluntariamente: ocultaba la conexión para proteger a Sophia y a su hija Jillie, cuyo padre biológico es el Jardinero. La revelación aclara el secreto que sostenía la tensión del interrogatorio.</p><p class="source-note">Capítulo 3 · pp. 198–204.</p></article>
-        <article class="ending-card"><h3>5. Samira, Inara y Maya</h3><p>Samira Grantaire es su nombre de nacimiento; Inara Morrissey es la identidad que eligió antes del secuestro, y Maya es el nombre impuesto en el Jardín. Dar su nombre legal al FBI no obliga a renunciar a Inara: Victor le explica que puede adoptarlo legalmente. Contar la verdad abre la posibilidad de elegir quién quiere ser.</p><p class="source-note">Capítulo 3 · pp. 205–206.</p></article>
-        <article class="ending-card"><h3>6. Una familia que espera su regreso</h3><p>Sophia le confirma que sus amigas conservaron sus cosas y su cama. El reencuentro transforma el sentido del carrusel, ligado al abandono de su infancia: ahora hay personas que la esperan. El final ofrece pertenencia y esperanza, pero reconoce que el duelo, el trauma y el proceso judicial continuarán después del rescate.</p><p class="source-note">Capítulo 3 · pp. 204–206.</p></article>
+  <section class="block spoiler-wrap" id="spoilers" aria-labelledby="spoilers-title">
+    <div class="spoiler-head"><div><h2 id="spoilers-title">El final explicado</h2><p>Lee esta parte después de terminar la novela: revela el rescate, las identidades y el sentido del cierre.</p></div>
+    <button class="btn" id="spoiler-btn" type="button" aria-expanded="false" aria-controls="spoiler-body">Mostrar spoilers</button></div>
+    <div class="spoiler-body" id="spoiler-body" hidden>
+      <div class="spoiler-grid">
+        <article class="scard"><b>La llamada sí se hizo</b><p>Desmond denuncia el Jardín después de la llegada de Keely y proporciona nombres de cautivas. La primera inspección no las encuentra, porque las paredes ocultan las habitaciones. Al comprobar los nombres, entre ellos Cassidy Lawrence, la policía detecta la conexión con otras desapariciones y vuelve con el FBI. Recordar a Lyonette ayuda así a encontrar a las que siguen vivas.</p><p class="source-note">Capítulo 3 · pp. 190–193.</p></article>
+        <article class="scard"><b>La confrontación y el incendio</b><p>El Jardinero castiga a Desmond por denunciarlo. Avery, furioso por el trato que recibe su hermano, dispara contra él y contra su padre. Después de que Sirvat entra al cuarto donde se guarda el formaldehído, una explosión inicia el incendio. Bliss mata a Avery cuando vuelve a atacar a las jóvenes. El Jardín se derrumba en medio de la violencia que su creador creía controlar.</p><p class="source-note">Capítulo 3 · pp. 190–195.</p></article>
+        <article class="scard"><b>Salir no significa que todas se salven</b><p>Maya y varias compañeras abren un paso junto a un árbol caído; los bomberos rompen el cristal del invernadero exterior y las ayudan a salir. Una segunda explosión causa nuevas pérdidas. Desmond sobrevive y enfrenta una recuperación larga; su posible responsabilidad como cómplice queda abierta. Geoffrey MacIntosh, el Jardinero, también sobrevive y será llevado a juicio.</p><p class="source-note">Capítulo 3 · pp. 189 y 195–197.</p></article>
+        <article class="scard"><b>Sophia era la Mariposa que escapó</b><p>Sophia había sido Lara dentro del Jardín. Escapó años antes y se lo contó a Inara antes de que la secuestraran. Eso explica parte de su aparente calma al despertar allí. Inara no entró voluntariamente: ocultaba la conexión para proteger a Sophia y a su hija Jillie, cuyo padre biológico es el Jardinero. La revelación aclara el secreto que sostenía la tensión del interrogatorio.</p><p class="source-note">Capítulo 3 · pp. 198–204.</p></article>
+        <article class="scard"><b>Samira, Inara y Maya</b><p>Samira Grantaire es su nombre de nacimiento; Inara Morrissey es la identidad que eligió antes del secuestro, y Maya es el nombre impuesto en el Jardín. Dar su nombre legal al FBI no obliga a renunciar a Inara: Victor le explica que puede adoptarlo legalmente. Contar la verdad abre la posibilidad de elegir quién quiere ser.</p><p class="source-note">Capítulo 3 · pp. 205–206.</p></article>
+        <article class="scard"><b>Una familia que espera su regreso</b><p>Sophia le confirma que sus amigas conservaron sus cosas y su cama. El reencuentro transforma el sentido del carrusel, ligado al abandono de su infancia: ahora hay personas que la esperan. El final ofrece pertenencia y esperanza, pero reconoce que el duelo, el trauma y el proceso judicial continuarán después del rescate.</p><p class="source-note">Capítulo 3 · pp. 204–206.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="block" id="diario">
-    <div class="block-head">
-      <h2>Mis notas de lectura</h2>
-      <p>Tres preguntas creadas por Marginalia para acompañar la lectura. Tus respuestas se quedan en este navegador.</p></div>
-  <div class="journal">
-    <div class="jcard"><div class="mg-field-head"><label for="j1">¿Qué significa conservar tu identidad?</label><button class="mg-clear-field" type="button" data-clear="j1">Borrar</button></div><textarea id="j1" placeholder="Piensa en nombres, etiquetas, papeles y decisiones propias…"></textarea></div>
-    <div class="jcard"><div class="mg-field-head"><label for="j2">¿Qué convierte a un grupo en familia?</label><button class="mg-clear-field" type="button" data-clear="j2">Borrar</button></div><textarea id="j2" placeholder="¿La sangre, la espera, el cuidado, la memoria, la elección…?"></textarea></div>
-    <div class="jcard"><div class="mg-field-head"><label for="j3">¿Qué imagen del libro no olvidas?</label><button class="mg-clear-field" type="button" data-clear="j3">Borrar</button></div><textarea id="j3" placeholder="Puede ser una mariposa, el cristal, el carrusel, la cueva, un nombre…"></textarea></div>
-  </div>
-    <p class="hint" id="saved-hint" style="margin-top:8px"></p>
+  <section class="block" id="diario" data-notes-book="jardin">
+    <div class="block-head"><h2>Mis notas de lectura</h2><p>Un espacio libre para tus impresiones, personajes, frases y todo lo que quieras recordar de la novela.</p></div>
+    <div class="journal novel-notes">
+      <div class="jcard"><div class="mg-field-head"><label for="novel-notes">Mi cuaderno de lectura</label><button class="mg-clear-field" id="clear-novel-notes" type="button" disabled>Borrar notas</button></div>
+        <textarea id="novel-notes" placeholder="Escribe aquí tus anotaciones…" aria-describedby="notes-help saved-hint"></textarea>
+        <p class="hint" id="notes-help">Se guardan automáticamente en este navegador. Puedes añadir el capítulo o la página junto a cada anotación.</p>
+      </div>
+    </div>
+    <p class="hint" id="saved-hint" role="status" style="margin-top:8px"></p>
   </section>
 
 <section class="mg-save-pdf" id="guardar-pdf" aria-label="Guardar notas en PDF">
@@ -1161,13 +1158,6 @@ document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;docum
 /* Final explicado */
 const sp=document.getElementById('spoiler-body'),spb=document.getElementById('spoiler-btn');
 spb.onclick=()=>{const open=sp.hidden;sp.hidden=!open;spb.setAttribute('aria-expanded',String(open));spb.textContent=open?'Ocultar spoilers':'Mostrar spoilers'};
-
-/* Diario */
-const hint=document.getElementById('saved-hint');
-['j1','j2','j3'].forEach(id=>{
-  const t=document.getElementById(id);t.value=store.get('jardin-'+id,'');
-  t.addEventListener('input',()=>{hint.textContent=store.set('jardin-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
-});
 </script>
 
 <script>
@@ -1201,134 +1191,19 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelect
   b.addEventListener('mouseenter',()=>{clearInterval(tm);tm=setInterval(()=>{const l=L[Math.floor(Math.random()*L.length)];l.className=S[Math.floor(Math.random()*S.length)];l.style.transform=`rotate(${(Math.random()*6-3).toFixed(1)}deg)`},260)});
   b.addEventListener('mouseleave',()=>clearInterval(tm));
 })();
-</script></script>
-<script id="mg-pdf-export-script">
-/* Marginalia · prepara una hoja limpia y abre Guardar como PDF */
-(()=>{
-  const $=id=>document.getElementById(id);
-  const clean=id=>{const n=$(id);const v=n&&typeof n.value==="string"?n.value.trim():"";return v||"—"};
-  const put=(id,v)=>{const n=$(id);if(n)n.textContent=v||"—"};
-  const btn=$("mg-save-pdf"); if(!btn) return;
-  btn.addEventListener("click",()=>{
-    put("pdf-date","Reflexiones personales · "+new Intl.DateTimeFormat("es-MX",{dateStyle:"long"}).format(new Date()));
-    put("pdf-j1",clean("j1"));put("pdf-j2",clean("j2"));put("pdf-j3",clean("j3"));
-    const oldTitle=document.title;
-    document.title="Mis notas - El jardín de las mariposas - Marginalia";
-    document.body.classList.add("mg-notes-print");
-    const restore=()=>{document.body.classList.remove("mg-notes-print");document.title=oldTitle;window.removeEventListener("afterprint",restore)};
-    window.addEventListener("afterprint",restore);
-    requestAnimationFrame(()=>{window.print();setTimeout(()=>{if(document.body.classList.contains("mg-notes-print"))restore()},3000)});
-  });
-})();
 </script>
 
-<script id="mg-clear-field-script">
-/* Marginalia · borrar una respuesta individual */
-(()=>{
-  const hint=document.getElementById('saved-hint');
-  const sync=id=>{const f=document.getElementById(id),b=document.querySelector(`.mg-clear-field[data-clear="${id}"]`);if(b&&f)b.disabled=!f.value.trim()};
-  ['j1','j2','j3'].forEach(id=>{const f=document.getElementById(id);if(!f)return;sync(id);f.addEventListener('input',()=>sync(id))});
-  document.querySelectorAll('.mg-clear-field').forEach(btn=>btn.addEventListener('click',()=>{
-    const id=btn.dataset.clear,f=document.getElementById(id);
-    if(!f||!f.value.trim()) return;
-    if(!window.confirm('¿Borrar esta respuesta?')) return;
-    f.value='';try{localStorage.removeItem('jardin-'+id)}catch(e){}
-    if(hint) hint.textContent='Respuesta borrada de este navegador.';
-    sync(id);f.focus();
-  }));
-})();
-</script>
+
+
 
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "436402644d794b97a2858b07a06d0514"}'></script>
 <!-- End Cloudflare Web Analytics --><!-- End Cloudflare Web Analytics -->
 
-<section id="mg-pdf-sheet" aria-hidden="true">
-  <style>
-    #mg-pdf-sheet{
-      font-family:Georgia,"Times New Roman",serif;
-      color:#211d19;
-      background:#fff;
-      line-height:1.5;
-    }
-    #mg-pdf-sheet .pdf-wrap{
-      max-width:760px;
-      margin:0 auto;
-      padding:4mm 2mm;
-    }
-    #mg-pdf-sheet .pdf-brand{
-      font-family:Arial,sans-serif;
-      font-size:11px;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      color:#7a6f63;
-      margin-bottom:10px;
-    }
-    #mg-pdf-sheet h1{
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:32px;
-      line-height:1.15;
-      font-weight:400;
-      margin:0 0 5px;
-    }
-    #mg-pdf-sheet .pdf-sub{
-      margin:0 0 26px;
-      color:#7a6f63;
-      font-size:15px;
-      font-style:italic;
-    }
-    #mg-pdf-sheet .pdf-section-title{
-      margin:28px 0 12px;
-      padding-top:14px;
-      border-top:1px solid #d8d0c5;
-      font-family:Arial,sans-serif;
-      font-size:12px;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:#8b4b31;
-    }
-    #mg-pdf-sheet .pdf-item{
-      break-inside:avoid;
-      margin:0 0 18px;
-      padding:0 0 14px;
-      border-bottom:1px solid #ebe5dc;
-    }
-    #mg-pdf-sheet .pdf-item h2{
-      font-family:Arial,sans-serif;
-      font-size:12px;
-      line-height:1.4;
-      letter-spacing:.05em;
-      text-transform:uppercase;
-      color:#8b4b31;
-      margin:0 0 6px;
-      font-weight:600;
-    }
-    #mg-pdf-sheet .pdf-item p{
-      font-size:16px;
-      line-height:1.55;
-      margin:0;
-      white-space:pre-wrap;
-    }
-    #mg-pdf-sheet .pdf-foot{
-      margin-top:28px;
-      padding-top:12px;
-      border-top:1px solid #d8d0c5;
-      color:#7a6f63;
-      font:11px/1.5 Arial,sans-serif;
-    }
-    @page{margin:16mm}
-  </style></style>
-  <div class="pdf-wrap">
-    <div class="pdf-brand">Marginalia</div>
-    <h1>Mis notas · El jardín de las mariposas</h1>
-    <p class="pdf-sub" id="pdf-date"></p>
-    <div class="pdf-section-title">Mis notas de lectura</div>
-    <div class="pdf-item"><h2>¿Qué significa conservar tu identidad?</h2><p id="pdf-j1"></p></div>
-    <div class="pdf-item"><h2>¿Qué convierte a un grupo en familia?</h2><p id="pdf-j2"></p></div>
-    <div class="pdf-item"><h2>¿Qué imagen del libro no olvidas?</h2><p id="pdf-j3"></p></div>
-    <div class="pdf-foot">Creado desde mymarginalia.net · Esta hoja contiene las respuestas personales del lector.</div>
-  </div>
-</section>
 
+
+<section id="mg-pdf-sheet" aria-hidden="true">
+  <div class="pdf-wrap"><div class="pdf-brand">Marginalia</div><h1>Mis notas · El jardín de las mariposas</h1><p class="pdf-sub" id="pdf-date"></p><div class="pdf-section-title">Mi cuaderno de lectura</div><p id="pdf-notes"></p><div class="pdf-foot">Creado desde mymarginalia.net · Anotaciones personales del lector.</div></div>
+</section>
 </body>
 </html>

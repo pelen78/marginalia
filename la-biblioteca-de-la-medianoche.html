@@ -537,24 +537,13 @@ dialog{border-radius:16px}
 .cluster-head p{margin:0;color:var(--muted);font-size:.95rem;font-style:italic}
 #g-1 .center{grid-column:1/-1;min-height:200px}
 #g-1 .center p{max-width:52ch}
-#g-5 .quote{grid-column:1/-1;padding:24px 10px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
 @media (max-width:720px){.group-intro{margin-left:0}.cluster-head{display:block}.cluster-head p{margin-top:4px}}
 /* Final explicado */
-.spoiler-wrap{border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden}
-.spoiler-head{padding:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--c-peach)}
-.spoiler-head h2{font-weight:400;font-size:clamp(1.8rem,3.2vw,2.4rem)}
-.spoiler-head p{margin:6px 0 0;color:var(--muted);max-width:64ch;font-style:italic;font-weight:300}
-.spoiler-body{display:none;padding:22px}
-.spoiler-wrap.open .spoiler-body{display:block}
-.spoiler-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.scard{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--bg)}
-.scard b{display:block;color:var(--accent);font-family:var(--f-display);font-weight:600;font-size:1.2rem;margin-bottom:4px}
-.scard p{margin:0}
-.spoiler-body .source-note{margin-top:16px}
-@media (max-width:720px){.spoiler-grid{grid-template-columns:1fr}}
 #dlg-source{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
 </style>
 <link rel="stylesheet" href="mobile-readability.css">
+<link rel="stylesheet" href="novel-reading.css">
+<script src="novel-notes.js" defer></script>
 </head>
 <body>
 <nav class="mg-nav" aria-label="Biblioteca">
@@ -644,12 +633,12 @@ dialog{border-radius:16px}
     </div>
   </div>
 
-  <section class="block spoiler-wrap" id="spoilers">
+  <section class="block spoiler-wrap" id="spoilers" aria-labelledby="spoilers-title">
   <div class="spoiler-head">
-    <div><h2>El final explicado</h2><p>Esta parte reúne el último aprendizaje, la decisión de Nora y lo que ocurre al regresar. Está oculta para que puedas recorrer la guía sin conocer el desenlace.</p></div>
-    <button class="btn" id="spoiler-btn" type="button" aria-expanded="false">Mostrar spoilers</button>
+    <div><h2 id="spoilers-title">El final explicado</h2><p>Esta parte reúne el último aprendizaje, la decisión de Nora y lo que ocurre al regresar. Está oculta para que puedas recorrer la guía sin conocer el desenlace.</p></div>
+    <button class="btn" id="spoiler-btn" type="button" aria-expanded="false" aria-controls="spoiler-body">Mostrar spoilers</button>
   </div>
-  <div class="spoiler-body" id="spoiler-body">
+  <div class="spoiler-body" id="spoiler-body" hidden>
     <div class="spoiler-grid">
       <article class="scard"><b>La vida que parecía perfecta tampoco era “su” vida</b><p>Nora llega a una existencia construida a partir de haber aceptado una cita con Ash. Allí está casada con él, tienen una hija llamada Molly, un perro llamado Platón y una vida familiar estable. Nora siente amor real por lo que encuentra, pero comprende que ha entrado tarde en una historia que otra versión de ella construyó día a día.</p></article>
       <article class="scard"><b>La Biblioteca empieza a desaparecer</b><p>Cuando esa vida deja de sostenerla y la vida raíz está al límite, el tiempo vuelve a avanzar dentro de la Biblioteca. Nora ya no quiere morir. La destrucción del lugar refleja que se ha acabado el tiempo de observar posibilidades y ha llegado el momento de elegir vivir.</p></article>
@@ -662,16 +651,15 @@ dialog{border-radius:16px}
   </div>
 </section>
 
-  <section class="block" id="diario">
-    <div class="block-head">
-      <h2>Mis notas de lectura</h2>
-      <p>Tres preguntas creadas por Marginalia para acompañar la lectura. Tus respuestas se quedan en este navegador.</p></div>
-  <div class="journal">
-    <div class="jcard"><div class="mg-field-head"><label for="j1">¿Qué arrepentimiento cambia más al conocer toda la historia?</label><button class="mg-clear-field" type="button" data-clear="j1">Borrar</button></div><textarea id="j1" placeholder="Piensa en una decisión que al principio parecía tener una sola explicación…"></textarea></div>
-    <div class="jcard"><div class="mg-field-head"><label for="j2">¿Qué sueño parece realmente de Nora?</label><button class="mg-clear-field" type="button" data-clear="j2">Borrar</button></div><textarea id="j2" placeholder="Distingue entre lo que ella desea y lo que otras personas imaginaron para ella…"></textarea></div>
-    <div class="jcard"><div class="mg-field-head"><label for="j3">¿Qué cosa pequeña termina teniendo mucho peso?</label><button class="mg-clear-field" type="button" data-clear="j3">Borrar</button></div><textarea id="j3" placeholder="Una conversación, una persona, un animal, una partida, una decisión cotidiana…"></textarea></div>
-  </div>
-    <p class="hint" id="saved-hint" style="margin-top:8px"></p>
+  <section class="block" id="diario" data-notes-book="medianoche">
+    <div class="block-head"><h2>Mis notas de lectura</h2><p>Un espacio libre para tus impresiones, personajes, frases y todo lo que quieras recordar de la novela.</p></div>
+    <div class="journal novel-notes">
+      <div class="jcard"><div class="mg-field-head"><label for="novel-notes">Mi cuaderno de lectura</label><button class="mg-clear-field" id="clear-novel-notes" type="button" disabled>Borrar notas</button></div>
+        <textarea id="novel-notes" placeholder="Escribe aquí tus anotaciones…" aria-describedby="notes-help saved-hint"></textarea>
+        <p class="hint" id="notes-help">Se guardan automáticamente en este navegador. Puedes añadir el capítulo o la página junto a cada anotación.</p>
+      </div>
+    </div>
+    <p class="hint" id="saved-hint" role="status" style="margin-top:8px"></p>
   </section>
 
 <section class="mg-save-pdf" id="guardar-pdf" aria-label="Guardar notas en PDF">
@@ -812,15 +800,8 @@ let qi=0;
 document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
 
 /* Final explicado */
-const sp=document.getElementById('spoilers'),spb=document.getElementById('spoiler-btn');
-spb.onclick=()=>{const o=sp.classList.toggle('open');spb.setAttribute('aria-expanded',o);spb.textContent=o?'Ocultar spoilers':'Mostrar spoilers'};
-
-/* Diario */
-const hint=document.getElementById('saved-hint');
-['j1','j2','j3'].forEach(id=>{
-  const t=document.getElementById(id);t.value=store.get('medianoche-'+id,'');
-  t.addEventListener('input',()=>{hint.textContent=store.set('medianoche-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
-});
+const sp=document.getElementById('spoiler-body'),spb=document.getElementById('spoiler-btn');
+spb.onclick=()=>{const open=sp.hidden;sp.hidden=!open;spb.setAttribute('aria-expanded',String(open));spb.textContent=open?'Ocultar spoilers':'Mostrar spoilers'};
 </script>
 
 <script>
@@ -856,43 +837,15 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelect
 })();
 </script>
 
-<script id="mg-pdf-export-script">
-(()=>{
-  const $=id=>document.getElementById(id);
-  const clean=id=>{const n=$(id);const v=n&&typeof n.value==="string"?n.value.trim():"";return v||"—"};
-  const put=(id,v)=>{const n=$(id);if(n)n.textContent=v||"—"};
-  const btn=$("mg-save-pdf"); if(!btn) return;
-  btn.addEventListener("click",()=>{
-    put("pdf-date","Reflexiones personales · "+new Intl.DateTimeFormat("es-MX",{dateStyle:"long"}).format(new Date()));
-    put("pdf-j1",clean("j1"));put("pdf-j2",clean("j2"));put("pdf-j3",clean("j3"));
-    const oldTitle=document.title;
-    document.title="Mis notas - La biblioteca de la medianoche - Marginalia";
-    document.body.classList.add("mg-notes-print");
-    const restore=()=>{document.body.classList.remove("mg-notes-print");document.title=oldTitle;window.removeEventListener("afterprint",restore)};
-    window.addEventListener("afterprint",restore);
-    requestAnimationFrame(()=>{window.print();setTimeout(()=>{if(document.body.classList.contains("mg-notes-print"))restore()},3000)});
-  });
-})();
-</script>
 
-<script id="mg-clear-field-script">
-(()=>{
-  const hint=document.getElementById('saved-hint');
-  const sync=id=>{const f=document.getElementById(id),b=document.querySelector(`.mg-clear-field[data-clear="${id}"]`);if(b&&f)b.disabled=!f.value.trim()};
-  ['j1','j2','j3'].forEach(id=>{const f=document.getElementById(id);if(!f)return;sync(id);f.addEventListener('input',()=>sync(id))});
-  document.querySelectorAll('.mg-clear-field').forEach(btn=>btn.addEventListener('click',()=>{
-    const id=btn.dataset.clear,f=document.getElementById(id);
-    if(!f||!f.value.trim()) return;
-    if(!window.confirm('¿Borrar esta respuesta?')) return;
-    f.value='';try{localStorage.removeItem('medianoche-'+id)}catch(e){}
-    if(hint) hint.textContent='Respuesta borrada de este navegador.';
-    sync(id);f.focus();
-  }));
-})();
-</script>
+
+
 
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "436402644d794b97a2858b07a06d0514"}'></script>
 <!-- End Cloudflare Web Analytics -->
+<section id="mg-pdf-sheet" aria-hidden="true">
+  <div class="pdf-wrap"><div class="pdf-brand">Marginalia</div><h1>Mis notas · La biblioteca de la medianoche</h1><p class="pdf-sub" id="pdf-date"></p><div class="pdf-section-title">Mi cuaderno de lectura</div><p id="pdf-notes"></p><div class="pdf-foot">Creado desde mymarginalia.net · Anotaciones personales del lector.</div></div>
+</section>
 </body>
 </html>
