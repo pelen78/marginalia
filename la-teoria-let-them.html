@@ -29,9 +29,9 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
 .dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
 </style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<title>Guía de lectura · Hábitos diminutos</title>
-<meta name="description" content="Resumen de Hábitos diminutos de BJ Fogg: ocho capítulos en español sencillo sobre hábitos pequeños, señales y celebración. Guía de lectura de Marginalia.">
-<link rel="canonical" href="https://mymarginalia.net/tiny-habits.html">
+<title>Guía de lectura · La teoría Let Them</title>
+<meta name="description" content="Resumen de La teoría Let Them de Mel Robbins en lenguaje sencillo, siguiendo las partes y capítulos del libro. Guía independiente de Marginalia.">
+<link rel="canonical" href="https://mymarginalia.net/la-teoria-let-them.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
@@ -495,6 +495,36 @@ dialog{border-radius:16px}
 .g-title{overflow-wrap:anywhere}
 @media(max-width:600px){#dlg .dlg-head .ico{display:none}#dlg .dlg-head h3{font-size:1.2rem}#dlg .dlg-head{gap:6px}}
 </style>
+<style id="ltt-actividades">
+/* Actividades: Déjalos o Déjame + reto de 7 días */
+.act-grid{display:grid;gap:18px}
+.quiz{padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.q-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.q-count{color:var(--muted);text-transform:uppercase}
+.q-text{line-height:1.2;margin:0}
+.q-opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.q-opts{grid-template-columns:1fr}}
+.opt{display:flex;flex-direction:column;gap:2px;text-align:left;padding:14px 16px;color:var(--ink);transition:border-color .2s,background .2s}
+.opt.ok{border-color:var(--e-green);background:color-mix(in srgb,var(--e-green) 14%,var(--bg))}
+.opt.no{border-color:var(--e-rose);background:color-mix(in srgb,var(--e-rose) 12%,var(--bg))}
+.opt:disabled{cursor:default}
+.feedback{margin:0;min-height:1.5em}
+.q-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.reto{padding:22px 24px;display:flex;flex-direction:column;gap:16px;border-radius:16px;background:var(--paper);border:1px solid var(--line)}
+.reto .step{display:flex;flex-direction:column;gap:8px}
+.reto .step-t{font-family:var(--f-hand);font-weight:700;font-size:1.45rem;color:var(--accent);line-height:1.1}
+.reto label{font-family:var(--f-hand);font-weight:700;font-size:1.45rem;color:var(--accent);line-height:1.1}
+.reto textarea{width:100%;min-height:70px;resize:vertical;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg);color:var(--ink);font:inherit}
+.seg{display:flex;flex-wrap:wrap;gap:8px;border:0}
+.seg button{border:1.5px solid var(--line);border-radius:999px;background:transparent;padding:7px 14px;color:var(--ink)}
+.seg button:hover{border-color:var(--ink)}
+.area-hint{margin:0;color:var(--muted);font-style:italic;font-size:.95rem}
+.days{display:flex;flex-wrap:wrap;gap:8px}
+.days button{width:46px;height:46px;border-radius:50%;border-style:solid;background:transparent;display:grid;place-items:center}
+.scan-out{padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.scan-out p{margin:0}
+.scan-out b{color:var(--accent);font-weight:600}
+</style>
 <link rel="stylesheet" href="mobile-readability.css">
 </head>
 <body>
@@ -504,7 +534,7 @@ dialog{border-radius:16px}
     <a class="mg-back" href="index.html#libros">&larr; <span>Biblioteca</span></a>
     <details class="mg-menu">
       <summary>Cambiar libro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-      <ul><li><a href="biblia.html">La Biblia<small>Diversos autores</small></a></li><li><a href="imitacion-de-cristo.html">Imitación de Cristo<small>Tomás de Kempis</small></a></li><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="tiny-habits.html" aria-current="page">Hábitos diminutos<small>BJ Fogg</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li><a href="inteligencia-emocional.html">Inteligencia emocional<small>Daniel Goleman</small></a></li><li><a href="amar-o-depender.html">¿Amar o depender?<small>Walter Riso</small></a></li><li><a href="el-sutil-arte-de-que-te-importe-un-carajo.html">El sutil arte de que te importe un carajo<small>Mark Manson</small></a></li><li><a href="piensalo-otra-vez.html">Piénsalo otra vez<small>Adam Grant</small></a></li><li><a href="la-teoria-let-them.html">La teoría Let Them<small>Mel Robbins</small></a></li><li class="sep" aria-hidden="true"></li><li><a href="el-jardin-de-las-mariposas.html">El jardín de las mariposas<small>Dot Hutchison</small></a></li><li><a href="la-biblioteca-de-la-medianoche.html">La biblioteca de la medianoche<small>Matt Haig</small></a></li></ul>
+      <ul><li><a href="biblia.html">La Biblia<small>Diversos autores</small></a></li><li><a href="imitacion-de-cristo.html">Imitación de Cristo<small>Tomás de Kempis</small></a></li><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="tiny-habits.html">Hábitos diminutos<small>BJ Fogg</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li><a href="inteligencia-emocional.html">Inteligencia emocional<small>Daniel Goleman</small></a></li><li><a href="amar-o-depender.html">¿Amar o depender?<small>Walter Riso</small></a></li><li><a href="el-sutil-arte-de-que-te-importe-un-carajo.html">El sutil arte de que te importe un carajo<small>Mark Manson</small></a></li><li><a href="piensalo-otra-vez.html">Piénsalo otra vez<small>Adam Grant</small></a></li><li><a href="la-teoria-let-them.html" aria-current="page">La teoría Let Them<small>Mel Robbins</small></a></li><li class="sep" aria-hidden="true"></li><li><a href="el-jardin-de-las-mariposas.html">El jardín de las mariposas<small>Dot Hutchison</small></a></li><li><a href="la-biblioteca-de-la-medianoche.html">La biblioteca de la medianoche<small>Matt Haig</small></a></li></ul>
     </details>
   </div>
 </nav>
@@ -512,53 +542,110 @@ dialog{border-radius:16px}
 <div class="wrap">
   <header class="hero">
     <h1>Guía de <span class="mark ul">lectura</span></h1>
-    <div class="sub">Sobre <cite>Hábitos diminutos</cite>, de BJ Fogg</div>
+    <div class="sub">Sobre <cite>La teoría Let Them</cite>, de Mel Robbins</div>
     <div class="author">GUÍA INDEPENDIENTE</div>
   </header>
 
 
-  <aside class="guide-note" aria-label="Acerca de esta guía"><strong>Una guía para leer el libro</strong><p>Recorre la introducción, los ocho capítulos y la conclusión con resúmenes en lenguaje sencillo. Los títulos están adaptados al español para facilitar la lectura. Los ejemplos, las preguntas y las actividades son de Marginalia.</p></aside>
+  <aside class="guide-note" aria-label="Acerca de esta guía"><strong>Una guía para leer el libro</strong><p>Recorre la introducción, las dos grandes partes y los veinte capítulos del libro con resúmenes sencillos, escritos con palabras propias. Los ejemplos, las preguntas y las actividades son de Marginalia. Esta guía es independiente y no sustituye la obra original.</p></aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 12 secciones exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 24 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
-    <div class="group"><h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2><p class="reading-card-hint">Abre una tarjeta para leer la explicación completa y su pregunta de reflexión.</p><div class="g-grid" id="g-1"><div class="center" id="center"><h2>Empezar con algo pequeño</h2><p>Una guía para entender cada capítulo y conectar sus ideas.</p><div class="hand" style="font-size:1.35rem">Simplifica · conecta · celebra</div></div></div></div>
-    <div class="group"><h2 class="g-title"><span class="g-n">2</span>Capítulos 1–3</h2><div class="g-grid" id="g-2"></div></div>
-    <div class="group"><h2 class="g-title"><span class="g-n">3</span>Capítulos 4–6</h2><div class="g-grid" id="g-3"></div></div>
-    <div class="group"><h2 class="g-title"><span class="g-n">4</span>Capítulos 7–8</h2><div class="g-grid" id="g-4"></div></div>
-    <div class="group"><h2 class="g-title"><span class="g-n">5</span>Cierre y práctica</h2><div class="g-grid" id="g-5"><div class="quote"><div class="hand" id="quote-text">¿Qué cambio sería más fácil si empezaras más pequeño?</div><div class="by">Pregunta de esta guía</div><button class="chip" id="next-quote" type="button">Otra pregunta</button></div></div></div>
+    <div class="group"><h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2><p class="reading-card-hint">Abre una tarjeta para leer la explicación completa y su pregunta de reflexión.</p><div class="g-grid" id="g-1"><div class="center" id="center"><h2>Suelta lo ajeno, <span>cuida lo tuyo</span></h2><p>Una guía para entender cada capítulo y llevar sus ideas a tu día a día.</p><div class="hand" style="font-size:1.35rem">Déjalos · déjame · elige</div></div></div></div>
+    <div class="group"><h2 class="g-title"><span class="g-n">2</span>La teoría · Déjalos + Déjame</h2><div class="g-grid" id="g-2"></div></div>
+    <div class="group"><h2 class="g-title"><span class="g-n">3</span>Tú y la teoría · Estrés, opiniones, emociones y comparación</h2><div class="g-grid" id="g-3"></div></div>
+    <div class="group"><h2 class="g-title"><span class="g-n">4</span>Tus relaciones y la teoría · Amistad, cambio, apoyo y amor</h2><div class="g-grid" id="g-4"></div></div>
+    <div class="group"><h2 class="g-title"><span class="g-n">5</span>Lo esencial del libro</h2><div class="g-grid" id="g-5"><div class="quote"><div class="hand" id="quote-text">¿Qué estás tratando de controlar que no depende de ti?</div><div class="by">Pregunta de esta guía</div><button class="chip" id="next-quote" type="button">Otra pregunta</button></div></div></div>
   </div>
+
+<section class="block" id="actividades">
+    <div class="block-head">
+      <h2>Para practicar: dos actividades</h2>
+      <p>Dos ejercicios para llevar la teoría a tu día a día. Son distintos de tus notas de lectura.</p>
+    </div>
+    <div class="act-grid">
+
+      <div class="quiz" id="quiz" aria-labelledby="quiz-title">
+        <div class="q-top">
+          <h3 id="quiz-title" class="hand" style="margin:0">Actividad 1 · ¿Déjalos o Déjame?</h3>
+          <span class="q-count" id="q-count">1 de 8</span>
+        </div>
+        <p class="hint" style="margin:0">Lee cada situación y decide: ¿es algo que no depende de ti y te toca soltar, o algo que sí puedes hacer tú?</p>
+        <p class="q-text" id="q-text"></p>
+        <div class="q-opts">
+          <button class="opt" type="button" data-a="ellos">Déjalos<small>No depende de mí. Lo suelto.</small></button>
+          <button class="opt" type="button" data-a="yo">Déjame<small>Sí depende de mí. Puedo actuar.</small></button>
+        </div>
+        <p class="feedback" id="q-feedback" aria-live="polite"></p>
+        <div class="q-actions">
+          <button class="btn ghost" id="q-restart" type="button">Empezar de nuevo</button>
+          <button class="btn" id="q-next" type="button" disabled>Siguiente →</button>
+        </div>
+      </div>
+
+      <div class="reto" id="reto" aria-labelledby="reto-title">
+        <h3 id="reto-title" class="hand" style="margin:0">Actividad 2 · Mi reto de 7 días</h3>
+        <p class="hint" style="margin:0">Elige una situación real y practica Déjalos + Déjame durante una semana. Lo que escribas se queda solo en este navegador.</p>
+
+        <div class="step">
+          <span class="step-t">1. Elige un área</span>
+          <div class="seg" id="reto-area" role="group" aria-label="Área del reto"></div>
+          <p class="area-hint" id="area-hint">Toca un área para ver una pista.</p>
+        </div>
+        <div class="step">
+          <label for="r-sit">2. ¿Qué situación te está quitando energía?</label>
+          <textarea id="r-sit" placeholder="Describe en una o dos frases lo que pasa…"></textarea>
+        </div>
+        <div class="step">
+          <label for="r-ellos">3. Déjalos: ¿qué voy a soltar?</label>
+          <textarea id="r-ellos" placeholder="Déjalos pensar, sentir o hacer…"></textarea>
+        </div>
+        <div class="step">
+          <label for="r-yo">4. Déjame: ¿qué acción pequeña sí voy a hacer?</label>
+          <textarea id="r-yo" placeholder="Déjame… (algo concreto que puedas hacer hoy)"></textarea>
+        </div>
+        <div class="step">
+          <span class="step-t">5. Marca cada día que lo practicaste</span>
+          <div class="days" id="reto-days" role="group" aria-label="Días practicados"></div>
+        </div>
+        <div class="scan-out" id="reto-out" aria-live="polite"></div>
+        <div class="q-actions"><button class="btn ghost" id="reto-reset" type="button">Borrar mi reto</button></div>
+      </div>
+
+    </div>
+  </section>
 
   <section class="block" id="diario">
     <div class="block-head">
       <h2>Mis notas de lectura</h2>
-      <p>Tres preguntas para conectar la lectura con tu experiencia. Lo que escribas se queda solo en este navegador.</p>
+      <p>Tres preguntas para llevar Déjalos y Déjame a tu vida. Lo que escribas se queda solo en este navegador.</p>
     </div>
     <div class="journal">
       <div class="jcard">
       <div class="mg-field-head">
-        <label for="j1">¿Qué acción pequeña quiero probar?</label>
+        <label for="j1">¿Qué estoy tratando de controlar que no depende de mí?</label>
         <button class="mg-clear-field" type="button" data-clear="j1">Borrar</button>
       </div>
-      <textarea id="j1" placeholder="Elige algo que puedas hacer incluso en un día ocupado…"></textarea>
+      <textarea id="j1" placeholder="Una persona, una opinión, una reacción…"></textarea>
     </div>
       <div class="jcard">
       <div class="mg-field-head">
-        <label for="j2">¿Después de qué rutina la haré?</label>
+        <label for="j2">¿Qué sí depende de mí? Déjame…</label>
         <button class="mg-clear-field" type="button" data-clear="j2">Borrar</button>
       </div>
-      <textarea id="j2" placeholder="Define un momento preciso que ya exista en tu día…"></textarea>
+      <textarea id="j2" placeholder="Escribe una acción pequeña y concreta…"></textarea>
     </div>
       <div class="jcard">
       <div class="mg-field-head">
-        <label for="j3">¿Cómo reconoceré mi avance y qué ajustaré?</label>
+        <label for="j3">¿Qué relación quiero cuidar de otra manera?</label>
         <button class="mg-clear-field" type="button" data-clear="j3">Borrar</button>
       </div>
-      <textarea id="j3" placeholder="Anota una celebración natural y lo que observaste…"></textarea>
+      <textarea id="j3" placeholder="Puede ser una amistad, tu familia o tu pareja…"></textarea>
     </div>
     </div>
     <p class="hint" id="saved-hint" style="margin-top:8px"></p>
@@ -572,19 +659,21 @@ dialog{border-radius:16px}
   <p class="mg-pdf-note">Se abrirá la ventana de impresión. Elige <strong>Guardar como PDF</strong>. Tus respuestas no se envían a Marginalia.</p>
 </section>
 
+
+
 <section class="mg-feedback-invite" aria-label="Comentarios sobre esta guía">
   <p>¿Te sirvió esta guía? Me gustaría saber qué piensas.</p>
   <button class="btn ghost" id="mg-feedback-open" type="button" aria-haspopup="dialog">Dejar comentario</button>
 </section>
 
 <nav class="mg-pager" aria-label="Otros libros">
-  <a class="pv" href="habitos-atomicos.html" aria-label="Libro anterior: Hábitos atómicos"><span class="mg-arrow" aria-hidden="true">&larr;</span><b>Hábitos atómicos</b></a>
+  <a class="pv" href="piensalo-otra-vez.html" aria-label="Libro anterior: Piénsalo otra vez"><span class="mg-arrow" aria-hidden="true">&larr;</span><b>Piénsalo otra vez</b></a>
   <a class="home" href="index.html#libros">Biblioteca</a>
-  <a class="nx" href="como-ganar-amigos.html" aria-label="Siguiente libro: Cómo ganar amigos e influir sobre las personas"><b>Cómo ganar amigos e influir sobre las personas</b><span class="mg-arrow" aria-hidden="true">&rarr;</span></a>
+  <a class="nx" href="el-jardin-de-las-mariposas.html" aria-label="Siguiente libro: El jardín de las mariposas"><b>El jardín de las mariposas</b><span class="mg-arrow" aria-hidden="true">&rarr;</span></a>
 </nav>
 
   <footer>
-    <div class="source-note"><strong>Obra de referencia:</strong> BJ Fogg. <cite>Tiny Habits: The Small Changes That Change Everything</cite>. Houghton Mifflin Harcourt, 2020. Se consultó un PDF de 384 páginas con traducción automática al español; los títulos y las explicaciones de esta guía están redactados con palabras propias. Las referencias cuentan las páginas del PDF, incluida la portada. Los conceptos principales se contrastaron con el <a href="https://www.behaviormodel.org/" target="_blank" rel="noopener">modelo de comportamiento del autor</a> y sus <a href="https://tinyhabits.com/resources/" target="_blank" rel="noopener">recursos oficiales</a>.</div>
+    <div class="source-note"><strong>Obra de referencia:</strong> Mel Robbins. <cite>La teoría Let Them</cite> (título original: <cite>The Let Them Theory</cite>, Hay House, 2024). Guía elaborada a partir del ejemplar digital consultado. Las referencias de cada resumen cuentan las páginas del PDF, incluida la portada; pueden variar entre ediciones.</div>
     <div class="guide-credits">
     <p class="credits-author"><strong>Guías elaboradas por:</strong> Marginalia</p>
     <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
@@ -617,6 +706,8 @@ const I = {
   lotus:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle cx="24" cy="9" r="4"/><path d="M24 14v12M16 20l8 6 8-6M12 38c4-6 8-8 12-8s8 2 12 8M8 40h32"/></svg>',
   globe:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c6 6 6 28 0 34M24 7c-6 6-6 28 0 34"/></svg>',
   leaf:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40C8 20 22 8 40 8c0 18-12 32-30 32z"/><path d="M10 40 30 18"/></svg>',
+  people:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="16" r="6"/><circle cx="33" cy="18" r="5"/><path d="M6 40c0-7 5-12 11-12s11 5 11 12M28 40c0-6 3-10 7-10s7 4 7 10"/></svg>',
+  balance:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8v32M14 40h20M8 14h32"/><path d="M8 14 3 26a5 5 0 0 0 10 0zM40 14l-5 12a5 5 0 0 0 10 0z"/></svg>',
   sun:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 34a14 14 0 0 1 28 0z" fill="currentColor" fill-opacity=".25"/><path d="M24 8v6M10 14l4 4M38 14l-4 4M4 28h5M39 28h5M4 40h40"/></svg>'
 };
 
@@ -628,202 +719,403 @@ const DATA = [
     "ico": "book",
     "eyebrow": "Antes de empezar",
     "title": "El libro de un vistazo",
-    "text": "BJ Fogg propone empezar con acciones muy pequeñas, unirlas a una rutina que ya existe y reconocer el logro al realizarlas. El objetivo es aprender a construir hábitos que encajen en la vida diaria, incluso cuando las ganas de cambiar suben y bajan.",
+    "text": "Mel Robbins propone una idea sencilla: deja de gastar tu energía en lo que otras personas hacen, piensan o sienten, y ponla en lo que sí depende de ti. En la introducción cuenta de dónde viene y por qué decidió escribir sobre ella.",
     "pts": [
-      "La guía recorre la introducción, los ocho capítulos y la conclusión en el orden del libro.",
-      "Los títulos de los capítulos están adaptados a un español claro. Los ejemplos y las preguntas son de Marginalia.",
-      "La idea central es probar, observar y ajustar: si una acción no funciona, revisa cómo la organizaste antes de juzgarte."
+      "La autora recuerda una etapa de deudas y desempleo, y cómo una herramienta simple, la regla de los 5 segundos, la ayudó a pasar a la acción.",
+      "La teoría tiene dos partes: Déjalos, para soltar a los demás, y Déjame, para hacerte cargo de tu respuesta.",
+      "El libro la aplica en ocho áreas: estrés, opiniones ajenas, emociones de otros, comparación, amistad, querer cambiar a alguien, apoyar a quien sufre y el amor.",
+      "Las explicaciones resumen el libro. Los ejemplos y preguntas son de Marginalia."
     ],
-    "q": "¿Qué cambio te gustaría empezar de una forma más sencilla?"
-  },
-  {
-    "id": "intro",
-    "g": 1,
-    "c": "mint",
-    "ico": "leaf",
-    "eyebrow": "Introducción",
-    "title": "El cambio puede empezar pequeño",
-    "text": "Fogg cuestiona la costumbre de atribuir cada intento fallido a la falta de voluntad. Su propuesta es reducir el tamaño del primer paso y encontrar un lugar concreto para hacerlo. Así, cada intento permite aprender qué funciona en tus circunstancias.",
-    "pts": [
-      "Una intención amplia, como organizarte mejor, necesita convertirse en una acción que puedas reconocer y realizar.",
-      "El método reúne tres piezas: una rutina que sirve de recordatorio, una acción pequeña y una celebración inmediata.",
-      "Sentirte capaz de cumplir algo pequeño ayuda a seguir experimentando. Castigarte por cada tropiezo vuelve el proceso más pesado.",
-      "Ejemplo de Marginalia: después de dejar la mochila en su lugar, guardar una sola cosa que quedó fuera de sitio y reconocer ese avance."
-    ],
-    "q": "¿Cuál sería una versión tan pequeña de tu idea que pudieras probarla hoy?",
-    "pages": "pp. 7–25 del PDF"
+    "q": "¿En qué parte de tu vida sientes que gastas más energía tratando de controlar a otras personas?",
+    "pages": "Introducción, pp. 11–21"
   },
   {
     "id": "c1",
     "g": 2,
     "c": "green",
-    "ico": "brain",
+    "ico": "leaf",
     "eyebrow": "Capítulo 1",
-    "title": "Los elementos del comportamiento",
-    "text": "El modelo de Fogg explica una acción mediante tres elementos que coinciden en un mismo momento: motivación, capacidad y una señal. Querer hacer algo ayuda, pero también tiene que ser posible y aparecer un aviso que invite a actuar.",
+    "title": "Deja de perder tu vida en lo que no puedes controlar",
+    "text": "La autora descubrió la idea la noche del baile de graduación de su hijo. Mientras ella intentaba organizar la cena de los chicos bajo la lluvia, su hija le pidió que simplemente los dejara decidir. Al soltar, sintió alivio de inmediato.",
     "pts": [
-      "La motivación es el deseo de hacer la acción. La capacidad indica qué tan fácil o difícil resulta en ese momento. La señal recuerda que es hora de hacerla.",
-      "Cuando una acción es muy fácil, puede requerir menos motivación. Si es difícil, hace falta un impulso mayor para empezar.",
-      "Para revisar un intento que no funcionó, Fogg propone comprobar primero la señal, después la dificultad y finalmente la motivación.",
-      "Ejemplo de Marginalia: si quieres leer al terminar de comer pero el libro está guardado en otra habitación, una señal clara y tenerlo a la mano pueden facilitar el primer paso."
+      "Muchas veces regalamos nuestro poder: creemos que si hacemos todo bien, nadie se molestará ni nos criticará.",
+      "Todas las personas queremos controlar lo que pasa a nuestro alrededor, pero a otro adulto nunca lo podemos controlar.",
+      "Al dejar de administrar a los demás, recuperas tiempo, calma y atención para tu propia vida.",
+      "La autora compartió la idea en un video corto que se volvió viral. Ver a tanta gente tatuarse la frase la llevó a investigar por qué funciona."
     ],
-    "q": "En un hábito que te cuesta, ¿falta una señal clara o la acción resulta demasiado difícil?",
-    "pages": "pp. 26–52 del PDF"
+    "q": "Ejemplo de Marginalia: un compañero de trabajo llega de mal humor. ¿Qué cambia si decides que su humor no tiene que dirigir tu día?",
+    "pages": "pp. 23–35"
   },
   {
     "id": "c2",
     "g": 2,
-    "c": "yellow",
-    "ico": "sun",
+    "c": "green",
+    "ico": "balance",
     "eyebrow": "Capítulo 2",
-    "title": "Motivación: elige acciones que encajen contigo",
-    "text": "Las ganas de cambiar varían. Fogg aconseja aprovecharlas sin suponer que siempre tendrán la misma fuerza. En vez de elegir un hábito por entusiasmo o porque funciona para otra persona, propone buscar acciones que tú quieras hacer, puedas realizar y te acerquen a lo que buscas.",
+    "title": "Para empezar: Déjalos + Déjame",
+    "text": "Al ver fotos de un viaje de amigas al que no la invitaron, la autora se sintió rechazada. Decir Déjalos la calmó, pero descubrió que eso era solo la mitad. El poder real está en Déjame: preguntarse qué quiere hacer ella ahora.",
     "pts": [
-      "Distingue tu aspiración de una conducta concreta: querer una casa ordenada no es lo mismo que guardar las llaves al llegar.",
-      "Antes de elegir, imagina varias acciones posibles. Una misma aspiración puede alcanzarse por caminos distintos.",
-      "Compara las opciones por su utilidad y por lo realista que sería hacerlas en tu vida. No necesitas empezar con la más exigente.",
-      "Ejemplo de Marginalia: para leer más puedes llevar un libro en la bolsa, dejarlo junto al sillón o leer un párrafo después de una rutina. Elige lo que de verdad encaje contigo."
+      "Las ganas de controlar nacen del miedo: a quedar fuera, a no caer bien o a que todo se desordene.",
+      "Con la imagen de un subibaja explica que lo que nos hunde no es lo que hacen otros, sino cómo lo interpretamos.",
+      "Quedarse solo en Déjalos puede dar una falsa sensación de superioridad y llevar al aislamiento. Déjame te devuelve a la acción y a la responsabilidad.",
+      "La autora relaciona la idea con el estoicismo, el budismo y la aceptación radical. Aclara que no significa ignorar el daño, la discriminación o una conducta peligrosa: Déjame también implica poner límites y actuar."
     ],
-    "q": "¿Qué acción te ayudaría y además estarías dispuesto a hacer en un día común?",
-    "pages": "pp. 53–90 del PDF"
+    "q": "Ejemplo de Marginalia: te enteras de una reunión a la que no te invitaron. Después de soltarlo, ¿qué paso podrías dar tú para cuidar esas amistades?",
+    "pages": "pp. 36–49"
   },
   {
     "id": "c3",
-    "g": 2,
+    "g": 3,
     "c": "peach",
-    "ico": "leaf",
-    "eyebrow": "Capítulo 3",
-    "title": "Capacidad: hazlo fácil",
-    "text": "Este capítulo se pregunta qué vuelve difícil una conducta y cómo simplificarla. Fogg propone aprender una habilidad, conseguir un recurso útil o reducir la acción. El primer paso debe poder realizarse también en un día con poco tiempo o pocas ganas.",
+    "ico": "cloud",
+    "eyebrow": "Capítulo 3 · Estrés",
+    "title": "Sorpresa: la vida es estresante",
+    "text": "Filas largas, tráfico, gente ruidosa: las pequeñas molestias de cada día se acumulan y nos agotan. Con ayuda de una médica experta en estrés, la autora explica que la reacción del cuerpo es automática, pero lo que hacemos después sí se puede elegir.",
     "pts": [
-      "Las dificultades pueden venir del tiempo, el dinero, el esfuerzo físico, el esfuerzo mental o el choque con la rutina.",
-      "Puedes reducir un hábito a su inicio, como abrir una libreta, o a una versión pequeña, como escribir una línea.",
-      "Hacer más es opcional. Cumplir la versión pequeña ya cuenta; aumentar la exigencia cada día puede volver a complicar el hábito.",
-      "Ejemplo de Marginalia: para ordenar un archivo digital, empieza por poner nombre a un solo documento. Dejar abierta la carpeta correcta también reduce pasos."
+      "Muchas personas viven en estrés constante, y eso afecta el ánimo, la salud y la concentración.",
+      "En un vuelo, alguien tosía sin cubrirse. En vez de enojarse todo el viaje, ella se tapó con su bufanda y se puso audífonos.",
+      "Fijarte en lo que no controlas te estresa. Fijarte en lo que sí controlas te da poder."
     ],
-    "q": "¿Qué obstáculo podrías quitar para que tu acción fuera más fácil?",
-    "pages": "pp. 91–121 del PDF"
+    "q": "Ejemplo de Marginalia: la fila del súper no avanza. ¿Qué podrías hacer con esos minutos en lugar de enojarte?",
+    "pages": "pp. 52–60"
   },
   {
     "id": "c4",
     "g": 3,
-    "c": "blue",
-    "ico": "book",
-    "eyebrow": "Capítulo 4",
-    "title": "Señales: el poder del después",
-    "text": "Querer recordar algo no garantiza que aparezca en el momento oportuno. Fogg propone usar una rutina estable como ancla: cuando termina una acción conocida, empieza la nueva. La conexión funciona mejor si el momento es preciso y ambas acciones encajan.",
+    "c": "peach",
+    "ico": "mountain",
+    "eyebrow": "Capítulo 4 · Estrés",
+    "title": "Deja que te estresen",
+    "text": "El trabajo es una de las mayores fuentes de estrés. Si ya hiciste lo que te tocaba y el ascenso no llega, esa decisión es de tu jefe. Lo que sí es tuyo es decidir qué haces con tu carrera.",
     "pts": [
-      "El libro distingue señales que dependen de acordarte, avisos del entorno y acciones que ya realizas. Para los hábitos pequeños favorece estas últimas.",
-      "Define el final exacto de tu ancla. Después de colgar las llaves es más claro que en algún momento de la tarde.",
-      "Comprueba que la nueva acción sea posible en ese lugar y tenga la frecuencia que necesitas. También ayuda que las dos acciones compartan un propósito.",
-      "Ejemplo de Marginalia: después de colocar el marcador al terminar de leer, anota una palabra que te recuerde la idea principal. Si lo olvidas, prueba otra ancla."
+      "Quedarte enojado no cambia la situación y no te deja pensar con claridad en tu siguiente paso.",
+      "Casi nunca estás totalmente atrapado: puedes actualizar tu currículum, buscar opciones y tomar el control de tu futuro.",
+      "Lo mismo aplica a temas grandes, como la política: no puedes cambiar lo que ya se decidió, pero sí participar en lo que viene.",
+      "Déjalos no significa quedarse callado ni dejarse pisotear. Significa elegir en qué vale la pena poner tu energía."
     ],
-    "q": "¿Qué rutina que ya haces podría recordarte tu nuevo hábito en el lugar adecuado?",
-    "pages": "pp. 122–159 del PDF"
+    "q": "Ejemplo de Marginalia: llevas meses quejándote del mismo problema en el trabajo. ¿Qué acción concreta podrías empezar esta semana?",
+    "pages": "pp. 61–68"
   },
   {
     "id": "c5",
     "g": 3,
-    "c": "pink",
-    "ico": "heart",
-    "eyebrow": "Capítulo 5",
-    "title": "Las emociones crean hábitos",
-    "text": "Fogg da un papel central a la sensación de éxito. Propone celebrar al realizar la acción para asociarla con una experiencia agradable. Celebrar puede ser algo discreto: lo importante en su método es que el reconocimiento se sienta auténtico y cercano al momento del logro.",
+    "c": "peach",
+    "ico": "brain",
+    "eyebrow": "Capítulo 5 · Opiniones",
+    "title": "Deja que piensen mal de ti",
+    "text": "La gente va a opinar sobre ti hagas lo que hagas. Cuando el miedo a esas opiniones decide por ti, terminas posponiendo, dudando y dejando tus sueños para después.",
     "pts": [
-      "Una sonrisa, un gesto o unas palabras de reconocimiento pueden servir. No todas las personas se sienten bien con la misma celebración.",
-      "El capítulo distingue esa respuesta inmediata de un premio que llegará mucho después. La intención es conectar la emoción con la acción recién hecha.",
-      "Se celebra haber cumplido el paso pequeño, sin esperar a que aparezca un gran resultado. El libro también propone ensayar la secuencia completa.",
-      "Ejemplo de Marginalia: al cerrar un archivo que acabas de ordenar, detente un instante y reconoce que lo dejaste listo. Usa una forma que te resulte natural."
+      "La autora tardó años en hablar en redes de su trabajo como conferencista por miedo a lo que dirían sus amigos.",
+      "Incluso quienes te quieren piensan cosas negativas de ti a veces, y aun así te quieren. Dos cosas pueden ser ciertas a la vez.",
+      "Muchos miedos, como no soy suficiente o se van a enojar, dependen de personas que ni siquiera sabrías nombrar.",
+      "La meta es tomar decisiones de las que te sientas orgulloso, buscando equilibrio entre tus necesidades y las de los demás."
     ],
-    "q": "¿Cómo podrías reconocer un avance pequeño sin sentir que estás actuando?",
-    "pages": "pp. 160–199 del PDF"
+    "q": "Ejemplo de Marginalia: quieres compartir un proyecto propio, pero te frena pensar qué dirán. ¿Qué harías si su opinión no tuviera peso?",
+    "pages": "pp. 70–81"
   },
   {
     "id": "c6",
     "g": 3,
-    "c": "mint",
-    "ico": "mountain",
-    "eyebrow": "Capítulo 6",
-    "title": "De hábitos pequeños a cambios grandes",
-    "text": "Un hábito puede crecer en duración o cantidad, y también puede facilitar otros hábitos. Fogg explica que ese crecimiento necesita práctica y ajustes. Conservar una versión pequeña permite continuar cuando cambia el tiempo, la energía o el entorno.",
+    "c": "peach",
+    "ico": "heart",
+    "eyebrow": "Capítulo 6 · Opiniones",
+    "title": "Cómo amar a las personas difíciles",
+    "text": "Con la familia cuesta más soltar, porque sus opiniones son más directas y la relación dura toda la vida. La autora propone entender desde dónde mira cada persona, sin necesidad de darle la razón.",
     "pts": [
-      "Crecer es hacer más de la misma acción; multiplicarse es abrir paso a acciones nuevas. No todos los hábitos tienen que crecer.",
-      "El libro reúne cinco habilidades para cambiar: elegir y ajustar acciones, conocerte, revisar el proceso, preparar el entorno y cuidar tu actitud ante el aprendizaje.",
-      "Aumenta la dificultad cuando tenga sentido para ti. Si empiezas a evitar el hábito, revisa si lo hiciste demasiado grande.",
-      "Ejemplo de Marginalia: anotar una idea después de leer puede convertirse algunos días en un párrafo. En un día ocupado, una sola palabra sigue siendo tu punto de partida."
+      "Su mamá no se alegró con su compromiso. Años después entendió que temía que su hija se quedara a vivir lejos, como le había pasado a ella.",
+      "Ponerse en el lugar del otro no siempre cambia las opiniones, pero sí acerca a las personas.",
+      "Muchos familiares hacen lo que pueden con lo que han vivido. Aceptarlo no justifica el daño, pero te ayuda a decidir qué relación quieres.",
+      "Déjame puede ser acercarte, crear tus propias tradiciones, tener una conversación pendiente o poner distancia."
     ],
-    "q": "¿Qué versión mínima te ayudaría a conservar tu hábito durante una semana complicada?",
-    "pages": "pp. 200–241 del PDF"
+    "q": "Ejemplo de Marginalia: un familiar critica siempre tu forma de vivir. ¿Qué ves si intentas mirar la situación con sus ojos?",
+    "pages": "pp. 82–90"
   },
   {
     "id": "c7",
-    "g": 4,
-    "c": "lav",
-    "ico": "brain",
-    "eyebrow": "Capítulo 7",
-    "title": "Desenredar los hábitos que quieres cambiar",
-    "text": "Fogg compara los hábitos no deseados con un nudo formado por varias conductas. Sugiere separarlas y empezar por una que sea manejable. Su propuesta avanza desde aprender a crear hábitos positivos hasta reducir acciones específicas y, cuando hace falta, sustituirlas.",
+    "g": 3,
+    "c": "peach",
+    "ico": "cloud",
+    "eyebrow": "Capítulo 7 · Emociones",
+    "title": "Cuando los adultos hacen berrinches",
+    "text": "Muchos adultos nunca aprendieron a manejar sus emociones, así que reaccionan con enojo, culpa o silencio. Según la autora, no te toca manejar las emociones de otro adulto, aunque sí te toca acompañar las de un niño.",
     "pts": [
-      "Define una situación concreta. Revisar el celular mientras lees es más fácil de analizar que usar demasiado el celular en general.",
-      "Revisa primero la señal: puede ser posible quitarla o evitarla. Después examina cómo hacer más difícil la conducta que quieres reducir.",
-      "Si eliges una alternativa, procura que resulte atractiva y fácil en el mismo momento. Una sustitución demasiado complicada tendrá pocas oportunidades.",
-      "Ejemplo de Marginalia: si las alertas interrumpen tu lectura, prueba silenciarlas durante ese rato y dejar el teléfono lejos del sillón. Observa qué cambia antes de añadir otra regla."
+      "Ceder ante la culpa o el mal humor de otros te lleva a decir que sí cuando quieres decir que no.",
+      "La ley del hielo suele ser una forma inmadura de pedir atención sin hablar de lo que se siente.",
+      "Con tus propias emociones, déjalas subir sin reaccionar ni distraerte. La mayoría baja en poco tiempo si no la alimentas.",
+      "El hambre, el cansancio o el estrés nos vuelven más reactivos. Saberlo ayuda a responder mejor."
     ],
-    "q": "¿Qué conducta concreta podrías cambiar primero y qué la pone en marcha?",
-    "pages": "pp. 242–280 del PDF"
+    "q": "Ejemplo de Marginalia: alguien cercano deja de hablarte sin explicar por qué. ¿Cómo responderías sin cargar con su enojo?",
+    "pages": "pp. 92–101"
   },
   {
     "id": "c8",
-    "g": 4,
-    "c": "green",
-    "ico": "globe",
-    "eyebrow": "Capítulo 8",
-    "title": "Cómo cambiamos juntos",
-    "text": "La familia, las amistades y los equipos también influyen en los hábitos. Fogg aplica el método a cambios compartidos: escuchar lo que las personas quieren, acordar acciones posibles y reconocer los avances. Insistir o regañar no resuelve por sí solo una dificultad práctica.",
-    "pts": [
-      "Busca una aspiración compartida y explora distintas formas de acercarse a ella. No supongas que todos quieren lo mismo que tú.",
-      "El capítulo presenta dos maneras de ayudar: guiar abiertamente el proceso o facilitar pequeñas mejoras cotidianas sin organizar un programa formal.",
-      "Si alguien no participa, revisa si recibió la señal, si la tarea era clara y fácil, y si realmente quería hacerla. Las soluciones pueden variar entre personas.",
-      "Ejemplo de Marginalia: si en casa quieren cuidar los libros, acuerden devolver uno a su lugar al terminar de usarlo y dejen el espacio disponible. Reconozcan la colaboración sin comparaciones."
-    ],
-    "q": "¿Qué cambio podrías acordar con alguien, empezando por lo que ambos quieren?",
-    "pages": "pp. 281–320 del PDF"
-  },
-  {
-    "id": "conclusion",
-    "g": 5,
+    "g": 3,
     "c": "peach",
-    "ico": "heart",
-    "eyebrow": "Conclusión",
-    "title": "Los pequeños cambios que lo cambian todo",
-    "text": "En el cierre, Fogg relaciona su trabajo con experiencias personales y con el deseo de ayudar a más personas. Retoma la idea de aprender a cambiar sin convertir cada dificultad en una culpa. Los avances cotidianos pueden influir en cómo te ves y en cómo acompañas a otros.",
+    "ico": "leaf",
+    "eyebrow": "Capítulo 8 · Emociones",
+    "title": "La decisión correcta a menudo se siente mal",
+    "text": "A partir del mensaje de un novio que dudaba a pocas semanas de su boda, el capítulo explica por qué evitamos decisiones que sabemos correctas: no tememos el conflicto, tememos las emociones que causará en otros.",
     "pts": [
-      "El autor vuelve a dos orientaciones: ayudar a las personas a hacer lo que ya quieren hacer y ayudarlas a sentirse capaces de avanzar.",
-      "El valor del método también está en adquirir una habilidad que puedas adaptar a nuevas situaciones.",
-      "El cierre invita a practicar y compartir lo aprendido. Los anexos ofrecen herramientas y ejemplos adicionales; no son capítulos nuevos."
+      "Por no decepcionar, mucha gente se queda años en trabajos, carreras o relaciones que ya no quiere.",
+      "Que otros se pongan tristes o se enojen es una reacción normal. No es tu trabajo evitar que sientan.",
+      "Las emociones son como olas: suben, bajan y, con el tiempo, la vida encuentra un nuevo equilibrio.",
+      "Ser honesto ahora, aunque duela, evita un dolor mayor después."
     ],
-    "q": "¿Qué aprendiste sobre tu manera de cambiar que podrías usar en otra situación?",
-    "pages": "pp. 321–331 del PDF"
+    "q": "Ejemplo de Marginalia: llevas tiempo posponiendo una conversación difícil. ¿Qué te dice tu experiencia sobre esperar más?",
+    "pages": "pp. 102–106"
   },
   {
-    "id": "practica",
+    "id": "c9",
+    "g": 3,
+    "c": "peach",
+    "ico": "balance",
+    "eyebrow": "Capítulo 9 · Comparación",
+    "title": "Sí, la vida no es justa",
+    "text": "Siempre habrá alguien con más suerte, más talento o un mejor momento. Compararte así puede dejarte sin energía. La autora distingue dos tipos de comparación y empieza por la que solo hace daño.",
+    "pts": [
+      "La comparación que tortura se fija en lo que no puedes cambiar: tu cuerpo, tu familia de origen o ciertos talentos.",
+      "Una pregunta ayuda a reconocerla: ¿podría cambiar esto con esfuerzo? Si la respuesta es no, toca soltarlo.",
+      "Solemos compararnos con quien parece tener más y casi nunca reconocemos lo que ya tenemos.",
+      "En la vida no se gana jugando contra otros, sino jugando bien tus propias cartas."
+    ],
+    "q": "Ejemplo de Marginalia: te comparas con alguien en algo que no depende de ti. ¿Qué fortaleza tuya estás dejando de ver?",
+    "pages": "pp. 108–113"
+  },
+  {
+    "id": "c10",
+    "g": 3,
+    "c": "peach",
+    "ico": "sun",
+    "eyebrow": "Capítulo 10 · Comparación",
+    "title": "Cómo hacer de la comparación tu maestra",
+    "text": "El segundo tipo de comparación sí sirve: cuando envidias algo que tú también podrías construir. Esos celos son información. Señalan lo que quieres y lo que llevas tiempo posponiendo.",
+    "pts": [
+      "La mayoría de lo que deseas se puede lograr con trabajo, constancia y paciencia.",
+      "El éxito de otros te muestra el camino. Seguir una fórmula probada no es copiar: tú le pones lo tuyo.",
+      "Lo que parece suerte suele ser práctica diaria que nadie vio, repetir lo aburrido una y otra vez.",
+      "Déjalos ganar primero. Déjame aprender de ellos y ponerme a trabajar."
+    ],
+    "q": "Ejemplo de Marginalia: te da envidia el proyecto de un conocido. ¿Qué parte de eso podrías empezar tú en pequeño?",
+    "pages": "pp. 114–124"
+  },
+  {
+    "id": "c11",
+    "g": 4,
+    "c": "lav",
+    "ico": "people",
+    "eyebrow": "Capítulo 11 · Amistad",
+    "title": "La verdad sobre la amistad adulta",
+    "text": "De niños, los amigos llegaban solos. De adultos, cada quien se va por su lado con el trabajo, las mudanzas y la familia. La autora explica por qué la amistad cambia y por qué ahora pide iniciativa.",
+    "pts": [
+      "La amistad adulta se apoya en tres pilares: cercanía física, momento de vida y energía.",
+      "Hacer un amigo cercano requiere muchas horas juntos, algo que en la escuela pasaba sin esfuerzo.",
+      "Hay amistades para una etapa, para una razón y para toda la vida. Que cambien es normal."
+    ],
+    "q": "Ejemplo de Marginalia: piensa en un amigo con quien ya casi no hablas. ¿Cuál de los tres pilares cambió entre ustedes?",
+    "pages": "pp. 128–135"
+  },
+  {
+    "id": "c12",
+    "g": 4,
+    "c": "lav",
+    "ico": "broken",
+    "eyebrow": "Capítulo 12 · Amistad",
+    "title": "Por qué algunas amistades se apagan",
+    "text": "La autora cuenta cómo un grupo de amigos muy unido se fue alejando y cómo ella no lo manejó bien. Concluye que muchas distancias no son personales: son resultado de cambios en la vida de cada quien.",
+    "pts": [
+      "El error común es esperar que las amistades sigan igual para siempre, que siempre te incluyan y que todo sea fácil.",
+      "Al dejar de buscar, a veces descubres que el esfuerzo era solo tuyo. Duele, pero aclara.",
+      "Antes de cerrar una amistad, supón buena intención: quien no responde quizá está saturado.",
+      "La amistad no es llevar cuentas. Escribe porque quieres, sin esperar respuesta inmediata."
+    ],
+    "q": "Ejemplo de Marginalia: una amiga tarda días en contestar. ¿Qué otra explicación, además del desinterés, podría haber?",
+    "pages": "pp. 136–142"
+  },
+  {
+    "id": "c13",
+    "g": 4,
+    "c": "lav",
+    "ico": "people",
+    "eyebrow": "Capítulo 13 · Amistad",
+    "title": "Cómo crear las mejores amistades de tu vida",
+    "text": "Al mudarse de ciudad, la autora se sintió muy sola y decidió dar el primer paso. Saludar, aprender nombres y hacer preguntas la ayudó a formar una red cercana y, con el tiempo, amistades profundas.",
+    "pts": [
+      "Los vecinos, quien te atiende en la cafetería o la gente del gimnasio son lazos ligeros que nos hacen sentir parte de un lugar.",
+      "Ideas prácticas: ve primero, muestra curiosidad, sonríe y saluda, y hazlo sin esperar nada a cambio.",
+      "Invitar a otros a caminar o a reunirse puede crear una comunidad desde cero.",
+      "Date un año: encontrar a tu gente toma tiempo."
+    ],
+    "q": "Ejemplo de Marginalia: ves a la misma persona cada semana en un lugar. ¿Qué pregunta sencilla podrías hacerle?",
+    "pages": "pp. 143–152"
+  },
+  {
+    "id": "c14",
+    "g": 4,
+    "c": "lav",
+    "ico": "brain",
+    "eyebrow": "Capítulo 14 · Querer cambiar a alguien",
+    "title": "Las personas solo cambian cuando quieren",
+    "text": "Presionar a alguien para que cambie suele provocar lo contrario: resistencia, tensión y distancia. Con ayuda de especialistas, el capítulo explica por qué la presión no funciona.",
+    "pts": [
+      "Primera verdad: un adulto solo cambia cuando él lo desea. La motivación tiene que salir de él.",
+      "Segunda verdad: el cerebro busca lo que se siente bien ahora y evita el esfuerzo, aunque sepa que le conviene.",
+      "Tercera verdad: casi todos creemos que los riesgos no nos van a tocar, así que las amenazas y los sermones no convencen.",
+      "Aceptar a la persona como es hoy termina la lucha por el control y abre espacio para influir."
+    ],
+    "q": "Ejemplo de Marginalia: llevas meses pidiéndole a alguien que cambie un hábito. ¿Qué ha provocado tu insistencia en la relación?",
+    "pages": "pp. 154–165"
+  },
+  {
+    "id": "c15",
+    "g": 4,
+    "c": "lav",
+    "ico": "leaf",
+    "eyebrow": "Capítulo 15 · Querer cambiar a alguien",
+    "title": "Descubre el poder de tu influencia",
+    "text": "No puedes obligar a nadie a cambiar, pero sí puedes inspirarlo. Las personas imitan lo que ven que funciona y hace bien, así que tu ejemplo pesa más que tus palabras.",
+    "pts": [
+      "Vive el cambio que quieres ver y disfrútalo de verdad. El comportamiento se contagia.",
+      "Antes de hablar, prepárate: pregúntate varias veces por qué te molesta, hasta llegar a la raíz.",
+      "El ciclo ABC: A, pide disculpas por presionar y haz preguntas abiertas. B, da un paso atrás y observa. C, celebra cualquier avance.",
+      "La meta es que el cambio sea idea de la otra persona, no tuya."
+    ],
+    "q": "Ejemplo de Marginalia: quieres que en tu casa se use menos el celular en la mesa. ¿Cómo podrías mostrarlo con tu propio ejemplo?",
+    "pages": "pp. 166–178"
+  },
+  {
+    "id": "c16",
+    "g": 4,
+    "c": "lav",
+    "ico": "mountain",
+    "eyebrow": "Capítulo 16 · Apoyar a quien sufre",
+    "title": "Cuanto más rescatas, más se hunden",
+    "text": "Si alguien corre un peligro real, hay que intervenir y buscar ayuda. Pero en las luchas de largo plazo, resolverle todo a otro adulto puede impedir que sane. Sanar es un trabajo que solo esa persona puede hacer.",
+    "pts": [
+      "Una imagen del libro: apoyar es lanzar la pelota; rescatar es correr con ella cada vez que el otro no la atrapa.",
+      "Con niños y jóvenes, es el adulto quien busca ayuda profesional y guía el proceso.",
+      "Mejorar suele sentirse peor al principio, por eso muchas personas lo evitan.",
+      "Acompañar es validar lo que la persona siente, consolarla y quedarse cerca mientras enfrenta lo que le da miedo."
+    ],
+    "q": "Pregunta de Marginalia: ¿en qué situación tu ayuda podría estar evitando que alguien aprenda a hacerlo por sí mismo?",
+    "pages": "pp. 180–189"
+  },
+  {
+    "id": "c17",
+    "g": 4,
+    "c": "lav",
+    "ico": "heart",
+    "eyebrow": "Capítulo 17 · Apoyar a quien sufre",
+    "title": "Cómo apoyar de la manera correcta",
+    "text": "Los especialistas que consultó la autora coinciden en algo práctico: el apoyo, sobre todo el económico, necesita condiciones claras. Querer sin condiciones no significa pagar sin condiciones.",
+    "pts": [
+      "Dar dinero sin acuerdos suele generar resentimiento y puede alimentar el problema.",
+      "Ayuda mucho crear un entorno que facilite el cambio: la casa, las rutinas, la compañía y los planes.",
+      "En una etapa muy difícil de su vida, lo que más le sirvió a la autora fue que la gente llegara a ayudar sin preguntar.",
+      "Ayuda sin esperar agradecimiento y presta tu confianza a quien todavía no cree en sí mismo."
+    ],
+    "q": "Ejemplo de Marginalia: un amigo pasa por un mal momento. ¿Qué gesto concreto podrías ofrecer sin esperar a que te lo pida?",
+    "pages": "pp. 190–197"
+  },
+  {
+    "id": "c18",
+    "g": 4,
+    "c": "lav",
+    "ico": "heart",
+    "eyebrow": "Capítulo 18 · El amor",
+    "title": "Deja que te muestren quiénes son",
+    "text": "En el amor, lo que la otra persona hace dice más que lo que promete. Si te confunde, probablemente no está tan interesada como tú. Tu trabajo no es adivinar, sino ver lo que te muestra.",
+    "pts": [
+      "Salir con personas sirve para conocerte y aprender qué quieres y qué no aceptas, no solo para encontrar a la persona ideal.",
+      "Perseguir a alguien que no te elige te aleja del amor que buscas.",
+      "Una relación sana es mutua: esfuerzo, respeto, interés y atracción de ambos lados."
+    ],
+    "q": "Ejemplo de Marginalia: siempre eres quien escribe y propone planes. ¿Qué te está mostrando esa diferencia de esfuerzo?",
+    "pages": "pp. 199–207"
+  },
+  {
+    "id": "c19",
+    "g": 4,
+    "c": "lav",
+    "ico": "balance",
+    "eyebrow": "Capítulo 19 · El amor",
+    "title": "Cómo llevar tu relación al siguiente nivel",
+    "text": "Cuando alguien te trata bien pero no se compromete, la autora propone revisar dos cosas: si es un patrón tuyo elegir a quien no está disponible o si es solo esta persona. Después, decir con claridad lo que quieres.",
+    "pts": [
+      "Si siempre eliges a personas que no pueden comprometerse, vale la pena revisar qué buscas en ellas.",
+      "Expresa lo que quieres con calma y sin presión, dejando a la otra persona libre de decir que no.",
+      "Si te dice que no quiere lo mismo, ya te dio su respuesta. Quedarte o no es tu decisión.",
+      "Decir no a lo que no te conviene es parte de encontrar lo que sí."
+    ],
+    "q": "Pregunta de Marginalia: ¿qué necesitas en una relación que no estás dispuesto a negociar?",
+    "pages": "pp. 208–213"
+  },
+  {
+    "id": "c20",
+    "g": 4,
+    "c": "lav",
+    "ico": "sun",
+    "eyebrow": "Capítulo 20 · El amor",
+    "title": "Cada final es un nuevo comienzo",
+    "text": "¿Cómo saber si un problema de pareja se puede trabajar o si es momento de terminar? La autora retoma el ciclo ABC y le suma dos pasos para decidir con claridad.",
+    "pts": [
+      "Paso D: decide si el problema es algo que puedes aceptar o un límite para ti. Paso E: deja de quejarte o termina la relación.",
+      "Según la investigación sobre parejas que cita, las peleas que se repiten suelen venir de sueños distintos.",
+      "Una relación funciona cuando ambos quieren trabajar en ella y nadie tiene que renunciar a sus sueños o valores.",
+      "Después de una ruptura, el tiempo ayuda, pero importa más lo que haces con él. Y la relación más importante es la que tienes contigo."
+    ],
+    "q": "Ejemplo de Marginalia: discuten siempre por lo mismo. ¿Es algo que puedes aceptar o toca un sueño importante para ti?",
+    "pages": "pp. 214–233"
+  },
+  {
+    "id": "esencial",
+    "g": 5,
+    "c": "yellow",
+    "ico": "sun",
+    "eyebrow": "Síntesis del libro",
+    "title": "Tu era de Déjalos y Déjame",
+    "text": "La conclusión compara a las personas con el clima: no puedes controlar las nubes ni las tormentas, pero sí cómo te preparas y cómo te mueves debajo de ellas. El libro, dice la autora, no trata de los demás, sino de ti.",
+    "pts": [
+      "Déjalos: suelta lo que otros piensan, sienten y hacen.",
+      "Déjame: hazte responsable de tu respuesta, tus decisiones y tu felicidad.",
+      "Recuperar tu poder no es fácil ni inmediato, pero cada día puedes elegir dónde pones tu tiempo y tu energía.",
+      "El apéndice remite a materiales extra sobre crianza y equipos de trabajo."
+    ],
+    "q": "¿Cuál de las ocho áreas del libro te gustaría practicar primero?",
+    "pages": "Conclusión y apéndice, pp. 234–240"
+  },
+  {
+    "id": "practicas",
     "g": 5,
     "c": "yellow",
     "ico": "leaf",
     "eyebrow": "Actividad de Marginalia",
-    "title": "Tu primer experimento",
-    "text": "Elige una acción pequeña y prueba dónde encaja en tu día. Este ejercicio de la guía reúne las ideas del libro para que puedas observar tu experiencia y hacer ajustes, sin prometer una fecha exacta para formar el hábito.",
+    "title": "Dos columnas: Déjalos y Déjame",
+    "text": "Elige una situación de esta semana que te haya molestado o preocupado. Esta actividad te ayuda a separar lo que depende de otros de lo que depende de ti.",
     "pts": [
-      "Escribe qué te gustaría cambiar y elige una acción concreta que te acerque a ello.",
-      "Reduce esa acción hasta que puedas hacerla con facilidad. Prepara lo que necesites tener a la mano.",
-      "Elige una rutina estable que ocurra justo antes. Completa con tus palabras: después de esta rutina, haré esta pequeña acción.",
-      "Al realizarla, reconoce tu avance. Si no sucede, revisa la señal y la dificultad; cambia una cosa y vuelve a probar."
+      "En una columna escribe Déjalos y anota lo que no puedes controlar: lo que otros dijeron, hicieron o sintieron.",
+      "En la otra escribe Déjame y anota lo que sí puedes hacer: tu actitud, una acción, un límite o una conversación.",
+      "Elige una sola acción de la columna Déjame y hazla en las próximas 24 horas."
     ],
-    "q": "¿Cuál será tu ancla, tu acción pequeña y tu manera de reconocer el logro?"
+    "q": "¿Cómo cambió tu manera de ver la situación al separarla en dos columnas?"
+  },
+  {
+    "id": "resultado",
+    "g": 5,
+    "c": "yellow",
+    "ico": "book",
+    "eyebrow": "Tu lectura personal",
+    "title": "¿Qué te llevas?",
+    "text": "Recupera una idea del libro que te haya ayudado a mirar tus relaciones de otra manera. También puedes anotar dudas o desacuerdos para volver al texto y entender mejor la postura de Mel Robbins.",
+    "pts": [
+      "Elige un capítulo y explícalo con tus propias palabras.",
+      "Distingue las propuestas de la autora de tus propias experiencias y conclusiones.",
+      "Reconoce una situación concreta en la que quieras probar Déjalos y Déjame."
+    ],
+    "q": "¿Qué parte de tu vida quieres empezar a recuperar para ti?"
   }
 ];
 
-const QUOTES = ["¿Qué cambio sería más fácil si empezaras más pequeño?", "¿Qué rutina podría recordarte tu nueva acción?", "¿Qué avance pequeño merece que lo reconozcas hoy?"];
+const QUOTES = ["¿Qué estás tratando de controlar que no depende de ti?", "¿Qué sí puedes hacer tú hoy?", "¿Qué harías si no te importara lo que otros piensan?", "¿A quién te toca dejar ser como es?"];
 
 const store = {
   get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},
@@ -832,7 +1124,7 @@ const store = {
 
 /* Map */
 const map = document.getElementById('map');
-let done = new Set(store.get('th-done-v1',[]));
+let done = new Set(store.get('ltt-done-v1',[]));
 DATA.forEach((d,i)=>{
   const b=document.createElement('button');
   b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
@@ -857,7 +1149,7 @@ function refreshProgress(){
   document.getElementById('track').setAttribute('aria-valuenow',n);
 }
 refreshProgress();
-document.getElementById('reset').onclick=()=>{done.clear();store.set('th-done-v1',[]);refreshProgress()};
+document.getElementById('reset').onclick=()=>{done.clear();store.set('ltt-done-v1',[]);refreshProgress()};
 
 /* Dialog */
 const dlg=document.getElementById('dlg'); let cur=0;
@@ -875,7 +1167,7 @@ function openCard(i){
   source.textContent=d.pages?'Referencia en el ejemplar consultado: '+d.pages+'.':'';
   if(!dlg.open)dlg.showModal();
   dlg.querySelector('.dlg-body').scrollTop=0;
-  done.add(d.id);store.set('th-done-v1',[...done]);refreshProgress();
+  done.add(d.id);store.set('ltt-done-v1',[...done]);refreshProgress();
 }
 document.getElementById('dlg-x').onclick=()=>dlg.close();
 document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
@@ -890,8 +1182,8 @@ document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;docum
 /* Journal */
 const hint=document.getElementById('saved-hint');
 ['j1','j2','j3'].forEach(id=>{
-  const t=document.getElementById(id);t.value=store.get('th-'+id,'');
-  t.addEventListener('input',()=>{hint.textContent=store.set('th-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
+  const t=document.getElementById(id);t.value=store.get('ltt-'+id,'');
+  t.addEventListener('input',()=>{hint.textContent=store.set('ltt-'+id,t.value)?'Guardado en este navegador.':'No se pudo guardar en este navegador.'});
 });
 </script>
 
@@ -955,7 +1247,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelect
   btn.addEventListener("click",()=>{
     fillPdf();
     const oldTitle=document.title;
-    document.title="Mis notas - Hábitos diminutos - Marginalia";
+    document.title="Mis notas - La teoría Let Them - Marginalia";
     document.body.classList.add("mg-notes-print");
 
     const restore=()=>{
@@ -1003,13 +1295,109 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelect
       if(!window.confirm('¿Borrar esta respuesta?')) return;
 
       field.value='';
-      try{ localStorage.removeItem('th-'+id); }catch(e){}
+      try{ localStorage.removeItem('ltt-'+id); }catch(e){}
 
       if(hint) hint.textContent='Respuesta borrada de este navegador.';
       syncButton(id);
       field.focus();
     });
   });
+})();
+</script>
+
+<script id="ltt-actividades-script">
+/* Actividades de La teoría Let Them */
+(()=>{
+  const $=id=>document.getElementById(id);
+  const save=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}};
+  const load=(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}};
+
+  /* Actividad 1 */
+  const Q=[
+    {t:"Tus amigos se van de viaje y no te invitaron.",a:"ellos",f:"Su plan es decisión de ellos. Lo tuyo viene después: proponer tú un plan (capítulo 2)."},
+    {t:"Escribirle a una amiga para proponer un café este fin.",a:"yo",f:"Ir primero está en tus manos. Así se construye la amistad adulta (capítulo 13)."},
+    {t:"Un familiar opina que tu trabajo no es buena idea.",a:"ellos",f:"Su opinión es suya. Tú decides si guía tus decisiones (capítulos 5 y 6)."},
+    {t:"Actualizar tu currículum porque el ascenso no llegó.",a:"yo",f:"El ascenso lo decide otra persona; tu carrera la decides tú (capítulo 4)."},
+    {t:"Un compañero contesta de mal humor en una reunión.",a:"ellos",f:"Su emoción le toca manejarla a él. No tienes que cargarla (capítulo 7)."},
+    {t:"Respirar y esperar a que baje tu enojo antes de responder.",a:"yo",f:"No eliges sentir enojo, pero sí qué haces con él (capítulo 7)."},
+    {t:"Tu pareja todavía no quiere empezar a hacer ejercicio.",a:"ellos",f:"Un adulto cambia cuando él quiere. Presionar suele alejarlo (capítulo 14)."},
+    {t:"Salir a caminar tú y disfrutarlo sin sermones.",a:"yo",f:"Tu ejemplo influye más que tus palabras (capítulo 15)."}
+  ];
+  let qi=0,score=0;
+  const opts=[...document.querySelectorAll('#quiz .opt')];
+  function showQ(){
+    const next=$('q-next');
+    if(qi>=Q.length){
+      $('q-count').textContent='Resultado';
+      $('q-text').textContent=score+' de '+Q.length+' respuestas';
+      $('q-feedback').innerHTML=score===Q.length?'<b>¡Muy bien!</b> Ya distingues lo que es tuyo de lo que no.':'<b>Buen intento.</b> Revisa las que fallaste: la pregunta clave es si depende de ti o de otra persona.';
+      opts.forEach(o=>o.hidden=true); next.hidden=true; return;
+    }
+    $('q-count').textContent=(qi+1)+' de '+Q.length;
+    $('q-text').textContent=Q[qi].t;
+    $('q-feedback').textContent='';
+    opts.forEach(o=>{o.hidden=false;o.disabled=false;o.classList.remove('ok','no')});
+    next.hidden=false; next.disabled=true;
+    next.textContent=qi===Q.length-1?'Ver resultado →':'Siguiente →';
+  }
+  opts.forEach(o=>o.addEventListener('click',()=>{
+    const q=Q[qi],right=o.dataset.a===q.a; if(right)score++;
+    opts.forEach(x=>{x.disabled=true; if(x.dataset.a===q.a)x.classList.add('ok')});
+    if(!right)o.classList.add('no');
+    $('q-feedback').innerHTML=(right?'<b>Correcto.</b> ':'<b>Casi.</b> ')+q.f;
+    $('q-next').disabled=false; $('q-next').focus();
+  }));
+  $('q-next').addEventListener('click',()=>{qi++;showQ()});
+  $('q-restart').addEventListener('click',()=>{qi=0;score=0;showQ()});
+  showQ();
+
+  /* Actividad 2 */
+  const AREAS={
+    "Estrés":"Piensa en una molestia diaria: el tráfico, una fila, un correo.",
+    "Opiniones":"Piensa en algo que no haces por miedo a lo que digan.",
+    "Emociones":"Piensa en alguien cuyo enojo o culpa decide por ti.",
+    "Comparación":"Piensa en alguien que te da envidia. ¿Qué te está enseñando?",
+    "Amistad":"Piensa en una amistad que quieres recuperar o crear.",
+    "Cambiar a alguien":"Piensa en alguien a quien presionas para que cambie.",
+    "Apoyar":"Piensa en alguien a quien quizá estás rescatando de más.",
+    "Amor":"Piensa en lo que su comportamiento te está mostrando."
+  };
+  const K='ltt-reto-v1';
+  let st=load(K,{area:'',sit:'',ellos:'',yo:'',days:[]});
+  const seg=$('reto-area'), daysEl=$('reto-days');
+  Object.keys(AREAS).forEach(a=>{
+    const b=document.createElement('button'); b.type='button'; b.textContent=a; b.setAttribute('aria-pressed','false');
+    b.addEventListener('click',()=>{st.area=a;persist();render()}); seg.appendChild(b);
+  });
+  for(let i=1;i<=7;i++){
+    const b=document.createElement('button'); b.type='button'; b.textContent=i; b.setAttribute('aria-label','Día '+i);
+    b.addEventListener('click',()=>{const s=new Set(st.days); s.has(i)?s.delete(i):s.add(i); st.days=[...s].sort((x,y)=>x-y); persist(); render()});
+    daysEl.appendChild(b);
+  }
+  const F={'r-sit':'sit','r-ellos':'ellos','r-yo':'yo'};
+  Object.entries(F).forEach(([id,k])=>{const t=$(id); t.value=st[k]||''; t.addEventListener('input',()=>{st[k]=t.value;persist();renderOut()})});
+  function persist(){save(K,st)}
+  const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  function renderOut(){
+    const out=$('reto-out'), n=st.days.length;
+    if(!st.ellos.trim()&&!st.yo.trim()){out.innerHTML='<p class="hint">Cuando llenes los pasos 3 y 4, aquí verás tu reto resumido.</p>';return}
+    out.innerHTML=(st.area?'<p><b>Área:</b> '+esc(st.area)+'</p>':'')+
+      (st.ellos.trim()?'<p><b>Déjalos</b> '+esc(st.ellos.trim())+'</p>':'')+
+      (st.yo.trim()?'<p><b>Déjame</b> '+esc(st.yo.trim())+'</p>':'')+
+      '<p class="hint">'+(n===7?'¡Completaste los 7 días! ¿Qué cambió en ti y en la situación?':n+' de 7 días practicados.')+'</p>';
+  }
+  function render(){
+    [...seg.children].forEach(b=>b.setAttribute('aria-pressed',String(b.textContent===st.area)));
+    $('area-hint').textContent=st.area?AREAS[st.area]:'Toca un área para ver una pista.';
+    [...daysEl.children].forEach((b,i)=>b.setAttribute('aria-pressed',String(st.days.includes(i+1))));
+    renderOut();
+  }
+  $('reto-reset').addEventListener('click',()=>{
+    if(!window.confirm('¿Borrar tu reto de 7 días?'))return;
+    st={area:'',sit:'',ellos:'',yo:'',days:[]}; try{localStorage.removeItem(K)}catch(e){}
+    Object.keys(F).forEach(id=>$(id).value=''); render();
+  });
+  render();
 })();
 </script>
 
@@ -1094,21 +1482,21 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelect
   </style>
   <div class="pdf-wrap">
     <div class="pdf-brand">Marginalia</div>
-    <h1>Mis notas · Hábitos diminutos</h1>
+    <h1>Mis notas · La teoría Let Them</h1>
     <p class="pdf-sub" id="pdf-date"></p>
 
     <div class="pdf-section-title">Mis notas de lectura</div>
 
     <div class="pdf-item">
-      <h2>¿Qué acción pequeña quiero probar?</h2>
+      <h2>¿Qué estoy tratando de controlar que no depende de mí?</h2>
       <p id="pdf-j1"></p>
     </div>
     <div class="pdf-item">
-      <h2>¿Después de qué rutina la haré?</h2>
+      <h2>¿Qué sí depende de mí? Déjame…</h2>
       <p id="pdf-j2"></p>
     </div>
     <div class="pdf-item">
-      <h2>¿Cómo reconoceré mi avance y qué ajustaré?</h2>
+      <h2>¿Qué relación quiero cuidar de otra manera?</h2>
       <p id="pdf-j3"></p>
     </div>
 

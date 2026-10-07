@@ -29,7 +29,7 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
 .dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
 </style>
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<title>Guía visual de lectura · Piénsalo otra vez</title>
+<title>Guía de lectura · Piénsalo otra vez</title>
 <link rel="canonical" href="https://mymarginalia.net/piensalo-otra-vez.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -549,6 +549,7 @@ dialog{border-radius:16px}
 #g-6{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
 @media (min-width:900px){#g-6{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>
+<link rel="stylesheet" href="mobile-readability.css">
 </head>
 <body>
 <nav class="mg-nav" aria-label="Biblioteca">
@@ -557,7 +558,7 @@ dialog{border-radius:16px}
     <a class="mg-back" href="index.html#libros">&larr; <span>Biblioteca</span></a>
     <details class="mg-menu">
       <summary>Cambiar libro <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-      <ul><li><a href="biblia.html">La Biblia<small>Guía y reflexiones</small></a></li><li><a href="imitacion-de-cristo.html">Imitación de Cristo<small>Tomás de Kempis</small></a></li><li><a href="el-poder-del-ahora.html">El Poder del Ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="tiny-habits.html">Hábitos diminutos<small>BJ Fogg</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li><a href="inteligencia-emocional.html">Inteligencia emocional<small>Daniel Goleman</small></a></li><li><a href="amar-o-depender.html">¿Amar o depender?<small>Walter Riso</small></a></li><li><a href="el-sutil-arte-de-que-te-importe-un-carajo.html">El sutil arte de que te importe un carajo<small>Mark Manson</small></a></li><li><a href="piensalo-otra-vez.html" aria-current="page">Piénsalo otra vez<small>Adam Grant</small></a></li><li class="sep" aria-hidden="true"></li><li><a href="el-jardin-de-las-mariposas.html">El jardín de las mariposas<small>Dot Hutchison</small></a></li><li><a href="la-biblioteca-de-la-medianoche.html">La biblioteca de la medianoche<small>Matt Haig</small></a></li></ul>
+      <ul><li><a href="biblia.html">La Biblia<small>Diversos autores</small></a></li><li><a href="imitacion-de-cristo.html">Imitación de Cristo<small>Tomás de Kempis</small></a></li><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="tiny-habits.html">Hábitos diminutos<small>BJ Fogg</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li><a href="inteligencia-emocional.html">Inteligencia emocional<small>Daniel Goleman</small></a></li><li><a href="amar-o-depender.html">¿Amar o depender?<small>Walter Riso</small></a></li><li><a href="el-sutil-arte-de-que-te-importe-un-carajo.html">El sutil arte de que te importe un carajo<small>Mark Manson</small></a></li><li><a href="piensalo-otra-vez.html" aria-current="page">Piénsalo otra vez<small>Adam Grant</small></a></li><li><a href="la-teoria-let-them.html">La teoría Let Them<small>Mel Robbins</small></a></li><li class="sep" aria-hidden="true"></li><li><a href="el-jardin-de-las-mariposas.html">El jardín de las mariposas<small>Dot Hutchison</small></a></li><li><a href="la-biblioteca-de-la-medianoche.html">La biblioteca de la medianoche<small>Matt Haig</small></a></li></ul>
     </details>
   </div>
 </nav>
@@ -586,7 +587,7 @@ dialog{border-radius:16px}
   <div class="map" id="map">
     <div class="group">
       <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
-      <p class="reading-card-hint">Abre una tarjeta para leer la explicación completa.</p>
+      <p class="reading-card-hint">Abre una tarjeta para leer la explicación completa y su pregunta de reflexión.</p>
       <div class="g-grid" id="g-1">
         <div class="center" id="center">
           <h2>Pensar como <span>científico</span></h2>
@@ -685,7 +686,7 @@ dialog{border-radius:16px}
 
   <section class="block" id="diario">
     <div class="block-head">
-      <h2>Mi práctica de hoy</h2>
+      <h2>Mis notas de lectura</h2>
       <p>Tres preguntas para pensar otra vez. Lo que escribas se queda solo en este navegador.</p>
     </div>
     <div class="journal">
@@ -736,7 +737,7 @@ dialog{border-radius:16px}
 <nav class="mg-pager" aria-label="Otros libros">
   <a class="pv" href="el-sutil-arte-de-que-te-importe-un-carajo.html" aria-label="Libro anterior: El sutil arte de que te importe un carajo"><span class="mg-arrow" aria-hidden="true">&larr;</span><b>El sutil arte de que te importe un carajo</b></a>
   <a class="home" href="index.html#libros">Biblioteca</a>
-  <a class="nx" href="el-jardin-de-las-mariposas.html" aria-label="Siguiente libro: El jardín de las mariposas"><b>El jardín de las mariposas</b><span class="mg-arrow" aria-hidden="true">&rarr;</span></a>
+  <a class="nx" href="la-teoria-let-them.html" aria-label="Siguiente libro: La teoría Let Them"><b>La teoría Let Them</b><span class="mg-arrow" aria-hidden="true">&rarr;</span></a>
 </nav>
 
   <footer>
@@ -937,7 +938,7 @@ const DATA = [
     "id": "esencial", "g": 4, "c": "lav", "ico": "book",
     "eyebrow": "Para recordar",
     "title": "Las ideas principales",
-    "text": "",
+    "text": "Una síntesis de las ideas que conectan el libro: comprobar tus creencias, escuchar otras perspectivas y revisar lo que das por hecho.",
     "pts": [
       "Trata tus opiniones como algo que se puede comprobar.",
       "Cree en ti y acepta que te falta aprender.",
@@ -951,7 +952,7 @@ const DATA = [
     "id": "claves", "g": 4, "c": "peach", "ico": "book",
     "eyebrow": "Notas para recordar",
     "title": "Palabras clave",
-    "text": "",
+    "text": "Estos conceptos ayudan a reconocer las maneras de pensar y conversar que Grant desarrolla a lo largo del libro.",
     "pts": [
       "<b>Pensar como científico:</b> tratar tus ideas como algo que se puede comprobar, no como verdades fijas.",
       "<b>Humildad confiada:</b> creer que puedes lograr algo y aceptar que todavía te falta aprender.",
