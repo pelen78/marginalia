@@ -496,7 +496,7 @@ dialog{border-radius:16px}
 @media(max-width:600px){#dlg .dlg-head .ico{display:none}#dlg .dlg-head h3{font-size:1.2rem}#dlg .dlg-head{gap:6px}}
 </style>
 <style id="ltt-actividades">
-/* Actividades: Déjalos o Déjame + reto de 7 días */
+/* Reto de 7 días */
 .act-grid{display:grid;gap:18px}
 .quiz{padding:22px 24px;display:flex;flex-direction:column;gap:14px}
 .q-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
@@ -544,14 +544,15 @@ dialog{border-radius:16px}
     <h1>Guía de <span class="mark ul">lectura</span></h1>
     <div class="sub">Sobre <cite>La teoría Let Them</cite>, de Mel Robbins</div>
     <div class="author">GUÍA INDEPENDIENTE</div>
+    <!-- Enlace de compra: pega aquí el botón "Comprar libro" con tu enlace de Mercado Libre, igual que en las otras guías. -->
   </header>
 
 
-  <aside class="guide-note" aria-label="Acerca de esta guía"><strong>Una guía para leer el libro</strong><p>Recorre la introducción, las dos grandes partes y los veinte capítulos del libro con resúmenes sencillos, escritos con palabras propias. Los ejemplos, las preguntas y las actividades son de Marginalia. Esta guía es independiente y no sustituye la obra original.</p></aside>
+  <aside class="guide-note" aria-label="Acerca de esta guía"><strong>Una guía para leer el libro</strong><p>Recorre la introducción, las dos grandes partes y los veinte capítulos del libro con resúmenes sencillos, escritos con palabras propias. Los ejemplos, las preguntas y las actividades son de Marginalia.</p></aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 24 secciones exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 22 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="22" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
@@ -563,62 +564,39 @@ dialog{border-radius:16px}
     <div class="group"><h2 class="g-title"><span class="g-n">5</span>Lo esencial del libro</h2><div class="g-grid" id="g-5"><div class="quote"><div class="hand" id="quote-text">¿Qué estás tratando de controlar que no depende de ti?</div><div class="by">Pregunta de esta guía</div><button class="chip" id="next-quote" type="button">Otra pregunta</button></div></div></div>
   </div>
 
-<section class="block" id="actividades">
+<section class="block" id="reto-7-dias">
     <div class="block-head">
-      <h2>Para practicar: dos actividades</h2>
-      <p>Dos ejercicios para llevar la teoría a tu día a día. Son distintos de tus notas de lectura.</p>
+      <h2 id="reto-title">Mi reto de 7 días</h2>
+      <p>Elige una situación real y practica Déjalos + Déjame durante una semana. Lo que escribas se queda solo en este navegador.</p>
     </div>
-    <div class="act-grid">
 
-      <div class="quiz" id="quiz" aria-labelledby="quiz-title">
-        <div class="q-top">
-          <h3 id="quiz-title" class="hand" style="margin:0">Actividad 1 · ¿Déjalos o Déjame?</h3>
-          <span class="q-count" id="q-count">1 de 8</span>
-        </div>
-        <p class="hint" style="margin:0">Lee cada situación y decide: ¿es algo que no depende de ti y te toca soltar, o algo que sí puedes hacer tú?</p>
-        <p class="q-text" id="q-text"></p>
-        <div class="q-opts">
-          <button class="opt" type="button" data-a="ellos">Déjalos<small>No depende de mí. Lo suelto.</small></button>
-          <button class="opt" type="button" data-a="yo">Déjame<small>Sí depende de mí. Puedo actuar.</small></button>
-        </div>
-        <p class="feedback" id="q-feedback" aria-live="polite"></p>
-        <div class="q-actions">
-          <button class="btn ghost" id="q-restart" type="button">Empezar de nuevo</button>
-          <button class="btn" id="q-next" type="button" disabled>Siguiente →</button>
-        </div>
+    <div class="reto" id="reto" aria-labelledby="reto-title">
+      <div class="step">
+        <span class="step-t">1. Elige un área</span>
+        <div class="seg" id="reto-area" role="group" aria-label="Área del reto"></div>
+        <p class="area-hint" id="area-hint">Toca un área para ver una pista.</p>
       </div>
-
-      <div class="reto" id="reto" aria-labelledby="reto-title">
-        <h3 id="reto-title" class="hand" style="margin:0">Actividad 2 · Mi reto de 7 días</h3>
-        <p class="hint" style="margin:0">Elige una situación real y practica Déjalos + Déjame durante una semana. Lo que escribas se queda solo en este navegador.</p>
-
-        <div class="step">
-          <span class="step-t">1. Elige un área</span>
-          <div class="seg" id="reto-area" role="group" aria-label="Área del reto"></div>
-          <p class="area-hint" id="area-hint">Toca un área para ver una pista.</p>
-        </div>
-        <div class="step">
-          <label for="r-sit">2. ¿Qué situación te está quitando energía?</label>
-          <textarea id="r-sit" placeholder="Describe en una o dos frases lo que pasa…"></textarea>
-        </div>
-        <div class="step">
-          <label for="r-ellos">3. Déjalos: ¿qué voy a soltar?</label>
-          <textarea id="r-ellos" placeholder="Déjalos pensar, sentir o hacer…"></textarea>
-        </div>
-        <div class="step">
-          <label for="r-yo">4. Déjame: ¿qué acción pequeña sí voy a hacer?</label>
-          <textarea id="r-yo" placeholder="Déjame… (algo concreto que puedas hacer hoy)"></textarea>
-        </div>
-        <div class="step">
-          <span class="step-t">5. Marca cada día que lo practicaste</span>
-          <div class="days" id="reto-days" role="group" aria-label="Días practicados"></div>
-        </div>
-        <div class="scan-out" id="reto-out" aria-live="polite"></div>
-        <div class="q-actions"><button class="btn ghost" id="reto-reset" type="button">Borrar mi reto</button></div>
+      <div class="step">
+        <label for="r-sit">2. ¿Qué situación te está quitando energía?</label>
+        <textarea id="r-sit" placeholder="Describe en una o dos frases lo que pasa…"></textarea>
       </div>
-
+      <div class="step">
+        <label for="r-ellos">3. Déjalos: ¿qué voy a soltar?</label>
+        <textarea id="r-ellos" placeholder="Déjalos pensar, sentir o hacer…"></textarea>
+      </div>
+      <div class="step">
+        <label for="r-yo">4. Déjame: ¿qué acción pequeña sí voy a hacer?</label>
+        <textarea id="r-yo" placeholder="Déjame… (algo concreto que puedas hacer hoy)"></textarea>
+      </div>
+      <div class="step">
+        <span class="step-t">5. Marca cada día que lo practicaste</span>
+        <div class="days" id="reto-days" role="group" aria-label="Días practicados"></div>
+      </div>
+      <div class="scan-out" id="reto-out" aria-live="polite"></div>
+      <div class="q-actions"><button class="btn ghost" id="reto-reset" type="button">Borrar mi reto</button></div>
     </div>
   </section>
+
 
   <section class="block" id="diario">
     <div class="block-head">
@@ -658,8 +636,6 @@ dialog{border-radius:16px}
   </div>
   <p class="mg-pdf-note">Se abrirá la ventana de impresión. Elige <strong>Guardar como PDF</strong>. Tus respuestas no se envían a Marginalia.</p>
 </section>
-
-
 
 <section class="mg-feedback-invite" aria-label="Comentarios sobre esta guía">
   <p>¿Te sirvió esta guía? Me gustaría saber qué piensas.</p>
@@ -721,7 +697,7 @@ const DATA = [
     "title": "El libro de un vistazo",
     "text": "Mel Robbins propone una idea sencilla: deja de gastar tu energía en lo que otras personas hacen, piensan o sienten, y ponla en lo que sí depende de ti. En la introducción cuenta de dónde viene y por qué decidió escribir sobre ella.",
     "pts": [
-      "La autora recuerda una etapa de deudas y desempleo, y cómo una herramienta simple, la regla de los 5 segundos, la ayudó a pasar a la acción.",
+      "La autora recuerda una etapa de deudas y desempleo, y cómo una herramienta simple que ella llama la regla de los 5 segundos la ayudó a pasar a la acción: consiste en contar hacia atrás 5-4-3-2-1 y actuar de inmediato antes de que las dudas o excusas te frenen.",
       "La teoría tiene dos partes: Déjalos, para soltar a los demás, y Déjame, para hacerte cargo de tu respuesta.",
       "El libro la aplica en ocho áreas: estrés, opiniones ajenas, emociones de otros, comparación, amistad, querer cambiar a alguien, apoyar a quien sufre y el amor.",
       "Las explicaciones resumen el libro. Los ejemplos y preguntas son de Marginalia."
@@ -743,7 +719,7 @@ const DATA = [
       "Al dejar de administrar a los demás, recuperas tiempo, calma y atención para tu propia vida.",
       "La autora compartió la idea en un video corto que se volvió viral. Ver a tanta gente tatuarse la frase la llevó a investigar por qué funciona."
     ],
-    "q": "Ejemplo de Marginalia: un compañero de trabajo llega de mal humor. ¿Qué cambia si decides que su humor no tiene que dirigir tu día?",
+    "q": "Ejemplo de Marginalia: tu pareja llega de mal humor después de un día difícil. ¿Qué cambia si decides que su humor no tiene que dirigir el tuyo?",
     "pages": "pp. 23–35"
   },
   {
@@ -758,7 +734,7 @@ const DATA = [
       "Las ganas de controlar nacen del miedo: a quedar fuera, a no caer bien o a que todo se desordene.",
       "Con la imagen de un subibaja explica que lo que nos hunde no es lo que hacen otros, sino cómo lo interpretamos.",
       "Quedarse solo en Déjalos puede dar una falsa sensación de superioridad y llevar al aislamiento. Déjame te devuelve a la acción y a la responsabilidad.",
-      "La autora relaciona la idea con el estoicismo, el budismo y la aceptación radical. Aclara que no significa ignorar el daño, la discriminación o una conducta peligrosa: Déjame también implica poner límites y actuar."
+      "El libro relaciona esta idea con el estoicismo, el budismo y la aceptación radical: enfoques distintos que comparten la idea de aceptar lo que no puedes controlar y elegir cómo responder. No es una excusa para ignorar a otros ni para quedarse en algo que lastima."
     ],
     "q": "Ejemplo de Marginalia: te enteras de una reunión a la que no te invitaron. Después de soltarlo, ¿qué paso podrías dar tú para cuidar esas amistades?",
     "pages": "pp. 36–49"
@@ -793,7 +769,7 @@ const DATA = [
       "Lo mismo aplica a temas grandes, como la política: no puedes cambiar lo que ya se decidió, pero sí participar en lo que viene.",
       "Déjalos no significa quedarse callado ni dejarse pisotear. Significa elegir en qué vale la pena poner tu energía."
     ],
-    "q": "Ejemplo de Marginalia: llevas meses quejándote del mismo problema en el trabajo. ¿Qué acción concreta podrías empezar esta semana?",
+    "q": "Ejemplo de Marginalia: una amistad te está desgastando porque casi siempre eres tú quien busca y propone planes. ¿Qué sí podrías hacer tú esta semana, en lugar de esperar a que la otra persona cambie?",
     "pages": "pp. 61–68"
   },
   {
@@ -810,7 +786,7 @@ const DATA = [
       "Muchos miedos, como no soy suficiente o se van a enojar, dependen de personas que ni siquiera sabrías nombrar.",
       "La meta es tomar decisiones de las que te sientas orgulloso, buscando equilibrio entre tus necesidades y las de los demás."
     ],
-    "q": "Ejemplo de Marginalia: quieres compartir un proyecto propio, pero te frena pensar qué dirán. ¿Qué harías si su opinión no tuviera peso?",
+    "q": "Ejemplo de Marginalia: decides poner un límite en una amistad y sabes que algunas personas pueden pensar que estás exagerando. ¿Qué harías si no necesitaras que todos entendieran o aprobaran tu decisión?",
     "pages": "pp. 70–81"
   },
   {
@@ -873,7 +849,7 @@ const DATA = [
     "title": "Sí, la vida no es justa",
     "text": "Siempre habrá alguien con más suerte, más talento o un mejor momento. Compararte así puede dejarte sin energía. La autora distingue dos tipos de comparación y empieza por la que solo hace daño.",
     "pts": [
-      "La comparación que tortura se fija en lo que no puedes cambiar: tu cuerpo, tu familia de origen o ciertos talentos.",
+      "La comparación que tortura se fija en lo que no puedes cambiar: tu cuerpo, la familia en la que naciste o creciste, o ciertos talentos.",
       "Una pregunta ayuda a reconocerla: ¿podría cambiar esto con esfuerzo? Si la respuesta es no, toca soltarlo.",
       "Solemos compararnos con quien parece tener más y casi nunca reconocemos lo que ya tenemos.",
       "En la vida no se gana jugando contra otros, sino jugando bien tus propias cartas."
@@ -895,7 +871,7 @@ const DATA = [
       "Lo que parece suerte suele ser práctica diaria que nadie vio, repetir lo aburrido una y otra vez.",
       "Déjalos ganar primero. Déjame aprender de ellos y ponerme a trabajar."
     ],
-    "q": "Ejemplo de Marginalia: te da envidia el proyecto de un conocido. ¿Qué parte de eso podrías empezar tú en pequeño?",
+    "q": "Ejemplo de Marginalia: te da envidia lo fácil que a alguien se le da conocer gente y mantener amistades. ¿Qué podrías aprender de esa persona y empezar a practicar tú?",
     "pages": "pp. 114–124"
   },
   {
@@ -907,7 +883,7 @@ const DATA = [
     "title": "La verdad sobre la amistad adulta",
     "text": "De niños, los amigos llegaban solos. De adultos, cada quien se va por su lado con el trabajo, las mudanzas y la familia. La autora explica por qué la amistad cambia y por qué ahora pide iniciativa.",
     "pts": [
-      "La amistad adulta se apoya en tres pilares: cercanía física, momento de vida y energía.",
+      "La amistad adulta se apoya en tres pilares: cercanía física, es decir, tener oportunidades de verse; momento de vida, estar en etapas compatibles; y energía, tener tiempo e interés para cuidar la relación.",
       "Hacer un amigo cercano requiere muchas horas juntos, algo que en la escuela pasaba sin esfuerzo.",
       "Hay amistades para una etapa, para una razón y para toda la vida. Que cambien es normal."
     ],
@@ -940,7 +916,7 @@ const DATA = [
     "title": "Cómo crear las mejores amistades de tu vida",
     "text": "Al mudarse de ciudad, la autora se sintió muy sola y decidió dar el primer paso. Saludar, aprender nombres y hacer preguntas la ayudó a formar una red cercana y, con el tiempo, amistades profundas.",
     "pts": [
-      "Los vecinos, quien te atiende en la cafetería o la gente del gimnasio son lazos ligeros que nos hacen sentir parte de un lugar.",
+      "Los vecinos, quien te atiende en la cafetería o la gente del gimnasio pueden ser lazos ligeros: contactos cotidianos que, aunque no sean amistades íntimas, nos hacen sentir parte de un lugar.",
       "Ideas prácticas: ve primero, muestra curiosidad, sonríe y saluda, y hazlo sin esperar nada a cambio.",
       "Invitar a otros a caminar o a reunirse puede crear una comunidad desde cero.",
       "Date un año: encontrar a tu gente toma tiempo."
@@ -994,7 +970,7 @@ const DATA = [
       "Una imagen del libro: apoyar es lanzar la pelota; rescatar es correr con ella cada vez que el otro no la atrapa.",
       "Con niños y jóvenes, es el adulto quien busca ayuda profesional y guía el proceso.",
       "Mejorar suele sentirse peor al principio, por eso muchas personas lo evitan.",
-      "Acompañar es validar lo que la persona siente, consolarla y quedarse cerca mientras enfrenta lo que le da miedo."
+      "Acompañar es validar lo que la persona siente, es decir, reconocer su emoción sin decirle que está exagerando; también es consolarla y quedarse cerca mientras enfrenta lo que le da miedo."
     ],
     "q": "Pregunta de Marginalia: ¿en qué situación tu ayuda podría estar evitando que alguien aprenda a hacerlo por sí mismo?",
     "pages": "pp. 180–189"
@@ -1039,7 +1015,7 @@ const DATA = [
     "ico": "balance",
     "eyebrow": "Capítulo 19 · El amor",
     "title": "Cómo llevar tu relación al siguiente nivel",
-    "text": "Cuando alguien te trata bien pero no se compromete, la autora propone revisar dos cosas: si es un patrón tuyo elegir a quien no está disponible o si es solo esta persona. Después, decir con claridad lo que quieres.",
+    "text": "Cuando alguien te trata bien pero no se compromete, la autora propone revisar dos cosas: si es un patrón tuyo elegir a personas que no quieren o no pueden ofrecer el mismo compromiso, o si ocurre solo con esta persona. Después, decir con claridad lo que quieres.",
     "pts": [
       "Si siempre eliges a personas que no pueden comprometerse, vale la pena revisar qué buscas en ellas.",
       "Expresa lo que quieres con calma y sin presión, dejando a la otra persona libre de decir que no.",
@@ -1082,36 +1058,6 @@ const DATA = [
     ],
     "q": "¿Cuál de las ocho áreas del libro te gustaría practicar primero?",
     "pages": "Conclusión y apéndice, pp. 234–240"
-  },
-  {
-    "id": "practicas",
-    "g": 5,
-    "c": "yellow",
-    "ico": "leaf",
-    "eyebrow": "Actividad de Marginalia",
-    "title": "Dos columnas: Déjalos y Déjame",
-    "text": "Elige una situación de esta semana que te haya molestado o preocupado. Esta actividad te ayuda a separar lo que depende de otros de lo que depende de ti.",
-    "pts": [
-      "En una columna escribe Déjalos y anota lo que no puedes controlar: lo que otros dijeron, hicieron o sintieron.",
-      "En la otra escribe Déjame y anota lo que sí puedes hacer: tu actitud, una acción, un límite o una conversación.",
-      "Elige una sola acción de la columna Déjame y hazla en las próximas 24 horas."
-    ],
-    "q": "¿Cómo cambió tu manera de ver la situación al separarla en dos columnas?"
-  },
-  {
-    "id": "resultado",
-    "g": 5,
-    "c": "yellow",
-    "ico": "book",
-    "eyebrow": "Tu lectura personal",
-    "title": "¿Qué te llevas?",
-    "text": "Recupera una idea del libro que te haya ayudado a mirar tus relaciones de otra manera. También puedes anotar dudas o desacuerdos para volver al texto y entender mejor la postura de Mel Robbins.",
-    "pts": [
-      "Elige un capítulo y explícalo con tus propias palabras.",
-      "Distingue las propuestas de la autora de tus propias experiencias y conclusiones.",
-      "Reconoce una situación concreta en la que quieras probar Déjalos y Déjame."
-    ],
-    "q": "¿Qué parte de tu vida quieres empezar a recuperar para ti?"
   }
 ];
 
@@ -1305,53 +1251,14 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelect
 })();
 </script>
 
-<script id="ltt-actividades-script">
-/* Actividades de La teoría Let Them */
+<script id="ltt-reto-script">
+/* Reto de 7 días · La teoría Let Them */
 (()=>{
   const $=id=>document.getElementById(id);
   const save=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}};
   const load=(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}};
 
-  /* Actividad 1 */
-  const Q=[
-    {t:"Tus amigos se van de viaje y no te invitaron.",a:"ellos",f:"Su plan es decisión de ellos. Lo tuyo viene después: proponer tú un plan (capítulo 2)."},
-    {t:"Escribirle a una amiga para proponer un café este fin.",a:"yo",f:"Ir primero está en tus manos. Así se construye la amistad adulta (capítulo 13)."},
-    {t:"Un familiar opina que tu trabajo no es buena idea.",a:"ellos",f:"Su opinión es suya. Tú decides si guía tus decisiones (capítulos 5 y 6)."},
-    {t:"Actualizar tu currículum porque el ascenso no llegó.",a:"yo",f:"El ascenso lo decide otra persona; tu carrera la decides tú (capítulo 4)."},
-    {t:"Un compañero contesta de mal humor en una reunión.",a:"ellos",f:"Su emoción le toca manejarla a él. No tienes que cargarla (capítulo 7)."},
-    {t:"Respirar y esperar a que baje tu enojo antes de responder.",a:"yo",f:"No eliges sentir enojo, pero sí qué haces con él (capítulo 7)."},
-    {t:"Tu pareja todavía no quiere empezar a hacer ejercicio.",a:"ellos",f:"Un adulto cambia cuando él quiere. Presionar suele alejarlo (capítulo 14)."},
-    {t:"Salir a caminar tú y disfrutarlo sin sermones.",a:"yo",f:"Tu ejemplo influye más que tus palabras (capítulo 15)."}
-  ];
-  let qi=0,score=0;
-  const opts=[...document.querySelectorAll('#quiz .opt')];
-  function showQ(){
-    const next=$('q-next');
-    if(qi>=Q.length){
-      $('q-count').textContent='Resultado';
-      $('q-text').textContent=score+' de '+Q.length+' respuestas';
-      $('q-feedback').innerHTML=score===Q.length?'<b>¡Muy bien!</b> Ya distingues lo que es tuyo de lo que no.':'<b>Buen intento.</b> Revisa las que fallaste: la pregunta clave es si depende de ti o de otra persona.';
-      opts.forEach(o=>o.hidden=true); next.hidden=true; return;
-    }
-    $('q-count').textContent=(qi+1)+' de '+Q.length;
-    $('q-text').textContent=Q[qi].t;
-    $('q-feedback').textContent='';
-    opts.forEach(o=>{o.hidden=false;o.disabled=false;o.classList.remove('ok','no')});
-    next.hidden=false; next.disabled=true;
-    next.textContent=qi===Q.length-1?'Ver resultado →':'Siguiente →';
-  }
-  opts.forEach(o=>o.addEventListener('click',()=>{
-    const q=Q[qi],right=o.dataset.a===q.a; if(right)score++;
-    opts.forEach(x=>{x.disabled=true; if(x.dataset.a===q.a)x.classList.add('ok')});
-    if(!right)o.classList.add('no');
-    $('q-feedback').innerHTML=(right?'<b>Correcto.</b> ':'<b>Casi.</b> ')+q.f;
-    $('q-next').disabled=false; $('q-next').focus();
-  }));
-  $('q-next').addEventListener('click',()=>{qi++;showQ()});
-  $('q-restart').addEventListener('click',()=>{qi=0;score=0;showQ()});
-  showQ();
-
-  /* Actividad 2 */
+  /* Reto de 7 días */
   const AREAS={
     "Estrés":"Piensa en una molestia diaria: el tráfico, una fila, un correo.",
     "Opiniones":"Piensa en algo que no haces por miedo a lo que digan.",

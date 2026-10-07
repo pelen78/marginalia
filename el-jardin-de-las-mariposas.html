@@ -31,7 +31,7 @@ footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.6
 <script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <title>Guía de lectura · El jardín de las mariposas</title>
 <link rel="canonical" href="https://mymarginalia.net/el-jardin-de-las-mariposas.html">
-<meta name="description" content="Guía independiente de Marginalia sobre El jardín de las mariposas, de Dot Hutchison. Resumen por bloques, temas, reflexiones y final explicado con spoilers opcionales.">
+<meta name="description" content="Guía independiente de Marginalia sobre El jardín de las mariposas, de Dot Hutchison. Resumen de sus tres capítulos, personajes, temas, reflexiones y final explicado con spoilers opcionales.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
@@ -521,37 +521,13 @@ dialog{border-radius:16px}
 
 
 <style id="jdm-extra">
-/* El jardín de las mariposas: piezas propias de la novela, con el estilo de Marginalia */
-.note-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:4px auto 28px}
-.note-grid .guide-note{max-width:none;margin:0;text-align:left}
-.note-grid .guide-note.spoil{background:var(--c-yellow)}
-.note-grid .guide-note.warn{background:var(--c-rose)}
-.note-grid .guide-note a{color:var(--accent)}
-@media (max-width:900px){.note-grid{grid-template-columns:1fr}}
-.group-intro{margin:-6px 0 18px 50px;color:var(--muted);font-style:italic;font-weight:300;max-width:72ch}
-.people-clusters{display:grid;gap:28px;margin-top:8px}
-.people-cluster{padding-top:18px;border-top:1px dashed var(--line)}
-.people-cluster:first-child{padding-top:0;border-top:0}
-.cluster-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:0 0 14px}
-.cluster-label{font-family:var(--f-hand);font-weight:700;font-size:1.45rem;line-height:1.05;color:var(--accent)}
-.cluster-head p{margin:0;color:var(--muted);font-size:.95rem;font-style:italic}
-#g-1 .center{grid-column:1/-1;min-height:200px}
-#g-1 .center p{max-width:52ch}
-#g-5 .quote{grid-column:1/-1;padding:24px 10px;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
-@media (max-width:720px){.group-intro{margin-left:0}.cluster-head{display:block}.cluster-head p{margin-top:4px}}
-/* Final explicado */
-.spoiler-wrap{border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:hidden}
-.spoiler-head{padding:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--c-peach)}
-.spoiler-head h2{font-weight:400;font-size:clamp(1.8rem,3.2vw,2.4rem)}
-.spoiler-head p{margin:6px 0 0;color:var(--muted);max-width:64ch;font-style:italic;font-weight:300}
-.spoiler-body{display:none;padding:22px}
-.spoiler-wrap.open .spoiler-body{display:block}
-.spoiler-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.scard{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--bg)}
-.scard b{display:block;color:var(--accent);font-family:var(--f-display);font-weight:600;font-size:1.2rem;margin-bottom:4px}
-.scard p{margin:0}
-.spoiler-body .source-note{margin-top:16px}
-@media (max-width:720px){.spoiler-grid{grid-template-columns:1fr}}
+/* Novel-specific notices and ending use the same spacing and typography as the guides. */
+.guide-note .notice-label{font-family:var(--f-body);font-size:inherit;font-weight:600}
+.guide-note a,.reading-card-hint a{color:var(--accent);text-underline-offset:3px}
+#spoiler-body{margin-top:22px}
+.ending-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--paper)}
+.ending-card h3{font-size:1.35rem;line-height:1.2;font-weight:600}
+.ending-card p{margin:12px 0 0}
 #dlg-source{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
 </style>
 <link rel="stylesheet" href="mobile-readability.css">
@@ -578,87 +554,60 @@ dialog{border-radius:16px}
   </div>
   </header>
 
-  <div class="note-grid">
-    <aside class="guide-note "><strong>Cómo está organizada esta guía</strong><p>La novela tiene tres capítulos muy extensos. Primero ubicamos a las personas clave y después recorremos los hechos en bloques de lectura creados por Marginalia. Los nombres de estos bloques son editoriales y no sustituyen los capítulos originales. Esta guía no es el libro ni lo reemplaza, y no tiene relación con la autora ni con la editorial.</p></aside>
-    <aside class="guide-note spoil"><strong>Aviso de spoilers</strong><p>Las secciones 1 y 2 se pueden consultar mientras lees. Desde la sección 3 se cuentan los hechos principales de la novela, incluido el tramo final. Las grandes revelaciones están ocultas en <a href="#spoilers">El final explicado</a> y solo aparecen si tú lo decides.</p></aside>
-    <aside class="guide-note warn"><strong>Advertencia de contenido</strong><p>La historia incluye secuestro, abuso sexual, violencia, asesinato, menores de edad, coerción y trauma. Los resúmenes evitan detalles gráficos innecesarios, pero no esconden la naturaleza de lo que ocurre.</p></aside>
-  </div>
+  <aside class="guide-note" aria-label="Acerca de esta guía"><strong>Una guía para leer el libro</strong><p>Recorre los tres capítulos de la novela con resúmenes sencillos, personajes e ideas clave. Los bloques y las preguntas son de Marginalia; las páginas corresponden al PDF consultado. Esta guía es independiente y no sustituye la obra original.</p><p><strong class="notice-label">Antes de leer:</strong> se cuentan hechos de la trama; las revelaciones del cierre están ocultas en <a href="#spoilers">El final explicado</a>. La novela aborda secuestro, abuso sexual, violencia contra menores y trauma. Los resúmenes evitan detalles gráficos.</p></aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 24 secciones exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 27 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="27" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Antes de entrar al Jardín</h2>
-      <p class="group-intro">Primero ubicamos la estructura del libro y el misterio desde el que empieza la narración.</p>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <p class="reading-card-hint">Abre una tarjeta para leer la explicación completa y su pregunta de reflexión.</p>
-      <div class="g-grid" id="g-1">
-        <div class="center" id="center">
-          <h2>Tres capítulos enormes, <span>una historia fragmentada</span></h2>
-          <p>El interrogatorio del FBI ocurre en el presente. La mayor parte del Jardín aparece a través de los recuerdos de Inara/Maya.</p>
-          <div class="hand" style="font-size:1.35rem">Lee sin prisa</div>
-        </div>
-      </div>
+      <div class="g-grid" id="g-1"><div class="center" id="center"><h2>Conservar tu voz, <span>recuperar tu vida</span></h2><p>Una guía para seguir la historia y entender a sus personajes.</p><div class="hand" style="font-size:1.35rem">Identidad · memoria · libertad</div></div></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">2</span>Personas que sostienen la historia</h2>
-      <p class="group-intro">No es una lista de todos los personajes. Aquí están quienes cambian el rumbo de Maya/Inara, explican cómo funciona el Jardín o resultan decisivos para entender por qué la historia termina como termina.</p>
-      <div class="people-clusters">
-        <div class="people-cluster">
-          <div class="cluster-head"><div class="cluster-label">En el centro del Jardín</div><p>Quienes concentran el conflicto principal.</p></div>
-          <div class="g-grid" id="g-2a"></div>
-        </div>
-        <div class="people-cluster">
-          <div class="cluster-head"><div class="cluster-label">La familia que Maya encuentra</div><p>Personas que la acompañan, la recuerdan o le ofrecen una forma distinta de pertenecer.</p></div>
-          <div class="g-grid" id="g-2b"></div>
-        </div>
-        <div class="people-cluster">
-          <div class="cluster-head"><div class="cluster-label">Quienes reconstruyen la verdad</div><p>Los agentes que escuchan su relato y obligan a ordenar lo que ocurrió.</p></div>
-          <div class="g-grid" id="g-2c"></div>
-        </div>
-      </div>
+      <h2 class="g-title"><span class="g-n">2</span>Capítulo 1 · Conocer el Jardín</h2>
+      <p class="reading-card-hint">Páginas 6–66 del PDF. El interrogatorio abre una historia que alterna el presente con los recuerdos de Maya.</p>
+      <div class="g-grid" id="g-2"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">3</span>Lo que ocurre</h2>
-      <p class="group-intro">Con los personajes ya ubicados, recorremos los hechos principales de la novela en bloques más cortos y fáciles de consultar.</p>
+      <h2 class="g-title"><span class="g-n">3</span>Capítulo 2 · Sobrevivir y buscar una salida</h2>
+      <p class="reading-card-hint">Páginas 67–180 del PDF. Las pérdidas, la llegada de Desmond y sus decisiones cambian la vida de las Mariposas.</p>
       <div class="g-grid" id="g-3"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">4</span>Lo que queda después</h2>
-      <p class="group-intro">La novela no termina cuando se abren las puertas. El “Exterior” también exige aprender a vivir de nuevo.</p>
+      <h2 class="g-title"><span class="g-n">4</span>Capítulo 3 · Reconstruir lo ocurrido</h2>
+      <p class="reading-card-hint">Páginas 181–206 del PDF. El hospital, los testimonios y los reencuentros. Las revelaciones están en <a href="#spoilers">El final explicado</a>.</p>
       <div class="g-grid" id="g-4"></div>
     </div>
     <div class="group">
-      <h2 class="g-title"><span class="g-n">5</span>Temas para mirar más de cerca</h2>
-      <p class="group-intro">Estas tarjetas ya no siguen la trama en orden: reúnen ideas que aparecen una y otra vez.</p>
-      <div class="g-grid" id="g-5">
-        <div class="quote">
-          <div class="hand" id="quote-text">¿Un nombre dice quién eres… o solo cómo te llaman?</div>
-          <div class="by">Pregunta de Marginalia</div>
-          <button class="chip" id="next-quote" type="button">Otra pregunta</button>
-        </div>
-      </div>
+      <h2 class="g-title"><span class="g-n">5</span>Personajes clave</h2>
+      <p class="reading-card-hint">Un mapa de relaciones para consultar durante la lectura. Incluye información de los tres capítulos.</p>
+      <div class="g-grid" id="g-5"></div>
+    </div>
+    <div class="group">
+      <h2 class="g-title"><span class="g-n">6</span>Lo esencial del libro</h2>
+      <div class="g-grid" id="g-6"><div class="quote"><div class="hand" id="quote-text">¿Un nombre dice quién eres… o solo cómo te llaman?</div><div class="by">Pregunta de Marginalia</div><button class="chip" id="next-quote" type="button">Otra pregunta</button></div></div>
     </div>
   </div>
 
-  <section class="block spoiler-wrap" id="spoilers">
-  <div class="spoiler-head">
-    <div><h2>El final explicado</h2><p>Esta parte reúne las revelaciones y el cierre. Está oculta para que puedas usar la guía mientras lees sin arruinarte el final.</p></div>
-    <button class="btn" id="spoiler-btn" type="button" aria-expanded="false">Mostrar spoilers</button>
-  </div>
-  <div class="spoiler-body" id="spoiler-body">
-    <div class="spoiler-grid">
-      <article class="scard"><b>Desmond finalmente actúa</b><p>Durante mucho tiempo sabe que algo está mal, pero no rompe con su padre. Cuando Avery lleva al Jardín a Keely, una niña de doce años, Desmond ya no puede sostener la versión de su padre ni permanecer al margen. Finalmente llama a la policía. Su decisión llega tarde, pero hace posible el rescate.</p></article>
-      <article class="scard"><b>El Jardín se destruye</b><p>La confrontación familiar desemboca en disparos, fuego y caos. Avery muere, Geoffrey MacIntosh, el Jardinero, sobrevive para enfrentar un juicio y varias de las jóvenes consiguen salir, aunque no todas.</p></article>
-      <article class="scard"><b>Sophia también fue una Mariposa</b><p>La mujer que había sido una figura maternal en la vida de Inara antes del secuestro resulta ser la Mariposa que logró escapar años atrás. Inara había ocultado esa conexión porque temía arruinar la vida que Sophia había reconstruido.</p></article>
-      <article class="scard"><b>¿Maya, Inara o Samira?</b><p>Al final, la protagonista revela que su nombre de nacimiento es Samira Grantaire. Sin embargo, Inara no se presenta como una mentira vacía: es la identidad que ella construyó y que puede elegir conservar legalmente.</p></article>
+  <section class="block" id="spoilers" aria-labelledby="spoilers-title">
+    <div class="block-head"><h2 id="spoilers-title">El final explicado</h2><p>Lee esta parte después de terminar la novela: revela el rescate, las identidades y el sentido del cierre.</p></div>
+    <button class="btn" id="spoiler-btn" type="button" aria-expanded="false" aria-controls="spoiler-body">Mostrar spoilers</button>
+    <div id="spoiler-body" hidden>
+      <div class="g-grid">
+        <article class="ending-card"><h3>1. La llamada sí se hizo</h3><p>Desmond denuncia el Jardín después de la llegada de Keely y proporciona nombres de cautivas. La primera inspección no las encuentra, porque las paredes ocultan las habitaciones. Al comprobar los nombres, entre ellos Cassidy Lawrence, la policía detecta la conexión con otras desapariciones y vuelve con el FBI. Recordar a Lyonette ayuda así a encontrar a las que siguen vivas.</p><p class="source-note">Capítulo 3 · pp. 190–193.</p></article>
+        <article class="ending-card"><h3>2. La confrontación y el incendio</h3><p>El Jardinero castiga a Desmond por denunciarlo. Avery, furioso por el trato que recibe su hermano, dispara contra él y contra su padre. Después de que Sirvat entra al cuarto donde se guarda el formaldehído, una explosión inicia el incendio. Bliss mata a Avery cuando vuelve a atacar a las jóvenes. El Jardín se derrumba en medio de la violencia que su creador creía controlar.</p><p class="source-note">Capítulo 3 · pp. 190–195.</p></article>
+        <article class="ending-card"><h3>3. Salir no significa que todas se salven</h3><p>Maya y varias compañeras abren un paso junto a un árbol caído; los bomberos rompen el cristal del invernadero exterior y las ayudan a salir. Una segunda explosión causa nuevas pérdidas. Desmond sobrevive y enfrenta una recuperación larga; su posible responsabilidad como cómplice queda abierta. Geoffrey MacIntosh, el Jardinero, también sobrevive y será llevado a juicio.</p><p class="source-note">Capítulo 3 · pp. 189 y 195–197.</p></article>
+        <article class="ending-card"><h3>4. Sophia era la Mariposa que escapó</h3><p>Sophia había sido Lara dentro del Jardín. Escapó años antes y se lo contó a Inara antes de que la secuestraran. Eso explica parte de su aparente calma al despertar allí. Inara no entró voluntariamente: ocultaba la conexión para proteger a Sophia y a su hija Jillie, cuyo padre biológico es el Jardinero. La revelación aclara el secreto que sostenía la tensión del interrogatorio.</p><p class="source-note">Capítulo 3 · pp. 198–204.</p></article>
+        <article class="ending-card"><h3>5. Samira, Inara y Maya</h3><p>Samira Grantaire es su nombre de nacimiento; Inara Morrissey es la identidad que eligió antes del secuestro, y Maya es el nombre impuesto en el Jardín. Dar su nombre legal al FBI no obliga a renunciar a Inara: Victor le explica que puede adoptarlo legalmente. Contar la verdad abre la posibilidad de elegir quién quiere ser.</p><p class="source-note">Capítulo 3 · pp. 205–206.</p></article>
+        <article class="ending-card"><h3>6. Una familia que espera su regreso</h3><p>Sophia le confirma que sus amigas conservaron sus cosas y su cama. El reencuentro transforma el sentido del carrusel, ligado al abandono de su infancia: ahora hay personas que la esperan. El final ofrece pertenencia y esperanza, pero reconoce que el duelo, el trauma y el proceso judicial continuarán después del rescate.</p><p class="source-note">Capítulo 3 · pp. 204–206.</p></article>
+      </div>
     </div>
-    <p class="source-note"><strong>Lectura del cierre:</strong> el libro no presenta el rescate como una reparación instantánea. Quedan el duelo, la investigación, el juicio y la adaptación al Exterior.</p>
-  </div>
-</section>
+  </section>
 
   <section class="block" id="diario">
     <div class="block-head">
@@ -719,36 +668,438 @@ const I={
  scale:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 7v34M12 12h24M24 12 13 30M24 12l11 18"/><path d="M6 30h14c0 5-3 8-7 8s-7-3-7-8zM28 30h14c0 5-3 8-7 8s-7-3-7-8zM17 41h14"/></svg>'
 };
 const DATA=[
-{id:'vista',g:1,c:'blue',ico:'book',eyebrow:'Antes de empezar',title:'El libro de un vistazo',text:'La novela comienza después del rescate. Una joven conocida como Maya está frente al FBI y cuenta, a su manera, cómo era el lugar del que acaba de salir.',pts:['El presente es el interrogatorio con Victor Hanoverian y Brandon Eddison.','Los recuerdos reconstruyen el Jardín, la vida antes del secuestro y la relación con las otras Mariposas.','El misterio no es solo qué ocurrió: también quién es realmente la narradora.'],q:'¿Qué cambia cuando una historia de terror empieza después de que la protagonista ya sobrevivió?',pages:'Capítulo 1, inicio · pp. 6–10'},
-
-{id:'maya',g:'2a',c:'lav',ico:'name',eyebrow:'Personaje central',title:'Maya / Inara · contar sin entregarlo todo',text:'Es la sobreviviente desde cuya voz conocemos el Jardín. Observadora, irónica y difícil de leer, decide qué contar, cuándo hacerlo y qué partes de sí misma conservar.',pts:['Las otras sobrevivientes la miran como una figura de referencia.','El nombre “Maya” pertenece al Jardín; “Inara” pertenece a la vida que ella había construido antes.','Su historia también pregunta si sobrevivir significa recuperar una identidad anterior o poder elegir una nueva.'],q:'¿Por qué controlar el propio relato puede ser una forma de recuperar poder?',pages:'Toda la novela; identidad desarrollada desde el capítulo 1'},
-{id:'jardinero',g:'2a',c:'rose',ico:'garden',eyebrow:'Personaje',title:'El Jardinero · posesión disfrazada de cuidado',text:'El hombre que creó el Jardín se considera protector y coleccionista. Su aparente ternura convive con un sistema basado en secuestro, abuso, control y muerte.',pts:['Su obsesión es preservar la belleza, no respetar la libertad.','Convierte a las jóvenes en “Mariposas” mediante nombres, reglas y tatuajes.','La contradicción entre afecto y violencia es una de las ideas más inquietantes de la novela.'],q:'¿Puede llamarse cuidado a algo que no permite que la otra persona diga que no?',pages:'A lo largo de la novela'},
-{id:'avery',g:'2a',c:'yellow',ico:'fire',eyebrow:'Personaje',title:'Avery · la violencia sin disfraz',text:'El hijo mayor del Jardinero representa una forma de violencia mucho menos contenida. Su necesidad de dominio y de reconocimiento dentro de la familia vuelve cada vez más inestable el Jardín.',pts:['Busca miedo y control de una manera más abierta que su padre.','Su rivalidad con Desmond agrava el conflicto familiar.','Sus decisiones terminan acelerando el derrumbe del sistema que el Jardinero creía controlar.'],q:'¿Qué cambia cuando la violencia deja de esconderse detrás de una explicación “amorosa”?',pages:'Capítulos 1–3'},
-{id:'desmond',g:'2a',c:'green',ico:'scale',eyebrow:'Personaje',title:'Desmond · saber y decidir',text:'El hijo menor entra al Jardín creyendo primero la versión de su padre. Poco a poco descubre que la realidad no encaja con esa historia y queda obligado a decidir qué hacer con lo que sabe.',pts:['Quiere conservar la imagen de un padre admirable, y eso retrasa su reacción.','Maya lo confronta con la diferencia entre dudar y permanecer neutral.','Su conflicto muestra que descubrir la verdad no sirve de mucho si nunca se actúa sobre ella.'],q:'¿En qué momento no elegir también se convierte en una elección?',pages:'Capítulo 2 y tramo final'},
-{id:'keely',g:'2a',c:'blue',ico:'people',eyebrow:'Punto de quiebre',title:'Keely · la niña que cambia el límite',text:'Keely es una niña de doce años que llega al Jardín cerca del tramo final. Su llegada rompe incluso las reglas que el propio Jardinero había establecido y vuelve mucho más difícil fingir que ese mundo está bajo control.',pts:['Hasta entonces, el Jardinero evitaba secuestrar a menores de dieciséis años.','Maya y las otras Mariposas intentan proteger a Keely desde que aparece.','Su presencia obliga a varios personajes a decidir de qué lado están.'],q:'¿Por qué a veces una situación que ya era intolerable necesita un último hecho para que alguien finalmente actúe?',pages:'Final del capítulo 2 y capítulo 3'},
-
-{id:'lyonette',g:'2b',c:'peach',ico:'people',eyebrow:'Personaje',title:'Lyonette / Cassidy · enseñar a sobrevivir',text:'Es la primera guía de Maya dentro del Jardín. Conoce las reglas, acompaña a las recién llegadas y demuestra que cuidar a otras puede convertirse en una forma de resistencia.',pts:['Le enseña a Maya cómo moverse dentro de ese mundo sin fingir que es normal.','Su cercanía ayuda a Maya a entender la importancia de recordar a las otras chicas.','Su verdadero nombre, Cassidy Lawrence, representa la parte de ella que existía antes del Jardín.'],q:'¿Qué puede dar una persona a los demás cuando ella misma no tiene una salida?',pages:'Capítulo 1 · especialmente pp. 11–38'},
-{id:'bliss',g:'2b',c:'lav',ico:'butterfly',eyebrow:'Personaje',title:'Bliss · rabia, humor y lealtad',text:'Bliss rechaza las ilusiones del Jardinero y convierte el sarcasmo, la creatividad y la rabia en una forma de resistencia. Con Maya crea una amistad basada en la franqueza.',pts:['No intenta hacer bonito lo que está pasando.','Crea objetos de arcilla que conservan recuerdos y vínculos entre las chicas.','Su lealtad aparece tanto en los momentos cotidianos como cuando el Jardín entra en crisis.'],q:'¿Puede el humor ayudar a resistir sin minimizar el dolor?',pages:'Capítulos 1–3'},
-{id:'sophia',g:'2b',c:'blue',ico:'people',eyebrow:'Personaje',title:'Sophia · alguien que sí espera',text:'Antes del secuestro, Sophia es una de las mujeres con las que Inara comparte departamento en Nueva York. Su manera de cuidar contrasta con casi todas las familias que la protagonista ha conocido.',pts:['Es una figura maternal sin exigir que Inara se convierta en su hija.','Representa la posibilidad de que alguien se vaya y aun así conserve un lugar al que volver.','Su importancia crece al final y conecta el pasado de Inara con preguntas que el Jardín parecía haber dejado enterradas.'],q:'¿Qué diferencia hay entre poseer a alguien y hacerle saber que puede volver?',pages:'Vida antes del Jardín y capítulo 3'},
-
-{id:'victor',g:'2c',c:'green',ico:'scale',eyebrow:'FBI',title:'Victor Hanoverian · escuchar lo que no se dice',text:'Victor conduce gran parte del interrogatorio. En vez de limitarse a exigir respuestas rápidas, aprende a seguir el modo en que Inara cuenta su historia y a prestar atención a lo que evita decir.',pts:['Su experiencia con jóvenes y sus propias hijas influye en la manera en que la trata.','Entiende que presionarla demasiado puede cerrar la única vía hacia la historia completa.','Funciona como puente entre el relato de Inara y la investigación oficial.'],q:'¿Escuchar bien significa aceptar todo lo que alguien dice o saber qué preguntar después?',pages:'Capítulos 1–3 · marco del interrogatorio'},
-{id:'eddison',g:'2c',c:'rose',ico:'people',eyebrow:'FBI',title:'Brandon Eddison · la necesidad de saber',text:'Eddison es más impaciente y confrontativo que Victor. Su historia personal con una hermana desaparecida hace que para él identificar a las víctimas y dar respuestas a sus familias sea algo profundamente personal.',pts:['Su reacción frente a Inara contrasta con la paciencia de Victor.','Defiende la idea de que saber qué ocurrió puede permitir a una familia comenzar a hacer duelo.','Su propia pérdida vuelve concreto uno de los grandes temas del libro: lo devastador que puede ser no saber.'],q:'¿La verdad siempre repara algo, o a veces su valor está simplemente en terminar con la incertidumbre?',pages:'Capítulos 1–3; conversación sobre su hermana en cap. 2'},
-
-{id:'inara',g:3,c:'lav',ico:'name',eyebrow:'Bloque 1',title:'El interrogatorio: Maya no quiere decir quién es',text:'Desde el inicio, la narradora controla la información. El FBI sabe que las otras jóvenes la escuchan y confían en ella, pero ni siquiera tiene certeza de su nombre.',pts:['“Maya” es un nombre recibido dentro del Jardín.','“Inara Morrissey” es la identidad que había construido antes del secuestro.','La tensión entre nombre, identidad e historia atraviesa toda la novela.'],q:'¿Puede una identidad elegida sentirse más verdadera que la que aparece en un documento?',pages:'Capítulo 1 · pp. 6–30'},
-{id:'llegada',g:3,c:'green',ico:'garden',eyebrow:'Bloque 2',title:'Bienvenida al Jardín',text:'Maya despierta en un lugar bellísimo y cerrado. Lyonette le explica poco a poco las reglas y la conduce al espacio que dará nombre a su cautiverio.',pts:['El contraste entre belleza y horror es deliberado: flores, agua, luz y mariposas conviven con el encierro.','Las nuevas chicas reciben ayuda de quienes ya aprendieron a sobrevivir allí.','El Jardín funciona como un mundo separado, con su propio lenguaje y sus propias reglas.'],q:'¿Por qué resulta más inquietante una prisión hermosa que una claramente hostil?',pages:'Capítulo 1 · pp. 11–16'},
-{id:'alas',g:3,c:'rose',ico:'butterfly',eyebrow:'Bloque 3',title:'Las alas y los nombres',text:'El Jardinero tatúa alas en la espalda de las jóvenes y les asigna un nombre. Lo que parece una obra de belleza funciona también como marca de posesión.',pts:['Las alas transforman a las cautivas en la “colección” que el Jardinero imagina poseer.','Los nombres nuevos pueden servir para borrar, sobrevivir o interpretar un papel.','Las chicas conservan en secreto fragmentos de la identidad que tenían antes.'],q:'¿Qué diferencia hay entre transformar a alguien y definirlo?',pages:'Capítulo 1 · pp. 14–30'},
-{id:'reglas',g:3,c:'peach',ico:'glass',eyebrow:'Bloque 4',title:'Las reglas del Jardín',text:'El cautiverio tiene rutinas, cámaras, horarios, privilegios y castigos. Nada de eso convierte el lugar en seguro: solo lo vuelve predecible.',pts:['La vida cotidiana puede parecer organizada y aun así estar construida sobre la violencia.','Las jóvenes aprenden conductas de generaciones anteriores.','Cumplir 21 años, enfermar gravemente o “no adaptarse” puede significar la muerte.'],q:'¿Por qué la previsibilidad puede convertirse en una forma de supervivencia incluso dentro de algo terrible?',pages:'Capítulos 1–2 · especialmente pp. 54–64'},
-{id:'antes',g:3,c:'blue',ico:'book',eyebrow:'Bloque 5',title:'Antes del Jardín también había una historia',text:'El interrogatorio obliga a Inara a hablar de su infancia, Nueva York y el departamento que compartía con otras jóvenes. Allí aparece por primera vez la idea de un hogar elegido.',pts:['Su pasado ayuda a entender por qué se volvió tan autosuficiente y desconfiada.','El departamento y el trabajo le ofrecen una forma de pertenencia que nunca tuvo en casa.','La novela contrapone la familia biológica con las personas que deciden cuidarse entre sí.'],q:'¿Cuándo un lugar se convierte en hogar: cuando vives ahí o cuando alguien espera que regreses?',pages:'Capítulo 1 · pp. 17–49'},
-{id:'rutina',g:3,c:'green',ico:'people',eyebrow:'Bloque 6',title:'Sobrevivir juntas',text:'Gran parte de la vida en el Jardín es espera: comidas, lecturas, juegos, conversaciones, miedo y pérdidas. Las chicas crean formas de acompañarse.',pts:['La cueva detrás de la cascada se vuelve un espacio de conversación y relativa privacidad.','Leer, correr, bailar, dibujar, peinar y crear objetos ayudan a conservar algo propio.','Conocer a las demás también significa aceptar que perderlas dolerá.'],q:'¿Qué pequeñas actividades pueden proteger una parte de la identidad cuando casi todo lo demás ha sido controlado?',pages:'Capítulo 1 · pp. 60–66; capítulo 2'},
-{id:'ruptura',g:3,c:'yellow',ico:'fire',eyebrow:'Bloque 7',title:'Cuando el Jardín deja de sostenerse',text:'Avery secuestra a Keely, una niña de doce años, y la lleva al Jardín. Su llegada rompe incluso las reglas internas del lugar. Sumada a la rivalidad entre Avery y Desmond, convierte una situación ya violenta en un punto de no retorno.',pts:['Desmond ya conocía gran parte de la verdad, pero hasta entonces no había sido capaz de romper con su padre.','Avery, el hijo mayor del Jardinero, lleva su necesidad de control cada vez más lejos y pone en peligro a todos.','El rescate llega en medio de una confrontación familiar, disparos y un incendio que destruye el equilibrio del Jardín.'],q:'¿Saber que algo está mal obliga también a actuar?',pages:'Final del capítulo 2 y capítulo 3 · pp. 160–196'},
-
-{id:'familia',g:4,c:'green',ico:'people',eyebrow:'Después del rescate',title:'Familia es quien espera que vuelvas',text:'Al salir, las sobrevivientes deben reencontrarse con personas, nombres y vidas que ya no encajan de la misma forma. Para Inara, la pregunta central es quién sigue esperando por ella.',pts:['Las otras Mariposas son compañeras de cautiverio, pero también familia.','Sophia y las amigas de Nueva York conservaron sus cosas y un lugar para ella.','El final reabre la posibilidad de pertenecer sin ser poseída.'],q:'¿Qué diferencia hay entre que alguien te retenga y que alguien te espere?',pages:'Capítulo 3 · pp. 181–206'},
-{id:'exterior',g:4,c:'blue',ico:'door',eyebrow:'Después del rescate',title:'El Exterior tampoco es sencillo',text:'La libertad física no resuelve de inmediato lo que ocurrió. La novela deja abiertas las heridas del duelo, la identidad, el juicio y la adaptación.',pts:['Algunas familias recuperan a sus hijas; otras reciben por fin respuestas sobre quienes murieron.','Las sobrevivientes siguen usando los nombres del Jardín porque abandonar una identidad también requiere tiempo.','El rescate inicia otro proceso: no lo termina.'],q:'¿Por qué “estar a salvo” y “estar bien” no significan lo mismo?',pages:'Capítulo 3 · pp. 181–206'},
-
-{id:'identidad',g:5,c:'lav',ico:'name',eyebrow:'Tema',title:'Identidad · quién te llama y quién eliges ser',text:'Maya e Inara no son simples alias intercambiables. Cada nombre pertenece a una etapa distinta de su vida y a una relación diferente con el control y la elección.',pts:['El Jardinero nombra para poseer.','Inara es una identidad construida por ella antes del cautiverio.','Al final, la novela agrega una capa más a esta pregunta. La encontrarás en «El final explicado».'],q:'¿Es posible que dos nombres distintos sean verdaderos de maneras diferentes?',pages:'Tema transversal; cierre en pp. 205–206'},
-{id:'belleza',g:5,c:'rose',ico:'butterfly',eyebrow:'Tema',title:'Belleza convertida en posesión',text:'El Jardín existe porque el captor confunde preservar algo bello con tener derecho sobre ello. Las mariposas son la metáfora central de esa contradicción.',pts:['Una mariposa real puede volar; una “Mariposa” del Jardín es retenida.','El tatuaje convierte el cuerpo de cada joven en parte de la colección.','Preservar sin consentimiento no es admirar: es controlar.'],q:'¿Qué cambia cuando dejamos de mirar a una persona como alguien y empezamos a mirarla como algo?',pages:'Tema transversal'},
-{id:'memoria',g:5,c:'peach',ico:'book',eyebrow:'Tema',title:'Recordar también duele',text:'Los personajes conservan nombres, historias, dibujos, libros y pequeños objetos para no desaparecer dentro del Jardín. Al mismo tiempo, olvidar algunas cosas puede ser una estrategia de supervivencia.',pts:['Lyonette pide que no olviden su nombre real.','Bliss crea objetos; otras chicas dibujan o repiten datos de sus familias.','Inara se protege evitando aferrarse a ciertas personas y recuerdos.'],q:'¿Recordar siempre ayuda, o a veces también puede lastimar?',pages:'Tema transversal'},
-{id:'trauma',g:5,c:'yellow',ico:'door',eyebrow:'Tema',title:'Sobrevivir no es el final de la historia',text:'El cierre evita presentar el rescate como una solución mágica. Seguir viva permite comenzar, pero no borra lo sucedido.',pts:['Quedan pérdidas que no pueden repararse.','Las sobrevivientes necesitarán reconstruir relaciones, identidades y rutinas.','La justicia puede impedir que el daño continúe, pero no puede deshacerlo.'],q:'¿Qué puede significar “seguir adelante” cuando no existe una forma de volver a ser quien eras antes?',pages:'Capítulo 3 · especialmente pp. 181–206'}
+  {
+    "id": "vista",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Antes de empezar",
+    "title": "El libro de un vistazo",
+    "text": "La novela comienza después del rescate: el FBI entrevista a una joven conocida como Maya para reconstruir el cautiverio. El lector descubre el Jardín a través de sus recuerdos, mientras los agentes intentan entender lo que todavía calla.",
+    "pts": [
+      "La narración alterna el interrogatorio, observado desde Victor Hanoverian, con el relato en primera persona de Maya.",
+      "El PDF reúne tres capítulos: 1 (pp. 6–66), 2 (pp. 67–180) y 3 (pp. 181–206). Los bloques de esta guía son divisiones de Marginalia para orientarte.",
+      "Maya e Inara son nombres de la misma protagonista. Su manera de contar protege tanto su intimidad como a otras personas; el motivo completo se explica al final."
+    ],
+    "q": "¿Qué cambia cuando una historia de terror empieza después de que la protagonista ya sobrevivió?",
+    "pages": "Capítulo 1, inicio · pp. 6–10"
+  },
+  {
+    "id": "inara",
+    "g": 2,
+    "c": "lav",
+    "ico": "name",
+    "eyebrow": "Capítulo 1 · Bloque 1",
+    "title": "El interrogatorio: Maya no quiere decir quién es",
+    "text": "Desde el inicio, la narradora controla la información. El FBI sabe que las otras jóvenes la escuchan y confían en ella, pero ni siquiera tiene certeza de su nombre.",
+    "pts": [
+      "“Maya” es un nombre recibido dentro del Jardín.",
+      "“Inara Morrissey” es la identidad que había construido antes del secuestro.",
+      "La tensión entre nombre, identidad e historia atraviesa toda la novela."
+    ],
+    "q": "¿Puede una identidad elegida sentirse más verdadera que la que aparece en un documento?",
+    "pages": "Capítulo 1 · pp. 6–30"
+  },
+  {
+    "id": "llegada",
+    "g": 2,
+    "c": "green",
+    "ico": "garden",
+    "eyebrow": "Capítulo 1 · Bloque 2",
+    "title": "Bienvenida al Jardín",
+    "text": "Maya despierta en un lugar bellísimo y cerrado. Lyonette le explica poco a poco las reglas y la conduce al espacio que dará nombre a su cautiverio.",
+    "pts": [
+      "El contraste entre belleza y horror es deliberado: flores, agua, luz y mariposas conviven con el encierro.",
+      "Las nuevas chicas reciben ayuda de quienes ya aprendieron a sobrevivir allí.",
+      "El Jardín funciona como un mundo separado, con su propio lenguaje y sus propias reglas."
+    ],
+    "q": "¿Por qué resulta más inquietante una prisión hermosa que una claramente hostil?",
+    "pages": "Capítulo 1 · pp. 11–16"
+  },
+  {
+    "id": "alas",
+    "g": 2,
+    "c": "rose",
+    "ico": "butterfly",
+    "eyebrow": "Capítulo 1 · Bloque 3",
+    "title": "Las alas y los nombres",
+    "text": "El Jardinero tatúa alas en la espalda de las jóvenes y les asigna un nombre. Lo que parece una obra de belleza funciona también como marca de posesión.",
+    "pts": [
+      "Las alas transforman a las cautivas en la “colección” que el Jardinero imagina poseer.",
+      "Los nombres nuevos pueden servir para borrar, sobrevivir o interpretar un papel.",
+      "Las chicas conservan en secreto fragmentos de la identidad que tenían antes."
+    ],
+    "q": "¿Qué diferencia hay entre transformar a alguien y definirlo?",
+    "pages": "Capítulo 1 · pp. 14–30"
+  },
+  {
+    "id": "antes",
+    "g": 2,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Capítulo 1 · Bloque 4",
+    "title": "Antes del Jardín también había una historia",
+    "text": "El interrogatorio obliga a Inara a hablar de su infancia, Nueva York y el departamento que compartía con otras jóvenes. Allí aparece por primera vez la idea de un hogar elegido.",
+    "pts": [
+      "Su pasado ayuda a entender por qué se volvió tan autosuficiente y desconfiada.",
+      "El departamento y el trabajo le ofrecen una forma de pertenencia que nunca tuvo en casa.",
+      "La novela contrapone la familia biológica con las personas que deciden cuidarse entre sí."
+    ],
+    "q": "¿Cuándo un lugar se convierte en hogar: cuando vives ahí o cuando alguien espera que regreses?",
+    "pages": "Capítulo 1 · pp. 17–49"
+  },
+  {
+    "id": "reglas",
+    "g": 2,
+    "c": "peach",
+    "ico": "glass",
+    "eyebrow": "Capítulo 1 · Bloque 5",
+    "title": "Las reglas del Jardín",
+    "text": "El cautiverio tiene rutinas, cámaras, horarios, privilegios y castigos. Nada de eso convierte el lugar en seguro: solo lo vuelve predecible.",
+    "pts": [
+      "La vida cotidiana puede parecer organizada y aun así estar construida sobre la violencia.",
+      "Las jóvenes aprenden conductas de generaciones anteriores.",
+      "El Jardinero asesina a las jóvenes al cumplir 21 años o cuando considera que una enfermedad, un embarazo o su resistencia amenazan su colección. Luego las conserva en exhibidores de cristal y resina."
+    ],
+    "q": "¿Por qué la previsibilidad puede convertirse en una forma de supervivencia incluso dentro de algo terrible?",
+    "pages": "Capítulo 1 · pp. 51–64"
+  },
+  {
+    "id": "rutina",
+    "g": 3,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Capítulo 2 · Bloque 1",
+    "title": "Sobrevivir juntas",
+    "text": "Gran parte de la vida en el Jardín es espera: comidas, lecturas, juegos, conversaciones, miedo y pérdidas. Las chicas crean formas de acompañarse.",
+    "pts": [
+      "La cueva detrás de la cascada se vuelve un espacio de conversación y relativa privacidad.",
+      "Leer, correr, bailar, dibujar, peinar y crear objetos ayudan a conservar algo propio.",
+      "Las pérdidas, como las de Lyonette y Evita, afectan a todo el grupo. Recordar a las compañeras sostiene sus vínculos y también hace visible el duelo."
+    ],
+    "q": "¿Qué pequeñas actividades pueden proteger una parte de la identidad cuando casi todo lo demás ha sido controlado?",
+    "pages": "Capítulo 1 · pp. 60–66; capítulo 2 · pp. 73–90 y 125–127"
+  },
+  {
+    "id": "desmond-vinculo",
+    "g": 3,
+    "c": "lav",
+    "ico": "scale",
+    "eyebrow": "Capítulo 2 · Bloque 2",
+    "title": "Desmond descubre lo que su padre oculta",
+    "text": "Desmond entra al Jardín y al principio acepta la explicación de su padre: dice haber rescatado a las jóvenes para cuidarlas. El contacto con Maya y las pruebas del abuso vuelven cada vez más difícil sostener esa versión.",
+    "pts": [
+      "El Jardinero controla sus primeras visitas, oculta los tatuajes y limita las conversaciones para mantener el engaño.",
+      "Entre Maya y Desmond surge cercanía. Ella espera que ese vínculo lo impulse a pedir ayuda, pero el afecto no resuelve su miedo a traicionar a su familia.",
+      "Incluso después de conocer la violencia y la muerte de Zara, Desmond tarda en actuar. La novela distingue entre sentir compasión y asumir una responsabilidad."
+    ],
+    "q": "¿Cómo cambia tu lectura de Desmond cuando deja de poder decir que no sabía?",
+    "pages": "Capítulo 2 · pp. 94–107, 118–124, 143–144 y 161–170"
+  },
+  {
+    "id": "escapar",
+    "g": 3,
+    "c": "peach",
+    "ico": "door",
+    "eyebrow": "Capítulo 2 · Bloque 3",
+    "title": "Por qué no basta con querer escapar",
+    "text": "Las jóvenes no permanecen en el Jardín porque acepten lo que ocurre. La seguridad del lugar y el miedo a las represalias reducen sus posibilidades de salir o hacerse escuchar.",
+    "pts": [
+      "Las puertas requieren códigos. Durante el mantenimiento, las paredes ocultan las habitaciones y bloquean el sonido, de modo que los trabajadores no las ven ni las oyen.",
+      "Los intentos fallidos de otras chicas muestran que buscar ayuda puede acabar en muerte y poner en peligro a las demás.",
+      "Por eso Desmond importa tanto: puede entrar y salir del Jardín y contactar al Exterior. Maya intenta convertir ese acceso en una oportunidad para todas."
+    ],
+    "q": "¿Qué cambia cuando miras las decisiones de las cautivas desde las opciones reales que tenían?",
+    "pages": "Capítulo 1 · p. 52; capítulo 2 · pp. 143–144 y 178–180"
+  },
+  {
+    "id": "ruptura",
+    "g": 3,
+    "c": "yellow",
+    "ico": "fire",
+    "eyebrow": "Capítulo 2 · Bloque 4",
+    "title": "Keely y la promesa de pedir ayuda",
+    "text": "Avery lleva al Jardín a Keely, que acaba de cumplir doce años. Maya, Bliss y Danelle la protegen, y Desmond anuncia por fin que llamará a la policía.",
+    "pts": [
+      "Desmond admite que llevaba meses intentando justificar a su padre. La llegada de Keely hace insostenible esa excusa.",
+      "Maya le da el nombre y la ciudad de la niña, y avisa a las demás para que se refugien en las habitaciones.",
+      "El capítulo termina con la espera y la incertidumbre. La llamada, la intervención policial y lo que ocurre después se desarrollan en «El final explicado»."
+    ],
+    "q": "¿Saber que algo está mal obliga también a actuar?",
+    "pages": "Capítulo 2 · pp. 171–180"
+  },
+  {
+    "id": "familia",
+    "g": 4,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Capítulo 3 · Bloque 1",
+    "title": "Volver a ver a las sobrevivientes",
+    "text": "En el hospital, Inara vuelve a encontrarse con las jóvenes que salieron del Jardín. Verlas permite reconocer lo que compartieron y afrontar las ausencias que el rescate no puede reparar.",
+    "pts": [
+      "La investigación necesita nombres y testimonios; las sobrevivientes también necesitan tiempo, cuidado y compañía.",
+      "Reencontrarse con una familia puede traer alivio, pero también miedo o una distancia difícil de explicar después del cautiverio.",
+      "El vínculo entre las Mariposas sigue siendo importante fuera del Jardín: haber salido no deshace la historia que las une."
+    ],
+    "q": "¿Qué diferencia hay entre que alguien te retenga y que alguien te espere?",
+    "pages": "Capítulo 3 · pp. 181–189"
+  },
+  {
+    "id": "exterior",
+    "g": 4,
+    "c": "blue",
+    "ico": "door",
+    "eyebrow": "Capítulo 3 · Bloque 2",
+    "title": "El Exterior tampoco es sencillo",
+    "text": "La libertad física no resuelve de inmediato lo que ocurrió. La novela deja abiertas las heridas del duelo, la identidad, el juicio y la adaptación.",
+    "pts": [
+      "Victor ayuda a Inara a mirar al captor como un hombre que debe responder por sus actos, aunque el miedo no desaparezca de inmediato.",
+      "Contar lo ocurrido y recuperar vínculos son pasos de un proceso que incluye duelo y nuevas decisiones sobre su identidad.",
+      "El cierre reúne dos preguntas: qué pasó realmente y quién puede ser Inara después. Sus respuestas completas están en «El final explicado»."
+    ],
+    "q": "¿Por qué “estar a salvo” y “estar bien” no significan lo mismo?",
+    "pages": "Capítulo 3 · pp. 189–206"
+  },
+  {
+    "id": "maya",
+    "g": 5,
+    "c": "lav",
+    "ico": "name",
+    "eyebrow": "Personaje central",
+    "title": "Maya / Inara · contar sin entregarlo todo",
+    "text": "Es la sobreviviente desde cuya voz conocemos el Jardín. Observadora, irónica y difícil de leer, decide qué contar, cuándo hacerlo y qué partes de sí misma conservar.",
+    "pts": [
+      "Las otras sobrevivientes la miran como una figura de referencia.",
+      "El nombre “Maya” pertenece al Jardín; “Inara” pertenece a la vida que ella había construido antes.",
+      "Su historia también pregunta si sobrevivir significa recuperar una identidad anterior o poder elegir una nueva."
+    ],
+    "q": "¿Por qué controlar el propio relato puede ser una forma de recuperar poder?",
+    "pages": "Toda la novela; identidad desarrollada desde el capítulo 1"
+  },
+  {
+    "id": "jardinero",
+    "g": 5,
+    "c": "rose",
+    "ico": "garden",
+    "eyebrow": "Personaje",
+    "title": "El Jardinero · posesión disfrazada de cuidado",
+    "text": "El hombre que creó el Jardín se considera protector y coleccionista. Su aparente ternura convive con un sistema basado en secuestro, abuso, control y muerte.",
+    "pts": [
+      "Su obsesión es preservar la belleza, no respetar la libertad.",
+      "Convierte a las jóvenes en “Mariposas” mediante nombres, reglas y tatuajes.",
+      "La contradicción entre afecto y violencia es una de las ideas más inquietantes de la novela."
+    ],
+    "q": "¿Puede llamarse cuidado a algo que no permite que la otra persona diga que no?",
+    "pages": "A lo largo de la novela"
+  },
+  {
+    "id": "avery",
+    "g": 5,
+    "c": "yellow",
+    "ico": "fire",
+    "eyebrow": "Personaje",
+    "title": "Avery · la violencia sin disfraz",
+    "text": "El hijo mayor del Jardinero representa una forma de violencia mucho menos contenida. Su necesidad de dominio y de reconocimiento dentro de la familia vuelve cada vez más inestable el Jardín.",
+    "pts": [
+      "Busca miedo y control de una manera más abierta que su padre.",
+      "Su rivalidad con Desmond agrava el conflicto familiar.",
+      "Sus decisiones terminan acelerando el derrumbe del sistema que el Jardinero creía controlar."
+    ],
+    "q": "¿Qué cambia cuando la violencia deja de esconderse detrás de una explicación “amorosa”?",
+    "pages": "Capítulos 1–3"
+  },
+  {
+    "id": "desmond",
+    "g": 5,
+    "c": "green",
+    "ico": "scale",
+    "eyebrow": "Personaje",
+    "title": "Desmond · saber y decidir",
+    "text": "El hijo menor entra al Jardín creyendo primero la versión de su padre. Poco a poco descubre que la realidad no encaja con esa historia y queda obligado a decidir qué hacer con lo que sabe.",
+    "pts": [
+      "Quiere conservar la imagen de un padre admirable, y eso retrasa su reacción.",
+      "Maya lo confronta con la diferencia entre dudar y permanecer neutral.",
+      "Su conflicto muestra que descubrir la verdad no sirve de mucho si nunca se actúa sobre ella."
+    ],
+    "q": "¿En qué momento no elegir también se convierte en una elección?",
+    "pages": "Capítulo 2 y tramo final"
+  },
+  {
+    "id": "keely",
+    "g": 5,
+    "c": "blue",
+    "ico": "people",
+    "eyebrow": "Punto de quiebre",
+    "title": "Keely · proteger a la más pequeña",
+    "text": "Keely es una niña de doce años que llega al Jardín cerca del tramo final. Su llegada rompe incluso las reglas que el propio Jardinero había establecido y vuelve mucho más difícil fingir que ese mundo está bajo control.",
+    "pts": [
+      "Hasta entonces, el Jardinero evitaba secuestrar a menores de dieciséis años.",
+      "Maya y las otras Mariposas intentan proteger a Keely desde que aparece.",
+      "Su llegada obliga a Desmond a confrontar las excusas con las que había evitado pedir ayuda."
+    ],
+    "q": "¿Por qué a veces una situación que ya era intolerable necesita un último hecho para que alguien finalmente actúe?",
+    "pages": "Capítulo 2 · pp. 171–178"
+  },
+  {
+    "id": "lyonette",
+    "g": 5,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Personaje",
+    "title": "Lyonette / Cassidy · enseñar a sobrevivir",
+    "text": "Es la primera guía de Maya dentro del Jardín. Conoce las reglas, acompaña a las recién llegadas y demuestra que cuidar a otras puede convertirse en una forma de resistencia.",
+    "pts": [
+      "Le enseña a Maya cómo moverse dentro de ese mundo sin fingir que es normal.",
+      "Su cercanía ayuda a Maya a entender la importancia de recordar a las otras chicas.",
+      "Su verdadero nombre, Cassidy Lawrence, representa la parte de ella que existía antes del Jardín."
+    ],
+    "q": "¿Qué puede dar una persona a los demás cuando ella misma no tiene una salida?",
+    "pages": "Capítulo 1 · especialmente pp. 11–38"
+  },
+  {
+    "id": "bliss",
+    "g": 5,
+    "c": "lav",
+    "ico": "butterfly",
+    "eyebrow": "Personaje",
+    "title": "Bliss · rabia, humor y lealtad",
+    "text": "Bliss rechaza las ilusiones del Jardinero y convierte el sarcasmo, la creatividad y la rabia en una forma de resistencia. Con Maya crea una amistad basada en la franqueza.",
+    "pts": [
+      "No intenta hacer bonito lo que está pasando.",
+      "Crea objetos de arcilla que conservan recuerdos y vínculos entre las chicas.",
+      "Su lealtad aparece tanto en los momentos cotidianos como cuando el Jardín entra en crisis."
+    ],
+    "q": "¿Puede el humor ayudar a resistir sin minimizar el dolor?",
+    "pages": "Capítulos 1–3"
+  },
+  {
+    "id": "lorraine",
+    "g": 5,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Personaje",
+    "title": "Lorraine · víctima y colaboradora",
+    "text": "Lorraine fue una de las primeras Mariposas. El Jardinero la convirtió en enfermera y cocinera, y ella terminó colaborando con el funcionamiento del cautiverio.",
+    "pts": [
+      "Puede salir para estudiar o comprar, pero no denuncia al Jardinero ni ayuda a las jóvenes a comunicarse con el Exterior.",
+      "Su deseo de recuperar el afecto del captor convive con el resentimiento hacia las otras Mariposas.",
+      "Su historia muestra una situación compleja: haber sufrido abuso no borra el daño que causa al colaborar. Al final, su responsabilidad sigue bajo evaluación."
+    ],
+    "q": "¿Cómo se puede reconocer lo que sufrió Lorraine sin dejar de mirar lo que hizo a otras personas?",
+    "pages": "Capítulo 1 · pp. 51–52; capítulo 3 · pp. 189–190 y 202"
+  },
+  {
+    "id": "sophia",
+    "g": 5,
+    "c": "blue",
+    "ico": "people",
+    "eyebrow": "Personaje",
+    "title": "Sophia · alguien que sí espera",
+    "text": "Antes del secuestro, Sophia es una de las mujeres con las que Inara comparte departamento en Nueva York. Su manera de cuidar contrasta con casi todas las familias que la protagonista ha conocido.",
+    "pts": [
+      "Es una figura maternal sin exigir que Inara se convierta en su hija.",
+      "Representa la posibilidad de que alguien se vaya y aun así conserve un lugar al que volver.",
+      "Su relación con Inara cobra otro sentido al final. Para evitar adelantar esa revelación, se desarrolla en «El final explicado»."
+    ],
+    "q": "¿Qué diferencia hay entre poseer a alguien y hacerle saber que puede volver?",
+    "pages": "Vida antes del Jardín y capítulo 3"
+  },
+  {
+    "id": "victor",
+    "g": 5,
+    "c": "green",
+    "ico": "scale",
+    "eyebrow": "FBI",
+    "title": "Victor Hanoverian · escuchar lo que no se dice",
+    "text": "Victor conduce gran parte del interrogatorio. En vez de limitarse a exigir respuestas rápidas, aprende a seguir el modo en que Inara cuenta su historia y a prestar atención a lo que evita decir.",
+    "pts": [
+      "Su experiencia con jóvenes y sus propias hijas influye en la manera en que la trata.",
+      "Entiende que presionarla demasiado puede cerrar la única vía hacia la historia completa.",
+      "Funciona como puente entre el relato de Inara y la investigación oficial."
+    ],
+    "q": "¿Escuchar bien significa aceptar todo lo que alguien dice o saber qué preguntar después?",
+    "pages": "Capítulos 1–3 · marco del interrogatorio"
+  },
+  {
+    "id": "eddison",
+    "g": 5,
+    "c": "rose",
+    "ico": "people",
+    "eyebrow": "FBI",
+    "title": "Brandon Eddison · la necesidad de saber",
+    "text": "Eddison es más impaciente y confrontativo que Victor. Su historia personal con una hermana desaparecida hace que para él identificar a las víctimas y dar respuestas a sus familias sea algo profundamente personal.",
+    "pts": [
+      "Su reacción frente a Inara contrasta con la paciencia de Victor.",
+      "Defiende la idea de que saber qué ocurrió puede permitir a una familia comenzar a hacer duelo.",
+      "Su propia pérdida vuelve concreto uno de los grandes temas del libro: lo devastador que puede ser no saber."
+    ],
+    "q": "¿La verdad siempre repara algo, o a veces su valor está simplemente en terminar con la incertidumbre?",
+    "pages": "Capítulos 1–3; conversación sobre su hermana en cap. 2"
+  },
+  {
+    "id": "identidad",
+    "g": 6,
+    "c": "lav",
+    "ico": "name",
+    "eyebrow": "Tema",
+    "title": "Identidad · quién te llama y quién eliges ser",
+    "text": "Maya e Inara no son simples alias intercambiables. Cada nombre pertenece a una etapa distinta de su vida y a una relación diferente con el control y la elección.",
+    "pts": [
+      "El Jardinero nombra para poseer.",
+      "Inara es una identidad construida por ella antes del cautiverio.",
+      "Al final, la novela agrega una capa más a esta pregunta. La encontrarás en «El final explicado»."
+    ],
+    "q": "¿Es posible que dos nombres distintos sean verdaderos de maneras diferentes?",
+    "pages": "Tema transversal; cierre en pp. 205–206"
+  },
+  {
+    "id": "belleza",
+    "g": 6,
+    "c": "rose",
+    "ico": "butterfly",
+    "eyebrow": "Tema",
+    "title": "Belleza convertida en posesión",
+    "text": "El Jardín existe porque el captor confunde preservar algo bello con tener derecho sobre ello. Las mariposas son la metáfora central de esa contradicción.",
+    "pts": [
+      "Una mariposa real puede volar; una “Mariposa” del Jardín es retenida.",
+      "El tatuaje convierte el cuerpo de cada joven en parte de la colección.",
+      "Preservar sin consentimiento no es admirar: es controlar."
+    ],
+    "q": "¿Qué cambia cuando dejamos de mirar a una persona como alguien y empezamos a mirarla como algo?",
+    "pages": "Tema transversal"
+  },
+  {
+    "id": "memoria",
+    "g": 6,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Tema",
+    "title": "Recordar también duele",
+    "text": "Los personajes conservan nombres, historias, dibujos, libros y pequeños objetos para no desaparecer dentro del Jardín. Al mismo tiempo, olvidar algunas cosas puede ser una estrategia de supervivencia.",
+    "pts": [
+      "Lyonette pide que no olviden su nombre real.",
+      "Bliss modela un carrusel de arcilla en memoria de Lyonette. Los objetos permiten recordar a una persona desde el cariño, en contraste con los exhibidores del captor.",
+      "Inara se protege evitando aferrarse a ciertas personas y recuerdos."
+    ],
+    "q": "¿Recordar siempre ayuda, o a veces también puede lastimar?",
+    "pages": "Capítulos 1–2; el carrusel de Bliss en pp. 125–127"
+  },
+  {
+    "id": "trauma",
+    "g": 6,
+    "c": "yellow",
+    "ico": "door",
+    "eyebrow": "Tema",
+    "title": "Sobrevivir no es el final de la historia",
+    "text": "El cierre evita presentar el rescate como una solución mágica. Seguir viva permite comenzar, pero no borra lo sucedido.",
+    "pts": [
+      "Quedan pérdidas que no pueden repararse.",
+      "Las sobrevivientes necesitarán reconstruir relaciones, identidades y rutinas.",
+      "La justicia puede impedir que el daño continúe, pero no puede deshacerlo."
+    ],
+    "q": "¿Qué puede significar “seguir adelante” cuando no existe una forma de volver a ser quien eras antes?",
+    "pages": "Capítulo 3 · especialmente pp. 181–206"
+  }
 ];
 const QUOTES=['¿Un nombre dice quién eres… o solo cómo te llaman?','¿Qué convierte a unas compañeras de cautiverio en familia?','¿Qué diferencia hay entre recordar a alguien y poseerlo?','¿La libertad empieza cuando se abre una puerta o cuando puedes elegir?','¿Qué hace más daño: no saber la verdad o saberla demasiado tarde?'];
 
@@ -792,7 +1143,7 @@ function openCard(i){
   const all=d.text?[d.text,...d.pts]:d.pts;
   document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="reading-point">${p}</div></li>`).join('');
   document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para pensar</div><div>${d.q}</div>`;
-  document.getElementById('dlg-source').textContent=d.pages?'Ubicación en el libro: '+d.pages+'.':'';
+  document.getElementById('dlg-source').textContent=d.pages?'Ubicación en el PDF consultado: '+d.pages+'.':'';
   if(!dlg.open)dlg.showModal();
   dlg.querySelector('.dlg-body').scrollTop=0;
   done.add(d.id);store.set('jardin-done-v1',[...done]);refreshProgress();
@@ -808,8 +1159,8 @@ let qi=0;
 document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
 
 /* Final explicado */
-const sp=document.getElementById('spoilers'),spb=document.getElementById('spoiler-btn');
-spb.onclick=()=>{const o=sp.classList.toggle('open');spb.setAttribute('aria-expanded',o);spb.textContent=o?'Ocultar spoilers':'Mostrar spoilers'};
+const sp=document.getElementById('spoiler-body'),spb=document.getElementById('spoiler-btn');
+spb.onclick=()=>{const open=sp.hidden;sp.hidden=!open;spb.setAttribute('aria-expanded',String(open));spb.textContent=open?'Ocultar spoilers':'Mostrar spoilers'};
 
 /* Diario */
 const hint=document.getElementById('saved-hint');
