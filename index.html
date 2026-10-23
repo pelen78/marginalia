@@ -406,12 +406,12 @@ footer{font-size:.8rem;padding:20px 0 25px}
 <link rel="stylesheet" href="mobile-readability.css">
 <script id="seo-structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mymarginalia.net/#website","url":"https://mymarginalia.net/","name":"MyMarginalia","inLanguage":"es","publisher":{"@id":"https://mymarginalia.net/#organization"}},{"@type":"Organization","@id":"https://mymarginalia.net/#organization","name":"MyMarginalia","url":"https://mymarginalia.net/","logo":"https://mymarginalia.net/icon-512.png"},{"@type":"CollectionPage","@id":"https://mymarginalia.net/#webpage","url":"https://mymarginalia.net/","name":"MyMarginalia | Guías de lectura, resúmenes y reflexiones","description":"Descubre MyMarginalia: resúmenes de libros, guías de lectura por capítulos e ideas para reflexionar. Lee a tu ritmo y conserva tus propias notas.","isPartOf":{"@id":"https://mymarginalia.net/#website"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://mymarginalia.net/biblia.html","name":"Guía de lectura de La Biblia"},{"@type":"ListItem","position":2,"url":"https://mymarginalia.net/imitacion-de-cristo.html","name":"Guía de lectura de Imitación de Cristo"},{"@type":"ListItem","position":3,"url":"https://mymarginalia.net/el-poder-del-ahora.html","name":"Guía de lectura de El poder del ahora"},{"@type":"ListItem","position":4,"url":"https://mymarginalia.net/habitos-atomicos.html","name":"Guía de lectura de Hábitos atómicos"},{"@type":"ListItem","position":5,"url":"https://mymarginalia.net/tiny-habits.html","name":"Guía de lectura de Hábitos diminutos"},{"@type":"ListItem","position":6,"url":"https://mymarginalia.net/como-ganar-amigos.html","name":"Guía de lectura de Cómo ganar amigos e influir sobre las personas"},{"@type":"ListItem","position":7,"url":"https://mymarginalia.net/cosas-buenas.html","name":"Guía de lectura de Cómo hacer que te pasen cosas buenas"},{"@type":"ListItem","position":8,"url":"https://mymarginalia.net/tus-zonas-erroneas.html","name":"Guía de lectura de Tus zonas erróneas"},{"@type":"ListItem","position":9,"url":"https://mymarginalia.net/inteligencia-emocional.html","name":"Guía de lectura de Inteligencia emocional"},{"@type":"ListItem","position":10,"url":"https://mymarginalia.net/amar-o-depender.html","name":"Guía de lectura de ¿Amar o depender?"},{"@type":"ListItem","position":11,"url":"https://mymarginalia.net/el-sutil-arte-de-que-te-importe-un-carajo.html","name":"Guía de lectura de El sutil arte de que te importe un carajo"},{"@type":"ListItem","position":12,"url":"https://mymarginalia.net/piensalo-otra-vez.html","name":"Guía de lectura de Piénsalo otra vez"},{"@type":"ListItem","position":13,"url":"https://mymarginalia.net/la-teoria-let-them.html","name":"Guía de lectura de La teoría Let Them"},{"@type":"ListItem","position":14,"url":"https://mymarginalia.net/el-jardin-de-las-mariposas.html","name":"Guía de lectura de El jardín de las mariposas"},{"@type":"ListItem","position":15,"url":"https://mymarginalia.net/la-biblioteca-de-la-medianoche.html","name":"Guía de lectura de La biblioteca de la medianoche"},{"@type":"ListItem","position":16,"url":"https://mymarginalia.net/el-ultimo-secreto.html","name":"Guía de lectura de El último secreto"}]}}]}</script>
 <style id="latest-guide-style">
-/* Latest published guide: the book takes the left-hand spotlight. */
-.latest-hero{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:60px;padding:54px 0 44px}
-.latest-feature{position:relative;display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px;align-items:center;padding:48px 20px 24px;background:var(--paper);border:1px solid var(--line);border-radius:8px}
+/* Latest guide: a small animated reading invitation beside the welcome. */
+.latest-hero{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:36px;padding:54px 44px 44px 0}
+.latest-feature{position:relative;display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px;align-items:center;padding:52px 24px 28px;background:linear-gradient(130deg,var(--paper),transparent);border:1px solid var(--line);border-radius:24px 8px 24px 8px;max-width:370px;width:100%;justify-self:center;isolation:isolate;box-shadow:0 14px 35px -30px var(--terra)}
 .latest-label{position:absolute;top:18px;left:20px;font-family:var(--f-mono);font-size:.61rem;letter-spacing:.13em;text-transform:uppercase;color:var(--terra)}
 .latest-label::before{content:"";display:inline-block;width:6px;height:6px;background:var(--terra);border-radius:50%;margin-right:10px;vertical-align:middle}
-.latest-cover{display:block;transform:rotate(-5deg);filter:drop-shadow(8px 14px 10px rgba(45,30,15,.18));animation:latest-arrive 850ms cubic-bezier(.23,1,.32,1) both;transition:transform 220ms cubic-bezier(.23,1,.32,1)}
+.latest-cover{display:block;transform:rotate(-5deg);filter:drop-shadow(8px 14px 10px rgba(45,30,15,.18));animation:latest-float 5.8s cubic-bezier(.45,0,.55,1) infinite;transition:transform 220ms cubic-bezier(.23,1,.32,1)}
 .latest-cover svg{display:block;width:100%;height:auto;border-radius:3px}
 .latest-cover:hover{transform:rotate(-1deg) translateY(-4px)}
 .latest-cover:focus-visible,.latest-browse:focus-visible{outline:2px solid var(--terra);outline-offset:6px}
@@ -425,11 +425,24 @@ footer{font-size:.8rem;padding:20px 0 25px}
 .latest-welcome em{color:var(--terra);font-weight:300}
 .latest-hero .latest-welcome p{font-size:1rem;line-height:1.65;max-width:32ch}
 .latest-browse{display:inline-block;color:var(--ink);margin-top:24px;text-underline-offset:5px;font-size:.95rem}
+ .latest-label{display:flex;align-items:center;gap:9px;left:22px;top:16px;font-size:.55rem;letter-spacing:.09em}
+.latest-label::before{display:none}
+.latest-new{background:var(--terra);color:var(--paper);padding:5px 9px;border-radius:3px;transform:rotate(-4deg);font-size:.59rem}
+.latest-orbit{position:absolute;z-index:-1;left:8px;top:68px;width:137px;height:137px;border:1px dashed var(--terra);border-radius:50%;opacity:.35;animation:latest-orbit 36s linear infinite}
+.latest-orbit::after{content:"";position:absolute;inset:9px;border:1px solid var(--terra);border-radius:50%}
+.latest-spark{position:absolute;left:130px;top:58px;color:var(--terra);font-size:25px;line-height:1;animation:latest-spark 4.8s ease-in-out infinite}
+.latest-motion{position:absolute;right:7px;top:7px;width:30px;height:30px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--muted);font-size:12px;cursor:pointer}
+.latest-motion:hover,.latest-motion:focus-visible{background:var(--paper);color:var(--terra)}
+.latest-motion:focus-visible{outline:2px solid var(--terra)}
+.latest-feature.is-paused .latest-cover,.latest-feature.is-paused .latest-orbit,.latest-feature.is-paused .latest-spark{animation-play-state:paused}
+@keyframes latest-float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-8px) rotate(-1deg)}}
+@keyframes latest-orbit{to{transform:rotate(360deg)}}
+@keyframes latest-spark{0%,100%{opacity:.4;transform:scale(.85) rotate(-8deg)}50%{opacity:1;transform:scale(1.1) rotate(8deg)}}
 @keyframes latest-arrive{from{opacity:0;transform:translateY(16px) rotate(-9deg)}to{opacity:1;transform:translateY(0) rotate(-5deg)}}
-@media(max-width:1050px){.latest-hero{gap:28px;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}.latest-feature{grid-template-columns:80px minmax(0,1fr);gap:16px;padding-inline:18px}}
-@media(max-width:760px){.latest-hero{grid-template-columns:1fr;gap:28px;padding-top:24px}.latest-feature{grid-template-columns:110px minmax(0,1fr);gap:20px;padding:52px 20px 26px}.latest-label{left:20px;font-size:.54rem}.latest-hero .latest-info h2{font-size:1.7rem}.latest-hero #latest-description{display:none;font-size:.91rem}.latest-welcome{padding:0 8px}.latest-welcome h2{font-size:2rem}.latest-hero .latest-welcome p{max-width:50ch}}
+@media(max-width:1050px){.latest-hero{gap:28px;padding-right:20px;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}.latest-feature{grid-template-columns:80px minmax(0,1fr);gap:16px;padding-inline:18px}}
+@media(max-width:760px){.latest-hero{grid-template-columns:1fr;gap:28px;padding:24px 0 32px}.latest-feature{grid-template-columns:110px minmax(0,1fr);gap:20px;padding:52px 20px 26px}.latest-label{left:20px;font-size:.54rem}.latest-hero .latest-info h2{font-size:1.7rem}.latest-hero #latest-description{display:none;font-size:.91rem}.latest-welcome{padding:0 8px}.latest-welcome h2{font-size:2rem}.latest-hero .latest-welcome p{max-width:50ch}}
 @media(max-width:380px){.latest-feature{grid-template-columns:85px minmax(0,1fr);gap:16px;padding-inline:16px}.latest-hero .latest-info h2{font-size:1.5rem}}
-@media(prefers-reduced-motion:reduce){.latest-cover{animation:none;transition:none}.latest-cover:hover{transform:rotate(-5deg)}}
+@media(prefers-reduced-motion:reduce){.latest-cover,.latest-orbit,.latest-spark{animation:none;transition:none}.latest-cover:hover{transform:rotate(-5deg)}.latest-motion{display:none}}
 </style>
 </head>
 <body>
@@ -516,7 +529,10 @@ footer{font-size:.8rem;padding:20px 0 25px}
         <a class="btn" href="#libros">Explorar las guías <span aria-hidden="true">↓</span></a>
       </div>
       <div class="latest-feature" aria-labelledby="latest-title">
-        <span class="latest-label">Recién llegado a la biblioteca</span>
+        <span class="latest-label"><span class="latest-new">Nuevo</span> En la biblioteca</span>
+        <span class="latest-orbit" aria-hidden="true"></span>
+        <span class="latest-spark" aria-hidden="true">✧</span>
+        <button class="latest-motion" type="button" aria-label="Pausar animación" title="Pausar animación" aria-pressed="false">Ⅱ</button>
         <a class="latest-cover" id="latest-cover" href="el-ultimo-secreto.html" aria-label="Abrir la nueva guía de El último secreto"></a>
         <div class="latest-info">
           <span class="eyebrow">Nueva guía · <span id="latest-category">Novelas</span></span>
@@ -1008,6 +1024,14 @@ function renderMinis(){
   document.getElementById('latest-category').textContent=b.cat;
   document.getElementById('latest-description').textContent=b.blurb;
   document.getElementById('latest-link').href=b.file;
+  const motion=document.querySelector('.latest-motion');
+  motion.onclick=()=>{
+    const paused=document.querySelector('.latest-feature').classList.toggle('is-paused');
+    motion.setAttribute('aria-pressed',String(paused));
+    motion.setAttribute('aria-label',paused?'Reanudar animación':'Pausar animación');
+    motion.title=paused?'Reanudar animación':'Pausar animación';
+    motion.textContent=paused?'▷':'Ⅱ';
+  };
 }
 
 // Novelas va primero; las demás categorías siguen el orden de la lista
