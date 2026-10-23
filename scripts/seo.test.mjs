@@ -28,7 +28,7 @@ test('each public page has unique valid metadata and structured data',async()=>{
 test('initial catalog contains the exact existing card renderer and all working book links',async()=>{
  const html=await readFile(new URL('index.html',root),'utf8');
  const initial=html.match(/<!-- seo-catalog:start -->\n([\s\S]*?)\n<!-- seo-catalog:end -->/)[1];
- assert.equal(initial,catalog(html));assert.equal(books.length,16);
+ assert.equal(initial,catalog(html));assert.equal(books.length,17);
  const sitemap=await readFile(new URL('sitemap.xml',root),'utf8');
  for(const b of books){assert.ok(initial.includes('href="'+b.file+'"'));await readFile(new URL(b.file,root));assert.ok(sitemap.includes('https://mymarginalia.net/'+b.file));}
  assert.doesNotMatch(initial,/localStorage|sessionStorage|despertar-el-corazon|te-desafio-a-prosperar/);

@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<link href="/favicon.ico" rel="icon" sizes="16x16 32x32 48x48"/>
+<link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/favicon.svg" rel="icon" sizes="any" type="image/svg+xml"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest" rel="manifest"/>
+<meta content="MyMarginalia" name="apple-mobile-web-app-title"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* Independent study guide notice */
+.guide-note{max-width:900px;margin:4px auto 28px;padding:16px 20px;border:1.5px solid var(--line);
+  border-radius:20px;background:var(--paper);box-shadow:var(--shadow);text-align:center}
+.guide-note strong{font-family:var(--f-display)}
+.guide-note p{margin:4px 0;color:var(--muted);font-size:.94rem}
+.source-note{width:100%;margin:0;padding:0;
+  color:var(--muted);font-size:.88rem;line-height:1.55}
+.source-note strong{color:var(--ink)}
+
+
+footer .guide-credits{margin-top:18px;color:var(--muted);font-size:.88rem;line-height:1.65}
+footer .credits-author{margin:0 0 8px;color:var(--ink)}
+footer .credits-author strong{font-weight:600}
+footer .credits-note{margin:0}
+footer .credits-copyright{margin:16px 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.02em}
+
+.dlg-signature{margin:18px 0 0;padding-top:12px;border-top:1px dashed var(--line);color:var(--muted);font-family:var(--f-body);font-size:.8rem;font-weight:400;line-height:1.5;text-align:right;user-select:text}
+</style>
+<script>try{var t=localStorage.getItem("marginalia-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>La paciente silenciosa: resumen y guía de lectura | MyMarginalia</title>
+<!-- seo-social:start -->
+<meta property="og:site_name" content="MyMarginalia">
+<meta property="og:title" content="La paciente silenciosa: resumen y guía de lectura | MyMarginalia">
+<meta property="og:description" content="Guía de La paciente silenciosa, de Alex Michaelides: resumen, personajes y reflexiones. Final explicado en una sección con spoilers opcionales.">
+<!-- seo-social:end -->
+<link href="https://mymarginalia.net/la-paciente-silenciosa.html" rel="canonical"/>
+<meta name="description" content="Guía de La paciente silenciosa, de Alex Michaelides: resumen, personajes y reflexiones. Final explicado en una sección con spoilers opcionales.">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+/* Layout: mapa mental de 3 columnas con el sol central; en móvil una sola columna. Pastel acuarela. */
+:root{
+  --bg:#f6f4ee; --paper:#fffdf8; --ink:#1f2a3a; --muted:#566273; --line:#d9d4c7;
+  --sun:#fbe7a1; --sun-2:#f7c95c; --accent:#d9406b;
+  --c-blue:#dcecfb; --c-pink:#fbe0e6; --c-green:#dff1e2; --c-peach:#fde6cc; --c-lav:#e8e0f7; --c-yellow:#fdf1c7; --c-mint:#d9f1ea; --c-rose:#fcdde3;
+  --e-blue:#3a7bd5; --e-pink:#d9406b; --e-green:#3f9b5a; --e-peach:#e07b2a; --e-lav:#7d5bc4; --e-yellow:#c99a12; --e-mint:#2f9a82; --e-rose:#c53a5a;
+  --shadow:0 2px 0 rgba(31,42,58,.06),0 8px 24px -12px rgba(31,42,58,.18);
+  --f-display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#131722; --paper:#1b2130; --ink:#eef1f6; --muted:#a8b2c3; --line:#2e3748;
+  --sun:#4a3d17; --sun-2:#e0b240; --accent:#f07a9a;
+  --c-blue:#1c2a40; --c-pink:#3a2130; --c-green:#1c3326; --c-peach:#3a2a1a; --c-lav:#2a2340; --c-yellow:#383016; --c-mint:#17332d; --c-rose:#3b1f28;
+  --e-blue:#79aef5; --e-pink:#f07a9a; --e-green:#7ccf93; --e-peach:#f3a766; --e-lav:#b39cf0; --e-yellow:#e9c75a; --e-mint:#6fd1b8; --e-rose:#f38aa3;
+  --shadow:0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#131722; --paper:#1b2130; --ink:#eef1f6; --muted:#a8b2c3; --line:#2e3748;
+  --sun:#4a3d17; --sun-2:#e0b240; --accent:#f07a9a;
+  --c-blue:#1c2a40; --c-pink:#3a2130; --c-green:#1c3326; --c-peach:#3a2a1a; --c-lav:#2a2340; --c-yellow:#383016; --c-mint:#17332d; --c-rose:#3b1f28;
+  --e-blue:#79aef5; --e-pink:#f07a9a; --e-green:#7ccf93; --e-peach:#f3a766; --e-lav:#b39cf0; --e-yellow:#e9c75a; --e-mint:#6fd1b8; --e-rose:#f38aa3;
+  --shadow:0 8px 24px -12px rgba(0,0,0,.6); color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1180px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:12px}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding-block:40px 20px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.01em;display:inline-block;padding:4px 28px 0;background:linear-gradient(100deg,transparent 2%,var(--c-mint) 8%,var(--c-blue) 60%,transparent 98%);border-radius:40px}
+.hero .sub{font-family:var(--f-display);font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(.8rem,1.8vw,1.05rem);margin-top:10px;color:var(--muted)}
+.author{display:inline-block;margin-top:12px;padding:4px 18px;border-radius:999px;background:var(--c-pink);font-family:var(--f-display);font-weight:700;letter-spacing:.08em}
+.hand{font-family:var(--f-hand);font-size:1.6rem;line-height:1.1;color:var(--ink)}
+.corner{position:absolute;top:34px;max-width:170px}
+.corner.l{left:0;transform:rotate(-8deg);text-align:left}
+.corner.r{right:0;transform:rotate(8deg);width:130px;height:130px;border-radius:50%;background:var(--sun);display:grid;place-items:center;text-align:center;padding:12px}
+@media (max-width:860px){.corner{display:none}}
+
+/* Progress */
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 20px;margin:18px auto 26px;font-weight:600;color:var(--muted)}
+.track{width:220px;max-width:60vw;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--e-green),var(--e-yellow));transition:width .5s ease}
+.chip{border:1.5px solid var(--line);background:var(--paper);padding:6px 14px;border-radius:999px;font-weight:700;font-size:.9rem}
+.chip:hover{border-color:var(--accent)}
+
+/* Map: cuatro etapas en orden de lectura */
+.map{display:grid;gap:40px}
+.g-title{display:flex;align-items:center;gap:12px;font-size:clamp(1.4rem,2.6vw,1.8rem);font-weight:800;margin-bottom:14px}
+.g-n{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:1.1rem;flex:none}
+.g-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));align-items:stretch}
+.card{position:relative;z-index:1;text-align:left;border:0;border-radius:24px;padding:18px 20px 16px;background:var(--tint);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-3px) rotate(-.3deg)}
+.card .top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.card .eyebrow{font-family:var(--f-display);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--edge)}
+.card h3{font-size:1.28rem;font-weight:700}
+.card .ico{flex:none;width:46px;height:46px;color:var(--edge)}
+.card ul{margin:2px 0 0;padding-left:18px;font-size:.95rem;color:var(--ink)}
+.card li{margin-block:3px}
+.card li::marker{color:var(--edge)}
+.card .more{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:.85rem;color:var(--edge);padding-top:6px}
+.done-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:99px;background:var(--paper);font-size:.78rem;visibility:hidden}
+.card.is-done .done-badge{visibility:visible}
+.card.is-done{outline:2.5px dashed var(--edge);outline-offset:-7px}
+.card p{margin:0;font-size:.97rem}
+
+.center{position:relative;z-index:1;border-radius:24px;
+  background:radial-gradient(circle at 50% 40%,var(--c-yellow),var(--sun) 70%);box-shadow:0 0 0 10px color-mix(in srgb,var(--sun) 45%,transparent),0 0 60px 10px color-mix(in srgb,var(--sun-2) 30%,transparent);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:8px}
+.center h2{font-size:clamp(1.8rem,3vw,2.3rem);font-weight:800}
+.center h2 span{display:block;font-size:1.35em;line-height:.9}
+.center p{margin:0;font-weight:600;max-width:26ch}
+@keyframes breathe{50%{transform:scale(1.025)}}
+
+.quote{align-self:center;text-align:center;padding:10px;min-width:0}
+.quote .hand{font-size:1.7rem}
+.quote .by{font-family:var(--f-hand);font-size:1.4rem;color:var(--muted);margin-top:6px}
+.quote button{margin-top:10px}
+
+/* Sections */
+section.block{margin-top:64px}
+.block-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-bottom:18px}
+.block-head h2{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800}
+.block-head p{margin:0;color:var(--muted);max-width:52ch}
+
+/* Breathing */
+.breath{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center;background:var(--paper);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+@media (max-width:760px){.breath{grid-template-columns:1fr}}
+.orb-wrap{display:grid;place-items:center;min-height:300px}
+.orb{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 40% 35%,var(--c-mint),var(--e-mint));box-shadow:0 0 0 14px color-mix(in srgb,var(--e-mint) 18%,transparent);display:grid;place-items:center;transition:transform 4s ease-in-out;max-width:100%}
+.orb span{font-family:var(--f-display);font-weight:800;font-size:2rem;color:#fff}
+.phase{font-family:var(--f-hand);font-size:2.2rem;min-height:2.6rem;text-align:center}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.btn{border:0;border-radius:999px;padding:10px 20px;font-weight:700;background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn:hover{opacity:.9}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:transparent;padding:8px 14px;font-weight:700;font-size:.9rem}
+.seg button[aria-pressed="true"]{background:var(--c-mint);color:var(--ink)}
+.stats{font-variant-numeric:tabular-nums;color:var(--muted);margin-top:10px;font-weight:600}
+
+/* Quiz */
+.quiz{background:var(--paper);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+.q-count{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.q-text{font-family:var(--f-hand);font-size:clamp(1.8rem,3.6vw,2.4rem);line-height:1.15;margin:10px 0 18px;min-height:2.5em}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.q-opts{grid-template-columns:1fr}}
+.opt{border:2px solid var(--line);border-radius:20px;padding:16px;text-align:left;background:var(--bg);display:flex;gap:12px;align-items:center;font-weight:700;font-size:1.05rem}
+.opt small{display:block;font-weight:600;color:var(--muted);font-size:.85rem}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt.right{border-color:var(--e-green);background:var(--c-green)}
+.opt.wrong{border-color:var(--e-rose);background:var(--c-rose)}
+.opt svg{width:36px;height:36px;flex:none}
+.feedback{margin-top:14px;min-height:3em;font-weight:600}
+.feedback b{color:var(--accent)}
+
+/* Journal */
+.journal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:820px){.journal{grid-template-columns:1fr}}
+.jcard{background:var(--paper);border-radius:22px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;min-width:0}
+.jcard label{font-family:var(--f-hand);font-size:1.5rem;line-height:1.1}
+.jcard textarea{width:100%;min-height:110px;resize:vertical;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--bg);color:var(--ink);font:inherit}
+.hint{font-size:.85rem;color:var(--muted)}
+
+/* Footer */
+footer{margin-top:30px;display:block}
+@media (max-width:560px){.foot-msg{text-align:left}}
+
+/* Dialog */
+dialog{border:0;border-radius:28px;padding:0;max-width:min(640px,calc(100vw - 32px));width:100%;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog::backdrop{background:rgba(20,25,35,.45);backdrop-filter:blur(3px)}
+.dlg-head{background:var(--tint);padding:24px 26px 18px;display:flex;gap:16px;align-items:flex-start}
+.dlg-head .ico{width:58px;height:58px;color:var(--edge);flex:none}
+.dlg-head h3{font-size:1.7rem}
+.dlg-body{padding:18px 26px 24px}
+.dlg-body ol{padding-left:0;list-style:none;margin:0;display:grid;gap:10px;counter-reset:p}
+.dlg-body li{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:var(--bg)}
+.dlg-body li::before{counter-increment:p;content:counter(p);flex:none;width:26px;height:26px;border-radius:50%;background:var(--tint);color:var(--edge);font-weight:800;display:grid;place-items:center;font-size:.85rem}
+@media (prefers-reduced-motion:no-preference){.dlg-body li{animation:rise .45s ease both}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.reflect{margin-top:16px;padding:14px 16px;border-radius:16px;border:2px dashed var(--edge)}
+.reflect .hand{font-size:1.45rem}
+.dlg-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:0 26px 24px}
+.x{border:0;background:transparent;margin-left:auto;font-size:1.6rem;line-height:1;padding:4px 8px;color:var(--ink)}
+</style>
+<style>
+/* Marginalia: diseño a juego con la biblioteca (solo estilo) */
+:root{
+  --bg:#f3ede2; --paper:#f9f5ee; --ink:#1e1a17; --muted:#7a6f63; --line:#dbd1c1;
+  --sun:#efe4d3; --sun-2:#d9bf98; --accent:#c4552f; --blue:#23408e;
+  --c-blue:#e5e5ea; --c-pink:#f3dfd4; --c-green:#e3e6d8; --c-peach:#f4e2d2; --c-lav:#ebe2e4; --c-yellow:#f3e9d3; --c-mint:#e0e6dc; --c-rose:#f2ddd6;
+  --e-blue:#23408e; --e-pink:#c4552f; --e-green:#56704a; --e-peach:#b8572c; --e-lav:#6b4e7a; --e-yellow:#8f6a24; --e-mint:#3f6f5f; --e-rose:#a8382f;
+  --shadow:0 1px 0 rgba(60,40,20,.04),0 18px 34px -20px rgba(60,40,20,.35);
+  --grain:.5;
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Fraunces",Georgia,serif;
+  --f-hand:"Caveat",cursive;
+  --f-mono:"Space Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#191613; --paper:#211d19; --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --sun:#2a241f; --sun-2:#8a6f4c; --accent:#e07a55; --blue:#93a9ea;
+  --c-blue:#25242a; --c-pink:#33251f; --c-green:#252a21; --c-peach:#33271e; --c-lav:#2c2429; --c-yellow:#2e281d; --c-mint:#222a25; --c-rose:#332220;
+  --e-blue:#93a9ea; --e-pink:#e07a55; --e-green:#a3bb95; --e-peach:#e8a071; --e-lav:#c3a3d6; --e-yellow:#dcb66e; --e-mint:#86c4ae; --e-rose:#ea8b80;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#191613; --paper:#211d19; --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --sun:#2a241f; --sun-2:#8a6f4c; --accent:#e07a55; --blue:#93a9ea;
+  --c-blue:#25242a; --c-pink:#33251f; --c-green:#252a21; --c-peach:#33271e; --c-lav:#2c2429; --c-yellow:#2e281d; --c-mint:#222a25; --c-rose:#332220;
+  --e-blue:#93a9ea; --e-pink:#e07a55; --e-green:#a3bb95; --e-peach:#e8a071; --e-lav:#c3a3d6; --e-yellow:#dcb66e; --e-mint:#86c4ae; --e-rose:#ea8b80;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}
+
+body{font-size:17px;line-height:1.55}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:var(--grain);mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .3  0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+h1,h2,h3{font-weight:400}
+.hand{font-size:1.5rem;line-height:1.15;color:var(--accent)}
+
+/* Trazos a mano */
+.mark{position:relative;display:inline-block;white-space:nowrap;isolation:isolate}
+.mark svg{position:absolute;left:-8px;top:-8px;width:calc(100% + 16px);height:calc(100% + 16px);overflow:visible;pointer-events:none}
+.mark path{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s cubic-bezier(.6,0,.2,1) .35s}
+.mark.ci path{stroke:var(--blue)}
+.in .mark path,.mark.in path{stroke-dashoffset:0}
+
+/* Aparición suave */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* Encabezado */
+.hero{padding-block:56px 26px;position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;left:50%;top:50%;width:min(280px,64vw);aspect-ratio:1;translate:-50% -50%;z-index:-1;border-radius:50%;
+  background:color-mix(in srgb,var(--accent) 6%,transparent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
+  outline:1px dashed color-mix(in srgb,var(--accent) 35%,transparent);outline-offset:10px;animation:mg-breathe 8s ease-in-out infinite}
+.guide-note{position:relative;z-index:1}
+@keyframes mg-breathe{0%,100%{transform:scale(.92)}50%{transform:scale(1)}}
+.hero h1{font-weight:400;font-size:clamp(2.8rem,6.5vw,5rem);background:none;padding:0;letter-spacing:-.015em}
+.hero h1 .mark{font-style:italic;font-weight:300;color:var(--accent)}
+.hero .sub{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:1.2rem;font-weight:300;margin-top:12px;color:var(--muted)}
+.hero .sub cite{font-style:italic;color:var(--ink)}
+.author{background:none;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.22em;font-weight:400;color:var(--muted);padding:0;margin-top:16px}
+.author::before,.author::after{content:"";display:inline-block;width:28px;border-top:1px dashed var(--muted);vertical-align:middle;margin:0 12px}
+.corner.r{background:var(--c-peach)}
+.corner .hand,.corner.l{color:var(--accent)}
+
+.guide-note{border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:none}
+.guide-note strong{font-weight:400;font-size:1.3rem}
+
+/* Progreso y chips */
+.bar{font-weight:400;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.track{height:6px}
+.fill{background:linear-gradient(90deg,var(--blue),var(--accent))}
+.chip{border:1.5px solid var(--line);background:transparent;font-family:var(--f-mono);font-weight:400;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;transition:border-color .2s}
+.chip:hover{border-color:var(--ink)}
+
+/* Mapa */
+.g-title{font-weight:400;font-size:clamp(1.7rem,2.8vw,2.2rem)}
+.g-n{background:none;color:var(--accent);border:1.5px solid var(--accent);font-family:var(--f-hand);font-weight:700;font-size:1.4rem;width:38px;height:38px}
+.card{border-radius:14px;border:1px solid color-mix(in srgb,var(--edge) 16%,transparent);box-shadow:none;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-4px) rotate(-.5deg);box-shadow:var(--shadow)}
+.card:nth-child(even):hover{transform:translateY(-4px) rotate(.5deg)}
+.card .eyebrow{font-family:var(--f-mono);font-weight:400;font-size:.66rem;letter-spacing:.2em}
+.card h3{font-weight:600;font-size:1.35rem}
+.card ul{font-size:1rem}
+.card .more{font-family:var(--f-hand);font-weight:700;font-size:1.2rem}
+.card.is-done{outline:1.5px dashed var(--edge)}
+.done-badge{font-family:var(--f-mono);font-size:.68rem}
+
+.center{border-radius:16px;background:var(--sun);box-shadow:none;border:1px solid var(--line)}
+.center h2{font-weight:400;font-size:clamp(2rem,3.2vw,2.6rem)}
+.center h2 span{font-style:italic;font-weight:300;color:var(--accent);font-size:1.2em}
+.center p{font-weight:400}
+.quote .hand{font-size:1.8rem}
+.quote .by{font-family:var(--f-mono);font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* Secciones */
+.block-head h2{font-weight:400;font-size:clamp(2rem,3.5vw,2.6rem)}
+.block-head p{font-size:1.08rem;font-style:italic;font-weight:300}
+.breath,.scan,.quiz{border-radius:16px;box-shadow:none;background:var(--paper);border:1px solid var(--line)}
+.orb{background:radial-gradient(circle at 40% 35%,color-mix(in srgb,var(--accent) 45%,var(--paper)),var(--accent));box-shadow:0 0 0 14px color-mix(in srgb,var(--accent) 14%,transparent)}
+.phase{color:var(--accent)}
+.scan-out{border-radius:14px;background:var(--bg);border:1px dashed var(--line)}
+.scan-out h3{font-weight:400;font-size:1.6rem}
+.hb-field label,.srow label{font-weight:600}
+.hb-field input{border-radius:10px;border:1.5px solid var(--line);background:var(--bg)}
+.days button{border-width:1.5px;font-weight:400;font-family:var(--f-mono);font-size:.95rem;border-color:var(--accent);color:var(--ink)}
+.days button[aria-pressed="true"]{background:var(--accent);color:var(--paper)}
+.btn{border-radius:999px;background:var(--ink);color:var(--bg);font-family:var(--f-mono);font-weight:400;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;transition:background .2s,transform .2s}
+.btn:hover{opacity:1;background:var(--accent);color:var(--paper);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.seg{border-width:1.5px}
+.seg button{font-family:var(--f-mono);font-weight:400;font-size:.74rem;letter-spacing:.06em}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.q-count{font-family:var(--f-mono);font-weight:400;font-size:.78rem;letter-spacing:.1em}
+.q-text{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(1.8rem,3.4vw,2.4rem)}
+.opt{border:1.5px solid var(--line);border-radius:12px;background:var(--bg);font-weight:600;font-size:1.1rem}
+.opt small{font-weight:400;font-size:.92rem}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.feedback{font-weight:400;font-size:1.08rem}
+.feedback b{color:var(--accent)}
+.jcard{border-radius:16px;box-shadow:none;background:var(--paper);border:1px solid var(--line)}
+.jcard label{font-family:var(--f-hand);font-weight:700;font-size:1.6rem;color:var(--accent)}
+.jcard textarea{border-radius:10px;border:1.5px solid var(--line);background:var(--bg)}
+.hint{font-style:italic}
+
+/* Pie */
+footer{border-top:1px solid var(--line);padding-top:20px}
+
+/* Ventana */
+dialog{border-radius:16px}
+.dlg-head h3{font-weight:600;font-size:1.9rem}
+#dlg-eyebrow{font-family:var(--f-mono)!important;font-weight:400!important;font-size:.7rem;letter-spacing:.2em!important}
+.dlg-body li{border-radius:10px}
+.dlg-body li::before{font-family:var(--f-hand);font-weight:700;font-size:1.05rem}
+.reflect{border:1.5px dashed var(--edge);border-radius:12px}
+.reflect .hand{font-size:1.45rem}
+
+@media (prefers-reduced-motion:reduce){.hero::before{animation:none}.rv{opacity:1;transform:none;transition:none}.mark path{stroke-dashoffset:0;transition:none}}
+</style>
+<style>
+/* Marginalia: navegación entre libros */
+.mg-nav{position:sticky;top:0;z-index:50;margin-inline:-16px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.mg-nav .in{max-width:1180px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:14px}
+.mg-brand{display:inline-flex;gap:.02em;text-decoration:none;color:var(--ink);font-size:1.4rem;line-height:1;white-space:nowrap}
+.mg-brand span{display:inline-block;padding:.05em .07em;min-width:.55em;text-align:center;transition:transform .3s}
+.mg-brand .s0{font-family:var(--f-display);font-weight:700}
+.mg-brand .s1{font-family:var(--f-hand);font-weight:700;color:var(--accent);font-size:1.12em}
+.mg-brand .s2{font-family:var(--f-mono);font-weight:700;background:var(--blue);color:var(--bg)}
+.mg-brand .s3{font-family:var(--f-display);font-style:italic;color:var(--blue)}
+.mg-brand .s4{font-family:var(--f-display);font-weight:300;background:var(--accent);color:var(--bg)}
+.mg-brand .s6{font-family:var(--f-mono);background:var(--ink);color:var(--bg)}
+.mg-back{margin-left:auto;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);font-size:1rem;padding:6px 10px;border-radius:999px;transition:color .2s}
+.mg-back:hover{color:var(--accent)}
+.mg-menu{position:relative}
+.mg-menu summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);border-radius:999px;padding:7px 16px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;user-select:none;transition:background .2s}
+.mg-menu summary:hover{background:var(--accent)}
+.mg-menu summary::-webkit-details-marker{display:none}
+.mg-menu summary svg{width:14px;height:14px;transition:transform .2s ease}
+.mg-menu[open] summary svg{transform:rotate(180deg)}
+.mg-menu ul{max-height:calc(100vh - 160px);max-height:calc(100dvh - 160px);overflow-y:auto;overscroll-behavior:contain;position:absolute;right:0;top:calc(100% + 8px);width:min(320px,calc(100vw - 32px));margin:0;padding:8px;list-style:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);transform-origin:top right;animation:mg-pop .16s ease-out}
+@keyframes mg-pop{from{opacity:0;transform:scale(.97) translateY(-4px)}}
+.mg-menu li a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink);line-height:1.25}
+.mg-menu li a:hover{background:var(--bg)}
+.mg-menu li a small{display:block;color:var(--muted);font-size:.85rem;font-style:italic}
+.mg-menu li a[aria-current="page"]{background:var(--c-peach);color:var(--accent)}
+.mg-menu li.sep{border-top:1px dashed var(--line);margin:6px 4px}
+.mg-pager{max-width:1180px;margin:56px auto 0;display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+.mg-pager a{text-decoration:none;color:var(--ink);padding:14px 18px;border-radius:14px;background:var(--paper);border:1px solid var(--line);line-height:1.25;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.mg-pager a:hover{transform:translateY(-3px) rotate(-.4deg);box-shadow:var(--shadow)}
+.mg-pager a small{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.mg-pager a b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.mg-pager .nx{text-align:right}
+.mg-pager .home{background:var(--ink);color:var(--bg);border-color:var(--ink);padding:10px 18px;border-radius:999px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+.mg-pager .home:hover{background:var(--accent);border-color:var(--accent)}
+@media (max-width:640px){
+  .mg-nav .in{flex-wrap:wrap;gap:8px 12px}
+  .mg-brand{margin-right:auto}
+  .mg-back{margin-left:0;padding:6px 0;font-size:.9rem}
+  .mg-menu{margin-left:auto}
+  .mg-menu summary{font-size:.65rem;padding:7px 11px;letter-spacing:.03em}
+  .mg-back span{display:inline}
+  .mg-brand{font-size:1.15rem}
+  .mg-pager{grid-template-columns:1fr 1fr}
+  .mg-pager .home{grid-column:1/-1;grid-row:1;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.mg-menu ul{animation:none}.mg-pager a{transition:none}}
+</style>
+<link href="feedback.css" rel="stylesheet"/>
+<script defer="" src="feedback.js"></script>
+<script data-key="paciente-silenciosa" defer="" src="spoiler-gate.js"></script>
+<link href="reading-cards.css?v=20261023-titles" rel="stylesheet"/>
+<style id="mg-pdf-export">
+/* Marginalia · Guardar respuestas como PDF */
+.mg-save-pdf{
+  margin-top:24px;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+.mg-save-pdf .mg-pdf-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.mg-save-pdf .mg-pdf-note{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:.86rem;
+  font-style:italic;
+  max-width:70ch;
+}
+#mg-pdf-sheet{display:none}
+
+@media print{
+  body.mg-notes-print{
+    background:#fff!important;
+    color:#211d19!important;
+    padding:0!important;
+  }
+  body.mg-notes-print > *:not(#mg-pdf-sheet){
+    display:none!important;
+  }
+  body.mg-notes-print #mg-pdf-sheet{
+    display:block!important;
+  }
+  body.mg-notes-print #mg-pdf-sheet *{
+    box-sizing:border-box;
+  }
+}
+</style>
+<style id="mg-clear-field">
+/* Marginalia · borrar una respuesta del diario */
+.jcard .mg-field-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+.jcard .mg-field-head label{flex:1}
+.mg-clear-field{
+  flex:none;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-family:var(--f-mono);
+  font-size:.66rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:4px 2px;
+  cursor:pointer;
+}
+.mg-clear-field:hover{color:var(--accent)}
+.mg-clear-field:disabled{opacity:.35;cursor:default}
+</style>
+<style id="mg-compact-pager">
+/* Marginalia · navegación inferior compacta */
+.mg-pager{
+  max-width:1180px;
+  margin:34px auto 0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  gap:10px;
+  align-items:center;
+}
+.mg-pager a{
+  min-height:56px;
+  padding:10px 14px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:var(--ink);
+  background:var(--paper);
+  border:1px solid var(--line);
+  line-height:1.15;
+}
+.mg-pager a:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow);
+}
+.mg-pager a b{
+  font-family:var(--f-display);
+  font-weight:400;
+  font-size:1.05rem;
+}
+.mg-pager .mg-arrow{
+  flex:none;
+  font-family:var(--f-mono);
+  font-size:.95rem;
+  color:var(--muted);
+}
+.mg-pager .pv{justify-content:flex-start}
+.mg-pager .nx{justify-content:flex-end;text-align:right}
+.mg-pager .home{
+  min-height:44px;
+  padding:9px 16px;
+  border-radius:999px;
+  justify-content:center;
+  background:var(--ink);
+  color:var(--bg);
+  border-color:var(--ink);
+  font-family:var(--f-mono);
+  font-size:.7rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.mg-pager .home:hover{
+  background:var(--accent);
+  border-color:var(--accent);
+}
+@media (max-width:640px){
+  .mg-pager{
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-top:28px;
+  }
+  .mg-pager .home{
+    grid-column:1/-1;
+    grid-row:1;
+    min-height:40px;
+  }
+  .mg-pager a{
+    min-height:52px;
+    padding:9px 10px;
+  }
+  .mg-pager a b{font-size:.94rem}
+  .mg-pager .mg-arrow{font-size:.85rem}
+}
+</style>
+<style id="ues-extra">
+/* Novel-specific notices and ending use the same spacing and typography as the guides. */
+.guide-note .notice-label{font-family:var(--f-body);font-size:inherit;font-weight:600}
+.guide-note a,.reading-card-hint a{color:var(--accent);text-underline-offset:3px}
+</style>
+<link href="mobile-readability.css" rel="stylesheet"/>
+<link href="novel-reading.css" rel="stylesheet"/>
+<script src="novel-notes.js" defer></script>
+
+<style id="ultimo-styles">
+/* Apoyo autónomo; conserva el diseño de la guía de referencia. */
+.reading-card-hint{margin:0 0 16px;color:var(--muted);font-size:1rem;line-height:1.6}
+.card .top{min-height:42px}.card .ico svg{width:100%;height:100%}
+.dlg-body{max-height:min(64vh,560px);overflow-y:auto}.reading-point{line-height:1.7;overflow-wrap:anywhere}
+.spoiler-wrap{border-top:1px solid var(--line);padding-top:24px}
+.spoiler-head{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.spoiler-head p{max-width:68ch;color:var(--muted);margin:8px 0 0}
+.spoiler-body{margin-top:18px}
+.spoiler-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.scard{background:var(--paper);border:1px solid var(--line);padding:20px;border-radius:14px;line-height:1.65}
+.scard>b{font-family:var(--f-display);font-size:1.15rem;color:var(--accent);font-weight:600}
+.scard p{margin:12px 0}.scard .source-note{font-size:.84rem;color:var(--muted)}
+.novel-notes{grid-template-columns:1fr}.novel-notes textarea{min-height:200px}
+.mg-feedback-invite{margin:32px 0;padding:20px 0;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.mg-feedback-invite p{margin:0}
+@media (max-width:580px){.dlg-head{padding:18px}.dlg-body{padding:16px}.dlg-foot{padding:0 16px 18px}.card{padding:16px}}
+@media print{.mg-nav,.bar,.mg-feedback-invite,.mg-pager,.mg-save-pdf,.spoiler-head button{display:none!important}}
+</style>
+<script id="seo-structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://mymarginalia.net/la-paciente-silenciosa.html#webpage","url":"https://mymarginalia.net/la-paciente-silenciosa.html","name":"La paciente silenciosa: resumen y guía de lectura | MyMarginalia","description":"Guía de La paciente silenciosa, de Alex Michaelides: resumen, personajes y reflexiones. Final explicado en una sección con spoilers opcionales.","inLanguage":"es","isPartOf":{"@id":"https://mymarginalia.net/#website"},"breadcrumb":{"@id":"https://mymarginalia.net/la-paciente-silenciosa.html#breadcrumb"},"mainEntity":{"@type":"Article","headline":"Guía de lectura de La paciente silenciosa","description":"Guía de La paciente silenciosa, de Alex Michaelides: resumen, personajes y reflexiones. Final explicado en una sección con spoilers opcionales.","inLanguage":"es","publisher":{"@id":"https://mymarginalia.net/#organization"},"about":{"@type":"Book","name":"La paciente silenciosa","author":{"@type":"Person","name":"Alex Michaelides"}}}},{"@type":"BreadcrumbList","@id":"https://mymarginalia.net/la-paciente-silenciosa.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"MyMarginalia","item":"https://mymarginalia.net/"},{"@type":"ListItem","position":2,"name":"La paciente silenciosa","item":"https://mymarginalia.net/la-paciente-silenciosa.html"}]}]}</script>
+</head>
+<body>
+<nav aria-label="Biblioteca" class="mg-nav">
+<div class="in">
+<a aria-label="MyMarginalia, inicio" class="mg-brand" href="/#inicio"><span aria-hidden="true" class="s3" style="transform:rotate(-3deg)">M</span><span aria-hidden="true" class="s0" style="transform:rotate(2deg)">A</span><span aria-hidden="true" class="s6" style="transform:rotate(-2deg)">R</span><span aria-hidden="true" class="s0" style="transform:rotate(1deg)">G</span><span aria-hidden="true" class="s4" style="transform:rotate(3deg)">I</span><span aria-hidden="true" class="s0" style="transform:rotate(-1deg)">N</span><span aria-hidden="true" class="s3" style="transform:rotate(2deg)">A</span><span aria-hidden="true" class="s2" style="transform:rotate(-3deg)">L</span><span aria-hidden="true" class="s0" style="transform:rotate(1deg)">I</span><span aria-hidden="true" class="s1" style="transform:rotate(-2deg)">A</span></a>
+<a class="mg-back" href="/#libros">← <span>Biblioteca</span></a>
+<details class="mg-menu">
+<summary>Cambiar libro <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<ul><li><a href="biblia.html">La Biblia<small>Diversos autores</small></a></li><li><a href="imitacion-de-cristo.html">Imitación de Cristo<small>Tomás de Kempis</small></a></li><li><a href="el-poder-del-ahora.html">El poder del ahora<small>Eckhart Tolle</small></a></li><li><a href="habitos-atomicos.html">Hábitos atómicos<small>James Clear</small></a></li><li><a href="tiny-habits.html">Hábitos diminutos<small>BJ Fogg</small></a></li><li><a href="como-ganar-amigos.html">Cómo ganar amigos e influir sobre las personas<small>Dale Carnegie</small></a></li><li><a href="cosas-buenas.html">Cómo hacer que te pasen cosas buenas<small>Marian Rojas Estapé</small></a></li><li><a href="tus-zonas-erroneas.html">Tus zonas erróneas<small>Wayne W. Dyer</small></a></li><li><a href="inteligencia-emocional.html">Inteligencia emocional<small>Daniel Goleman</small></a></li><li><a href="amar-o-depender.html">¿Amar o depender?<small>Walter Riso</small></a></li><li><a href="el-sutil-arte-de-que-te-importe-un-carajo.html">El sutil arte de que te importe un carajo<small>Mark Manson</small></a></li><li><a href="piensalo-otra-vez.html">Piénsalo otra vez<small>Adam Grant</small></a></li><li><a href="la-teoria-let-them.html">La teoría Let Them<small>Mel Robbins</small></a></li><li aria-hidden="true" class="sep"></li><li><a href="el-jardin-de-las-mariposas.html">El jardín de las mariposas<small>Dot Hutchison</small></a></li><li><a href="el-ultimo-secreto.html">El último secreto<small>Dan Brown</small></a></li><li><a aria-current="page" href="la-paciente-silenciosa.html">La paciente silenciosa<small>Alex Michaelides</small></a></li><li><a href="la-biblioteca-de-la-medianoche.html">La biblioteca de la medianoche<small>Matt Haig</small></a></li></ul>
+</details>
+</div>
+</nav>
+<div class="wrap">
+<header class="hero">
+<h1 class="book-title">La paciente <span class="mark ul">silenciosa</span></h1>
+    <div class="sub">Guía y resumen · Obra de Alex Michaelides</div>
+<div class="author">GUÍA INDEPENDIENTE</div>
+<div id="book-purchase" style="margin-top:20px">
+<a class="btn" href="https://meli.la/2GmXWks" target="_blank" rel="sponsored noopener" aria-label="Comprar La paciente silenciosa de Alex Michaelides en Mercado Libre (abre en una pestaña nueva)" style="display:inline-block;text-decoration:none;text-align:center">Comprar libro</a>
+</div>
+</header>
+<aside aria-label="Acerca de esta guía" class="guide-note"><strong>Resumen y guía de lectura</strong><p>Recorre el prólogo y las cinco partes con explicaciones sencillas, personajes e ideas clave. Los bloques de lectura y las preguntas son de Marginalia. Esta guía es independiente y no sustituye la obra original.</p><p><strong class="notice-label">Antes de leer:</strong> se cuentan hechos de la trama; las revelaciones del cierre están ocultas en <a href="#spoilers">El final explicado</a>. La novela aborda homicidio, abuso emocional, autolesiones, suicidio e infidelidad. Las explicaciones evitan detalles gráficos.</p></aside>
+<div aria-live="polite" class="bar">
+<span id="progress-text">0 de 42 secciones exploradas</span>
+<div aria-label="Progreso" aria-valuemax="42" aria-valuemin="0" aria-valuenow="0" class="track" id="track" role="progressbar"><div class="fill" id="fill"></div></div>
+<button class="chip" id="reset" type="button">Reiniciar</button>
+</div>
+<div class="map" id="map"><div class="group"><h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2><div class="g-grid" id="g-1"></div></div><div class="group"><h2 class="g-title"><span class="g-n">2</span>Personajes · quién es quién</h2><div class="g-grid" id="g-2"></div></div><div class="group"><h2 class="g-title"><span class="g-n">3</span>El comienzo · prólogo y parte I</h2><div class="g-grid" id="g-3"></div></div><div class="group"><h2 class="g-title"><span class="g-n">4</span>La búsqueda · parte II</h2><div class="g-grid" id="g-4"></div></div><div class="group"><h2 class="g-title"><span class="g-n">5</span>La voz de Alicia · parte III</h2><div class="g-grid" id="g-5"></div></div><div class="group"><h2 class="g-title"><span class="g-n">6</span>Las versiones se enfrentan · parte IV</h2><div class="g-grid" id="g-6"></div></div><div class="group"><h2 class="g-title"><span class="g-n">7</span>Ideas y temas del libro</h2><div class="g-grid" id="g-7"><div class="quote"><div class="hand" id="quote-text">¿A quién le damos el poder de contar una historia?</div><div class="by">Pregunta de Marginalia</div><button class="chip" id="next-quote" type="button">Otra pregunta</button></div></div></div></div>
+<section aria-labelledby="spoilers-title" class="block spoiler-wrap" id="spoilers"><div class="spoiler-head"><div><h2 id="spoilers-title">El final explicado</h2><p>Incluye la quinta parte y las revelaciones que cambian el sentido de la novela. Ábrelo después de terminar.</p></div><button aria-controls="spoiler-body" aria-expanded="false" class="btn" id="spoiler-btn" type="button">Mostrar spoilers</button></div><div class="spoiler-body" hidden id="spoiler-body"><div class="spoiler-grid"><article class="scard"><b>Las dos líneas ocurrían en momentos distintos</b><p>Las escenas en que Theo descubre y sigue la infidelidad de Kathy pertenecen al pasado, antes de la muerte de Gabriel. Su trabajo con Alicia en la Grove sucede años después. El relato las intercala de un modo que invita a creer que están ocurriendo al mismo tiempo.</p></article><article class="scard"><b>Quién era el intruso</b><p>El amante de Kathy era Gabriel. Theo lo siguió y acabó entrando en la casa de Alicia. Allí amenazó al matrimonio y obligó a Gabriel a elegir entre salvarse o salvar a su esposa. Gabriel escogió su propia vida: para Alicia, esa elección repitió el rechazo que había sufrido de su padre.</p></article><article class="scard"><b>Qué hizo Alicia y qué significa Alcestis</b><p>Theo se marchó después de dejar a Alicia frente a esa traición. Ella mató a Gabriel. La referencia a Alcestis expresa su identificación con una mujer sacrificada por el hombre que ama. Cuando Alicia escribe que él la mató primero, describe una destrucción emocional; no niega literalmente quién disparó.</p></article><article class="scard"><b>Por qué Alicia habló y después volvió a quedar en silencio</b><p>Alicia reconoció a Theo. Al ofrecerle una versión falsa de la muerte de Gabriel, comprobó su reacción y dejó que él comprendiera que lo había identificado. Theo la intoxicó para impedir que lo denunciara y trató de dirigir las sospechas hacia Christian. Sus justificaciones revelan cómo transforma su violencia en una supuesta necesidad.</p></article><article class="scard"><b>El diario conserva la prueba</b><p>Alicia alcanzó a escribir lo ocurrido antes de perder el conocimiento. Su diario queda oculto en la parte posterior de una pintura. La escritura hace posible que su versión sobreviva cuando ella ya no puede hablar.</p></article><article class="scard"><b>Qué ocurre al final</b><p>Allen llega a la casa de Theo con el diario y empieza a leerlo en voz alta. La aparente seguridad del narrador se derrumba. El libro termina en ese momento: no muestra un juicio ni una condena. La última imagen de la nieve acompaña la pérdida de control de Theo sobre su propia historia.</p></article></div></div></section>
+<section class="block" data-notes-book="paciente-silenciosa" id="diario">
+<div class="block-head"><h2>Mis notas de lectura</h2><p>Un espacio libre para tus impresiones, personajes, frases y todo lo que quieras recordar de la novela.</p></div>
+<div class="journal novel-notes">
+<div class="jcard"><div class="mg-field-head"><label for="novel-notes">Mi cuaderno de lectura</label><button class="mg-clear-field" disabled="" id="clear-novel-notes" type="button">Borrar notas</button></div>
+<textarea aria-describedby="notes-help saved-hint" id="novel-notes" placeholder="Escribe aquí tus anotaciones…"></textarea>
+<p class="hint" id="notes-help">Se guardan automáticamente en este navegador. Puedes añadir el capítulo o la página junto a cada anotación.</p>
+</div>
+</div>
+<p class="hint" id="saved-hint" role="status" style="margin-top:8px"></p>
+</section>
+<section aria-label="Guardar notas en PDF" class="mg-save-pdf" id="guardar-pdf">
+<div class="mg-pdf-actions">
+<button class="btn" id="mg-save-pdf" type="button">Guardar mis notas en PDF</button>
+</div>
+<p class="mg-pdf-note">Se abrirá la ventana de impresión. Elige <strong>Guardar como PDF</strong>. Tus respuestas no se envían a Marginalia.</p>
+</section>
+<section aria-label="Comentarios sobre esta guía" class="mg-feedback-invite">
+<p>¿Te sirvió esta guía? Me gustaría saber qué piensas.</p>
+<button aria-haspopup="dialog" class="btn ghost" id="mg-feedback-open" type="button">Dejar comentario</button>
+</section>
+<nav aria-label="Otros libros" class="mg-pager">
+<a aria-label="Libro anterior: El último secreto" class="pv" href="el-ultimo-secreto.html"><span aria-hidden="true" class="mg-arrow">←</span><b>El último secreto</b></a>
+<a class="home" href="/#libros">Biblioteca</a>
+<a aria-label="Siguiente libro: La Biblia" class="nx" href="biblia.html"><b>La Biblia</b><span aria-hidden="true" class="mg-arrow">→</span></a>
+</nav>
+<footer>
+<div class="source-note"><strong>Obra de referencia:</strong> Michaelides, Alex. <cite>La paciente silenciosa</cite> (<cite>The Silent Patient</cite>, 2019). Guía en español elaborada a partir de la edición portuguesa <cite>A paciente silenciosa</cite>, traducción de Marta Mendonça, Editorial Presença, 2019.</div>
+<div class="guide-credits">
+<p class="credits-author"><strong>Guías elaboradas por:</strong> Marginalia</p>
+<p class="credits-note">Esta es una guía independiente elaborada por Marginalia. Los personajes, acontecimientos y situaciones pertenecen a la novela de Alex Michaelides y aquí se resumen con palabras propias. Los bloques de lectura, preguntas y reflexiones fueron creados para esta guía. Esta guía no reproduce el texto del libro, no sustituye la obra original y no tiene relación con el autor ni con la editorial.</p>
+<p class="credits-copyright">© 2026 Marginalia. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+<dialog aria-labelledby="dlg-title" id="dlg">
+<div class="dlg-head" id="dlg-head"><div class="ico" id="dlg-ico"></div><div style="min-width:0"><div class="eyebrow" id="dlg-eyebrow"></div><h3 id="dlg-title"></h3></div><button aria-label="Cerrar" class="x" id="dlg-x" type="button">×</button></div>
+<div aria-label="Explicación de la tarjeta" class="dlg-body" role="region" tabindex="0"><ol class="dlg-list" id="dlg-list"></ol><div class="reflect" id="dlg-reflect"></div><p class="dlg-signature">Marginalia · mymarginalia.net</p></div>
+<div class="dlg-foot"><button class="btn ghost" id="dlg-prev" type="button">← Anterior</button><button class="btn" id="dlg-next" type="button">Siguiente →</button></div>
+</dialog>
+<script>
+const I={
+ butterfly:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M23 23C18 9 7 7 6 16c-1 7 6 12 15 10-8 4-11 11-6 14 6 3 9-6 9-15 0 9 3 18 9 15 5-3 2-10-6-14 9 2 16-3 15-10-1-9-12-7-17 7"/><path d="M24 20v21M20 8l4 7 4-7"/></svg>',
+ glass:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="6" width="30" height="36" rx="2"/><path d="M16 13l16 22M31 10 14 31M23 7l-7 8M38 20l-7 8"/></svg>',
+ name:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 34c7-2 11-10 14-20 4 7 5 16 8 23M14 27h14"/><path d="M32 15c5 0 8 3 8 7s-3 7-8 7h-4V15z"/></svg>',
+ garden:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 41V21M24 29c-8 0-13-5-13-12 8 0 13 5 13 12zM24 25c8 0 13-5 13-12-8 0-13 5-13 12z"/><path d="M7 41h34M12 41c0-7 5-11 12-11M36 41c0-7-5-11-12-11"/></svg>',
+ people:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="16" r="6"/><circle cx="32" cy="18" r="5"/><path d="M7 39c1-9 6-13 11-13s10 4 11 13M25 39c1-7 4-11 8-11 5 0 8 4 9 11"/></svg>',
+ book:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 11c-6-4-12-4-18-2v28c6-2 12-2 18 2 6-4 12-4 18-2V9c-6-2-12-2-18 2zM24 11v28"/></svg>',
+ fire:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M25 5c3 10-5 12-2 20 2-5 7-6 9-12 8 8 10 16 6 23-3 6-9 8-14 8S12 42 10 35c-3-10 6-15 9-23 1 6 4 8 6 9"/></svg>',
+ door:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 43V7h24v36M18 43V12h13v31"/><circle cx="28" cy="27" r="1.5"/></svg>',
+ scale:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 7v34M12 12h24M24 12 13 30M24 12l11 18"/><path d="M6 30h14c0 5-3 8-7 8s-7-3-7-8zM28 30h14c0 5-3 8-7 8s-7-3-7-8zM17 41h14"/></svg>'
+};
+const DATA=[
+  {
+    "id": "panorama",
+    "g": 1,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "¿De qué trata La paciente silenciosa?",
+    "text": "Alicia Berenson, una pintora, deja de hablar después de matar a su marido. Años después, el psicoterapeuta Theo Faber llega a la clínica donde está internada con la intención de comprender su silencio.",
+    "pts": [
+      "El misterio no consiste solo en saber qué sucedió aquella noche: también importa quién cuenta los hechos y qué decide callar.",
+      "La pintura, los recuerdos familiares y un diario ofrecen versiones que no siempre coinciden con lo que otros dicen de Alicia."
+    ],
+    "q": "¿Qué necesitarías conocer antes de juzgar el silencio de alguien?"
+  },
+  {
+    "id": "forma",
+    "g": 1,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Dos voces y cinco partes",
+    "text": "La novela tiene un prólogo y cinco partes. Alterna el relato de Theo con entradas del diario de Alicia. Esta guía reúne capítulos y entradas en bloques de lectura propios.",
+    "pts": [
+      "El diario permite escuchar a Alicia antes del crimen; Theo cuenta su investigación y también episodios de su vida íntima. Conviene distinguir siempre quién está hablando.",
+      "Los bloques respetan el avance de la lectura. Las conexiones definitivas y la quinta parte se explican en el apartado de spoilers."
+    ],
+    "q": "¿Qué diferencias encuentras entre lo que Alicia escribe y lo que otros dicen de ella?"
+  },
+  {
+    "id": "alicia",
+    "g": 2,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Alicia Berenson · pintora",
+    "text": "Es la protagonista, esposa de Gabriel y paciente de la clínica Grove. Su silencio después del crimen despierta el interés de Theo.",
+    "pts": [
+      "Sus pinturas y su diario conservan una voz propia que las explicaciones ajenas no pueden reemplazar.",
+      "Su historia familiar ayuda a comprender su vulnerabilidad, aunque no resuelve por sí sola el misterio."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "theo",
+    "g": 2,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Theo Faber · psicoterapeuta",
+    "text": "Es el narrador de buena parte del libro y el terapeuta que quiere trabajar con Alicia. Está casado con Kathy.",
+    "pts": [
+      "Relata tanto las sesiones como su investigación fuera de la clínica y sus recuerdos personales.",
+      "Su deseo de ayudar se mezcla con una fuerte identificación con la paciente; conviene distinguir sus observaciones de sus interpretaciones."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "gabriel",
+    "g": 2,
+    "c": "yellow",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Gabriel Berenson · marido de Alicia",
+    "text": "Es un fotógrafo de moda y el esposo cuya muerte da origen a la historia. Es hermano de Max.",
+    "pts": [
+      "Alicia expresa en el diario un intenso amor por él, pero también describe tensiones y discusiones.",
+      "Lo conocemos principalmente a través de recuerdos y testimonios; su imagen depende de quién lo describe."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "kathy",
+    "g": 2,
+    "c": "blue",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Kathy · esposa de Theo",
+    "text": "Es actriz y está casada con Theo. La relación entre ambos ocupa una segunda línea del relato.",
+    "pts": [
+      "Theo la presenta como una figura fundamental en su vida afectiva.",
+      "Lo que él descubre sobre su matrimonio modifica su conducta y la forma en que habla de confianza y abandono."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "diomedes",
+    "g": 2,
+    "c": "lav",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Lazarus Diomedes · director clínico",
+    "text": "Es el profesor de psiquiatría que dirige la Grove y apoya la posibilidad de tratar a Alicia.",
+    "pts": [
+      "Supervisa el trabajo de Theo y conversa con él sobre los sentimientos que despierta la terapia.",
+      "Su autoridad clínica convive con las presiones institucionales sobre el futuro del centro."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "christian",
+    "g": 2,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Christian West · psiquiatra",
+    "text": "Es el psiquiatra responsable de la medicación de Alicia en la Grove. En el diario también se le menciona como doctor West.",
+    "pts": [
+      "Su relación profesional con Theo es tensa y ambos discrepan sobre el tratamiento.",
+      "La información que aporta debe compararse con el diario y con el resto de los testimonios."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "indira",
+    "g": 2,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Indira Sharma · psicoterapeuta",
+    "text": "Trabaja en la Grove y recibe a Theo con una actitud cercana.",
+    "pts": [
+      "Defiende una relación terapéutica basada en el contacto humano y muestra interés por Alicia.",
+      "Sus conversaciones permiten ver la vida cotidiana del equipo más allá de la investigación."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "stephanie",
+    "g": 2,
+    "c": "yellow",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Stephanie Clarke · responsable de la clínica",
+    "text": "Se ocupa de la gestión y la seguridad de la Grove.",
+    "pts": [
+      "Interviene cuando las decisiones terapéuticas generan riesgos o conflictos.",
+      "Representa las normas y las responsabilidades del centro, que a veces chocan con los planes de Theo."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "yuri",
+    "g": 2,
+    "c": "blue",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Yuri · enfermero",
+    "text": "Trabaja en la Grove y acompaña a Alicia entre las distintas actividades y sesiones.",
+    "pts": [
+      "Conoce de cerca la rutina de los pacientes y facilita varios encuentros de Theo.",
+      "Su cercanía con ellos también plantea preguntas sobre los límites profesionales."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "elif",
+    "g": 2,
+    "c": "lav",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Elif · paciente de la Grove",
+    "text": "Comparte la clínica con Alicia y participa de forma combativa en la vida del centro.",
+    "pts": [
+      "Su rivalidad con Alicia se vuelve importante cuando esta recibe un espacio para pintar.",
+      "Sus actos y sus versiones de los conflictos deben leerse junto con lo que observan los demás."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "rowena",
+    "g": 2,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Rowena Hart · terapeuta de arte",
+    "text": "Dirige las actividades de arteterapia en la Grove.",
+    "pts": [
+      "Theo necesita tratar con ella cuando propone que Alicia vuelva a pintar.",
+      "Su resistencia al proyecto muestra que el equipo no comparte una única visión de la paciente."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "ruth",
+    "g": 2,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Ruth · antigua terapeuta de Theo",
+    "text": "Es la profesional que ayudó a Theo a afrontar el daño de su infancia.",
+    "pts": [
+      "Él vuelve a buscarla cuando atraviesa dificultades en su matrimonio.",
+      "Su perspectiva permite contrastar el relato que Theo construye sobre sus propias necesidades."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "max",
+    "g": 2,
+    "c": "yellow",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Max Berenson · hermano de Gabriel",
+    "text": "Es abogado, hermano de Gabriel y cuñado de Alicia. Está casado con Tanya.",
+    "pts": [
+      "Habla con Theo sobre la familia y sobre episodios del pasado de Alicia.",
+      "Su implicación emocional en esa historia hace necesario escuchar su testimonio con cuidado."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "tanya",
+    "g": 2,
+    "c": "blue",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Tanya · esposa de Max",
+    "text": "Trabaja en la recepción del despacho de Max y está casada con él.",
+    "pts": [
+      "Su presencia ayuda a entender el entorno familiar y laboral del cuñado de Alicia.",
+      "Es un personaje secundario que aparece durante las visitas de Theo al despacho."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "jean-felix",
+    "g": 2,
+    "c": "lav",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Jean-Felix Martin · galerista",
+    "text": "Es el galerista vinculado a la carrera artística de Alicia y un conocido de larga data.",
+    "pts": [
+      "Conserva y muestra sus obras; por eso es una fuente importante para interpretar las pinturas.",
+      "Sus intereses profesionales se mezclan con el vínculo personal que mantiene con ella."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "barbie",
+    "g": 2,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Barbie Hellmann · vecina",
+    "text": "Es la vecina de Alicia que oyó los disparos y llamó a la policía.",
+    "pts": [
+      "Alicia le confía parte de sus preocupaciones antes del crimen.",
+      "Theo la visita para conocer detalles que no aparecen en el expediente clínico."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "paul",
+    "g": 2,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Paul Rose · primo de Alicia",
+    "text": "Es el primo de Alicia e hijo de Lydia. Conoce la casa y la historia familiar de su infancia.",
+    "pts": [
+      "Su testimonio aporta recuerdos que Alicia no ha contado a Theo.",
+      "La relación con su madre y sus propias dificultades influyen en su comportamiento."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "lydia",
+    "g": 2,
+    "c": "yellow",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Lydia Rose · tía de Alicia",
+    "text": "Es hermana de Vernon, madre de Paul y tía de Alicia. Participó en su crianza después de la muerte de Eva.",
+    "pts": [
+      "Su trato hacia Alicia está cargado de resentimiento.",
+      "Lo que dice sobre los cuidados familiares permite ver una gran distancia entre cuidar y hacer sentir querida a una persona."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "vernon",
+    "g": 2,
+    "c": "blue",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Vernon Rose · padre de Alicia",
+    "text": "Es el padre de Alicia, hermano de Lydia y esposo de Eva.",
+    "pts": [
+      "Sus reacciones después de la muerte de Eva dejaron una huella profunda en su hija.",
+      "Su historia aparece a través de recuerdos y conversaciones sobre la infancia de Alicia."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "eva",
+    "g": 2,
+    "c": "lav",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Eva Rose · madre de Alicia",
+    "text": "Es la madre de Alicia y esposa de Vernon. Murió en un accidente de automóvil cuando Alicia era niña.",
+    "pts": [
+      "Alicia sobrevivió al accidente y vuelve a esa experiencia en sus recuerdos y en su pintura.",
+      "La ausencia de su madre transforma la vida familiar y su manera de entender la seguridad afectiva."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "nicole",
+    "g": 2,
+    "c": "green",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Nicole · amiga de Kathy",
+    "text": "Es una amiga de Kathy que aparece mencionada en sus planes sociales.",
+    "pts": [
+      "Su nombre cobra relevancia cuando Theo empieza a desconfiar de las explicaciones de su esposa.",
+      "Es un personaje secundario de la trama matrimonial."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "allen",
+    "g": 2,
+    "c": "peach",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Steven Allen · inspector",
+    "text": "Es el inspector jefe que interviene en la investigación policial relacionada con la clínica.",
+    "pts": [
+      "Sus preguntas trasladan el conflicto desde las interpretaciones personales al terreno de las pruebas.",
+      "Su participación en el cierre se explica en la sección de spoilers."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "julian",
+    "g": 2,
+    "c": "yellow",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Julian McMahon · representante de la Fundación",
+    "text": "Representa a la Fundación vinculada a la Grove.",
+    "pts": [
+      "Interviene en asuntos de administración y continuidad del centro.",
+      "Permite ver que las decisiones sobre la clínica también dependen de personas ajenas a las sesiones."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "alcestis",
+    "g": 2,
+    "c": "blue",
+    "ico": "people",
+    "eyebrow": "Personajes",
+    "title": "Alcestis y Admeto · figuras del mito",
+    "text": "Alcestis, llamada Alceste en la edición portuguesa, es la mujer del mito griego que acepta morir en lugar de su esposo Admeto.",
+    "pts": [
+      "Son figuras de una historia que los personajes leen y comentan, no pacientes de la clínica.",
+      "El nombre del autorretrato de Alicia remite a ese mito; su relación con el desenlace se explica al final."
+    ],
+    "q": "¿Qué aporta esta persona o figura a tu comprensión de la historia?"
+  },
+  {
+    "id": "diario-inicio",
+    "g": 3,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Prólogo · una voz antes del silencio",
+    "text": "Alicia empieza un diario para ordenar lo que siente. Esa escritura nos acerca a una vida que, después del crimen, será interpretada casi siempre por otras personas.",
+    "pts": [
+      "La escritura no es un informe neutral: registra emociones y percepciones en el momento en que aparecen.",
+      "El contraste entre una voz escrita y el silencio posterior sostiene el misterio."
+    ],
+    "q": "¿Qué puede conservar un diario que un expediente pierde?"
+  },
+  {
+    "id": "crimen",
+    "g": 3,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte I · el crimen y el autorretrato",
+    "text": "Theo presenta la muerte de Gabriel y el silencio de Alicia. Un autorretrato titulado Alcestis se convierte en una pista que atrae interpretaciones muy distintas.",
+    "pts": [
+      "La falta de una explicación verbal hace que la prensa, los profesionales y el público llenen el vacío con sus propias ideas.",
+      "La pintura puede expresar algo que Alicia no dice, pero interpretarla exige conocer su historia."
+    ],
+    "q": "¿Una imagen puede ser una explicación y seguir siendo ambigua?"
+  },
+  {
+    "id": "grove",
+    "g": 3,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte I · Theo llega a la Grove",
+    "text": "Theo consigue un puesto en la clínica donde está Alicia y busca la oportunidad de tratarla. Diomedes lo apoya, mientras otros miembros del equipo muestran reservas.",
+    "pts": [
+      "La Grove tiene rutinas, jerarquías y dificultades económicas: el tratamiento ocurre dentro de esas condiciones.",
+      "El interés de Theo parece muy personal desde el comienzo. El lector recibe la explicación que él mismo ofrece de ese interés."
+    ],
+    "q": "¿Cuándo una convicción profesional empieza a parecer una obsesión?"
+  },
+  {
+    "id": "primeras",
+    "g": 3,
+    "c": "yellow",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte I · los primeros encuentros",
+    "text": "Alicia permanece en silencio durante las sesiones. Theo cree que necesita acercarse a ella de otra manera y empieza a observar el tratamiento que recibe.",
+    "pts": [
+      "El relato intercala recuerdos de su infancia y de la ayuda que encontró en Ruth.",
+      "Su vínculo con Kathy completa la imagen de un narrador que también arrastra heridas."
+    ],
+    "q": "¿Qué cambia cuando conocemos las dificultades de quien intenta ayudar?"
+  },
+  {
+    "id": "tratamiento",
+    "g": 4,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte II · tratar de establecer confianza",
+    "text": "Theo propone revisar la medicación con el equipo. Alicia se muestra más alerta, pero el acercamiento incluye una reacción violenta que complica la relación.",
+    "pts": [
+      "Theo insiste en continuar y presenta su perseverancia como una forma de demostrar que no la abandonará.",
+      "Estas decisiones pertenecen a la ficción y a su conflicto entre personajes; no constituyen recomendaciones de tratamiento."
+    ],
+    "q": "¿Cómo se distingue la confianza del deseo de obtener una respuesta?"
+  },
+  {
+    "id": "matrimonio",
+    "g": 4,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte II · el matrimonio de Theo",
+    "text": "Theo encuentra mensajes que le hacen descubrir la infidelidad de Kathy. En lugar de hablar abiertamente con ella, comienza a vigilar y a construir sus propias explicaciones.",
+    "pts": [
+      "Busca a Ruth, pero le cuesta aceptar una perspectiva que no confirme lo que desea.",
+      "La sospecha afecta la manera en que narra lo que ve y convierte detalles cotidianos en señales de amenaza."
+    ],
+    "q": "¿Qué diferencia hay entre querer saber y querer controlar?"
+  },
+  {
+    "id": "familia",
+    "g": 4,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte II · las versiones de la familia",
+    "text": "Theo visita a Max y después a Paul y Lydia para conocer el pasado de Alicia. Encuentra recuerdos dolorosos, hostilidad y datos que no figuran en el expediente.",
+    "pts": [
+      "Las conversaciones muestran cuánto depende una historia familiar de quién la cuenta.",
+      "El pasado de Eva y Vernon abre una pregunta sobre las experiencias de pérdida y rechazo de Alicia."
+    ],
+    "q": "¿Qué testimonio parece más interesado en proteger su propia imagen?"
+  },
+  {
+    "id": "pinturas",
+    "g": 4,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte II · las pinturas como pistas",
+    "text": "Jean-Felix muestra a Theo obras de Alicia. Las escenas pintadas remiten a su familia, su matrimonio y sus experiencias más difíciles.",
+    "pts": [
+      "Theo lee la historia de Alcestis e intenta relacionarla con el autorretrato.",
+      "Una pintura permite formular preguntas, pero no confirma por sí sola una hipótesis sobre el crimen."
+    ],
+    "q": "¿Qué puede sugerir una obra sin demostrarlo?"
+  },
+  {
+    "id": "estudio",
+    "g": 4,
+    "c": "yellow",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte II · volver a pintar",
+    "text": "Con ayuda del equipo, Alicia obtiene un espacio para trabajar. El proyecto despierta oposición y agrava su conflicto con Elif.",
+    "pts": [
+      "Después de que una pintura resulte dañada, una agresión provoca la intervención de Stephanie y pone en riesgo las sesiones.",
+      "Cuando el vínculo parece interrumpirse, Alicia entrega su diario a Theo: la comunicación cambia de forma."
+    ],
+    "q": "¿Por qué entregar un cuaderno puede ser tan importante como hablar?"
+  },
+  {
+    "id": "vigilancia",
+    "g": 5,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte III · el diario y el hombre que observa",
+    "text": "Las entradas del diario describen la sensación de Alicia de estar siendo vigilada. Busca apoyo en su entorno y trata de comprender si el peligro es real.",
+    "pts": [
+      "Barbie escucha parte de sus temores; Gabriel y el doctor West reaccionan desde perspectivas distintas.",
+      "La tensión nace de la distancia entre la experiencia de Alicia y la credibilidad que le conceden los demás."
+    ],
+    "q": "¿Qué ocurre cuando una persona siente miedo y nadie escucha su versión?"
+  },
+  {
+    "id": "contradicciones",
+    "g": 6,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte IV · lo que el diario cambia",
+    "text": "Theo confronta a Christian con información del diario y descubre una relación profesional anterior que había quedado oculta.",
+    "pts": [
+      "La investigación deja ver omisiones y conflictos de interés entre quienes hablan de Alicia.",
+      "Que un personaje oculte algo no demuestra automáticamente que explique todos los hechos. La novela juega con esa confusión."
+    ],
+    "q": "¿Cómo distinguir una mentira de la solución completa del misterio?"
+  },
+  {
+    "id": "infancia",
+    "g": 6,
+    "c": "green",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte IV · la herida de la infancia",
+    "text": "Paul comparte un recuerdo decisivo: Alicia escuchó que su padre hubiera preferido perderla a ella en lugar de a su madre. Theo lleva ese recuerdo a la sesión.",
+    "pts": [
+      "Esa experiencia ayuda a entender el miedo al rechazo que atraviesa el relato.",
+      "Alicia empieza a hablar. El logro no termina el misterio: abre un nuevo problema sobre lo que elige contar."
+    ],
+    "q": "¿Por qué un recuerdo puede cambiar el sentido de una conversación presente?"
+  },
+  {
+    "id": "relato",
+    "g": 6,
+    "c": "peach",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte IV · Alicia cuenta aquella noche",
+    "text": "Alicia describe la llegada de un intruso a su casa. Theo escucha un relato que contiene detalles inquietantes y contradicciones respecto de las pruebas conocidas.",
+    "pts": [
+      "Hablar no convierte automáticamente una versión en verdad completa: también puede servir para probar la reacción del interlocutor.",
+      "La supervisión con Diomedes obliga a Theo a mirar los sentimientos que intervienen en su lectura de Alicia."
+    ],
+    "q": "¿Qué revela la reacción de quien escucha una historia?"
+  },
+  {
+    "id": "crisis",
+    "g": 6,
+    "c": "yellow",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Parte IV · una crisis en la clínica",
+    "text": "Alicia sufre una grave intoxicación y queda en coma. La situación desencadena una investigación sobre lo ocurrido en la Grove.",
+    "pts": [
+      "Las sospechas recaen sobre personas del equipo y las explicaciones previas empiezan a desmoronarse.",
+      "La conexión entre este episodio, el crimen y la vida de Theo se reserva para El final explicado."
+    ],
+    "q": "¿Qué evidencia sería necesaria para pasar de una sospecha a una conclusión?"
+  },
+  {
+    "id": "voces",
+    "g": 7,
+    "c": "blue",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Quién tiene derecho a contar la historia",
+    "text": "La novela distribuye la información de manera desigual: Theo puede explicar sus actos y describir a otros; Alicia encuentra una voz a través del diario y la pintura.",
+    "pts": [
+      "Leer implica comparar las palabras con las acciones, y detectar cuándo una interpretación se presenta como si fuera un hecho.",
+      "El silencio puede ser interpretado de muchas maneras por quienes tienen poder sobre una persona."
+    ],
+    "q": "¿A quién le creíste primero y por qué?"
+  },
+  {
+    "id": "amor",
+    "g": 7,
+    "c": "lav",
+    "ico": "book",
+    "eyebrow": "Guía de lectura",
+    "title": "Amor, dependencia y control",
+    "text": "Varios vínculos confunden cercanía con posesión. Los personajes buscan seguridad en otras personas y reaccionan cuando esa seguridad se rompe.",
+    "pts": [
+      "La novela permite pensar en cómo el miedo al abandono puede deformar una relación.",
+      "Comprender una historia de sufrimiento no elimina la responsabilidad por el daño causado a otros."
+    ],
+    "q": "¿Qué conductas muestran cuidado y cuáles muestran control?"
+  }
+];
+const QUOTES=["¿Qué diferencia hay entre escuchar e interpretar?", "¿Qué detalles cambian de sentido al terminar?", "¿Cómo se relacionan el silencio, la pintura y el diario?"];
+
+const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}};
+
+/* Mapa */
+let done=new Set(store.get('paciente-silenciosa-done-v1',[]));
+DATA.forEach((d,i)=>{
+  const b=document.createElement('button');
+  b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
+  b.style.setProperty('--tint',`var(--c-${d.c})`);b.style.setProperty('--edge',`var(--e-${d.c})`);
+  const shown=d.pts.slice(0,2);
+  b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
+    ${d.text?`<p><b>${d.text}</b></p>`:''}
+    <ul>${shown.map(p=>`<li>${p}</li>`).join('')}</ul>
+    <div class="more"><span>${d.pts.length>2?`+${d.pts.length-2} idea · `:''}Explorar →</span><span class="done-badge">✓ Explorado</span></div>`;
+  b.addEventListener('click',()=>openCard(i));
+  const g=document.getElementById('g-'+d.g);const q=g.querySelector('.quote');
+  if(q)g.insertBefore(b,q);else g.appendChild(b);
+});
+
+function refreshProgress(){
+  DATA.forEach(d=>document.getElementById('card-'+d.id).classList.toggle('is-done',done.has(d.id)));
+  const n=DATA.filter(d=>done.has(d.id)).length;
+  document.getElementById('track').setAttribute('aria-valuemax',DATA.length);
+  document.getElementById('progress-text').textContent=n===DATA.length?'¡Recorriste toda la guía!':`${n} de ${DATA.length} secciones exploradas`;
+  document.getElementById('fill').style.width=(n/DATA.length*100)+'%';
+  document.getElementById('track').setAttribute('aria-valuenow',n);
+}
+refreshProgress();
+document.getElementById('reset').onclick=()=>{done.clear();store.set('paciente-silenciosa-done-v1',[]);refreshProgress()};
+
+/* Ventana */
+const dlg=document.getElementById('dlg'); let cur=0;
+function openCard(i){
+  cur=(i+DATA.length)%DATA.length; const d=DATA[cur];
+  dlg.style.setProperty('--tint',`var(--c-${d.c})`);dlg.style.setProperty('--edge',`var(--e-${d.c})`);
+  document.getElementById('dlg-ico').innerHTML=I[d.ico];
+  document.getElementById('dlg-eyebrow').textContent=d.eyebrow;
+  document.getElementById('dlg-title').textContent=d.title;
+  const all=d.text?[d.text,...d.pts]:d.pts;
+  document.getElementById('dlg-list').innerHTML=all.map((p,k)=>`<li style="animation-delay:${k*80}ms"><div class="reading-point">${p}</div></li>`).join('');
+  document.getElementById('dlg-reflect').innerHTML=`<div class="hand">Para pensar</div><div>${d.q}</div>`;
+  if(!dlg.open)dlg.showModal();
+  dlg.querySelector('.dlg-body').scrollTop=0;
+  done.add(d.id);store.set('paciente-silenciosa-done-v1',[...done]);refreshProgress();
+}
+document.getElementById('dlg-x').onclick=()=>dlg.close();
+document.getElementById('dlg-next').onclick=()=>openCard(cur+1);
+document.getElementById('dlg-prev').onclick=()=>openCard(cur-1);
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')openCard(cur+1);if(e.key==='ArrowLeft')openCard(cur-1)});
+
+/* Preguntas */
+let qi=0;
+document.getElementById('next-quote').onclick=()=>{qi=(qi+1)%QUOTES.length;document.getElementById('quote-text').textContent=QUOTES[qi]};
+
+/* Final explicado */
+const sp=document.getElementById('spoiler-body'),spb=document.getElementById('spoiler-btn');
+spb.onclick=()=>{const open=sp.hidden;sp.hidden=!open;spb.setAttribute('aria-expanded',String(open));spb.textContent=open?'Ocultar spoilers':'Mostrar spoilers'};
+</script>
+<script>
+document.addEventListener("click",e=>{document.querySelectorAll(".mg-menu[open]").forEach(d=>{if(!d.contains(e.target))d.removeAttribute("open")})});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".mg-menu[open]").forEach(d=>{d.removeAttribute("open");d.querySelector("summary").focus()})});
+</script>
+<script>
+/* Marginalia: trazos a mano y aparición suave */
+(()=>{
+  const P={ul:'M2 88 C 20 80, 35 96, 52 86 S 82 80, 98 90',ci:'M52 4 C 82 2, 99 22, 97 48 C 95 80, 70 98, 44 96 C 16 94, 2 74, 3 48 C 4 20, 26 2, 60 8'};
+  // Subraya la última palabra de cada título de sección
+  document.querySelectorAll('.block-head h2').forEach(h=>{
+    const n=[...h.childNodes].reverse().find(x=>x.nodeType===3&&x.textContent.trim());
+    if(!n) return;
+    const m=n.textContent.match(/^(.*?)(\S+)(\s*)$/s); if(!m) return;
+    const s=document.createElement('span'); s.className='mark ul'; s.textContent=m[2];
+    n.replaceWith(document.createTextNode(m[1]),s,document.createTextNode(m[3]));
+  });
+  document.querySelectorAll('.mark').forEach(m=>{
+    const t=m.classList.contains('ci')?'ci':'ul';
+    m.insertAdjacentHTML('beforeend',`<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${P[t]}" pathLength="1" vector-effect="non-scaling-stroke"/></svg>`);
+  });
+  const els=[...document.querySelectorAll('.hero,.guide-note,.map .group,section.block,footer,.mg-pager')];
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(e=>e.classList.add('in'));return}
+  els.forEach(e=>e.classList.add('rv'));
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(e=>io.observe(e));
+  // Logo: una letra cambia de vez en cuando al pasar el mouse
+  const b=document.querySelector('.mg-brand'); if(!b) return;
+  const L=[...b.children], S=['s0','s1','s2','s3','s4','s6']; let tm;
+  b.addEventListener('mouseenter',()=>{clearInterval(tm);tm=setInterval(()=>{const l=L[Math.floor(Math.random()*L.length)];l.className=S[Math.floor(Math.random()*S.length)];l.style.transform=`rotate(${(Math.random()*6-3).toFixed(1)}deg)`},260)});
+  b.addEventListener('mouseleave',()=>clearInterval(tm));
+})();
+</script>
+<!-- Cloudflare Web Analytics -->
+<script data-cf-beacon='{"token": "436402644d794b97a2858b07a06d0514"}' src="https://static.cloudflareinsights.com/beacon.min.js" type="module"></script>
+<!-- End Cloudflare Web Analytics -->
+<section aria-hidden="true" id="mg-pdf-sheet">
+<div class="pdf-wrap"><div class="pdf-brand">Marginalia</div><h1>Mis notas · La paciente silenciosa</h1><p class="pdf-sub" id="pdf-date"></p><div class="pdf-section-title">Mi cuaderno de lectura</div><p id="pdf-notes"></p><div class="pdf-foot">Creado desde mymarginalia.net · Anotaciones personales del lector.</div></div>
+</section>
+
+</body>
+</html>

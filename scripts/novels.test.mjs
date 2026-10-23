@@ -6,6 +6,8 @@ import vm from 'node:vm';
 // Reviewed cast inventory: add an entry whenever chapter/ending copy introduces a name.
 // Aliases that reveal an identity (Samira, Lara, the Golem's identity) stay behind spoilers.
 const novels=[
+ {file:'la-paciente-silenciosa.html',groups:[1,2,3,4,5,6,7],castGroup:g=>g===2,cast:{"alicia": ["Alicia"], "theo": ["Theo"], "gabriel": ["Gabriel"], "kathy": ["Kathy"], "diomedes": ["Lazarus"], "christian": ["Christian"], "indira": ["Indira"], "stephanie": ["Stephanie"], "yuri": ["Yuri"], "elif": ["Elif"], "rowena": ["Rowena"], "ruth": ["Ruth"], "max": ["Max"], "tanya": ["Tanya"], "jean_felix": ["Jean-Felix"], "barbie": ["Barbie"], "paul": ["Paul"], "lydia": ["Lydia"], "vernon": ["Vernon"], "eva": ["Eva"], "nicole": ["Nicole"], "allen": ["Steven"], "julian": ["Julian"], "alcestis": ["Alcestis"]}},
+
  {file:'la-biblioteca-de-la-medianoche.html',groups:[1,'2a','2b','2c','2d',3,4,5],castGroup:g=>String(g).startsWith('2'),cast:{
   nora:['Nora','Seed'],elm:['Elm','Louise'],joe:['Joe'],dan:['Dan'],izzy:['Izzy','Isabel'],ash:['Ash'],hugo:['Hugo','Lefèvre'],ravi:['Ravi'],philippe:['Philippe'],voltio:['Voltaire','Voltio'],banerjee:['Banerjee'],leo:['Leo'],doreen:['Doreen'],molly:['Molly'],platon:['Platón']
  }},
