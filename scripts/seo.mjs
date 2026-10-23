@@ -45,7 +45,7 @@ export function improveHome(html){
  html=meta(html,title,description)
   .replace('<span class="eyebrow">Guías visuales de lectura</span>','<span class="eyebrow">MyMarginalia · Guías de lectura</span>')
   .replace('Buenas lecturas,<br>una vida <em><span class="mark ul">más consciente.</span></em>','Resúmenes de libros,<br>ideas para <em><span class="mark ul">reflexionar.</span></em>')
-  .replace('Libros que me inspiran, explicados con palabras sencillas. Elige una guía para leer, entender y pensar a tu ritmo.','La marginalia son notas y reflexiones al margen de una lectura. En MyMarginalia encontrarás resúmenes de libros y guías por capítulos para comprender sus ideas y conservar tus propias notas, a tu ritmo.')
+  .replace('Libros que me inspiran, explicados con palabras sencillas. Elige una guía para leer, entender y pensar a tu ritmo.','La marginalia reúne notas y reflexiones al margen de una lectura. En MyMarginalia encontrarás resúmenes de libros y guías por capítulos para comprender sus ideas y conservar tus propias notas, a tu ritmo.')
   .replace('Elige tu próxima <span class="mark ul">lectura</span>','Explora las guías de <span class="mark ul">lectura</span>')
   .replace('Un espacio para descubrir libros y guardar tus propias ideas.','Novelas, hábitos, psicología y espiritualidad: resúmenes, personajes e ideas para acompañar tu lectura.');
  html=html.replace('<strong>Guías elaboradas por:</strong> Marginalia','<strong>Guías elaboradas por:</strong> MyMarginalia').replace('© 2026 Marginalia.','© 2026 MyMarginalia.');
