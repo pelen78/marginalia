@@ -1,3 +1,15 @@
+/* Let the footer wrap as whole items instead of splitting the completion pill. */
+.card .more {
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+.card .more .done-badge {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  line-height: 1.4;
+  margin-left: auto;
+}
+
 /* Keep the reading controls visible while only the explanation scrolls. */
 #dlg[open] {
   display: flex;
