@@ -1,3 +1,16 @@
+/* The book title leads every guide, retaining the original display typography. */
+.hero h1.book-title {
+  display: block;
+  max-width: 1100px;
+  margin-inline: auto;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.hero h1.book-title + .sub {
+  text-wrap: balance;
+  line-height: 1.5;
+}
+
 /* Let the footer wrap as whole items instead of splitting the completion pill. */
 .card .more {
   flex-wrap: wrap;

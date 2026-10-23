@@ -1,4 +1,8 @@
-# Guías de novelas
+# Guías de lectura
+
+- En todas las guías, el título del libro es el encabezado grande, con la tipografía y el acento naranja subrayado del sitio. «Guía y resumen» y el autor aparecen debajo en tamaño secundario.
+
+## Novelas
 
 - El inicio usa un solo recuadro «Resumen y guía de lectura», con la introducción y «Antes de leer».
 - El recorrido comienza con «El libro de un vistazo», seguido de personajes y después los capítulos o bloques de la historia. La navegación Anterior/Siguiente sigue ese mismo orden.
