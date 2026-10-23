@@ -417,6 +417,9 @@ footer{font-size:.8rem;padding:20px 0 25px}
 .latest-cover{position:relative;display:block;z-index:1;transform:rotate(-5deg);animation:latest-float 6.5s cubic-bezier(.45,0,.55,1) infinite;filter:drop-shadow(7px 11px 7px #34201455);border-radius:3px}
 .latest-cover svg{display:block;width:100%;height:auto;border-radius:3px}
 .latest-cover::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:3px;background:linear-gradient(90deg,#160d09a6 0%,#c5a17d60 2%,#1c100b70 4%,transparent 6%,#fff1d80a 85%,#160d0938 100%);box-shadow:inset 0 0 2px 1px #e2c09866}
+.latest-cover.has-texture{aspect-ratio:2/3}
+.latest-cover.has-texture::after{display:none}
+.latest-cover.has-texture img{position:absolute;display:block;width:107%;height:112%;max-width:none;left:-3.5%;top:-4.3%;object-fit:fill}
 .latest-cover:focus-visible,.latest-link:focus-visible{outline:2px solid var(--terra);outline-offset:7px}
 .latest-wash{position:absolute;left:8%;top:23%;width:40%;height:56%;z-index:-1;background:radial-gradient(ellipse at 67% 40%,#d8875b55 0 40%,#cc713a22 60%,transparent 70%);border-radius:43% 57% 51% 49%;transform:rotate(-15deg)}
 .latest-note{position:absolute;left:0;bottom:21px;width:42%;height:42%;z-index:-1;background:#e9d7b9;color:#96755266;font:italic 14px/1.8 var(--f-hand);padding:12px;overflow:hidden;transform:rotate(-15deg);box-shadow:0 2px 5px #654a2720;clip-path:polygon(0 2%,12% 0,28% 3%,45% 0,69% 2%,86% 0,100% 4%,98% 30%,100% 55%,98% 81%,100% 100%,70% 98%,50% 100%,29% 98%,2% 100%)}
@@ -1026,7 +1029,10 @@ function renderMinis(){
   const b=LIVE[LIVE.length-1];
   if(!b)return;
   const cover=document.getElementById('latest-cover');
-  cover.innerHTML=coverSVG(b);cover.href=b.file;
+  const texturedCover=b.id==='eus';
+  cover.classList.toggle('has-texture',texturedCover);
+  cover.innerHTML=texturedCover?'<img src="assets/covers/el-ultimo-secreto-textura.png" width="667" height="1000" alt="El último secreto, de Dan Brown: portada café de tela envejecida con brújula dorada" fetchpriority="high">':coverSVG(b);
+  cover.href=b.file;
   cover.setAttribute('aria-label','Abrir la nueva guía de '+b.title);
   document.getElementById('latest-title').textContent=b.title;
   document.getElementById('latest-author').textContent=b.author;
