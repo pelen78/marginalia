@@ -527,12 +527,8 @@ dialog{border-radius:16px}
 
 <style id="jdm-extra">
 /* La biblioteca de la medianoche: piezas propias de la novela, con el estilo de Marginalia */
-.note-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:4px auto 28px}
-.note-grid .guide-note{max-width:none;margin:0;text-align:left}
-.note-grid .guide-note.spoil{background:var(--c-yellow)}
-.note-grid .guide-note.warn{background:var(--c-rose)}
-.note-grid .guide-note a{color:var(--accent)}
-@media (max-width:900px){.note-grid{grid-template-columns:1fr}}
+.guide-note .notice-label{font-family:var(--f-body);font-size:inherit;font-weight:600}
+.guide-note a,.reading-card-hint a{color:var(--accent);text-underline-offset:3px}
 .group-intro{margin:-6px 0 18px 50px;color:var(--muted);font-style:italic;font-weight:300;max-width:72ch}
 .people-clusters{display:grid;gap:28px;margin-top:8px}
 .people-cluster{padding-top:18px;border-top:1px dashed var(--line)}
@@ -572,21 +568,17 @@ dialog{border-radius:16px}
   </div>
   </header>
 
-  <div class="note-grid">
-    <aside class="guide-note "><strong>Cómo está organizada esta guía</strong><p>La novela está formada por muchos capítulos breves. Primero explicamos las reglas de la Biblioteca y ubicamos a las personas clave; después recorremos los hechos en bloques de lectura creados por Marginalia. Los nombres de estos bloques son editoriales y no sustituyen los capítulos originales. Esta guía no es el libro ni lo reemplaza, y no tiene relación con el autor ni con la editorial.</p></aside>
-    <aside class="guide-note spoil"><strong>Aviso de spoilers</strong><p>Las secciones 1 y 2 sirven para ubicar el mundo de la novela y a sus personajes principales. Desde la sección 3 se cuentan los hechos principales de la historia. Las revelaciones decisivas y el desenlace están separados en <a href="#spoilers">El final explicado</a> y solo aparecen si tú decides mostrarlos.</p></aside>
-    <aside class="guide-note warn"><strong>Advertencia de contenido</strong><p>La novela aborda depresión, ideación suicida, un intento de suicidio, duelo, muerte, autolesión, consumo problemático y ansiedad. Los resúmenes evitan detalles innecesarios y presentan estos temas como parte de la historia, no como consejo clínico.</p></aside>
-  </div>
+  <aside class="guide-note" aria-label="Acerca de esta guía"><strong>Resumen y guía de lectura</strong><p>Primero conoce las reglas de la Biblioteca y a los personajes; después recorre la historia en bloques de lectura con resúmenes sencillos e ideas clave. Los bloques y las preguntas son de Marginalia y no sustituyen los capítulos originales. Esta guía es independiente y no reemplaza la obra.</p><p><strong class="notice-label">Antes de leer:</strong> se cuentan hechos de la trama; las revelaciones del cierre están ocultas en <a href="#spoilers">El final explicado</a>. La novela aborda depresión, ideación suicida, un intento de suicidio, duelo, muerte, autolesión, consumo problemático y ansiedad. Los resúmenes evitan detalles innecesarios.</p></aside>
 
   <div class="bar" aria-live="polite">
-    <span id="progress-text">0 de 30 secciones exploradas</span>
-    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
+    <span id="progress-text">0 de 38 secciones exploradas</span>
+    <div class="track" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="38" aria-valuenow="0" id="track"><div class="fill" id="fill"></div></div>
     <button class="chip" id="reset" type="button">Reiniciar</button>
   </div>
 
   <div class="map" id="map">
     <div class="group">
-      <h2 class="g-title"><span class="g-n">1</span>Antes de entrar a la Biblioteca</h2>
+      <h2 class="g-title"><span class="g-n">1</span>El libro de un vistazo</h2>
       <p class="group-intro">Tres ideas necesarias para que el resto de la guía se entienda sin haber leído la novela.</p>
       <p class="reading-card-hint">Abre una tarjeta para leer la explicación completa y su pregunta de reflexión.</p>
       <div class="g-grid" id="g-1">
@@ -599,7 +591,7 @@ dialog{border-radius:16px}
     </div>
     <div class="group">
       <h2 class="g-title"><span class="g-n">2</span>Personajes que sostienen la historia</h2>
-      <p class="group-intro">No es un reparto completo. Son las personas que explican las decisiones, arrepentimientos y vínculos que Nora vuelve a mirar durante su recorrido.</p>
+      <p class="group-intro">Aquí encontrarás a los personajes mencionados en el recorrido, sus nombres alternativos y su relación con Nora. También se incluyen los animales que forman parte de su vida.</p>
       <div class="people-clusters">
         <div class="people-cluster">
           <div class="cluster-head"><div class="cluster-label">En el centro</div><p>La mujer que busca otra manera de vivir y la figura que la guía.</p></div>
@@ -610,8 +602,12 @@ dialog{border-radius:16px}
           <div class="g-grid" id="g-2b"></div>
         </div>
         <div class="people-cluster">
-          <div class="cluster-head"><div class="cluster-label">Quien amplía las reglas</div><p>Una persona que demuestra que la experiencia de Nora no es necesariamente única.</p></div>
+          <div class="cluster-head"><div class="cluster-label">Otras experiencias entre vidas</div><p>Hugo y la figura que lo orienta en su propio espacio entre vidas.</p></div>
           <div class="g-grid" id="g-2c"></div>
+        </div>
+        <div class="people-cluster">
+          <div class="cluster-head"><div class="cluster-label">Los vínculos cotidianos</div><p>Vecinos, alumnos y familia: quién es quién en la vida original y en las vidas posibles.</p></div>
+          <div class="g-grid" id="g-2d"></div>
         </div>
       </div>
     </div>
@@ -722,11 +718,124 @@ const DATA=[
 {id:'elm',g:'2a',c:'green',ico:'book',eyebrow:'Guía',title:'Señora Elm · la bibliotecaria que conoce las reglas',text:'Louise Elm fue la bibliotecaria del instituto de Nora y una de las pocas adultas con las que ella se sintió realmente comprendida. En la Biblioteca de la Medianoche aparece como la persona que la guía entre los libros.',pts:['En la adolescencia jugaba al ajedrez con Nora y la acompañó cuando recibió la noticia de la muerte de su padre.','La guía de la Biblioteca tiene la apariencia de aquella bibliotecaria. Conviene distinguir a esta figura del espacio fantástico de la señora Elm que existe en la vida cotidiana de Nora.','Explica las reglas y ayuda a Nora a cuestionar sus conclusiones, pero no puede elegir una vida por ella.'],q:'¿Por qué la mente de Nora podría elegir precisamente a esta persona como guía?',pages:'Presentación pp. 6–7 y 30–43; presencia transversal'},
 
 {id:'joe',g:'2b',c:'blue',ico:'people',eyebrow:'Familia',title:'Joe Seed · hermano, música y una herida compartida',text:'Joe es el hermano mayor de Nora. De jóvenes, Nora, Joe y Ravi, amigo de Joe, tocaron juntos en un grupo llamado Los Laberintos. En la vida raíz, los hermanos están distanciados.',pts:['Nora cree que abandonar el grupo dañó el futuro de Joe.','En distintas vidas, la relación entre ambos cambia según las decisiones de Nora y las de él.','Joe representa una de las culpas más fuertes de Nora: creer que su propia vida arruinó la de alguien que ama.'],q:'¿Cuánto de la vida de otra persona podemos realmente atribuirnos como responsabilidad propia?',pages:'Introducción en pp. 14–19; desarrollo a lo largo de la novela'},
+{
+  "id": "ravi",
+  "g": "2b",
+  "c": "mint",
+  "ico": "name",
+  "eyebrow": "Personaje · quién es",
+  "title": "Ravi · amigo de Joe y compañero de banda",
+  "text": "Ravi es amigo de Joe y toca con él y con Nora en Los Laberintos, el grupo que formaron de jóvenes.",
+  "pts": [
+    "Pertenece al entorno musical que comparten los hermanos Seed.",
+    "Su nombre ayuda a ubicar la banda que Nora recuerda al pensar en el camino de la música."
+  ],
+  "q": "¿Qué cambia cuando un sueño personal también es un proyecto compartido?"
+},
 {id:'dan',g:'2b',c:'rose',ico:'door',eyebrow:'Relación pasada',title:'Dan Lord · el futuro que casi fue matrimonio',text:'Dan es el ex prometido de Nora. Ella canceló la boda poco antes de celebrarla. Él soñaba con abandonar la ciudad y dirigir un pub en el campo, un proyecto que durante un tiempo Nora trató de hacer suyo.',pts:['Al inicio, Nora interpreta haberlo dejado como una de sus grandes equivocaciones.','La primera vida alternativa importante le permite comprobar cómo habría sido casarse con él.','Dan ayuda a distinguir entre amar a una persona y adoptar el sueño que esa persona tenía para ti.'],q:'¿Puede una decisión dolorosa seguir siendo la decisión correcta?',pages:'Presentación pp. 14–16; vida alternativa pp. 39–58'},
 {id:'izzy',g:'2b',c:'peach',ico:'people',eyebrow:'Amistad',title:'Izzy · la amiga y la vida en Australia',text:'Isabel “Izzy” Hirsh fue la mejor amiga de Nora. Las dos planearon mudarse juntas a Australia, pero Nora se echó atrás y su amistad se fue enfriando con la distancia.',pts:['Nora convierte no haber ido a Australia en otro de sus grandes arrepentimientos.','Una vida alternativa le permite comprobar qué habría pasado si hubiera seguido ese plan.','Izzy representa una pregunta recurrente: si acompañar el sueño de alguien es lo mismo que encontrar el propio.'],q:'¿Un camino puede ser bueno para una persona y no serlo para la otra que la acompaña?',pages:'Presentación pp. 21–25; vida australiana pp. 67–79'},
 {id:'ash',g:'2b',c:'green',ico:'people',eyebrow:'Posibilidad cercana',title:'Ash · una puerta que Nora nunca abrió',text:'Ash es un cirujano que Nora conoció como cliente de la tienda de música. Años antes la invitó a tomar un café y ella rechazó la invitación porque entonces estaba con Dan. Al inicio de la novela, Ash reaparece para darle una noticia sobre su gato.',pts:['Su presencia parece pequeña comparada con los grandes sueños de Nora.','Con el tiempo, Nora recuerda sobre todo su amabilidad cotidiana y la forma en que estuvo presente sin exigir nada.','La novela utiliza esa posibilidad modesta para contrastarla con vidas construidas alrededor de grandes logros.'],q:'¿Por qué una decisión aparentemente pequeña puede terminar abriendo una rama enorme?',pages:'Presentación pp. 9–11; reaparición y desarrollo pp. 182 y 198–235'},
 
 {id:'hugo',g:'2c',c:'yellow',ico:'scale',eyebrow:'Otro viajero',title:'Hugo Lefèvre · una pista de que Nora no está sola',text:'Hugo es un científico francés a quien Nora conoce en una vida donde trabaja como investigadora de glaciares en Svalbard, un archipiélago noruego del Ártico. Desde su primera conversación parece notar que Nora no conoce esa vida tan bien como debería.',pts:['Hugo observa las contradicciones de Nora y termina siendo importante para entender mejor las reglas de lo que está ocurriendo.','Su presencia amplía la pregunta central: la experiencia de Nora podría no ser tan única como ella imagina.','Lo que Hugo sabe se descubre dentro del recorrido de la historia, en la sección 3.'],q:'¿Qué cambia cuando encuentras a alguien que parece reconocer algo que los demás no pueden ver?',pages:'Hugo · pp. 112–140'},
+
+{
+  "id": "philippe",
+  "g": "2c",
+  "c": "mint",
+  "ico": "book",
+  "eyebrow": "Personaje · quién es",
+  "title": "Philippe · el tío de Hugo",
+  "text": "Philippe es el tío de Hugo y una figura vinculada a sus recuerdos de infancia. Aparece cuando Hugo explica cómo son sus propias experiencias entre vidas.",
+  "pts": [
+    "Para Hugo, el lugar de paso tiene la forma de un videoclub.",
+    "La figura de Philippe lo orienta allí, en un papel comparable al que tiene la señora Elm para Nora."
+  ],
+  "q": "¿Por qué un recuerdo familiar puede convertirse en una forma de orientación?"
+},
+{
+  "id": "voltio",
+  "g": "2d",
+  "c": "mint",
+  "ico": "name",
+  "eyebrow": "Personaje · quién es",
+  "title": "Voltaire / Voltio · el gato de Nora",
+  "text": "Voltaire es el gato de Nora en su vida original. Ella lo llama Voltio: ambos nombres se refieren al mismo animal.",
+  "pts": [
+    "Es parte de su compañía cotidiana y de los cuidados que ofrece.",
+    "Su historia ayuda a entender la culpa de Nora y la diferencia entre lo que supone y lo que realmente sabe."
+  ],
+  "q": "¿Cómo puede cambiar una culpa cuando conocemos mejor lo ocurrido?"
+},
+{
+  "id": "banerjee",
+  "g": "2d",
+  "c": "mint",
+  "ico": "people",
+  "eyebrow": "Personaje · quién es",
+  "title": "Señor Banerjee · el vecino de Nora",
+  "text": "El señor Banerjee es un vecino anciano de Nora en Bedford. Ella lo ayuda con tareas cotidianas, como llevarle medicamentos y atender sus compras o plantas.",
+  "pts": [
+    "Su relación muestra una forma de cuidado que Nora suele considerar poco importante.",
+    "Conviene recordarlo al comparar cómo cambian las vidas de quienes la rodean."
+  ],
+  "q": "¿Qué valor tienen las ayudas pequeñas que se repiten todos los días?"
+},
+{
+  "id": "leo",
+  "g": "2d",
+  "c": "mint",
+  "ico": "name",
+  "eyebrow": "Personaje · quién es",
+  "title": "Leo · el alumno de piano",
+  "text": "Leo es el muchacho al que Nora enseña piano en su vida original. Su vínculo con ella nace de esas clases de música.",
+  "pts": [
+    "Permite ver que enseñar puede significar mucho más que transmitir una habilidad.",
+    "Su situación cambia entre las vidas que recorre Nora; el resumen explica esas diferencias."
+  ],
+  "q": "¿Qué puede aportar un maestro más allá de lo que enseña?"
+},
+{
+  "id": "doreen",
+  "g": "2d",
+  "c": "mint",
+  "ico": "people",
+  "eyebrow": "Personaje · quién es",
+  "title": "Doreen · la madre de Leo",
+  "text": "Doreen es la madre de Leo, el alumno de piano de Nora. Su nombre aparece al hablar de la continuidad de esas clases.",
+  "pts": [
+    "La relación con Nora está vinculada a la enseñanza musical de su hijo.",
+    "Es una figura del entorno cotidiano de Nora, no otra viajera entre vidas."
+  ],
+  "q": "¿Cómo se sostienen los vínculos a través de compromisos cotidianos?"
+},
+{
+  "id": "molly",
+  "g": "2d",
+  "c": "peach",
+  "ico": "people",
+  "eyebrow": "Personaje · quién es",
+  "title": "Molly · la hija en una vida posible",
+  "text": "Molly es la hija pequeña de Nora y Ash en una de las vidas alternativas que Nora visita. No pertenece a su vida original en Bedford.",
+  "pts": [
+    "Forma parte de la vida familiar que encuentra en Cambridge.",
+    "Su presencia hace más concreta la pregunta sobre pertenecer a una historia que Nora no recuerda haber construido."
+  ],
+  "q": "¿Qué diferencia hay entre querer a una familia y compartir su historia?"
+},
+{
+  "id": "platon",
+  "g": "2d",
+  "c": "mint",
+  "ico": "name",
+  "eyebrow": "Personaje · quién es",
+  "title": "Platón · el perro de la familia",
+  "text": "Platón es el perro que vive con Nora, Ash y Molly en esa vida alternativa de Cambridge.",
+  "pts": [
+    "Es un animal distinto de Voltaire o Voltio, el gato de la vida original.",
+    "Su nombre aparece como parte del hogar que Nora descubre al entrar en esa rama de su vida."
+  ],
+  "q": "¿Qué detalles cotidianos hacen que un lugar se sienta como un hogar?"
+},
 
 {id:'quiebre',g:3,c:'rose',ico:'door',eyebrow:'Bloque 1',title:'Cuando Nora siente que ya no queda ninguna puerta',text:'En su vida raíz, Nora acumula varias pérdidas y rupturas en muy poco tiempo. Muere su gato Voltaire, a quien llama Voltio, pierde su trabajo, se siente distante de Joe e Izzy y concluye que nadie la necesita.',pts:['También carga con el duelo por sus padres y con antiguos ataques de ansiedad y depresión.','Su vecino anciano, el señor Banerjee, deja de necesitar que ella le lleve medicamentos, algo pequeño que Nora interpreta como otra prueba de que sobra.','Desde ese estado de desesperanza, Nora intenta quitarse la vida.'],q:'¿Qué pasa cuando una persona convierte muchos hechos distintos en una única conclusión sobre su propio valor?',pages:'Vida raíz antes de la Biblioteca · pp. 9–27'},
 {id:'biblioteca',g:3,c:'blue',ico:'book',eyebrow:'Bloque 2',title:'00:00:00 · la Biblioteca de la Medianoche',text:'Nora despierta en un lugar que no pertenece por completo ni a la vida ni a la muerte. Allí encuentra a la señora Elm y aprende que cada libro verde contiene una vida que habría podido vivir.',pts:['El tiempo permanece detenido en medianoche mientras la vida raíz siga en suspensión.','Nora puede elegir una decisión que lamenta y entrar en la rama que nace de haber actuado de otro modo.','Si una vida alternativa la decepciona de verdad, regresa a la Biblioteca y puede probar otra.'],q:'¿Ser capaz de probar todas tus alternativas haría más fácil elegir o más difícil dejar de comparar?',pages:'Llegada y reglas · pp. 28–43'},
