@@ -64,3 +64,29 @@
   #dlg .dlg-foot { padding-inline: 16px; gap: 10px; }
   #dlg .dlg-foot .btn { padding: 11px 12px; font-size: .8rem; white-space: nowrap; }
 }
+
+/* Tarjetas de capítulo: <article> con un botón real ("Explorar"). Toda la tarjeta sigue abriendo el diálogo. */
+.map .card { cursor: pointer; }
+.card .card-lead {
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+.card .card-open {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.card .card-open:focus-visible { outline: 2px solid var(--edge, var(--accent)); outline-offset: 4px; }
+.card:has(.card-open:focus-visible) { box-shadow: var(--shadow); }

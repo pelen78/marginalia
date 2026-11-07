@@ -377,7 +377,7 @@ dialog{border-radius:16px}
 <link rel="stylesheet" href="feedback.css">
 <script src="feedback.js" defer></script>
 <script src="spoiler-gate.js" data-key="medianoche" defer></script>
-<link rel="stylesheet" href="reading-cards.css?v=20261023-titles">
+<link rel="stylesheet" href="reading-cards.css?v=20261107-cards">
 
 <style id="mg-pdf-export">
 /* Marginalia · Guardar respuestas como PDF */
@@ -869,15 +869,16 @@ const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.
 /* Mapa */
 let done=new Set(store.get('medianoche-done-v1',[]));
 DATA.forEach((d,i)=>{
-  const b=document.createElement('button');
-  b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
+  const b=document.createElement('article');
+  b.className='card';b.id='card-'+d.id;b.dataset.i=i;
   b.style.setProperty('--tint',`var(--c-${d.c})`);b.style.setProperty('--edge',`var(--e-${d.c})`);
   const shown=d.pts.slice(0,2);
   b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
-    ${d.text?`<p><b>${d.text}</b></p>`:''}
+    ${d.text?`<p class="card-lead">${d.text}</p>`:''}
     <ul>${shown.map(p=>`<li>${p}</li>`).join('')}</ul>
-    <div class="more"><span>${d.pts.length>2?`+${d.pts.length-2} idea · `:''}Explorar →</span><span class="done-badge">✓ Explorado</span></div>`;
+    <div class="more"><button type="button" class="card-open" aria-haspopup="dialog">${d.pts.length>2?`+${d.pts.length-2} ${d.pts.length===3?'idea':'ideas'} · `:''}Explorar →</button><span class="done-badge">✓ Explorado</span></div>`;
   b.addEventListener('click',()=>openCard(i));
+  {const o=b.querySelector('.card-open');o.setAttribute('aria-label',o.textContent.replace(/^.*·\s*/,'').replace('→','').trim()+': '+b.querySelector('h3').textContent.trim());b.addEventListener('click',()=>o.focus({preventScroll:true}),true);}
   const g=document.getElementById('g-'+d.g);const q=g.querySelector('.quote');
   if(q)g.insertBefore(b,q);else g.appendChild(b);
 });

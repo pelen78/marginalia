@@ -1,6 +1,6 @@
 /* Marginalia · índice de la guía y botón "Continuar donde me quedé".
    Funciona con la estructura común de las guías:
-   .bar (progreso) · #map > .group > h2.g-title · button.card (.is-done al explorarla) · section.block[id]
+   .bar (progreso) · #map > .group > h2.g-title · .card[id^="card-"] (.is-done al explorarla) · section.block[id]
    No guarda nada propio: lee el progreso que la página ya guarda en las tarjetas.
    Para usarlo en otra guía basta con cargar <script src="guide-nav.js" defer></script>. */
 (() => {
@@ -24,7 +24,7 @@
     /* "Parte I · El cerebro emocional" → "El cerebro emocional"; "Principios fundamentales · Capítulos 1–3" → "Principios fundamentales". */
     const bits = full.split(' · ');
     const title = bits.length > 1 && /^(Parte|Cap[ií]tulos?)\b/i.test(bits[0]) ? bits.slice(1).join(' · ') : bits[0];
-    parts.push({ el: group, heading: h, n, title, full, cards: [...group.querySelectorAll('button.card')] });
+    parts.push({ el: group, heading: h, n, title, full, cards: [...group.querySelectorAll('.card[id^="card-"]')] });
   });
   document.querySelectorAll('section.block[id]').forEach(block => {
     const h = block.querySelector('h2');
@@ -33,7 +33,7 @@
   });
   if (parts.length < 3) return;
 
-  const allCards = () => [...map.querySelectorAll('button.card')];
+  const allCards = () => [...map.querySelectorAll('.card[id^="card-"]')];
   const nextCard = () => allCards().find(c => !c.classList.contains('is-done') && c.offsetParent !== null);
   const cardTitle = c => clean(c.querySelector('h3')?.textContent || '');
 

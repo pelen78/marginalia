@@ -536,7 +536,7 @@ dialog{border-radius:16px}
 }
 </style>
 
-<link rel="stylesheet" href="reading-cards.css?v=20261023-titles">
+<link rel="stylesheet" href="reading-cards.css?v=20261107-cards">
 <style>
 .book-chapter-count{font-family:var(--f-mono);font-size:.72rem!important;color:var(--muted);margin-top:auto!important;padding-top:12px}
 .chapter-toolbar{flex:0 0 auto;display:grid;gap:7px;padding:14px 26px;border-bottom:1px solid var(--line);background:var(--paper)}
@@ -3185,16 +3185,17 @@ const CHAPTER_DATA = window.MARGINALIA_BIBLE_CHAPTERS || {};
 const map = document.getElementById('map');
 let done = new Set(store.get('biblia-done-editorial-v2',[]));
 DATA.forEach((d,i)=>{
-  const b=document.createElement('button');
-  b.type='button';b.className='card';b.id='card-'+d.id;b.dataset.i=i;
+  const b=document.createElement('article');
+  b.className='card';b.id='card-'+d.id;b.dataset.i=i;
   b.style.setProperty('--tint',`var(--c-${d.c})`);b.style.setProperty('--edge',`var(--e-${d.c})`);
   const shown=[];
   b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
     ${d.text?`<p>${d.text}</p>`:''}
     ${CHAPTER_DATA[d.id]?`<p class="book-chapter-count">${CHAPTER_DATA[d.id].countLabel}</p>`:''}
     
-    <div class="more"><span>${d.kind==='book'?'Leer por capítulos':'Explorar'} →</span><span class="done-badge">✓ Explorado</span></div>`;
+    <div class="more"><button type="button" class="card-open" aria-haspopup="dialog">${d.kind==='book'?'Leer por capítulos':'Explorar'} →</button><span class="done-badge">✓ Explorado</span></div>`;
   b.addEventListener('click',()=>openCard(i));
+  {const o=b.querySelector('.card-open');o.setAttribute('aria-label',o.textContent.replace(/^.*·\s*/,'').replace('→','').trim()+': '+b.querySelector('h3').textContent.trim());b.addEventListener('click',()=>o.focus({preventScroll:true}),true);}
   const gEl=document.getElementById('g-'+d.g);
   gEl.appendChild(b);
 });
