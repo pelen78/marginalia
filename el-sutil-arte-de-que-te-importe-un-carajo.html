@@ -165,7 +165,7 @@ dialog::backdrop{background:rgba(20,25,35,.45);backdrop-filter:blur(3px)}
 <style>
 /* Marginalia: diseño a juego con la biblioteca (solo estilo) */
 :root{
-  --bg:#f3ede2; --paper:#f9f5ee; --ink:#1e1a17; --muted:#7a6f63; --line:#dbd1c1;
+  --bg:#f3ede2; --paper:#f9f5ee; --ink:#1e1a17; --muted:#6b6156; --line:#dbd1c1;
   --sun:#efe4d3; --sun-2:#d9bf98; --accent:#c4552f; --blue:#23408e;
   --c-blue:#e5e5ea; --c-pink:#f3dfd4; --c-green:#e3e6d8; --c-peach:#f4e2d2; --c-lav:#ebe2e4; --c-yellow:#f3e9d3; --c-mint:#e0e6dc; --c-rose:#f2ddd6;
   --e-blue:#23408e; --e-pink:#c4552f; --e-green:#56704a; --e-peach:#b8572c; --e-lav:#6b4e7a; --e-yellow:#8f6a24; --e-mint:#3f6f5f; --e-rose:#a8382f;
@@ -502,6 +502,8 @@ dialog{border-radius:16px}
 </style>
 <link rel="stylesheet" href="mobile-readability.css">
 <script id="seo-structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://mymarginalia.net/el-sutil-arte-de-que-te-importe-un-carajo.html#webpage","url":"https://mymarginalia.net/el-sutil-arte-de-que-te-importe-un-carajo.html","name":"El sutil arte de que te importe un carajo: resumen y guía de lectura | MyMarginalia","description":"Resumen y guía de El sutil arte de que te importe un carajo, de Mark Manson. Explicaciones sencillas, ideas clave y preguntas para reflexionar durante tu lectura.","inLanguage":"es","isPartOf":{"@id":"https://mymarginalia.net/#website"},"breadcrumb":{"@id":"https://mymarginalia.net/el-sutil-arte-de-que-te-importe-un-carajo.html#breadcrumb"},"mainEntity":{"@type":"Article","headline":"Guía de lectura de El sutil arte de que te importe un carajo","description":"Resumen y guía de El sutil arte de que te importe un carajo, de Mark Manson. Explicaciones sencillas, ideas clave y preguntas para reflexionar durante tu lectura.","inLanguage":"es","publisher":{"@id":"https://mymarginalia.net/#organization"},"about":{"@type":"Book","name":"El sutil arte de que te importe un carajo","author":{"@type":"Person","name":"Mark Manson"}}}},{"@type":"BreadcrumbList","@id":"https://mymarginalia.net/el-sutil-arte-de-que-te-importe-un-carajo.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"MyMarginalia","item":"https://mymarginalia.net/"},{"@type":"ListItem","position":2,"name":"El sutil arte de que te importe un carajo","item":"https://mymarginalia.net/el-sutil-arte-de-que-te-importe-un-carajo.html"}]}]}</script>
+<link rel="stylesheet" href="legibility.css">
+<script src="guide-nav.js" defer></script>
 </head>
 <body>
 <nav class="mg-nav" aria-label="Biblioteca">
@@ -854,7 +856,7 @@ DATA.forEach((d,i)=>{
   b.innerHTML=`<div class="top"><div><div class="eyebrow">${d.eyebrow}</div><h3>${d.title}</h3></div><div class="ico">${I[d.ico]}</div></div>
     ${d.text?`<p><b>${d.text}</b></p>`:''}
     <ul>${shown.map(p=>`<li>${p}</li>`).join('')}</ul>
-    <div class="more"><span>${d.pts.length>2?`+${d.pts.length-2} ideas · `:''}Explorar →</span><span class="done-badge">✓ Explorado</span></div>`;
+    <div class="more"><span>${d.pts.length>2?`+${d.pts.length-2} ${d.pts.length===3?'idea':'ideas'} · `:''}Explorar →</span><span class="done-badge">✓ Explorado</span></div>`;
   b.addEventListener('click',()=>openCard(i));
   const gEl=document.getElementById('g-'+d.g);
   const quote=gEl.querySelector('.quote');

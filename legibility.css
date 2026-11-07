@@ -1,0 +1,56 @@
+/* Marginalia · legibilidad mínima en todas las páginas.
+   Se carga al final del <head> para que gane sobre los estilos de cada página.
+   Piso: 12px (.75rem) para etiquetas en mono, 13px (.8125rem) para botones.
+   Contraste: texto secundario y texto chico en terracota con al menos 4.5:1. */
+
+/* ---------- Color ---------- */
+:root { --terra-ink: #a9441f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --terra-ink: var(--terra); } }
+:root[data-theme="dark"] { --terra-ink: var(--terra); }
+
+/* El gris secundario (--muted) de modo claro pasó de #7a6f63 a #6b6156 en el :root de cada página. */
+
+.book-category,
+#nextQ,
+.q-src a,
+.mg-menu li a[aria-current="page"] { color: var(--terra-ink); }
+
+/* Etiqueta "Nuevo en la biblioteca": fondo un poco más oscuro en claro, texto oscuro en oscuro. */
+.latest-label { background: #b04a25; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .latest-label { background: var(--terra); color: var(--accent-ink); } }
+:root[data-theme="dark"] .latest-label { background: var(--terra); color: var(--accent-ink); }
+
+/* ---------- Biblioteca (index) ---------- */
+.brand small { font-size: .75rem; letter-spacing: .1em; max-width: none; white-space: nowrap; }
+@media (max-width: 860px) { .brand small { display: none; } }
+.eyebrow { font-size: .75rem; }
+.filters button { font-size: .75rem; }
+.book-category { font-size: .75rem; letter-spacing: .06em; }
+.book .btn { font-size: .75rem; }
+footer .again,
+.site-credits .credits-copyright,
+footer .credits-copyright { font-size: .75rem; }
+
+/* Carrusel de novedades */
+.latest-label { font-size: .75rem; }
+.latest-info .eyebrow { font-size: .75rem; letter-spacing: .1em; }
+.latest-tag { font-size: .75rem; }
+.latest-hero .latest-info .btn { font-size: .75rem; letter-spacing: .04em; padding-inline: 14px; }
+
+/* ---------- Guías ---------- */
+.mg-menu summary { font-size: .8125rem; }
+.author { font-size: .75rem; }
+.chip { font-size: .75rem; }
+.quote .by { font-size: .75rem; }
+.card .eyebrow { font-size: .75rem; }
+.done-badge { font-size: .75rem; }
+.mg-clear-field { font-size: .75rem; }
+.mg-pager .home { font-size: .75rem; }
+.chapter-kicker,
+.book-label,
+.seg button { font-size: .75rem; }
+.book-chapter-count { font-size: .75rem !important; }
+.act .tag,
+.meter span { font-size: .75rem; }
+dialog#mg-spoiler-gate .sg-tag { font-size: .75rem; }
+dialog#mg-spoiler-gate .sg-main { font-size: .8125rem; }

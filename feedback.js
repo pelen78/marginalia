@@ -3,7 +3,8 @@
   const trigger = document.getElementById('mg-feedback-open');
   if (!trigger) return;
   const isSuggestion = trigger.dataset.feedbackKind === 'suggestion';
-  const book = isSuggestion ? '' : document.querySelector('.hero cite').textContent.trim();
+  const titleEl = document.querySelector('.hero cite, h1.book-title, h1');
+  const book = isSuggestion ? '' : (titleEl ? titleEl.textContent : document.title.split('|')[0]).replace(/\s+/g, ' ').trim();
   const sendLabel = isSuggestion ? 'Enviar sugerencia' : 'Enviar comentario';
   const dialog = document.createElement('dialog');
   dialog.id = 'mg-feedback-dialog';

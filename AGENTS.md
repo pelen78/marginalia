@@ -2,6 +2,9 @@
 
 - En todas las guías, el título del libro es el encabezado grande, con la tipografía y el acento naranja subrayado del sitio. «Guía y resumen» y el autor aparecen debajo en tamaño secundario.
 
+- Todas las páginas cargan `legibility.css` como última hoja de estilo del `<head>`: ahí vive el piso de 12px para etiquetas y el terracota oscuro (`--terra-ink`) para texto chico. Al crear una guía nueva, conservar ese `<link>`.
+- Todas las guías (menos La Biblia e Imitación de Cristo, que tienen otra estructura) cargan `<script src="guide-nav.js" defer></script>` justo después de `legibility.css`: agrega el índice y el botón «Continuar donde me quedé». Al crear una guía nueva, incluir esa línea. Funciona solo con la estructura común (`.bar`, `#map > .group > h2.g-title`, `button.card`, `section.block[id]`).
+
 ## Novelas
 
 - El inicio usa un solo recuadro «Resumen y guía de lectura», con la introducción y «Antes de leer».
