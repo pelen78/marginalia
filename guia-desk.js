@@ -121,6 +121,15 @@
       datos: [['Género', 'Relaciones y comunicación'], ['Publicación', '1936'], ['Autor', 'Dale Carnegie'], ['Idea clave', 'Escuchar y valorar al otro'], ['Estructura', '4 partes']],
       prev: { author: 'BJ Fogg', color: '#dce2ce' },
       next: { author: 'Marian Rojas Estapé', color: '#f1e3cf' }
+    },
+    'tiny-habits': {
+      ficha: 5, cat: 'Hábitos',
+      img: 'assets/novedades/tiny-habits.jpg', cap: 'fig. 1: una pieza pequeña mueve todo', why: '¿y si empiezo con poco?',
+      lede: 'BJ Fogg, investigador de la Universidad de Stanford, propone empezar con acciones tan pequeñas que no necesiten fuerza de voluntad. Las unes a algo que ya haces todos los días y celebras cada logro para que la emoción positiva convierta esa acción en un hábito que crece solo.',
+      marks: ['celebras cada logro'],
+      datos: [['Género', 'Desarrollo personal'], ['Publicación', '2019'], ['Autor', 'BJ Fogg'], ['Idea clave', 'Empieza pequeño y celebra'], ['Estructura', '8 capítulos']],
+      prev: { author: 'James Clear', color: '#e6ddcd' },
+      next: { author: 'Dale Carnegie', color: '#2f3b4a' }
     }
   };
 
