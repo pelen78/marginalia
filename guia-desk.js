@@ -130,6 +130,15 @@
       datos: [['Género', 'Desarrollo personal'], ['Publicación', '2019'], ['Autor', 'BJ Fogg'], ['Idea clave', 'Empieza pequeño y celebra'], ['Estructura', '8 capítulos']],
       prev: { author: 'James Clear', color: '#e6ddcd' },
       next: { author: 'Dale Carnegie', color: '#2f3b4a' }
+    },
+    'habitos-atomicos': {
+      ficha: 4, cat: 'Hábitos',
+      img: 'assets/novedades/habitos-atomicos.jpg', cap: 'fig. 1: cubo a cubo', why: '¿1% mejor cada día?',
+      lede: 'James Clear explica que los grandes cambios no llegan de golpe, sino de pequeñas mejoras que se acumulan día tras día. Propone cuatro leyes para crear buenos hábitos: hacerlos obvios, atractivos, sencillos y satisfactorios, y aplicarlas al revés para romper los malos. Lo importante no es la meta, sino el sistema y la persona que quieres ser.',
+      marks: ['cuatro leyes'],
+      datos: [['Género', 'Desarrollo personal'], ['Publicación', '2018'], ['Autor', 'James Clear'], ['Idea clave', 'Sistemas, no metas'], ['Estructura', '4 leyes · 20 capítulos']],
+      prev: { author: 'Eckhart Tolle', color: '#e9e1d3' },
+      next: { author: 'BJ Fogg', color: '#dce2ce' }
     }
   };
 
