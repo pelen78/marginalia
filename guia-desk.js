@@ -58,6 +58,15 @@
       datos: [['Género', 'Psicología'], ['Publicación', '2021'], ['Autor', 'Adam Grant'], ['Idea clave', 'Pensar como científico'], ['Estructura', '11 capítulos']],
       prev: { author: 'Mark Manson', color: '#b85632' },
       next: { author: 'Mel Robbins', color: '#514454' }
+    },
+    'la-teoria-let-them': {
+      ficha: 13, cat: 'Relaciones',
+      img: 'assets/novedades/la-teoria-let-them.jpg', cap: 'fig. 1: soltar y elegir', why: '¿y si los dejo?',
+      lede: 'Mel Robbins propone dos frases para recuperar la energía que gastamos en lo que no controlamos. Con “déjalos” aceptas que los demás piensen, sientan y hagan lo que quieran; con “déjame” decides cómo respondes y qué haces con tu propia vida, tus límites y tus relaciones.',
+      marks: ['“déjalos”', '“déjame”'],
+      datos: [['Género', 'Desarrollo personal'], ['Publicación', '2024'], ['Autora', 'Mel Robbins'], ['Idea clave', 'Déjalos + Déjame'], ['Estructura', '20 capítulos']],
+      prev: { author: 'Adam Grant', color: '#2e4a5c' },
+      next: { author: 'Dot Hutchison', color: '#1d463d' }
     }
   };
 
