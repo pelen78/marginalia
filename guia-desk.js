@@ -112,6 +112,15 @@
       datos: [['Género', 'Psicología y bienestar'], ['Publicación', '2018'], ['Autora', 'Marian Rojas Estapé'], ['Idea clave', 'Mente y cuerpo conectados'], ['Estructura', '9 capítulos']],
       prev: { author: 'Dale Carnegie', color: '#2f3b4a' },
       next: { author: 'Wayne W. Dyer', color: '#ddd3c5' }
+    },
+    'como-ganar-amigos': {
+      ficha: 6, cat: 'Relaciones',
+      img: 'assets/novedades/como-ganar-amigos.jpg', cap: 'fig. 1: la plaza de los encuentros', why: '¿y si escucho más?',
+      lede: 'Dale Carnegie reúne principios sencillos para llevarse bien con la gente: no criticar, mostrar aprecio sincero, interesarse de verdad por los demás, escuchar, recordar los nombres y convencer sin herir ni discutir. Su idea central es que las personas responden mejor cuando se sienten valoradas.',
+      marks: ['interesarse de verdad por los demás'],
+      datos: [['Género', 'Relaciones y comunicación'], ['Publicación', '1936'], ['Autor', 'Dale Carnegie'], ['Idea clave', 'Escuchar y valorar al otro'], ['Estructura', '4 partes']],
+      prev: { author: 'BJ Fogg', color: '#dce2ce' },
+      next: { author: 'Marian Rojas Estapé', color: '#f1e3cf' }
     }
   };
 
