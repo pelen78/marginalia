@@ -26,6 +26,7 @@
       marks: ['Maya', 'Victor Hanoverian', 'Brandon Eddison'],
       datos: [['Género', 'Thriller psicológico'], ['Publicación', '2016'], ['Serie', 'El coleccionista, 1'], ['Voces', 'Maya · el FBI'], ['Estructura', 'Interrogatorio + recuerdos']],
       people: 5,
+      quote: false, // sin la tarjeta de "Pregunta de Marginalia" en computadora
       prev: { author: 'Mel Robbins', color: '#514454' },
       next: { author: 'Matt Haig', color: '#1f2a44' }
     }
@@ -187,7 +188,8 @@
 
     // Pregunta de Marginalia: la tarjeta oscura con respuesta
     const quote = map.querySelector('.quote');
-    if (quote) {
+    if (quote && G.quote === false) quote.hidden = true;
+    else if (quote) {
       const by = quote.querySelector('.by');
       if (by) quote.prepend(by);
       const ta = document.createElement('textarea');
