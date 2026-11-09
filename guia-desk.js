@@ -29,6 +29,16 @@
       quote: false, // sin la tarjeta de "Pregunta de Marginalia" en computadora
       prev: { author: 'Mel Robbins', color: '#514454' },
       next: { author: 'Matt Haig', color: '#1f2a44' }
+    },
+    'la-biblioteca-de-la-medianoche': {
+      ficha: 15, cat: 'Novelas',
+      img: 'assets/novedades/la-biblioteca-de-la-medianoche.jpg', cap: 'fig. 1: la Biblioteca a medianoche', why: '¿y si…?',
+      lede: 'Nora Seed tiene treinta y cinco años, vive en Bedford y siente que su vida está llena de errores. Una noche, entre la vida y la muerte, llega a una biblioteca infinita donde cada libro es otra vida que pudo vivir si hubiera elegido distinto. Con ayuda de la señora Elm puede probarlas y buscar la vida en la que quiere quedarse.',
+      marks: ['Nora Seed', 'señora Elm'],
+      datos: [['Género', 'Fantasía contemporánea'], ['Publicación', '2020'], ['Escenario', 'Bedford, Inglaterra'], ['Protagonista', 'Nora Seed'], ['Estructura', 'Vida raíz + vidas posibles']],
+      people: '2a',
+      prev: { author: 'Dot Hutchison', color: '#1d463d' },
+      next: { author: 'Dan Brown', color: '#57352f' }
     }
   };
 
@@ -60,9 +70,9 @@
       .filter(x => !(x.classList && (x.classList.contains('g-n') || x.classList.contains('dk-known'))))
       .map(x => x.textContent).join(''));
     const groups = [...map.querySelectorAll(':scope > .group')];
-    const peopleGrid = document.getElementById('g-' + G.people);
-    if (peopleGrid) peopleGrid.classList.add('dk-people');
-    const peopleGroup = peopleGrid?.closest('.group');
+    // Personajes: la sección que contiene la rejilla #g-<people> (puede tener varias rejillas por grupo)
+    const peopleGroup = document.getElementById('g-' + G.people)?.closest('.group');
+    if (peopleGroup) peopleGroup.querySelectorAll('.g-grid').forEach(x => x.classList.add('dk-people'));
 
     /* ---------- Datos que ya tiene la página ---------- */
     const title = clean(oldHero.querySelector('h1')?.textContent);
@@ -178,7 +188,7 @@
       if (!t.includes(' · ')) return;
       const [a, ...b] = t.split(' · ');
       const rest = b.join(' · ');
-      const isPerson = c.closest('#g-' + G.people);
+      const isPerson = peopleGroup && peopleGroup.contains(c);
       if (isPerson) {
         h3.innerHTML = `${esc(a)}<span class="dk-role"><span class="dk-sep"> · </span>${esc(rest)}</span>`;
       } else if (/^(Parte|Prólogo|Cap[ií]tulo)/i.test(a)) {
@@ -412,7 +422,7 @@
       });
       const known = $('dk-known');
       if (known) {
-        const pc = [...document.querySelectorAll(`#g-${G.people} .card[id^="card-"]`)];
+        const pc = peopleGroup ? [...peopleGroup.querySelectorAll('.card[id^="card-"]')] : [];
         known.textContent = `${pc.filter(c => c.classList.contains('is-done')).length}/${pc.length} conocidos`;
       }
     };
