@@ -49,6 +49,15 @@
       people: 7,
       prev: { author: 'Matt Haig', color: '#1f2a44' },
       next: { author: 'Alex Michaelides', color: '#d8cbb4' }
+    },
+    'piensalo-otra-vez': {
+      ficha: 12, cat: 'Psicología',
+      img: 'assets/novedades/piensalo-otra-vez.jpg', cap: 'fig. 1: de la duda a la idea', why: '¿y si me equivoco?',
+      lede: 'El psicólogo Adam Grant sostiene que, en un mundo que cambia tan rápido, saber repensar y desaprender importa tanto como saber pensar. Propone pensar como un científico: tratar nuestras opiniones como hipótesis, buscar lo que podría desmentirlas y rodearnos de personas que nos cuestionen.',
+      marks: ['pensar como un científico'],
+      datos: [['Género', 'Psicología'], ['Publicación', '2021'], ['Autor', 'Adam Grant'], ['Idea clave', 'Pensar como científico'], ['Estructura', '11 capítulos']],
+      prev: { author: 'Mark Manson', color: '#b85632' },
+      next: { author: 'Mel Robbins', color: '#514454' }
     }
   };
 
@@ -227,11 +236,14 @@
     }
 
     content.append(map);
+    // Los bloques que vienen después de las tarjetas (actividades, quiz, final explicado, notas), en su orden
+    const blocks = [...oldWrap.querySelectorAll(':scope > section.block[id]')];
+    blocks.forEach(b => content.append(b));
 
     /* ---------- El final explicado ---------- */
-    const spoil = $('spoilers'), sp = $('spoiler-body'), spb = $('spoiler-btn');
+    const q = sel => content.querySelector(sel);
+    const spoil = q('#spoilers'), sp = q('#spoiler-body'), spb = q('#spoiler-btn');
     if (spoil && sp && spb) {
-      content.append(spoil);
       const head = spoil.querySelector('.spoiler-head > div') || spoil.querySelector('.spoiler-head');
       head.insertAdjacentHTML('afterbegin', `<p class="dk-spoil-kick">${svg.lock}Contiene spoilers</p>`);
       const hold = document.createElement('button');
@@ -274,9 +286,17 @@
     }
 
     /* ---------- Mis notas de lectura ---------- */
-    const diario = $('diario'), field = $('novel-notes');
+    const diario = q('#diario'), field = q('#novel-notes');
+    if (diario && !field && $('mg-save-pdf')) {
+      // Guías de no ficción: sus preguntas de diario se quedan como están; solo se suma el botón de PDF
+      const pdf = document.createElement('button');
+      pdf.type = 'button'; pdf.className = 'dk-pill dk-pdf-solo';
+      pdf.title = 'Se abrirá la ventana de impresión. Elige Guardar como PDF.';
+      pdf.innerHTML = `${svg.pdf}Guardar mis notas en PDF`;
+      pdf.addEventListener('click', () => $('mg-save-pdf').click());
+      (diario.querySelector('#saved-hint') || diario.querySelector('.journal') || diario.lastElementChild).after(pdf);
+    }
     if (diario && field) {
-      content.append(diario);
       const journal = diario.querySelector('.journal');
       const opts = ['General', ...groups.map(gName), 'El final explicado'];
       const grid = document.createElement('div');
@@ -397,7 +417,14 @@
     const sepLi = document.createElement('li'); sepLi.className = 'sep'; sepLi.setAttribute('aria-hidden', 'true'); toc.append(sepLi);
     const extra = [];
     if (spoil) { const li = document.createElement('li'); li.innerHTML = `<a href="#spoilers"><span class="lock">${svg.lock}</span><span class="t">El final explicado</span><span class="c"></span></a>`; toc.append(li); extra.push({ el: spoil, a: li.firstChild }); }
-    if (diario) { const li = document.createElement('li'); li.innerHTML = `<a href="#diario"><span class="dot"></span><span class="t">Mis notas de lectura</span><span class="c"></span></a>`; toc.append(li); extra.push({ el: diario, a: li.firstChild }); }
+    blocks.forEach(b => {
+      if (b === spoil) return;
+      const t = clean(b.querySelector('h2')?.textContent);
+      if (!t) return;
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="#${b.id}"><span class="dot"></span><span class="t">${esc(t)}</span><span class="c"></span></a>`;
+      toc.append(li); extra.push({ el: b, a: li.firstChild });
+    });
     const watched = [...tocItems, ...extra];
     if ('IntersectionObserver' in window) {
       const vis = new Map();

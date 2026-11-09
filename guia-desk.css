@@ -275,11 +275,11 @@ html.desk .dk-content .scard>b{display:block;font-family:var(--f-display);font-w
 html.desk .dk-content .scard>b::before{content:"";display:block;width:22px;height:2px;margin-bottom:14px;background:var(--terra)}
 
 /* Mis notas de lectura */
-html.desk .dk-content #diario{margin:64px 0 0;padding:64px 0 0;border:0;border-top:1px solid var(--line);border-radius:0;background:none;box-shadow:none}
-html.desk .dk-content #diario .block-head{margin:0 0 30px;padding:0;border:0}
-html.desk .dk-content #diario .block-head h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.05;letter-spacing:-.02em}
-html.desk .dk-content #diario .block-head{display:block}
-html.desk .dk-content #diario .block-head p{max-width:56ch;margin:14px 0 0;font-size:1.1rem;font-style:normal;font-weight:400;line-height:1.65;color:var(--muted)}
+html.desk .dk-content section.block{margin:64px 0 0;padding:64px 0 0;border:0;border-top:1px solid var(--line);border-radius:0;background:none;box-shadow:none}
+html.desk .dk-content section.block .block-head{margin:0 0 30px;padding:0;border:0}
+html.desk .dk-content section.block .block-head h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.05;letter-spacing:-.02em}
+html.desk .dk-content section.block .block-head{display:block}
+html.desk .dk-content section.block .block-head p{max-width:56ch;margin:14px 0 0;font-size:1.1rem;font-style:normal;font-weight:400;line-height:1.65;color:var(--muted)}
 .dk-notes-grid{display:grid;grid-template-columns:minmax(260px,.82fr) minmax(0,1.18fr);gap:34px;align-items:start}
 .dk-new{display:grid;gap:18px;padding:26px 26px 24px;border:1.5px dashed var(--line);background:var(--paper)}
 .dk-new .dk-kick{font-size:.7rem}
@@ -362,3 +362,10 @@ html.desk .dk-book #saved-hint{margin:0!important;font-family:var(--f-hand);font
 @media (max-width:760px){.dk-hero{grid-template-columns:minmax(0,1fr)}.dk-figure{grid-column:1;grid-row:3;justify-self:start;max-width:320px}.dk-nav,.dk-count{display:none}.dk-pager{grid-template-columns:1fr}}
 @media print{.dk-top,.dk-index,.dk-prog-actions,.dk-feedback,.dk-pager,.dk-hold,.dk-q-actions,.dk-answer,.dk-new{display:none!important}}
 @media (prefers-reduced-motion:reduce){html.desk{scroll-behavior:auto}.dk-pager a,html.desk .dk-content .card,.dk-ruler-fill,.dk-bookmark{transition:none}}
+
+/* Bloques de actividades de las guías de no ficción */
+.dk-pdf-solo{margin-top:18px}
+html.desk .dk-content section.block .hand{font-family:var(--f-hand)}
+html.desk .dk-content section.block :is(.test,.quiz,.jcard,.act,.t-out,textarea,input[type=text]){border-radius:2px}
+html.desk .dk-content section.block :is(.test,.quiz,.jcard){background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}
+html.desk .dk-content section.block .act{background:var(--paper);border:0;border-left:3px solid var(--terra);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}
