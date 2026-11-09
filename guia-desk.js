@@ -103,6 +103,15 @@
       datos: [['Género', 'Psicología y autoayuda'], ['Publicación', '1976'], ['Autor', 'Wayne W. Dyer'], ['Idea clave', 'Tú eliges cómo te sientes'], ['Estructura', '12 capítulos']],
       prev: { author: 'Marian Rojas Estapé', color: '#f1e3cf' },
       next: { author: 'Daniel Goleman', color: '#c9d5cd' }
+    },
+    'cosas-buenas': {
+      ficha: 7, cat: 'Bienestar',
+      img: 'assets/novedades/cosas-buenas.jpg', cap: 'fig. 1: raíces que florecen', why: '¿qué te hace bien?',
+      lede: 'La psiquiatra Marian Rojas Estapé explica que nuestra mente y nuestro cuerpo están conectados: el cortisol, la oxitocina y la forma en que pensamos influyen en lo que sentimos. Propone soltar la preocupación excesiva, cuidar nuestras relaciones y crear hábitos que nos ayuden a vivir con más calma y optimismo.',
+      marks: ['mente y nuestro cuerpo están conectados'],
+      datos: [['Género', 'Psicología y bienestar'], ['Publicación', '2018'], ['Autora', 'Marian Rojas Estapé'], ['Idea clave', 'Mente y cuerpo conectados'], ['Estructura', '9 capítulos']],
+      prev: { author: 'Dale Carnegie', color: '#2f3b4a' },
+      next: { author: 'Wayne W. Dyer', color: '#ddd3c5' }
     }
   };
 
