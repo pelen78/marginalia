@@ -39,6 +39,16 @@
       people: '2a',
       prev: { author: 'Dot Hutchison', color: '#1d463d' },
       next: { author: 'Dan Brown', color: '#57352f' }
+    },
+    'el-ultimo-secreto': {
+      ficha: 16, cat: 'Novelas',
+      img: 'assets/novedades/el-ultimo-secreto.jpg', cap: 'fig. 1: el puente de Carlos, Praga', why: '¿dónde vive la mente?',
+      lede: 'Robert Langdon acompaña a Katherine Solomon a Praga, donde ella presenta sus investigaciones sobre la conciencia humana. Un sueño inquietante, una amenaza contra el hotel y la desaparición de un manuscrito los arrastran a una investigación mucho más peligrosa de lo que imaginaban.',
+      marks: ['Robert Langdon', 'Katherine Solomon'],
+      datos: [['Género', 'Thriller de misterio'], ['Publicación', '2025'], ['Escenario', 'Praga'], ['Serie', 'Robert Langdon, 6'], ['Estructura', 'Prólogo + 139 capítulos']],
+      people: 7,
+      prev: { author: 'Matt Haig', color: '#1f2a44' },
+      next: { author: 'Alex Michaelides', color: '#d8cbb4' }
     }
   };
 
@@ -172,7 +182,8 @@
     // Sección 1: resumen en un vistazo + datos del libro
     if (groups[0] && G.lede) {
       let lede = esc(G.lede);
-      (G.marks || []).forEach(m => { lede = lede.replace(esc(m), `<mark>${esc(m)}</mark>`); });
+      // Resalta cada nombre una vez; nunca al inicio, porque ahí va la letra capital
+      (G.marks || []).forEach(m => { const k = esc(m), at = lede.indexOf(k, 1); if (at > 0) lede = lede.slice(0, at) + `<mark>${k}</mark>` + lede.slice(at + k.length); });
       const glance = document.createElement('div');
       glance.className = 'dk-glance';
       glance.innerHTML = `<p class="dk-lede">${lede}</p>

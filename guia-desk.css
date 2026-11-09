@@ -139,7 +139,7 @@ html.desk .mg-save-pdf,html.desk .mg-feedback-invite,html.desk #spoiler-btn,html
 .dk-polaroid .tape{position:absolute;left:8%;top:-14px;width:30%;height:28px;background:rgba(242,207,74,.82);transform:rotate(-3deg)}
 .dk-polaroid img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:#2a2622}
 .dk-polaroid figcaption{display:block;padding:12px 6px 22px;font-family:var(--f-hand);font-size:1.45rem;line-height:1.1;color:#4a4038}
-.dk-why{position:absolute;z-index:2;left:-96px;top:60%;font-family:var(--f-hand);font-size:1.6rem;line-height:1;color:var(--terra-ink);transform:rotate(-12deg);white-space:nowrap}
+.dk-why{position:absolute;z-index:2;right:calc(100% - 22px);top:60%;font-family:var(--f-hand);font-size:1.6rem;line-height:1;color:var(--terra-ink);transform:rotate(-12deg);white-space:nowrap}
 
 /* ---------- Cuerpo: índice a la izquierda, secciones a la derecha ---------- */
 .dk-body{display:grid;grid-template-columns:var(--idx) minmax(0,1fr);gap:var(--gap);padding:72px max(16px,4vw) 110px var(--gutter)}
@@ -352,7 +352,7 @@ html.desk .dk-book #saved-hint{margin:0!important;font-family:var(--f-hand);font
   .dk-index{display:none}
   .dk-sec-tag{left:calc(-1 * var(--gutter) + 6px)}
   .dk-hero{grid-template-columns:minmax(0,1fr) minmax(240px,320px)}
-  .dk-why{left:-20px;top:auto;bottom:-34px}
+  .dk-why{right:auto;left:-20px;top:auto;bottom:-34px}
   .dk-glance,.dk-notes-grid{grid-template-columns:minmax(0,1fr)}
   .dk-datos{max-width:420px}
   .dk-blur{grid-template-columns:repeat(2,minmax(0,1fr))}
