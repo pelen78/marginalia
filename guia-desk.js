@@ -148,6 +148,16 @@
       datos: [['Género', 'Espiritualidad'], ['Publicación', '1997'], ['Autor', 'Eckhart Tolle'], ['Idea clave', 'Vivir en el presente'], ['Estructura', '10 capítulos']],
       prev: { author: 'Tomás de Kempis', color: '#66513e' },
       next: { author: 'James Clear', color: '#e6ddcd' }
+    },
+    'imitacion-de-cristo': {
+      ficha: 2, cat: 'Espiritualidad',
+      img: 'assets/novedades/imitacion-de-cristo.jpg', cap: 'fig. 1: el camino del claustro', why: '¿hacia dónde camino?',
+      lede: 'Escrito en el siglo XV por Tomás de Kempis, un monje de los Países Bajos, es uno de los libros de espiritualidad cristiana más leídos de la historia. En cuatro libros invita a dejar la vanidad, cultivar la humildad y la vida interior, y acercarse a Jesús en la oración y en la Eucaristía.',
+      marks: ['humildad'],
+      datos: [['Género', 'Espiritualidad cristiana'], ['Escrito', 'Siglo XV'], ['Autor', 'Tomás de Kempis'], ['Idea clave', 'Seguir a Cristo'], ['Estructura', '4 libros · 114 capítulos']],
+      eyebrowPart: true, unit: 'capítulos',
+      prev: { author: 'Diversos autores', color: '#344f4b' },
+      next: { author: 'Eckhart Tolle', color: '#e9e1d3' }
     }
   };
 
@@ -175,7 +185,7 @@
     if (!map || !oldHero || !oldWrap) { giveUp(); return; }
     const cards = () => [...map.querySelectorAll('.card[id^="card-"]')];
     // Nombre de una sección sin su número ni el contador: "Personajes · quién es quién"
-    const gName = g => clean([...(g.querySelector('.g-title')?.childNodes || [])]
+    const gName = g => !g.querySelector('.g-title') ? clean(g.querySelector(':scope > summary .book-title')?.textContent) : clean([...(g.querySelector('.g-title')?.childNodes || [])]
       .filter(x => !(x.classList && (x.classList.contains('g-n') || x.classList.contains('dk-known'))))
       .map(x => x.textContent).join(''));
     const groups = [...map.querySelectorAll(':scope > .group')];
@@ -217,7 +227,7 @@
         <p class="dk-sub">Guía y resumen · Obra de <i>${esc(author)}</i></p>
         ${warn ? `<p class="dk-warn">${warn.innerHTML}</p>` : ''}
         <div class="dk-prog">
-          <div class="dk-prog-head"><p class="dk-prog-n" aria-live="polite"><b id="dk-n">0</b> de <span id="dk-total">0</span> <i>secciones exploradas</i></p><p class="dk-hand" id="dk-hint" aria-hidden="true"></p></div>
+          <div class="dk-prog-head"><p class="dk-prog-n" aria-live="polite"><b id="dk-n">0</b> de <span id="dk-total">0</span> <i>${esc(G.unit || 'secciones')} explorad${G.unit === 'capítulos' ? 'os' : 'as'}</i></p><p class="dk-hand" id="dk-hint" aria-hidden="true"></p></div>
           <div class="dk-ruler" id="dk-ruler" role="progressbar" aria-label="Progreso de la guía" aria-valuemin="0"><span class="dk-ruler-fill" id="dk-fill"></span><span class="dk-bookmark" id="dk-mark"></span></div>
           <div class="dk-prog-actions">
             <button class="dk-start" id="dk-start" type="button">Empezar la guía <i>${svg.down}</i></button>
@@ -251,12 +261,13 @@
     /* ---------- Secciones ---------- */
     groups.forEach((g, i) => {
       const h = g.querySelector('.g-title');
-      const n = clean(h?.querySelector('.g-n')?.textContent) || String(i + 1);
+      const sum = g.tagName === 'DETAILS' ? g.querySelector(':scope > summary') : null;
+      const n = clean((h || sum)?.querySelector('.g-n')?.textContent) || String(i + 1);
       if (!g.id) g.id = 'parte-' + n;
       const tag = document.createElement('span');
       tag.className = 'dk-sec-tag'; tag.setAttribute('aria-hidden', 'true');
-      tag.textContent = '§' + n.padStart(2, '0');
-      g.prepend(tag);
+      tag.textContent = '§' + (/^\d+$/.test(n) ? n.padStart(2, '0') : n);
+      if (sum) sum.prepend(tag); else g.prepend(tag);
       // "Personajes · quién es quién" → la segunda parte en cursiva
       if (h) {
         const txt = [...h.childNodes].filter(x => x.nodeType === 3);
@@ -278,6 +289,8 @@
       }
     });
 
+    // Lo que va antes de las secciones cuando éstas son libros plegables (Imitación de Cristo)
+    const preMap = [];
     // Sección 1: resumen en un vistazo + datos del libro
     if (groups[0] && G.lede) {
       let lede = esc(G.lede);
@@ -287,7 +300,8 @@
       glance.className = 'dk-glance';
       glance.innerHTML = `<p class="dk-lede">${lede}</p>
         <aside class="dk-datos" aria-label="Datos del libro"><p class="dk-kick">Datos del libro</p><dl>${G.datos.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl></aside>`;
-      groups[0].querySelector('.g-title').after(glance);
+      const gt = groups[0].querySelector('.g-title');
+      if (gt) gt.after(glance); else { glance.insertAdjacentHTML('afterbegin', '<h2 class="dk-glance-h">El libro de un vistazo</h2>'); preMap.push(glance); }
     }
 
     // Tarjetas: "Parte I · el crimen…" → etiqueta + título; personajes → nombre + papel
@@ -295,6 +309,10 @@
       const h3 = c.querySelector('h3');
       if (!h3) return;
       const t = h3.textContent;
+      if (G.eyebrowPart) {
+        const ch = (clean(c.querySelector('.eyebrow')?.textContent).match(/Cap[ií]tulo\s+\d+/i) || [])[0];
+        if (ch && !t.includes(' · ')) h3.innerHTML = `<span class="dk-part">${esc(ch)}<span class="dk-sep"> · </span></span><span class="dk-cap">${esc(t)}</span>`;
+      }
       if (!t.includes(' · ')) return;
       const [a, ...b] = t.split(' · ');
       const rest = b.join(' · ');
@@ -307,7 +325,7 @@
     });
 
     // Pregunta de Marginalia: la tarjeta oscura con respuesta
-    const quote = map.querySelector('.quote');
+    const quote = map.querySelector('.quote') || oldWrap.querySelector(':scope > .quote');
     if (quote && G.quote === false) quote.hidden = true;
     else if (quote) {
       const by = quote.querySelector('.by');
@@ -325,7 +343,11 @@
       ta.after(actions);
     }
 
+    const search = oldWrap.querySelector(':scope > .chapter-search');
+    if (search) preMap.push(search);
+    preMap.forEach(x => content.append(x));
     content.append(map);
+    if (quote && !map.contains(quote)) content.append(quote);
     // Los bloques que vienen después de las tarjetas (actividades, quiz, final explicado, notas), en su orden
     const blocks = [...oldWrap.querySelectorAll(':scope > section.block[id]')];
     blocks.forEach(b => content.append(b));
@@ -533,9 +555,9 @@
     const sync = () => {
       const all = cards(), N = all.length, n = all.filter(c => c.classList.contains('is-done')).length;
       $('dk-n').textContent = n; $('dk-total').textContent = N;
-      $('dk-count').innerHTML = `<b>${n}</b> /${N} exploradas`;
+      $('dk-count').innerHTML = `<b>${n}</b> /${N} explorad${G.unit === 'capítulos' ? 'os' : 'as'}`;
       ruler.setAttribute('aria-valuemax', N); ruler.setAttribute('aria-valuenow', n);
-      ruler.setAttribute('aria-valuetext', `${n} de ${N} secciones exploradas`);
+      ruler.setAttribute('aria-valuetext', `${n} de ${N} ${G.unit || 'secciones'} explorad${G.unit === 'capítulos' ? 'os' : 'as'}`);
       ruler.style.setProperty('--tick', `calc((100% - 1px) / ${Math.max(N - 1, 1)})`);
       const pct = N ? n / N * 100 : 0;
       $('dk-fill').style.width = pct + '%';
@@ -560,6 +582,8 @@
 
     const goTo = el => {
       if (!el) return;
+      const det = el.closest('details');
+      if (det && !det.open) det.open = true;
       el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
       const btn = el.querySelector('.card-open');
       if (btn) btn.focus({ preventScroll: true });
@@ -582,7 +606,9 @@
     brand.addEventListener('mouseleave', () => clearInterval(tm));
 
     root.classList.add('desk-ready');
-    if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) requestAnimationFrame(() => t.scrollIntoView()); }
+    // Índice: abre el libro plegado al que lleva el enlace
+    toc.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); const t = a && document.getElementById(a.getAttribute('href').slice(1)); if (t && t.tagName === 'DETAILS') t.open = true; });
+    if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) { if (t.tagName === 'DETAILS') t.open = true; requestAnimationFrame(() => t.scrollIntoView()); } }
   } catch (err) {
     console.error('guia-desk:', err);
     giveUp();

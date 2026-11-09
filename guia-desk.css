@@ -370,3 +370,24 @@ html.desk .dk-content section.block :is(.test,.quiz,.jcard,.act,.t-out,.scan,.sc
 html.desk .dk-content section.block :is(.test,.quiz,.jcard,.scan,.breath){background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}
 html.desk .dk-content section.block .act{background:var(--paper);border:0;border-left:3px solid var(--terra);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}
 html.desk .dk-content section.block .reto{border-radius:2px;background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}
+
+/* Guías con libros plegables (Imitación de Cristo) */
+html.desk .dk-content details.group{padding:0!important;border-top:1px solid var(--line)}
+html.desk .dk-content details.group:first-child{border-top:0}
+html.desk .dk-content details.group>summary{position:relative;display:flex;align-items:center;gap:20px;padding:30px 0;cursor:pointer;list-style:none}
+html.desk .dk-content details.group>summary .g-n{display:none}
+html.desk .dk-content details.group>summary .dk-sec-tag{top:34px}
+html.desk .dk-content details.group .book-label{display:block;margin:0 0 10px;font-family:var(--f-mono);font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--terra-ink)}
+html.desk .dk-content details.group .book-title{display:block;font-family:var(--f-display);font-weight:400;font-size:clamp(1.9rem,2.8vw,2.6rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink)}
+html.desk .dk-content details.group .book-toggle{margin-left:auto;font-size:2rem;line-height:1;color:var(--terra-ink);transition:transform .2s ease-out}
+html.desk .dk-content details.group[open]>summary{padding-bottom:12px}
+html.desk .dk-content details.group .book-desc{max-width:62ch;margin:0 0 26px;font-size:1.1rem;font-style:italic;color:var(--muted)}
+html.desk .dk-content details.group .g-grid{padding-bottom:48px}
+html.desk .dk-content .card .card-preview{margin:0;font-family:var(--f-body);font-weight:400;font-size:1rem;line-height:1.6;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+html.desk .dk-content .card{min-height:0}
+html.desk .dk-content .quote{max-width:none}
+html.desk .dk-content .chapter-search{max-width:none;margin:0 0 30px;padding:22px 24px;background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+html.desk .dk-content .chapter-search label{font-family:var(--f-mono);font-size:.75rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+html.desk .dk-content .chapter-search input{border:0;border-bottom:1px solid var(--muted);border-radius:0;background:transparent;padding:10px 2px;font-family:var(--f-body);font-size:1.1rem}
+html.desk .dk-content .chapter-search input:focus{outline:none;border-bottom:2px solid var(--terra)}
+.dk-glance-h{grid-column:1/-1;margin:0 0 -6px;font-family:var(--f-display);font-weight:400;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.05;letter-spacing:-.02em}
