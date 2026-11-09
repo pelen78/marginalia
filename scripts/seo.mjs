@@ -9,7 +9,7 @@ const cut=(text,start,end)=>{const a=text.indexOf(start),b=text.indexOf(end,a);i
 export const books=runInNewContext(cut(home,'const BOOKS = [','// Guías en construcción')+';BOOKS');
 export function catalog(html){
  const grid={innerHTML:''};
- const source=cut(html,'const BOOKS = [','/* Trazos a mano:')+cut(html,'const esc=','let qi=');
+ const source=cut(html,'const BOOKS = [','/* Trazos a mano:')+cut(html,'const esc=','/* fin del catálogo */');
  runInNewContext(source+';renderGrid();',{document:{getElementById:id=>{if(id!=='grid')throw Error(id);return grid;}}},{timeout:2000});
  return grid.innerHTML;
 }
