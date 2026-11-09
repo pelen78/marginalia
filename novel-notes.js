@@ -41,7 +41,7 @@
     document.getElementById('pdf-notes').textContent=field.value.trim()||'Sin anotaciones todavía.';
     document.getElementById('pdf-date').textContent='Anotaciones personales · '+new Intl.DateTimeFormat('es-MX',{dateStyle:'long'}).format(new Date());
     const oldTitle=document.title;
-    document.title='Mis notas - '+document.querySelector('.hero cite').textContent+' - Marginalia';
+    document.title='Mis notas - '+(document.querySelector('.hero cite, h1.book-title, h1')||{textContent:''}).textContent.replace(/\s+/g,' ').trim()+' - Marginalia';
     document.body.classList.add('mg-notes-print');
     const restore=()=>{document.body.classList.remove('mg-notes-print');document.title=oldTitle;window.removeEventListener('afterprint',restore)};
     window.addEventListener('afterprint',restore);
