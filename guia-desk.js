@@ -85,6 +85,15 @@
       datos: [['Género', 'Psicología de pareja'], ['Publicación', '1999'], ['Autor', 'Walter Riso'], ['Idea clave', 'Amar sin apego'], ['Estructura', '3 partes']],
       prev: { author: 'Daniel Goleman', color: '#c9d5cd' },
       next: { author: 'Mark Manson', color: '#b85632' }
+    },
+    'inteligencia-emocional': {
+      ficha: 9, cat: 'Psicología',
+      img: 'assets/novedades/inteligencia-emocional.jpg', cap: 'fig. 1: mente y corazón', why: '¿qué sientes hoy?',
+      lede: 'El psicólogo Daniel Goleman explica por qué el éxito y el bienestar no dependen solo del coeficiente intelectual. Muestra cómo funciona el cerebro emocional y cómo podemos aprender a reconocer y manejar nuestras emociones, entender las de los demás y convivir mejor.',
+      marks: ['cerebro emocional'],
+      datos: [['Género', 'Psicología'], ['Publicación', '1995'], ['Autor', 'Daniel Goleman'], ['Idea clave', 'Las emociones se aprenden'], ['Estructura', '5 partes · 16 capítulos']],
+      prev: { author: 'Wayne W. Dyer', color: '#ddd3c5' },
+      next: { author: 'Walter Riso', color: '#e8d4cc' }
     }
   };
 

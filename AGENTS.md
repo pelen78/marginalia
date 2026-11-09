@@ -22,7 +22,7 @@
 - El catálogo para buscadores (`<!-- seo-catalog -->`) se genera con `scripts/seo.mjs`; el código del catálogo termina en el comentario `/* fin del catálogo */`.
 
 ## Guías en computadora (diseño nuevo)
-- Lo usan `la-paciente-silenciosa.html`, `el-jardin-de-las-mariposas.html`, `la-biblioteca-de-la-medianoche.html`, `el-ultimo-secreto.html`, `piensalo-otra-vez.html`, `la-teoria-let-them.html`, `el-sutil-arte-de-que-te-importe-un-carajo.html` y `amar-o-depender.html`. También funciona en guías de no ficción: los bloques de actividades, quiz y notas se acomodan solos. En el celular la guía se ve igual que siempre.
+- Lo usan `la-paciente-silenciosa.html`, `el-jardin-de-las-mariposas.html`, `la-biblioteca-de-la-medianoche.html`, `el-ultimo-secreto.html`, `piensalo-otra-vez.html`, `la-teoria-let-them.html`, `el-sutil-arte-de-que-te-importe-un-carajo.html`, `amar-o-depender.html` y `inteligencia-emocional.html`. También funciona en guías de no ficción: los bloques de actividades, quiz y notas se acomodan solos. En el celular la guía se ve igual que siempre.
 - Tres piezas: el script `#desk-switch` en el `<head>` (pone la clase `desk` en `<html>` si la pantalla mide más de 760 px), `guia-desk.css` y `guia-desk.js`.
 - `guia-desk.js` no cambia el contenido: reacomoda lo que la guía ya tiene (tarjetas, progreso, final, notas, comentarios). Los datos propios de cada guía (ficha, imagen de `assets/novedades/`, resumen corto, datos del libro, autores de la guía anterior y siguiente) van en el objeto `GUIDES`.
 - Para pasarlo a otra guía: agregar su ficha en `GUIDES`, copiar el script `#desk-switch`, sumar Instrument Sans a la liga de Google Fonts y cargar `guia-desk.css` y `guia-desk.js` después de `guide-nav.js`.
