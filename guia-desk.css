@@ -366,7 +366,7 @@ html.desk .dk-book #saved-hint{margin:0!important;font-family:var(--f-hand);font
 /* Bloques de actividades de las guías de no ficción */
 .dk-pdf-solo{margin-top:18px}
 html.desk .dk-content section.block .hand{font-family:var(--f-hand)}
-html.desk .dk-content section.block :is(.test,.quiz,.jcard,.act,.t-out,textarea,input[type=text]){border-radius:2px}
-html.desk .dk-content section.block :is(.test,.quiz,.jcard){background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}
+html.desk .dk-content section.block :is(.test,.quiz,.jcard,.act,.t-out,.scan,.scan-out,.breath,.reto,textarea,input[type=text]){border-radius:2px}
+html.desk .dk-content section.block :is(.test,.quiz,.jcard,.scan,.breath){background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}
 html.desk .dk-content section.block .act{background:var(--paper);border:0;border-left:3px solid var(--terra);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}
 html.desk .dk-content section.block .reto{border-radius:2px;background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}

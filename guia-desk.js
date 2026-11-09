@@ -94,6 +94,15 @@
       datos: [['Género', 'Psicología'], ['Publicación', '1995'], ['Autor', 'Daniel Goleman'], ['Idea clave', 'Las emociones se aprenden'], ['Estructura', '5 partes · 16 capítulos']],
       prev: { author: 'Wayne W. Dyer', color: '#ddd3c5' },
       next: { author: 'Walter Riso', color: '#e8d4cc' }
+    },
+    'tus-zonas-erroneas': {
+      ficha: 8, cat: 'Psicología',
+      img: 'assets/novedades/tus-zonas-erroneas.jpg', cap: 'fig. 1: el laberinto de las zonas erróneas', why: '¿por dónde salgo?',
+      lede: 'Wayne W. Dyer llama zonas erróneas a los hábitos mentales que nos frenan: la culpa, la preocupación, la necesidad de aprobación, el miedo a lo desconocido o la costumbre de culpar a otros. Sostiene que tus emociones dependen de cómo piensas y que siempre puedes elegir de nuevo.',
+      marks: ['zonas erróneas'],
+      datos: [['Género', 'Psicología y autoayuda'], ['Publicación', '1976'], ['Autor', 'Wayne W. Dyer'], ['Idea clave', 'Tú eliges cómo te sientes'], ['Estructura', '12 capítulos']],
+      prev: { author: 'Marian Rojas Estapé', color: '#f1e3cf' },
+      next: { author: 'Daniel Goleman', color: '#c9d5cd' }
     }
   };
 
