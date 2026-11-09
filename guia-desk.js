@@ -76,6 +76,15 @@
       datos: [['Género', 'Desarrollo personal'], ['Publicación', '2016'], ['Autor', 'Mark Manson'], ['Idea clave', 'Elegir qué te importa'], ['Estructura', '9 capítulos']],
       prev: { author: 'Walter Riso', color: '#e8d4cc' },
       next: { author: 'Adam Grant', color: '#2e4a5c' }
+    },
+    'amar-o-depender': {
+      ficha: 10, cat: 'Relaciones',
+      img: 'assets/novedades/amar-o-depender.jpg', cap: 'fig. 1: amor y apego en la balanza', why: '¿amor o apego?',
+      lede: 'El psicólogo Walter Riso explica cuándo el amor se convierte en apego: el miedo a perder al otro, la necesidad constante de su aprobación y la tendencia a renunciar a uno mismo. Propone una forma de amar más sana, en la que puedes querer a alguien sin dejar de ser libre ni de cuidarte.',
+      marks: ['apego'],
+      datos: [['Género', 'Psicología de pareja'], ['Publicación', '1999'], ['Autor', 'Walter Riso'], ['Idea clave', 'Amar sin apego'], ['Estructura', '3 partes']],
+      prev: { author: 'Daniel Goleman', color: '#c9d5cd' },
+      next: { author: 'Mark Manson', color: '#b85632' }
     }
   };
 
