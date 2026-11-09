@@ -175,6 +175,9 @@ html.desk .dk-content .g-title::before,html.desk .dk-content .g-title::after{dis
 html.desk .dk-content .g-n{display:block;flex-basis:100%;width:auto;height:auto;margin:0 0 10px;padding:0;border:0;border-radius:0;background:none;box-shadow:none;font-family:var(--f-mono);font-size:.75rem;font-weight:400;letter-spacing:.24em;line-height:1;text-transform:uppercase;color:var(--terra-ink)}
 html.desk .dk-content .g-n::before{content:"Sección "}
 .dk-g-sub{font-style:italic;color:var(--muted)}
+html.desk .dk-content .reading-card-hint{max-width:62ch;margin:-14px 0 28px;font-family:var(--f-body);font-size:1.05rem;font-style:normal;line-height:1.6;color:var(--muted)}
+html.desk .dk-content .reading-card-hint a{color:var(--terra-ink)}
+html.desk .dk-content .g-grid>.center{display:none}
 .dk-g-sub::before{content:"· ";font-style:normal}
 .dk-known{margin-left:auto;align-self:flex-end;font-family:var(--f-mono);font-size:.75rem;letter-spacing:0;color:var(--muted)}
 
@@ -193,7 +196,7 @@ html.desk .dk-content .g-n::before{content:"Sección "}
 
 /* Tarjetas como fichas de papel */
 html.desk .dk-content .g-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:22px;margin:0;padding:0}
-html.desk .dk-content #g-2{grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:14px}
+html.desk .dk-content .dk-people{grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:14px}
 html.desk .dk-content .card{position:relative;display:flex;flex-direction:column;gap:10px;min-height:0;margin:0;padding:22px 22px 18px;border:1px solid color-mix(in srgb,var(--line) 70%,transparent);border-radius:2px;background:var(--paper);box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4);color:var(--ink);cursor:pointer;transform:none;transition:transform .18s ease-out,box-shadow .18s ease-out}
 html.desk .dk-content .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--edge,var(--terra));opacity:.85}
 html.desk .dk-content .card::after{display:none}
@@ -214,9 +217,9 @@ html.desk .dk-content .card.is-done .card-open{color:var(--muted)}
 html.desk .dk-content .card.dk-flash{animation:dkFlash 1.6s ease-out}
 @keyframes dkFlash{0%,40%{box-shadow:0 0 0 3px var(--terra),0 20px 30px -18px rgba(60,40,20,.5)}100%{box-shadow:0 1px 0 rgba(60,40,20,.04),0 12px 24px -18px rgba(60,40,20,.4)}}
 /* Personajes: fichas más compactas */
-html.desk .dk-content #g-2 .card{padding:18px 18px 14px;gap:6px}
-html.desk .dk-content #g-2 .card h3{font-size:1.15rem}
-html.desk .dk-content #g-2 .card .card-lead{-webkit-line-clamp:2;font-size:.94rem}
+html.desk .dk-content .dk-people .card{padding:18px 18px 14px;gap:6px}
+html.desk .dk-content .dk-people .card h3{font-size:1.15rem}
+html.desk .dk-content .dk-people .card .card-lead{-webkit-line-clamp:2;font-size:.94rem}
 .dk-role{display:block;margin-top:4px;font-family:var(--f-display);font-style:italic;font-size:.95rem;color:var(--muted)}
 .dk-sep{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 

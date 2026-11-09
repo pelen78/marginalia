@@ -15,9 +15,19 @@
       lede: 'Alicia Berenson, una pintora de éxito, aparece junto al cuerpo de su marido, Gabriel. Desde ese día no vuelve a decir una sola palabra. Seis años después, el psicoterapeuta Theo Faber está convencido de que puede hacerla hablar y descubrir qué pasó aquella noche.',
       marks: ['Theo Faber'],
       datos: [['Género', 'Thriller psicológico'], ['Publicación', '2019'], ['Escenario', 'Londres'], ['Voces', 'Theo · Alicia'], ['Estructura', 'Prólogo + 5 partes']],
-      people: 2, // número de la sección de personajes
+      people: 2, // id de la rejilla de personajes: #g-2
       prev: { author: 'Dan Brown', color: '#57352f' },
       next: { author: 'Diversos autores', color: '#344f4b' }
+    },
+    'el-jardin-de-las-mariposas': {
+      ficha: 14, cat: 'Novelas',
+      img: 'assets/novedades/el-jardin-de-las-mariposas.jpg', cap: 'fig. 1: la entrada al Jardín', why: '¿quién es Maya?',
+      lede: 'Tras descubrir el Jardín, el FBI interroga a una joven que se hace llamar Maya. Allí, un hombre al que llamaban el Jardinero mantenía cautivas a muchachas a las que tatuaba alas de mariposa. Mientras ella decide qué contar, los agentes Victor Hanoverian y Brandon Eddison intentan descubrir lo que todavía calla.',
+      marks: ['Maya', 'Victor Hanoverian', 'Brandon Eddison'],
+      datos: [['Género', 'Thriller psicológico'], ['Publicación', '2016'], ['Serie', 'El coleccionista, 1'], ['Voces', 'Maya · el FBI'], ['Estructura', 'Interrogatorio + recuerdos']],
+      people: 5,
+      prev: { author: 'Mel Robbins', color: '#514454' },
+      next: { author: 'Matt Haig', color: '#1f2a44' }
     }
   };
 
@@ -49,6 +59,9 @@
       .filter(x => !(x.classList && (x.classList.contains('g-n') || x.classList.contains('dk-known'))))
       .map(x => x.textContent).join(''));
     const groups = [...map.querySelectorAll(':scope > .group')];
+    const peopleGrid = document.getElementById('g-' + G.people);
+    if (peopleGrid) peopleGrid.classList.add('dk-people');
+    const peopleGroup = peopleGrid?.closest('.group');
 
     /* ---------- Datos que ya tiene la página ---------- */
     const title = clean(oldHero.querySelector('h1')?.textContent);
@@ -137,7 +150,7 @@
           hid.textContent = ' · ';
           last.replaceWith(document.createTextNode(a), hid, em);
         }
-        if (+n === G.people) {
+        if (g === peopleGroup) {
           const k = document.createElement('span');
           k.className = 'dk-known'; k.id = 'dk-known';
           h.append(k);
@@ -354,7 +367,7 @@
       const n = clean(g.querySelector('.g-n')?.textContent);
       const t = gName(g);
       const li = document.createElement('li');
-      li.innerHTML = `<a href="#${g.id}"><span class="n">${esc(n)}</span><span class="t">${esc(t.split(' · ')[0])}</span><span class="c"></span></a>`;
+      li.innerHTML = `<a href="#${g.id}"><span class="n">${esc(n)}</span><span class="t">${esc((b => b.length > 1 && /^(Parte|Cap[ií]tulos?)\b/i.test(b[0]) ? b.slice(1).join(' · ') : b[0])(t.split(' · ')))}</span><span class="c"></span></a>`;
       toc.append(li);
       return { el: g, a: li.firstChild, c: li.querySelector('.c'), cards: [...g.querySelectorAll('.card[id^="card-"]')] };
     });
