@@ -11,6 +11,17 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="apple-mobile-web-app-title" content="MyMarginalia">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script id="mobile-swap">
+/* En celular se queda el inicio anterior (movil.html). Se carga aquí mismo para que la dirección siga siendo la de inicio. */
+if (matchMedia('(max-width: 760px)').matches) {
+  document.documentElement.style.visibility = 'hidden';
+  document.write('<plaintext style="display:none">');
+  fetch('movil.html', { cache: 'no-cache' })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(t => { document.open(); document.write(t); document.close(); })
+    .catch(() => location.replace('movil.html' + location.search + location.hash));
+}
+</script>
 <script id="intro-visit-check">
 (() => {
   const visitURL = new URL(location.href);

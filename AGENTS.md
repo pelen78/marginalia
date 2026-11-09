@@ -13,3 +13,10 @@
 - Las identidades que revelan un giro se explican dentro de la sección de spoilers; las fichas previas deben orientar sin revelar ese giro.
 - Conservar los identificadores de las tarjetas existentes para mantener el progreso guardado. Ajustar el total de secciones cuando se añadan fichas.
 - Verificar `node --test scripts/*.test.mjs` y comprobar en el navegador el salto de vistazo a personajes y de personajes a historia.
+
+## Inicio
+
+- En computadora se ve `index.html` (diseño de estantería). En celular, el `<script id="mobile-swap">` del `<head>` carga `movil.html` (el inicio anterior) sin cambiar la dirección.
+- Al agregar un libro, actualizar la lista `BOOKS` en `index.html` y también en `movil.html`.
+- La novedad del inicio solo sale si la guía tiene ilustración: imagen vertical 3:4 en `assets/novedades/` y una línea en `PHOTOS` dentro de `index.html`.
+- El catálogo para buscadores (`<!-- seo-catalog -->`) se genera con `scripts/seo.mjs`; el código del catálogo termina en el comentario `/* fin del catálogo */`.

@@ -1,0 +1,1394 @@
+<!doctype html>
+<html lang="es" class="intro-on">
+<head>
+<meta name="google-site-verification" content="TG9sTBFOBM4mqks-50U7_zvdH7nJekxyILpH6bSRmbM">
+<meta name="p:domain_verify" content="9041d6d171c188b8e31fe7d960a26cdc"/>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="MyMarginalia">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script id="intro-visit-check">
+(() => {
+  const visitURL = new URL(location.href);
+  const replayIntro = visitURL.searchParams.get('intro') === '1';
+  if (replayIntro) {
+    visitURL.searchParams.delete('intro');
+    history.replaceState(history.state, '', visitURL.href);
+  }
+  let seen = false;
+  try { seen = localStorage.getItem('marginalia-intro-seen') === '1'; } catch (_) {}
+  try { seen = seen || sessionStorage.getItem('marginalia-intro-seen') === '1'; } catch (_) {}
+  const sectionLink = ['#inicio', '#libros', '#pregunta'].includes(location.hash);
+  if (!replayIntro && (seen || sectionLink)) {
+    document.documentElement.dataset.skipIntro = 'true';
+    document.documentElement.classList.remove('intro-on');
+  }
+})();
+</script>
+
+<title>MyMarginalia | Guías de lectura, resúmenes y reflexiones</title>
+<!-- seo-social:start -->
+<meta property="og:site_name" content="MyMarginalia">
+<meta property="og:title" content="MyMarginalia | Guías de lectura, resúmenes y reflexiones">
+<meta property="og:description" content="Descubre MyMarginalia: resúmenes de libros, guías de lectura por capítulos e ideas para reflexionar. Lee a tu ritmo y conserva tus propias notas.">
+<!-- seo-social:end -->
+<link rel="canonical" href="https://mymarginalia.net/">
+<meta name="description" content="Descubre MyMarginalia: resúmenes de libros, guías de lectura por capítulos e ideas para reflexionar. Lee a tu ritmo y conserva tus propias notas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --bg:#f3ede2; --paper:#f9f5ee; --panel:#ebe3d4; --panel-2:#efe8dc;
+  --ink:#1e1a17; --muted:#6b6156; --line:#dbd1c1;
+  --terra:#c4552f; --blue:#23408e; --soft:#f1dccf;
+  --accent:var(--terra); --accent-ink:#f9f5ee; --sage:#7f8f74;
+  --shadow:0 1px 0 rgba(60,40,20,.04),0 18px 34px -20px rgba(60,40,20,.35);
+  --grain:.5;
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Fraunces",Georgia,serif;
+  --f-hand:"Caveat",cursive;
+  --f-mono:"Space Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#191613; --paper:#211d19; --panel:#2a241f; --panel-2:#26211c;
+  --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --terra:#e07a55; --blue:#93a9ea; --soft:#3a2a22; --accent-ink:#191613; --sage:#9fae94;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#191613; --paper:#211d19; --panel:#2a241f; --panel-2:#26211c;
+  --ink:#f0e8dc; --muted:#a89b8c; --line:#3a332c;
+  --terra:#e07a55; --blue:#93a9ea; --soft:#3a2a22; --accent-ink:#191613; --sage:#9fae94;
+  --shadow:0 18px 34px -20px rgba(0,0,0,.75); --grain:.18; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html.intro-on{overflow:hidden}
+html[data-skip-intro] #intro{display:none}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;font-weight:400}
+body::after{ /* grano de papel */
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:var(--grain);mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .38  0 0 0 0 .3  0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;margin:0;line-height:1.05;text-wrap:balance}
+.wrap{max-width:1360px;margin:0 auto;padding:0 28px}
+.eyebrow{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+
+/* Letras collage (entrada y logo) */
+.s0{font-family:var(--f-display);font-weight:700}
+.s1{font-family:var(--f-hand);font-weight:700;color:var(--terra);font-size:1.12em}
+.s2{font-family:var(--f-mono);font-weight:700;background:var(--blue);color:var(--bg)}
+.s3{font-family:var(--f-display);font-style:italic;color:var(--blue)}
+.s4{font-family:var(--f-display);font-weight:300;background:var(--terra);color:var(--bg)}
+.s5{font-family:var(--f-display);font-weight:700;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.s6{font-family:var(--f-mono);background:var(--ink);color:var(--bg)}
+
+/* Trazos a mano */
+.mark{position:relative;display:inline-block;white-space:nowrap;isolation:isolate}
+.mark svg{position:absolute;left:-8px;top:-8px;width:calc(100% + 16px);height:calc(100% + 16px);overflow:visible;pointer-events:none}
+.mark path{fill:none;stroke:var(--terra);stroke-width:2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s cubic-bezier(.6,0,.2,1) .35s}
+.mark.hl svg{z-index:-1}
+.mark.hl path{stroke-width:14;stroke-opacity:.25}
+.mark.ci path{stroke:var(--blue)}
+.in .mark path,.mark.in path{stroke-dashoffset:0}
+
+/* Aparición suave al hacer scroll */
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* ---------- Header ---------- */
+header.top{border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);position:sticky;top:0;z-index:20}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:78px}
+.brand{display:flex;flex-direction:column;gap:5px;text-decoration:none}
+.logo{display:inline-flex;gap:.02em;font-size:1.75rem;line-height:1;white-space:nowrap}
+.logo span{display:inline-block;padding:.05em .07em;min-width:.55em;text-align:center;transition:transform .3s}
+.brand small{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:flex;gap:30px;margin-left:auto}
+nav.main a{position:relative;text-decoration:none;padding:6px 2px;font-size:1.02rem}
+nav.main a::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-2px;height:8px;opacity:0;transform:scaleX(.3);transform-origin:left;transition:opacity .3s,transform .45s cubic-bezier(.6,0,.2,1);
+  background:no-repeat center/100% 100% url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'><path d='M2 6 C 20 2, 35 9, 52 5 S 82 3, 98 7' fill='none' stroke='%23c4552f' stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke'/></svg>")}
+nav.main a:hover::after,nav.main a.on::after{opacity:1;transform:none}
+nav.main a.on{color:var(--terra)}
+.tools{display:flex;align-items:center;gap:8px}
+.icon-btn{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;transition:background .2s}
+.icon-btn:hover{background:var(--panel)}
+.icon-btn svg{width:20px;height:20px}
+.search{display:none;border:1.5px solid var(--ink);background:var(--paper);border-radius:999px;padding:7px 16px;font:inherit;font-size:.95rem;color:var(--ink);width:220px}
+.search.open{display:block}
+
+/* ---------- Layout ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:36px;padding-bottom:56px}
+.side{display:flex;flex-direction:column;gap:22px;padding-top:36px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px}
+.panel h2{font-size:1.5rem;display:flex;justify-content:space-between;align-items:baseline}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:20px;min-height:440px;padding:40px 0 30px;border-bottom:1px solid var(--line)}
+.hero .copy{position:relative;z-index:1}
+.hero .eyebrow{display:block;margin-bottom:18px}
+.hero h1{font-size:clamp(2.5rem,5vw,4.6rem);letter-spacing:-.015em;line-height:1.02}
+.hero h1 em{color:var(--terra);font-style:italic;font-weight:300}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:32ch;margin:20px 0 0;font-weight:300}
+.hero .hand{font-family:var(--f-hand);font-size:1.7rem;color:var(--terra);transform:rotate(-2deg);transform-origin:left;margin-top:18px;line-height:1.15}
+.art{position:relative;aspect-ratio:1;max-width:420px;width:100%;justify-self:center}
+.art .ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.art .ring circle{transform-origin:50% 50%;transform-box:fill-box}
+.breathe{animation:breathe 8s ease-in-out infinite}
+.breathe.slow{animation-duration:11s;animation-direction:reverse}
+@keyframes breathe{0%,100%{transform:scale(.9)}50%{transform:scale(1)}}
+.mini{position:absolute;width:30%;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;text-decoration:none}
+.mini .cover{width:100%}
+.mini:hover{transform:rotate(0) translateY(-8px) scale(1.04)!important;z-index:3}
+.mini.m1{left:12%;top:24%;transform:rotate(-8deg)}
+.mini.m2{left:36%;top:14%;transform:rotate(3deg);z-index:2}
+.mini.m3{left:58%;top:28%;transform:rotate(-2deg)}
+.art .note{position:absolute;font-family:var(--f-hand);color:var(--terra);font-size:1.45rem;white-space:nowrap;line-height:1}
+.art .note.a{left:4%;top:76%;transform:rotate(-6deg)}
+.art .note.b{right:2%;top:10%;transform:rotate(5deg);color:var(--blue)}
+
+/* ---------- Destacada ---------- */
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.section-head h2{font-size:clamp(1.9rem,3vw,2.4rem)}
+.featured{margin-top:40px}
+.feat-body{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,.9fr);gap:36px;align-items:center;margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px 32px}
+.feat-body .cover{width:190px;transform:rotate(-2deg);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.feat-body .cover:hover{transform:rotate(0) translateY(-4px)}
+.feat-info h3{font-size:2.2rem}
+.feat-info .by{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.feat-info p{margin:14px 0 0}
+.feat-info .it{font-family:var(--f-hand);font-size:1.5rem;color:var(--terra);line-height:1.1}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);text-decoration:none;border-radius:999px;padding:9px 20px;font-family:var(--f-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin:20px 0 0;transition:transform .2s ease,background .2s ease,box-shadow .2s}
+.btn:hover{background:var(--terra);color:var(--accent-ink);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.steps{list-style:none;margin:0;padding:0 0 0 30px;border-left:1px dashed var(--line);display:grid;gap:18px}
+.steps li{display:flex;gap:16px;align-items:center}
+.steps .ic{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--terra);display:grid;place-items:center;flex:none;color:var(--terra);transition:background .3s,color .3s}
+.steps li:hover .ic{background:var(--terra);color:var(--accent-ink)}
+.steps .ic svg{width:22px;height:22px}
+.steps b{font-weight:600;display:block}
+.steps span{color:var(--muted);font-size:.92rem}
+
+/* ---------- Biblioteca ---------- */
+#libros{margin-top:52px}
+.section-head p{margin:0;color:var(--muted);font-size:1.05rem;font-style:italic;font-weight:300}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.filters button{border:1.5px solid var(--line);padding:5px 16px;border-radius:999px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s,background .2s,color .2s}
+.filters button:hover{border-color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:14px}
+.book{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.book:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:var(--shadow)}
+.book:nth-child(even):hover{transform:translateY(-4px) rotate(.6deg)}
+.book .cover{width:86%;margin:0 auto 14px}
+.book h3{font-size:1.14rem;font-weight:600;line-height:1.15}
+.book .au{color:var(--muted);font-size:.88rem;margin-top:4px}
+.book .row{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:14px}
+.book.soon .cover{opacity:.55;filter:grayscale(.4)}
+.book.soon .btn{background:transparent;color:var(--muted);border:1px dashed var(--line);cursor:default;box-shadow:none;transform:none}
+.book .btn{margin:0;padding:6px 14px;font-size:.68rem;white-space:nowrap}
+.book .more{font-family:var(--f-mono);letter-spacing:.1em;color:var(--muted);padding:4px 8px;border-radius:6px}
+.book .more:hover{background:var(--panel);color:var(--ink)}
+.grid.in .book{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * 70ms)}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.empty{color:var(--muted);font-style:italic;padding:20px 0}
+
+/* Portada */
+.cover{display:block;aspect-ratio:2/3;position:relative;border-radius:2px 4px 4px 2px;box-shadow:-3px 0 0 rgba(0,0,0,.08) inset,4px 8px 16px -6px rgba(40,25,10,.45);overflow:hidden}
+.cover svg{display:block;width:100%;height:100%}
+.cover::before{content:"";position:absolute;inset:0 auto 0 0;width:7%;background:linear-gradient(90deg,rgba(0,0,0,.14),rgba(255,255,255,.12) 60%,transparent);z-index:1}
+
+/* ---------- Lateral ---------- */
+.q-mark{font-family:var(--f-hand);font-size:4.2rem;line-height:.6;color:var(--terra);float:left;margin:14px 10px 0 0}
+.q-text{font-family:var(--f-display);font-size:1.3rem;line-height:1.35;margin:18px 0 10px;font-weight:300;transition:opacity .35s}
+.q-src{color:var(--muted);font-size:.92rem}
+.q-src a{color:var(--terra)}
+.link{color:var(--terra);font-family:var(--f-hand);font-size:1.3rem;text-decoration:none}
+.link:hover{text-decoration:underline}
+.quote-card{text-align:center;padding:34px 28px 26px;display:flex;flex-direction:column;justify-content:center}
+.quote-card .sig{font-family:var(--f-hand);font-size:1.4rem;color:var(--terra);transform:rotate(-3deg)}
+.quote-card blockquote{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:1.5rem;line-height:1.3;margin:14px 0 12px}
+.quote-card hr{border:0;border-top:1px dashed var(--line);margin:22px 0 16px}
+
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;padding:26px 0 36px;text-align:center}
+footer .again{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:12px;display:inline-block}
+footer .again:hover{color:var(--terra)}
+
+@media (max-width:1100px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .side{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));padding-top:10px}
+  .feat-body{grid-template-columns:180px 1fr}
+  .feat-body .cover{width:160px}
+  .steps{grid-column:1/-1;border-left:0;padding:18px 0 0;border-top:1px dashed var(--line);grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .top .wrap{flex-wrap:wrap;gap:10px;padding-block:12px}
+  .logo{font-size:1.45rem}
+  .brand small{display:none}
+  nav.main{order:3;width:100%;margin:0;gap:20px;overflow-x:auto}
+  .tools{margin-left:auto}
+  .search.open{width:150px}
+  .hero{grid-template-columns:1fr;min-height:0;padding-top:26px}
+  .art{max-width:300px}
+  .feat-body{grid-template-columns:1fr;padding:22px 18px;gap:16px}
+  .feat-body .cover{margin:0 auto;order:2}
+  .feat-info{order:1}
+  .steps{order:3;grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .book{padding:10px 10px 12px}
+}
+
+/* ================= ENTRADA ================= */
+#intro{position:fixed;inset:0;z-index:100;background:var(--bg);user-select:none;-webkit-user-select:none;touch-action:none;cursor:grab}
+#intro.holding{cursor:grabbing}
+#intro[hidden]{display:none}
+#calm{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:.6rem;transition:opacity .8s}
+#calm p{margin:0;font-weight:300;font-size:clamp(20px,3vw,30px);opacity:0;transform:translateY(8px);animation:up 1s forwards}
+#calm p:nth-child(2){animation-delay:1.1s;font-family:var(--f-hand);font-size:clamp(30px,5vw,48px);color:var(--terra)}
+#calm small{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);opacity:0;animation:up 1s 1.8s forwards;margin-top:1.4rem}
+@keyframes up{to{opacity:1;transform:none}}
+#calm.out{opacity:0;pointer-events:none}
+#stage{position:absolute;inset:0;opacity:0;transition:opacity 1s}
+#stage.on{opacity:1}
+#breath{position:absolute;left:50%;top:50%;width:min(78vmin,620px);height:min(78vmin,620px);transform:translate(-50%,-50%);pointer-events:none}
+#breath circle{transform-origin:50% 50%;transform-box:fill-box}
+#intro .center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:100%;padding:0 16px}
+#intro .kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+#word{font-size:clamp(40px,10.5vw,148px);line-height:1;white-space:nowrap;display:inline-flex;align-items:center;gap:.02em}
+#word span{display:inline-block;padding:.04em .07em;min-width:.55em;text-align:center;transition:transform .25s}
+#word.settled span{font-family:var(--f-display)!important;font-weight:400!important;font-style:normal!important;color:var(--ink)!important;background:transparent!important;-webkit-text-stroke:0!important;font-size:1em!important;transform:none!important;transition:all .6s}
+#breathLabel{font-family:var(--f-hand);font-size:clamp(22px,3vw,30px);color:var(--terra);height:1.3em;margin-top:.4rem;opacity:0;transition:opacity .4s}
+#intro .sub{font-style:italic;font-weight:300;font-size:clamp(14px,1.6vw,18px);color:var(--muted);margin-top:.3rem}
+#hint{margin-top:1.8rem;display:flex;flex-direction:column;align-items:center;gap:.7rem}
+#hint .say{font-family:var(--f-mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+#key{display:inline-flex;cursor:pointer;gap:.08em;padding:.35em .5em;border:2px solid var(--ink);border-radius:14px;background:var(--bg);box-shadow:0 7px 0 var(--ink);font-size:clamp(26px,3.6vw,44px);line-height:1;transition:transform .12s,box-shadow .12s;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-3px)}}
+#intro.holding #key{animation:none;transform:translateY(5px);box-shadow:0 2px 0 var(--ink)}
+#key span{display:inline-block;min-width:.72em;padding:.08em .1em;text-align:center;font-family:var(--f-display);font-weight:700;color:transparent;-webkit-text-stroke:1.2px var(--ink);transition:transform .2s}
+#key span.lit{-webkit-text-stroke:0;color:var(--ink)}
+#key span.lit.s1{font-family:var(--f-hand);color:var(--terra)}
+#key span.lit.s2{font-family:var(--f-mono);color:var(--bg)}
+#key span.lit.s3{font-style:italic;color:var(--blue)}
+#key span.lit.s4{font-weight:300;color:var(--bg)}
+#key span.lit.s6{font-family:var(--f-mono);color:var(--bg)}
+#hint .after{margin-top:8px;font-style:italic;font-weight:300;font-size:15px;color:var(--muted)}
+@media (hover:none){#hint .only-key{display:none}}
+#intro .note{position:absolute;width:250px;font-size:16px;line-height:1.45;opacity:0;pointer-events:none}
+#intro .note p{margin:0}
+#intro .note cite{display:block;font-family:var(--f-mono);font-style:normal;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:.5rem}
+#intro .note .hand{position:absolute;font-family:var(--f-hand);font-size:24px;color:var(--terra);white-space:nowrap;opacity:0}
+#intro .note .mark path{transition:none}
+.n1{left:6%;top:12%}.n2{right:6%;top:15%}.n3{left:7%;bottom:12%}.n4{right:6%;bottom:10%}
+.n1 .hand{right:-10px;top:-30px}.n2 .hand{right:0;bottom:-34px}.n3 .hand{right:10px;bottom:-34px}.n4 .hand{left:-60px;bottom:4px}
+@media (max-width:760px){
+  #intro .note{width:44vw;font-size:12.5px}
+  #intro .note .hand{font-size:19px}
+  .n1{left:4%;top:5%}.n2{right:4%;top:14%}.n3{left:4%;bottom:12%}.n4{right:4%;bottom:4%}
+  .n4 .hand{left:auto;right:0;bottom:auto;top:-26px}
+}
+#intro .corner{position:absolute;bottom:18px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);z-index:5}
+#intro .corner:hover{color:var(--ink)}
+#skip{right:20px}
+#snd{left:20px}
+#blot{position:fixed;left:50%;top:50%;width:60vmax;height:60vmax;margin:-30vmax 0 0 -30vmax;background:var(--ink);border-radius:43% 57% 52% 48% / 55% 45% 55% 45%;transform:scale(0);z-index:200;pointer-events:none}
+#blot.go{transition:transform 1.1s cubic-bezier(.7,0,.2,1);transform:scale(3.2) rotate(40deg)}
+#blot.fade{transition:opacity .9s;opacity:0}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  [data-reveal]{opacity:1;transform:none}
+  #calm p,#calm small{opacity:1;transform:none}
+  .mark path{stroke-dashoffset:0}
+}
+
+/* Inicio: biblioteca y lectura */
+.wrap{max-width:1240px}
+.layout{display:block;padding-bottom:0}
+.hero{grid-template-columns:1.35fr .65fr;gap:60px;min-height:0;padding:54px 0 44px}
+.hero h1{font-size:clamp(2.5rem,4.7vw,4.1rem);line-height:1.07}
+.hero p{max-width:43ch;font-size:1.08rem;margin-top:22px}
+.hero .eyebrow{margin-bottom:17px}
+.hero .btn{margin-top:26px}
+.art{max-width:310px}
+.art .note.a{font-size:1.3rem;top:86%;left:17%}
+.breathe{animation:none}
+#libros{margin-top:42px;scroll-margin-top:110px}
+.section-head h2{font-size:clamp(1.85rem,3vw,2.3rem)}
+.section-head p{font-size:.98rem}
+.filters{margin:22px 0 24px;gap:8px}
+.filters button{font-size:.65rem;letter-spacing:.04em;padding:6px 13px}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.book{display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px;padding:24px 20px;align-items:start;border-radius:12px;min-height:265px}
+.book .cover{width:100%;margin:12px 0 0;transform:rotate(-3deg)}
+.book:nth-child(even) .cover{transform:rotate(2deg)}
+.book-info{display:flex;flex-direction:column;height:100%;min-width:0}
+.book-category{font-family:var(--f-mono);font-size:.57rem;text-transform:uppercase;letter-spacing:.05em;color:var(--terra);margin-bottom:10px}
+.book h3{font-size:1.28rem;line-height:1.13;text-wrap:pretty}
+.book .au{font-size:.78rem;margin-top:7px}
+.blurb{font-size:.87rem;line-height:1.45;color:var(--muted);margin:12px 0 6px}
+.book .btn{font-size:.65rem;padding:8px 13px}
+.btn svg{width:16px;height:16px}
+.side{display:block;padding:0;margin:50px 0 0}
+#pregunta{scroll-margin-top:105px;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;background:none;padding:32px 0;display:grid;grid-template-columns:1fr 1.4fr;column-gap:60px}
+#pregunta h2{font-size:1.65rem;grid-row:1/3;display:block}
+#nextQ{display:block;font-size:1.15rem;margin-top:12px;padding:0}
+.q-text{font-size:1.45rem;margin:0 0 12px}
+.q-mark{display:none}
+.q-src{font-size:.88rem}
+.quote-card{background:none;border:0;padding:36px 0 30px}
+.quote-card blockquote{font-size:1.15rem;max-width:620px;margin:12px auto}
+.quote-card .sig{font-size:1.2rem}
+.quote-card hr,.quote-card>.eyebrow{display:none}
+footer{font-size:.8rem;padding:20px 0 25px}
+[data-reveal]{opacity:1;transform:none}
+.mark path{stroke-dashoffset:0}
+main .mark path{stroke-dasharray:none}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{gap:20px}.top .wrap{gap:15px}nav.main{gap:18px}.brand small{max-width:250px;font-size:.5rem}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:12px;padding:32px 0}.hero h1{font-size:clamp(2.2rem,8.5vw,3.6rem)}.hero p{font-size:1rem}.art{max-width:190px;margin:0 auto 12px}.art .note.a{font-size:1.05rem}.hero .btn{margin-top:18px}.grid{grid-template-columns:1fr}.book{grid-template-columns:90px minmax(0,1fr);min-height:220px}.section-head p{font-size:.9rem}.filters{gap:6px}.filters button{font-size:.59rem;padding:6px 10px}#pregunta{grid-template-columns:1fr;gap:20px}#pregunta h2{grid-row:auto;display:flex;align-items:center}#nextQ{display:inline;margin:0}.q-text{font-size:1.25rem}.side{margin-top:32px}}
+
+#inicio,#libros,#pregunta{scroll-margin-top:calc(var(--header-height,78px) + 22px)}
+@media(max-width:760px){.top .logo{font-size:1.25rem}.top .tools{gap:2px}.top .icon-btn{width:36px}.top .search.open{position:absolute;left:16px;right:16px;top:100%;width:calc(100% - 32px);box-shadow:var(--shadow)}nav.main{gap:18px}nav.main a{font-size:.94rem}}
+
+.site-credits{padding:30px 0 28px;font-size:.86rem;line-height:1.65}
+.site-credits .credits-author{margin:0 0 10px;color:var(--ink)}
+.site-credits .credits-author strong{font-weight:600}
+.site-credits .credits-note{max-width:85ch;margin:0 auto;color:var(--muted)}
+.site-credits .credits-copyright{margin:20px 0 0;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.02em;color:var(--muted)}
+@media(max-width:600px){.site-credits{text-align:left;font-size:.82rem}.site-credits .credits-copyright{font-size:.61rem}}
+
+/* Intro: clear controls and a quieter composition on small screens. */
+#intro{height:100dvh;-webkit-touch-callout:none}
+#stage:not(.on){visibility:hidden;pointer-events:none}
+#intro .intro-controls{position:absolute;inset:auto 0 0;z-index:6;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(20px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left));background:var(--bg)}
+#intro .intro-controls .corner{position:static;min-height:44px;padding:10px 8px;letter-spacing:.06em}
+#intro-audio-status{position:absolute;bottom:100%;left:20px;right:20px;margin:0;padding:8px 0;text-align:center;background:var(--bg);color:var(--muted);font-size:.8rem;line-height:1.4}
+#intro-audio-status:empty{display:none}
+#key{color:var(--ink);touch-action:none}
+#key:disabled{cursor:default}
+#intro .note{bottom:max(110px,14%)}
+#intro .n1,#intro .n2{bottom:auto}
+@media(max-width:760px),(pointer:coarse){
+  #intro .note{display:none}
+  #stage{bottom:calc(80px + env(safe-area-inset-bottom))}
+  #intro .center{padding:20px 24px}
+  #intro .kicker{font-size:.58rem;letter-spacing:.15em;margin-bottom:24px}
+  #word{font-size:clamp(28px,8.4vw,60px)}
+  #breath{width:min(84vw,390px);height:min(84vw,390px)}
+  #breathLabel{height:1.4em;font-size:26px;margin-top:14px}
+  #intro .sub{font-size:16px;line-height:1.5;max-width:25ch;margin:8px auto 0}
+  #hint{margin-top:32px;gap:14px}
+  #hint .say{font-size:.65rem;letter-spacing:.08em}
+  #key{font-size:27px;padding:.38em .65em}
+  #hint .only-key{display:none}
+  #intro .intro-controls{border-top:1px solid var(--line);padding-inline:16px}
+  #intro .intro-controls .corner{font-size:.65rem}
+}
+@media(max-height:520px){
+  #intro .note,#intro .kicker,#intro .sub{display:none}
+  #stage{bottom:65px}
+  #intro .center{padding:4px 16px}
+  #word{font-size:clamp(24px,5vw,42px)}
+  #breath{width:65vh;height:65vh}
+  #breathLabel{font-size:20px;margin-top:4px}
+  #hint{margin-top:8px;gap:8px}
+  #key{font-size:22px;padding:.25em .55em}
+  #hint .after{display:none}
+}
+</style>
+<link rel="stylesheet" href="feedback.css">
+<script src="feedback.js" defer></script>
+<link rel="stylesheet" href="mobile-readability.css">
+<style id="latest-guide-style">
+/* A paper reading invitation, inspired by the supplied reference. */
+.latest-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:38px;padding:56px 0 48px}
+.latest-hero .copy h1{font-size:clamp(2.5rem,4.2vw,4.1rem)}
+.latest-feature{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);align-items:center;gap:27px;padding:48px 24px 32px 30px;background:var(--paper);border:1px solid var(--line);border-radius:34px 20px 36px 17px;box-shadow:0 20px 35px -30px #82512a;width:100%;min-width:0}
+.latest-feature::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;opacity:.23;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.52' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.3' filter='url(%23grain)'/%3E%3C/svg%3E")}
+.latest-label{position:absolute;z-index:3;top:-14px;left:38px;display:flex;align-items:center;gap:8px;padding:11px 14px;background:var(--terra);color:#fff5e8;border-radius:5px 8px 6px 4px;transform:rotate(-4deg);font-family:var(--f-mono);font-size:.66rem;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 4px 9px -6px #813b20}
+.latest-label::before{content:"✧";font-size:27px;line-height:18px}
+.latest-label::after{content:"";position:absolute;width:36px;height:30px;left:-26px;top:-21px;background:linear-gradient(65deg,transparent 47%,var(--terra) 48% 53%,transparent 54%) 20px 0/9px 18px no-repeat,linear-gradient(35deg,transparent 47%,var(--terra) 48% 53%,transparent 54%) 0 13px/18px 12px no-repeat}
+.latest-cover{position:relative;display:block;z-index:1;transform:rotate(-5deg);animation:latest-float 6.5s cubic-bezier(.45,0,.55,1) infinite;filter:drop-shadow(7px 11px 7px #34201455);border-radius:3px}
+.latest-cover svg{display:block;width:100%;height:auto;border-radius:3px}
+.latest-cover::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:3px;background:linear-gradient(90deg,#160d09a6 0%,#c5a17d60 2%,#1c100b70 4%,transparent 6%,#fff1d80a 85%,#160d0938 100%);box-shadow:inset 0 0 2px 1px #e2c09866}
+.latest-cover.has-texture{aspect-ratio:2/3}
+.latest-cover.has-texture::after{display:none}
+.latest-cover.has-texture img{position:absolute;display:block;width:107%;height:112%;max-width:none;left:-3.5%;top:-4.3%;object-fit:fill}
+.latest-cover:focus-visible,.latest-link:focus-visible{outline:2px solid var(--terra);outline-offset:7px}
+.latest-wash{position:absolute;left:8%;top:23%;width:40%;height:56%;z-index:-1;background:radial-gradient(ellipse at 67% 40%,#d8875b55 0 40%,#cc713a22 60%,transparent 70%);border-radius:43% 57% 51% 49%;transform:rotate(-15deg)}
+.latest-note{position:absolute;left:0;bottom:21px;width:42%;height:42%;z-index:-1;background:#e9d7b9;color:#96755266;font:italic 14px/1.8 var(--f-hand);padding:12px;overflow:hidden;transform:rotate(-15deg);box-shadow:0 2px 5px #654a2720;clip-path:polygon(0 2%,12% 0,28% 3%,45% 0,69% 2%,86% 0,100% 4%,98% 30%,100% 55%,98% 81%,100% 100%,70% 98%,50% 100%,29% 98%,2% 100%)}
+.latest-orbit{position:absolute;left:2%;top:28%;width:35%;aspect-ratio:1;border:1px solid #ad8a5966;border-radius:50%;z-index:-1;animation:latest-orbit 45s linear infinite;background:repeating-conic-gradient(from 0deg,transparent 0deg 44deg,#ad8a5933 44deg 45deg)}
+.latest-orbit::after{content:"✧";display:grid;place-items:center;position:absolute;inset:9px;border:1px solid #ad8a5966;border-radius:50%;font-size:90px;color:#ad8a5966}
+.latest-spark{position:absolute;left:19px;top:51px;color:#ad8a59;font-size:32px;animation:latest-spark 4.8s ease-in-out infinite}
+.latest-strokes{position:absolute;top:55px;left:39%;width:35px;height:32px;color:var(--terra);transform:rotate(-7deg);opacity:.9}
+.latest-info{min-width:0;z-index:2}.latest-info .eyebrow{font-size:.55rem;letter-spacing:.13em;margin:0 36px 20px 0;line-height:1.7}
+.latest-hero .latest-info h2{max-width:9ch;font-size:clamp(1.8rem,2.9vw,2.8rem);line-height:1.06;font-weight:500;letter-spacing:-.02em}
+.latest-hero .latest-author{font-size:1.05rem;font-style:italic;margin:8px 0 0}
+.latest-hero #latest-description{font-size:.88rem;line-height:1.4;margin:17px 0 0;max-width:32ch}
+.latest-hero #latest-description::before{content:"";display:block;width:32px;height:1px;background:var(--terra);margin-bottom:12px}
+.latest-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.latest-tag{display:inline-flex;align-items:center;gap:4px;font-size:.67rem;padding:5px 7px;border-radius:20px;background:#bba58720;color:var(--ink);text-decoration:none}
+.latest-tag svg{width:16px;height:16px;stroke:var(--terra);fill:none;stroke-width:1.6}
+.latest-hero .latest-info .btn{position:relative;font-size:.62rem;padding:13px 17px;margin-top:22px;white-space:normal;text-align:center;box-shadow:2px 5px 0 #d8875b55;transition:transform 160ms ease-out,box-shadow 160ms ease-out}
+.latest-info .btn:hover{transform:translateY(-2px);box-shadow:2px 7px 0 #d8875b55}.latest-info .btn:active{transform:scale(.97)}
+.latest-motion{position:absolute;right:14px;top:14px;width:35px;height:35px;border:1.5px solid var(--terra);border-radius:50%;background:transparent;color:var(--terra);font:600 12px Georgia,serif;cursor:pointer;padding:0}
+.latest-motion:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+.latest-feature.is-paused .latest-cover,.latest-feature.is-paused .latest-orbit,.latest-feature.is-paused .latest-spark{animation-play-state:paused}
+@keyframes latest-float{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-6px) rotate(-3deg)}}
+@keyframes latest-orbit{to{transform:rotate(360deg)}}
+@keyframes latest-spark{0%,100%{opacity:.5;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}
+@media(max-width:1050px){.latest-hero{gap:28px}.latest-feature{gap:18px;padding:45px 18px 25px}.latest-label{font-size:.55rem;left:24px}.latest-info .eyebrow{font-size:.48rem;margin-bottom:14px}.latest-hero .latest-info h2{font-size:1.9rem}.latest-tags{gap:4px}.latest-tag{font-size:.62rem;padding:4px 6px}}
+@media(max-width:820px){.latest-hero{grid-template-columns:1fr;padding:32px 0;gap:48px}.latest-feature{max-width:580px;justify-self:center;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);padding:48px 24px 30px;gap:27px}.latest-hero .copy h1{font-size:clamp(2.4rem,7.2vw,3.8rem)}.latest-hero .latest-info h2{font-size:clamp(1.8rem,5.2vw,2.6rem)}.latest-label{font-size:.6rem}.latest-info .eyebrow{font-size:.55rem}.latest-tag{font-size:.7rem}.latest-hero .copy p{max-width:46ch}}
+@media(max-width:420px){.latest-feature{padding:45px 16px 25px;gap:16px;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.latest-hero .latest-info h2{font-size:1.7rem}.latest-info .eyebrow{font-size:.43rem;margin-right:12px}.latest-hero #latest-description{font-size:.8rem}.latest-tags{gap:5px}.latest-tag{font-size:.61rem;padding:4px 6px}.latest-hero .latest-info .btn{font-size:.55rem;padding:12px 10px}.latest-motion{width:30px;height:30px;right:10px;top:10px}.latest-label{font-size:.52rem;left:19px;padding:10px}.latest-strokes{display:none}}
+.latest-carousel-nav{grid-column:1/-1;position:relative;z-index:4;justify-self:end;display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:0}
+.latest-carousel-nav button{display:grid;place-items:center;width:28px;height:28px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--ink);cursor:pointer;font-size:17px;transition:background 160ms ease-out}
+.latest-carousel-nav button:hover{background:#bba58725}
+.latest-carousel-nav button:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+.latest-dots{display:flex;gap:0}
+.latest-dots button{width:26px;height:28px;border:0;border-radius:8px;background:transparent}
+.latest-dots button::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--muted);opacity:.4;transition:width 180ms ease-out,opacity 180ms ease-out}
+.latest-dots button[aria-pressed="true"]::before{width:16px;border-radius:6px;background:var(--terra);opacity:1}
+.latest-carousel-status{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.latest-feature{touch-action:pan-y}
+@media(prefers-reduced-motion:reduce){.latest-cover,.latest-orbit,.latest-spark{animation:none;transition:none}.latest-motion{display:none}}
+</style>
+<script id="seo-structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mymarginalia.net/#website","url":"https://mymarginalia.net/","name":"MyMarginalia","inLanguage":"es","publisher":{"@id":"https://mymarginalia.net/#organization"}},{"@type":"Organization","@id":"https://mymarginalia.net/#organization","name":"MyMarginalia","url":"https://mymarginalia.net/","logo":"https://mymarginalia.net/icon-512.png"},{"@type":"CollectionPage","@id":"https://mymarginalia.net/#webpage","url":"https://mymarginalia.net/","name":"MyMarginalia | Guías de lectura, resúmenes y reflexiones","description":"Descubre MyMarginalia: resúmenes de libros, guías de lectura por capítulos e ideas para reflexionar. Lee a tu ritmo y conserva tus propias notas.","isPartOf":{"@id":"https://mymarginalia.net/#website"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://mymarginalia.net/biblia.html","name":"Guía de lectura de La Biblia"},{"@type":"ListItem","position":2,"url":"https://mymarginalia.net/imitacion-de-cristo.html","name":"Guía de lectura de Imitación de Cristo"},{"@type":"ListItem","position":3,"url":"https://mymarginalia.net/el-poder-del-ahora.html","name":"Guía de lectura de El poder del ahora"},{"@type":"ListItem","position":4,"url":"https://mymarginalia.net/habitos-atomicos.html","name":"Guía de lectura de Hábitos atómicos"},{"@type":"ListItem","position":5,"url":"https://mymarginalia.net/tiny-habits.html","name":"Guía de lectura de Hábitos diminutos"},{"@type":"ListItem","position":6,"url":"https://mymarginalia.net/como-ganar-amigos.html","name":"Guía de lectura de Cómo ganar amigos e influir sobre las personas"},{"@type":"ListItem","position":7,"url":"https://mymarginalia.net/cosas-buenas.html","name":"Guía de lectura de Cómo hacer que te pasen cosas buenas"},{"@type":"ListItem","position":8,"url":"https://mymarginalia.net/tus-zonas-erroneas.html","name":"Guía de lectura de Tus zonas erróneas"},{"@type":"ListItem","position":9,"url":"https://mymarginalia.net/inteligencia-emocional.html","name":"Guía de lectura de Inteligencia emocional"},{"@type":"ListItem","position":10,"url":"https://mymarginalia.net/amar-o-depender.html","name":"Guía de lectura de ¿Amar o depender?"},{"@type":"ListItem","position":11,"url":"https://mymarginalia.net/el-sutil-arte-de-que-te-importe-un-carajo.html","name":"Guía de lectura de El sutil arte de que te importe un carajo"},{"@type":"ListItem","position":12,"url":"https://mymarginalia.net/piensalo-otra-vez.html","name":"Guía de lectura de Piénsalo otra vez"},{"@type":"ListItem","position":13,"url":"https://mymarginalia.net/la-teoria-let-them.html","name":"Guía de lectura de La teoría Let Them"},{"@type":"ListItem","position":14,"url":"https://mymarginalia.net/el-jardin-de-las-mariposas.html","name":"Guía de lectura de El jardín de las mariposas"},{"@type":"ListItem","position":15,"url":"https://mymarginalia.net/la-biblioteca-de-la-medianoche.html","name":"Guía de lectura de La biblioteca de la medianoche"},{"@type":"ListItem","position":16,"url":"https://mymarginalia.net/el-ultimo-secreto.html","name":"Guía de lectura de El último secreto"},{"@type":"ListItem","position":17,"url":"https://mymarginalia.net/la-paciente-silenciosa.html","name":"Guía de lectura de La paciente silenciosa"}]}}]}</script>
+<link rel="stylesheet" href="legibility.css">
+</head>
+<body>
+
+<!-- ================= ENTRADA ================= -->
+<div id="intro" role="dialog" aria-label="Entrada a Marginalia">
+  <div id="calm" aria-hidden="true">
+    <p>Busca un lugar tranquilo.</p>
+    <p>Respira.</p>
+    <small>Marginalia</small>
+  </div>
+  <div id="stage">
+    <svg id="breath" viewBox="0 0 100 100" aria-hidden="true">
+      <circle id="c2" cx="50" cy="50" r="48" fill="none" stroke="var(--terra)" stroke-width=".25" stroke-dasharray="1 1.4"/>
+      <circle id="c1" cx="50" cy="50" r="48" fill="var(--terra)" fill-opacity=".07" stroke="var(--terra)" stroke-width=".35"/>
+    </svg>
+    <div class="note n1" style="--r:-3deg" data-t=".05">
+      <p>La vida siempre es <span class="mark ci">ahora</span>.</p>
+      <cite>El Poder del Ahora</cite><span class="hand">releer ↓</span>
+    </div>
+    <div class="note n2" style="--r:2.5deg" data-t=".25">
+      <p>Pequeños cambios, <span class="mark ul">grandes resultados</span>.</p>
+      <cite>Hábitos atómicos</cite><span class="hand">1% diario ✓</span>
+    </div>
+    <div class="note n3" style="--r:1.5deg" data-t=".45">
+      <p>No critiques, no condenes, <span class="mark hl">no te quejes</span>.</p>
+      <cite>Cómo ganar amigos e influir sobre las personas</cite><span class="hand">¡lo intento!</span>
+    </div>
+    <div class="note n4" style="--r:-2deg" data-t=".6">
+      <p>Los libros nos dan <span class="mark ul">un lugar donde ir</span>, incluso cuando tenemos que quedarnos.</p>
+      <cite>Mason Cooley</cite><span class="hand">sí →</span>
+    </div>
+    <div class="center">
+      <div class="kicker">Guías visuales de lectura</div>
+      <div id="word" aria-label="Marginalia"></div>
+      <div id="breathLabel">inhala…</div>
+      <div class="sub">Leer también es una forma de habitar el mundo.</div>
+      <div id="hint">
+        <div class="say">Mantén presionado el botón para entrar</div>
+        <button id="key" type="button" aria-label="Entrar a Marginalia" disabled></button>
+        <div class="after only-key">o la barra espaciadora</div>
+      </div>
+    </div>
+  </div>
+  <div class="intro-controls">
+    <p id="intro-audio-status" role="status" aria-live="polite"></p>
+    <button class="corner" id="snd" type="button" aria-pressed="false">Activar sonido</button>
+    <button class="corner" id="skip" type="button">Saltar intro →</button>
+  </div>
+</div>
+<div id="blot" aria-hidden="true"></div>
+
+<!-- ================= SITIO ================= -->
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="MyMarginalia, inicio">
+      <span class="logo" id="logo" aria-hidden="true"></span>
+      <small>Libros, ideas y notas que vale la pena conservar</small>
+    </a>
+    <nav class="main" aria-label="Principal">
+      <a href="#inicio" class="on">Inicio</a>
+      <a href="#libros">Libros</a>
+      <a href="#pregunta">Pregunta del día</a>
+    </nav>
+    <div class="tools">
+      <input class="search" id="search" type="search" placeholder="Buscar libro o autor" aria-label="Buscar libro o autor">
+      <button class="icon-btn" id="searchBtn" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+      </button>
+      <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap layout" id="inicio">
+  <div>
+    <section class="hero latest-hero" aria-label="Novedades de la biblioteca">
+      <div class="copy" data-reveal>
+        <span class="eyebrow">MyMarginalia · Guías de lectura</span>
+        <h1>Resúmenes de libros,<br>ideas para <em><span class="mark ul">reflexionar.</span></em></h1>
+        <p>La marginalia reúne notas y reflexiones al margen de una lectura. En MyMarginalia encontrarás resúmenes de libros y guías por capítulos para comprender sus ideas y conservar tus propias notas, a tu ritmo.</p>
+        <a class="btn" href="#libros">Explorar las guías <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="latest-feature" role="region" aria-roledescription="carrusel" aria-label="Libros nuevos">
+        <span class="latest-label">Nuevo en la biblioteca</span>
+        <span class="latest-wash" aria-hidden="true"></span>
+        <span class="latest-note" aria-hidden="true">Entre páginas, una idea…<br>lo que queda al leer,<br>una historia, un secreto.<br>Leer, imaginar, recordar…</span>
+        <svg class="latest-strokes" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 25 24 3M18 31l15-9M4 14l2-8"/></svg>
+        <span class="latest-orbit" aria-hidden="true"></span>
+        <span class="latest-spark" aria-hidden="true">✧</span>
+        <button class="latest-motion" type="button" aria-label="Pausar carrusel y animación" title="Pausar carrusel y animación" aria-pressed="false">Ⅱ</button>
+        <a class="latest-cover" id="latest-cover" href="la-paciente-silenciosa.html" aria-label="Abrir la nueva guía de La paciente silenciosa"></a>
+        <div class="latest-info">
+          <span class="eyebrow">Nueva guía · <span id="latest-category">Novelas</span></span>
+          <h2 id="latest-title">La paciente silenciosa</h2>
+          <p class="latest-author" id="latest-author">Alex Michaelides</p>
+          <p id="latest-description">Resumen, personajes principales y claves para entender la historia.</p>
+          <div class="latest-tags" aria-label="Contenido de la guía">
+            <span class="latest-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg>Resumen</span>
+            <span class="latest-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="8" r="2.5"/><path d="M3 21v-4a6 6 0 0 1 12 0v4zm12-9c4 0 6 2 6 5v4h-4"/></svg><span id="latest-people-label">Personajes</span></span>
+            <span class="latest-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m16 8-3 5-5 3 3-5z"/></svg>Temas</span>
+          </div>
+          <a class="btn" id="latest-link" href="la-paciente-silenciosa.html">Leer la guía completa <span aria-hidden="true">→</span></a>
+        </div>
+        <nav class="latest-carousel-nav" aria-label="Elegir libro nuevo">
+          <button id="latest-prev" type="button" aria-label="Libro nuevo anterior">‹</button>
+          <div class="latest-dots" id="latest-dots"></div>
+          <button id="latest-next" type="button" aria-label="Siguiente libro nuevo">›</button>
+        </nav>
+        <span class="latest-carousel-status" id="latest-status" aria-live="polite" aria-atomic="true"></span>
+      </div>
+    </section>
+
+
+    <section id="libros" aria-labelledby="lib-h">
+      <div class="section-head" data-reveal>
+        <h2 id="lib-h">Explora las guías de <span class="mark ul">lectura</span></h2>
+        <p>Novelas, hábitos, psicología y espiritualidad: resúmenes, personajes e ideas para acompañar tu lectura.</p>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filtrar por tema"></div>
+      <div class="grid" id="grid"><!-- seo-catalog:start -->
+
+    <article class="book" style="--i:0">
+      <a class="cover" href="biblia.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: La Biblia, Diversos autores">
+    <rect width="200" height="300" fill="#344f4b"/>
+    <g transform="translate(0,24)"><path d="M38 128q31-14 62 3 31-17 62-3v87q-31-13-62 3-31-16-62-3z" fill="none" stroke="#e9d9b8" stroke-width="2.5"/><path d="M100 131v87M52 148q17-5 34 3M52 162q17-5 34 3M114 151q17-8 34-3M114 165q17-8 34-3" fill="none" stroke="#e9d9b8" stroke-width="1.5"/><path d="M95 225v23l5-4 5 4v-23" fill="#cb9972"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#344f4b"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#efe6d6" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">LA BIBLIA</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#efe6d6" text-anchor="middle" letter-spacing=".5" opacity=".85">Diversos autores</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Espiritualidad</div>
+        <h3>La Biblia</h3>
+        <div class="au">Diversos autores</div>
+        <p class="blurb">Una guía para empezar a leer la Biblia católica, conocer cada uno de sus libros y reflexionar con calma.</p>
+        <div class="row"><a class="btn" href="biblia.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:1">
+      <a class="cover" href="imitacion-de-cristo.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: Imitación de Cristo, Tomás de Kempis">
+    <rect width="200" height="300" fill="#66513e"/>
+    <g transform="translate(0,24)"><path d="M55 238V132a45 45 0 0 1 90 0v106" fill="#9b7957"/><path d="M67 238V132a33 33 0 0 1 66 0v106" fill="#e2cba4"/><path d="M100 115v81M80 140h40" fill="none" stroke="#66513e" stroke-width="5"/><path d="M43 238h114M35 247h130" stroke="#c5a67b" stroke-width="3"/><path d="M77 214q12-7 23 0 12-7 23 0v18q-12-6-23 0-11-6-23 0z" fill="#f4e7cc"/><path d="M100 214v18" stroke="#9b7957"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#66513e"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#f4e7cc" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">IMITACIÓN DE</text><text x="100" y="46" font-size="12.5">CRISTO</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#f4e7cc" text-anchor="middle" letter-spacing=".5" opacity=".85">Tomás de Kempis</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Espiritualidad</div>
+        <h3>Imitación de Cristo</h3>
+        <div class="au">Tomás de Kempis</div>
+        <p class="blurb">Los 114 capítulos de un clásico de espiritualidad cristiana: humildad, oración, vida interior y Eucaristía.</p>
+        <div class="row"><a class="btn" href="imitacion-de-cristo.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:2">
+      <a class="cover" href="el-poder-del-ahora.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: El Poder del Ahora, Eckhart Tolle">
+    <rect width="200" height="300" fill="#e9e1d3"/>
+    <g transform="translate(0,-24)"><circle cx="100" cy="92" r="26" fill="#c77e62"/>
+      <path d="M0 170c30-30 50-40 80-26s50 4 70-14 40-10 50-4v74H0z" fill="#9aa88f"/>
+      <path d="M0 190c40-26 70-10 100-18s60-26 100-8v56H0z" fill="#d1a18a"/>
+      <path d="M0 205c30-10 60-4 90-12s70-16 110-2v49H0z" fill="#6e8166"/></g>
+    <rect x="0" y="222" width="200" height="78" fill="#e9e1d3"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#4a4038" text-anchor="middle" letter-spacing="2"><text x="100" y="230" font-size="12.5">EL PODER DEL</text><text x="100" y="246" font-size="12.5">AHORA</text></g>
+    <text x="100" y="286" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#4a4038" text-anchor="middle" letter-spacing=".5" opacity=".85">Eckhart Tolle</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Espiritualidad</div>
+        <h3>El poder del ahora</h3>
+        <div class="au">Eckhart Tolle</div>
+        <p class="blurb">Una invitación a vivir el presente como el único lugar donde la vida realmente sucede.</p>
+        <div class="row"><a class="btn" href="el-poder-del-ahora.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:3">
+      <a class="cover" href="habitos-atomicos.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: Hábitos atómicos, James Clear">
+    <rect width="200" height="300" fill="#e6ddcd"/>
+    <g transform="translate(0,24)"><path d="M100 250V96" stroke="#5f7353" stroke-width="2.5"/>
+      <path d="M100 210c-42 -4 -58 -26 -60 -46 30 -2 52 14 60 46z" fill="#6f8660"/><path d="M100 198c42 -4 58 -26 60 -46 -30 -2 -52 14 -60 46z" fill="#5d7250"/><path d="M100 178c-36.96 -4 -51.04 -22.88 -52.8 -40.48 26.4 -2 45.76 12.32 52.8 40.48z" fill="#6f8660"/><path d="M100 166c36.96 -4 51.04 -22.88 52.8 -40.48 -26.4 -2 -45.76 12.32 -52.8 40.48z" fill="#5d7250"/><path d="M100 146c-31.92 -4 -44.08 -19.76 -45.6 -34.96 22.8 -2 39.52 10.64 45.6 34.96z" fill="#6f8660"/><path d="M100 134c31.92 -4 44.08 -19.76 45.6 -34.96 -22.8 -2 -39.52 10.64 -45.6 34.96z" fill="#5d7250"/><path d="M100 114c-26.88 -4 -37.12 -16.64 -38.4 -29.44 19.2 -2 33.28 8.96 38.4 29.44z" fill="#6f8660"/><path d="M100 102c26.88 -4 37.12 -16.64 38.4 -29.44 -19.2 -2 -33.28 8.96 -38.4 29.44z" fill="#5d7250"/>
+      <path d="M100 100c-8-14-4-30 0-38 4 8 8 24 0 38z" fill="#7c9270"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#e6ddcd"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#4a4038" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">HÁBITOS</text><text x="100" y="46" font-size="12.5">ATÓMICOS</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#4a4038" text-anchor="middle" letter-spacing=".5" opacity=".85">James Clear</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Hábitos</div>
+        <h3>Hábitos atómicos</h3>
+        <div class="au">James Clear</div>
+        <p class="blurb">Pequeños cambios, resultados extraordinarios: cómo construir buenos hábitos y romper los malos.</p>
+        <div class="row"><a class="btn" href="habitos-atomicos.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:4">
+      <a class="cover" href="tiny-habits.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: Hábitos diminutos, BJ Fogg">
+    <rect width="200" height="300" fill="#dce2ce"/>
+    <g transform="translate(0,24)"><path d="M35 233h130" stroke="#859478" stroke-width="2"/>
+      <ellipse cx="100" cy="222" rx="43" ry="11" fill="#b6c3a3"/>
+      <path d="M100 220V159" stroke="#4d6a4d" stroke-width="3" fill="none"/>
+      <path d="M100 183c-29-1-44-18-45-36 26-2 45 13 45 36z" fill="#7f9568"/>
+      <path d="M100 165c29-1 44-18 45-37-25-1-44 14-45 37z" fill="#58734d"/>
+      <path d="M100 159c-7-13-4-26 1-36 5 13 5 25-1 36z" fill="#94a67e"/>
+      <circle cx="57" cy="235" r="3" fill="#b68d62"/><circle cx="72" cy="243" r="4" fill="#b68d62"/><circle cx="90" cy="247" r="5" fill="#b68d62"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#dce2ce"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#354b3b" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">HÁBITOS</text><text x="100" y="46" font-size="12.5">DIMINUTOS</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#354b3b" text-anchor="middle" letter-spacing=".5" opacity=".85">BJ Fogg</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Hábitos</div>
+        <h3>Hábitos diminutos</h3>
+        <div class="au">BJ Fogg</div>
+        <p class="blurb">Ocho capítulos para empezar con acciones pequeñas, unirlas a tu rutina y reconocer cada avance.</p>
+        <div class="row"><a class="btn" href="tiny-habits.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:5">
+      <a class="cover" href="como-ganar-amigos.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: Cómo ganar amigos e influir sobre las personas, Dale Carnegie">
+    <rect width="200" height="300" fill="#2f3b4a"/>
+    <g transform="translate(0,24)"><circle cx="0" cy="6" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="47" cy="89" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="94" cy="22" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="141" cy="105" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="188" cy="38" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="35" cy="121" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="82" cy="54" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="129" cy="137" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="176" cy="70" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="23" cy="153" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="70" cy="86" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="117" cy="19" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="164" cy="102" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="11" cy="35" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="58" cy="118" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="105" cy="51" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="152" cy="134" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="199" cy="67" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="46" cy="150" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="93" cy="83" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="140" cy="16" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="187" cy="99" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="34" cy="32" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="81" cy="115" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="128" cy="48" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="175" cy="131" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="22" cy="64" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="69" cy="147" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="116" cy="80" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="163" cy="13" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="10" cy="96" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="57" cy="29" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="104" cy="112" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="151" cy="45" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="198" cy="128" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="45" cy="61" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="92" cy="144" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="139" cy="77" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="186" cy="10" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="33" cy="93" r="1.3" fill="#efe6d6" opacity=".7"/>
+      <circle cx="80" cy="130" r="30" fill="none" stroke="#e8b89c" stroke-width="2.5"/><circle cx="120" cy="130" r="30" fill="none" stroke="#efe6d6" stroke-width="2.5"/>
+      <path d="M0 230c40-30 70-28 100-12s60 8 100-18v100H0z" fill="#46566a"/><path d="M0 250c50-14 90 2 130-6s50-10 70-6v62H0z" fill="#d1a18a" opacity=".85"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#2f3b4a"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#efe6d6" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="11">CÓMO GANAR</text><text x="100" y="46" font-size="11">AMIGOS E</text><text x="100" y="62" font-size="11">INFLUIR SOBRE</text><text x="100" y="78" font-size="11">LAS PERSONAS</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#efe6d6" text-anchor="middle" letter-spacing=".5" opacity=".85">Dale Carnegie</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Relaciones</div>
+        <h3>Cómo ganar amigos e influir sobre las personas</h3>
+        <div class="au">Dale Carnegie</div>
+        <p class="blurb">El clásico sobre escuchar de verdad, reconocer a los demás y tratar a la gente con respeto.</p>
+        <div class="row"><a class="btn" href="como-ganar-amigos.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:6">
+      <a class="cover" href="cosas-buenas.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: Cómo hacer que te pasen cosas buenas, Marian Rojas Estapé">
+    <rect width="200" height="300" fill="#f1e3cf"/>
+    <g transform="translate(0,24)"><circle cx="100" cy="150" r="30" fill="#e7b36a"/>
+      <g stroke="#d99a5a" stroke-width="2" stroke-linecap="round"><path d="M142 150L158 150"/><path d="M136.37306695894642 171L150.22947341949745 179"/><path d="M121 186.37306695894642L129 200.22947341949742"/><path d="M100 192L100 208"/><path d="M79.00000000000001 186.37306695894642L71.00000000000001 200.22947341949745"/><path d="M63.626933041053576 171L49.770526580502555 179"/><path d="M58 150L42 150"/><path d="M63.62693304105357 129L49.77052658050255 121.00000000000001"/><path d="M78.99999999999999 113.62693304105358L70.99999999999997 99.77052658050258"/><path d="M99.99999999999999 108L99.99999999999999 92"/><path d="M121 113.62693304105358L129 99.77052658050256"/><path d="M136.37306695894642 128.99999999999997L150.22947341949742 120.99999999999997"/></g>
+      <path d="M0 240c40-20 80-24 120-10s60 4 80-4v74H0z" fill="#c9a27b"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#f1e3cf"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#5a4633" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="11">CÓMO HACER</text><text x="100" y="46" font-size="11">QUE TE PASEN</text><text x="100" y="62" font-size="11">COSAS BUENAS</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#5a4633" text-anchor="middle" letter-spacing=".5" opacity=".85">Marian Rojas Estapé</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Bienestar</div>
+        <h3>Cómo hacer que te pasen cosas buenas</h3>
+        <div class="au">Marian Rojas Estapé</div>
+        <p class="blurb">Entender la mente y el cuerpo para vivir con más calma, optimismo y cuidado propio.</p>
+        <div class="row"><a class="btn" href="cosas-buenas.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:7">
+      <a class="cover" href="tus-zonas-erroneas.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: Tus zonas erróneas, Wayne W. Dyer">
+    <rect width="200" height="300" fill="#ddd3c5"/>
+    <g transform="translate(0,24)"><path d="M52 250V140a48 48 0 0 1 96 0v110z" fill="#c9b49a"/>
+      <path d="M68 250V144a32 32 0 0 1 64 0v106z" fill="#f2e9dc"/>
+      <rect x="70" y="214" width="60" height="8" fill="#d8c6ae"/><rect x="76" y="222" width="48" height="8" fill="#d8c6ae"/><rect x="82" y="230" width="36" height="8" fill="#d8c6ae"/><rect x="88" y="238" width="24" height="8" fill="#d8c6ae"/><rect x="94" y="246" width="12" height="8" fill="#d8c6ae"/>
+      <path d="M140 120l40-30v160h-32z" fill="#b89f82" opacity=".6"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#ddd3c5"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#4a3f35" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">TUS ZONAS</text><text x="100" y="46" font-size="12.5">ERRÓNEAS</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#4a3f35" text-anchor="middle" letter-spacing=".5" opacity=".85">Wayne W. Dyer</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Psicología</div>
+        <h3>Tus zonas erróneas</h3>
+        <div class="au">Wayne W. Dyer</div>
+        <p class="blurb">Reconocer las trampas mentales que nos frenan y tomar las riendas de nuestras decisiones.</p>
+        <div class="row"><a class="btn" href="tus-zonas-erroneas.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:8">
+      <a class="cover" href="inteligencia-emocional.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: Inteligencia emocional, Daniel Goleman">
+    <rect width="200" height="300" fill="#c9d5cd"/>
+    <g transform="translate(0,24)"><path d="M99 100c-20-28-57-4-44 21-26 13-14 52 9 51-4 29 32 38 36 15V99m1 0c20-27 57-3 44 22 26 13 14 52-9 51 4 29-32 38-35 15" fill="none" stroke="#537969" stroke-width="3"/><path d="M70 129q18 0 20 17M127 147q-18 0-16 18M71 167q8-13 17-11" fill="none" stroke="#8b5f4d" stroke-width="2.5"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#c9d5cd"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#263e39" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">INTELIGENCIA</text><text x="100" y="46" font-size="12.5">EMOCIONAL</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#263e39" text-anchor="middle" letter-spacing=".5" opacity=".85">Daniel Goleman</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">★ Lectura destacada</div>
+        <h3>Inteligencia emocional</h3>
+        <div class="au">Daniel Goleman</div>
+        <p class="blurb">Dieciséis capítulos para entender las emociones, la empatía y las habilidades que ayudan a convivir.</p>
+        <div class="row"><a class="btn" href="inteligencia-emocional.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:9">
+      <a class="cover" href="amar-o-depender.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: ¿Amar o depender?, Walter Riso">
+    <rect width="200" height="300" fill="#e8d4cc"/>
+    <g transform="translate(0,24)"><path d="M100 212s-66-41-66-83c0-38 48-43 66-13 18-30 66-25 66 13 0 42-66 83-66 83z" fill="#ba7c72"/><path d="M100 118v87M71 131q-15 12-7 30" fill="none" stroke="#f1dace" stroke-width="2.5"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#e8d4cc"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#593d3b" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">¿AMAR O</text><text x="100" y="46" font-size="12.5">DEPENDER?</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#593d3b" text-anchor="middle" letter-spacing=".5" opacity=".85">Walter Riso</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Relaciones</div>
+        <h3>¿Amar o depender?</h3>
+        <div class="au">Walter Riso</div>
+        <p class="blurb">Las tres partes de Walter Riso sobre dependencia afectiva, autonomía y amor con respeto propio.</p>
+        <div class="row"><a class="btn" href="amar-o-depender.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:10">
+      <a class="cover" href="el-sutil-arte-de-que-te-importe-un-carajo.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: El sutil arte de que te importe un carajo, Mark Manson">
+    <rect width="200" height="300" fill="#b85632"/>
+    <g transform="translate(0,24)"><circle cx="100" cy="173" r="57" fill="none" stroke="#f6d7ae" stroke-width="2"/><circle cx="100" cy="173" r="47" fill="none" stroke="#f6d7ae" stroke-width="1" stroke-dasharray="2 7"/><path d="M119 140 106 179 81 206 94 167z" fill="#f4e0bc"/><path d="m119 140-25 27 12 12z" fill="#552c24"/><circle cx="100" cy="173" r="4" fill="#b85632"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#b85632"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#fff2de" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="11">EL SUTIL ARTE</text><text x="100" y="46" font-size="11">DE QUE TE</text><text x="100" y="62" font-size="11">IMPORTE UN</text><text x="100" y="78" font-size="11">CARAJO</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#fff2de" text-anchor="middle" letter-spacing=".5" opacity=".85">Mark Manson</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Bienestar</div>
+        <h3>El sutil arte de que te importe un carajo</h3>
+        <div class="au">Mark Manson</div>
+        <p class="blurb">Nueve capítulos para revisar tus valores, elegir lo que importa y afrontar los problemas de la vida.</p>
+        <div class="row"><a class="btn" href="el-sutil-arte-de-que-te-importe-un-carajo.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:11">
+      <a class="cover" href="piensalo-otra-vez.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: Piénsalo otra vez, Adam Grant">
+    <rect width="200" height="300" fill="#2e4a5c"/>
+    <g transform="translate(0,24)"><circle cx="100" cy="160" r="38" fill="none" stroke="#f2e9d8" stroke-width="2.5" stroke-dasharray="190 50" transform="rotate(-60 100 160)"/><path d="M121 128l10-2-4 10z" fill="#f2e9d8"/><path d="M79 193l-10 2 4-10z" fill="#f2e9d8"/><path d="M100 142c-8 0-14 6-14 13 0 6 4 8 6 12 1 2 1 4 1 6h14c0-2 0-4 1-6 2-4 6-6 6-12 0-7-6-13-14-13z" fill="#e8b45a"/><rect x="93" y="176" width="14" height="4" rx="2" fill="#f2e9d8"/><rect x="95" y="182" width="10" height="3" rx="1.5" fill="#f2e9d8"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#2e4a5c"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#f2e9d8" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">PIÉNSALO OTRA</text><text x="100" y="46" font-size="12.5">VEZ</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#f2e9d8" text-anchor="middle" letter-spacing=".5" opacity=".85">Adam Grant</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Psicología</div>
+        <h3>Piénsalo otra vez</h3>
+        <div class="au">Adam Grant</div>
+        <p class="blurb">Once capítulos para dudar de lo que crees, cambiar de opinión sin miedo y ayudar a otros a repensar.</p>
+        <div class="row"><a class="btn" href="piensalo-otra-vez.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:12">
+      <a class="cover" href="la-teoria-let-them.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: La teoría Let Them, Mel Robbins">
+    <rect width="200" height="300" fill="#514454"/>
+    <g transform="translate(0,24)"><circle cx="0" cy="6" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="47" cy="89" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="94" cy="22" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="141" cy="105" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="188" cy="38" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="35" cy="121" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="82" cy="54" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="129" cy="137" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="176" cy="70" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="23" cy="153" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="70" cy="86" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="117" cy="19" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="164" cy="102" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="11" cy="35" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="58" cy="118" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="105" cy="51" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="152" cy="134" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="199" cy="67" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="46" cy="150" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="93" cy="83" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="140" cy="16" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="187" cy="99" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="34" cy="32" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="81" cy="115" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="128" cy="48" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="175" cy="131" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="22" cy="64" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="69" cy="147" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="116" cy="80" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="163" cy="13" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="10" cy="96" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="57" cy="29" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="104" cy="112" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="151" cy="45" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="198" cy="128" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="45" cy="61" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="92" cy="144" r="1.3" fill="#efe6d6" opacity=".7"/><circle cx="139" cy="77" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="186" cy="10" r="0.8" fill="#efe6d6" opacity=".7"/><circle cx="33" cy="93" r="1.3" fill="#efe6d6" opacity=".7"/>
+      <circle cx="80" cy="130" r="30" fill="none" stroke="#e8b89c" stroke-width="2.5"/><circle cx="120" cy="130" r="30" fill="none" stroke="#efe6d6" stroke-width="2.5"/>
+      <path d="M0 230c40-30 70-28 100-12s60 8 100-18v100H0z" fill="#46566a"/><path d="M0 250c50-14 90 2 130-6s50-10 70-6v62H0z" fill="#d1a18a" opacity=".85"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#514454"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#f4e9de" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">LA TEORÍA LET</text><text x="100" y="46" font-size="12.5">THEM</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#f4e9de" text-anchor="middle" letter-spacing=".5" opacity=".85">Mel Robbins</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Relaciones</div>
+        <h3>La teoría Let Them</h3>
+        <div class="au">Mel Robbins</div>
+        <p class="blurb">Veinte capítulos para soltar lo que hacen los demás y elegir cómo responder, cuidar tus límites y construir tus relaciones.</p>
+        <div class="row"><a class="btn" href="la-teoria-let-them.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:13">
+      <a class="cover" href="el-jardin-de-las-mariposas.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: El jardín de las mariposas, Dot Hutchison">
+    <rect width="200" height="300" fill="#1d463d"/>
+    <g transform="translate(0,24)"><rect x="50" y="102" width="100" height="124" rx="3" fill="#f1eadf" fill-opacity=".06" stroke="#ad874f" stroke-width="2"/><rect x="58" y="110" width="84" height="108" fill="none" stroke="#ad874f" stroke-opacity=".45"/><path d="M66 214l26-36M110 138l24-26" stroke="#f1eadf" stroke-opacity=".18" stroke-width="2"/><g transform="translate(62 124) scale(.76)"><path d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z" fill="#c98a96"/><path d="M50 34v30" stroke="#f1eadf" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(70 194) scale(.2) rotate(-14 50 40)"><path d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z" fill="#d7b777"/></g><g transform="translate(112 192) scale(.24) rotate(12 50 40)"><path d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z" fill="#9cc2b2"/></g></g>
+    <rect x="0" y="270" width="200" height="30" fill="#1d463d"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#f1eadf" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">EL JARDÍN DE</text><text x="100" y="46" font-size="12.5">LAS MARIPOSAS</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#f1eadf" text-anchor="middle" letter-spacing=".5" opacity=".85">Dot Hutchison</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Novelas</div>
+        <h3>El jardín de las mariposas</h3>
+        <div class="au">Dot Hutchison</div>
+        <p class="blurb">Una guía para seguir la novela sin perderte entre nombres y recuerdos, con el final explicado oculto para evitar spoilers.</p>
+        <div class="row"><a class="btn" href="el-jardin-de-las-mariposas.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:14">
+      <a class="cover" href="la-biblioteca-de-la-medianoche.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: La biblioteca de la medianoche, Matt Haig">
+    <rect width="200" height="300" fill="#1f2a44"/>
+    <g transform="translate(0,24)"><circle cx="100" cy="140" r="40" fill="none" stroke="#efe6d6" stroke-width="2.5"/><circle cx="100" cy="140" r="33" fill="none" stroke="#efe6d6" stroke-opacity=".3" stroke-dasharray="2 9"/><path d="M100 140V112" stroke="#d7b777" stroke-width="3.5" stroke-linecap="round"/><path d="M100 140V116" stroke="#efe6d6" stroke-width="1.6" stroke-linecap="round" transform="rotate(4 100 140)"/><circle cx="100" cy="140" r="3" fill="#d7b777"/><circle cx="48" cy="104" r="1.4" fill="#efe6d6" opacity=".7"/><circle cx="156" cy="112" r="1.2" fill="#efe6d6" opacity=".6"/><circle cx="146" cy="92" r="1.8" fill="#d7b777"/><rect x="46" y="196" width="10" height="30" fill="#4f7a5f"/><rect x="60" y="190" width="10" height="36" fill="#c9a45c"/><rect x="74" y="184" width="10" height="42" fill="#3c6b56"/><rect x="88" y="196" width="10" height="30" fill="#8a5a6a"/><rect x="102" y="190" width="10" height="36" fill="#5d8a6f"/><rect x="116" y="184" width="10" height="42" fill="#c9a45c"/><rect x="130" y="196" width="10" height="30" fill="#46705c"/><rect x="144" y="190" width="10" height="36" fill="#a26b4f"/><path d="M40 228h120" stroke="#efe6d6" stroke-opacity=".5" stroke-width="2"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#1f2a44"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#efe6d6" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="11">LA BIBLIOTECA</text><text x="100" y="46" font-size="11">DE LA</text><text x="100" y="62" font-size="11">MEDIANOCHE</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#efe6d6" text-anchor="middle" letter-spacing=".5" opacity=".85">Matt Haig</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Novelas</div>
+        <h3>La biblioteca de la medianoche</h3>
+        <div class="au">Matt Haig</div>
+        <p class="blurb">Una guía para entrar a la novela desde cero: las reglas de la Biblioteca, sus personajes y las vidas posibles de Nora, con el final oculto.</p>
+        <div class="row"><a class="btn" href="la-biblioteca-de-la-medianoche.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:15">
+      <a class="cover" href="el-ultimo-secreto.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: El último secreto, Dan Brown">
+    <rect width="200" height="300" fill="#57352f"/>
+    <g transform="translate(0,24)"><circle cx="100" cy="173" r="57" fill="none" stroke="#f6d7ae" stroke-width="2"/><circle cx="100" cy="173" r="47" fill="none" stroke="#f6d7ae" stroke-width="1" stroke-dasharray="2 7"/><path d="M119 140 106 179 81 206 94 167z" fill="#f4e0bc"/><path d="m119 140-25 27 12 12z" fill="#552c24"/><circle cx="100" cy="173" r="4" fill="#b85632"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#57352f"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#f2e6d4" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">EL ÚLTIMO</text><text x="100" y="46" font-size="12.5">SECRETO</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#f2e6d4" text-anchor="middle" letter-spacing=".5" opacity=".85">Dan Brown</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Novelas</div>
+        <h3>El último secreto</h3>
+        <div class="au">Dan Brown</div>
+        <p class="blurb">Una guía para seguir el misterio de Praga, entender a sus personajes y explorar las preguntas sobre la conciencia, con el final explicado oculto.</p>
+        <div class="row"><a class="btn" href="el-ultimo-secreto.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+    <article class="book" style="--i:16">
+      <a class="cover" href="la-paciente-silenciosa.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 200 300" role="img" aria-label="Portada: La paciente silenciosa, Alex Michaelides">
+    <rect width="200" height="300" fill="#d8cbb4"/>
+    <g transform="translate(0,24)"><path d="M100 112c-35 0-53 30-43 68 6 25 19 50 43 50s37-25 43-50c10-38-8-68-43-68Z" fill="#eee5d4" stroke="#8e7866" stroke-width="2"/><path d="m69 156 18 2m26 0 18-2M99 162l-5 29 12 1M78 207l44-4" fill="none" stroke="#8e7866" stroke-width="3"/><path d="m77 198 4 17m9-18 3 17m10-18 3 17m9-18 3 17" stroke="#934b3c" stroke-width="2"/></g>
+    <rect x="0" y="270" width="200" height="30" fill="#d8cbb4"/>
+    <g font-family="Fraunces,Georgia,serif" fill="#483b32" text-anchor="middle" letter-spacing="2"><text x="100" y="30" font-size="12.5">LA PACIENTE</text><text x="100" y="46" font-size="12.5">SILENCIOSA</text></g>
+    <text x="100" y="288" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="#483b32" text-anchor="middle" letter-spacing=".5" opacity=".85">Alex Michaelides</text>
+  </svg></a>
+      <div class="book-info">
+        <div class="book-category">Novelas</div>
+        <h3>La paciente silenciosa</h3>
+        <div class="au">Alex Michaelides</div>
+        <p class="blurb">Una pintora deja de hablar después de un crimen. Recorre el misterio, conoce a sus personajes y descubre las claves de las dos voces de la novela.</p>
+        <div class="row"><a class="btn" href="la-paciente-silenciosa.html">Ver guía <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></div>
+      </div>
+    </article>
+<!-- seo-catalog:end --></div>
+      <div class="mg-feedback-invite">
+        <p>¿Hay un libro que te gustaría encontrar aquí?</p>
+        <button class="btn" id="mg-feedback-open" data-feedback-kind="suggestion" type="button" aria-haspopup="dialog">Sugerir un libro</button>
+      </div>
+    </section>
+  </div>
+
+  <aside class="side">
+    <section class="panel" id="pregunta" aria-labelledby="q-h" data-reveal>
+      <h2 id="q-h">Pregunta del día <button class="link" id="nextQ">otra →</button></h2>
+      <div class="q-text" id="qWrap"><span class="q-mark">&ldquo;</span><span id="qText"></span></div>
+      <div class="q-src" id="qSrc"></div>
+    </section>
+
+    <section class="panel quote-card" aria-label="Cita" data-reveal style="transition-delay:.15s">
+      <div class="sig" aria-hidden="true">nota al margen</div>
+      <blockquote>&ldquo;Los libros nos dan <span class="mark hl">un lugar donde ir</span>, incluso cuando tenemos que quedarnos.&rdquo;</blockquote>
+      <div class="q-src">Mason Cooley</div>
+      <hr>
+      <span class="eyebrow">Pequeñas notas. Grandes cambios.</span>
+    </section>
+  </aside>
+</main>
+
+<footer class="site-credits" id="creditos">
+  <div class="wrap">
+    <p class="credits-author"><strong>Guías elaboradas por:</strong> MyMarginalia</p>
+    <p class="credits-note">Estas son guías independientes escritas con palabras propias. Las explicaciones, ejemplos, preguntas y actividades fueron creados para Marginalia. No reproducen el texto de los libros, no sustituyen las obras originales y no tienen relación con sus autores ni con las editoriales.</p>
+    <p class="credits-copyright">© 2026 MyMarginalia. Todos los derechos reservados.</p>
+    <button class="again" id="replay-intro" type="button">↺ Volver a ver la intro</button>
+  </div>
+</footer>
+
+<script src="intro-audio.js"></script>
+<script>
+document.getElementById('replay-intro').addEventListener('click', () => {
+  const url = new URL(location.href);
+  url.hash = '';
+  url.searchParams.set('intro', '1');
+  location.assign(url.href);
+});
+
+/* ================= DATOS Y SITIO ================= */
+const BOOKS = [
+  { id:"biblia", file:"biblia.html", title:"La Biblia", full:"La Biblia", author:"Diversos autores", cat:"Espiritualidad",
+    blurb:"Una guía para empezar a leer la Biblia católica, conocer cada uno de sus libros y reflexionar con calma.", motto:"Lee, comprende, reflexiona",
+    q:"¿Qué pasaje te gustaría comprender mejor?",
+    cover:{bg:"#344f4b", ink:"#efe6d6", art:"scripture"} },
+  {"id": "ic", "file": "imitacion-de-cristo.html", "title": "Imitación de Cristo", "full": "Imitación de Cristo", "author": "Tomás de Kempis", "cat": "Espiritualidad", "blurb": "Los 114 capítulos de un clásico de espiritualidad cristiana: humildad, oración, vida interior y Eucaristía.", "motto": "Lee, medita, reflexiona", "q": "¿Qué enseñanza quisieras llevar a tu vida?", "cover": {"bg": "#66513e", "ink": "#f4e7cc", "art": "kempis"}},
+  { id:"ahora", file:"el-poder-del-ahora.html", title:"El poder del ahora", full:"El Poder del Ahora", author:"Eckhart Tolle", cat:"Espiritualidad",
+    blurb:"Una invitación a vivir el presente como el único lugar donde la vida realmente sucede.", motto:"Fíjate, pregunta, compara",
+    q:"¿Qué cambia cuando pones atención a lo que pasa ahorita?",
+    cover:{bg:"#e9e1d3", ink:"#4a4038", art:"mountains"} },
+  { id:"habitos", file:"habitos-atomicos.html", title:"Hábitos atómicos", full:"Hábitos atómicos", author:"James Clear", cat:"Hábitos",
+    blurb:"Pequeños cambios, resultados extraordinarios: cómo construir buenos hábitos y romper los malos.", motto:"Pequeño, fácil, diario",
+    q:"¿Qué hábito pequeño podrías empezar hoy?",
+    cover:{bg:"#e6ddcd", ink:"#4a4038", art:"leaf"} },
+  {"id": "th", "file": "tiny-habits.html", "title": "Hábitos diminutos", "full": "Hábitos diminutos", "author": "BJ Fogg", "cat": "Hábitos", "blurb": "Ocho capítulos para empezar con acciones pequeñas, unirlas a tu rutina y reconocer cada avance.", "motto": "Simplifica, conecta, celebra", "q": "¿Qué cambio sería más fácil si empezaras más pequeño?", "cover": {"bg": "#dce2ce", "ink": "#354b3b", "art": "sprout"}},
+  { id:"amigos", file:"como-ganar-amigos.html", title:"Cómo ganar amigos e influir sobre las personas", full:"Cómo ganar amigos e influir sobre las personas", author:"Dale Carnegie", cat:"Relaciones",
+    blurb:"El clásico sobre escuchar de verdad, reconocer a los demás y tratar a la gente con respeto.", motto:"Escucha, sonríe, reconoce",
+    q:"¿A quién podrías escuchar mejor hoy?",
+    cover:{bg:"#2f3b4a", ink:"#efe6d6", art:"circles"} },
+  { id:"cosas", file:"cosas-buenas.html", title:"Cómo hacer que te pasen cosas buenas", full:"Cómo hacer que te pasen cosas buenas", author:"Marian Rojas Estapé", cat:"Bienestar",
+    blurb:"Entender la mente y el cuerpo para vivir con más calma, optimismo y cuidado propio.", motto:"Mira, agradece, cuídate",
+    q:"¿Qué cosa buena pasó hoy que casi no notaste?",
+    cover:{bg:"#f1e3cf", ink:"#5a4633", art:"sun"} },
+  { id:"zonas", file:"tus-zonas-erroneas.html", title:"Tus zonas erróneas", full:"Tus zonas erróneas", author:"Wayne W. Dyer", cat:"Psicología",
+    blurb:"Reconocer las trampas mentales que nos frenan y tomar las riendas de nuestras decisiones.", motto:"Nota, pregunta, elige",
+    q:"¿Qué decisión estás dejando en manos de otra persona?",
+    cover:{bg:"#ddd3c5", ink:"#4a3f35", art:"arch"} },
+  {"id": "ie", "file": "inteligencia-emocional.html", "title": "Inteligencia emocional", "full": "Inteligencia emocional", "author": "Daniel Goleman", "cat": "Psicología", "blurb": "Dieciséis capítulos para entender las emociones, la empatía y las habilidades que ayudan a convivir.", "motto": "Reconoce, comprende, responde", "q": "¿Qué emoción te cuesta más reconocer?", "cover": {"bg": "#c9d5cd", "ink": "#263e39", "art": "emotion"}},
+  {"id": "aod", "file": "amar-o-depender.html", "title": "¿Amar o depender?", "full": "¿Amar o depender?", "author": "Walter Riso", "cat": "Relaciones", "blurb": "Las tres partes de Walter Riso sobre dependencia afectiva, autonomía y amor con respeto propio.", "motto": "Quiere, cuídate, decide", "q": "¿Qué diferencia hay entre amar y depender?", "cover": {"bg": "#e8d4cc", "ink": "#593d3b", "art": "heart"}},
+  {"id": "sa", "file": "el-sutil-arte-de-que-te-importe-un-carajo.html", "title": "El sutil arte de que te importe un carajo", "full": "El sutil arte de que te importe un carajo", "author": "Mark Manson", "cat": "Bienestar", "blurb": "Nueve capítulos para revisar tus valores, elegir lo que importa y afrontar los problemas de la vida.", "motto": "Cuestiona, elige, actúa", "q": "¿Qué merece más atención en tu vida?", "cover": {"bg": "#b85632", "ink": "#fff2de", "art": "compass"}},
+  {"id": "poz", "file": "piensalo-otra-vez.html", "title": "Piénsalo otra vez", "full": "Piénsalo otra vez", "author": "Adam Grant", "cat": "Psicología", "blurb": "Once capítulos para dudar de lo que crees, cambiar de opinión sin miedo y ayudar a otros a repensar.", "motto": "Duda, pregunta, aprende", "q": "¿En qué idea tuya te gustaría pensar otra vez?", "cover": {"bg": "#2e4a5c", "ink": "#f2e9d8", "art": "rethink"}},
+  {"id": "ltt", "file": "la-teoria-let-them.html", "title": "La teoría Let Them", "full": "La teoría Let Them", "author": "Mel Robbins", "cat": "Relaciones", "blurb": "Veinte capítulos para soltar lo que hacen los demás y elegir cómo responder, cuidar tus límites y construir tus relaciones.", "motto": "Déjalos, déjame, elige", "q": "¿Qué puedes soltar y qué sí está en tus manos?", "cover": {"bg": "#514454", "ink": "#f4e9de", "art": "circles"}},
+  {"id": "jdm", "file": "el-jardin-de-las-mariposas.html", "title": "El jardín de las mariposas", "full": "El jardín de las mariposas", "author": "Dot Hutchison", "cat": "Novelas", "blurb": "Una guía para seguir la novela sin perderte entre nombres y recuerdos, con el final explicado oculto para evitar spoilers.", "motto": "Recuerda, nombra, resiste", "q": "¿Un nombre dice quién eres o solo cómo te llaman?", "cover": {"bg": "#1d463d", "ink": "#f1eadf", "art": "butterflies"}},
+  {"id": "bdm", "file": "la-biblioteca-de-la-medianoche.html", "title": "La biblioteca de la medianoche", "full": "La biblioteca de la medianoche", "author": "Matt Haig", "cat": "Novelas", "blurb": "Una guía para entrar a la novela desde cero: las reglas de la Biblioteca, sus personajes y las vidas posibles de Nora, con el final oculto.", "motto": "Elige, prueba, vive", "q": "¿Y si una vida distinta no fuera necesariamente una vida mejor?", "cover": {"bg": "#1f2a44", "ink": "#efe6d6", "art": "midnight"}},
+  {"id": "eus", "file": "el-ultimo-secreto.html", "title": "El último secreto", "full": "El último secreto", "author": "Dan Brown", "cat": "Novelas", "blurb": "Una guía para seguir el misterio de Praga, entender a sus personajes y explorar las preguntas sobre la conciencia, con el final explicado oculto.", "motto": "Busca, descubre, cuestiona", "q": "¿Quién debería decidir qué conocimientos podemos compartir?", "cover": {"bg": "#57352f", "ink": "#f2e6d4", "art": "compass"}},
+  {"id": "lps", "file": "la-paciente-silenciosa.html", "title": "La paciente silenciosa", "full": "La paciente silenciosa", "author": "Alex Michaelides", "cat": "Novelas", "blurb": "Una pintora deja de hablar después de un crimen. Recorre el misterio, conoce a sus personajes y descubre las claves de las dos voces de la novela.", "motto": "Escucha, observa, cuestiona", "q": "¿Qué puede decirnos una persona sin pronunciar una palabra?", "cover": {"bg": "#d8cbb4", "ink": "#483b32", "art": "silence"}},
+];
+// Guías en construcción: se muestran en la biblioteca pero no se puede entrar
+const LIVE=BOOKS.filter(b=>!b.soon);
+
+const ICONS = {
+  map:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="4.5" cy="6" r="2"/><circle cx="19.5" cy="6" r="2"/><circle cx="4.5" cy="18" r="2"/><circle cx="19.5" cy="18" r="2"/><path d="M6.3 7l3.2 3M17.7 7l-3.2 3M6.3 17l3.2-3M17.7 17l-3.2-3"/></svg>',
+  doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15h6M9 18h4"/></svg>',
+  pen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></svg>',
+  arrow:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M14 6l6 6-6 6"/></svg>',
+};
+
+function wrapTitle(t, max){
+  const words=t.toUpperCase().split(" "), lines=[]; let cur="";
+  for(const w of words){ if((cur+" "+w).trim().length>max && cur){lines.push(cur);cur=w}else cur=(cur+" "+w).trim() }
+  if(cur) lines.push(cur); return lines;
+}
+
+function coverSVG(b){
+  const {bg,ink,art}=b.cover;
+  const arts={
+    sprout:`<path d="M35 233h130" stroke="#859478" stroke-width="2"/>
+      <ellipse cx="100" cy="222" rx="43" ry="11" fill="#b6c3a3"/>
+      <path d="M100 220V159" stroke="#4d6a4d" stroke-width="3" fill="none"/>
+      <path d="M100 183c-29-1-44-18-45-36 26-2 45 13 45 36z" fill="#7f9568"/>
+      <path d="M100 165c29-1 44-18 45-37-25-1-44 14-45 37z" fill="#58734d"/>
+      <path d="M100 159c-7-13-4-26 1-36 5 13 5 25-1 36z" fill="#94a67e"/>
+      <circle cx="57" cy="235" r="3" fill="#b68d62"/><circle cx="72" cy="243" r="4" fill="#b68d62"/><circle cx="90" cy="247" r="5" fill="#b68d62"/>`,
+
+    kempis:`<path d="M55 238V132a45 45 0 0 1 90 0v106" fill="#9b7957"/><path d="M67 238V132a33 33 0 0 1 66 0v106" fill="#e2cba4"/><path d="M100 115v81M80 140h40" fill="none" stroke="#66513e" stroke-width="5"/><path d="M43 238h114M35 247h130" stroke="#c5a67b" stroke-width="3"/><path d="M77 214q12-7 23 0 12-7 23 0v18q-12-6-23 0-11-6-23 0z" fill="#f4e7cc"/><path d="M100 214v18" stroke="#9b7957"/>`,
+    emotion:`<path d="M99 100c-20-28-57-4-44 21-26 13-14 52 9 51-4 29 32 38 36 15V99m1 0c20-27 57-3 44 22 26 13 14 52-9 51 4 29-32 38-35 15" fill="none" stroke="#537969" stroke-width="3"/><path d="M70 129q18 0 20 17M127 147q-18 0-16 18M71 167q8-13 17-11" fill="none" stroke="#8b5f4d" stroke-width="2.5"/>`,
+    heart:`<path d="M100 212s-66-41-66-83c0-38 48-43 66-13 18-30 66-25 66 13 0 42-66 83-66 83z" fill="#ba7c72"/><path d="M100 118v87M71 131q-15 12-7 30" fill="none" stroke="#f1dace" stroke-width="2.5"/>`,
+    rethink:`<circle cx="100" cy="160" r="38" fill="none" stroke="#f2e9d8" stroke-width="2.5" stroke-dasharray="190 50" transform="rotate(-60 100 160)"/><path d="M121 128l10-2-4 10z" fill="#f2e9d8"/><path d="M79 193l-10 2 4-10z" fill="#f2e9d8"/><path d="M100 142c-8 0-14 6-14 13 0 6 4 8 6 12 1 2 1 4 1 6h14c0-2 0-4 1-6 2-4 6-6 6-12 0-7-6-13-14-13z" fill="#e8b45a"/><rect x="93" y="176" width="14" height="4" rx="2" fill="#f2e9d8"/><rect x="95" y="182" width="10" height="3" rx="1.5" fill="#f2e9d8"/>`,
+    butterflies:`<rect x="50" y="102" width="100" height="124" rx="3" fill="#f1eadf" fill-opacity=".06" stroke="#ad874f" stroke-width="2"/><rect x="58" y="110" width="84" height="108" fill="none" stroke="#ad874f" stroke-opacity=".45"/><path d="M66 214l26-36M110 138l24-26" stroke="#f1eadf" stroke-opacity=".18" stroke-width="2"/><g transform="translate(62 124) scale(.76)"><path d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z" fill="#c98a96"/><path d="M50 34v30" stroke="#f1eadf" stroke-width="3" stroke-linecap="round"/></g><g transform="translate(70 194) scale(.2) rotate(-14 50 40)"><path d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z" fill="#d7b777"/></g><g transform="translate(112 192) scale(.24) rotate(12 50 40)"><path d="M47 39C30 5 4 6 7 28c2 15 20 19 36 16C28 52 19 68 32 73c12 5 18-12 20-25-1 13 5 30 17 25 13-5 4-21-11-29 16 3 34-1 36-16C97 6 71 5 54 39c-2-8-5-14-7-19-2 5-5 11-7 19z" fill="#9cc2b2"/></g>`,
+    midnight:`<circle cx="100" cy="140" r="40" fill="none" stroke="#efe6d6" stroke-width="2.5"/><circle cx="100" cy="140" r="33" fill="none" stroke="#efe6d6" stroke-opacity=".3" stroke-dasharray="2 9"/><path d="M100 140V112" stroke="#d7b777" stroke-width="3.5" stroke-linecap="round"/><path d="M100 140V116" stroke="#efe6d6" stroke-width="1.6" stroke-linecap="round" transform="rotate(4 100 140)"/><circle cx="100" cy="140" r="3" fill="#d7b777"/><circle cx="48" cy="104" r="1.4" fill="#efe6d6" opacity=".7"/><circle cx="156" cy="112" r="1.2" fill="#efe6d6" opacity=".6"/><circle cx="146" cy="92" r="1.8" fill="#d7b777"/><rect x="46" y="196" width="10" height="30" fill="#4f7a5f"/><rect x="60" y="190" width="10" height="36" fill="#c9a45c"/><rect x="74" y="184" width="10" height="42" fill="#3c6b56"/><rect x="88" y="196" width="10" height="30" fill="#8a5a6a"/><rect x="102" y="190" width="10" height="36" fill="#5d8a6f"/><rect x="116" y="184" width="10" height="42" fill="#c9a45c"/><rect x="130" y="196" width="10" height="30" fill="#46705c"/><rect x="144" y="190" width="10" height="36" fill="#a26b4f"/><path d="M40 228h120" stroke="#efe6d6" stroke-opacity=".5" stroke-width="2"/>`,
+    silence:`<path d="M100 112c-35 0-53 30-43 68 6 25 19 50 43 50s37-25 43-50c10-38-8-68-43-68Z" fill="#eee5d4" stroke="#8e7866" stroke-width="2"/><path d="m69 156 18 2m26 0 18-2M99 162l-5 29 12 1M78 207l44-4" fill="none" stroke="#8e7866" stroke-width="3"/><path d="m77 198 4 17m9-18 3 17m10-18 3 17m9-18 3 17" stroke="#934b3c" stroke-width="2"/>`,
+    compass:`<circle cx="100" cy="173" r="57" fill="none" stroke="#f6d7ae" stroke-width="2"/><circle cx="100" cy="173" r="47" fill="none" stroke="#f6d7ae" stroke-width="1" stroke-dasharray="2 7"/><path d="M119 140 106 179 81 206 94 167z" fill="#f4e0bc"/><path d="m119 140-25 27 12 12z" fill="#552c24"/><circle cx="100" cy="173" r="4" fill="#b85632"/>`,
+
+    prosperity:`<path d="M100 222V107" fill="none" stroke="#62794e" stroke-width="3"/>
+      <path d="M100 161c-32 0-45-18-47-33 26-2 43 11 47 33z" fill="#7d9168"/>
+      <path d="M100 146c31-1 46-18 48-34-25-2-43 11-48 34z" fill="#5b734d"/>
+      <path d="M100 117c-7-14-3-29 2-36 5 13 5 26-2 36z" fill="#8c9d76"/>
+      ${[0,1,2,3,4].map(i=>`<path d="M65 ${224-i*10}v8c0 10 70 10 70 0v-8" fill="#b69958"/><ellipse cx="100" cy="${224-i*10}" rx="35" ry="8" fill="#cbb274" stroke="#a88d53" stroke-width="1.5"/>`).join("")}`,
+
+    scripture:`<path d="M38 128q31-14 62 3 31-17 62-3v87q-31-13-62 3-31-16-62-3z" fill="none" stroke="#e9d9b8" stroke-width="2.5"/><path d="M100 131v87M52 148q17-5 34 3M52 162q17-5 34 3M114 151q17-8 34-3M114 165q17-8 34-3" fill="none" stroke="#e9d9b8" stroke-width="1.5"/><path d="M95 225v23l5-4 5 4v-23" fill="#cb9972"/>`,
+    mountains:`<circle cx="100" cy="92" r="26" fill="#c77e62"/>
+      <path d="M0 170c30-30 50-40 80-26s50 4 70-14 40-10 50-4v74H0z" fill="#9aa88f"/>
+      <path d="M0 190c40-26 70-10 100-18s60-26 100-8v56H0z" fill="#d1a18a"/>
+      <path d="M0 205c30-10 60-4 90-12s70-16 110-2v49H0z" fill="#6e8166"/>`,
+    leaf:`<path d="M100 250V96" stroke="#5f7353" stroke-width="2.5"/>
+      ${[0,1,2,3].map(i=>{const y=210-i*32,s=1-i*.12;return `<path d="M100 ${y}c-${42*s} -4 -${58*s} -${26*s} -${60*s} -${46*s} ${30*s} -2 ${52*s} ${14*s} ${60*s} ${46*s}z" fill="#6f8660"/><path d="M100 ${y-12}c${42*s} -4 ${58*s} -${26*s} ${60*s} -${46*s} -${30*s} -2 -${52*s} ${14*s} -${60*s} ${46*s}z" fill="#5d7250"/>`}).join("")}
+      <path d="M100 100c-8-14-4-30 0-38 4 8 8 24 0 38z" fill="#7c9270"/>`,
+    circles:`${Array.from({length:40},(_,i)=>`<circle cx="${(i*47)%200}" cy="${(i*83)%150+6}" r="${i%3?0.8:1.3}" fill="#efe6d6" opacity=".7"/>`).join("")}
+      <circle cx="80" cy="130" r="30" fill="none" stroke="#e8b89c" stroke-width="2.5"/><circle cx="120" cy="130" r="30" fill="none" stroke="#efe6d6" stroke-width="2.5"/>
+      <path d="M0 230c40-30 70-28 100-12s60 8 100-18v100H0z" fill="#46566a"/><path d="M0 250c50-14 90 2 130-6s50-10 70-6v62H0z" fill="#d1a18a" opacity=".85"/>`,
+    sun:`<circle cx="100" cy="150" r="30" fill="#e7b36a"/>
+      <g stroke="#d99a5a" stroke-width="2" stroke-linecap="round">${Array.from({length:12},(_,i)=>{const a=i*Math.PI/6,r1=42,r2=58;return `<path d="M${100+r1*Math.cos(a)} ${150+r1*Math.sin(a)}L${100+r2*Math.cos(a)} ${150+r2*Math.sin(a)}"/>`}).join("")}</g>
+      <path d="M0 240c40-20 80-24 120-10s60 4 80-4v74H0z" fill="#c9a27b"/>`,
+    lotus:`<g transform="translate(100 176)">
+        <path d="M0 0c-10-26-10-50 0-70 10 20 10 44 0 70z" fill="#c9776b"/>
+        <path d="M0 0c-26-12-40-34-40-58 20 8 34 30 40 58z" fill="#d99888"/><path d="M0 0c26-12 40-34 40-58-20 8-34 30-40 58z" fill="#d99888"/>
+        <path d="M0 0c-34-2-56-16-64-36 22 0 46 12 64 36z" fill="#e6b4a5"/><path d="M0 0c34-2 56-16 64-36-22 0-46 12-64 36z" fill="#e6b4a5"/>
+      </g>
+      <path d="M20 196h160M40 206h120" stroke="#a8837a" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>`,
+    arch:`<path d="M52 250V140a48 48 0 0 1 96 0v110z" fill="#c9b49a"/>
+      <path d="M68 250V144a32 32 0 0 1 64 0v106z" fill="#f2e9dc"/>
+      ${[0,1,2,3,4].map(i=>`<rect x="${70+i*6}" y="${214+i*8}" width="${60-i*12}" height="8" fill="#d8c6ae"/>`).join("")}
+      <path d="M140 120l40-30v160h-32z" fill="#b89f82" opacity=".6"/>`,
+  };
+  const lines=wrapTitle(b.full, b.full.length>26?13:14);
+  const ty = 30;
+  const titleSVG = art==="mountains"
+    ? lines.map((l,i)=>`<text x="100" y="${252+i*16-lines.length*16+10}" font-size="12.5">${l}</text>`).join("")
+    : lines.map((l,i)=>`<text x="100" y="${ty+i*16}" font-size="${lines.length>2?11:12.5}">${l}</text>`).join("");
+  const top = art==="mountains"
+    ? `<rect x="0" y="222" width="200" height="78" fill="${bg}"/>`
+    : `<rect x="0" y="270" width="200" height="30" fill="${bg}"/>`;
+  const authorY = art==="mountains" ? 286 : 288;
+  return `<svg viewBox="0 0 200 300" role="img" aria-label="Portada: ${b.full}, ${b.author}">
+    <rect width="200" height="300" fill="${bg}"/>
+    <g transform="${art==="mountains"?"translate(0,-24)":"translate(0,24)"}">${arts[art]}</g>
+    ${top}
+    <g font-family="Fraunces,Georgia,serif" fill="${ink}" text-anchor="middle" letter-spacing="2">${titleSVG}</g>
+    <text x="100" y="${authorY}" font-family="Fraunces,Georgia,serif" font-style="italic" font-size="11" fill="${ink}" text-anchor="middle" letter-spacing=".5" opacity=".85">${b.author}</text>
+  </svg>`;
+}
+
+/* Trazos a mano: subrayado, círculo y resaltador */
+const PATHS = {
+  ul:'M2 88 C 20 80, 35 96, 52 86 S 82 80, 98 90',
+  ci:'M52 4 C 82 2, 99 22, 97 48 C 95 80, 70 98, 44 96 C 16 94, 2 74, 3 48 C 4 20, 26 2, 60 8',
+  hl:'M6 60 C 32 56, 68 64, 94 57'
+};
+function markify(root=document){
+  root.querySelectorAll('.mark:not([data-done])').forEach(m=>{
+    const type=m.classList.contains('ci')?'ci':m.classList.contains('hl')?'hl':'ul';
+    m.insertAdjacentHTML('beforeend',`<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="${PATHS[type]}" pathLength="1" vector-effect="non-scaling-stroke"/></svg>`);
+    m.dataset.done=1;
+  });
+}
+
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// Día según la hora local: cambia a medianoche donde estés
+const now=new Date();
+const dayIndex=Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())/864e5);
+const todayKey=`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
+// The two most recently published guides lead the carousel, newest first.
+function renderMinis(){
+  const recent=LIVE.slice(-2).reverse();
+  if(!recent.length)return;
+  let current=0;
+  const feature=document.querySelector('.latest-feature');
+  const dots=document.getElementById('latest-dots');
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const cover=document.getElementById('latest-cover');
+  dots.innerHTML=recent.map((b,i)=>`<button type="button" data-slide="${i}" aria-label="Ver ${esc(b.title)}" aria-pressed="${i===0}"></button>`).join('');
+  let timer;
+  function schedule(){
+    clearTimeout(timer);
+    if(recent.length<2||reduced.matches||document.hidden||feature.classList.contains('is-paused'))return;
+    timer=setTimeout(()=>show(current+1,true,false),6000);
+  }
+  document.addEventListener('visibilitychange',schedule);
+  reduced.addEventListener('change',schedule);
+  function show(index,animate=true,announce=true){
+  const previous=current;
+  current=(index+recent.length)%recent.length;
+  const b=recent[current];
+  const texturedCover=b.id==='eus';
+  cover.classList.toggle('has-texture',texturedCover);
+  cover.innerHTML=texturedCover?'<img src="assets/covers/el-ultimo-secreto-textura.png" width="667" height="1000" alt="El último secreto, de Dan Brown: portada café de tela envejecida con brújula dorada" fetchpriority="high">':coverSVG(b);
+  cover.href=b.file;
+  cover.setAttribute('aria-label','Abrir la nueva guía de '+b.title);
+  document.getElementById('latest-title').textContent=b.title;
+  document.getElementById('latest-author').textContent=b.author;
+  document.getElementById('latest-category').textContent=b.cat;
+  document.getElementById('latest-description').textContent=b.cat==='Novelas'?'Resumen, personajes principales y claves para entender la historia.':'Resumen, ideas principales y claves para acompañar tu lectura.';
+  document.getElementById('latest-people-label').textContent=b.cat==='Novelas'?'Personajes':'Ideas';
+  document.getElementById('latest-link').href=b.file;
+  dots.querySelectorAll('button').forEach((dot,i)=>dot.setAttribute('aria-pressed',String(i===current)));
+  document.getElementById('latest-status').setAttribute('aria-live',announce?'polite':'off');
+  document.getElementById('latest-status').textContent=`${current+1} de ${recent.length}: ${b.title}, de ${b.author}`;
+  if(animate&&previous!==current&&!reduced.matches&&!feature.classList.contains('is-paused')){
+    const direction=index>previous?1:-1;
+    [cover,feature.querySelector('.latest-info')].forEach(el=>{
+      el.getAnimations().filter(a=>a.id==='carousel-slide').forEach(a=>a.cancel());
+      el.animate([{translate:`${direction*28}px 0`,opacity:0},{translate:'0 0',opacity:1}],{duration:280,easing:'cubic-bezier(.2,.7,.2,1)',id:'carousel-slide'});
+    });
+  }
+  schedule();
+  }
+  show(0,false);
+  document.getElementById('latest-prev').onclick=()=>show(current-1);
+  document.getElementById('latest-next').onclick=()=>show(current+1);
+  dots.querySelectorAll('button').forEach((dot,i)=>dot.onclick=()=>show(i));
+  feature.querySelector('.latest-carousel-nav').addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();show(current+(e.key==='ArrowRight'?1:-1));dots.children[current].focus();}
+  });
+  let start=null;
+  feature.addEventListener('touchstart',e=>{start=e.touches.length===1?{x:e.touches[0].clientX,y:e.touches[0].clientY}:null;},{passive:true});
+  feature.addEventListener('touchend',e=>{
+    if(!start)return;
+    const dx=e.changedTouches[0].clientX-start.x,dy=e.changedTouches[0].clientY-start.y;
+    start=null;
+    if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.5)show(current+(dx<0?1:-1));
+  },{passive:true});
+  feature.addEventListener('touchcancel',()=>{start=null;});
+  const motion=document.querySelector('.latest-motion');
+  motion.onclick=()=>{
+    const paused=document.querySelector('.latest-feature').classList.toggle('is-paused');
+    motion.setAttribute('aria-pressed',String(paused));
+    motion.setAttribute('aria-label',paused?'Reanudar carrusel y animación':'Pausar carrusel y animación');
+    motion.title=paused?'Reanudar carrusel y animación':'Pausar carrusel y animación';
+    motion.textContent=paused?'▷':'Ⅱ';
+    schedule();
+  };
+}
+
+// Novelas va primero; las demás categorías siguen el orden de la lista
+const cats=["Todos",...new Set(["Novelas",...BOOKS.map(b=>b.cat)])];
+let activeCat="Todos", query="";
+
+function renderFilters(){
+  document.getElementById("filters").innerHTML=cats.map(c=>`<button aria-pressed="${c===activeCat}" data-cat="${c}">${c}</button>`).join("");
+}
+function renderGrid(){
+  const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  const q=norm(query.trim());
+  const list=BOOKS.filter(b=>(activeCat==="Todos"||b.cat===activeCat)&&(!q||norm(b.full+" "+b.author).includes(q)));
+  document.getElementById("grid").innerHTML=list.length?list.map((b,i)=>`
+    <article class="book${b.soon?' soon':''}" style="--i:${i}">
+      ${b.soon?`<span class="cover" aria-hidden="true">${coverSVG(b)}</span>`:`<a class="cover" href="${b.file}" tabindex="-1" aria-hidden="true">${coverSVG(b)}</a>`}
+      <div class="book-info">
+        <div class="book-category">${b.soon?'En construcción':b.id===LIVE[dayIndex%LIVE.length].id?'★ Lectura destacada':esc(b.cat)}</div>
+        <h3>${esc(b.title)}</h3>
+        <div class="au">${esc(b.author)}</div>
+        <p class="blurb">${esc(b.blurb)}</p>
+        <div class="row">${b.soon?`<span class="btn" aria-disabled="true">Próximamente</span>`:`<a class="btn" href="${b.file}">Ver guía ${ICONS.arrow}</a>`}</div>
+      </div>
+    </article>`).join(""):`<p class="empty">No encontré libros con esa búsqueda.</p>`;
+}
+
+let qi=dayIndex%LIVE.length;
+function renderQuestion(){
+  const b=LIVE[qi];
+  document.getElementById("qText").textContent=b.q;
+  document.getElementById("qSrc").innerHTML=`Guía de <a href="${b.file}">${esc(b.title)}</a>`;
+}
+
+document.getElementById("filters").addEventListener("click",e=>{
+  const c=e.target.closest("button")?.dataset.cat; if(!c) return;
+  activeCat=c; renderFilters(); renderGrid();
+});
+document.getElementById("nextQ").addEventListener("click",()=>{
+  const w=document.getElementById("qWrap"); w.style.opacity=0;
+  setTimeout(()=>{qi=(qi+1)%LIVE.length;renderQuestion();w.style.opacity=1},300);
+});
+
+const search=document.getElementById("search");
+document.getElementById("searchBtn").addEventListener("click",()=>{
+  search.classList.toggle("open"); if(search.classList.contains("open")) search.focus();document.getElementById("libros").scrollIntoView({behavior:"smooth"});
+});
+search.addEventListener("input",()=>{query=search.value;renderGrid()});
+search.addEventListener("keydown",e=>{if(e.key==="Enter")document.getElementById("libros").scrollIntoView({behavior:"smooth"})});
+
+const root=document.documentElement;
+try{const t=localStorage.getItem("marginalia-theme"); if(t) root.dataset.theme=t}catch(e){}
+document.getElementById("themeBtn").addEventListener("click",()=>{
+  const isDark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme=isDark?"light":"dark";
+  try{localStorage.setItem("marginalia-theme",root.dataset.theme)}catch(e){}
+});
+
+const topHeader=document.querySelector('header.top');
+const updateHeaderHeight=()=>root.style.setProperty('--header-height',topHeader.offsetHeight+'px');
+updateHeaderHeight();
+if ('ResizeObserver' in window) new ResizeObserver(updateHeaderHeight).observe(topHeader);
+const navLinks=[...document.querySelectorAll("nav.main a")];
+const syncNav=()=>navLinks.forEach(a=>a.classList.toggle('on',a.hash===(location.hash||'#inicio')));
+addEventListener('hashchange',syncNav);
+syncNav();
+navLinks.forEach(a=>a.addEventListener("click",()=>{navLinks.forEach(x=>x.classList.toggle("on",x===a))}));
+
+/* Letras collage: estilos compartidos */
+const restyle=(el,tilt=5)=>{
+  el.className='s'+Math.floor(Math.random()*7);
+  el.style.transform=`rotate(${(Math.random()*tilt*2-tilt).toFixed(1)}deg) translateY(${(Math.random()*8-4).toFixed(0)}%)`;
+};
+
+/* Logo del header: collage fijo; una letra cambia de vez en cuando */
+const logoLetters=[..."MARGINALIA"].map(ch=>{const s=document.createElement("span");s.textContent=ch;document.getElementById("logo").appendChild(s);return s});
+const LOGO=[3,0,6,0,4,0,3,2,0,1];
+logoLetters.forEach((el,i)=>{el.className='s'+LOGO[i];el.style.transform=`rotate(${[-3,2,-2,1,3,-1,2,-3,1,-2][i]}deg)`});
+let logoTimer;
+document.querySelector(".brand").addEventListener("mouseenter",()=>{
+  clearInterval(logoTimer);
+  logoTimer=setInterval(()=>restyle(logoLetters[Math.floor(Math.random()*logoLetters.length)],3),260);
+});
+document.querySelector(".brand").addEventListener("mouseleave",()=>clearInterval(logoTimer));
+
+/* Aparición suave al hacer scroll */
+let io;
+function startReveals(){
+  if(io) return;
+  const els=[...document.querySelectorAll("[data-reveal]"),document.getElementById("grid")];
+  if(!("IntersectionObserver" in window)){els.forEach(el=>el.classList.add("in"));return}
+  io=new IntersectionObserver(entries=>entries.forEach(en=>{
+    if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}
+  }),{threshold:.15,rootMargin:"0px 0px -40px 0px"});
+  els.forEach(el=>io.observe(el));
+}
+
+renderMinis(); renderFilters(); renderGrid(); renderQuestion(); markify();
+
+/* ================= ENTRADA ================= */
+(() => {
+  const $ = s => document.querySelector(s);
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const intro=$('#intro'), calm=$('#calm'), stage=$('#stage'), word=$('#word');
+  const keyEl=$('#key'), c1=$('#c1'), c2=$('#c2'), label=$('#breathLabel'), blot=$('#blot');
+  const notes=[...intro.querySelectorAll('.note')];
+  function rememberIntro() {
+    try { localStorage.setItem('marginalia-intro-seen', '1'); } catch (_) {}
+    try { sessionStorage.setItem('marginalia-intro-seen', '1'); } catch (_) {}
+  }
+  if (root.dataset.skipIntro === 'true') {
+    intro.hidden = true;
+    root.classList.remove('intro-on');
+    rememberIntro();
+    startReveals();
+    return;
+  }
+
+
+  const letters=[..."MARGINALIA"].map(ch=>{const s=document.createElement('span');s.textContent=ch;word.appendChild(s);return s});
+  const keyLetters=[..."ENTRAR"].map(ch=>{const s=document.createElement('span');s.textContent=ch;keyEl.appendChild(s);return s});
+  const LIT=['s2','s4','s6','s1','s3','s0'];
+
+  const music = new window.MarginaliaIntroAudio($('#snd'), $('#intro-audio-status'));
+  const compact = matchMedia('(max-width:760px), (pointer:coarse)').matches;
+  $('#hint .say').textContent = compact ? 'Toca para entrar' : 'Mantén presionado para entrar';
+  if (compact) $('#hint .only-key').hidden = true;
+  keyLetters.forEach(el => el.setAttribute('aria-hidden', 'true'));
+
+  const DUR=6;              // segundos de presión para entrar
+  let p=0, holding=false, done=true, ready=false, last=performance.now(), swapAcc=0, timers=[];
+  const clamp=v=>Math.max(0,Math.min(1,v));
+  const ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+  const later=(fn,ms)=>timers.push(setTimeout(fn,ms));
+
+  function start(){
+    timers.forEach(clearTimeout); timers=[];
+    p=0; done=false; ready=false; holding=false; keyEl.disabled=true;
+    root.classList.add('intro-on'); intro.hidden=false;
+    word.classList.remove('settled'); letters.forEach(l=>restyle(l));
+    keyLetters.forEach(el=>{el.className='';el.style.transform=''});
+    calm.classList.remove('out'); stage.classList.remove('on');
+    calm.querySelectorAll('p,small').forEach(el=>{el.style.animation='none';el.offsetHeight;el.style.animation=''});
+    blot.className=''; blot.style.transform='';
+    render();
+    later(()=>{calm.classList.add('out');stage.classList.add('on');ready=true;keyEl.disabled=false},reduce?300:(compact?1400:3300));
+  }
+
+  function renderKey(){
+    keyLetters.forEach((el,i)=>{
+      const on=p>(i+0.5)/keyLetters.length*0.96;
+      if(on&&!el.classList.contains('lit')){
+        el.className='lit '+LIT[Math.floor(Math.random()*LIT.length)];
+        el.style.transform=`rotate(${(Math.random()*10-5).toFixed(1)}deg)`;
+      }else if(!on&&el.classList.contains('lit')){el.className='';el.style.transform=''}
+    });
+  }
+
+  function render(){
+    const e=ease(p), t=performance.now()/1000, idle=holding?0:Math.sin(t*1.3)*0.02;
+    renderKey();
+    c1.style.transform=`scale(${0.3+0.7*e+idle})`;
+    c2.style.transform=`scale(${0.36+0.66*e+idle}) rotate(${t*6}deg)`;
+    label.style.opacity=holding||p>0.02?1:0;
+    label.textContent=p<0.5?'inhala…':'exhala…';
+    notes.forEach(n=>{
+      const t0=+n.dataset.t, a=clamp((p-t0)/0.12);
+      n.style.opacity=a;
+      n.style.transform=`rotate(${n.style.getPropertyValue('--r')}) translateY(${(1-a)*10}px)`;
+      n.querySelectorAll('.mark path').forEach((path,i)=>path.style.strokeDashoffset=1-clamp((p-t0-0.06-i*0.05)/0.18));
+      n.querySelector('.hand').style.opacity=clamp((p-t0-0.2)/0.08);
+    });
+  }
+
+  function finish(fast){
+    rememberIntro();
+    done=true; holding=false; intro.classList.remove('holding');
+    word.classList.add('settled'); label.textContent='';
+    keyEl.disabled = true;
+    const inkDelay=fast?0:1600;
+    later(()=>{ if(reduce){blot.style.transform='scale(4)'} else blot.classList.add('go') },inkDelay);
+    later(()=>{
+      intro.hidden=true; root.classList.remove('intro-on');
+      window.scrollTo(0,0);
+      blot.classList.add('fade');
+      startReveals();
+      music.stop(1.5);
+    },inkDelay+(reduce?100:1150));
+  }
+
+  function loop(now){
+    const dt=Math.min(0.05,(now-last)/1000); last=now;
+    if(ready&&!done){
+      p=holding?Math.min(1,p+dt/DUR):Math.max(0,p-dt/3);
+      if(!reduce){
+        swapAcc+=dt*1000;
+        if(swapAcc>110+ease(p)*900){swapAcc=0;restyle(letters[Math.floor(Math.random()*letters.length)])}
+      }
+      render();
+      if(p>=1) finish();
+    }
+    if (!done) requestAnimationFrame(loop);
+  }
+
+  const down=()=>{
+    if (!ready || done || holding) return;
+    holding=true;
+    intro.classList.add('holding');
+    if (compact) $('#hint .say').textContent='Respira un momento';
+    music.play();
+  };
+  const up=()=>{
+    if (compact) return;
+    holding=false;
+    intro.classList.remove('holding');
+  };
+  keyEl.addEventListener('pointerdown', e=>{
+    if (compact) return;
+    e.preventDefault();
+    down();
+    keyEl.setPointerCapture?.(e.pointerId);
+  });
+  keyEl.addEventListener('click', ()=>{
+    if (compact) down();
+  });
+  addEventListener('keydown',e=>{
+    if(done || e.target.closest('#snd,#skip')) return;
+    if(e.code==='Space' || (e.code==='Enter' && e.target===keyEl)){
+      e.preventDefault();
+      down();
+    }
+    if(e.key==='Escape'){ready=true;finish(true);music.stop()}
+  });
+  addEventListener('keyup',e=>{if(e.code==='Space'||e.code==='Enter')up()});
+  addEventListener('pointerup',up);
+  addEventListener('pointercancel',up);
+  const interrupt=()=>{
+    if (done) return;
+    holding=false;
+    intro.classList.remove('holding');
+    if (compact) $('#hint .say').textContent='Toca para entrar';
+    music.stop();
+  };
+  addEventListener('blur',interrupt);
+  addEventListener('pagehide',()=>music.stop());
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){interrupt();music.stop()}});
+  intro.addEventListener('contextmenu',e=>e.preventDefault());
+  $('#skip').addEventListener('click',e=>{
+    e.stopPropagation();
+    if(!done){ready=true;finish(true);music.stop()}
+  });
+
+
+  start();
+  requestAnimationFrame(loop);
+})();
+
+</script>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "436402644d794b97a2858b07a06d0514"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
