@@ -22,7 +22,7 @@
     'el-jardin-de-las-mariposas': {
       ficha: 14, cat: 'Novelas',
       img: 'assets/novedades/el-jardin-de-las-mariposas.jpg', cap: 'fig. 1: la entrada al Jardín', why: '¿quién es Maya?',
-      lede: 'Tras descubrir el Jardín, el FBI interroga a una joven que se hace llamar Maya. Allí, un hombre al que llamaban el Jardinero mantenía cautivas a muchachas a las que tatuaba alas de mariposa. Mientras ella decide qué contar, los agentes Victor Hanoverian y Brandon Eddison intentan descubrir lo que todavía calla.',
+      lede: 'Tras descubrir el Jardín, el FBI interroga a una joven que se hace llamar Maya, una de las chicas a las que allí llamaban mariposas. Mientras ella decide qué contar, los agentes Victor Hanoverian y Brandon Eddison intentan descubrir lo que todavía calla.',
       marks: ['Maya', 'Victor Hanoverian', 'Brandon Eddison'],
       datos: [['Género', 'Thriller psicológico'], ['Publicación', '2016'], ['Serie', 'El coleccionista, 1'], ['Voces', 'Maya · el FBI'], ['Estructura', 'Interrogatorio + recuerdos']],
       people: 5,
