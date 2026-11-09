@@ -67,6 +67,15 @@
       datos: [['Género', 'Desarrollo personal'], ['Publicación', '2024'], ['Autora', 'Mel Robbins'], ['Idea clave', 'Déjalos + Déjame'], ['Estructura', '20 capítulos']],
       prev: { author: 'Adam Grant', color: '#2e4a5c' },
       next: { author: 'Dot Hutchison', color: '#1d463d' }
+    },
+    'el-sutil-arte-de-que-te-importe-un-carajo': {
+      ficha: 11, cat: 'Bienestar',
+      img: 'assets/novedades/el-sutil-arte-de-que-te-importe-un-carajo.jpg', cap: 'fig. 1: elegir el camino', why: '¿qué sí importa?',
+      lede: 'Mark Manson sostiene que no se trata de que nada te importe, sino de elegir con cuidado qué sí merece tu energía. Con humor directo invita a aceptar que los problemas y el dolor son parte de la vida, a asumir la responsabilidad de lo que te pasa y a vivir según valores que de verdad valgan la pena.',
+      marks: ['qué sí merece tu energía'],
+      datos: [['Género', 'Desarrollo personal'], ['Publicación', '2016'], ['Autor', 'Mark Manson'], ['Idea clave', 'Elegir qué te importa'], ['Estructura', '9 capítulos']],
+      prev: { author: 'Walter Riso', color: '#e8d4cc' },
+      next: { author: 'Adam Grant', color: '#2e4a5c' }
     }
   };
 
