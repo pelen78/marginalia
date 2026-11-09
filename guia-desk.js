@@ -139,6 +139,15 @@
       datos: [['Género', 'Desarrollo personal'], ['Publicación', '2018'], ['Autor', 'James Clear'], ['Idea clave', 'Sistemas, no metas'], ['Estructura', '4 leyes · 20 capítulos']],
       prev: { author: 'Eckhart Tolle', color: '#e9e1d3' },
       next: { author: 'BJ Fogg', color: '#dce2ce' }
+    },
+    'el-poder-del-ahora': {
+      ficha: 3, cat: 'Espiritualidad',
+      img: 'assets/novedades/el-poder-del-ahora.jpg', cap: 'fig. 1: una gota en el presente', why: '¿dónde estás ahora?',
+      lede: 'Eckhart Tolle sostiene que gran parte del sufrimiento nace de vivir atrapados en la mente, entre los recuerdos del pasado y las preocupaciones del futuro. Propone observar los pensamientos sin identificarte con ellos y habitar el momento presente, el único lugar donde la vida realmente sucede.',
+      marks: ['momento presente'],
+      datos: [['Género', 'Espiritualidad'], ['Publicación', '1997'], ['Autor', 'Eckhart Tolle'], ['Idea clave', 'Vivir en el presente'], ['Estructura', '10 capítulos']],
+      prev: { author: 'Tomás de Kempis', color: '#66513e' },
+      next: { author: 'James Clear', color: '#e6ddcd' }
     }
   };
 
