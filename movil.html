@@ -22,7 +22,7 @@
   let seen = false;
   try { seen = localStorage.getItem('marginalia-intro-seen') === '1'; } catch (_) {}
   try { seen = seen || sessionStorage.getItem('marginalia-intro-seen') === '1'; } catch (_) {}
-  const sectionLink = ['#inicio', '#libros', '#pregunta'].includes(location.hash);
+  const sectionLink = ['#inicio', '#libros', '#sugerencias'].includes(location.hash);
   if (!replayIntro && (seen || sectionLink)) {
     document.documentElement.dataset.skipIntro = 'true';
     document.documentElement.classList.remove('intro-on');
@@ -353,7 +353,7 @@ main .mark path{stroke-dasharray:none}
 @media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{gap:20px}.top .wrap{gap:15px}nav.main{gap:18px}.brand small{max-width:250px;font-size:.5rem}}
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:12px;padding:32px 0}.hero h1{font-size:clamp(2.2rem,8.5vw,3.6rem)}.hero p{font-size:1rem}.art{max-width:190px;margin:0 auto 12px}.art .note.a{font-size:1.05rem}.hero .btn{margin-top:18px}.grid{grid-template-columns:1fr}.book{grid-template-columns:90px minmax(0,1fr);min-height:220px}.section-head p{font-size:.9rem}.filters{gap:6px}.filters button{font-size:.59rem;padding:6px 10px}#pregunta{grid-template-columns:1fr;gap:20px}#pregunta h2{grid-row:auto;display:flex;align-items:center}#nextQ{display:inline;margin:0}.q-text{font-size:1.25rem}.side{margin-top:32px}}
 
-#inicio,#libros,#pregunta{scroll-margin-top:calc(var(--header-height,78px) + 22px)}
+#inicio,#libros,#sugerencias{scroll-margin-top:calc(var(--header-height,78px) + 22px)}
 @media(max-width:760px){.top .logo{font-size:1.25rem}.top .tools{gap:2px}.top .icon-btn{width:36px}.top .search.open{position:absolute;left:16px;right:16px;top:100%;width:calc(100% - 32px);box-shadow:var(--shadow)}nav.main{gap:18px}nav.main a{font-size:.94rem}}
 
 .site-credits{padding:30px 0 28px;font-size:.86rem;line-height:1.65}
@@ -577,6 +577,7 @@ main .mark path{stroke-dasharray:none}
     <nav class="main" aria-label="Principal">
       <a href="#inicio" class="on">Inicio</a>
       <a href="#libros">Libros</a>
+      <a href="#sugerencias">Sugerencias</a>
     </nav>
     <div class="tools">
       <input class="search" id="search" type="search" placeholder="Buscar libro o autor" aria-label="Buscar libro o autor">
@@ -934,7 +935,7 @@ main .mark path{stroke-dasharray:none}
       </div>
     </article>
 <!-- seo-catalog:end --></div>
-      <div class="mg-feedback-invite">
+      <div class="mg-feedback-invite" id="sugerencias">
         <p>¿Hay un libro que te gustaría encontrar aquí?</p>
         <button class="btn" id="mg-feedback-open" data-feedback-kind="suggestion" type="button" aria-haspopup="dialog">Sugerir un libro</button>
       </div>
