@@ -158,6 +158,16 @@
       eyebrowPart: true, unit: 'capítulos',
       prev: { author: 'Diversos autores', color: '#344f4b' },
       next: { author: 'Eckhart Tolle', color: '#e9e1d3' }
+    },
+    'biblia': {
+      ficha: 1, cat: 'Espiritualidad',
+      img: 'assets/novedades/biblia.jpg', cap: 'fig. 1: un camino entre las aguas', why: '¿por dónde empiezo?',
+      lede: 'La Biblia católica reúne 73 libros escritos a lo largo de muchos siglos: 46 del Antiguo Testamento y 27 del Nuevo. Cuenta la creación, la historia del pueblo de Israel, la voz de los profetas, la vida de Jesús y los primeros pasos de las comunidades cristianas. Esta guía te acompaña libro por libro y capítulo por capítulo.',
+      marks: ['libro por libro'],
+      datos: [['Tradición', 'Católica'], ['Libros', '73'], ['Antiguo Testamento', '46 libros'], ['Nuevo Testamento', '27 libros'], ['Estructura', '9 secciones']],
+      groupSel: '.group', progressSel: '.book-group .card[id^="card-"]', unit: 'libros',
+      prev: { author: 'Alex Michaelides', color: '#d8cbb4' },
+      next: { author: 'Tomás de Kempis', color: '#66513e' }
     }
   };
 
@@ -184,11 +194,13 @@
     const map = $('map'), oldHero = document.querySelector('.hero'), oldWrap = document.querySelector('body > .wrap');
     if (!map || !oldHero || !oldWrap) { giveUp(); return; }
     const cards = () => [...map.querySelectorAll('.card[id^="card-"]')];
+    // Las fichas que cuentan para el progreso (en la Biblia, solo los 73 libros)
+    const pcards = () => [...map.querySelectorAll(G.progressSel || '.card[id^="card-"]')];
     // Nombre de una sección sin su número ni el contador: "Personajes · quién es quién"
-    const gName = g => !g.querySelector('.g-title') ? clean(g.querySelector(':scope > summary .book-title')?.textContent) : clean([...(g.querySelector('.g-title')?.childNodes || [])]
-      .filter(x => !(x.classList && (x.classList.contains('g-n') || x.classList.contains('dk-known'))))
+    const gName = g => !g.querySelector('.g-title') ? clean(g.querySelector(':scope > summary :is(.book-title, .section-title)')?.textContent) : clean([...(g.querySelector('.g-title')?.childNodes || [])]
+      .filter(x => !(x.classList && (x.classList.contains('g-n') || x.classList.contains('dk-known') || x.classList.contains('dk-sec-tag'))) && !(x.getAttribute && x.getAttribute('aria-hidden') === 'true'))
       .map(x => x.textContent).join(''));
-    const groups = [...map.querySelectorAll(':scope > .group')];
+    const groups = [...map.querySelectorAll(G.groupSel || ':scope > .group')];
     // Personajes: la sección que contiene la rejilla #g-<people> (puede tener varias rejillas por grupo)
     const peopleGroup = document.getElementById('g-' + G.people)?.closest('.group');
     if (peopleGroup) peopleGroup.querySelectorAll('.g-grid').forEach(x => x.classList.add('dk-people'));
@@ -197,6 +209,7 @@
     const title = clean(oldHero.querySelector('h1')?.textContent);
     const subText = clean(oldHero.querySelector('.sub')?.textContent);
     const author = (subText.split('Obra de ')[1] || '').trim();
+    const subHtml = author ? `Guía y resumen · Obra de <i>${esc(author)}</i>` : esc(subText);
     const warn = document.querySelector('.guide-note .notice-label')?.parentElement;
     const buy = oldHero.querySelector('#book-purchase a');
     const pv = document.querySelector('.mg-pager .pv'), nx = document.querySelector('.mg-pager .nx');
@@ -224,10 +237,10 @@
       <div class="dk-hero-copy">
         <div class="dk-stamps"><span class="dk-stamp">Guía independiente</span><span class="dk-ficha">Ficha N° ${G.ficha} · ${esc(G.cat)}</span></div>
         <h1 class="book-title" id="dk-title">${esc(title)}</h1>
-        <p class="dk-sub">Guía y resumen · Obra de <i>${esc(author)}</i></p>
+        <p class="dk-sub">${subHtml}</p>
         ${warn ? `<p class="dk-warn">${warn.innerHTML}</p>` : ''}
         <div class="dk-prog">
-          <div class="dk-prog-head"><p class="dk-prog-n" aria-live="polite"><b id="dk-n">0</b> de <span id="dk-total">0</span> <i>${esc(G.unit || 'secciones')} explorad${G.unit === 'capítulos' ? 'os' : 'as'}</i></p><p class="dk-hand" id="dk-hint" aria-hidden="true"></p></div>
+          <div class="dk-prog-head"><p class="dk-prog-n" aria-live="polite"><b id="dk-n">0</b> de <span id="dk-total">0</span> <i>${esc(G.unit || 'secciones')} explorad${/os$/.test(G.unit || '') ? 'os' : 'as'}</i></p><p class="dk-hand" id="dk-hint" aria-hidden="true"></p></div>
           <div class="dk-ruler" id="dk-ruler" role="progressbar" aria-label="Progreso de la guía" aria-valuemin="0"><span class="dk-ruler-fill" id="dk-fill"></span><span class="dk-bookmark" id="dk-mark"></span></div>
           <div class="dk-prog-actions">
             <button class="dk-start" id="dk-start" type="button">Empezar la guía <i>${svg.down}</i></button>
@@ -262,12 +275,15 @@
     groups.forEach((g, i) => {
       const h = g.querySelector('.g-title');
       const sum = g.tagName === 'DETAILS' ? g.querySelector(':scope > summary') : null;
-      const n = clean((h || sum)?.querySelector('.g-n')?.textContent) || String(i + 1);
-      if (!g.id) g.id = 'parte-' + n;
-      const tag = document.createElement('span');
-      tag.className = 'dk-sec-tag'; tag.setAttribute('aria-hidden', 'true');
-      tag.textContent = '§' + (/^\d+$/.test(n) ? n.padStart(2, '0') : n);
-      if (sum) sum.prepend(tag); else g.prepend(tag);
+      const found = clean((h || sum)?.querySelector('.g-n, .section-number')?.textContent);
+      const n = found || String(i + 1);
+      if (!g.id) g.id = 'parte-' + (i + 1);
+      if (g.parentElement === map && (found || !G.groupSel)) {
+        const tag = document.createElement('span');
+        tag.className = 'dk-sec-tag'; tag.setAttribute('aria-hidden', 'true');
+        tag.textContent = '§' + (/^\d+$/.test(n) ? n.padStart(2, '0') : n);
+        if (sum) sum.prepend(tag); else g.prepend(tag);
+      }
       // "Personajes · quién es quién" → la segunda parte en cursiva
       if (h) {
         const txt = [...h.childNodes].filter(x => x.nodeType === 3);
@@ -518,8 +534,8 @@
 
     /* ---------- Índice ---------- */
     const toc = $('dk-toc');
-    const tocItems = groups.map(g => {
-      const n = clean(g.querySelector('.g-n')?.textContent);
+    const tocItems = groups.map((g, i) => {
+      const n = G.groupSel ? String(i + 1) : clean(g.querySelector('.g-n')?.textContent);
       const t = gName(g);
       const li = document.createElement('li');
       li.innerHTML = `<a href="#${g.id}"><span class="n">${esc(n)}</span><span class="t">${esc((b => b.length > 1 && /^(Parte|Cap[ií]tulos?)\b/i.test(b[0]) ? b.slice(1).join(' · ') : b[0])(t.split(' · ')))}</span><span class="c"></span></a>`;
@@ -551,13 +567,13 @@
 
     /* ---------- Progreso ---------- */
     const ruler = $('dk-ruler'), hint = $('dk-hint'), cont = $('dk-cont'), start = $('dk-start');
-    const nextCard = () => cards().find(c => !c.classList.contains('is-done'));
+    const nextCard = () => pcards().find(c => !c.classList.contains('is-done'));
     const sync = () => {
-      const all = cards(), N = all.length, n = all.filter(c => c.classList.contains('is-done')).length;
+      const all = pcards(), N = all.length, n = all.filter(c => c.classList.contains('is-done')).length;
       $('dk-n').textContent = n; $('dk-total').textContent = N;
-      $('dk-count').innerHTML = `<b>${n}</b> /${N} explorad${G.unit === 'capítulos' ? 'os' : 'as'}`;
+      $('dk-count').innerHTML = `<b>${n}</b> /${N} explorad${/os$/.test(G.unit || '') ? 'os' : 'as'}`;
       ruler.setAttribute('aria-valuemax', N); ruler.setAttribute('aria-valuenow', n);
-      ruler.setAttribute('aria-valuetext', `${n} de ${N} ${G.unit || 'secciones'} explorad${G.unit === 'capítulos' ? 'os' : 'as'}`);
+      ruler.setAttribute('aria-valuetext', `${n} de ${N} ${G.unit || 'secciones'} explorad${/os$/.test(G.unit || '') ? 'os' : 'as'}`);
       ruler.style.setProperty('--tick', `calc((100% - 1px) / ${Math.max(N - 1, 1)})`);
       const pct = N ? n / N * 100 : 0;
       $('dk-fill').style.width = pct + '%';

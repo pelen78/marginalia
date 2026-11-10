@@ -391,3 +391,33 @@ html.desk .dk-content .chapter-search label{font-family:var(--f-mono);font-size:
 html.desk .dk-content .chapter-search input{border:0;border-bottom:1px solid var(--muted);border-radius:0;background:transparent;padding:10px 2px;font-family:var(--f-body);font-size:1.1rem}
 html.desk .dk-content .chapter-search input:focus{outline:none;border-bottom:2px solid var(--terra)}
 .dk-glance-h{grid-column:1/-1;margin:0 0 -6px;font-family:var(--f-display);font-weight:400;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.05;letter-spacing:-.02em}
+
+/* La Biblia: directorio de libros por secciones */
+html.desk .dk-content .card .top~p:not(.book-chapter-count){margin:0;font-family:var(--f-body);font-weight:400;font-size:1rem;line-height:1.6;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+html.desk .dk-content .card .book-chapter-count{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra-ink)}
+html.desk .dk-content .section-intro{max-width:62ch;margin:-14px 0 26px;font-size:1.1rem;line-height:1.6;color:var(--muted)}
+html.desk .dk-content .book-directory{margin:0;padding:64px 0 48px;border:0;border-top:1px solid var(--line);border-radius:0;background:none;box-shadow:none}
+html.desk .dk-content .directory-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 30px;margin:0 0 28px}
+html.desk .dk-content .directory-head .eyebrow{margin:0 0 10px;font-family:var(--f-mono);font-size:.75rem;letter-spacing:.24em;color:var(--terra-ink)}
+html.desk .dk-content .directory-head h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.05;letter-spacing:-.02em}
+html.desk .dk-content .directory-head p{margin:0;font-family:var(--f-hand);font-size:1.35rem;line-height:1.2;color:var(--muted);text-align:right}
+html.desk .dk-content .search-label{display:block;margin:0 0 6px;font-family:var(--f-mono);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+html.desk .dk-content .book-directory .search-row{display:flex;gap:14px;align-items:center;padding:16px 20px;background:var(--paper);border:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+html.desk .dk-content .book-directory .search-row input{flex:1;min-width:0;border:0;border-bottom:1px solid var(--muted);border-radius:0;background:transparent;padding:10px 2px;font-family:var(--f-body);font-size:1.1rem;color:var(--ink)}
+html.desk .dk-content .book-directory .search-row input:focus{outline:none;border-bottom:2px solid var(--terra)}
+html.desk .dk-content .directory-tools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;margin:14px 0 10px}
+html.desk .dk-content .directory-tools p{margin:0;font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+html.desk .dk-content .testament-label{margin:40px 0 4px;padding:0 0 10px;border-bottom:1px solid var(--terra);font-family:var(--f-mono);font-size:.78rem;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--terra-ink)}
+html.desk .dk-content details.book-group>summary{gap:22px}
+html.desk .dk-content details.book-group .section-number{flex:none;width:40px;font-family:var(--f-mono);font-size:.8rem;color:var(--terra-ink)}
+html.desk .dk-content details.book-group .section-name{display:block;min-width:0}
+html.desk .dk-content details.book-group .section-kicker{display:block;margin:0 0 6px;font-family:var(--f-display);font-style:italic;font-size:1rem;color:var(--muted)}
+html.desk .dk-content details.book-group .section-title{display:block;font-family:var(--f-display);font-weight:400;font-size:clamp(1.7rem,2.4vw,2.2rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink)}
+html.desk .dk-content details.book-group .section-count{margin-left:auto;font-family:var(--f-mono);font-size:.75rem;color:var(--muted);white-space:nowrap}
+html.desk .dk-content details.book-group .section-toggle{font-size:2rem;line-height:1;color:var(--terra-ink);transition:transform .2s ease-out}
+html.desk .dk-content details.book-group[open] .section-toggle{transform:rotate(45deg)}
+html.desk .dk-content details.book-group .book-group-content{padding:0 0 40px}
+html.desk .dk-content .book-directory>.hint{margin:24px 0 0;font-family:var(--f-hand);font-size:1.25rem;color:var(--muted)}
+html.desk .dk-content details.reflection-group>summary .g-title{margin:0;width:100%}
+html.desk .dk-content details.reflection-group>summary .g-title>span[aria-hidden]{margin-left:auto;font-size:2rem;color:var(--terra-ink)}
+html.desk .dk-content details.reflection-group[open]>summary .g-title>span[aria-hidden]{transform:rotate(45deg)}
