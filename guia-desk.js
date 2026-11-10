@@ -223,7 +223,7 @@
     top.className = 'dk-top';
     top.innerHTML = `<div class="dk-top-in">
       <a class="dk-brand" href="/" aria-label="MyMarginalia, inicio"><span class="dk-logo" aria-hidden="true">${oldLogo ? oldLogo.innerHTML : 'MARGINALIA'}</span></a>
-      <nav class="dk-nav" aria-label="Principal"><a href="/#libros">Guías</a><a href="/#novedades">Novedades</a><a href="/#categorias">Categorías</a><a href="/#pedidos">Pide un libro</a></nav>
+      <nav class="dk-nav" aria-label="Principal"><a href="/#libros">Guías</a><a href="/#categorias">Categorías</a><a href="/#pedidos">Pide un libro</a></nav>
       <div class="dk-tools">
         <span class="dk-count" id="dk-count"></span>
         <button class="dk-icon" id="dk-theme" type="button" aria-label="Cambiar tema">${svg.moon}</button>
@@ -522,7 +522,7 @@
     foot.className = 'dk-foot';
     foot.innerHTML = `<div class="dk-foot-in">
       <div class="dk-foot-top"><p>Hecho con lápiz, café y mucha paciencia, para leer con calma.</p>
-        <nav aria-label="Pie de página"><a href="/#libros">Guías</a><a href="/#novedades">Novedades</a><a href="/#categorias">Categorías</a><a href="/#pedidos">Pide un libro</a></nav></div>
+        <nav aria-label="Pie de página"><a href="/#libros">Guías</a><a href="/#categorias">Categorías</a><a href="/#pedidos">Pide un libro</a></nav></div>
       <div class="dk-foot-legal"></div></div>`;
     const oldFoot = oldWrap.querySelector(':scope > footer');
     const legal = foot.querySelector('.dk-foot-legal');
