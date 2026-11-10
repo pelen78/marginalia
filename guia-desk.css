@@ -421,3 +421,21 @@ html.desk .dk-content .book-directory>.hint{margin:24px 0 0;font-family:var(--f-
 html.desk .dk-content details.reflection-group>summary .g-title{margin:0;width:100%}
 html.desk .dk-content details.reflection-group>summary .g-title>span[aria-hidden]{margin-left:auto;font-size:2rem;color:var(--terra-ink)}
 html.desk .dk-content details.reflection-group[open]>summary .g-title>span[aria-hidden]{transform:rotate(45deg)}
+
+/* Botón Biblioteca: lista para cambiar de libro */
+.dk-lib{position:relative}
+.dk-lib>summary{list-style:none;cursor:pointer}
+.dk-lib>summary::-webkit-details-marker{display:none}
+.dk-lib .dk-chev{width:16px;height:16px;transition:transform .2s ease-out}
+.dk-lib[open] .dk-chev{transform:rotate(180deg)}
+.dk-lib-panel{position:absolute;right:0;top:calc(100% + 10px);z-index:60;width:min(360px,calc(100vw - 32px));max-height:min(70vh,560px);overflow:auto;padding:18px 10px 12px;background:var(--paper);border:1px solid var(--line);box-shadow:0 24px 50px -24px rgba(40,25,15,.45)}
+.dk-lib-panel .dk-kick{padding:0 12px 12px;margin:0;border-bottom:1px dashed var(--line);font-size:.7rem}
+.dk-lib-list{list-style:none;margin:6px 0;padding:0}
+.dk-lib-list a{display:block;padding:9px 12px;text-decoration:none;color:var(--ink)}
+.dk-lib-list a:hover{background:var(--panel)}
+.dk-lib-list b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.05rem;line-height:1.25}
+.dk-lib-list small{display:block;margin-top:2px;font-family:var(--f-display);font-style:italic;font-size:.88rem;color:var(--muted)}
+.dk-lib-list a[aria-current]{background:var(--panel)}
+.dk-lib-list a[aria-current] b{color:var(--terra-ink)}
+.dk-lib-all{display:block;margin:4px 12px 0;padding:10px 0 4px;border-top:1px dashed var(--line);font-family:var(--f-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)!important;text-decoration:none}
+.dk-lib-all:hover{color:var(--terra-ink)!important}

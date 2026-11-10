@@ -182,6 +182,8 @@
   const svg = {
     down: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>',
     reset: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>',
+    book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>',
+    chev: '<svg class="dk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>',
     back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>',
     moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>',
     pen: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h8"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>',
@@ -225,7 +227,7 @@
       <div class="dk-tools">
         <span class="dk-count" id="dk-count"></span>
         <button class="dk-icon" id="dk-theme" type="button" aria-label="Cambiar tema">${svg.moon}</button>
-        <a class="dk-notes" href="/#libros">${svg.back}<span>Biblioteca</span></a>
+        <details class="dk-lib" id="dk-lib"><summary class="dk-notes">${svg.book}<span>Biblioteca</span>${svg.chev}</summary><div class="dk-lib-panel"><p class="dk-kick">Cambiar de libro</p><ul class="dk-lib-list"></ul><a class="dk-lib-all" href="/#libros">Ver toda la biblioteca →</a></div></details>
       </div></div>`;
 
     /* ---------- Portada ---------- */
@@ -621,6 +623,24 @@
     let tm;
     brand.addEventListener('mouseenter', () => { clearInterval(tm); tm = setInterval(() => { const l = L[Math.floor(Math.random() * L.length)]; if (!l) return; l.className = S[Math.floor(Math.random() * S.length)]; l.style.transform = `rotate(${(Math.random() * 6 - 3).toFixed(1)}deg)`; }, 260); });
     brand.addEventListener('mouseleave', () => clearInterval(tm));
+
+    /* ---------- Biblioteca: lista para cambiar de libro ---------- */
+    const lib = $('dk-lib'), libList = lib.querySelector('.dk-lib-list');
+    const oldItems = [...document.querySelectorAll('.mg-menu ul > li > a')];
+    oldItems.forEach(a => {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = a.getAttribute('href');
+      const small = a.querySelector('small');
+      const title = clean([...a.childNodes].filter(x => x !== small).map(x => x.textContent).join(''));
+      link.innerHTML = `<b>${esc(title)}</b>${small ? `<small>${esc(clean(small.textContent))}</small>` : ''}`;
+      if (a.getAttribute('aria-current') === 'page' || a.getAttribute('href') === slug + '.html') link.setAttribute('aria-current', 'page');
+      li.append(link); libList.append(li);
+    });
+    if (!oldItems.length) lib.querySelector('.dk-kick').hidden = true;
+    lib.addEventListener('toggle', () => { if (lib.open) libList.querySelector('[aria-current]')?.scrollIntoView({ block: 'nearest' }); });
+    document.addEventListener('click', e => { if (lib.open && !lib.contains(e.target)) lib.open = false; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && lib.open) { lib.open = false; lib.querySelector('summary').focus(); } });
 
     root.classList.add('desk-ready');
     // Índice: abre el libro plegado al que lleva el enlace
