@@ -21,6 +21,8 @@
 - La novedad del inicio solo sale si la guía tiene ilustración: imagen vertical 3:4 en `assets/novedades/` y una línea en `PHOTOS` dentro de `index.html`.
 - El catálogo para buscadores (`<!-- seo-catalog -->`) se genera con `scripts/seo.mjs`; el código del catálogo termina en el comentario `/* fin del catálogo */`.
 
+- `movil.html` (celular) usa la misma portada que la computadora (sección `.nh`): si cambias `PHOTOS` o `GENRE` en `index.html`, cámbialos también en `movil.html`. La "Pregunta del día" ya no existe en el celular.
+
 ## Guías en computadora (diseño nuevo)
 - Lo usan `la-paciente-silenciosa.html`, `el-jardin-de-las-mariposas.html`, `la-biblioteca-de-la-medianoche.html`, `el-ultimo-secreto.html`, `piensalo-otra-vez.html`, `la-teoria-let-them.html`, `el-sutil-arte-de-que-te-importe-un-carajo.html`, `amar-o-depender.html`, `inteligencia-emocional.html`, `tus-zonas-erroneas.html`, `cosas-buenas.html`, `como-ganar-amigos.html`, `tiny-habits.html`, `habitos-atomicos.html`, `el-poder-del-ahora.html` , `imitacion-de-cristo.html` y `biblia.html` (Biblia: `groupSel`, `progressSel` y `unit: 'libros'`; Imitación: esta con libros plegables: `<details class="group">`, búsqueda de capítulos y `eyebrowPart`). También funciona en guías de no ficción: los bloques de actividades, quiz y notas se acomodan solos. En el celular la guía se ve igual que siempre.
 - Tres piezas: el script `#desk-switch` en el `<head>` (pone la clase `desk` en `<html>` si la pantalla mide más de 760 px), `guia-desk.css` y `guia-desk.js`.

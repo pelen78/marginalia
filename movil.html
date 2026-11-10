@@ -40,7 +40,7 @@
 <meta name="description" content="Descubre MyMarginalia: resúmenes de libros, guías de lectura por capítulos e ideas para reflexionar. Lee a tu ritmo y conserva tus propias notas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Space+Mono:wght@400;700&family=Instrument+Sans:wght@400;500&display=swap">
 <style>
 :root{
   --bg:#f3ede2; --paper:#f9f5ee; --panel:#ebe3d4; --panel-2:#efe8dc;
@@ -458,6 +458,62 @@ main .mark path{stroke-dasharray:none}
 .latest-feature{touch-action:pan-y}
 @media(prefers-reduced-motion:reduce){.latest-cover,.latest-orbit,.latest-spark{animation:none;transition:none}.latest-motion{display:none}}
 </style>
+<style id="nh-style">
+/* Portada nueva en el celular: misma hoja, foto y textos que el diseño de computadora */
+:root{--nh-hl:#f2cf4a;--nh-rule:#e2a9a0;--nh-ink:#a9441f;--f-ui:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--nh-hl:rgba(242,207,74,.32);--nh-rule:#5a3a33;--nh-ink:#e07a55}}
+:root[data-theme="dark"]{--nh-hl:rgba(242,207,74,.32);--nh-rule:#5a3a33;--nh-ink:#e07a55}
+.nh{display:grid;gap:26px;padding:34px 0 48px;border-bottom:1px solid var(--line);overflow-x:clip}
+.nh-kick{display:flex;align-items:center;gap:10px;margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.nh-dot{width:8px;height:8px;flex:none;border-radius:50%;background:var(--terra)}
+.nh h1{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(2.7rem,13.5vw,4rem);line-height:.95;letter-spacing:-.022em;font-variation-settings:"opsz" 144;max-width:9ch}
+.nh h1 .mark.ci svg{left:-14px;top:-12px;width:calc(100% + 26px);height:calc(100% + 18px)}
+.nh h1 .mark.ci path{stroke:var(--terra);stroke-width:2.5;stroke-dasharray:none;stroke-dashoffset:0}
+.nh h1 em{font-style:italic;color:inherit;font-weight:400;background:linear-gradient(transparent 58%,var(--nh-hl) 58%,var(--nh-hl) 94%,transparent 94%);padding-right:.06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.nh-def{display:grid;gap:10px;padding-top:22px;border-top:1px solid var(--line)}
+.nh-def p{margin:0;font-size:1.05rem;line-height:1.65;color:var(--muted)}
+.nh-def p i{color:var(--ink)}
+.nh-def .nh-word{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;color:var(--ink)}
+.nh-def .nh-word i{font-size:1.6rem;letter-spacing:.02em}
+.nh-def .nh-word span{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+.nh-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.nh-go{display:inline-flex;align-items:center;gap:16px;min-height:56px;padding:7px 7px 7px 22px;border-radius:999px;background:var(--ink);color:var(--bg);text-decoration:none;font-family:var(--f-ui);font-size:1rem}
+.nh-go i{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--bg);color:var(--ink);font-style:normal}
+.nh-go svg{width:20px;height:20px}
+.nh-dice{display:inline-flex;align-items:center;gap:12px;font-family:var(--f-ui);font-size:1rem;color:var(--ink);text-decoration:none}
+.nh-dice i{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;border:1.5px dashed var(--muted);font-style:normal}
+.nh-dice svg{width:22px;height:22px}
+.nh-stats{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0;padding:0;list-style:none;font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+.nh-stats b{font-weight:400;color:var(--ink)}
+.nh-news{position:relative;margin-top:14px;padding:22px 6px 26px 2px;scroll-margin-top:90px}
+.nh-news::before,.nh-news::after{content:"";position:absolute;inset:36px 6px 6px 40px;z-index:0;background:var(--panel);border:1px solid var(--line);transform:rotate(2.5deg);box-shadow:0 18px 30px -24px rgba(60,40,20,.5);background-image:repeating-linear-gradient(transparent 0 62px,var(--line) 62px 64px)}
+.nh-news::after{inset:18px 0 20px 20px;transform:rotate(1deg);background:var(--panel-2)}
+.nh-sheet{position:relative;z-index:1;display:grid;gap:18px;padding:38px 22px 26px 34px;background:var(--paper);border:1px solid var(--line);box-shadow:0 24px 40px -28px rgba(60,40,20,.55);transform:rotate(-1deg)}
+.nh-sheet::before{content:"";position:absolute;left:16px;top:0;bottom:0;width:1px;background:var(--nh-rule)}
+.nh-clip{position:absolute;left:34px;top:-22px;width:52px;height:52px;color:#9a948a;transform:rotate(-24deg)}
+.nh-sheet-kick{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;margin:0;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.nh-polaroid{position:relative;display:block;width:72%;max-width:280px;margin:4px 0 14px;padding:12px 12px 0;background:#fbf8f2;box-shadow:0 2px 3px rgba(60,40,20,.12),0 22px 30px -18px rgba(60,40,20,.55);transform:rotate(-3deg);text-decoration:none}
+.nh-tape{position:absolute;left:12%;top:-12px;width:44%;height:24px;background:rgba(242,207,74,.82);transform:rotate(-3deg)}
+.nh-pic{display:block;aspect-ratio:3/4;overflow:hidden;background:#2a2622}
+.nh-pic img{display:block;width:100%;height:100%;object-fit:cover}
+.nh-pic-cover{display:grid;place-items:center;height:100%;padding:12%;background:#e9e1d3}
+.nh-pic-cover svg{display:block;width:100%;height:auto}
+.nh-cap{display:block;padding:10px 4px 16px;font-family:var(--f-hand);font-size:1.25rem;line-height:1.1;color:#4a4038}
+.nh-seal{position:absolute;right:-30px;bottom:38px;width:88px;height:88px;color:#c63d27;transform:rotate(14deg);filter:drop-shadow(0 6px 8px rgba(60,20,10,.3))}
+.nh-seal svg{display:block;width:100%;height:100%}
+.nh-info{display:grid;gap:10px;min-width:0}
+.nh-info h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:2rem;line-height:1.02;letter-spacing:-.02em}
+.nh-au{margin:0;font-style:italic;font-size:1.05rem;color:var(--muted)}
+.nh-mini{margin:4px 0 0;font-size:1rem;line-height:1.6;color:var(--ink)}
+.nh-read{justify-self:start;display:inline-flex;align-items:center;gap:10px;margin-top:6px;padding:6px 0;border-bottom:1.5px solid var(--ink);font-family:var(--f-ui);font-size:1rem;color:var(--ink);text-decoration:none}
+.nh-read svg{width:18px;height:18px;color:var(--terra)}
+.nh-nav{position:relative;z-index:1;display:flex;align-items:center;gap:12px;margin:24px 0 0 8px;font-family:var(--f-hand);font-size:1.3rem;color:var(--muted)}
+.nh-nav[hidden]{display:none}
+.nh-nav button{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.nh-nav svg{width:18px;height:18px}
+.nh-nav .n{font-family:var(--f-mono);font-size:.8rem;color:var(--ink)}
+@media(min-width:600px){.nh-sheet{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;padding:42px 26px 30px 40px}.nh-sheet-kick{grid-column:1/-1}.nh-polaroid{width:auto;margin:6px 0 0 -10px}}
+</style>
 <script id="seo-structured-data" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mymarginalia.net/#website","url":"https://mymarginalia.net/","name":"MyMarginalia","inLanguage":"es","publisher":{"@id":"https://mymarginalia.net/#organization"}},{"@type":"Organization","@id":"https://mymarginalia.net/#organization","name":"MyMarginalia","url":"https://mymarginalia.net/","logo":"https://mymarginalia.net/icon-512.png"},{"@type":"CollectionPage","@id":"https://mymarginalia.net/#webpage","url":"https://mymarginalia.net/","name":"MyMarginalia | Guías de lectura, resúmenes y reflexiones","description":"Descubre MyMarginalia: resúmenes de libros, guías de lectura por capítulos e ideas para reflexionar. Lee a tu ritmo y conserva tus propias notas.","isPartOf":{"@id":"https://mymarginalia.net/#website"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://mymarginalia.net/biblia.html","name":"Guía de lectura de La Biblia"},{"@type":"ListItem","position":2,"url":"https://mymarginalia.net/imitacion-de-cristo.html","name":"Guía de lectura de Imitación de Cristo"},{"@type":"ListItem","position":3,"url":"https://mymarginalia.net/el-poder-del-ahora.html","name":"Guía de lectura de El poder del ahora"},{"@type":"ListItem","position":4,"url":"https://mymarginalia.net/habitos-atomicos.html","name":"Guía de lectura de Hábitos atómicos"},{"@type":"ListItem","position":5,"url":"https://mymarginalia.net/tiny-habits.html","name":"Guía de lectura de Hábitos diminutos"},{"@type":"ListItem","position":6,"url":"https://mymarginalia.net/como-ganar-amigos.html","name":"Guía de lectura de Cómo ganar amigos e influir sobre las personas"},{"@type":"ListItem","position":7,"url":"https://mymarginalia.net/cosas-buenas.html","name":"Guía de lectura de Cómo hacer que te pasen cosas buenas"},{"@type":"ListItem","position":8,"url":"https://mymarginalia.net/tus-zonas-erroneas.html","name":"Guía de lectura de Tus zonas erróneas"},{"@type":"ListItem","position":9,"url":"https://mymarginalia.net/inteligencia-emocional.html","name":"Guía de lectura de Inteligencia emocional"},{"@type":"ListItem","position":10,"url":"https://mymarginalia.net/amar-o-depender.html","name":"Guía de lectura de ¿Amar o depender?"},{"@type":"ListItem","position":11,"url":"https://mymarginalia.net/el-sutil-arte-de-que-te-importe-un-carajo.html","name":"Guía de lectura de El sutil arte de que te importe un carajo"},{"@type":"ListItem","position":12,"url":"https://mymarginalia.net/piensalo-otra-vez.html","name":"Guía de lectura de Piénsalo otra vez"},{"@type":"ListItem","position":13,"url":"https://mymarginalia.net/la-teoria-let-them.html","name":"Guía de lectura de La teoría Let Them"},{"@type":"ListItem","position":14,"url":"https://mymarginalia.net/el-jardin-de-las-mariposas.html","name":"Guía de lectura de El jardín de las mariposas"},{"@type":"ListItem","position":15,"url":"https://mymarginalia.net/la-biblioteca-de-la-medianoche.html","name":"Guía de lectura de La biblioteca de la medianoche"},{"@type":"ListItem","position":16,"url":"https://mymarginalia.net/el-ultimo-secreto.html","name":"Guía de lectura de El último secreto"},{"@type":"ListItem","position":17,"url":"https://mymarginalia.net/la-paciente-silenciosa.html","name":"Guía de lectura de La paciente silenciosa"}]}}]}</script>
 <link rel="stylesheet" href="legibility.css">
 </head>
@@ -521,7 +577,6 @@ main .mark path{stroke-dasharray:none}
     <nav class="main" aria-label="Principal">
       <a href="#inicio" class="on">Inicio</a>
       <a href="#libros">Libros</a>
-      <a href="#pregunta">Pregunta del día</a>
     </nav>
     <div class="tools">
       <input class="search" id="search" type="search" placeholder="Buscar libro o autor" aria-label="Buscar libro o autor">
@@ -537,41 +592,44 @@ main .mark path{stroke-dasharray:none}
 
 <main class="wrap layout" id="inicio">
   <div>
-    <section class="hero latest-hero" aria-label="Novedades de la biblioteca">
-      <div class="copy" data-reveal>
-        <span class="eyebrow">MyMarginalia · Guías de lectura</span>
-        <h1>Resúmenes de libros,<br>ideas para <em><span class="mark ul">reflexionar.</span></em></h1>
-        <p>La marginalia reúne notas y reflexiones al margen de una lectura. En MyMarginalia encontrarás resúmenes de libros y guías por capítulos para comprender sus ideas y conservar tus propias notas, a tu ritmo.</p>
-        <a class="btn" href="#libros">Explorar las guías <span aria-hidden="true">↓</span></a>
+    <!-- Portada (igual al diseño de computadora) -->
+    <section class="nh" aria-labelledby="nh-h">
+      <p class="nh-kick"><span class="nh-dot" aria-hidden="true"></span>Cuaderno de lectura · Guías en español</p>
+      <h1 id="nh-h">Resúmenes de libros, <span class="mark ci">ideas</span> para <em>reflexionar.</em></h1>
+      <div class="nh-def">
+        <p class="nh-word"><i>mar·gi·na·lia</i><span>/mar.xi'na.lja/ · s. f. pl.</span></p>
+        <p>Notas y reflexiones al margen de una lectura. Aquí encontrarás resúmenes de libros y guías por capítulos para comprender sus ideas y conservar tus propias notas, <i>a tu ritmo.</i></p>
       </div>
-      <div class="latest-feature" role="region" aria-roledescription="carrusel" aria-label="Libros nuevos">
-        <span class="latest-label">Nuevo en la biblioteca</span>
-        <span class="latest-wash" aria-hidden="true"></span>
-        <span class="latest-note" aria-hidden="true">Entre páginas, una idea…<br>lo que queda al leer,<br>una historia, un secreto.<br>Leer, imaginar, recordar…</span>
-        <svg class="latest-strokes" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 25 24 3M18 31l15-9M4 14l2-8"/></svg>
-        <span class="latest-orbit" aria-hidden="true"></span>
-        <span class="latest-spark" aria-hidden="true">✧</span>
-        <button class="latest-motion" type="button" aria-label="Pausar carrusel y animación" title="Pausar carrusel y animación" aria-pressed="false">Ⅱ</button>
-        <a class="latest-cover" id="latest-cover" href="la-paciente-silenciosa.html" aria-label="Abrir la nueva guía de La paciente silenciosa"></a>
-        <div class="latest-info">
-          <span class="eyebrow">Nueva guía · <span id="latest-category">Novelas</span></span>
-          <h2 id="latest-title">La paciente silenciosa</h2>
-          <p class="latest-author" id="latest-author">Alex Michaelides</p>
-          <p id="latest-description">Resumen, personajes principales y claves para entender la historia.</p>
-          <div class="latest-tags" aria-label="Contenido de la guía">
-            <span class="latest-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg>Resumen</span>
-            <span class="latest-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="8" r="2.5"/><path d="M3 21v-4a6 6 0 0 1 12 0v4zm12-9c4 0 6 2 6 5v4h-4"/></svg><span id="latest-people-label">Personajes</span></span>
-            <span class="latest-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m16 8-3 5-5 3 3-5z"/></svg>Temas</span>
+      <div class="nh-cta">
+        <a class="nh-go" href="#libros">Explorar las guías <i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+        <a class="nh-dice" id="nh-random" href="#libros"><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="7" width="12" height="12" rx="2.5"/><path d="M15 9.5l3.3-.9a2 2 0 0 1 2.5 1.4l2 7.3a2 2 0 0 1-1.4 2.5l-6.4 1.7"/><circle cx="7" cy="11" r=".9" fill="currentColor"/><circle cx="11" cy="15" r=".9" fill="currentColor"/><circle cx="9" cy="13" r=".9" fill="currentColor"/></svg></i>Abrir uno al azar</a>
+      </div>
+      <ul class="nh-stats" id="nh-stats" aria-label="La biblioteca en números"></ul>
+
+      <article class="nh-news" id="novedades" aria-labelledby="nh-title">
+        <div class="nh-sheet">
+          <svg class="nh-clip" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M22 44 44 22a8 8 0 0 0-11-11L12 32a12 12 0 0 0 17 17l20-20"/></svg>
+          <p class="nh-sheet-kick"><span>Nuevo en la biblioteca</span><span id="nh-cat"></span></p>
+          <a class="nh-polaroid" id="nh-cover" href="la-paciente-silenciosa.html" tabindex="-1" aria-hidden="true">
+            <span class="nh-tape"></span>
+            <span class="nh-pic" id="nh-pic"></span>
+            <span class="nh-cap" id="nh-cap"></span>
+            <span class="nh-seal" id="nh-seal"></span>
+          </a>
+          <div class="nh-info">
+            <h2 id="nh-title"></h2>
+            <p class="nh-au" id="nh-author"></p>
+            <p class="nh-mini" id="nh-mini"></p>
+            <a class="nh-read" id="nh-link" href="la-paciente-silenciosa.html">Leer la guía completa <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-          <a class="btn" id="latest-link" href="la-paciente-silenciosa.html">Leer la guía completa <span aria-hidden="true">→</span></a>
         </div>
-        <nav class="latest-carousel-nav" aria-label="Elegir libro nuevo">
-          <button id="latest-prev" type="button" aria-label="Libro nuevo anterior">‹</button>
-          <div class="latest-dots" id="latest-dots"></div>
-          <button id="latest-next" type="button" aria-label="Siguiente libro nuevo">›</button>
-        </nav>
-        <span class="latest-carousel-status" id="latest-status" aria-live="polite" aria-atomic="true"></span>
-      </div>
+        <div class="nh-nav" id="nh-nav" hidden>
+          <button type="button" id="nh-prev" aria-label="Novedad anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <span class="n" id="nh-n" aria-live="polite"></span>
+          <button type="button" id="nh-next" aria-label="Siguiente novedad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          <span aria-hidden="true">otra novedad</span>
+        </div>
+      </article>
     </section>
 
 
@@ -884,11 +942,6 @@ main .mark path{stroke-dasharray:none}
   </div>
 
   <aside class="side">
-    <section class="panel" id="pregunta" aria-labelledby="q-h" data-reveal>
-      <h2 id="q-h">Pregunta del día <button class="link" id="nextQ">otra →</button></h2>
-      <div class="q-text" id="qWrap"><span class="q-mark">&ldquo;</span><span id="qText"></span></div>
-      <div class="q-src" id="qSrc"></div>
-    </section>
 
     <section class="panel quote-card" aria-label="Cita" data-reveal style="transition-delay:.15s">
       <div class="sig" aria-hidden="true">nota al margen</div>
@@ -1062,6 +1115,7 @@ const dayIndex=Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate(
 const todayKey=`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`;
 // The two most recently published guides lead the carousel, newest first.
 function renderMinis(){
+  if(!document.querySelector('.latest-feature'))return;
   const recent=LIVE.slice(-2).reverse();
   if(!recent.length)return;
   let current=0;
@@ -1156,20 +1210,43 @@ function renderGrid(){
     </article>`).join(""):`<p class="empty">No encontré libros con esa búsqueda.</p>`;
 }
 
-let qi=dayIndex%LIVE.length;
-function renderQuestion(){
-  const b=LIVE[qi];
-  document.getElementById("qText").textContent=b.q;
-  document.getElementById("qSrc").innerHTML=`Guía de <a href="${b.file}">${esc(b.title)}</a>`;
+/* Portada: números y novedad (igual que en computadora) */
+const GENRE={biblia:'Texto sagrado',ic:'Espiritualidad cristiana',ahora:'Espiritualidad',habitos:'Desarrollo personal',th:'Desarrollo personal',amigos:'Relaciones y comunicación',cosas:'Psicología y bienestar',zonas:'Psicología y autoayuda',ie:'Psicología',aod:'Psicología de pareja',sa:'Desarrollo personal',poz:'Psicología',ltt:'Desarrollo personal',jdm:'Thriller psicológico',bdm:'Fantasía contemporánea',eus:'Thriller de misterio',lps:'Thriller psicológico'};
+/* Foto de la novedad. Usa las mismas que index.html (PHOTOS). */
+const PHOTOS={lps:{src:'assets/novedades/la-paciente-silenciosa.jpg',cap:'fig. 1: el estudio de Alicia'}};
+function sealSVG(b){
+  const txt=`Nueva guía · ${b.cat==='Novelas'?'Novela · Sin spoilers':b.cat} · `.toUpperCase();
+  return `<svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="currentColor"/>
+    <defs><path id="nh-seal-path" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs>
+    <text font-family="Space Mono, monospace" font-size="10.5" letter-spacing="2.2" fill="#fff7ee"><textPath href="#nh-seal-path" textLength="258" lengthAdjust="spacing">${esc(txt)}</textPath></text>
+    <path d="M73 43c-12 1-22 10-25 25l-4 10 3 1 4-9c10 0 19-6 22-15-4 2-8 2-11 2 4-3 8-7 11-14z" fill="#fff7ee"/></svg>`;
+}
+function renderNews(){
+  const $=id=>document.getElementById(id);
+  if(!$('nh-stats'))return;
+  $('nh-stats').innerHTML=`<li><b>${LIVE.length}</b> guías</li><li><b>${cats.length-1}</b> temas</li><li><b>0</b> spoilers sin aviso</li>`;
+  const recent=LIVE.slice(-2).reverse();
+  const withPhoto=recent.filter(b=>PHOTOS[b.id]);
+  const news=withPhoto.length?withPhoto:recent.slice(0,1);
+  let k=0;
+  const show=i=>{
+    k=(i+news.length)%news.length; const b=news[k], ph=PHOTOS[b.id];
+    $('nh-cat').textContent=GENRE[b.id]||b.cat;
+    $('nh-title').textContent=b.title; $('nh-author').textContent=b.author; $('nh-mini').textContent=b.blurb;
+    $('nh-link').href=b.file; $('nh-cover').href=b.file;
+    $('nh-pic').innerHTML=ph?`<img src="${ph.src}" alt="" width="900" height="1200">`:`<span class="nh-pic-cover">${coverSVG(b)}</span>`;
+    $('nh-cap').textContent=ph?ph.cap:`fig. ${k+1}: ${b.title.toLowerCase()}`;
+    $('nh-seal').innerHTML=sealSVG(b);
+    $('nh-n').textContent=`${k+1} / ${news.length}`;
+  };
+  show(0);
+  if(news.length>1){$('nh-nav').hidden=false;$('nh-prev').onclick=()=>show(k-1);$('nh-next').onclick=()=>show(k+1);}
+  $('nh-random').addEventListener('click',e=>{e.preventDefault();location.href=LIVE[Math.floor(Math.random()*LIVE.length)].file});
 }
 
 document.getElementById("filters").addEventListener("click",e=>{
   const c=e.target.closest("button")?.dataset.cat; if(!c) return;
   activeCat=c; renderFilters(); renderGrid();
-});
-document.getElementById("nextQ").addEventListener("click",()=>{
-  const w=document.getElementById("qWrap"); w.style.opacity=0;
-  setTimeout(()=>{qi=(qi+1)%LIVE.length;renderQuestion();w.style.opacity=1},300);
 });
 
 const search=document.getElementById("search");
@@ -1226,7 +1303,7 @@ function startReveals(){
   els.forEach(el=>io.observe(el));
 }
 
-renderMinis(); renderFilters(); renderGrid(); renderQuestion(); markify();
+renderMinis(); renderNews(); renderFilters(); renderGrid(); markify();
 
 /* ================= ENTRADA ================= */
 (() => {
