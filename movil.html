@@ -401,6 +401,102 @@ main .mark path{stroke-dasharray:none}
   #key{font-size:22px;padding:.25em .55em}
   #hint .after{display:none}
 }
+/* Categorías de la biblioteca móvil */
+#filters, .catalog-category-options {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+#filters {margin:20px 0 0}
+#filters .catalog-tab, .catalog-category-options .catalog-tab {
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:6px;
+  min-height:49px;
+  padding:7px 9px 7px 13px;
+  border:1px solid var(--line);
+  border-radius:3px 8px 8px 3px;
+  background:var(--paper);
+  color:var(--ink);
+  font:400 clamp(.9rem,4vw,1.1rem)/1.2 var(--f-display);
+  text-align:left;
+  text-transform:none;
+  letter-spacing:normal;
+}
+.catalog-tab::before {
+  content:"";
+  position:absolute;
+  inset:7px auto 7px 0;
+  width:4px;
+  border-radius:0 2px 2px 0;
+  background:var(--tab-color,var(--terra-ink));
+}
+#filters .catalog-tab[aria-pressed="true"], .catalog-category-options .catalog-tab[aria-pressed="true"] {
+  background:color-mix(in srgb,var(--tab-color,var(--terra-ink)) 12%,var(--paper));
+  border-color:var(--tab-color,var(--terra-ink));
+}
+.catalog-tab[aria-pressed="true"] .catalog-tab-name {
+  text-decoration:underline;
+  text-decoration-color:var(--tab-color,var(--terra-ink));
+  text-underline-offset:4px;
+}
+.catalog-tab-name {min-width:0;overflow-wrap:anywhere}
+.catalog-tab-count {color:var(--muted);font:.75rem var(--f-mono)}
+#catalog-all {
+  min-height:44px;
+  margin:2px 0 10px;
+  padding:0;
+  color:var(--terra-ink);
+  font:.8125rem var(--f-mono);
+  text-align:left;
+}
+#catalog-results {scroll-margin-top:calc(var(--header-height,78px) + 14px)}
+#catalog-filter-dock {
+  position:fixed;
+  z-index:25;
+  inset:auto 0 0;
+  padding:8px 16px calc(10px + env(safe-area-inset-bottom,0px));
+  border-top:1px solid var(--line);
+  background:var(--bg);
+}
+#catalog-filter-toggle {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  width:min(100%,420px);
+  min-height:46px;
+  margin-inline:auto;
+  padding:8px 12px;
+  border-radius:8px;
+  background:var(--ink);
+  color:var(--bg);
+  font:.8125rem var(--f-mono);
+  text-align:left;
+}
+#catalog-filter-toggle span {display:flex;align-items:center;gap:6px}
+#catalog-filter-toggle svg {width:16px;height:16px;flex:none}
+#catalog-category-dialog {
+  position:fixed;
+  inset:auto 0 0;
+  width:min(100%,480px);
+  max-width:none;
+  max-height:90dvh;
+  margin:0 auto;
+  padding:10px 16px calc(16px + env(safe-area-inset-bottom,0px));
+  border:1px solid var(--line);
+  border-radius:16px 16px 0 0;
+  background:var(--paper);
+  color:var(--ink);
+}
+#catalog-category-dialog::backdrop {background:rgba(26,20,14,.45)}
+.catalog-category-heading {display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.catalog-category-heading h2 {font-size:1.45rem}
+.catalog-category-heading button {min-width:44px;min-height:44px;font-size:1.5rem}
+.catalog-category-options .catalog-tab:last-child {grid-column:1/-1}
+#libros :focus-visible, #catalog-category-dialog :focus-visible {outline:2px solid var(--blue);outline-offset:3px}
 </style>
 <link rel="stylesheet" href="feedback.css">
 <script src="feedback.js" defer></script>
@@ -636,6 +732,8 @@ main .mark path{stroke-dasharray:none}
         <p>Novelas, hábitos, psicología y espiritualidad: resúmenes, personajes e ideas para acompañar tu lectura.</p>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filtrar por tema"></div>
+      <button id="catalog-all" type="button" data-cat="Todos" hidden>Ver todas las guías <span aria-hidden="true">↗</span></button>
+      <div id="catalog-results" tabindex="-1" role="region" aria-label="Guías de lectura">
       <div class="grid" id="grid"><!-- seo-catalog:start -->
 
     <article class="book" style="--i:0">
@@ -931,6 +1029,20 @@ main .mark path{stroke-dasharray:none}
       </div>
     </article>
 <!-- seo-catalog:end --></div>
+      </div>
+      <div id="catalog-filter-dock" hidden>
+        <button id="catalog-filter-toggle" type="button" aria-haspopup="dialog" aria-controls="catalog-category-dialog">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-3-2-7-2-10-1v14c3-1 7-1 10 1 3-2 7-2 10-1V5c-3-1-7-1-10 1Zm0 0v14"/></svg> Categorías</span>
+          <span><span id="catalog-active-category">Todos</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></span>
+        </button>
+      </div>
+      <dialog id="catalog-category-dialog" aria-labelledby="catalog-category-title">
+        <div class="catalog-category-heading">
+          <h2 id="catalog-category-title">Categorías</h2>
+          <form method="dialog"><button type="submit" aria-label="Cerrar categorías">×</button></form>
+        </div>
+        <div class="catalog-category-options"></div>
+      </dialog>
       <div class="mg-feedback-invite" id="sugerencias">
         <p>¿Hay un libro que te gustaría encontrar aquí?</p>
         <button class="btn" id="mg-feedback-open" data-feedback-kind="suggestion" type="button" aria-haspopup="dialog">Sugerir un libro</button>
@@ -1187,9 +1299,6 @@ function renderMinis(){
 const cats=["Todos",...new Set(["Novelas",...BOOKS.map(b=>b.cat)])];
 let activeCat="Todos", query="";
 
-function renderFilters(){
-  document.getElementById("filters").innerHTML=cats.map(c=>`<button aria-pressed="${c===activeCat}" data-cat="${c}">${c}</button>`).join("");
-}
 function renderGrid(){
   const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
   const q=norm(query.trim());
@@ -1241,10 +1350,92 @@ function renderNews(){
   $('nh-random').addEventListener('click',e=>{e.preventDefault();location.href=LIVE[Math.floor(Math.random()*LIVE.length)].file});
 }
 
-document.getElementById("filters").addEventListener("click",e=>{
-  const c=e.target.closest("button")?.dataset.cat; if(!c) return;
-  activeCat=c; renderFilters(); renderGrid();
-});
+const catalog = document.getElementById("libros");
+const catalogResults = document.getElementById("catalog-results");
+const categoryDock = document.getElementById("catalog-filter-dock");
+const categoryToggle = document.getElementById("catalog-filter-toggle");
+const categoryDialog = document.getElementById("catalog-category-dialog");
+const savedCatalog = history.state?.marginaliaCatalog;
+if (cats.includes(savedCatalog?.category)) activeCat = savedCatalog.category;
+
+function initCatalogCategories() {
+  const tabColors = {
+    Novelas: "sage", Espiritualidad: "blue", Hábitos: "terra-ink",
+    Relaciones: "terra-ink", Bienestar: "sage", Psicología: "blue"
+  };
+  const counts = new Map();
+  for (const book of BOOKS) counts.set(book.cat, (counts.get(book.cat) ?? 0) + 1);
+  const categoryTab = category => {
+    const count = category === "Todos" ? BOOKS.length : counts.get(category) ?? 0;
+    const label = category === "Todos" ? "Todas las guías" : category;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "catalog-tab";
+    button.dataset.cat = category;
+    button.setAttribute("aria-label", `${label}, ${count} ${count === 1 ? "guía" : "guías"}`);
+    button.style.setProperty("--tab-color", `var(--${tabColors[category] ?? "terra-ink"})`);
+    button.innerHTML = `<span class="catalog-tab-name">${esc(label)}</span><span class="catalog-tab-count" aria-hidden="true">${count}</span>`;
+    return button;
+  };
+  const themes = cats.filter(category => category !== "Todos");
+  const allGuides = document.getElementById("catalog-all");
+  document.getElementById("filters").replaceChildren(...themes.map(categoryTab));
+  categoryDialog.querySelector(".catalog-category-options")
+    .replaceChildren(...themes.map(categoryTab), categoryTab("Todos"));
+  allGuides.hidden = false;
+
+  function updateCategory() {
+    for (const button of catalog.querySelectorAll("[data-cat]")) {
+      button.setAttribute("aria-pressed", String(button.dataset.cat === activeCat));
+    }
+    document.getElementById("catalog-active-category").textContent = activeCat;
+    catalogResults.setAttribute("aria-label", activeCat === "Todos" ? "Todas las guías" : `Guías de ${activeCat}`);
+    renderGrid();
+  }
+  updateCategory();
+
+  catalog.addEventListener("click", event => {
+    const category = event.target.closest("button[data-cat]")?.dataset.cat;
+    if (!cats.includes(category)) return;
+    if (categoryDialog.open) categoryDialog.close();
+    if (category !== activeCat) {
+      activeCat = category;
+      updateCategory();
+    }
+    catalogResults.focus({preventScroll:true});
+    catalogResults.scrollIntoView({block:"start"});
+  });
+  categoryToggle.addEventListener("click", () => {
+    categoryDialog.showModal();
+    categoryDialog.querySelector('[aria-pressed="true"]').focus();
+  });
+  categoryDialog.addEventListener("click", event => {
+    if (event.target !== categoryDialog) return;
+    const {left, right, top, bottom} = categoryDialog.getBoundingClientRect();
+    if (event.clientX < left || event.clientX > right || event.clientY < top || event.clientY > bottom) {
+      categoryDialog.close();
+    }
+  });
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      categoryDock.hidden = !entry.isIntersecting;
+    }, {rootMargin:"-110px 0px -68px 0px"}).observe(catalogResults);
+  } else {
+    categoryDock.hidden = false;
+  }
+
+  addEventListener("pagehide", () => {
+    history.replaceState({
+      ...history.state,
+      marginaliaCatalog:{category:activeCat, y:scrollY}
+    }, "");
+  });
+  addEventListener("pageshow", event => {
+    if (event.persisted || performance.getEntriesByType("navigation")[0]?.type !== "back_forward") return;
+    if (Number.isFinite(savedCatalog?.y)) scrollTo({top:savedCatalog.y,behavior:"instant"});
+  });
+}
 
 const root=document.documentElement;
 try{const t=localStorage.getItem("marginalia-theme"); if(t) root.dataset.theme=t}catch(e){}
@@ -1293,7 +1484,7 @@ function startReveals(){
   els.forEach(el=>io.observe(el));
 }
 
-renderMinis(); renderNews(); renderFilters(); renderGrid(); markify();
+renderMinis(); renderNews(); initCatalogCategories(); markify();
 
 /* ================= ENTRADA ================= */
 (() => {
