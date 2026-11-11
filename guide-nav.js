@@ -3,8 +3,15 @@
    .bar (progreso) · #map > .group > h2.g-title · .card[id^="card-"] (.is-done al explorarla) · section.block[id]
    No guarda nada propio: lee el progreso que la página ya guarda en las tarjetas.
    Para usarlo en otra guía basta con cargar <script src="guide-nav.js" defer></script>. */
-(() => {
+(function () {
   'use strict';
+  if (matchMedia('(max-width: 760px)').matches) {
+    document.addEventListener('marginalia:mobile-guide', event => init(event.detail), { once: true });
+  } else if (!document.currentScript?.hasAttribute('data-mobile-only')) {
+    init();
+  }
+
+function init(mobile) {
   const map = document.getElementById('map');
   const bar = document.querySelector('.bar');
   if (!map || !bar || document.querySelector('.mg-toc')) return;
@@ -15,16 +22,17 @@
 
   /* ---------- Partes de la guía ---------- */
   const parts = [];
-  map.querySelectorAll(':scope > .group').forEach((group, i) => {
-    const h = group.querySelector('.g-title');
+  map.querySelectorAll(mobile?.groupSel || ':scope > .group').forEach((group, i) => {
+    const h = group.querySelector('.g-title, :scope > summary .book-title, :scope > summary .section-title');
     if (!h) return;
     const n = clean(h.querySelector('.g-n')?.textContent || String(i + 1));
-    const full = clean([...h.childNodes].filter(x => !(x.classList && x.classList.contains('g-n'))).map(x => x.textContent).join(''));
+    const full = clean([...h.childNodes].filter(x => !x.matches?.('.g-n, [aria-hidden="true"]')).map(x => x.textContent).join(''));
     if (!group.id) group.id = 'parte-' + n;
     /* "Parte I · El cerebro emocional" → "El cerebro emocional"; "Principios fundamentales · Capítulos 1–3" → "Principios fundamentales". */
     const bits = full.split(' · ');
     const title = bits.length > 1 && /^(Parte|Cap[ií]tulos?)\b/i.test(bits[0]) ? bits.slice(1).join(' · ') : bits[0];
-    parts.push({ el: group, heading: h, n, title, full, cards: [...group.querySelectorAll('.card[id^="card-"]')] });
+    const selector = mobile?.progressSel || '.card[id^="card-"]';
+    parts.push({ el: group, heading: group.querySelector(':scope > summary') || h, n, title, full, cards: [...group.querySelectorAll(selector)] });
   });
   document.querySelectorAll('section.block[id]').forEach(block => {
     const h = block.querySelector('h2');
@@ -33,8 +41,10 @@
   });
   if (parts.length < 3) return;
 
-  const allCards = () => [...map.querySelectorAll('.card[id^="card-"]')];
-  const nextCard = () => allCards().find(c => !c.classList.contains('is-done') && c.offsetParent !== null);
+  const allCards = () => [...map.querySelectorAll(mobile?.progressSel || '.card[id^="card-"]')];
+  const nextCard = () => allCards().find(c => !c.classList.contains('is-done') && (
+    c.offsetParent !== null || (mobile && c.closest('details:not([open])') && !c.closest('[hidden], #spoilers') && getComputedStyle(c).display !== 'none')
+  ));
   const cardTitle = c => clean(c.querySelector('h3')?.textContent || '');
 
   /* ---------- Estilos ---------- */
@@ -87,7 +97,7 @@
   const check = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   const listHTML = () => '<ol>' + parts.map((p, i) => `
     <li class="${p.n ? 'mg-part' : 'mg-x'}" data-i="${i}"><a href="#${p.el.id}" title="${p.full.replace(/"/g, '&quot;')}">
-      <span class="n" aria-hidden="true">${p.n || pencil}</span><span class="t">${p.title}</span><span class="c"></span>
+      <span class="n" aria-hidden="true">${p.n || pencil}</span><span class="t">${p.title}${mobile && p.el.id === 'spoilers' ? ' <small>Spoilers</small>' : ''}</span><span class="c"></span>
     </a></li>`).join('') + '</ol>';
   const resumeHTML = '<div class="mg-toc-resume"><button type="button" class="mg-resume"><span class="l">Empezar la guía</span>' + arrow + '</button><p class="mg-resume-next"></p></div>';
 
@@ -108,13 +118,33 @@
   fab.setAttribute('aria-expanded', 'false');
   fab.setAttribute('aria-controls', 'mg-toc-panel');
   fab.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg><span>Índice</span><span class="p"></span>';
-  const panel = document.createElement('nav');
+  const panel = document.createElement(mobile ? 'dialog' : 'nav');
   panel.className = 'mg-toc mg-toc-panel';
   panel.id = 'mg-toc-panel';
   panel.hidden = true;
   panel.setAttribute('aria-label', 'Índice de la guía');
-  panel.innerHTML = resumeHTML + listHTML();
+  panel.innerHTML = mobile
+    ? '<div class="mg-sheet-head"><div><h2 id="mg-sheet-title">Índice de la guía</h2><p></p></div><button type="button" class="mg-sheet-close" aria-label="Cerrar índice">×</button></div>' + listHTML()
+    : resumeHTML + listHTML();
   document.body.append(panel, fab);
+  if (mobile) {
+    const hero = document.querySelector('.hero');
+    const image = document.createElement('img');
+    image.className = 'mg-mobile-cover';
+    image.src = mobile.img;
+    image.alt = '';
+    image.width = 120;
+    image.height = 160;
+    image.decoding = 'async';
+    hero?.prepend(image);
+    const purchase = document.getElementById('book-purchase');
+    if (purchase) nav.querySelector('.mg-toc-resume').after(purchase);
+    document.documentElement.classList.add('mg-mobile-guide');
+    fab.classList.add('is-on');
+    fab.setAttribute('aria-haspopup', 'dialog');
+    fab.insertAdjacentHTML('beforeend', '<span class="mg-dock-arrow" aria-hidden="true">↑</span>');
+    panel.setAttribute('aria-labelledby', 'mg-sheet-title');
+  }
 
   /* ---------- Estado ---------- */
   function refresh() {
@@ -138,7 +168,9 @@
       r.querySelector('.mg-resume-next').innerHTML = `${done ? 'Sigue' : 'Primera tarjeta'}: <b></b>`;
       r.querySelector('.mg-resume-next b').textContent = cardTitle(next);
     });
-    fab.querySelector('.p').textContent = `${done}/${cards.length}`;
+    if (mobile) {
+      panel.querySelector('.mg-sheet-head p').textContent = document.getElementById('progress-text')?.textContent || `${done} de ${cards.length}`;
+    } else fab.querySelector('.p').textContent = `${done}/${cards.length}`;
   }
   let raf = 0;
   const schedule = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(refresh); };
@@ -155,12 +187,14 @@
 
   function closePanel(focusFab) {
     if (panel.hidden) return;
+    if (mobile) panel.close();
     panel.hidden = true;
     fab.setAttribute('aria-expanded', 'false');
     if (focusFab) fab.focus();
   }
   function goTo(part) {
     closePanel(false);
+    if (mobile && part.el.matches('details')) part.el.open = true;
     part.el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
     if (!part.heading.hasAttribute('tabindex')) part.heading.setAttribute('tabindex', '-1');
     part.heading.focus({ preventScroll: true });
@@ -170,6 +204,12 @@
     const card = nextCard();
     if (!card) return;
     closePanel(false);
+    if (mobile) {
+      if (!allCards().some(c => c.classList.contains('is-done'))) { goTo(parts[0]); return; }
+      for (let parent = card.parentElement; parent && parent !== map; parent = parent.parentElement) {
+        if (parent.matches('details')) parent.open = true;
+      }
+    }
     card.scrollIntoView({ behavior: 'auto', block: 'center' });
     card.click();
   }
@@ -182,11 +222,48 @@
       const open = panel.hidden;
       panel.hidden = !open;
       fab.setAttribute('aria-expanded', String(open));
+      if (mobile) {
+        panel.showModal();
+        panel.querySelector('.mg-sheet-close').focus();
+        return;
+      }
       if (open) (panel.querySelector('.mg-toc-resume:not([hidden]) .mg-resume') || panel.querySelector('a'))?.focus();
+      return;
+    }
+    if (mobile && e.target.closest('.mg-sheet-close')) { closePanel(true); return; }
+    if (mobile && e.target === panel) {
+      const rect = panel.getBoundingClientRect();
+      if (e.clientY < rect.top || e.clientX < rect.left || e.clientX > rect.right) closePanel(true);
       return;
     }
     if (!panel.hidden && !e.target.closest('#mg-toc-panel')) closePanel(false);
   });
+  if (mobile) {
+    panel.addEventListener('cancel', event => { event.preventDefault(); closePanel(true); });
+    const links = [...panel.querySelectorAll('li a')];
+    const label = fab.querySelector('.p');
+    let pending = false;
+    function updateLocation() {
+      pending = false;
+      const offset = (document.querySelector('.mg-nav')?.offsetHeight || 64) + 32;
+      const index = parts.findLastIndex(part => part.el.getBoundingClientRect().top <= offset && part.el.getClientRects().length);
+      label.textContent = parts[index]?.title || 'Portada';
+      links.forEach((link, i) => {
+        if (i === index) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
+    function scheduleLocation() {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(updateLocation);
+    }
+    addEventListener('scroll', scheduleLocation, { passive: true });
+    addEventListener('resize', scheduleLocation, { passive: true });
+    map.addEventListener('toggle', scheduleLocation, true);
+    updateLocation();
+    return;
+  }
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) closePanel(true); });
 
   /* El botón flotante aparece cuando el índice de arriba ya no se ve, y se esconde al llegar al final. */
@@ -199,4 +276,5 @@
   new IntersectionObserver(([en]) => { navAbove = !en.isIntersecting && en.boundingClientRect.top < 0; show(); }).observe(nav);
   const end = document.querySelector('.mg-pager') || document.querySelector('footer');
   if (end) new IntersectionObserver(([en]) => { endVisible = en.isIntersecting; show(); }).observe(end);
+}
 })();

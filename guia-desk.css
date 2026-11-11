@@ -1,7 +1,7 @@
 /* ================= Marginalia · guía en computadora =================
    Diseño "cuaderno de lectura" para las páginas de guía, solo en pantallas de más de 760 px.
    Todo va bajo html.desk: esa clase la pone el script del <head> y la confirma guia-desk.js.
-   En el celular no se aplica nada de este archivo. */
+   La portada y el índice para celular tienen sus propios estilos al final. */
 
 html.desk{
   --bg:#f3ede2; --paper:#f9f5ee; --panel:#ebe3d4; --panel-2:#efe8dc;
@@ -439,3 +439,138 @@ html.desk .dk-content details.reflection-group[open]>summary .g-title>span[aria-
 .dk-lib-list a[aria-current] b{color:var(--terra-ink)}
 .dk-lib-all{display:block;margin:4px 12px 0;padding:10px 0 4px;border-top:1px dashed var(--line);font-family:var(--f-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)!important;text-decoration:none}
 .dk-lib-all:hover{color:var(--terra-ink)!important}
+
+/* Portada e índice de las guías en móvil */
+@media (max-width:760px) {
+  html.mg-mobile-guide {
+    --mg-guide-serif: "Fraunces", Georgia, serif;
+    --mg-guide-ui: "Instrument Sans", system-ui, sans-serif;
+    --mg-guide-mono: "Space Mono", monospace;
+  }
+  .mg-mobile-guide body {padding-bottom:calc(74px + env(safe-area-inset-bottom, 0px))}
+  .mg-mobile-guide .hero {
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) minmax(76px, 29%);
+    gap:6px 12px;
+    align-items:center;
+    padding:24px 4px 20px;
+    text-align:left;
+  }
+  .mg-mobile-guide .hero > :not(.mg-mobile-cover) {grid-column:1}
+  .mg-mobile-guide .hero > :not(h1,.sub,.author,.mg-mobile-cover) {grid-column:1/-1}
+  .mg-mobile-guide .hero h1 {
+    margin:0;
+    padding:0;
+    background:none;
+    font:400 clamp(1.9rem, 8vw, 3.45rem)/1.02 var(--mg-guide-serif);
+    letter-spacing:-.035em;
+    overflow-wrap:break-word;
+  }
+  .mg-mobile-guide .hero .sub {
+    margin:4px 0 0;
+    font:400 1rem/1.4 var(--mg-guide-serif);
+  }
+  .mg-mobile-guide .hero .author {
+    margin:2px 0 0;
+    padding:0;
+    font:400 .75rem/1.4 var(--mg-guide-mono);
+    letter-spacing:.02em;
+  }
+  .mg-mobile-guide .hero .author::before,
+  .mg-mobile-guide .hero .author::after {display:none}
+  .mg-mobile-cover {
+    grid-area:1 / 2 / span 3;
+    justify-self:end;
+    width:min(100%, 142px);
+    height:auto;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    padding:5px 5px 12px;
+    background:#efe3ce;
+    box-shadow:0 7px 14px #241a1633;
+    transform:rotate(4deg);
+  }
+  .mg-mobile-guide .guide-note {font-family:var(--mg-guide-serif)}
+  .mg-mobile-guide #progress-text {font-family:var(--mg-guide-mono)}
+  .mg-mobile-guide .mg-toc:not(.mg-toc-panel) {margin:0 auto 24px}
+  .mg-mobile-guide .mg-toc .mg-toc-list {display:none}
+  .mg-mobile-guide .mg-toc .mg-toc-resume[hidden],
+  .mg-mobile-guide .mg-toc-panel[hidden] {display:none}
+  .mg-mobile-guide .mg-toc-resume .mg-resume-next {display:none}
+  .mg-mobile-guide .mg-resume,
+  .mg-mobile-guide .mg-toc-fab,
+  .mg-mobile-guide .mg-toc-panel li a {
+    font:500 .95rem/1.35 var(--mg-guide-ui);
+    text-transform:none;
+    letter-spacing:normal;
+  }
+  .mg-mobile-guide .mg-resume {width:100%;justify-content:space-between;border-radius:8px}
+  .mg-mobile-guide #book-purchase {margin:0!important;text-align:center}
+  .mg-mobile-guide #book-purchase a {
+    min-height:44px;
+    margin:0;
+    padding:12px 10px;
+    border:0;
+    background:transparent;
+    color:var(--terra-ink);
+    font:500 .9rem/1.4 var(--mg-guide-ui);
+    text-decoration:underline!important;
+    text-transform:none;
+  }
+  .mg-mobile-guide .mg-toc-fab {
+    inset:auto max(12px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+    min-height:48px;
+    width:auto;
+    border-radius:9px;
+    background:var(--ink);
+    color:var(--bg);
+  }
+  .mg-mobile-guide .mg-toc-fab .p {
+    min-width:0;
+    margin-inline-start:auto;
+    overflow:hidden;
+    color:inherit;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .mg-mobile-guide .mg-toc-fab svg {flex:none}
+  .mg-mobile-guide .mg-toc-panel[open] {
+    position:fixed;
+    inset:auto 0 0;
+    display:block;
+    width:min(100%,540px);
+    max-width:100%;
+    max-height:78dvh;
+    margin:0 auto;
+    padding:8px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+    border-radius:20px 20px 0 0;
+    color:var(--ink);
+  }
+  .mg-mobile-guide .mg-toc-panel::backdrop {background:#21160e66}
+  .mg-mobile-guide .mg-sheet-head {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .mg-mobile-guide .mg-sheet-head h2 {margin:0;font:600 1.65rem/1.12 var(--mg-guide-serif)}
+  .mg-mobile-guide .mg-sheet-head p {margin:4px 0 0;color:var(--muted);font:400 .75rem/1.4 var(--mg-guide-mono)}
+  .mg-mobile-guide .mg-sheet-close {
+    flex:none;
+    width:44px;
+    height:44px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    background:var(--paper);
+    color:var(--ink);
+    font:400 1.5rem var(--mg-guide-ui);
+    cursor:pointer;
+  }
+  .mg-mobile-guide .mg-toc-panel li a {min-height:44px;border-bottom:1px solid var(--line);border-radius:0}
+  .mg-mobile-guide .mg-toc-panel li a[aria-current] {color:var(--terra-ink);font-weight:600}
+  .mg-mobile-guide .mg-toc-panel li small {margin-inline-start:4px;color:var(--terra-ink);font:.75rem var(--mg-guide-mono)}
+  .mg-mobile-guide .mg-toc-panel :focus-visible {outline:2px solid var(--terra-ink);outline-offset:-2px}
+  .mg-mobile-guide #map .group {scroll-margin-top:var(--mg-toc-offset, 96px)}
+}

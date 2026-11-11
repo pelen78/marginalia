@@ -1,12 +1,11 @@
 /* Marginalia · diseño de computadora para las guías.
    Se activa solo si <html> tiene la clase "desk" (la pone el script del <head> cuando la pantalla mide más de 760 px).
    No cambia el contenido ni lo que se guarda: reacomoda lo que la guía ya tiene (tarjetas, progreso, final, notas)
-   dentro del diseño "cuaderno de lectura". En el celular no hace nada.
+   dentro del diseño "cuaderno de lectura". En móvil comparte los datos de la portada con el índice.
    Para usarlo en otra guía: agrega su ficha en GUIDES y las tres líneas del <head> (ver AGENTS.md). */
 (() => {
   'use strict';
   const root = document.documentElement;
-  if (!root.classList.contains('desk')) return;
 
   const GUIDES = {
     'la-paciente-silenciosa': {
@@ -173,6 +172,12 @@
 
   const slug = decodeURIComponent(location.pathname.split('/').pop() || '').replace(/\.html$/, '');
   const G = GUIDES[slug];
+  if (!root.classList.contains('desk')) {
+    if (G && matchMedia('(max-width: 760px)').matches) {
+      document.dispatchEvent(new CustomEvent('marginalia:mobile-guide', { detail: G }));
+    }
+    return;
+  }
   const giveUp = () => { root.classList.remove('desk'); root.classList.add('desk-ready'); };
   if (!G) { giveUp(); return; }
 
