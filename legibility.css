@@ -15,6 +15,13 @@
 .q-src a,
 .mg-menu li a[aria-current="page"] { color: var(--terra-ink); }
 
+/* Enlaces de referencias sobre fondos oscuros, incluso en el pie de escritorio. */
+:root[data-theme="dark"] :is(.source-note, .guide-credits) a:any-link,
+.dk-foot-legal a:any-link { color: #ffaf8b; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) :is(.source-note, .guide-credits) a:any-link { color: #ffaf8b; }
+}
+
 /* Etiqueta "Nuevo en la biblioteca": fondo un poco más oscuro en claro, texto oscuro en oscuro. */
 .latest-label { background: #b04a25; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .latest-label { background: var(--terra); color: var(--accent-ink); } }
