@@ -209,7 +209,9 @@
     if (peopleGroup) peopleGroup.querySelectorAll('.g-grid').forEach(x => x.classList.add('dk-people'));
 
     /* ---------- Datos que ya tiene la página ---------- */
-    const title = clean(oldHero.querySelector('h1')?.textContent);
+    const oldHeading = oldHero.querySelector('h1');
+    const title = clean(oldHeading?.textContent);
+    const headingLabel = oldHeading?.getAttribute('aria-label') || title;
     const subText = clean(oldHero.querySelector('.sub')?.textContent);
     const author = (subText.split('Obra de ')[1] || '').trim();
     const subHtml = author ? `Guía y resumen · Obra de <i>${esc(author)}</i>` : esc(subText);
@@ -239,7 +241,7 @@
       <nav class="dk-crumbs" aria-label="Ruta"><a href="/#libros">Estantería</a><span aria-hidden="true">›</span><a href="/#categorias">${esc(G.cat)}</a><span aria-hidden="true">›</span><span aria-current="page">${esc(title)}</span></nav>
       <div class="dk-hero-copy">
         <div class="dk-stamps"><span class="dk-stamp">Guía independiente</span><span class="dk-ficha">Ficha N° ${G.ficha} · ${esc(G.cat)}</span></div>
-        <h1 class="book-title" id="dk-title">${esc(title)}</h1>
+        <h1 class="book-title" id="dk-title" aria-label="${esc(headingLabel)}">${esc(title)}</h1>
         <p class="dk-sub">${subHtml}</p>
         ${warn ? `<p class="dk-warn">${warn.innerHTML}</p>` : ''}
         <div class="dk-prog">

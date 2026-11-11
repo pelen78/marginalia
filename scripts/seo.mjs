@@ -9,22 +9,39 @@ const cut=(text,start,end)=>{const a=text.indexOf(start),b=text.indexOf(end,a);i
 export const books=runInNewContext(cut(home,'const BOOKS = [','// Guías en construcción')+';BOOKS');
 export function catalog(html){
  const grid={innerHTML:''};
- const source=cut(html,'const BOOKS = [','/* Trazos a mano:')+cut(html,'const esc=','/* fin del catálogo */');
- runInNewContext(source+';renderGrid();',{document:{getElementById:id=>{if(id!=='grid')throw Error(id);return grid;}}},{timeout:2000});
+ const mobile=html.includes('id="catalog-results"');
+ const source=cut(html,'const BOOKS = [','/* Trazos a mano:')+(mobile
+  ?cut(html,'const esc=','// Día según')+cut(html,'// Novelas va primero','/* fin del catálogo */')
+  :cut(html,'const esc=','/* fin del catálogo */'));
+ runInNewContext(source+';renderGrid(false);',{document:{getElementById:id=>{if(id!=='grid')throw Error(id);return grid;}}},{timeout:2000});
  return grid.innerHTML;
 }
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const json=data=>JSON.stringify(data).replace(/</g,'\\u003c');
-const titles=new Map([
- ['biblia','Biblia católica: guía de lectura y resúmenes'],
- ['jdm','El jardín de las mariposas: resumen y personajes'],
- ['bdm','La biblioteca de la medianoche: resumen y final explicado'],
-]);
+const descriptions={
+ biblia:"Lee La Biblia, de diversos autores, con un resumen por capítulos de sus 73 libros, contexto para la lectura católica y preguntas de reflexión.",
+ ic:"Guía de Imitación de Cristo, de Tomás de Kempis, con resumen por capítulos e ideas para reflexionar sobre la humildad, la oración y la vida interior.",
+ ahora:"Resumen de El poder del ahora, de Eckhart Tolle. Explora sus ideas principales sobre la presencia, cómo observar la mente y preguntas para reflexionar.",
+ habitos:"Resumen de Hábitos atómicos, de James Clear. Explora las cuatro leyes del cambio de conducta, ejemplos para crear hábitos y preguntas de reflexión.",
+ th:"Resumen de Hábitos diminutos, de BJ Fogg. Aprende a unir acciones pequeñas a tu rutina y a celebrar el progreso con ejemplos y preguntas de reflexión.",
+ amigos:"Resumen de Cómo ganar amigos e influir sobre las personas, de Dale Carnegie. Ideas para escuchar mejor, recordar nombres y conversar sin discutir.",
+ cosas:"Resumen de Cómo hacer que te pasen cosas buenas, de Marian Rojas Estapé. Explora el papel del cortisol, la atención y los vínculos en el bienestar.",
+ zonas:"Resumen de Tus zonas erróneas, de Wayne W. Dyer. Explora cómo influyen la culpa, la preocupación y la búsqueda de aprobación, con preguntas de reflexión.",
+ ie:"Resumen de Inteligencia emocional, de Daniel Goleman. Explora cómo las emociones influyen en las decisiones y las relaciones, con preguntas de reflexión.",
+ aod:"Resumen de ¿Amar o depender?, de Walter Riso. Identifica señales de apego y reflexiona sobre los límites, la autonomía y el cuidado dentro de una pareja.",
+ sa:"Resumen de El sutil arte de que te importe un carajo, de Mark Manson. Reflexiona sobre cómo elegir tus valores y asumir responsabilidad por tus decisiones.",
+ poz:"Resumen de Piénsalo otra vez, de Adam Grant. Descubre cómo revisar tus creencias, conversar con quien piensa distinto y cambiar de opinión con criterio.",
+ ltt:"Resumen de La teoría Let Them, de Mel Robbins. Revisa qué puedes soltar y cómo enfocar tu energía en tus decisiones, con ejemplos y preguntas de reflexión.",
+ jdm:"Resumen de El jardín de las mariposas, de Dot Hutchison. Conoce a los personajes y sigue la investigación del FBI, con el final en una sección separada.",
+ bdm:"Resumen de La biblioteca de la medianoche, de Matt Haig. Sigue las vidas posibles de Nora Seed, revisa los personajes y consulta el final por separado.",
+ eus:"Resumen de El último secreto, de Dan Brown. Sigue las pistas de Robert Langdon en Praga, conoce a los personajes y consulta el final en una sección aparte.",
+ lps:"Resumen de La paciente silenciosa, de Alex Michaelides. Sigue el caso de Alicia Berenson, explora los personajes y consulta el final en una sección aparte.",
+};
+const authorLabel=book=>book.id==='biblia'?'diversos autores':book.author;
 export function pageSeo(book){
- const title=(titles.get(book.id)||`${book.title}: resumen y guía de lectura`)+' | MyMarginalia';
- const description=book.cat==='Novelas'?`Guía de ${book.title}, de ${book.author}: resumen, personajes y reflexiones. Final explicado en una sección con spoilers opcionales.`:
- book.id==='biblia'?'Guía para leer la Biblia católica: sus 73 libros, resúmenes por capítulos, contexto y preguntas para reflexionar. Lectura a tu ritmo en MyMarginalia.':
- `Resumen y guía de ${book.title}, de ${book.author}. Explicaciones sencillas, ideas clave y preguntas para reflexionar durante tu lectura.`;
+ const title=`${book.title} de ${authorLabel(book)}: Resumen, ideas clave y guía de lectura | MyMarginalia`;
+ const description=descriptions[book.id];
+ if(!description||description.length<140||description.length>155) throw Error('Descripción SEO de 140–155 caracteres requerida: '+book.file);
  return {title,description};
 }
 function meta(html,title,description){
@@ -36,8 +53,9 @@ function meta(html,title,description){
  return html.replace('</title>',()=>'</title>\n<!-- seo-social:start -->\n<meta property="og:site_name" content="MyMarginalia">\n<meta property="og:title" content="'+escape(title)+'">\n<meta property="og:description" content="'+escape(description)+'">\n<!-- seo-social:end -->');
 }
 function structured(html,graph){
- html=html.replace(/<script id="seo-structured-data" type="application\/ld\+json">[\s\S]*?<\/script>\n?/,'');
- return html.replace('</head>',()=>`<script id="seo-structured-data" type="application/ld+json">${json({'@context':'https://schema.org','@graph':graph})}</script>\n</head>`);
+ const existing=/<script id="seo-structured-data" type="application\/ld\+json">[\s\S]*?<\/script>/;
+ const tag=`<script id="seo-structured-data" type="application/ld+json">${json({'@context':'https://schema.org','@graph':graph})}</script>`;
+ return existing.test(html)?html.replace(existing,()=>tag):html.replace('</head>',()=>tag+'\n</head>');
 }
 export function improveHome(html){
  const title='MyMarginalia | Guías de lectura, resúmenes y reflexiones';
@@ -62,10 +80,24 @@ export function improveBook(html,b){
   .replaceAll('href="index.html#inicio"','href="/#inicio"').replaceAll('href="index.html#libros"','href="/#libros"');
  html=html.replace('<strong>Una guía para leer el libro</strong>','<strong>Resumen y guía de lectura</strong>');
  if(b.id==='bdm')html=html.replace('Personas que sostienen la historia</h2>','Personajes que sostienen la historia</h2>');
- return structured(html,[{'@type':'WebPage','@id':url+'#webpage',url,name:title,description,inLanguage:'es',isPartOf:{'@id':site+'#website'},breadcrumb:{'@id':url+'#breadcrumb'},mainEntity:{'@type':'Article',headline:`Guía de lectura de ${b.title}`,description,inLanguage:'es',publisher:{'@id':site+'#organization'},about:{'@type':'Book',name:b.full,author:b.id==='biblia'?undefined:{'@type':'Person',name:b.author}}}},{'@type':'BreadcrumbList','@id':url+'#breadcrumb',itemListElement:[{'@type':'ListItem',position:1,name:'MyMarginalia',item:site},{'@type':'ListItem',position:2,name:b.title,item:url}]}]);
+ html=html.replace(/<link\b(?=[^>]*\brel="canonical")[^>]*>/g,`<link rel="canonical" href="${url}">`)
+  .replace(/<h1 class="book-title"(?: aria-label="[^"]*")?>/,`<h1 class="book-title" aria-label="${escape(b.title+' de '+authorLabel(b))}">`);
+ if(!html.includes('class="guide-summary"')){
+  html=html.replace(/(<aside\b[^>]*\bclass="guide-note"[^>]*>\s*<strong>[^<]+<\/strong>\s*)/,(_,opening)=>
+   opening+`<p class="guide-summary">${escape(b.blurb)}</p>`);
+ }
+ const articleId=url+'#article';
+ return structured(html,[
+  {'@type':'Organization','@id':site+'#organization',name:'MyMarginalia',url:site,logo:site+'icon-512.png'},
+  {'@type':'WebPage','@id':url+'#webpage',url,name:title,description,inLanguage:'es',isPartOf:{'@id':site+'#website'},breadcrumb:{'@id':url+'#breadcrumb'},mainEntity:{'@id':articleId}},
+  {'@type':'Article','@id':articleId,headline:title,description,inLanguage:'es',mainEntityOfPage:{'@id':url+'#webpage'},author:{'@id':site+'#organization'},publisher:{'@id':site+'#organization'},
+   about:{'@type':'Book',name:b.full,inLanguage:'es',author:{'@type':b.id==='biblia'?'Thing':'Person',name:b.author}}},
+  {'@type':'BreadcrumbList','@id':url+'#breadcrumb',itemListElement:[{'@type':'ListItem',position:1,name:'MyMarginalia',item:site},{'@type':'ListItem',position:2,name:b.title,item:url}]}
+ ]);
 }
 export async function changes(){
- const result=[{file:'index.html',before:home,after:improveHome(home)}];
+ const mobile=await readFile(new URL('movil.html',root),'utf8');
+ const result=[{file:'index.html',before:home,after:improveHome(home)},{file:'movil.html',before:mobile,after:improveHome(mobile)}];
  for(const b of books){const before=await readFile(new URL(b.file,root),'utf8');result.push({file:b.file,before,after:improveBook(before,b)});}
  return result;
 }
