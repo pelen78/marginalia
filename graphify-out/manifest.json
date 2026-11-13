@@ -1,0 +1,74 @@
+{
+  "biblia-capitulos.js": {
+    "mtime": 1790986003.4890616,
+    "seen": 1794537494.1888158,
+    "ast_hash": "0b61f2e6c9e9d89cc222826b4b160910",
+    "semantic_hash": "0b61f2e6c9e9d89cc222826b4b160910"
+  },
+  "feedback.js": {
+    "mtime": 1794068260.0289912,
+    "seen": 1794537494.1888168,
+    "ast_hash": "68041fee9b82a4576696558d35e46605",
+    "semantic_hash": "68041fee9b82a4576696558d35e46605"
+  },
+  "guia-desk.js": {
+    "mtime": 1794535943.804729,
+    "seen": 1794537494.188818,
+    "ast_hash": "dbc5cb3828806e0ba53d520b164d7dfa",
+    "semantic_hash": "dbc5cb3828806e0ba53d520b164d7dfa"
+  },
+  "guide-nav.js": {
+    "mtime": 1794375354.3927965,
+    "seen": 1794537494.188819,
+    "ast_hash": "630b0953707ed297a4e8fad57a0e187f",
+    "semantic_hash": "630b0953707ed297a4e8fad57a0e187f"
+  },
+  "intro-audio.js": {
+    "mtime": 1790734027.8315375,
+    "seen": 1794537494.18882,
+    "ast_hash": "4eea8f534afe775d89d9113141369285",
+    "semantic_hash": "4eea8f534afe775d89d9113141369285"
+  },
+  "novel-notes.js": {
+    "mtime": 1794187754.8800437,
+    "seen": 1794537494.18882,
+    "ast_hash": "2795aaa0bd6a669d45e52bbb58b9f48e",
+    "semantic_hash": "2795aaa0bd6a669d45e52bbb58b9f48e"
+  },
+  "scripts/novels.test.mjs": {
+    "mtime": 1794534283.7377691,
+    "seen": 1794537494.188821,
+    "ast_hash": "ef3549101f7159105c3c696d64b13d0d",
+    "semantic_hash": "ef3549101f7159105c3c696d64b13d0d"
+  },
+  "scripts/seo.mjs": {
+    "mtime": 1794534283.7370315,
+    "seen": 1794537494.188821,
+    "ast_hash": "ed9afc82a97a8e76f7a2361ba5372140",
+    "semantic_hash": "ed9afc82a97a8e76f7a2361ba5372140"
+  },
+  "scripts/seo.test.mjs": {
+    "mtime": 1794374576.9132094,
+    "seen": 1794537494.188822,
+    "ast_hash": "61de6490ce7a91e49ee2897e6e598b6b",
+    "semantic_hash": "61de6490ce7a91e49ee2897e6e598b6b"
+  },
+  "spoiler-gate.js": {
+    "mtime": 1791065556.6177433,
+    "seen": 1794537494.188823,
+    "ast_hash": "b3539f88a4c2f9897d523c92af9cc684",
+    "semantic_hash": "b3539f88a4c2f9897d523c92af9cc684"
+  },
+  "Late_Hours_On_The_Balcony.mp3": {
+    "mtime": 1790656872.621634,
+    "seen": 1794537494.1888242,
+    "ast_hash": "69169471ccb55f21e509c02f01952cef",
+    "semantic_hash": "69169471ccb55f21e509c02f01952cef"
+  },
+  "entrada.mp3": {
+    "mtime": 1790657047.9648464,
+    "seen": 1794537494.1888242,
+    "ast_hash": "bf7821d2677c0b365a46fafb19dae2e2",
+    "semantic_hash": "bf7821d2677c0b365a46fafb19dae2e2"
+  }
+}

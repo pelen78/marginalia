@@ -1,0 +1,164 @@
+{
+  "communities": {
+    "0": [
+      "ref_node_assert",
+      "ref_node_child_process",
+      "ref_node_fs",
+      "ref_node_test",
+      "ref_node_vm",
+      "scripts_novels_test",
+      "scripts_novels_test_novels",
+      "scripts_seo_books",
+      "scripts_seo_test",
+      "scripts_seo_test_blocks",
+      "scripts_seo_test_root"
+    ],
+    "1": [
+      "guide_nav",
+      "guide_nav_init",
+      "guide_nav_init_closepanel",
+      "guide_nav_init_goto",
+      "guide_nav_init_refresh",
+      "guide_nav_init_resume",
+      "guide_nav_init_schedulelocation",
+      "guide_nav_init_updatelocation"
+    ],
+    "2": [
+      "intro_audio",
+      "intro_audio_constructor",
+      "intro_audio_failed",
+      "intro_audio_play",
+      "intro_audio_setvolume",
+      "intro_audio_stop"
+    ],
+    "3": [
+      "ref_node_url",
+      "scripts_seo",
+      "scripts_seo_catalog",
+      "scripts_seo_cut",
+      "scripts_seo_descriptions",
+      "scripts_seo_root"
+    ],
+    "4": [
+      "scripts_seo_authorlabel",
+      "scripts_seo_escape",
+      "scripts_seo_improvebook",
+      "scripts_seo_meta",
+      "scripts_seo_pageseo"
+    ],
+    "5": [
+      "scripts_seo_changes",
+      "scripts_seo_improvehome",
+      "scripts_seo_json",
+      "scripts_seo_structured"
+    ],
+    "6": [
+      "biblia_capitulos"
+    ],
+    "7": [
+      "feedback"
+    ],
+    "8": [
+      "guia_desk"
+    ],
+    "9": [
+      "novel_notes"
+    ],
+    "10": [
+      "spoiler_gate"
+    ]
+  },
+  "cohesion": {
+    "0": 0.21818181818181817,
+    "1": 0.39285714285714285,
+    "2": 0.6666666666666666,
+    "3": 0.4,
+    "4": 0.6,
+    "5": 0.5,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0
+  },
+  "gods": [
+    {
+      "id": "guide_nav_init",
+      "label": "init()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_seo_improvebook",
+      "label": "improveBook()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_seo_improvehome",
+      "label": "improveHome()",
+      "degree": 5
+    },
+    {
+      "id": "intro_audio_play",
+      "label": "play()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_seo_catalog",
+      "label": "catalog()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_seo_meta",
+      "label": "meta()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_seo_structured",
+      "label": "structured()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_seo_changes",
+      "label": "changes()",
+      "degree": 4
+    },
+    {
+      "id": "guide_nav_init_closepanel",
+      "label": "closePanel()",
+      "degree": 3
+    },
+    {
+      "id": "guide_nav_init_goto",
+      "label": "goTo()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "improveHome()",
+      "target": "catalog()",
+      "source_files": [
+        "scripts/seo.mjs",
+        "scripts/seo.mjs"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 3 \u2192 community 5"
+    },
+    {
+      "source": "improveHome()",
+      "target": "meta()",
+      "source_files": [
+        "scripts/seo.mjs",
+        "scripts/seo.mjs"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "note": "Bridges community 4 \u2192 community 5"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
