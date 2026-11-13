@@ -8,6 +8,16 @@
   const root = document.documentElement;
 
   const GUIDES = {
+    'jotade': {
+      ficha: 18, cat: 'Novelas',
+      img: 'assets/novedades/jotade.jpg', cap: 'fig. 1: el Manzanares de noche', why: '¿en quién confiar?',
+      lede: 'Dos asesinatos en un puente de la M-30 provocan un accidente mortal. El subinspector Jotadé Cortés sigue la pista de una familia vinculada al narcotráfico mientras la policía exige resultados.',
+      marks: ['Jotadé Cortés'],
+      datos: [['Género', 'Thriller policiaco'], ['Publicación', '2025'], ['Escenario', 'Madrid y Villafranca de los Barros'], ['Serie', 'Jotadé, 1'], ['Estructura', '5 partes · 96 capítulos']],
+      people: 2,
+      prev: { author: 'Alex Michaelides', color: '#d8cbb4' },
+      next: { author: 'Diversos autores', color: '#344f4b' }
+    },
     'la-paciente-silenciosa': {
       ficha: 17, cat: 'Novelas',
       img: 'assets/novedades/la-paciente-silenciosa.jpg', cap: 'fig. 1: el estudio de Alicia', why: '¿por qué calla?',
@@ -16,7 +26,7 @@
       datos: [['Género', 'Thriller psicológico'], ['Publicación', '2019'], ['Escenario', 'Londres'], ['Voces', 'Theo · Alicia'], ['Estructura', 'Prólogo + 5 partes']],
       people: 2, // id de la rejilla de personajes: #g-2
       prev: { author: 'Dan Brown', color: '#57352f' },
-      next: { author: 'Diversos autores', color: '#344f4b' }
+      next: { author: 'Santiago Díaz', color: '#374a60' }
     },
     'el-jardin-de-las-mariposas': {
       ficha: 14, cat: 'Novelas',
@@ -165,7 +175,7 @@
       marks: ['libro por libro'],
       datos: [['Tradición', 'Católica'], ['Libros', '73'], ['Antiguo Testamento', '46 libros'], ['Nuevo Testamento', '27 libros'], ['Estructura', '9 secciones']],
       groupSel: '.group', progressSel: '.book-group .card[id^="card-"]', unit: 'libros',
-      prev: { author: 'Alex Michaelides', color: '#d8cbb4' },
+      prev: { author: 'Santiago Díaz', color: '#374a60' },
       next: { author: 'Tomás de Kempis', color: '#66513e' }
     }
   };

@@ -36,6 +36,7 @@ const descriptions={
  bdm:"Resumen de La biblioteca de la medianoche, de Matt Haig. Sigue las vidas posibles de Nora Seed, revisa los personajes y consulta el final por separado.",
  eus:"Resumen de El último secreto, de Dan Brown. Sigue las pistas de Robert Langdon en Praga, conoce a los personajes y consulta el final en una sección aparte.",
  lps:"Resumen de La paciente silenciosa, de Alex Michaelides. Sigue el caso de Alicia Berenson, explora los personajes y consulta el final en una sección aparte.",
+ jotade:"Resumen de Jotadé, de Santiago Díaz. Explora a los personajes, sigue la investigación de la M-30 por bloques y consulta el desenlace en una sección aparte.",
 };
 const authorLabel=book=>book.id==='biblia'?'diversos autores':book.author;
 export function pageSeo(book){
